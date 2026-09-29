@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Выполненные работы"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="works">
+					<div class="works__container container">
+						<h1 class="works__title title">Выполненные работы</h1>
+						<ul class="works__list">
+							@@loop('./html/templates/_portfolio-card.html', {})
+						</ul>
+					</div>
+				</section>
+				@@include('./html/sections/_reviews.html')
+				@@include('./html/sections/_faq.html')
+				@@include('./html/sections/_callback.html', {
+				"title": '<span class="color-primary">Хотите получить консультациЮ?</span>'
+				})
+				@@include('./html/sections/_contacts.html')
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

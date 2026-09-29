@@ -1,0 +1,17 @@
+@use "abstracts" as *;
+
+
+.contacts {
+
+    background: $color-text-primary;
+    color: $color-bg-secondary;
+
+    // .contacts__container
+    &__container {}
+
+    // .contacts__title
+    &__title {}
+
+    // .contacts__subtitle
+    &__subtitle {}
+}

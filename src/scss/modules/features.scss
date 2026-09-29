@@ -1,0 +1,12 @@
+@use "abstracts" as *;
+
+.features {
+    background: $color-text-primary;
+    color: $color-bg-secondary;
+
+    // .features__container
+    &__container {}
+
+    // .features__title
+    &__title {}
+}

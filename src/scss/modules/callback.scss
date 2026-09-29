@@ -1,0 +1,14 @@
+@use "abstracts" as *;
+
+.callback {
+    background: $color-bg-primary;
+
+    // .callback__container
+    &__container {}
+
+    // .callback__title
+    &__title {}
+
+    // .callback__banner
+    &__banner {}
+}

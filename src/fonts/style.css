@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?mn0bw4');
+  src:  url('fonts/icons.eot?mn0bw4#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?mn0bw4') format('truetype'),
+    url('fonts/icons.woff?mn0bw4') format('woff'),
+    url('fonts/icons.svg?mn0bw4#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-top-right:before {
+  content: "\e900";
+}
+.icon-arrrow-long:before {
+  content: "\e901";
+}
+.icon-brake:before {
+  content: "\e902";
+}
+.icon-car:before {
+  content: "\e903";
+}
+.icon-check:before {
+  content: "\e904";
+}
+.icon-chevron-down:before {
+  content: "\e905";
+}
+.icon-chevron-left:before {
+  content: "\e906";
+}
+.icon-chevron-right:before {
+  content: "\e907";
+}
+.icon-clock:before {
+  content: "\e908";
+}
+.icon-cross:before {
+  content: "\e909";
+}
+.icon-engine:before {
+  content: "\e90a";
+}
+.icon-exhaust-pipe:before {
+  content: "\e90b";
+}
+.icon-growth:before {
+  content: "\e90c";
+}
+.icon-locations:before {
+  content: "\e90d";
+}
+.icon-max:before {
+  content: "\e90e";
+}
+.icon-moto:before {
+  content: "\e90f";
+}
+.icon-next:before {
+  content: "\e910";
+}
+.icon-phone:before {
+  content: "\e911";
+}
+.icon-prev:before {
+  content: "\e912";
+}
+.icon-search:before {
+  content: "\e913";
+}
+.icon-shield:before {
+  content: "\e914";
+}
+.icon-speedometer:before {
+  content: "\e915";
+}
+.icon-star:before {
+  content: "\e916";
+}
+.icon-telegram:before {
+  content: "\e917";
+}
+.icon-user:before {
+  content: "\e918";
+}
+.icon-vk:before {
+  content: "\e919";
+}
+.icon-warning:before {
+  content: "\e91a";
+}
+.icon-water:before {
+  content: "\e91b";
+}
+.icon-whatsapp:before {
+  content: "\e91c";
+}

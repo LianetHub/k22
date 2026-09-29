@@ -1,0 +1,12 @@
+<section class="reviews">
+    <div class="reviews__container container">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__slider swiper">
+            <div class="swiper-wrapper">
+                @@loop('../templates/_review-card.html', {})
+            </div>
+            <button class="reviews__slider-prev swiper-button-prev"></button>
+            <button class="reviews__slider-next swiper-button-next"></button>
+        </div>
+    </div>
+</section>

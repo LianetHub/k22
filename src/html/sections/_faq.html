@@ -1,0 +1,16 @@
+<section class="faq">
+    <div class="faq__container container">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="faq__title title">вопрос <span class="color-primary">ответ</span></h2>
+                <p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
+                <a href="tel:89214019898" class="faq__phone">8(921)401-98-98</a>
+            </div>
+            <div class="col-6">
+                <ul class="faq__list">
+                    @@loop('../templates/_faq-item.html', {})
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

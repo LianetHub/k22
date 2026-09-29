@@ -1,0 +1,132 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+.form-control,
+.form-select {
+	width: 100%;
+	min-height: rem(50);
+	padding: rem(14) rem(20);
+
+
+
+
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(19, 16);
+
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+	&::placeholder {}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.is-error {
+		border-color: #c0392b;
+	}
+
+	&.is-success {}
+}
+
+
+
+.form-field {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	// form-field__label
+	&__label {
+		display: block;
+		margin-bottom: rem(8);
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
+
+	}
+
+	// form-field__error
+	&__error {
+		display: none;
+		margin-top: rem(6);
+		font-size: rem(12);
+		line-height: math.div(14, 12);
+		color: #c0392b;
+	}
+
+	&.is-error {
+		.form-field__error {
+			display: block;
+		}
+	}
+}
+
+textarea.form-control {
+	min-height: rem(120);
+	resize: vertical;
+}
+
+.form-check {
+	display: flex;
+	align-items: center;
+	margin-bottom: rem(20);
+	cursor: pointer;
+
+	@media (min-width: $md4) {
+		margin-bottom: rem(24);
+	}
+
+	// form-check__input
+	&__input {
+		&:checked~.form-check__text::before {
+			// @extend %icon-check;
+			font-size: 0.5rem;
+			color: #fff;
+		}
+
+		&:focus-visible~.form-check__text::before {}
+	}
+
+	// form-check__text
+	&__text {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(8);
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(20, 14);
+
+
+		&::before {
+			// @extend %ic;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(20);
+			height: rem(20);
+			border-radius: rem(4);
+
+			font-size: rem(20);
+			line-height: 1;
+
+			content: "";
+		}
+
+		& a {
+			text-decoration: underline;
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+		}
+	}
+}

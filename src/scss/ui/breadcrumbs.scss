@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+
+.breadcrumbs {
+	position: relative;
+	z-index: 3;
+	padding: rem(24) 0 0;
+
+	@media (min-width:$md4) {
+		padding: rem(32) 0 0;
+
+	}
+
+	@media (min-width:$md2) {
+		padding: rem(40) 0 0;
+
+	}
+
+	// breadcrumbs__list
+	&__list {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: hidden;
+		white-space: nowrap;
+		gap: 0.5rem;
+	}
+
+	// breadcrumbs__item
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-width: 0;
+		line-height: 1.2;
+		font-size: rem(14);
+		font-weight: 400;
+
+		&:not(:last-child) {
+			flex-shrink: 0;
+			overflow: visible;
+			text-overflow: clip;
+
+			&::after {
+				// @extend %ic;
+				// @extend %icon-chevron-right;
+				display: inline-block;
+				margin-left: 0.5rem;
+				font-size: rem(8);
+				opacity: 0.45;
+			}
+		}
+	}
+
+	// breadcrumbs__link
+	&__link {
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+
+		&:is(a) {
+
+			transition: color 0.3s ease;
+
+			@media (any-hover: hover) {
+				&:hover {}
+			}
+		}
+	}
+}

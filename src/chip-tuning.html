@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Шаблон дополнительной услуги"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="hero">
+					<div class="hero__container container">
+						<h1 class="hero__title title">Чип-тюнинг <span class="color-primary">мотоциклов</span></h1>
+					</div>
+				</section>
+				<section class="description">
+					<div class="description__container container">
+						<div class="description__image"></div>
+						<div class="description__content">
+							<h2 class="description__title title">PRO чип-тюнинг мотоциклов</h2>
+						</div>
+					</div>
+				</section>
+				<section class="chip-tuning">
+					<div class="chip-tuning__container container">
+
+					</div>
+				</section>
+				@@include('html/sections/_callback.html', {
+				"title": '<span class="color-primary">подберем решение</span> под ваш бюджет и Мотоцикл'
+				})
+				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_offers.html', {
+				"title": 'для владельцев <span class="color-primary">авто</span>'
+				})
+				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_contacts.html', {})
+
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

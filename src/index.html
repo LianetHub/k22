@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Главная страница"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="hero">
+					<div class="hero__container container">
+						<div class="hero__offer">
+							<h1 class="hero__title">ремонт выхлопных Систем <span class="color-primary">и чип-тюнинг</span></h1>
+							<div class="hero__location">в Санкт-Петербурге</div>
+							<a href="" class="hero__btn btn btn--primary">Записаться на диагностику</a>
+						</div>
+						<div class="hero__side">
+							<div class="hero__rate">
+								<div class="hero__rate-header">
+									<div class="hero__rate-stars"></div>
+									<div class="hero__rate-origin">
+										<img src="@img/yandex-maps-horizontal-logo.svg" alt="Логотип Яндекс.Карты">
+									</div>
+								</div>
+								<div class="hero__rate-details">
+									<div class="hero__rate-value">5,0</div>
+									<div class="hero__rate-text">Более 300 довольных клиентов в месяц</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				@@include('./html/sections/_callback.html')
+				<section class="brands-power">
+					<div class="brands-power__container container">
+						<div class="brands-power__header">
+							<h2 class="brands-power__title title">
+								Узнайте <span class="color-primary">прирост мощности</span> своего автомобиля
+							</h2>
+							<form action="#" class="brands-power__form icon-search">
+								<input type="text" name="q" class="brands-power__form-input">
+								<button type="submit" class="brands-power__form-btn btn btn--primary btn--small">найти</button>
+							</form>
+						</div>
+						<ul class="brands-power__list">
+							@@loop('./html/templates/_brand-item.html', './html/json/brands-poser.json')
+						</ul>
+						<a href="" class="brands-power__more more-link icon-">Перейти в каталог</a>
+					</div>
+				</section>
+				@@include('./html/sections/_works.html')
+				<section class="benefits">
+					<div class="benefits__container container">
+
+					</div>
+				</section>
+				@@include('./html/sections/_offers.html')
+				@@include('./html/sections/_reviews.html')
+				@@include('./html/sections/_callback.html')
+				@@include('./html/sections/_faq.html', {})
+				@@include('./html/sections/_gallery.html')
+				@@include('./html/sections/_contacts.html')
+				<section class="vacancies">
+					<div class="vacancies__container container">
+						<h2 class="vacancies__title title">
+							<span class="color-primary">Стань частью</span> Нашей команды
+						</h2>
+						<ul class="vacancies__grid">
+							@@loop('./html/templates/_vacancy-card.html', {})
+						</ul>
+					</div>
+				</section>
+				<section class="blog">
+					<div class="blog__container container">
+						<h2 class="blog__title title">Популярные <span class="color-primary">статьи и видео</span></h2>
+						<div class="blog__slider swiper">
+							<ul class="swiper-wrapper">
+								@@loop('./html/templates/_blog-card.html',{})
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

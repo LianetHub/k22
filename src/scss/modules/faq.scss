@@ -1,0 +1,19 @@
+@use "abstracts" as *;
+
+.faq {
+
+    // .faq__container
+    &__container {}
+
+    // .faq__title
+    &__title {}
+
+    // .faq__subtitle
+    &__subtitle {}
+
+    // .faq__phone
+    &__phone {}
+
+    // .faq__list
+    &__list {}
+}

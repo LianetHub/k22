@@ -1,0 +1,60 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+.header {
+
+    // .header__banner
+    &__banner {
+        padding: 0.625rem 0;
+        color: $color-bg-secondary;
+        background: url("@img/banner-bg.webp") 0 0 / cover no-repeat, $color-text-primary;
+    }
+
+    // .header__banner-content
+    &__banner-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    // .header__banner-tagline
+    &__banner-tagline {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.045rem;
+        text-transform: uppercase;
+    }
+
+    // .header__banner-btn
+    &__banner-btn {}
+
+    // .header__content
+    &__content {}
+
+    // .header__main
+    &__main {}
+
+    // .header__logo
+    &__logo {}
+
+    // .header__contacts
+    &__contacts {}
+
+    // .header__phone
+    &__phone {}
+
+    // .header__work-time
+    &__work-time {}
+
+    // .header__socials
+    &__socials {}
+
+    // .header__social
+    &__social {}
+}

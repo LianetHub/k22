@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.more-link {
+	display: inline-flex;
+	align-items: center;
+	gap: rem(8);
+
+	font-weight: 500;
+	line-height: 1.1;
+
+	transition: opacity 0.2s ease;
+	font-size: rem(12);
+
+	@media (min-width:$md5) {
+		font-size: rem(14);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+
+	&:focus-visible {
+		outline: none;
+
+		border-radius: rem(2);
+	}
+
+	// more-link__arrow
+	&__arrow {
+		flex-shrink: 0;
+		width: rem(15);
+		height: rem(15);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		img,
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}

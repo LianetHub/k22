@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Бесплатная комплексная диагностика"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="hero">
+					<div class="hero__container container">
+						<h1 class="hero__title title">Бесплатная комплексная диагностика</h1>
+					</div>
+				</section>
+				<section class="info-block">
+					<div class="info-block__container container">
+						<h2 class="info-block__title title">ЗАЧЕМ НУЖНА ДИАГНОСТИКА</h2>
+					</div>
+				</section>
+				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_reviews.html', {})
+				@@include('html/sections/_offers.html', {
+				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
+				})
+				@@include('html/sections/_callback.html', {
+				'title': '<span class="color-primary">подберем решение</span> под ваш бюджет и автомобиль'
+				})
+				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_contacts.html', {})
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

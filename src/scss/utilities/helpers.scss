@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+.tablet-only {
+	display: none !important;
+
+	@media (min-width: $md4) {
+		display: block !important;
+	}
+
+	@media (min-width: $md3) {
+		display: none !important;
+	}
+}
+
+.mobile-only {
+	@media (min-width: $md5) {
+		display: none !important;
+	}
+}
+
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

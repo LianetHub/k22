@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Выполненные работы | Страница акции"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="work">
+					<div class="work__container container">
+						<h1 class="work__title title">Удаление катализатора HYUNDAI SANTA FE 2.2D 2019 Г.</h1>
+					</div>
+				</section>
+				<section class="works">
+					<div class="works__container container">
+						<h2 class="works__title title">другие наши работы</h2>
+						<div class="works__slider swiper">
+							<div class="swiper-wrapper">
+								@@loop('./html/templates/_portfolio-card.html', {})
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

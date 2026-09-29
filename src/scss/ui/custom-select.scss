@@ -1,0 +1,156 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+.custom-select {
+	position: relative;
+	display: inline-flex;
+	max-width: 100%;
+
+	// custom-select__native
+	&__native {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	// custom-select__trigger
+	&__trigger {
+
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		min-height: rem(50);
+		padding: rem(12) rem(26);
+
+		cursor: pointer;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+		&::before {
+			flex-shrink: 0;
+			width: rem(20);
+			height: rem(20);
+			font-size: rem(20);
+
+		}
+
+		&::after {
+			flex-shrink: 0;
+			width: rem(12);
+			margin-left: rem(4);
+			font-size: rem(12);
+			transition: transform 0.2s ease;
+		}
+
+		&:focus-visible {
+			outline: none;
+
+		}
+	}
+
+	// custom-select__value
+	&__value {
+		line-height: 1.1;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	// custom-select__list
+	&__list {
+		position: absolute;
+		top: calc(100% + #{rem(8)});
+		right: 0;
+		z-index: $ui-index-3;
+		min-width: 100%;
+		width: max-content;
+		max-width: min(#{rem(320)}, calc(100vw - #{rem(32)}));
+		padding: rem(8);
+		border: 1px solid rgba(52, 52, 52, 0.05);
+
+
+
+	}
+
+	// custom-select__option
+	&__option {
+		padding: rem(12) rem(16);
+		border-radius: rem(10);
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
+
+		cursor: pointer;
+		transition: background-color 0.2s ease, color 0.2s ease;
+
+		@media (any-hover: hover) {
+			&:hover {}
+		}
+
+		&.is-selected {
+
+
+			font-weight: 600;
+		}
+
+		&:focus-visible {
+			outline: none;
+
+		}
+	}
+
+	&.is-open {
+		.custom-select__trigger::after {
+			transform: rotate(270deg);
+		}
+	}
+
+	// custom-select--catalog
+	&--catalog {
+		.custom-select__trigger {
+			border: 1px solid rgba(52, 52, 52, 0.05);
+
+
+
+			@media (any-hover: hover) {
+				&:hover {
+					border-color: rgba(138, 189, 53, 0.35);
+				}
+			}
+		}
+
+		.custom-select__value {
+			font-size: rem(14);
+			font-weight: 400;
+		}
+	}
+
+	// custom-select--vacancies
+	&--vacancies {
+		.custom-select__trigger {
+			border: none;
+
+
+
+
+			@media (any-hover: hover) {
+				&:hover {}
+			}
+		}
+
+		.custom-select__value {
+			font-weight: 600;
+			font-size: rem(14);
+
+			@media (min-width:$md4) {
+				font-size: rem(16);
+
+			}
+		}
+	}
+}

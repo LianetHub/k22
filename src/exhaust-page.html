@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Шаблон услуги с выхлопом"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="hero">
+					<div class="hero__container container">
+						<h1 class="hero__title title">замена выпускного коллектора</h1>
+					</div>
+				</section>
+				<section class="text-block">
+					<div class="text-block__container container">
+						<h2 class="text-block__title title">PRO замену выпускного коллектора</h2>
+					</div>
+				</section>
+				@@include('html/sections/_reviews.html', {})
+				@@include('html/sections/_callback.html', {})
+				<section class="offers">
+					<div class="offers__container container">
+						<h2 class="offers__title title">
+							Возможно
+							<span class="color-primary">вам понадобится</span>
+						</h2>
+						<div class="offers__list">
+							@@loop('./html/templates/_offer.html', {})
+						</div>
+					</div>
+				</section>
+				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_contacts.html', {})
+				@@include('html/sections/_faq.html', {})
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

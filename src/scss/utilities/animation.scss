@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+[data-counter] {
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+[data-animate="bottom"] {
+    transition-timing-function: ease;
+    transition-duration: 0.6s;
+    transition-property: transform, opacity;
+    transform: translateY(rem(40));
+    opacity: 0;
+
+    // [data-animate="bottom"].animated
+    &.animated {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+[data-animate="fade"] {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.6s;
+    transition-delay: 0.15s;
+    transition-property: opacity, visibility;
+    opacity: 0;
+    visibility: hidden;
+
+    // [data-animate="fade"].animated
+    &.animated {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+[data-animate="scale"] {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity, visibility;
+    transform: scale(0);
+
+    // [data-animate="scale"].animated
+    &.animated {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+// @media (min-width: $md4) and (max-width: $md3) {
+// 	@for $i from 1 through 2 {
+// 		&:nth-child(2n + #{$i}) {
+// 			transition-delay: $i * 0.25s;
+// 		}
+// 	}
+// }
+// @media (min-width: $md3) {
+// 	@for $i from 1 through 3 {
+// 		&:nth-child(3n + #{$i}) {
+// 			transition-delay: $i * 0.25s;
+// 		}
+// 	}
+// }

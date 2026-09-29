@@ -1,0 +1,37 @@
+@use "functions" as *;
+
+$fontfamily: "ActayWide", sans-serif;
+$font-inter: "InterTight", sans-serif;
+
+$md0: 1919.98px;
+$md1: 1439.98px;
+$md2: 1199.98px;
+$md3: 991.98px;
+$md4: 767.98px;
+$md5: 575.98px;
+
+$minWidth: 360;
+$maxWidth: 1920;
+$maxWidthContainer: rem(1780);
+$containerPadding: 24;
+
+$color-bg-primary: #fff;
+$color-bg-secondary: #F4F4F6;
+$color-bg-elevated: #16161B;
+
+$color-text-primary: #222222;
+$color-text-secondary: #8A8A8A;
+$color-text-tertiary: #D0D0D0;
+
+$color-accent-primary: #FC373D;
+$color-accent-secondary: #FED7D8;
+
+$ui-index-2: 2;
+$ui-index-3: 3;
+$ui-index-4: 4;
+$ui-index-5: 5;
+$ui-index-6: 6;
+$ui-index-7: 7;
+
+
+:root {}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Статья"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="article">
+					<div class="article__container container">
+						<h1 class="article__title title">Какой выхлоп лучше поставить?</h1>
+						<div class="article__meta"></div>
+						<div class="article__content">
+							<article class="article__body"></article>
+							<aside class="article__sidebar"></aside>
+						</div>
+					</div>
+				</section>
+				<section class="blog">
+					<div class="blog__container container">
+						<h2 class="blog__title title">еще по теме</h2>
+						<ul class="blog__list">
+							@@loop('./html/templates/_blog-card.html',{})
+						</ul>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

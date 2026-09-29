@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Партнерская программа"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="hero">
+					<div class="hero__container container">
+						<h1 class="hero__title title">Станьте партнёром <span class="color-primary">K22</span></h1>
+					</div>
+				</section>
+				<section class="format">
+					<div class="format__container container">
+						<h2 class="format__title title">
+							Выбирайте
+							<span class="color-primary">удобный формат:</span>
+						</h2>
+						<ul class="format__list">
+							@@loop('./html/templates/_format-card.html',{})
+						</ul>
+					</div>
+				</section>
+				@@include('./html/sections/_callback.html', {
+				"title": 'Хотите <span class="color-primary">стать партнёром?</span>'
+				})
+				@@include('./html/sections/_faq.html')
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

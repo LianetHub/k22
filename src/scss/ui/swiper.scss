@@ -1,0 +1,109 @@
+@use "../abstracts" as *;
+
+.swiper-button-next,
+.swiper-button-prev {
+	position: absolute;
+	margin-top: 0;
+	top: 50%;
+	z-index: 2;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: rem(40);
+	height: rem(40);
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+
+
+
+	font-size: rem(12);
+	line-height: 1;
+	cursor: pointer;
+	transform: translateY(-50%);
+	transition: background-color 0.2s ease, color 0.2s ease;
+
+	&::after {
+		content: none;
+	}
+
+	@media (min-width: $md4) {
+		width: rem(48);
+		height: rem(48);
+		font-size: rem(14);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {}
+	}
+
+	&:focus-visible {
+		outline: none;
+
+	}
+
+	&.swiper-button-disabled {
+		opacity: 0.4;
+		pointer-events: none;
+	}
+
+	&.swiper-button-lock {
+		display: none;
+	}
+}
+
+.swiper-button-prev {
+	left: rem(8);
+
+	&.icon-chevron-right::before {
+		transform: rotate(180deg);
+	}
+
+	@media (min-width: $md4) {
+		left: 0;
+	}
+}
+
+.swiper-button-next {
+	right: rem(8);
+
+	@media (min-width: $md4) {
+		right: 0;
+	}
+}
+
+.swiper-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(13);
+	transform: none;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	--swiper-pagination-bottom: #{rem(20)};
+}
+
+.swiper-pagination-bullet {
+	margin: 0;
+	opacity: 1;
+	width: rem(10);
+	height: rem(10);
+	background: #d9d9d9;
+	border-radius: 50%;
+	transition: background-color 0.25s ease;
+
+	@media (min-width:$md5) {
+		width: rem(13);
+		height: rem(13);
+
+	}
+
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0;
+}
+
+.swiper-pagination-bullet-active {}

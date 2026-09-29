@@ -1,0 +1,79 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+* {
+	scroll-margin-top: 0;
+}
+
+body {
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(16);
+	min-width: rem($minWidth);
+	min-height: 100%;
+	font-weight: 400;
+	background: $color-bg-secondary;
+
+
+	// body.is-locked
+	&.is-locked {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: inherit;
+
+	&:focus-visible {
+		outline: none;
+		border-radius: rem(2);
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	overflow-x: clip;
+}
+
+.page {
+	position: relative;
+	z-index: 2;
+	flex: 1 1 auto;
+	overflow-x: clip;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0 rem(20);
+
+	@media (min-width: $md3) {
+		padding: 0 rem(40);
+	}
+
+	@media (min-width: $md2) {
+		padding: 0 rem(70);
+	}
+
+	@media (min-width: $md1) {
+		box-sizing: content-box;
+		max-width: $maxWidthContainer;
+	}
+}
+
+section {
+	padding: 6.25rem 0;
+}

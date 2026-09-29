@@ -1,0 +1,6 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+.color-primary {
+	color: $color-accent-primary
+}

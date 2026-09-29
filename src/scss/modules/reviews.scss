@@ -1,0 +1,20 @@
+@use "abstracts" as *;
+
+.reviews {
+    background: $color-bg-primary;
+
+    // .reviews__container
+    &__container {}
+
+    // .reviews__title
+    &__title {}
+
+    // .reviews__slider
+    &__slider {}
+
+    // .reviews__slider-prev
+    &__slider-prev {}
+
+    // .reviews__slider-next
+    &__slider-next {}
+}

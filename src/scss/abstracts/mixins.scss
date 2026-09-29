@@ -1,0 +1,214 @@
+@use "sass:math";
+@use "sass:map";
+@use "functions" as *;
+@use "variables" as *;
+
+//Подключение шрифтов
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"),
+		url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//К псевдоэлементам
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin drop-border($size, $color) {
+	filter: drop-shadow(0 0 rem(math.div($size, 4)) $color) drop-shadow(0 0 rem(math.div($size, 4)) $color) drop-shadow(0 0 rem(math.div($size, 4)) $color);
+}
+
+//Cтилизация плэйсхолдеров
+@mixin placeholder($color: currentColor, $size: inherit, $weight: 400) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+		font-size: $size;
+		font-weight: $weight;
+	}
+}
+
+//Aдаптивное свойствo
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+	$minSizeValue: rem($minSize);
+	$regularSize: rem($startSize);
+
+	@if $property =="font-size" {
+		$minSizeValue: math.div($minSize, 16) + rem;
+		$regularSize: math.div($startSize, 16) + rem;
+	}
+
+	@if $type ==1 {
+		//только если меньше контейнера
+		#{$property}: $regularSize;
+
+		@media (max-width: $md1) {
+			#{$property}: calc(#{$minSizeValue} + #{rem($addSize)} * ((100vw - #{rem($minWidth)}) / #{$maxWidthContainer - rem($minWidth)}));
+		}
+	}
+
+	@else if $type ==2 {
+		//только если больше контейнера
+		#{$property}: $regularSize;
+
+		@media (min-width: $md1) {
+			#{$property}: calc(#{$minSizeValue} + #{rem($addSize)} * ((100vw - #{rem($minWidth)}) / #{$maxWidth - rem($minWidth)}));
+		}
+	}
+
+	@else {
+		// всегда
+		#{$property}: calc(#{$minSizeValue} + #{rem($addSize)} * ((100vw - #{rem($minWidth)}) / #{$maxWidth - rem($minWidth)}));
+	}
+}
+
+// Поддрежка свойств
+
+// $dimensions: (
+// 	desktop: 1708,
+// 	tablet: 768,
+// 	mobile: 360,
+// );
+
+$dimensions: (
+	desktop: 1440,
+	tablet: 768,
+	mobile: 320,
+);
+
+@function pxToVw($value, $dimension) {
+	@return math.div($value * 100, map.get($dimensions, $dimension))+vw;
+}
+
+@mixin font-size($sizeValue, $sizeValueTablet, $sizeValueMobile) {
+	font-size: pxToVw($sizeValueMobile, mobile);
+
+	@media (min-width: $md5) {
+		font-size: pxToVw($sizeValueTablet, tablet);
+	}
+
+	@media (min-width: $md3) and (max-width: $md2) {
+		font-size: pxToVw($sizeValue, desktop);
+	}
+
+	@media (min-width: $md1) {
+		font-size: $sizeValue + px;
+	}
+}
+
+@mixin fs($sizeValue, $sizeValueTablet: $sizeValue, $sizeValueMobile: $sizeValue) {
+	@include font-size($sizeValue, $sizeValueTablet, $sizeValueMobile);
+}
+
+@function vwd($value) {
+	@return pxToVw($value, desktop);
+}
+
+@function vwt($value) {
+	@return pxToVw($value, tablet);
+}
+
+@function vwm($value) {
+	@return pxToVw($value, mobile);
+}
+
+
+/// Pre-JS / FOUC layout for Swiper: grid matching slidesPerView until .is-swiper-ready
+/// $cols — map of min-width (0 or px number) → column count (int or float for peek)
+@mixin swiper-grid-fallback($cols,
+	$gap-mobile: rem(12),
+	$gap: rem(24),
+	$auto-width: null) {
+	&:not(.is-swiper-ready) {
+		overflow: hidden;
+
+		@media (max-width: $md5) {
+			overflow: visible;
+		}
+
+		.swiper-wrapper {
+			display: grid;
+			row-gap: 0;
+			grid-template-rows: auto;
+			grid-auto-rows: 0;
+			overflow: hidden;
+			column-gap: $gap-mobile;
+
+			@each $min, $n in $cols {
+				$is-float: $n != math.round($n);
+
+				@if $auto-width !=null and $min ==0 {
+					grid-auto-flow: column;
+					grid-auto-columns: $auto-width;
+					grid-template-columns: none;
+				}
+
+				@else if $is-float {
+					@if $min ==0 {
+						grid-auto-flow: column;
+						grid-auto-columns: calc((100% - #{$gap-mobile} * #{$n - 1}) / #{$n});
+						grid-template-columns: none;
+					}
+
+					@else {
+						@media (min-width: #{$min}px) {
+							column-gap: $gap;
+							grid-auto-flow: column;
+							grid-auto-columns: calc((100% - #{$gap} * #{$n - 1}) / #{$n});
+							grid-template-columns: none;
+						}
+					}
+				}
+
+				@else if $min ==0 {
+					grid-auto-flow: row;
+					grid-auto-columns: unset;
+					grid-template-columns: repeat(#{$n}, 1fr);
+				}
+
+				@else {
+					@media (min-width: #{$min}px) {
+						column-gap: $gap;
+						grid-auto-flow: row;
+						grid-auto-columns: unset;
+						grid-template-columns: repeat(#{$n}, 1fr);
+					}
+				}
+			}
+		}
+
+		.swiper-slide {
+			width: 100% !important;
+			margin: 0 !important;
+			height: auto;
+			min-width: 0;
+		}
+	}
+}

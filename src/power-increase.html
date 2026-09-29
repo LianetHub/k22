@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Увеличение мощности"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="power">
+					<div class="power__container container">
+						<h1 class="power__title title">Увеличение мощности</h1>
+					</div>
+				</section>
+				<div class="services">
+					<div class="services__container container">
+						<ul class="services__grid">
+							@@loop('./html/templates/_service-card.html', {})
+						</ul>
+					</div>
+				</div>
+				@@include('html/sections/_offers.html', {
+				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
+				})
+				<section class="info-block">
+					<div class="info-block__container container">
+						<h2 class="info-block__title title">PRO чип-тюнинг</h2>
+					</div>
+				</section>
+				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_reviews.html', {})
+				@@include('html/sections/_callback.html', {})
+				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_contacts.html', {})
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>
