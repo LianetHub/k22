@@ -10,3 +10,7 @@
         @include desktop-heading-h2
     }
 }
+
+.title-lg {
+    @include desktop-heading-h1;
+}

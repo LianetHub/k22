@@ -1,0 +1,109 @@
+@use "abstracts" as *;
+
+.hero {
+    margin-top: rem(-70);
+    min-height: rem(724);
+    padding-bottom: rem(40);
+    display: flex;
+    flex-direction: column;
+
+    // .hero__container
+    &__container {
+        flex: 1 1 auto;
+        padding-top: rem(50);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .hero__offer
+    &__offer {
+        padding-top: rem(20);
+        max-width: 59.1875rem;
+    }
+
+    // .hero__title
+    &__title {}
+
+    // .hero__location
+    &__location {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+
+
+        &::before {
+            color: $color-accent-primary;
+            font-size: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+            align-self: flex-start;
+        }
+
+        @include mobile-heading-h1;
+    }
+
+    // .hero__btn
+    &__btn {
+        margin-top: rem(32);
+    }
+
+    // .hero__side
+    &__side {
+        align-self: flex-end;
+        margin-left: auto;
+    }
+
+    // .hero__rate
+    &__rate {
+        background: $color-text-primary;
+        color: $color-bg-secondary;
+        padding: 1.5rem 2.75rem 0.875rem;
+        max-width: 22.375rem;
+        clip-path: polygon(1.25rem 0, 100% 0, calc(100% - 1.25rem) 100%, 0 100%);
+
+    }
+
+    // .hero__rate-header
+    &__rate-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .hero__rate-stars
+    &__rate-stars {
+        display: flex;
+        gap: 0.1875rem;
+    }
+
+    // .hero__rate-star
+    &__rate-star {
+        font-size: 0.75rem;
+    }
+
+    // .hero__rate-origin
+    &__rate-origin {}
+
+    // .hero__rate-details
+    &__rate-details {
+        margin-top: 0.375rem;
+        display: flex;
+        align-items: center;
+        gap: 0.38rem;
+    }
+
+    // .hero__rate-value
+    &__rate-value {
+        @include desktop-heading-h2;
+        line-height: 1;
+    }
+
+    // .hero__rate-text
+    &__rate-text {
+        color: $color-text-secondary;
+        @include desktop-body-m;
+    }
+}

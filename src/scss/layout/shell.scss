@@ -76,6 +76,10 @@ img {
 
 section {
 	padding: 6.25rem 0;
+
+	&:first-child {
+		padding-top: rem(0);
+	}
 }
 
 .social-item {

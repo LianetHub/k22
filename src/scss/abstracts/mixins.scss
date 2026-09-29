@@ -265,6 +265,29 @@ $dimensions: (
 	text-transform: uppercase;
 }
 
+
+
+/* Mobile/Heading/H1 */
+@mixin mobile-heading-h1 {
+	font-family: $fontfamily;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 115%;
+	letter-spacing: em(-0.48, 32);
+	text-transform: uppercase;
+}
+
+/* Mobile/Heading/H4 */
+@mixin mobile-heading-h4 {
+	font-family: $fontfamily;
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 120%;
+	letter-spacing: -0.025rem;
+	text-transform: uppercase;
+}
+
+
 /* Desktop/Body/XL */
 @mixin desktop-body-xl {
 	font-family: $font-inter;
@@ -283,22 +306,12 @@ $dimensions: (
 }
 
 
-/* Mobile/Heading/H1 */
-@mixin mobile-heading-h1 {
-	font-family: $fontfamily;
-	font-size: 32px;
-	font-weight: 700;
-	line-height: 115%;
-	letter-spacing: -0.48px;
-	text-transform: uppercase;
-}
 
-/* Mobile/Heading/H4 */
-@mixin mobile-heading-h4 {
-	font-family: $fontfamily;
-	font-size: 1.25rem;
-	font-weight: 700;
+/* Desktop/Body/M */
+@mixin desktop-body-m {
+	font-family: $font-inter;
+	font-size: 1.125rem;
+	font-weight: 400;
 	line-height: 120%;
-	letter-spacing: -0.025rem;
-	text-transform: uppercase;
+	letter-spacing: -0.0225rem;
 }
