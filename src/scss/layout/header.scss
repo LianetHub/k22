@@ -2,12 +2,17 @@
 @use "../abstracts" as *;
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 6;
 
     // .header__banner
     &__banner {
         padding: 0.625rem 0;
         color: $color-bg-secondary;
-        background: url("@img/banner-bg.webp") 0 0 / cover no-repeat, $color-text-primary;
+        background: url("@img/banner-bg.webp") 0 center / cover no-repeat, $color-text-primary;
     }
 
     // .header__banner-content
@@ -35,26 +40,152 @@
     &__banner-btn {}
 
     // .header__content
-    &__content {}
+    &__content {
+        position: relative;
+        background: $color-bg-primary;
+        margin: 0 rem(40);
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: rem(36);
+            height: 100%;
+            background: $color-bg-primary;
+        }
+
+        &::before {
+            right: calc(100% - rem(1));
+            clip-path: polygon(100% 0, 100% 100%, 0 0);
+        }
+
+        &::after {
+            left: calc(100% - rem(1));
+            clip-path: polygon(100% 0, 0 100%, 0 0);
+        }
+    }
+
+    // .header__content-container
+    &__content-container {
+        box-sizing: border-box;
+        padding: 0;
+    }
 
     // .header__main
-    &__main {}
+    &__main {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+
+    }
 
     // .header__logo
-    &__logo {}
+    &__logo {
+        width: 8.75rem;
+        height: 3.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     // .header__contacts
-    &__contacts {}
+    &__contacts {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0.625rem 1.125rem;
+    }
 
     // .header__phone
-    &__phone {}
+    &__phone {
+        color: $color-accent-primary;
+        font-family: $fontfamily;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.05rem;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-accent-secondary;
+            }
+        }
+    }
 
     // .header__work-time
-    &__work-time {}
+    &__work-time {
+        @include desktop-body-s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        &::before {
+            width: 0.75rem;
+            height: 0.75rem;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            color: $color-accent-primary;
+        }
+    }
 
     // .header__socials
-    &__socials {}
+    &__socials {
+        display: flex;
+        gap: 1rem;
+    }
 
     // .header__social
     &__social {}
+}
+
+.menu {
+    @include mobile-heading-h4;
+
+    // .menu__list
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 0 rem(4.5);
+    }
+
+    // .menu__item
+    &__item {}
+
+    // .menu__link
+    &__link {
+        min-height: rem(70);
+        display: inline-flex;
+        align-items: center;
+        padding: 0 rem(21);
+        transition: color 0.3s ease;
+        position: relative;
+        z-index: 1;
+        margin: 0 rem(-4.5);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-bg-primary;
+            z-index: -1;
+            clip-path: polygon(0 0, calc(100% - rem(9)) 0, 100% 100%, rem(9) 100%);
+            transition: background-color 0.3s ease;
+            pointer-events: none;
+        }
+
+        &:hover {
+            color: $color-bg-primary;
+
+            &::after {
+                background-color: $color-accent-primary;
+            }
+        }
+    }
 }

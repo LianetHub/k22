@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "icons";
-  font-display: block;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 %ic {
   font-family: "icons";
   font-style: normal;
@@ -24,4 +16,121 @@
     @extend %ic;
     display: block;
   }
+}
+
+
+.icon-arrow-top-right:before {
+  content: "\e900";
+}
+
+.icon-arrrow-long:before {
+  content: "\e901";
+}
+
+.icon-brake:before {
+  content: "\e902";
+}
+
+.icon-car:before {
+  content: "\e903";
+}
+
+.icon-check:before {
+  content: "\e904";
+}
+
+.icon-chevron-down:before {
+  content: "\e905";
+}
+
+.icon-chevron-left:before {
+  content: "\e906";
+}
+
+.icon-chevron-right:before {
+  content: "\e907";
+}
+
+.icon-clock:before {
+  content: "\e908";
+}
+
+.icon-cross:before {
+  content: "\e909";
+}
+
+.icon-engine:before {
+  content: "\e90a";
+}
+
+.icon-exhaust-pipe:before {
+  content: "\e90b";
+}
+
+.icon-growth:before {
+  content: "\e90c";
+}
+
+.icon-locations:before {
+  content: "\e90d";
+}
+
+.icon-max:before {
+  content: "\e90e";
+}
+
+.icon-moto:before {
+  content: "\e90f";
+}
+
+.icon-next:before {
+  content: "\e910";
+}
+
+.icon-phone:before {
+  content: "\e911";
+}
+
+.icon-prev:before {
+  content: "\e912";
+}
+
+.icon-search:before {
+  content: "\e913";
+}
+
+.icon-shield:before {
+  content: "\e914";
+}
+
+.icon-speedometer:before {
+  content: "\e915";
+}
+
+.icon-star:before {
+  content: "\e916";
+}
+
+.icon-telegram:before {
+  content: "\e917";
+}
+
+.icon-user:before {
+  content: "\e918";
+}
+
+.icon-vk:before {
+  content: "\e919";
+}
+
+.icon-warning:before {
+  content: "\e91a";
+}
+
+.icon-water:before {
+  content: "\e91b";
+}
+
+.icon-whatsapp:before {
+  content: "\e91c";
 }

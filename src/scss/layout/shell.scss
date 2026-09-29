@@ -77,3 +77,22 @@ img {
 section {
 	padding: 6.25rem 0;
 }
+
+.social-item {
+	width: 3.125rem;
+	height: 3.125rem;
+	font-size: 1.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	background: $color-bg-secondary;
+	color: $color-accent-primary;
+	transition: background-color 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: $color-text-tertiary;
+		}
+	}
+}

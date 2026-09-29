@@ -7,17 +7,19 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero" style="background-image: url('@img/hero/home.png');">
 					<div class="hero__container container">
 						<div class="hero__offer">
-							<h1 class="hero__title">ремонт выхлопных Систем <span class="color-primary">и чип-тюнинг</span></h1>
-							<div class="hero__location">в Санкт-Петербурге</div>
+							<h1 class="hero__title title">ремонт выхлопных Систем <span class="color-primary">и чип-тюнинг</span></h1>
+							<div class="hero__location icon-locations">в Санкт-Петербурге</div>
 							<a href="" class="hero__btn btn btn--primary">Записаться на диагностику</a>
 						</div>
 						<div class="hero__side">
 							<div class="hero__rate">
 								<div class="hero__rate-header">
-									<div class="hero__rate-stars"></div>
+									<div class="hero__rate-stars">
+										<span class="hero__rate-star icon-star"></span><span class="hero__rate-star icon-star"></span><span class="hero__rate-star icon-star"></span><span class="hero__rate-star icon-star"></span><span class="hero__rate-star icon-star"></span>
+									</div>
 									<div class="hero__rate-origin">
 										<img src="@img/yandex-maps-horizontal-logo.svg" alt="Логотип Яндекс.Карты">
 									</div>
@@ -46,7 +48,7 @@
 						<ul class="brands-power__list">
 							@@loop('./html/templates/_brand-item.html', './html/json/brands-poser.json')
 						</ul>
-						<a href="" class="brands-power__more more-link icon-">Перейти в каталог</a>
+						<a href="" class="brands-power__more more-link">Перейти в каталог</a>
 					</div>
 				</section>
 				@@include('./html/sections/_works.html')

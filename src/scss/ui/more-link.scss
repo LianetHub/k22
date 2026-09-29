@@ -1,13 +1,12 @@
-@use "../abstracts" as *;
+@use "abstracts" as *;
+
 
 .more-link {
 	display: inline-flex;
 	align-items: center;
 	gap: rem(8);
-
 	font-weight: 500;
 	line-height: 1.1;
-
 	transition: opacity 0.2s ease;
 	font-size: rem(12);
 
@@ -19,6 +18,10 @@
 		&:hover {
 			opacity: 0.75;
 		}
+	}
+
+	&::before {
+		@extend %ic, .icon-arrow-top-right;
 	}
 
 	&:focus-visible {
