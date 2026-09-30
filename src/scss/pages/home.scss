@@ -1,0 +1,40 @@
+@use "abstracts" as *;
+
+.our-goal {
+    padding: 10rem 0;
+    background: linear-gradient(90deg, rgba(34, 34, 34, 0.00) 32.5%, rgba(34, 34, 34, 0.90) 62.27%), url("@img/our-goal.webp") 0 0 / cover no-repeat;
+    color: $color-bg-primary;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("@img/decor/light-pattern.svg") 0 0 / auto;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+    // .our-goal__container
+    &__container {}
+
+    // .our-goal__content
+    &__content {
+        width: 50%;
+        margin-left: auto;
+    }
+
+    // .our-goal__title
+    &__title {
+        color: rgba($color: $color-bg-secondary, $alpha: .4);
+        @include mobile-heading-h1;
+    }
+
+    // .our-goal__tagline
+    &__tagline {
+        margin-top: 1.875rem;
+    }
+}

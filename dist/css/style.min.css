@@ -296,6 +296,20 @@ section:first-child {
   }
 }
 
+.decor-line-block {
+  padding-top: 2.125rem;
+  position: relative;
+}
+.decor-line-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.9375rem;
+  height: 0.25rem;
+  background: url("../img/decor/line.svg") 0 0/4.9375rem 0.25rem no-repeat;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -448,6 +462,42 @@ section:first-child {
   background-color: #FC373D;
 }
 
+.footer {
+  position: relative;
+  background: #020202;
+  color: #fff;
+  padding: 6.25rem 0;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/decor/light-pattern.svg") 0 0/auto;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.footer__main {
+  font-family: "InterTight", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.0225rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  color: #8A8A8A;
+}
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__tagline {
+  max-width: 20.75rem;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1072,6 +1122,9 @@ textarea.form-control {
   padding-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero__container {
   flex: 1 1 auto;
@@ -1275,4 +1328,38 @@ textarea.form-control {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+
+.our-goal {
+  padding: 10rem 0;
+  background: linear-gradient(90deg, rgba(34, 34, 34, 0) 32.5%, rgba(34, 34, 34, 0.9) 62.27%), url("../img/our-goal.webp") 0 0/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+.our-goal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/decor/light-pattern.svg") 0 0/auto;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.our-goal__content {
+  width: 50%;
+  margin-left: auto;
+}
+.our-goal__title {
+  color: rgba(244, 244, 246, 0.4);
+  font-family: "ActayWide", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+.our-goal__tagline {
+  margin-top: 1.875rem;
 }

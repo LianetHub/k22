@@ -100,3 +100,18 @@ section {
 		}
 	}
 }
+
+.decor-line-block {
+	padding-top: rem(34);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: rem(79);
+		height: rem(4);
+		background: url("@img/decor/line.svg") 0 0 / rem(79) rem(4) no-repeat;
+	}
+}

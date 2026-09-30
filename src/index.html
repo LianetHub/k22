@@ -32,12 +32,19 @@
 						</div>
 					</div>
 				</section>
-
+				<section class="our-goal">
+					<div class="our-goal__container container">
+						<div class="our-goal__content">
+							<h2 class="our-goal__title decor-line-block">Наша цель</h2>
+							<p class="our-goal__tagline title">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ <span class="color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span></p>
+						</div>
+					</div>
+				</section>
 				@@include('./html/sections/_callback.html')
 				<section class="brands-power">
 					<div class="brands-power__container container">
 						<div class="brands-power__header">
-							<h2 class="brands-power__title title">
+							<h2 class="brands-power__title title decor-line-block">
 								Узнайте <span class="color-primary">прирост мощности</span> своего автомобиля
 							</h2>
 							<form action="#" class="brands-power__form icon-search">
@@ -63,24 +70,24 @@
 				@@include('./html/sections/_faq.html', {})
 				@@include('./html/sections/_gallery.html')
 				@@include('./html/sections/_contacts.html')
-				<section class="vacancies">
-					<div class="vacancies__container container">
-						<h2 class="vacancies__title title">
-							<span class="color-primary">Стань частью</span> Нашей команды
-						</h2>
-						<ul class="vacancies__grid">
-							@@loop('./html/templates/_vacancy-card.html', {})
-						</ul>
-					</div>
-				</section>
 				<section class="blog">
 					<div class="blog__container container">
-						<h2 class="blog__title title">Популярные <span class="color-primary">статьи и видео</span></h2>
+						<h2 class="blog__title title decor-line-block">Популярные <span class="color-primary">статьи и видео</span></h2>
 						<div class="blog__slider swiper">
 							<ul class="swiper-wrapper">
 								@@loop('./html/templates/_blog-card.html',{})
 							</ul>
 						</div>
+					</div>
+				</section>
+				<section class="vacancies">
+					<div class="vacancies__container container">
+						<h2 class="vacancies__title title decor-line-block">
+							<span class="color-primary">Стань частью</span> Нашей команды
+						</h2>
+						<ul class="vacancies__grid">
+							@@loop('./html/templates/_vacancy-card.html', {})
+						</ul>
 					</div>
 				</section>
 			</main>
