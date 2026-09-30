@@ -28,14 +28,22 @@
 				@@include('html/sections/_offers.html', {
 				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
 				})
-				@@include('html/sections/_features.html', {})
-				@@include('html/sections/_features.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_features.html', {
+
+				})
+				@@include('html/sections/_features.html', {
+
+				})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-software-based-deactivation.json"
+				})
 				@@include('html/sections/_reviews.html', {})
 				@@include('html/sections/_callback.html', {})
 				@@include('html/sections/_works.html', {})
 				@@include('html/sections/_contacts.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-software-based-deactivation-2.json"
+				})
 			</main>
 			@@include('html/_footer.html', {})
 		</div>

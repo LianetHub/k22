@@ -67,7 +67,9 @@
 				@@include('./html/sections/_offers.html')
 				@@include('./html/sections/_reviews.html')
 				@@include('./html/sections/_callback.html')
-				@@include('./html/sections/_faq.html', {})
+				@@include('./html/sections/_faq.html', {
+				"faqList": './html/json/faq.json'
+				})
 				@@include('./html/sections/_gallery.html')
 				@@include('./html/sections/_contacts.html')
 				<section class="blog">
@@ -86,7 +88,7 @@
 							<span class="color-primary">Стань частью</span> Нашей команды
 						</h2>
 						<ul class="vacancies__grid">
-							@@loop('./html/templates/_vacancy-card.html', {})
+							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
 						</ul>
 					</div>
 				</section>

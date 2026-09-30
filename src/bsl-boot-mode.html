@@ -24,7 +24,9 @@
 						<h2 class="info-block__title title">ВОЗВРАТ В STOCK: ЗАВОДСКИЕ НАСТРОЙКИ АВТОМОБИЛЯ</h2>
 					</div>
 				</section>
-				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_features.html', {
+
+				})
 				@@include('html/sections/_offers.html', {
 				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
 				})
@@ -32,7 +34,9 @@
 				@@include('html/sections/_reviews.html', {})
 				@@include('html/sections/_callback.html', {})
 				@@include('html/sections/_contacts.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-bsl-boot-mode.json"
+				})
 			</main>
 			@@include('html/_footer.html', {})
 		</div>

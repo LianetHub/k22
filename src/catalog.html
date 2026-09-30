@@ -29,7 +29,9 @@
 						</div>
 					</div>
 				</section>
-				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_features.html', {
+
+				})
 				@@include('html/sections/_offers.html', {
 				"title": 'Возможно <span class="color-primary">вам понадобится</span>'
 				})
@@ -37,7 +39,9 @@
 				@@include('html/sections/_callback.html', {})
 				@@include('html/sections/_works.html', {})
 				@@include('html/sections/_contacts.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-catalog.json"
+				})
 			</main>
 			@@include('html/_footer.html', {})
 		</div>

@@ -16,13 +16,19 @@
 					</div>
 				</section>
 				@@include('html/sections/_offers.html', {})
-				@@include('html/sections/_features.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_features.html', {
+
+				})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-extras-services.json"
+				})
 				@@include('html/sections/_reviews.html', {})
 				@@include('html/sections/_callback.html', {})
 				@@include('html/sections/_works.html', {})
 				@@include('html/sections/_contacts.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-extras-services-2.json"
+				})
 			</main>
 			@@include('html/_footer.html', {})
 		</div>

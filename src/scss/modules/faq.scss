@@ -1,19 +1,198 @@
-@use "abstracts" as *;
+@use "sass:math";
+@use "../abstracts" as *;
 
 .faq {
+	padding: rem(48) 0;
+	background: $color-bg-secondary;
 
-    // .faq__container
-    &__container {}
+	@media (min-width: $md4) {
+		padding: rem(80) 0;
+	}
 
-    // .faq__title
-    &__title {}
+	@media (min-width: $md2) {
+		padding: rem(100) 0;
+	}
 
-    // .faq__subtitle
-    &__subtitle {}
+	// .faq__container
+	&__container {}
 
-    // .faq__phone
-    &__phone {}
+	// .faq__row
+	&__row {
+		--gutter-y: #{rem(40)};
 
-    // .faq__list
-    &__list {}
+		@media (min-width: $md2) {
+			--gutter-y: #{rem(0)};
+		}
+	}
+
+	// .faq__offer
+	&__offer {
+		display: flex;
+		flex-direction: column;
+		gap: rem(40);
+		height: 100%;
+
+		@media (min-width: $md2) {
+			justify-content: space-between;
+			gap: rem(60);
+		}
+	}
+
+	// .faq__offer-top
+	&__offer-top {}
+
+	// .faq__offer-bottom
+	&__offer-bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(20);
+	}
+
+	// .faq__title
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(12);
+
+		@media (min-width: $md4) {
+			gap: rem(26);
+		}
+	}
+
+	// .faq__subtitle
+	&__subtitle {
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(20, 16);
+		color: $color-text-secondary;
+		max-width: rem(416);
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			line-height: math.div(26, 22);
+		}
+	}
+
+	// .faq__phone
+	&__phone {
+		@include desktop-heading-h4;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		font-size: rem(18);
+		letter-spacing: rem(-0.36);
+		color: $color-text-primary;
+		transition: opacity 0.2s ease;
+
+		&::before {
+			flex-shrink: 0;
+			width: rem(16);
+			height: rem(16);
+			font-size: rem(16);
+			color: $color-accent-primary;
+		}
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+
+			&::before {
+				width: rem(16);
+				height: rem(16);
+				font-size: rem(16);
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	// .faq__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+	}
+
+	// .faq__item
+	&__item {}
+
+	// .faq__details
+	&__details {
+		background: $color-bg-primary;
+		padding: rem(16) rem(20);
+
+		@media (min-width: $md4) {
+			padding: rem(20);
+		}
+	}
+
+	// .faq__question
+	&__question {
+		@include mobile-heading-h4;
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		cursor: pointer;
+		color: $color-text-primary;
+		list-style: none;
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::marker {
+			content: "";
+			display: none;
+		}
+
+		&::before {
+			order: 2;
+			flex-shrink: 0;
+			margin-left: auto;
+			width: rem(20);
+			height: rem(20);
+			font-size: rem(20);
+			color: $color-accent-primary;
+			transition: transform 0.25s ease;
+		}
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h4;
+		}
+	}
+
+	// .faq__details[open] .faq__question
+	&__details[open] {
+		.faq__question {
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	// .faq__answer
+	&__answer {
+		padding-top: rem(16);
+		padding-right: rem(36);
+
+		p {
+			font-family: $font-inter;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: math.div(20, 16);
+			color: $color-text-secondary;
+
+			@media (min-width: $md4) {
+				font-size: rem(18);
+				line-height: math.div(22, 18);
+			}
+		}
+	}
 }

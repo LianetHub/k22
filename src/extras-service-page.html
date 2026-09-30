@@ -22,10 +22,14 @@
 				"title": '<span class="color-primary">Стоимость работ</span>'
 				})
 				@@include('html/sections/_works.html', {})
-				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_features.html', {
+
+				})
 				@@include('html/sections/_reviews.html', {})
 				@@include('html/sections/_contacts.html', {})
-				@@include('html/sections/_faq.html', {})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-extras-service-page.json"
+				})
 			</main>
 			@@include('html/_footer.html', {})
 		</div>
