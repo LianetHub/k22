@@ -1,0 +1,80 @@
+[
+	{
+		"itemClass": "swiper-slide",
+		"mod": "",
+		"title": "Чип-тюнинг<br>Honda",
+		"image": "@img/works/chip-tuning-honda.png",
+		"imageAlt": "Чип-тюнинг Honda: моторный отсек седана с открытым капотом",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"mod": "",
+		"title": "Чип-тюнинг<br>Honda",
+		"image": "@img/works/catalyst-remove-mazda.png",
+		"imageAlt": "Чип-тюнинг Honda: выпускной тракт до доработки прошивки",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"mod": "",
+		"title": "Чип-тюнинг<br>Honda",
+		"image": "@img/works/chip-tuning-honda.png",
+		"imageAlt": "Чип-тюнинг Honda: замер параметров двигателя после прошивки",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"mod": "",
+		"title": "Чип-тюнинг<br>Mazda",
+		"image": "@img/works/catalyst-remove-mazda.png",
+		"imageAlt": "Чип-тюнинг Mazda: диагностика выпускной системы перед прошивкой",
+		"powerValue": "+88",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+145",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"mod": "",
+		"title": "Чип-тюнинг<br>Kia",
+		"image": "@img/works/chip-tuning-honda.png",
+		"imageAlt": "Чип-тюнинг Kia: подключение к блоку управления двигателем",
+		"powerValue": "+94",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+152",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"mod": "",
+		"title": "Чип-тюнинг<br>Toyota",
+		"image": "@img/works/catalyst-remove-mazda.png",
+		"imageAlt": "Чип-тюнинг Toyota: проверка выпускного тракта на стенде",
+		"powerValue": "+110",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+186",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	}
+]

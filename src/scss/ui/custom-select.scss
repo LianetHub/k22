@@ -72,9 +72,41 @@
 		max-width: min(#{rem(320)}, calc(100vw - #{rem(32)}));
 		padding: rem(8);
 		border: 1px solid rgba(52, 52, 52, 0.05);
+		overflow-y: auto;
 
+		// custom-select__list.is-detached — dropdown moved out via appendTo
+		&.is-detached {
+			position: fixed;
+			top: auto;
+			right: auto;
+			max-width: none;
+		}
+	}
 
+	// custom-select__group
+	&__group {
+		& + .custom-select__group {
+			margin-top: rem(8);
+			padding-top: rem(8);
+			border-top: 1px solid rgba(52, 52, 52, 0.08);
+		}
+	}
 
+	// custom-select__group-label
+	&__group-label {
+		padding: rem(6) rem(16);
+		font-size: rem(12);
+		line-height: math.div(15, 12);
+		text-transform: uppercase;
+		color: $color-text-secondary;
+	}
+
+	// custom-select__empty
+	&__empty {
+		padding: rem(12) rem(16);
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		color: $color-text-secondary;
 	}
 
 	// custom-select__option
@@ -98,6 +130,16 @@
 			font-weight: 600;
 		}
 
+		// keyboard-active option, independent from the selected value
+		&.is-active {
+			background: $color-bg-secondary;
+		}
+
+		&.is-disabled {
+			opacity: 0.45;
+			cursor: default;
+		}
+
 		&:focus-visible {
 			outline: none;
 
@@ -107,6 +149,24 @@
 	&.is-open {
 		.custom-select__trigger::after {
 			transform: rotate(270deg);
+		}
+	}
+
+	&.is-disabled {
+		.custom-select__trigger {
+			cursor: not-allowed;
+		}
+	}
+
+	&.is-focused {
+		.custom-select__trigger {
+			border-color: rgba(138, 189, 53, 0.35);
+		}
+	}
+
+	&.is-invalid {
+		.custom-select__trigger {
+			border-color: $color-accent-primary;
 		}
 	}
 
@@ -244,9 +304,13 @@
 			color: $color-text-primary;
 
 			@media (any-hover: hover) {
-				&:hover:not([aria-disabled="true"]) {
+				&:hover:not(.is-disabled) {
 					background: $color-bg-secondary;
 				}
+			}
+
+			&.is-active {
+				background: $color-bg-secondary;
 			}
 
 			&.is-selected {
@@ -254,7 +318,7 @@
 				color: $color-accent-primary;
 			}
 
-			&[aria-disabled="true"] {
+			&.is-disabled {
 				opacity: 0.45;
 				cursor: default;
 			}
@@ -265,13 +329,16 @@
 			}
 		}
 
+		.custom-select__group-label,
+		.custom-select__empty {
+			font-size: rem(12);
+			letter-spacing: rem(-0.12);
+			text-transform: uppercase;
+		}
+
 		&.is-open {
 			.custom-select__trigger::before {
 				transform: rotate(180deg);
-			}
-
-			.custom-select__list {
-				display: block;
 			}
 		}
 

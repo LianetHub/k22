@@ -23,8 +23,8 @@
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
@@ -38,7 +38,10 @@
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-comprehensive-diagnostics.json"
 				})
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Диагностика",
+				"worksList": "./html/json/works-comprehensive-diagnostics.json"
+				})
 				@@include('html/sections/_contacts.html', {})
 			</main>
 			@@include('html/_footer.html', {})

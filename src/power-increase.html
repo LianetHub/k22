@@ -25,96 +25,44 @@
 								<div class="power__picker-head">
 									<h2 class="power__picker-title">Выберите ваш автомобиль</h2>
 									<div class="power__vehicle" role="tablist" aria-label="Тип транспорта">
-										<button
-											type="button"
-											class="power__vehicle-btn icon-car is-active"
-											role="tab"
-											aria-selected="true"
-											data-power-vehicle="car">
+										<button type="button" class="power__vehicle-btn icon-car is-active" role="tab" aria-selected="true" data-power-vehicle="car">
 											Автомобиль
 										</button>
-										<button
-											type="button"
-											class="power__vehicle-btn icon-moto"
-											role="tab"
-											aria-selected="false"
-											data-power-vehicle="moto">
+										<button type="button" class="power__vehicle-btn icon-moto" role="tab" aria-selected="false" data-power-vehicle="moto">
 											Мотоцикл
 										</button>
 									</div>
 								</div>
 
 								<div class="power__selects">
-									<div class="custom-select custom-select--power" data-custom-select>
+									<div class="custom-select custom-select--power">
 										<label class="visually-hidden" for="power-brand">Марка</label>
-										<select class="custom-select__native" id="power-brand" name="brand" data-power-select>
+										<select class="custom-select__native" id="power-brand" name="brand" data-custom-select data-power-select>
 											<option value="" selected disabled>Марка</option>
 											<option value="bmw">BMW</option>
 											<option value="audi">Audi</option>
 											<option value="mercedes">Mercedes-Benz</option>
 										</select>
-										<button
-											type="button"
-											class="custom-select__trigger icon-chevron-down"
-											aria-haspopup="listbox"
-											aria-expanded="false"
-											aria-controls="power-brand-list">
-											<span class="custom-select__value">Марка</span>
-										</button>
-										<ul class="custom-select__list" id="power-brand-list" role="listbox" hidden>
-											<li class="custom-select__option is-selected" role="option" data-value="" aria-selected="true" aria-disabled="true">Марка</li>
-											<li class="custom-select__option" role="option" data-value="bmw" aria-selected="false" id="power-brand-bmw">BMW</li>
-											<li class="custom-select__option" role="option" data-value="audi" aria-selected="false" id="power-brand-audi">Audi</li>
-											<li class="custom-select__option" role="option" data-value="mercedes" aria-selected="false" id="power-brand-mercedes">Mercedes-Benz</li>
-										</ul>
 									</div>
 
-									<div class="custom-select custom-select--power" data-custom-select>
+									<div class="custom-select custom-select--power">
 										<label class="visually-hidden" for="power-model">Модель</label>
-										<select class="custom-select__native" id="power-model" name="model" data-power-select>
+										<select class="custom-select__native" id="power-model" name="model" data-custom-select data-power-select>
 											<option value="" selected disabled>Модель</option>
 											<option value="m3">M3</option>
 											<option value="m5">M5</option>
 											<option value="x5">X5</option>
 										</select>
-										<button
-											type="button"
-											class="custom-select__trigger icon-chevron-down"
-											aria-haspopup="listbox"
-											aria-expanded="false"
-											aria-controls="power-model-list">
-											<span class="custom-select__value">Модель</span>
-										</button>
-										<ul class="custom-select__list" id="power-model-list" role="listbox" hidden>
-											<li class="custom-select__option is-selected" role="option" data-value="" aria-selected="true" aria-disabled="true">Модель</li>
-											<li class="custom-select__option" role="option" data-value="m3" aria-selected="false" id="power-model-m3">M3</li>
-											<li class="custom-select__option" role="option" data-value="m5" aria-selected="false" id="power-model-m5">M5</li>
-											<li class="custom-select__option" role="option" data-value="x5" aria-selected="false" id="power-model-x5">X5</li>
-										</ul>
 									</div>
 
-									<div class="custom-select custom-select--power" data-custom-select>
+									<div class="custom-select custom-select--power">
 										<label class="visually-hidden" for="power-engine">Двигатель</label>
-										<select class="custom-select__native" id="power-engine" name="engine" data-power-select>
+										<select class="custom-select__native" id="power-engine" name="engine" data-custom-select data-power-select>
 											<option value="" selected disabled>Двигатель</option>
 											<option value="competition-450">Completition 450 л.с.</option>
 											<option value="competition-510">Competition 510 л.с.</option>
 											<option value="standard-380">Standard 380 л.с.</option>
 										</select>
-										<button
-											type="button"
-											class="custom-select__trigger icon-chevron-down"
-											aria-haspopup="listbox"
-											aria-expanded="false"
-											aria-controls="power-engine-list">
-											<span class="custom-select__value">Двигатель</span>
-										</button>
-										<ul class="custom-select__list" id="power-engine-list" role="listbox" hidden>
-											<li class="custom-select__option is-selected" role="option" data-value="" aria-selected="true" aria-disabled="true">Двигатель</li>
-											<li class="custom-select__option" role="option" data-value="competition-450" aria-selected="false" id="power-engine-450">Completition 450 л.с.</li>
-											<li class="custom-select__option" role="option" data-value="competition-510" aria-selected="false" id="power-engine-510">Competition 510 л.с.</li>
-											<li class="custom-select__option" role="option" data-value="standard-380" aria-selected="false" id="power-engine-380">Standard 380 л.с.</li>
-										</ul>
 									</div>
 								</div>
 							</div>
@@ -128,20 +76,10 @@
 
 									<div class="power__table-wrap">
 										<div class="power__stages" role="tablist" aria-label="Stage">
-											<button
-												type="button"
-												class="power__stage is-active"
-												role="tab"
-												aria-selected="true"
-												data-power-stage="1">
+											<button type="button" class="power__stage is-active" role="tab" aria-selected="true" data-power-stage="1">
 												STAGE 1
 											</button>
-											<button
-												type="button"
-												class="power__stage"
-												role="tab"
-												aria-selected="false"
-												data-power-stage="2">
+											<button type="button" class="power__stage" role="tab" aria-selected="false" data-power-stage="2">
 												STAGE 2
 											</button>
 											<span class="power__stage-tail" aria-hidden="true"></span>
@@ -211,36 +149,12 @@
 
 								<div class="power__charts">
 									<figure class="power__chart">
-										<img
-											class="power__chart-img power__chart-img--empty"
-											src="@img/power/chart-power-empty.png"
-											alt="График мощности: заводская и Stage 1, без данных"
-											width="460"
-											height="323"
-											loading="lazy">
-										<img
-											class="power__chart-img power__chart-img--filled"
-											src="@img/power/chart-power-filled.png"
-											alt="График мощности: заводская и Stage 1"
-											width="460"
-											height="323"
-											loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-power-empty.png" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-power-filled.png" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
 									</figure>
 									<figure class="power__chart">
-										<img
-											class="power__chart-img power__chart-img--empty"
-											src="@img/power/chart-torque-empty.png"
-											alt="График крутящего момента: заводской и Stage 1, без данных"
-											width="460"
-											height="323"
-											loading="lazy">
-										<img
-											class="power__chart-img power__chart-img--filled"
-											src="@img/power/chart-torque-filled.png"
-											alt="График крутящего момента: заводской и Stage 1"
-											width="460"
-											height="323"
-											loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-torque-empty.png" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-torque-filled.png" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
 									</figure>
 								</div>
 							</div>
@@ -281,13 +195,16 @@
 				"faqList": "html/json/faq-power-increase.json"
 				})
 				@@include('html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_callback.html', {
 				"mod": "callback--secondary"
 				})
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Чип-тюнинг",
+				"worksList": "./html/json/works-power-increase.json"
+				})
 				@@include('html/sections/_contacts.html', {})
 			</main>
 			@@include('html/_footer.html', {})

@@ -1,1 +1,27 @@
-<li class="works__card"></li>
+<li class="@@itemClass">
+	<article class="portfolio-card @@mod">
+		<img
+			class="portfolio-card__img"
+			src="@@image"
+			alt="@@imageAlt"
+			width="573"
+			height="340"
+			loading="lazy"
+		>
+		<div class="portfolio-card__body">
+			<h3 class="portfolio-card__title">@@title</h3>
+			@@if (typeof powerValue !== 'undefined') {
+			<ul class="portfolio-card__stats">
+				<li class="portfolio-card__stat">
+					<span class="portfolio-card__stat-value">@@powerValue<span class="portfolio-card__stat-unit">@@powerUnit</span></span>
+					<span class="portfolio-card__stat-label">@@powerLabel</span>
+				</li>
+				<li class="portfolio-card__stat">
+					<span class="portfolio-card__stat-value">@@torqueValue<span class="portfolio-card__stat-unit">@@torqueUnit</span></span>
+					<span class="portfolio-card__stat-label">@@torqueLabel</span>
+				</li>
+			</ul>
+			}
+		</div>
+	</article>
+</li>

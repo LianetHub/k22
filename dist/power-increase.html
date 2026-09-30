@@ -766,96 +766,44 @@
 								<div class="power__picker-head">
 									<h2 class="power__picker-title">Выберите ваш автомобиль</h2>
 									<div class="power__vehicle" role="tablist" aria-label="Тип транспорта">
-										<button
-											type="button"
-											class="power__vehicle-btn icon-car is-active"
-											role="tab"
-											aria-selected="true"
-											data-power-vehicle="car">
+										<button type="button" class="power__vehicle-btn icon-car is-active" role="tab" aria-selected="true" data-power-vehicle="car">
 											Автомобиль
 										</button>
-										<button
-											type="button"
-											class="power__vehicle-btn icon-moto"
-											role="tab"
-											aria-selected="false"
-											data-power-vehicle="moto">
+										<button type="button" class="power__vehicle-btn icon-moto" role="tab" aria-selected="false" data-power-vehicle="moto">
 											Мотоцикл
 										</button>
 									</div>
 								</div>
 
 								<div class="power__selects">
-									<div class="custom-select custom-select--power" data-custom-select>
+									<div class="custom-select custom-select--power">
 										<label class="visually-hidden" for="power-brand">Марка</label>
-										<select class="custom-select__native" id="power-brand" name="brand" data-power-select>
+										<select class="custom-select__native" id="power-brand" name="brand" data-custom-select data-power-select>
 											<option value="" selected disabled>Марка</option>
 											<option value="bmw">BMW</option>
 											<option value="audi">Audi</option>
 											<option value="mercedes">Mercedes-Benz</option>
 										</select>
-										<button
-											type="button"
-											class="custom-select__trigger icon-chevron-down"
-											aria-haspopup="listbox"
-											aria-expanded="false"
-											aria-controls="power-brand-list">
-											<span class="custom-select__value">Марка</span>
-										</button>
-										<ul class="custom-select__list" id="power-brand-list" role="listbox" hidden>
-											<li class="custom-select__option is-selected" role="option" data-value="" aria-selected="true" aria-disabled="true">Марка</li>
-											<li class="custom-select__option" role="option" data-value="bmw" aria-selected="false" id="power-brand-bmw">BMW</li>
-											<li class="custom-select__option" role="option" data-value="audi" aria-selected="false" id="power-brand-audi">Audi</li>
-											<li class="custom-select__option" role="option" data-value="mercedes" aria-selected="false" id="power-brand-mercedes">Mercedes-Benz</li>
-										</ul>
 									</div>
 
-									<div class="custom-select custom-select--power" data-custom-select>
+									<div class="custom-select custom-select--power">
 										<label class="visually-hidden" for="power-model">Модель</label>
-										<select class="custom-select__native" id="power-model" name="model" data-power-select>
+										<select class="custom-select__native" id="power-model" name="model" data-custom-select data-power-select>
 											<option value="" selected disabled>Модель</option>
 											<option value="m3">M3</option>
 											<option value="m5">M5</option>
 											<option value="x5">X5</option>
 										</select>
-										<button
-											type="button"
-											class="custom-select__trigger icon-chevron-down"
-											aria-haspopup="listbox"
-											aria-expanded="false"
-											aria-controls="power-model-list">
-											<span class="custom-select__value">Модель</span>
-										</button>
-										<ul class="custom-select__list" id="power-model-list" role="listbox" hidden>
-											<li class="custom-select__option is-selected" role="option" data-value="" aria-selected="true" aria-disabled="true">Модель</li>
-											<li class="custom-select__option" role="option" data-value="m3" aria-selected="false" id="power-model-m3">M3</li>
-											<li class="custom-select__option" role="option" data-value="m5" aria-selected="false" id="power-model-m5">M5</li>
-											<li class="custom-select__option" role="option" data-value="x5" aria-selected="false" id="power-model-x5">X5</li>
-										</ul>
 									</div>
 
-									<div class="custom-select custom-select--power" data-custom-select>
+									<div class="custom-select custom-select--power">
 										<label class="visually-hidden" for="power-engine">Двигатель</label>
-										<select class="custom-select__native" id="power-engine" name="engine" data-power-select>
+										<select class="custom-select__native" id="power-engine" name="engine" data-custom-select data-power-select>
 											<option value="" selected disabled>Двигатель</option>
 											<option value="competition-450">Completition 450 л.с.</option>
 											<option value="competition-510">Competition 510 л.с.</option>
 											<option value="standard-380">Standard 380 л.с.</option>
 										</select>
-										<button
-											type="button"
-											class="custom-select__trigger icon-chevron-down"
-											aria-haspopup="listbox"
-											aria-expanded="false"
-											aria-controls="power-engine-list">
-											<span class="custom-select__value">Двигатель</span>
-										</button>
-										<ul class="custom-select__list" id="power-engine-list" role="listbox" hidden>
-											<li class="custom-select__option is-selected" role="option" data-value="" aria-selected="true" aria-disabled="true">Двигатель</li>
-											<li class="custom-select__option" role="option" data-value="competition-450" aria-selected="false" id="power-engine-450">Completition 450 л.с.</li>
-											<li class="custom-select__option" role="option" data-value="competition-510" aria-selected="false" id="power-engine-510">Competition 510 л.с.</li>
-											<li class="custom-select__option" role="option" data-value="standard-380" aria-selected="false" id="power-engine-380">Standard 380 л.с.</li>
-										</ul>
 									</div>
 								</div>
 							</div>
@@ -869,20 +817,10 @@
 
 									<div class="power__table-wrap">
 										<div class="power__stages" role="tablist" aria-label="Stage">
-											<button
-												type="button"
-												class="power__stage is-active"
-												role="tab"
-												aria-selected="true"
-												data-power-stage="1">
+											<button type="button" class="power__stage is-active" role="tab" aria-selected="true" data-power-stage="1">
 												STAGE 1
 											</button>
-											<button
-												type="button"
-												class="power__stage"
-												role="tab"
-												aria-selected="false"
-												data-power-stage="2">
+											<button type="button" class="power__stage" role="tab" aria-selected="false" data-power-stage="2">
 												STAGE 2
 											</button>
 											<span class="power__stage-tail" aria-hidden="true"></span>
@@ -952,36 +890,12 @@
 
 								<div class="power__charts">
 									<figure class="power__chart">
-										<img
-											class="power__chart-img power__chart-img--empty"
-											src="img/power/chart-power-empty.png"
-											alt="График мощности: заводская и Stage 1, без данных"
-											width="460"
-											height="323"
-											loading="lazy">
-										<img
-											class="power__chart-img power__chart-img--filled"
-											src="img/power/chart-power-filled.png"
-											alt="График мощности: заводская и Stage 1"
-											width="460"
-											height="323"
-											loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="img/power/chart-power-empty.png" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="img/power/chart-power-filled.png" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
 									</figure>
 									<figure class="power__chart">
-										<img
-											class="power__chart-img power__chart-img--empty"
-											src="img/power/chart-torque-empty.png"
-											alt="График крутящего момента: заводской и Stage 1, без данных"
-											width="460"
-											height="323"
-											loading="lazy">
-										<img
-											class="power__chart-img power__chart-img--filled"
-											src="img/power/chart-torque-filled.png"
-											alt="График крутящего момента: заводской и Stage 1"
-											width="460"
-											height="323"
-											loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="img/power/chart-torque-empty.png" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="img/power/chart-torque-filled.png" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
 									</figure>
 								</div>
 							</div>
@@ -1326,15 +1240,192 @@
 					</div>
 				</section>
 				<section class="works">
-				    <div class="works__container container">
-				        <h2 class="works__title title decor-line-block"><span class="color-primary">Выполненные</span> работы</h2>
-				        <div class="works__slider swiper">
-				            <div class="swiper-wrapper">
-				                
-				            </div>
-				        </div>
-				    </div>
+					<div class="works__container container">
+						<div class="works__head">
+							
+							<div class="works__tag decor-line-inline">Чип-тюнинг</div>
+							
+							<h2 class="works__title title">
+								<span class="works__title-line color-primary">Выполненные</span>
+								<span class="works__title-line">работы</span>
+							</h2>
+						</div>
+						<div class="works__nav">
+							<button type="button" class="works__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущая работа"></button>
+							<button type="button" class="works__next swiper-button-next icon-arrrow-long" aria-label="Следующая работа"></button>
+						</div>
+						
+						<div class="works__slider swiper">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<article class="portfolio-card ">
+										<img
+											class="portfolio-card__img"
+											src="img/works/chip-tuning-honda.png"
+											alt="Чип-тюнинг Honda: моторный отсек седана с открытым капотом"
+											width="573"
+											height="340"
+											loading="lazy"
+										>
+										<div class="portfolio-card__body">
+											<h3 class="portfolio-card__title">Чип-тюнинг<br>Honda</h3>
+											
+											<ul class="portfolio-card__stats">
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+102<span class="portfolio-card__stat-unit">лс</span></span>
+													<span class="portfolio-card__stat-label">мощность<br>двигателя</span>
+												</li>
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+173<span class="portfolio-card__stat-unit">нм</span></span>
+													<span class="portfolio-card__stat-label">крутящий<br>момент</span>
+												</li>
+											</ul>
+											
+										</div>
+									</article>
+								</li>
+<li class="swiper-slide">
+									<article class="portfolio-card ">
+										<img
+											class="portfolio-card__img"
+											src="img/works/catalyst-remove-mazda.png"
+											alt="Чип-тюнинг Honda: выпускной тракт до доработки прошивки"
+											width="573"
+											height="340"
+											loading="lazy"
+										>
+										<div class="portfolio-card__body">
+											<h3 class="portfolio-card__title">Чип-тюнинг<br>Honda</h3>
+											
+											<ul class="portfolio-card__stats">
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+102<span class="portfolio-card__stat-unit">лс</span></span>
+													<span class="portfolio-card__stat-label">мощность<br>двигателя</span>
+												</li>
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+173<span class="portfolio-card__stat-unit">нм</span></span>
+													<span class="portfolio-card__stat-label">крутящий<br>момент</span>
+												</li>
+											</ul>
+											
+										</div>
+									</article>
+								</li>
+<li class="swiper-slide">
+									<article class="portfolio-card ">
+										<img
+											class="portfolio-card__img"
+											src="img/works/chip-tuning-honda.png"
+											alt="Чип-тюнинг Honda: замер параметров двигателя после прошивки"
+											width="573"
+											height="340"
+											loading="lazy"
+										>
+										<div class="portfolio-card__body">
+											<h3 class="portfolio-card__title">Чип-тюнинг<br>Honda</h3>
+											
+											<ul class="portfolio-card__stats">
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+102<span class="portfolio-card__stat-unit">лс</span></span>
+													<span class="portfolio-card__stat-label">мощность<br>двигателя</span>
+												</li>
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+173<span class="portfolio-card__stat-unit">нм</span></span>
+													<span class="portfolio-card__stat-label">крутящий<br>момент</span>
+												</li>
+											</ul>
+											
+										</div>
+									</article>
+								</li>
+<li class="swiper-slide">
+									<article class="portfolio-card ">
+										<img
+											class="portfolio-card__img"
+											src="img/works/catalyst-remove-mazda.png"
+											alt="Чип-тюнинг Mazda: диагностика выпускной системы перед прошивкой"
+											width="573"
+											height="340"
+											loading="lazy"
+										>
+										<div class="portfolio-card__body">
+											<h3 class="portfolio-card__title">Чип-тюнинг<br>Mazda</h3>
+											
+											<ul class="portfolio-card__stats">
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+88<span class="portfolio-card__stat-unit">лс</span></span>
+													<span class="portfolio-card__stat-label">мощность<br>двигателя</span>
+												</li>
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+145<span class="portfolio-card__stat-unit">нм</span></span>
+													<span class="portfolio-card__stat-label">крутящий<br>момент</span>
+												</li>
+											</ul>
+											
+										</div>
+									</article>
+								</li>
+<li class="swiper-slide">
+									<article class="portfolio-card ">
+										<img
+											class="portfolio-card__img"
+											src="img/works/chip-tuning-honda.png"
+											alt="Чип-тюнинг Kia: подключение к блоку управления двигателем"
+											width="573"
+											height="340"
+											loading="lazy"
+										>
+										<div class="portfolio-card__body">
+											<h3 class="portfolio-card__title">Чип-тюнинг<br>Kia</h3>
+											
+											<ul class="portfolio-card__stats">
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+94<span class="portfolio-card__stat-unit">лс</span></span>
+													<span class="portfolio-card__stat-label">мощность<br>двигателя</span>
+												</li>
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+152<span class="portfolio-card__stat-unit">нм</span></span>
+													<span class="portfolio-card__stat-label">крутящий<br>момент</span>
+												</li>
+											</ul>
+											
+										</div>
+									</article>
+								</li>
+<li class="swiper-slide">
+									<article class="portfolio-card ">
+										<img
+											class="portfolio-card__img"
+											src="img/works/catalyst-remove-mazda.png"
+											alt="Чип-тюнинг Toyota: проверка выпускного тракта на стенде"
+											width="573"
+											height="340"
+											loading="lazy"
+										>
+										<div class="portfolio-card__body">
+											<h3 class="portfolio-card__title">Чип-тюнинг<br>Toyota</h3>
+											
+											<ul class="portfolio-card__stats">
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+110<span class="portfolio-card__stat-unit">лс</span></span>
+													<span class="portfolio-card__stat-label">мощность<br>двигателя</span>
+												</li>
+												<li class="portfolio-card__stat">
+													<span class="portfolio-card__stat-value">+186<span class="portfolio-card__stat-unit">нм</span></span>
+													<span class="portfolio-card__stat-label">крутящий<br>момент</span>
+												</li>
+											</ul>
+											
+										</div>
+									</article>
+								</li>
+
+							</ul>
+						</div>
+						
+					</div>
 				</section>
+
 				<section class="contacts">
 					<div class="contacts__container container">
 						<div class="contacts__intro">
@@ -1489,6 +1580,14 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="cookies" data-cookies>
+				<div class="cookies__inner">
+					<p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал корректно, а пользоваться им было удобнее. Продолжая использовать сайт, вы соглашаетесь с использованием cookie и <a href="policy.html" class="cookies__link">Политикой конфиденциальности</a>.</p>
+					<button type="button" class="cookies__btn btn btn--primary btn--compact" data-cookies-accept>Хорошо</button>
+				</div>
+			</div>
+
 		</div>
 		<!-- plugins -->
 		<script defer src="js/libs/swiper-bundle.min.js"></script>

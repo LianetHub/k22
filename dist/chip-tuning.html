@@ -954,15 +954,22 @@
 
 
 				<section class="works">
-				    <div class="works__container container">
-				        <h2 class="works__title title decor-line-block"><span class="color-primary">Выполненные</span> работы</h2>
-				        <div class="works__slider swiper">
-				            <div class="swiper-wrapper">
-				                
-				            </div>
-				        </div>
-				    </div>
+					<div class="works__container container">
+						<div class="works__head">
+							
+							<h2 class="works__title title decor-line-block">
+								<span class="works__title-line color-primary">Выполненные</span>
+								<span class="works__title-line">работы</span>
+							</h2>
+						</div>
+						<div class="works__nav">
+							<button type="button" class="works__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущая работа"></button>
+							<button type="button" class="works__next swiper-button-next icon-arrrow-long" aria-label="Следующая работа"></button>
+						</div>
+						
+					</div>
 				</section>
+
 				<section class="contacts">
 					<div class="contacts__container container">
 						<div class="contacts__intro">
@@ -1118,6 +1125,14 @@
 					</div>
 				</div>
 			</footer>
+
+			<div class="cookies" data-cookies>
+				<div class="cookies__inner">
+					<p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал корректно, а пользоваться им было удобнее. Продолжая использовать сайт, вы соглашаетесь с использованием cookie и <a href="policy.html" class="cookies__link">Политикой конфиденциальности</a>.</p>
+					<button type="button" class="cookies__btn btn btn--primary btn--compact" data-cookies-accept>Хорошо</button>
+				</div>
+			</div>
+
 		</div>
 		<!-- plugins -->
 		<script defer src="js/libs/swiper-bundle.min.js"></script>

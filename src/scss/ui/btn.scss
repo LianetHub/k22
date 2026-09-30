@@ -45,6 +45,19 @@
 		min-height: rem(56);
 	}
 
+	// .btn--compact
+	&.btn--compact {
+		padding: rem(22) rem(32);
+		font-size: rem(12);
+		line-height: 130%;
+		letter-spacing: em(-0.24, 12);
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			letter-spacing: em(-0.32, 16);
+		}
+	}
+
 	&.icon-chevron-right::before,
 	&.icon-chevron-down::before {
 		order: 1;

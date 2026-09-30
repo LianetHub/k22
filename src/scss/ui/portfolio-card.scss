@@ -1,0 +1,124 @@
+@use "../abstracts" as *;
+
+.portfolio-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: rem(340);
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to bottom, rgba($color-text-primary, 0) 45%, $color-text-primary 100%);
+	}
+
+	// .portfolio-card__img
+	&__img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// .portfolio-card__body
+	&__body {
+		position: relative;
+		z-index: $ui-index-2;
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		padding: rem(20);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		@media (min-width: $md0) {
+			padding: rem(16) rem(30);
+		}
+	}
+
+	// .portfolio-card__title
+	&__title {
+		@include desktop-heading-h4;
+
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h3;
+
+			flex: 1 1 0;
+			min-width: 0;
+		}
+
+		@media (min-width: $md0) {
+			@include mobile-heading-h1;
+		}
+	}
+
+	// .portfolio-card__stats
+	&__stats {
+		display: flex;
+		gap: rem(10);
+
+		@media (min-width: $md4) {
+			flex-direction: column;
+			flex-shrink: 0;
+		}
+	}
+
+	// .portfolio-card__stat
+	&__stat {
+		display: flex;
+		flex: 1 1 0;
+		align-items: center;
+		gap: rem(10);
+		min-width: 0;
+		padding: rem(6) rem(12);
+		background: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			flex: 0 0 auto;
+		}
+	}
+
+	// .portfolio-card__stat-value
+	&__stat-value {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		gap: rem(2);
+		color: $color-accent-primary;
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1.4;
+		letter-spacing: rem(-0.36);
+	}
+
+	// .portfolio-card__stat-unit
+	&__stat-unit {
+		font-size: rem(12);
+		letter-spacing: rem(-0.24);
+		opacity: 0.2;
+	}
+
+	// .portfolio-card__stat-label
+	&__stat-label {
+		flex-shrink: 0;
+		color: $color-text-secondary;
+		font-family: $font-inter;
+		font-size: rem(14);
+		line-height: 1.2;
+		letter-spacing: rem(-0.28);
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			letter-spacing: rem(-0.32);
+		}
+	}
+}

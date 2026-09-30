@@ -48,7 +48,10 @@
 					</div>
 				</section>
 
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Автосервис",
+				"worksList": "./html/json/works-service-page.json"
+				})
 				@@include('html/sections/_contacts.html', {})
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-service-page.json"

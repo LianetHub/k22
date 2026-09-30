@@ -2,5 +2,141 @@
     {
         "image": "@img/brands/Audi.svg",
         "name": "Audi"
+    },
+    {
+        "image": "@img/brands/BMW.svg",
+        "name": "BMW"
+    },
+    {
+        "image": "@img/brands/Cadillac.svg",
+        "name": "Cadillac"
+    },
+    {
+        "image": "@img/brands/Changan.svg",
+        "name": "Changan"
+    },
+    {
+        "image": "@img/brands/Chery.svg",
+        "name": "Chery"
+    },
+    {
+        "image": "@img/brands/Chevrolet.svg",
+        "name": "Chevrolet"
+    },
+    {
+        "image": "@img/brands/Citroën.svg",
+        "name": "Citroën"
+    },
+    {
+        "image": "@img/brands/Daewoo.svg",
+        "name": "Daewoo"
+    },
+    {
+        "image": "@img/brands/Datsun.svg",
+        "name": "Datsun"
+    },
+    {
+        "image": "@img/brands/Exeed.svg",
+        "name": "Exeed"
+    },
+    {
+        "image": "@img/brands/Fiat.svg",
+        "name": "Fiat"
+    },
+    {
+        "image": "@img/brands/Ford.svg",
+        "name": "Ford"
+    },
+    {
+        "image": "@img/brands/Geely.svg",
+        "name": "Geely"
+    },
+    {
+        "image": "@img/brands/Haval.svg",
+        "name": "Haval"
+    },
+    {
+        "image": "@img/brands/Honda.svg",
+        "name": "Honda"
+    },
+    {
+        "image": "@img/brands/Hyundai.svg",
+        "name": "Hyundai"
+    },
+    {
+        "image": "@img/brands/Infiniti.svg",
+        "name": "Infiniti"
+    },
+    {
+        "image": "@img/brands/JAC.svg",
+        "name": "JAC"
+    },
+    {
+        "image": "@img/brands/Jeep.svg",
+        "name": "Jeep"
+    },
+    {
+        "image": "@img/brands/Jetour.svg",
+        "name": "Jetour"
+    },
+    {
+        "image": "@img/brands/Kia.svg",
+        "name": "Kia"
+    },
+    {
+        "image": "@img/brands/Lada.svg",
+        "name": "Lada"
+    },
+    {
+        "image": "@img/brands/Land-Rover.svg",
+        "name": "Land Rover"
+    },
+    {
+        "image": "@img/brands/Lexus.svg",
+        "name": "Lexus"
+    },
+    {
+        "image": "@img/brands/Li.svg",
+        "name": "Li"
+    },
+    {
+        "image": "@img/brands/Lifan.svg",
+        "name": "Lifan"
+    },
+    {
+        "image": "@img/brands/Mazda.svg",
+        "name": "Mazda"
+    },
+    {
+        "image": "@img/brands/Mercedes-benz.svg",
+        "name": "Mercedes-Benz"
+    },
+    {
+        "image": "@img/brands/Mini.svg",
+        "name": "Mini"
+    },
+    {
+        "image": "@img/brands/Mitsubishi.svg",
+        "name": "Mitsubishi"
+    },
+    {
+        "image": "@img/brands/Nissan.svg",
+        "name": "Nissan"
+    },
+    {
+        "image": "@img/brands/Omoda.svg",
+        "name": "Omoda"
+    },
+    {
+        "image": "@img/brands/Opel.svg",
+        "name": "Opel"
+    },
+    {
+        "image": "@img/brands/Peugeot.svg",
+        "name": "Peugeot"
+    },
+    {
+        "image": "@img/brands/Porsche.svg",
+        "name": "Porsche"
     }
 ]

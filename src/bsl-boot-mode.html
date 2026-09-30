@@ -33,10 +33,13 @@
 				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
 				"offersList": "./html/json/offers-bsl-boot-mode.json"
 				})
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Чип-тюнинг",
+				"worksList": "./html/json/works-bsl-boot-mode.json"
+				})
 				@@include('html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_callback.html', {
 				"mod": "callback--secondary"

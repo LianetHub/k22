@@ -109,11 +109,12 @@
 		padding: rem(8) rem(16) rem(8) rem(8);
 		background: $color-bg-secondary;
 		color: $color-text-primary;
-		transition: opacity 0.2s ease;
+		transition: background-color 0.2s ease, color 0.2s ease;
 
 		@media (any-hover: hover) {
 			&:hover {
-				opacity: 0.75;
+				background: rgba($color-accent-primary, 0.1);
+				color: $color-accent-primary;
 			}
 		}
 

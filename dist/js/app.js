@@ -398,6 +398,29 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
+		document.querySelectorAll(".works__slider")?.forEach((slider) => {
+			const section = slider.closest(".works");
+
+			new Swiper(slider, {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				navigation: {
+					prevEl: section?.querySelector(".works__prev"),
+					nextEl: section?.querySelector(".works__next"),
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: "auto",
+						spaceBetween: 30,
+					},
+					1200: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+				},
+			});
+		});
+
 		document.querySelectorAll(".gallery__slider")?.forEach((el) => {
 			new Swiper(el, {
 				slidesPerView: "auto",
@@ -461,6 +484,134 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		syncPowerEmptyState();
+	}
+
+	// phone mask
+	const phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+	function getInputNumbersValue(input) {
+		return input.value.replace(/\D/g, "");
+	}
+
+	function onPhonePaste(e) {
+		const input = e.target;
+		const inputNumbersValue = getInputNumbersValue(input);
+		const pasted = e.clipboardData || window.clipboardData;
+
+		if (!pasted) return;
+
+		const pastedText = pasted.getData("Text");
+		if (/\D/g.test(pastedText)) {
+			input.value = inputNumbersValue;
+		}
+	}
+
+	function onPhoneInput(e) {
+		const input = e.target;
+		let inputNumbersValue = getInputNumbersValue(input);
+		const selectionStart = input.selectionStart;
+		let formattedInputValue = "";
+
+		if (!inputNumbersValue) {
+			input.value = "";
+			return;
+		}
+
+		if (input.value.length !== selectionStart) {
+			if (e.data && /\D/g.test(e.data)) {
+				input.value = inputNumbersValue;
+			}
+			return;
+		}
+
+		if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+			if (inputNumbersValue[0] === "9") {
+				inputNumbersValue = "7" + inputNumbersValue;
+			}
+
+			const firstSymbols = inputNumbersValue[0] === "8" ? "8" : "+7";
+			formattedInputValue = firstSymbols + " ";
+
+			if (inputNumbersValue.length > 1) {
+				formattedInputValue += "(" + inputNumbersValue.substring(1, 4);
+			}
+			if (inputNumbersValue.length >= 5) {
+				formattedInputValue += ") " + inputNumbersValue.substring(4, 7);
+			}
+			if (inputNumbersValue.length >= 8) {
+				formattedInputValue += "-" + inputNumbersValue.substring(7, 9);
+			}
+			if (inputNumbersValue.length >= 10) {
+				formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
+			}
+		} else {
+			formattedInputValue = "+" + inputNumbersValue.substring(0, 16);
+		}
+
+		input.value = formattedInputValue;
+	}
+
+	function onPhoneKeyDown(e) {
+		const inputValue = e.target.value.replace(/\D/g, "");
+
+		if (e.key === "Backspace" && inputValue.length === 1) {
+			e.target.value = "";
+		}
+	}
+
+	phoneInputs.forEach((phoneInput) => {
+		phoneInput.addEventListener("keydown", onPhoneKeyDown);
+		phoneInput.addEventListener("input", onPhoneInput);
+		phoneInput.addEventListener("paste", onPhonePaste);
+	});
+
+	// cookies
+	const cookies = document.querySelector("[data-cookies]");
+	if (cookies) {
+		const cookiesKey = "k22-cookies-accepted";
+
+		function isCookiesAccepted() {
+			try {
+				return localStorage.getItem(cookiesKey) === "1";
+			} catch (error) {
+				// localStorage недоступен в приватном режиме
+				return false;
+			}
+		}
+
+		function saveCookiesConsent() {
+			try {
+				localStorage.setItem(cookiesKey, "1");
+			} catch (error) {
+				// localStorage недоступен в приватном режиме
+			}
+		}
+
+		function setCookiesHeight(value) {
+			document.documentElement.style.setProperty("--cookies-height", value);
+		}
+
+		function acceptCookies() {
+			saveCookiesConsent();
+			cookies.remove();
+			setCookiesHeight("0px");
+		}
+
+		if (isCookiesAccepted()) {
+			cookies.remove();
+		} else {
+			cookies.classList.add("is-visible");
+			setCookiesHeight(`${cookies.offsetHeight}px`);
+
+			if (typeof ResizeObserver !== "undefined") {
+				new ResizeObserver(() => {
+					if (!cookies.isConnected) return;
+					setCookiesHeight(`${cookies.offsetHeight}px`);
+				}).observe(cookies);
+			}
+
+			cookies.querySelector("[data-cookies-accept]")?.addEventListener("click", acceptCookies);
+		}
 	}
 });
 

@@ -34,4 +34,8 @@ $ui-index-6: 6;
 $ui-index-7: 7;
 
 
-:root {}
+:root {
+	--cookies-height: 0px;
+}
+
+$cookies-height: var(--cookies-height);

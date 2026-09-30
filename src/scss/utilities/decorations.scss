@@ -4,3 +4,17 @@
 .color-primary {
 	color: $color-accent-primary
 }
+
+.decor-line-inline {
+	display: flex;
+	align-items: center;
+	gap: rem(4);
+
+	&::before {
+		content: '';
+		flex-shrink: 0;
+		width: rem(79);
+		height: rem(4);
+		background: url("@img/decor/line.svg") 0 0 / rem(79) rem(4) no-repeat;
+	}
+}

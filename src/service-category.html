@@ -35,10 +35,13 @@
 				"faqList": "html/json/faq-service-category.json"
 				})
 				@@include('html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
 				})
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Автосервис",
+				"worksList": "./html/json/works-service-category.json"
+				})
 				@@include('html/sections/_contacts.html', {})
 
 			</main>
