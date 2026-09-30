@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="58" height="47" viewBox="0 0 58 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="triangle">
+<mask id="path-1-outside-1_0_109" maskUnits="userSpaceOnUse" x="0" y="0" width="58" height="47" fill="black">
+<rect fill="white" width="58" height="47"/>
+<path d="M0 0H58V46H0V0Z"/>
+</mask>
+<path d="M58 46V45H0V46V47H58V46Z" fill="white" fill-opacity="0.1" mask="url(#path-1-outside-1_0_109)"/>
+<path id="Vector 24" d="M58 46L0 0V46H58Z" fill="#FC373D" fill-opacity="0.2"/>
+</g>
+</svg>

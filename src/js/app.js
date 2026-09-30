@@ -153,6 +153,194 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initYandexMap();
 
+	// header
+	const menu = document.querySelector("[data-menu]");
+	const menuBurger = document.querySelector("[data-menu-burger]");
+	const menuBack = menu?.querySelector("[data-menu-back]");
+	const menuClose = menu?.querySelector("[data-menu-close]");
+	const desktopMenuMq = window.matchMedia("(min-width: 1199.98px)");
+	let menuScrollY = 0;
+
+	function isDesktopMenu() {
+		return desktopMenuMq.matches;
+	}
+
+	function lockBody(lock) {
+		const body = document.body;
+
+		if (lock) {
+			menuScrollY = window.scrollY;
+			body.classList.add("is-locked");
+			body.style.top = `-${menuScrollY}px`;
+			body.style.position = "fixed";
+			body.style.width = "100%";
+			return;
+		}
+
+		body.classList.remove("is-locked");
+		body.style.position = "";
+		body.style.top = "";
+		body.style.width = "";
+		window.scrollTo(0, menuScrollY);
+	}
+
+	function closeDesktopDropdowns() {
+		if (!menu) return;
+
+		menu.querySelectorAll(".menu__item.is-open").forEach((item) => {
+			item.classList.remove("is-open");
+			const trigger = item.querySelector("[data-menu-trigger]");
+			const dropdown = item.querySelector("[data-menu-dropdown]");
+			if (trigger) trigger.setAttribute("aria-expanded", "false");
+			if (dropdown) dropdown.hidden = true;
+		});
+	}
+
+	function closeMobileDrill() {
+		if (!menu) return;
+
+		menu.classList.remove("is-drill");
+		menu.querySelectorAll(".menu__item.is-drill").forEach((item) => {
+			item.classList.remove("is-drill");
+		});
+		menu.querySelectorAll(".menu__group.is-open").forEach((group) => {
+			group.classList.remove("is-open");
+			const toggle = group.querySelector("[data-menu-group]");
+			if (toggle) toggle.setAttribute("aria-expanded", "false");
+		});
+		menu.querySelectorAll("[data-menu-dropdown]").forEach((dropdown) => {
+			dropdown.hidden = true;
+		});
+		if (menuBack) menuBack.hidden = true;
+	}
+
+	function closeMobileMenu() {
+		if (!menu) return;
+
+		menu.classList.remove("is-open");
+		closeMobileDrill();
+		if (menuBurger) menuBurger.setAttribute("aria-expanded", "false");
+		lockBody(false);
+	}
+
+	function openMobileMenu() {
+		if (!menu) return;
+
+		menu.classList.add("is-open");
+		if (menuBurger) menuBurger.setAttribute("aria-expanded", "true");
+		lockBody(true);
+	}
+
+	function openDesktopDropdown(item) {
+		closeDesktopDropdowns();
+		item.classList.add("is-open");
+		const trigger = item.querySelector("[data-menu-trigger]");
+		const dropdown = item.querySelector("[data-menu-dropdown]");
+		if (trigger) trigger.setAttribute("aria-expanded", "true");
+		if (dropdown) dropdown.hidden = false;
+	}
+
+	function openMobileDrill(item) {
+		if (!menu) return;
+
+		closeMobileDrill();
+		menu.classList.add("is-drill");
+		item.classList.add("is-drill");
+		const dropdown = item.querySelector("[data-menu-dropdown]");
+		if (dropdown) dropdown.hidden = false;
+		if (menuBack) menuBack.hidden = false;
+	}
+
+	function resetMenuOnBreakpoint() {
+		closeDesktopDropdowns();
+		closeMobileMenu();
+	}
+
+	if (menu) {
+		document.addEventListener("click", (e) => {
+			const target = e.target;
+
+			if (target.closest("[data-menu-burger]")) {
+				if (menu.classList.contains("is-open")) {
+					closeMobileMenu();
+				} else {
+					openMobileMenu();
+				}
+				return;
+			}
+
+			if (target.closest("[data-menu-close]")) {
+				closeMobileMenu();
+				return;
+			}
+
+			if (target.closest("[data-menu-back]")) {
+				closeMobileDrill();
+				return;
+			}
+
+			const groupToggle = target.closest("[data-menu-group]");
+			if (groupToggle && !isDesktopMenu()) {
+				const group = groupToggle.closest(".menu__group");
+				if (!group || group.classList.contains("menu__group--flat")) return;
+
+				const isOpen = group.classList.toggle("is-open");
+				groupToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+				return;
+			}
+
+			const trigger = target.closest("[data-menu-trigger]");
+			if (trigger) {
+				const item = trigger.closest(".menu__item--has-dropdown");
+				if (!item) return;
+
+				if (isDesktopMenu()) {
+					if (item.classList.contains("is-open")) {
+						closeDesktopDropdowns();
+					} else {
+						openDesktopDropdown(item);
+					}
+				} else {
+					openMobileDrill(item);
+				}
+				return;
+			}
+
+			if (isDesktopMenu() && menu.querySelector(".menu__item.is-open") && !target.closest(".menu__item--has-dropdown")) {
+				closeDesktopDropdowns();
+			}
+		});
+
+		document.addEventListener("keydown", (e) => {
+			if (e.key !== "Escape") return;
+
+			if (menu.classList.contains("is-open")) {
+				closeMobileMenu();
+				return;
+			}
+
+			closeDesktopDropdowns();
+		});
+
+		if (typeof desktopMenuMq.addEventListener === "function") {
+			desktopMenuMq.addEventListener("change", resetMenuOnBreakpoint);
+		} else {
+			desktopMenuMq.addListener(resetMenuOnBreakpoint);
+		}
+
+		menu.querySelectorAll(".menu__item--has-dropdown").forEach((item) => {
+			item.addEventListener("mouseenter", () => {
+				if (!isDesktopMenu()) return;
+				openDesktopDropdown(item);
+			});
+
+			item.addEventListener("mouseleave", () => {
+				if (!isDesktopMenu()) return;
+				closeDesktopDropdowns();
+			});
+		});
+	}
+
 	// sliders
 	function getMobileSlider(sliderName, options) {
 		let init = false;
@@ -220,6 +408,59 @@ document.addEventListener("DOMContentLoaded", () => {
 				},
 			});
 		});
+	}
+
+	// power increase calculator
+	const powerSection = document.querySelector("[data-power]");
+	if (powerSection) {
+		const selects = powerSection.querySelectorAll("[data-power-select]");
+		const vehicleTabs = powerSection.querySelectorAll("[data-power-vehicle]");
+		const stageTabs = powerSection.querySelectorAll("[data-power-stage]");
+		const priceLabel = powerSection.querySelector("[data-power-price-label]");
+		const priceValue = powerSection.querySelector("[data-power-price-value]");
+
+		const stagePrices = {
+			1: { label: "Стоимость stage 1", value: "от 35 000 ₽" },
+			2: { label: "Стоимость stage 2", value: "от 55 000 ₽" },
+		};
+
+		function syncPowerEmptyState() {
+			const allSelected = Array.from(selects).every((select) => Boolean(select.value));
+			powerSection.classList.toggle("is-empty", !allSelected);
+		}
+
+		function activateTabGroup(tabs, activeTab, attrName) {
+			tabs.forEach((tab) => {
+				const isActive = tab === activeTab;
+				tab.classList.toggle("is-active", isActive);
+				tab.setAttribute("aria-selected", isActive ? "true" : "false");
+			});
+
+			if (attrName === "data-power-stage" && priceLabel && priceValue) {
+				const stage = activeTab.getAttribute("data-power-stage");
+				const price = stagePrices[stage] || stagePrices[1];
+				priceLabel.textContent = price.label;
+				priceValue.textContent = price.value;
+			}
+		}
+
+		selects.forEach((select) => {
+			select.addEventListener("change", syncPowerEmptyState);
+		});
+
+		vehicleTabs.forEach((tab) => {
+			tab.addEventListener("click", () => {
+				activateTabGroup(vehicleTabs, tab, "data-power-vehicle");
+			});
+		});
+
+		stageTabs.forEach((tab) => {
+			tab.addEventListener("click", () => {
+				activateTabGroup(stageTabs, tab, "data-power-stage");
+			});
+		});
+
+		syncPowerEmptyState();
 	}
 });
 

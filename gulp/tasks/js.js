@@ -16,3 +16,10 @@ export const js = () => {
 export const copyJsLibs = () => {
 	return app.gulp.src(app.path.src.jsLibs, { allowEmpty: true }).pipe(app.gulp.dest(app.path.build.jsLibs));
 };
+
+export const copyJsModules = () => {
+	return app.gulp
+		.src(app.path.src.jsModules, { allowEmpty: true })
+		.pipe(app.gulp.dest(app.path.build.jsModules))
+		.pipe(app.plugins.browsersync.stream());
+};

@@ -16,7 +16,7 @@ import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss, normalize, copyCssLibs } from "./gulp/tasks/scss.js";
-import { js, copyJsLibs } from "./gulp/tasks/js.js";
+import { js, copyJsLibs, copyJsModules } from "./gulp/tasks/js.js";
 import { images, favicon } from "./gulp/tasks/images.js";
 import {
     otf2ttf,
@@ -34,7 +34,7 @@ function watcher() {
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.normalize, normalize);
-    gulp.watch(path.watch.js, js);
+    gulp.watch(path.watch.js, gulp.parallel(js, copyJsModules));
     gulp.watch(path.watch.json, json);
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.php, php);
@@ -47,7 +47,7 @@ const fonts = gulp.series(otf2ttf, ttfToWoff, copyWoff, fontsStyle);
 const mainTasks = gulp.series(
     fonts,
     // svgSpriteTask,
-    gulp.parallel(copy, copyCssLibs, copyJsLibs, html, normalize, scss, favicon, js, json, images, php)
+    gulp.parallel(copy, copyCssLibs, copyJsLibs, copyJsModules, html, normalize, scss, favicon, js, json, images, php)
 );
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
@@ -57,5 +57,6 @@ const deployZIP = gulp.series(reset, mainTasks, zip);
 export { dev };
 export { build };
 export { deployZIP };
+export { copyJsModules };
 
 gulp.task("default", dev);

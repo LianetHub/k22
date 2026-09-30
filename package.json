@@ -9,7 +9,9 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "npm run build && git add . && git commit -m \"commit\" && git push",
-    "ftp": "npm run build && node .vscode/ftp-deploy-config.js"
+    "ftp": "npm run build && node .vscode/ftp-deploy-config.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "author": "Liana",
   "license": "ISC",
@@ -59,7 +61,9 @@
     "gulp-webp-html": "^1.0.2",
     "gulp-webp-html-nosvg": "^1.1.1",
     "gulp-zip": "^6.1.0",
+    "jsdom": "^26.1.0",
     "sass": "^1.104.1",
+    "vitest": "^3.2.4",
     "webp-converter": "3.0.1",
     "webpack": "^5.111.1",
     "webpack-stream": "^7.0.0"
