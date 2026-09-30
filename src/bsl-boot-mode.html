@@ -33,7 +33,10 @@
 				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
 				})
 				@@include('html/sections/_works.html', {})
-				@@include('html/sections/_reviews.html', {})
+				@@include('html/sections/_reviews.html', {
+					"moreHref": "#",
+					"reviewsList": "./html/json/reviews-4.json"
+				})
 				@@include('html/sections/_callback.html', {
 				"mod": "callback--secondary"
 				})

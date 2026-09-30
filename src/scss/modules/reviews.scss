@@ -1,20 +1,88 @@
-@use "abstracts" as *;
+@use "../abstracts" as *;
 
 .reviews {
-    background: $color-bg-primary;
+	padding-block: rem(48);
+	background: $color-bg-primary;
 
-    // .reviews__container
-    &__container {}
+	@media (min-width: $md4) {
+		padding-block: rem(80);
+	}
 
-    // .reviews__title
-    &__title {}
+	@media (min-width: $md2) {
+		padding-block: rem(100);
+	}
 
-    // .reviews__slider
-    &__slider {}
+	// .reviews__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
 
-    // .reviews__slider-prev
-    &__slider-prev {}
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
 
-    // .reviews__slider-next
-    &__slider-next {}
+	// .reviews__head
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: rem(16) rem(24);
+	}
+
+	// .reviews__title
+	&__title {}
+
+	// .reviews__more
+	&__more {
+		flex-shrink: 0;
+		flex-direction: row-reverse;
+		gap: rem(10);
+		padding-bottom: rem(8);
+		border-bottom: 1px solid $color-accent-primary;
+		color: $color-accent-primary;
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: -0.02em;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+		}
+	}
+
+	// .reviews__slider
+	&__slider {
+		.swiper-slide {
+			height: auto;
+		}
+
+		@media (min-width: $md5) {
+			overflow: visible;
+
+			.swiper-wrapper {
+				flex-wrap: wrap;
+				transform: none !important;
+			}
+		}
+	}
+
+	// .reviews__grid
+	&__grid {
+		--gutter-x: #{rem(12)};
+		--gutter-y: #{rem(12)};
+
+		@media (min-width: $md5) {
+			--gutter-x: #{rem(20)};
+			--gutter-y: #{rem(20)};
+		}
+
+		@media (min-width: $md4) {
+			--gutter-x: #{rem(30)};
+			--gutter-y: #{rem(30)};
+		}
+	}
 }

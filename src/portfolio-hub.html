@@ -15,7 +15,10 @@
 						</ul>
 					</div>
 				</section>
-				@@include('./html/sections/_reviews.html')
+				@@include('./html/sections/_reviews.html', {
+					"moreHref": "#",
+					"reviewsList": "./html/json/reviews-4.json"
+				})
 				@@include('./html/sections/_faq.html', {
 				"faqList": "./html/json/faq-portfolio-hub.json"
 				})

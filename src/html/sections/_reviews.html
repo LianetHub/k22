@@ -1,12 +1,20 @@
 <section class="reviews">
-    <div class="reviews__container container">
-        <h2 class="reviews__title title decor-line-block">Отзывы</h2>
-        <div class="reviews__slider swiper">
-            <div class="swiper-wrapper">
-                @@loop('../templates/_review-card.html', {})
-            </div>
-            <button class="reviews__slider-prev swiper-button-prev"></button>
-            <button class="reviews__slider-next swiper-button-next"></button>
-        </div>
-    </div>
+	<div class="reviews__container container">
+		<div class="reviews__head">
+			<h2 class="reviews__title title decor-line-block">Отзывы</h2>
+			@@if(typeof moreHref !== 'undefined') {
+			<a class="reviews__more more-link" href="@@moreHref">Читать все отзывы</a>
+			}
+			@@if(typeof moreHref === 'undefined') {
+			<a class="reviews__more more-link" href="#">Читать все отзывы</a>
+			}
+		</div>
+		@@if(typeof reviewsList !== 'undefined') {
+		<div class="swiper reviews__slider" data-reviews>
+			<div class="swiper-wrapper row reviews__grid">
+				@@loop('../templates/_review-card.html', '@@reviewsList')
+			</div>
+		</div>
+		}
+	</div>
 </section>
