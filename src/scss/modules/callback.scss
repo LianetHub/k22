@@ -1,14 +1,459 @@
+@use "sass:math";
 @use "abstracts" as *;
 
 .callback {
-    background: $color-bg-primary;
+	background: $color-bg-primary;
+	padding: rem(48) 0;
 
-    // .callback__container
-    &__container {}
+	@media (min-width: $md4) {
+		padding: rem(70) 0;
+	}
 
-    // .callback__title
-    &__title {}
+	@media (min-width: $md2) {
+		padding: rem(100) 0;
+	}
 
-    // .callback__banner
-    &__banner {}
+	// .callback--secondary
+	&.callback--secondary {
+		background: $color-bg-secondary;
+	}
+
+	// .callback__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+
+		@media (min-width: $md4) {
+			gap: rem(32);
+		}
+
+		@media (min-width: $md2) {
+			gap: rem(40);
+		}
+	}
+
+	// .callback__title
+	&__title {
+		color: $color-text-primary;
+	}
+
+	// .callback__banner
+	&__banner {
+		position: relative;
+		overflow: hidden;
+		background-color: $color-bg-elevated;
+		background-image: url("@img/decor/light-pattern.svg");
+		background-repeat: repeat;
+		background-size: rem(12) rem(12);
+		padding: rem(24);
+
+		@media (min-width: $md4) {
+			padding: rem(40);
+		}
+
+		@media (min-width: $md2) {
+			padding: rem(70);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: min(100%, rem(977));
+			height: 100%;
+			background: url("@img/decor/callback-stripes.svg") right top / auto 100% no-repeat;
+			pointer-events: none;
+			z-index: 0;
+		}
+	}
+
+	// .callback__row
+	&__row {
+		position: relative;
+		z-index: 1;
+		--gutter-x: #{rem(20)};
+		--gutter-y: #{rem(24)};
+		align-items: stretch;
+
+		@media (min-width: $md3) {
+			--gutter-x: #{rem(30)};
+			align-items: center;
+		}
+
+		@media (min-width: $md2) {
+			--gutter-x: #{rem(40)};
+			justify-content: space-between;
+		}
+	}
+
+	// .callback__intro-col
+	&__intro-col {
+		@media (min-width: $md2) {
+			flex: 0 0 auto;
+			width: auto;
+			max-width: rem(416);
+		}
+	}
+
+	// .callback__form-col
+	&__form-col {
+		@media (min-width: $md2) {
+			flex: 0 1 rem(955);
+			width: auto;
+			max-width: rem(955);
+		}
+	}
+
+	// .callback__intro
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: rem(32);
+		height: 100%;
+		color: $color-bg-primary;
+
+		@media (min-width: $md2) {
+			gap: rem(40);
+			min-height: rem(274);
+		}
+	}
+
+	// .callback__intro-top
+	&__intro-top {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width: $md2) {
+			gap: rem(40);
+		}
+
+		&.decor-line-block {
+			padding-top: rem(28);
+
+			@media (min-width: $md2) {
+				padding-top: rem(44);
+			}
+		}
+	}
+
+	// .callback__heading
+	&__heading {
+		color: $color-bg-primary;
+	}
+
+	// .callback__lead
+	&__lead {
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: rem(-0.32);
+		color: $color-bg-primary;
+		max-width: rem(416);
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+		}
+	}
+
+	// .callback__price-row
+	&__price-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10);
+	}
+
+	// .callback__price
+	&__price {
+		color: $color-bg-primary;
+	}
+
+	// .callback__discount
+	&__discount {
+		@include desktop-heading-h4;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: rem(28);
+		padding: rem(4) rem(10) rem(6);
+		background: $color-accent-primary;
+		color: $color-bg-primary;
+		font-size: rem(16);
+		letter-spacing: rem(-0.32);
+		clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%);
+
+		@media (min-width: $md4) {
+			min-height: rem(35);
+			padding: rem(6) rem(12) rem(8);
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+		}
+	}
+
+	// .callback__price-note
+	&__price-note {
+		font-family: $font-inter;
+		font-size: rem(18);
+		font-weight: 400;
+		line-height: math.div(22, 18);
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			font-size: rem(26);
+			line-height: math.div(31, 26);
+		}
+	}
+
+	// .callback__call
+	&__call {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+
+		@media (min-width: $md4) {
+			gap: rem(20);
+		}
+
+		// .callback__call--form
+		&.callback__call--form {
+			align-items: flex-start;
+
+			@media (min-width: $md4) {
+				align-items: flex-end;
+			}
+
+			.callback__phone {
+				color: $color-text-primary;
+			}
+		}
+	}
+
+	// .callback__call-label
+	&__call-label {
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(19, 16);
+		color: $color-text-secondary;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			line-height: math.div(26, 22);
+		}
+	}
+
+	// .callback__phone
+	&__phone {
+		@include desktop-heading-h4;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		font-size: rem(18);
+		letter-spacing: rem(-0.36);
+		color: $color-bg-primary;
+		transition: opacity 0.2s ease;
+
+		&::before {
+			flex-shrink: 0;
+			font-size: rem(16);
+			color: $color-accent-primary;
+		}
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+
+			&::before {
+				font-size: rem(22);
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	// .callback__form
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+		padding: rem(20);
+		background: $color-bg-secondary;
+		height: 100%;
+
+		@media (min-width: $md4) {
+			gap: rem(24);
+			padding: rem(24);
+		}
+
+		@media (min-width: $md2) {
+			gap: rem(30);
+			padding: rem(30);
+			justify-content: center;
+		}
+	}
+
+	// .callback__form-title
+	&__form-title {
+		@include desktop-heading-h4;
+		font-size: rem(18);
+		letter-spacing: rem(-0.36);
+		color: $color-text-primary;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+		}
+	}
+
+	// .callback__fields
+	&__fields {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			gap: rem(20);
+		}
+	}
+
+	// .callback__field
+	&__field {
+		position: relative;
+		flex: 1 1 0;
+		min-width: 0;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: rem(16);
+			z-index: 1;
+			transform: translateY(-50%);
+			font-size: rem(12);
+			line-height: 1;
+			color: $color-accent-primary;
+			pointer-events: none;
+		}
+
+		@media (min-width: $md4) {
+			&::before {
+				left: rem(30);
+			}
+		}
+	}
+
+	// .callback__input
+	&__input {
+		min-height: rem(56);
+		padding: rem(16) rem(16) rem(16) rem(40);
+		background: $color-bg-primary;
+		border: none;
+		font-family: $font-inter;
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: $color-text-primary;
+
+		&::placeholder {
+			color: $color-text-secondary;
+		}
+
+		@media (min-width: $md4) {
+			min-height: rem(77);
+			padding: rem(26) rem(30) rem(26) rem(52);
+			font-size: rem(22);
+			line-height: math.div(26, 22);
+		}
+	}
+
+	// .callback__actions
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: rem(20);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			gap: rem(24);
+		}
+	}
+
+	// .callback__submit
+	&__submit {
+		align-self: stretch;
+		width: 100%;
+
+		@media (min-width: $md4) {
+			width: auto;
+			align-self: center;
+		}
+	}
+
+	// .callback__messengers
+	&__messengers {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(12) rem(16);
+
+		@media (min-width: $md4) {
+			gap: rem(20);
+		}
+	}
+
+	// .callback__messengers-label
+	&__messengers-label {
+		@include desktop-heading-h4;
+		font-size: rem(16);
+		letter-spacing: rem(-0.32);
+		color: $color-text-secondary;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+		}
+	}
+
+	// .callback__socials
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+
+		@media (min-width: $md4) {
+			gap: rem(16);
+		}
+	}
+
+	// .callback__social
+	&__social {
+		width: rem(48);
+		height: rem(48);
+		background: $color-bg-primary;
+		color: $color-accent-primary;
+		font-size: rem(20);
+
+		@media (min-width: $md4) {
+			width: rem(60);
+			height: rem(60);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: $color-text-tertiary;
+			}
+		}
+	}
 }

@@ -41,13 +41,15 @@
 					</div>
 				</section>
 				@@include('./html/sections/_features.html', {
-					"mod": "features--home",
-					"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
-					"lead": "Полный спектр работ по обслуживанию систем экологии автомобиля",
-					"featuresList": "./html/json/features-home.json"
+				"mod": "features--home",
+				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"lead": "Полный спектр работ по обслуживанию систем экологии автомобиля",
+				"featuresList": "./html/json/features-home.json"
 				})
 
-				@@include('./html/sections/_callback.html')
+				@@include('./html/sections/_callback.html', {
+
+				})
 				<section class="brands-power">
 					<div class="brands-power__container container">
 						<div class="brands-power__header">
@@ -72,7 +74,9 @@
 					</div>
 				</section>
 				@@include('./html/sections/_offers.html')
-				@@include('./html/sections/_reviews.html')
+				@@include('./html/sections/_reviews.html', {
+
+				})
 				@@include('./html/sections/_callback.html')
 				@@include('./html/sections/_faq.html', {
 				"faqList": './html/json/faq.json'
