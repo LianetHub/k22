@@ -18,10 +18,14 @@
 
 	// .faq__row
 	&__row {
-		--gutter-y: #{rem(40)};
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(40);
 
 		@media (min-width: $md2) {
-			--gutter-y: #{rem(0)};
+			grid-template-columns: 1fr 2fr;
+			gap: rem(30);
+			align-items: stretch;
 		}
 	}
 

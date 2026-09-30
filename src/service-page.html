@@ -28,8 +28,12 @@
 				"btnText": "Рассчитать стоимость"
 				})
 				@@include('html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
+				})
+				@@include('html/sections/_offers.html', {
+				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">Вас заинтересует</span>',
+				"offersList": "./html/json/offers-service-page.json"
 				})
 				@@include('html/sections/_features.html', {
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',

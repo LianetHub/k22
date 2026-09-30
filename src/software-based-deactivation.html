@@ -26,7 +26,9 @@
 					</div>
 				</section>
 				@@include('html/sections/_offers.html', {
-				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
+				"mod": "offers--muted",
+				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
+				"offersList": "./html/json/offers-software-based-deactivation.json"
 				})
 				@@include('html/sections/_features.html', {
 				"mod": "features--light",

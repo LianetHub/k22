@@ -1,0 +1,18 @@
+[
+	{
+		"mod": "offer--lead",
+		"image": "@img/offers/stock-return.png",
+		"badge": "",
+		"title": "ВОЗВРАТ В СТОК 12.5.1",
+		"text": "Вернём заводские параметры выхлопной системы.",
+		"href": "#"
+	},
+	{
+		"mod": "offer--lead",
+		"image": "@img/offers/exhaust-new.png",
+		"badge": "",
+		"title": "создание новой выхлопной системы",
+		"text": "Спроектируем и изготовим выхлопную систему с нуля.",
+		"href": "#"
+	}
+]

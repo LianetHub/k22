@@ -1,12 +1,12 @@
-<section class="offers">
-    <div class="offers__container container">
-        @@if(typeof title !== 'undefined'){
-        <h2 class="offers__title title">
-            @@title
-        </h2>
-        }
-        <div class="offers__list">
-            @@loop('../templates/_offer.html', {})
-        </div>
-    </div>
+<section class="offers@@if(typeof mod !== 'undefined'){ @@mod}">
+	<div class="offers__container container">
+		@@if(typeof title !== 'undefined'){
+		<h2 class="offers__title title decor-line-block">@@title</h2>
+		}
+		@@if(typeof offersList !== 'undefined'){
+		<div class="offers__list">
+			@@loop('../templates/_offer.html', '@@offersList')
+		</div>
+		}
+	</div>
 </section>

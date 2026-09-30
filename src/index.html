@@ -73,7 +73,10 @@
 
 					</div>
 				</section>
-				@@include('./html/sections/_offers.html')
+				@@include('./html/sections/_offers.html', {
+				"mod": "offers--muted",
+				"offersList": "./html/json/offers-home.json"
+				})
 				@@include('./html/sections/_reviews.html', {
 				"mod": "reviews--trio",
 				"moreHref": "#",
@@ -96,7 +99,7 @@
 								<button type="button" class="blog__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
 							</div>
 						</div>
-						<div class="blog__slider swiper" data-blog-slider>
+						<div class="blog__slider swiper">
 							<ul class="swiper-wrapper">
 								@@loop('./html/templates/_blog-card.html', './html/json/blog.json')
 							</ul>

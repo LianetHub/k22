@@ -32,9 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				.split(";")
 				.map((chunk) => {
 					const [coordsPart, title = ""] = chunk.split("|");
-					const coords = (coordsPart || "")
-						.split(",")
-						.map((item) => parseFloat(item.trim()));
+					const coords = (coordsPart || "").split(",").map((item) => parseFloat(item.trim()));
 
 					if (coords.length < 2 || coords.some((n) => Number.isNaN(n))) {
 						return null;
@@ -178,14 +176,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if (typeof Swiper !== "undefined") {
-		document.querySelectorAll("[data-reviews]").forEach((el) => {
+		document.querySelectorAll(".reviews__slider")?.forEach((el) => {
 			getMobileSlider(el, {
 				slidesPerView: 1.05,
 				spaceBetween: 12,
 			});
 		});
 
-		document.querySelectorAll("[data-blog-slider]").forEach((slider) => {
+		document.querySelectorAll(".blog__slider")?.forEach((slider) => {
 			const section = slider.closest(".blog");
 
 			new Swiper(slider, {
@@ -212,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
-		document.querySelectorAll("[data-gallery]").forEach((el) => {
+		document.querySelectorAll(".gallery__slider")?.forEach((el) => {
 			new Swiper(el, {
 				slidesPerView: "auto",
 				spaceBetween: 12,

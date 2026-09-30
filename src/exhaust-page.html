@@ -24,17 +24,11 @@
 				@@include('html/sections/_callback.html', {
 				"mod": "callback--secondary"
 				})
-				<section class="offers">
-					<div class="offers__container container">
-						<h2 class="offers__title title">
-							Возможно
-							<span class="color-primary">вам понадобится</span>
-						</h2>
-						<div class="offers__list">
-							@@loop('./html/templates/_offer.html', {})
-						</div>
-					</div>
-				</section>
+				@@include('html/sections/_offers.html', {
+				"mod": "offers--muted",
+				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вам понадобится</span>',
+				"offersList": "./html/json/offers-exhaust-page.json"
+				})
 				@@include('html/sections/_features.html', {
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
 				"featuresList": "./html/json/features.json"

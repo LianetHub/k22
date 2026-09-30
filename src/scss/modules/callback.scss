@@ -73,36 +73,21 @@
 	&__row {
 		position: relative;
 		z-index: 1;
-		--gutter-x: #{rem(20)};
-		--gutter-y: #{rem(24)};
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(24);
 		align-items: stretch;
 
 		@media (min-width: $md3) {
-			--gutter-x: #{rem(30)};
+			grid-template-columns: 1fr 2fr;
+			gap: rem(30);
 			align-items: center;
 		}
 
 		@media (min-width: $md2) {
-			--gutter-x: #{rem(40)};
+			grid-template-columns: minmax(0, rem(416)) minmax(0, rem(955));
 			justify-content: space-between;
-		}
-	}
-
-	// .callback__intro-col
-	&__intro-col {
-		@media (min-width: $md2) {
-			flex: 0 0 auto;
-			width: auto;
-			max-width: rem(416);
-		}
-	}
-
-	// .callback__form-col
-	&__form-col {
-		@media (min-width: $md2) {
-			flex: 0 1 rem(955);
-			width: auto;
-			max-width: rem(955);
+			gap: rem(40);
 		}
 	}
 

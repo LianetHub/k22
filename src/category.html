@@ -15,17 +15,11 @@
 						</ul>
 					</div>
 				</section>
-				<section class="offers">
-					<div class="offers__container container">
-						<h2 class="offers__title title">
-							Возможно
-							<span class="color-primary">вам понадобится</span>
-						</h2>
-						<div class="offers__list">
-							@@loop('./html/templates/_offer.html', {})
-						</div>
-					</div>
-				</section>
+				@@include('html/sections/_offers.html', {
+				"mod": "offers--muted",
+				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вам понадобится</span>',
+				"offersList": "./html/json/offers-category.json"
+				})
 				@@include('html/sections/_reviews.html', {
 					"moreHref": "#",
 					"reviewsList": "./html/json/reviews-4.json"

@@ -1,1 +1,266 @@
-@use "abstracts" as *;
+@use "sass:math";
+@use "../abstracts" as *;
+
+.offers {
+	padding-block: rem(60);
+	background-color: $color-bg-primary;
+
+	@media (min-width: $md4) {
+		padding-block: rem(100);
+	}
+
+	// .offers__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// .offers__title
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(16);
+		max-width: rem(723);
+
+		@media (min-width: $md4) {
+			gap: rem(26);
+		}
+	}
+
+	// .offers__title-line
+	&__title-line {
+		display: block;
+	}
+
+	// .offers__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			gap: rem(20);
+		}
+	}
+
+	// .offers--muted
+	&--muted {
+		background-color: $color-bg-secondary;
+	}
+}
+
+.offer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: rem(24);
+	min-height: rem(180);
+	padding: rem(24);
+	overflow: hidden;
+	background-color: $color-bg-elevated;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center right;
+	color: $color-bg-secondary;
+
+	@media (min-width: $md4) {
+		flex-direction: row;
+		align-items: center;
+		gap: rem(40);
+		min-height: rem(164);
+		padding: rem(40) rem(50);
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background: linear-gradient(
+			90deg,
+			$color-bg-elevated 0%,
+			rgba($color-bg-elevated, 0.72) 42%,
+			rgba($color-bg-elevated, 0) 68%
+		);
+	}
+
+	// .offer__badge
+	&__badge {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: $ui-index-2;
+		display: inline-flex;
+		align-items: center;
+		height: rem(40);
+		padding: rem(8) rem(16) rem(10);
+		background-color: $color-accent-primary;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			height: rem(50);
+			padding: rem(10) rem(20) rem(12);
+			font-size: rem(22);
+			letter-spacing: -0.02em;
+		}
+
+		&:empty {
+			display: none;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: rem(46);
+			height: 100%;
+			background: url("@img/decor/offer-badge-tail.svg") center / 100% 100% no-repeat;
+
+			@media (min-width: $md4) {
+				width: rem(58);
+			}
+		}
+	}
+
+	// .offer__content
+	&__content {
+		position: relative;
+		z-index: $ui-index-2;
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		gap: rem(16);
+		min-width: 0;
+
+		@media (min-width: $md4) {
+			gap: rem(30);
+		}
+	}
+
+	// .offer__title
+	&__title {
+		font-size: rem(22);
+		font-weight: 700;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: $color-bg-secondary;
+
+		@media (min-width: $md4) {
+			font-size: rem(32);
+		}
+
+		@media (min-width: $md2) {
+			font-size: rem(40);
+		}
+	}
+
+	// .offer__text
+	&__text {
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: 1.2;
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+		}
+
+		@media (min-width: $md2) {
+			font-size: rem(26);
+		}
+
+		&:empty {
+			display: none;
+		}
+	}
+
+	// .offer__btn
+	&__btn {
+		position: relative;
+		z-index: $ui-index-2;
+		align-self: flex-start;
+		flex-shrink: 0;
+
+		@media (min-width: $md4) {
+			align-self: center;
+		}
+	}
+
+	// .offer--promo
+	&--promo {
+		background-position: left center;
+
+		&::before {
+			background: linear-gradient(
+				90deg,
+				rgba($color-bg-elevated, 0) 26%,
+				$color-bg-elevated 100%
+			);
+		}
+
+		@media (min-width: $md4) {
+			justify-content: flex-end;
+			gap: rem(50);
+			padding-left: rem(280);
+		}
+
+		@media (min-width: $md2) {
+			padding-left: rem(600);
+		}
+
+		.offer__content {
+			@media (min-width: $md4) {
+				flex: 0 1 rem(711);
+				align-items: flex-end;
+			}
+		}
+
+		.offer__title {
+			@media (min-width: $md4) {
+				text-align: right;
+			}
+		}
+	}
+
+	// .offer--lead
+	&--lead {
+		background-position: right center;
+
+		&::before {
+			background: linear-gradient(
+				90deg,
+				$color-bg-elevated 0%,
+				rgba($color-bg-elevated, 0) 45%,
+				$color-bg-elevated 100%
+			);
+
+			@media (min-width: $md4) {
+				background: linear-gradient(
+					90deg,
+					$color-bg-elevated 33%,
+					rgba($color-bg-elevated, 0) 62%
+				);
+			}
+		}
+
+		@media (min-width: $md4) {
+			justify-content: space-between;
+			gap: rem(50);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+[
+	{
+		"mod": "offer--promo",
+		"image": "@img/offers/shop.png",
+		"badge": "-20%",
+		"title": "Магазин тюнинга выхлопных систем",
+		"text": "",
+		"href": "#"
+	},
+	{
+		"mod": "offer--lead",
+		"image": "@img/offers/extras-tuning.png",
+		"badge": "",
+		"title": "тюнинг <span class=\"color-primary\">и установка дополнительного оборудования</span>",
+		"text": "Доработаем автомобиль под ваши задачи и стиль.",
+		"href": "#"
+	}
+]

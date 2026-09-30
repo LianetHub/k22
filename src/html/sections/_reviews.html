@@ -10,7 +10,7 @@
 			}
 		</div>
 		@@if(typeof reviewsList !== 'undefined') {
-		<div class="swiper reviews__slider" data-reviews>
+		<div class="swiper reviews__slider">
 			<div class="swiper-wrapper reviews__grid">
 				@@loop('../templates/_review-card.html', '@@reviewsList')
 			</div>

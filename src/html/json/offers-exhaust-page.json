@@ -1,0 +1,26 @@
+[
+	{
+		"mod": "offer--lead",
+		"image": "@img/offers/flame-arrester.png",
+		"badge": "",
+		"title": "УСТАНОВКА ПЛАМЕГАСИТЕЛЯ И КАТАЛИЗАТОРОВ",
+		"text": "Установка пламегасителей и катализаторов Евро-2 и Евро-5.",
+		"href": "#"
+	},
+	{
+		"mod": "offer--lead",
+		"image": "@img/offers/catalyst-control.png",
+		"badge": "",
+		"title": "отключение контроля катализатора",
+		"text": "Отключим программный контроль катализатора и устраним связанные с ним ошибки.",
+		"href": "#"
+	},
+	{
+		"mod": "offer--promo",
+		"image": "@img/offers/diagnostics.png",
+		"badge": "FREE",
+		"title": "бесплатная комплексная диагностика",
+		"text": "",
+		"href": "#"
+	}
+]
