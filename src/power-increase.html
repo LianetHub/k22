@@ -22,6 +22,11 @@
 				@@include('html/sections/_offers.html', {
 				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
 				})
+				@@include('html/sections/_features.html', {
+					"mod": "features--muted",
+					"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+					"featuresList": "./html/json/features.json"
+				})
 				<section class="info-block">
 					<div class="info-block__container container">
 						<h2 class="info-block__title title">PRO чип-тюнинг</h2>

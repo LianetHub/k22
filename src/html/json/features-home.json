@@ -1,0 +1,34 @@
+[
+	{
+		"col": "col-12 col-md-6 col-xl-3",
+		"cardMod": "",
+		"image": "@img/features/home-locations.webp",
+		"icon": "locations",
+		"title": "Локации",
+		"text": "2 удобных адреса"
+	},
+	{
+		"col": "col-12 col-md-6 col-xl-3",
+		"cardMod": "",
+		"image": "@img/features/home-guarantee.webp",
+		"icon": "shield",
+		"title": "гарантия",
+		"text": "Бессрочная на прошивки"
+	},
+	{
+		"col": "col-12 col-md-6 col-xl-3",
+		"cardMod": "",
+		"image": "@img/features/home-clients.webp",
+		"icon": "user",
+		"title": "Клиенты",
+		"text": "300 клиентов в месяц"
+	},
+	{
+		"col": "col-12 col-md-6 col-xl-3",
+		"cardMod": "",
+		"image": "@img/features/schedule.webp",
+		"icon": "clock",
+		"title": "График работы",
+		"text": "Работаем ежедневно"
+	}
+]

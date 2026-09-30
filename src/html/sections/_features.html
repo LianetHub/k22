@@ -1,8 +1,17 @@
-<section class="features">
-    <div class="features__container container">
-        <h2 class="features__title title">
-            ПОЧЕМУ ВЫБИРАЮТ
-            <span class="color-primary">K22</span> POWER TEAM
-        </h2>
-    </div>
+<section class="features@@if(typeof mod !== 'undefined'){ @@mod}">
+	<div class="features__container container">
+		<div class="features__head">
+			@@if(typeof title !== 'undefined') {
+			<h2 class="features__title title decor-line-block">@@title</h2>
+			}
+			@@if(typeof lead !== 'undefined') {
+			<p class="features__lead">@@lead</p>
+			}
+		</div>
+		@@if(typeof featuresList !== 'undefined') {
+		<div class="row features__grid">
+			@@loop('../templates/_feauture-card.html', '@@featuresList')
+		</div>
+		}
+	</div>
 </section>

@@ -1,0 +1,26 @@
+[
+	{
+		"col": "col-12 col-md-4",
+		"cardMod": "feature-card--plain",
+		"image": "@img/features/buy-selection.webp",
+		"icon": "shield",
+		"title": "подбор",
+		"text": "Проверим совместимость комплектующих перед покупкой и подберём подходящий вариант под ваш автомобиль."
+	},
+	{
+		"col": "col-12 col-md-4",
+		"cardMod": "feature-card--plain",
+		"image": "@img/features/buy-guarantee.webp",
+		"icon": "shield",
+		"title": "гарантия",
+		"text": "Предоставляем гарантию на комплектующие и выполненные работы."
+	},
+	{
+		"col": "col-12 col-md-4",
+		"cardMod": "feature-card--plain",
+		"image": "@img/features/buy-install.webp",
+		"icon": "shield",
+		"title": "установка",
+		"text": "Установим, настроим и проверим работу оборудования на месте."
+	}
+]

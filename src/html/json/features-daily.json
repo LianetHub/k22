@@ -1,0 +1,26 @@
+[
+	{
+		"col": "col-12 col-md-4",
+		"cardMod": "",
+		"image": "@img/features/guarantee.webp",
+		"icon": "shield",
+		"title": "гарантия",
+		"text": "Бессрочная на прошивки"
+	},
+	{
+		"col": "col-12 col-md-4",
+		"cardMod": "",
+		"image": "@img/features/locations.webp",
+		"icon": "locations",
+		"title": "Локации",
+		"text": "2 удобных адреса"
+	},
+	{
+		"col": "col-12 col-md-4",
+		"cardMod": "",
+		"image": "@img/features/schedule.webp",
+		"icon": "clock",
+		"title": "График работы",
+		"text": "Работаем ежедневно"
+	}
+]

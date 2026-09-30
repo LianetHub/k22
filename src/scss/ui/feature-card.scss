@@ -1,0 +1,141 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+.feature-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: rem(280);
+	height: 100%;
+	isolation: isolate;
+	overflow: hidden;
+	background-color: $color-text-primary;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@media (min-width: $md4) {
+		min-height: rem(360);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 0.9) 100%
+		);
+		pointer-events: none;
+	}
+
+	// feature-card__notch
+	&__notch {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: flex-start;
+		align-self: flex-start;
+	}
+
+	// feature-card__badge
+	&__badge {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 rem(20) rem(20) rem(30);
+		background: var(--feature-card-surface, #{$color-text-primary});
+	}
+
+	// feature-card__icon
+	&__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(30);
+		line-height: 1;
+		color: $color-accent-primary;
+
+		&::before {
+			display: block;
+		}
+	}
+
+	// feature-card__cut
+	&__cut {
+		flex-shrink: 0;
+		width: rem(58);
+		height: rem(50);
+		background: var(--feature-card-surface, #{$color-text-primary});
+		clip-path: polygon(0 0, 100% 0, 0 100%);
+	}
+
+	// feature-card__body
+	&__body {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: rem(6);
+		padding: rem(20) rem(20) rem(24);
+		margin-top: auto;
+
+		@media (min-width: $md4) {
+			padding: 0 rem(30) rem(30);
+		}
+	}
+
+	// feature-card__title
+	&__title {
+		@include mobile-heading-h4;
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h3;
+		}
+	}
+
+	// feature-card__text
+	&__text {
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: 1.2;
+		color: $color-text-tertiary;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+		}
+	}
+
+	// feature-card--plain
+	&--plain {
+		@media (min-width: $md4) {
+			min-height: rem(450);
+		}
+
+		.feature-card__badge {
+			display: none;
+		}
+
+		.feature-card__body {
+			gap: rem(16);
+			padding-inline: rem(20);
+
+			@media (min-width: $md4) {
+				padding-inline: rem(30);
+			}
+		}
+
+		.feature-card__title {
+			@media (min-width: $md4) {
+				font-size: rem(32);
+				line-height: math.div(37, 32);
+				letter-spacing: rem(-0.48);
+			}
+		}
+	}
+}

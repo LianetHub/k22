@@ -24,7 +24,11 @@
 						<h2 class="info-block__title title">BSL/BOOT: ПРЯМОЙ ДОСТУП К ЭБУ</h2>
 					</div>
 				</section>
-				@@include('html/sections/_features.html', {})
+				@@include('html/sections/_features.html', {
+					"mod": "features--muted",
+					"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+					"featuresList": "./html/json/features.json"
+				})
 				@@include('html/sections/_offers.html', {
 				"title": 'Возможно <span class="color-primary">вас заинтересует</span>'
 				})

@@ -1,12 +1,141 @@
-@use "abstracts" as *;
+@use "sass:math";
+@use "../abstracts" as *;
 
 .features {
-    background: $color-text-primary;
-    color: $color-bg-secondary;
+	--feature-card-surface: #{$color-text-primary};
 
-    // .features__container
-    &__container {}
+	padding-block: rem(60);
+	background-color: $color-text-primary;
+	background-image: url("@img/decor/light-pattern.svg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	color: $color-bg-primary;
 
-    // .features__title
-    &__title {}
+	@media (min-width: $md4) {
+		padding-block: rem(100);
+	}
+
+	// .features__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// .features__head
+	&__head {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// .features__title
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(16);
+		max-width: 100%;
+
+		@media (min-width: $md4) {
+			gap: rem(26);
+		}
+	}
+
+	// .features__title-line
+	&__title-line {
+		display: block;
+	}
+
+	// .features__lead
+	&__lead {
+		font-family: $font-inter;
+		font-size: rem(18);
+		font-weight: 400;
+		line-height: 1.2;
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			font-size: rem(26);
+		}
+	}
+
+	// .features__grid
+	&__grid {
+		--gutter-x: #{rem(20)};
+		--gutter-y: #{rem(20)};
+
+		@media (min-width: $md4) {
+			--gutter-x: #{rem(30)};
+			--gutter-y: #{rem(30)};
+		}
+	}
+
+	// .features--light
+	&--light {
+		--feature-card-surface: #{$color-bg-primary};
+
+		background-color: $color-bg-primary;
+		background-image: none;
+		color: $color-text-primary;
+
+		.features__lead {
+			color: $color-text-primary;
+		}
+	}
+
+	// .features--muted
+	&--muted {
+		--feature-card-surface: #{$color-bg-secondary};
+
+		background-color: $color-bg-secondary;
+		background-image: none;
+		color: $color-text-primary;
+
+		.features__lead {
+			color: $color-text-primary;
+		}
+	}
+
+	// .features--buy
+	&--buy {
+		.features__title {
+			display: block;
+		}
+
+		.feature-card__text {
+			@media (min-width: $md4) {
+				font-size: rem(22);
+			}
+		}
+	}
+
+	// .features--home
+	&--home {
+		.feature-card__body {
+			gap: rem(16);
+		}
+
+		.feature-card__title {
+			@media (min-width: $md4) {
+				font-size: rem(32);
+				line-height: math.div(37, 32);
+				letter-spacing: rem(-0.48);
+			}
+		}
+
+		.feature-card__text {
+			@media (min-width: $md4) {
+				font-size: rem(26);
+			}
+		}
+	}
 }
