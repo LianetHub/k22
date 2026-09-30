@@ -1,0 +1,16 @@
+[
+	{
+		"itemClass": "blog__item",
+		"mod": "blog-card--overlay",
+		"tag": "Чип-тюнинг",
+		"title": "Что делать, если загорелся check engine?",
+		"excerpt": "Разбираемся, почему загорелся Check Engine, какие неисправности могут быть причиной и когда стоит обратиться на диагностику.",
+		"date": "29 августа 2026",
+		"views": "4 582",
+		"comments": "34",
+		"image": "@img/blog/check-engine.png",
+		"imageAlt": "Выхлопная система автомобиля крупным планом",
+		"href": "article.html",
+		"linkText": "Читать статью"
+	}
+]

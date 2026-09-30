@@ -1,1 +1,65 @@
-<li class="blog__card"></li>
+<li class="@@itemClass">
+	<article class="blog-card @@mod">
+		<a class="blog-card__media" href="@@href">
+			<img
+				class="blog-card__img"
+				src="@@image"
+				alt="@@imageAlt"
+				width="846"
+				height="494"
+				loading="lazy"
+			>
+			<span class="blog-card__tag">@@tag</span>
+			<div class="blog-card__meta">
+				<span class="blog-card__meta-item">
+					<img
+						class="blog-card__meta-icon"
+						src="@img/icons/calendar.svg"
+						alt="Дата"
+						width="14"
+						height="14"
+					>
+					<span class="blog-card__meta-text">@@date</span>
+				</span>
+				<span class="blog-card__meta-stats">
+					<span class="blog-card__meta-item">
+						<img
+							class="blog-card__meta-icon"
+							src="@img/icons/eye.svg"
+							alt="Просмотры"
+							width="14"
+							height="14"
+						>
+						<span class="blog-card__meta-text">@@views</span>
+					</span>
+					<span class="blog-card__meta-item">
+						<img
+							class="blog-card__meta-icon"
+							src="@img/icons/chat.svg"
+							alt="Комментарии"
+							width="14"
+							height="14"
+						>
+						<span class="blog-card__meta-text">@@comments</span>
+					</span>
+				</span>
+			</div>
+			<span class="blog-card__play" aria-hidden="true">
+				<img
+					class="blog-card__play-icon"
+					src="@img/icons/play.svg"
+					alt="Смотреть видео"
+					width="40"
+					height="40"
+				>
+			</span>
+		</a>
+		<div class="blog-card__body">
+			<div class="blog-card__text">
+				<h3 class="blog-card__title">@@title</h3>
+				<p class="blog-card__excerpt">@@excerpt</p>
+			</div>
+			<a class="blog-card__link icon-arrow-top-right" href="@@href">@@linkText</a>
+		</div>
+	</article>
+</li>

@@ -62,27 +62,35 @@
 
 		@media (min-width: $md5) {
 			overflow: visible;
-
-			.swiper-wrapper {
-				flex-wrap: wrap;
-				transform: none !important;
-			}
 		}
 	}
 
 	// .reviews__grid
 	&__grid {
-		--gutter-x: #{rem(12)};
-		--gutter-y: #{rem(12)};
-
 		@media (min-width: $md5) {
-			--gutter-x: #{rem(20)};
-			--gutter-y: #{rem(20)};
+			display: grid !important;
+			grid-template-columns: 1fr;
+			gap: rem(20);
+			transform: none !important;
+			width: 100%;
 		}
 
 		@media (min-width: $md4) {
-			--gutter-x: #{rem(30)};
-			--gutter-y: #{rem(30)};
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(30);
+		}
+
+		@media (min-width: $md2) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	// .reviews--trio
+	&.reviews--trio {
+		.reviews__grid {
+			@media (min-width: $md2) {
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 	}
 }

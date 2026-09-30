@@ -1,0 +1,52 @@
+@use "../abstracts" as *;
+
+.gallery {
+	padding-block: rem(48);
+	background: $color-bg-primary;
+
+	@media (min-width: $md4) {
+		padding-block: rem(80);
+	}
+
+	@media (min-width: $md2) {
+		padding-block: rem(100);
+	}
+
+	// .gallery__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// .gallery__title
+	&__title {
+	}
+
+	// .gallery__slider
+	&__slider {
+		.swiper-slide {
+			height: auto;
+		}
+	}
+
+	// .gallery__slide
+	&__slide {
+		display: block;
+		width: rem(240);
+		aspect-ratio: 1;
+		overflow: hidden;
+
+		@media (min-width: $md4) {
+			width: rem(280);
+		}
+
+		@media (min-width: $md2) {
+			width: rem(348);
+		}
+	}
+}

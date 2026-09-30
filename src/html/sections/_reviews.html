@@ -1,4 +1,4 @@
-<section class="reviews">
+<section class="reviews@@if(typeof mod !== 'undefined'){ @@mod}">
 	<div class="reviews__container container">
 		<div class="reviews__head">
 			<h2 class="reviews__title title decor-line-block">Отзывы</h2>
@@ -11,7 +11,7 @@
 		</div>
 		@@if(typeof reviewsList !== 'undefined') {
 		<div class="swiper reviews__slider" data-reviews>
-			<div class="swiper-wrapper row reviews__grid">
+			<div class="swiper-wrapper reviews__grid">
 				@@loop('../templates/_review-card.html', '@@reviewsList')
 			</div>
 		</div>

@@ -23,7 +23,9 @@
 				@@include('./html/sections/_callback.html', {
 				"title": 'Чтобы стать частью команды <span class="color-primary">K22 Power Team</span>'
 				})
-				@@include('./html/sections/_gallery.html')
+				@@include('./html/sections/_gallery.html', {
+				"galleryList": "./html/json/gallery-vacancies.json"
+				})
 				@@include('./html/sections/_contacts.html')
 			</main>
 			@@include('html/_footer.html', {})

@@ -19,6 +19,7 @@
 @use "ui/vacancy-card";
 @use "ui/feature-card";
 @use "ui/review-card";
+@use "ui/blog-card";
 @use "ui/popup";
 @use "ui/breadcrumbs";
 @use "ui/swiper";
@@ -33,6 +34,8 @@
 @use "modules/offers";
 @use "modules/callback";
 @use "modules/vacancies";
+@use "modules/gallery";
+@use "modules/blog";
 @use "modules/article";
 @use "modules/error-page";
 

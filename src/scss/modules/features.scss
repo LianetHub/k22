@@ -70,12 +70,13 @@
 
 	// .features__grid
 	&__grid {
-		--gutter-x: #{rem(20)};
-		--gutter-y: #{rem(20)};
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(20);
 
 		@media (min-width: $md4) {
-			--gutter-x: #{rem(30)};
-			--gutter-y: #{rem(30)};
+			grid-template-columns: repeat(3, 1fr);
+			gap: rem(30);
 		}
 	}
 
@@ -120,6 +121,16 @@
 
 	// .features--home
 	&--home {
+		.features__grid {
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (min-width: $md2) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+
 		.feature-card__body {
 			gap: rem(16);
 		}

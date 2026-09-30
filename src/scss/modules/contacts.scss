@@ -1,17 +1,379 @@
-@use "abstracts" as *;
-
+@use "sass:math";
+@use "../abstracts" as *;
 
 .contacts {
+	padding: rem(48) 0;
+	background: $color-text-primary;
+	color: $color-bg-secondary;
 
-    background: $color-text-primary;
-    color: $color-bg-secondary;
+	@media (min-width: $md4) {
+		padding: rem(80) 0;
+	}
 
-    // .contacts__container
-    &__container {}
+	@media (min-width: $md2) {
+		padding: rem(100) 0;
+	}
 
-    // .contacts__title
-    &__title {}
+	// .contacts__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
 
-    // .contacts__subtitle
-    &__subtitle {}
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// .contacts__intro
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		max-width: rem(687);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// .contacts__title
+	&__title {
+		color: $color-bg-secondary;
+	}
+
+	// .contacts__subtitle
+	&__subtitle {
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(20, 16);
+		color: $color-text-secondary;
+		max-width: rem(517);
+
+		@media (min-width: $md4) {
+			font-size: rem(26);
+			line-height: math.div(31, 26);
+		}
+	}
+
+	// .contacts__map-block
+	&__map-block {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		overflow: hidden;
+		border-radius: rem(12) rem(12) 0 0;
+
+		@media (min-width: $md4) {
+			border-radius: rem(16) rem(16) 0 0;
+		}
+	}
+
+	// .contacts__map
+	&__map {
+		width: 100%;
+		height: rem(280);
+		background: $color-bg-secondary;
+
+		@media (min-width: $md4) {
+			height: rem(360);
+		}
+
+		@media (min-width: $md2) {
+			height: rem(442);
+		}
+
+		ymaps,
+		[class*="ymaps-"] {
+			border-radius: inherit;
+		}
+	}
+
+	// .contacts__panel
+	&__panel {
+		display: flex;
+		flex-direction: column;
+		background: #000;
+
+		@media (min-width: $md3) {
+			flex-direction: row;
+			align-items: stretch;
+			justify-content: space-between;
+		}
+	}
+
+	// .contacts__place
+	&__place {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(20);
+		padding: rem(24);
+
+		@media (min-width: $md4) {
+			gap: rem(30);
+			padding: rem(30);
+		}
+
+		@media (min-width: $md3) {
+			flex: 1 1 rem(280);
+			max-width: rem(508);
+		}
+	}
+
+	// .contacts__place--end
+	&__place--end {
+		.contacts__phone-row {
+			flex-direction: row-reverse;
+		}
+
+		@media (min-width: $md3) {
+			align-items: flex-end;
+			text-align: right;
+
+			.contacts__phone-row {
+				flex-direction: row;
+			}
+
+			.contacts__phone-info {
+				align-items: flex-end;
+			}
+		}
+	}
+
+	// .contacts__place-title
+	&__place-title {
+		@include mobile-heading-h4;
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h3;
+		}
+	}
+
+	// .contacts__phone-row
+	&__phone-row {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			gap: rem(20);
+		}
+	}
+
+	// .contacts__phone-icon
+	&__phone-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: rem(40);
+		height: rem(40);
+		background: $color-accent-primary;
+		color: $color-bg-primary;
+		font-size: rem(20);
+		transition: opacity 0.2s ease;
+
+		&::before {
+			font-size: inherit;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+	}
+
+	// .contacts__phone-info
+	&__phone-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(8);
+
+		@media (min-width: $md4) {
+			gap: rem(10);
+		}
+	}
+
+	// .contacts__phone
+	&__phone {
+		font-family: $font-inter;
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: rem(-0.36);
+		color: $color-bg-primary;
+		transition: opacity 0.2s ease;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: rem(-0.44);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+	}
+
+	// .contacts__hours
+	&__hours {
+		font-family: $font-inter;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
+		letter-spacing: rem(-0.28);
+		color: $color-bg-primary;
+		opacity: 0.4;
+
+		@media (min-width: $md4) {
+			font-size: rem(18);
+			line-height: math.div(22, 18);
+			letter-spacing: rem(-0.36);
+		}
+	}
+
+	// .contacts__route
+	&__route {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10);
+	}
+
+	// .contacts__route-label
+	&__route-label {
+		font-family: $font-inter;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: math.div(18, 14);
+		letter-spacing: rem(-0.28);
+		color: $color-accent-primary;
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			line-height: math.div(21, 16);
+			letter-spacing: rem(-0.32);
+		}
+	}
+
+	// .contacts__route-app
+	&__route-app {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: rem(40);
+		height: rem(40);
+		padding: rem(5);
+		background: $color-bg-secondary;
+		transition: opacity 0.2s ease;
+
+		img {
+			display: block;
+			width: rem(30);
+			height: rem(30);
+			object-fit: contain;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+	}
+
+	// .contacts__route-app--plain
+	&__route-app--plain {
+		padding: 0;
+		background: transparent;
+
+		img {
+			width: rem(40);
+			height: rem(40);
+		}
+	}
+
+	// .contacts__brand
+	&__brand {
+		display: none;
+
+		@media (min-width: $md3) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: rem(10);
+			flex: 0 0 auto;
+			align-self: stretch;
+			padding: 0 rem(8);
+		}
+
+		@media (min-width: $md2) {
+			padding: 0;
+		}
+	}
+
+	// .contacts__brand-logo
+	&__brand-logo {
+		display: block;
+		width: rem(160);
+		height: auto;
+		flex-shrink: 0;
+
+		@media (min-width: $md2) {
+			width: rem(220);
+		}
+
+		@media (min-width: $md1) {
+			width: rem(284);
+		}
+	}
+
+	// .contacts__brand-lines
+	&__brand-lines {
+		position: relative;
+		flex-shrink: 0;
+		align-self: stretch;
+		width: rem(48);
+		overflow: hidden;
+
+		@media (min-width: $md2) {
+			width: rem(76);
+		}
+
+		@media (min-width: $md1) {
+			width: rem(108);
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 70%;
+			background: rgba($color-bg-primary, 0.08);
+			transform: skewX(-18deg);
+		}
+
+		&::before {
+			left: 0;
+			box-shadow: rem(16) 0 0 rgba($color-bg-primary, 0.08);
+		}
+
+		&::after {
+			left: rem(32);
+			opacity: 0.7;
+		}
+	}
+
+	// .contacts__brand-lines--flip
+	&__brand-lines--flip {
+		transform: scaleX(-1);
+	}
 }

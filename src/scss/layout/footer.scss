@@ -2,7 +2,11 @@
 
 .footer {
 	position: relative;
-	background: #020202;
+	background-color: #020202;
+	background-image: url("@img/decor/light-pattern.svg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-size: auto;
 	color: $color-bg-primary;
 	padding: rem(60) 0;
 
@@ -20,15 +24,6 @@
 		inset: 0;
 		background: url("@img/decor/carbon-pattern.webp") center / cover no-repeat;
 		opacity: 0.2;
-		pointer-events: none;
-	}
-
-	&::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background: url("@img/decor/light-pattern.svg") 0 0 / auto;
-		opacity: 0.15;
 		pointer-events: none;
 	}
 

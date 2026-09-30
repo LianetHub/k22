@@ -8,22 +8,14 @@
 	height: 100%;
 	isolation: isolate;
 	overflow: visible;
+	background-color: $color-bg-secondary;
+	background-image: url("@img/decor/dark-pattern.svg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-size: auto;
 
 	@media (min-width: $md4) {
 		min-height: rem(346);
-	}
-
-	&::before {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-		background-color: $color-bg-secondary;
-		background-image: url("@img/decor/light-pattern.svg");
-		background-repeat: repeat;
-		background-position: 0 0;
-		background-size: auto;
-		pointer-events: none;
 	}
 
 	// vacancy-card__badge

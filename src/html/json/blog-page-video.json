@@ -1,0 +1,16 @@
+[
+	{
+		"itemClass": "blog__item",
+		"mod": "blog-card--video",
+		"tag": "Выхлоп",
+		"title": "Что даёт управляемый выхлоп?",
+		"excerpt": "",
+		"date": "",
+		"views": "",
+		"comments": "",
+		"image": "@img/blog/exhaust.png",
+		"imageAlt": "Видео: управляемый выхлоп на автомобиле",
+		"href": "article.html",
+		"linkText": "Смотреть видео"
+	}
+]
