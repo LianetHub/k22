@@ -15,13 +15,13 @@
 						</ul>
 					</div>
 				</section>
-				@@include('html/sections/_offers.html', {
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
-				"offersList": "./html/json/offers-extras-services.json"
-				})
 				@@include('html/sections/_features.html', {
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
 				"featuresList": "./html/json/features.json"
+				})
+				@@include('html/sections/_offers.html', {
+				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
+				"offersList": "./html/json/offers-extras-services.json"
 				})
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-extras-services.json"
@@ -33,7 +33,10 @@
 				@@include('html/sections/_callback.html', {
 
 				})
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Чип-тюнинг",
+				"worksList": "./html/json/works-extras-services.json"
+				})
 				@@include('html/sections/_contacts.html', {})
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-extras-services-2.json"

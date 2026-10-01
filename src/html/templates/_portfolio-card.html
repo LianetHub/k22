@@ -1,5 +1,8 @@
 <li class="@@itemClass">
 	<article class="portfolio-card @@mod">
+		@@if (typeof href !== 'undefined') {
+		<a class="portfolio-card__link" href="@@href">
+		}
 		<img
 			class="portfolio-card__img"
 			src="@@image"
@@ -8,8 +11,19 @@
 			height="340"
 			loading="lazy"
 		>
+		@@if (typeof tag !== 'undefined') {
+		<p class="portfolio-card__tag"><span class="portfolio-card__tag-label">@@tag</span></p>
+		}
 		<div class="portfolio-card__body">
-			<h3 class="portfolio-card__title">@@title</h3>
+			<div class="portfolio-card__text">
+				@@if (typeof caption !== 'undefined') {
+				<p class="portfolio-card__caption">@@caption</p>
+				}
+				@@if (typeof car !== 'undefined') {
+				<p class="portfolio-card__car">@@car</p>
+				}
+				<h3 class="portfolio-card__title">@@title</h3>
+			</div>
 			@@if (typeof powerValue !== 'undefined') {
 			<ul class="portfolio-card__stats">
 				<li class="portfolio-card__stat">
@@ -23,5 +37,8 @@
 			</ul>
 			}
 		</div>
+		@@if (typeof href !== 'undefined') {
+		</a>
+		}
 	</article>
 </li>

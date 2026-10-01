@@ -7,12 +7,82 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="works">
-					<div class="works__container container">
-						<h1 class="works__title title">Выполненные работы</h1>
-						<ul class="works__list">
-							@@loop('./html/templates/_portfolio-card.html', {})
+				<section class="portfolio">
+					<div class="container portfolio__container">
+						<div class="portfolio__intro">
+							<nav class="breadcrumbs" aria-label="Хлебные крошки">
+								<ol class="breadcrumbs__list">
+									<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Главная</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<span class="breadcrumbs__link" aria-current="page">Выполненные работы</span>
+									</li>
+								</ol>
+							</nav>
+							<div class="portfolio__heading">
+								<h1 class="portfolio__title title">Выполненные работы</h1>
+								<p class="portfolio__lead">Реальные автомобили, реальные задачи и результат работы K22 Power Team.</p>
+							</div>
+						</div>
+						<div class="portfolio__toolbar">
+							<ul class="portfolio__filters">
+								<li>
+									<button class="portfolio__filter is-active" type="button">Все</button>
+								</li>
+								<li>
+									<button class="portfolio__filter" type="button">Чип-тюнинг</button>
+								</li>
+								<li>
+									<button class="portfolio__filter" type="button">Выхлоп</button>
+								</li>
+								<li>
+									<button class="portfolio__filter" type="button">Автосервис</button>
+								</li>
+								<li>
+									<button class="portfolio__filter" type="button">Диагностика</button>
+								</li>
+								<li>
+									<button class="portfolio__filter" type="button">полезное</button>
+								</li>
+								<li>
+									<button class="portfolio__filter" type="button">Видео</button>
+								</li>
+							</ul>
+							<div class="custom-select custom-select--sort">
+								<label class="visually-hidden" for="portfolio-brand">Марка</label>
+								<select class="custom-select__native" id="portfolio-brand" name="brand" data-custom-select>
+									<option value="all" selected>Все марки</option>
+									<option value="audi">Audi</option>
+									<option value="bmw">BMW</option>
+									<option value="changan">Changan</option>
+									<option value="chery">Chery</option>
+									<option value="chevrolet">Chevrolet</option>
+									<option value="exeed">Exeed</option>
+									<option value="ford">Ford</option>
+									<option value="geely">Geely</option>
+									<option value="haval">Haval</option>
+									<option value="honda">Honda</option>
+									<option value="hyundai">Hyundai</option>
+									<option value="kia">Kia</option>
+									<option value="lada">Lada</option>
+									<option value="lexus">Lexus</option>
+									<option value="mazda">Mazda</option>
+									<option value="mercedes">Mercedes-Benz</option>
+									<option value="mitsubishi">Mitsubishi</option>
+									<option value="nissan">Nissan</option>
+									<option value="omoda">Omoda</option>
+									<option value="porsche">Porsche</option>
+								</select>
+							</div>
+						</div>
+						<ul class="portfolio__grid">
+							@@loop('./html/templates/_portfolio-card.html', './html/json/works-portfolio-hub.json')
 						</ul>
+						<div class="portfolio__footer">
+							<a href="#" class="btn btn--primary">Следующая страница</a>
+							@@include('./html/templates/_pagination.html')
+						</div>
 					</div>
 				</section>
 				@@include('./html/sections/_reviews.html', {

@@ -468,4 +468,30 @@
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: 1.2;
-		c
+		color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+		}
+	}
+
+	// .result__guarantee-btn
+	&__guarantee-btn {
+		width: 100%;
+
+		@media (min-width: $md3) {
+			width: auto;
+			flex: 1 1 auto;
+		}
+	}
+
+	// .result__note
+	&__note {
+		@extend %result-trim;
+		align-self: flex-end;
+		max-width: rem(263);
+		text-align: right;
+		color: $color-bg-primary;
+		@include mobile-heading-h1;
+	}
+}

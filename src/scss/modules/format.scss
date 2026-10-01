@@ -1,0 +1,128 @@
+@use "../abstracts" as *;
+
+.format {
+	padding: rem(48) 0;
+	background-color: $color-bg-secondary;
+
+	@media (min-width: $md4) {
+		padding: rem(80) 0;
+	}
+
+	@media (min-width: $md2) {
+		padding: rem(100) 0;
+	}
+
+	// .format__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+
+		@media (min-width: $md4) {
+			gap: rem(30);
+		}
+	}
+
+	// .format__title
+	&__title {
+		max-width: rem(723);
+	}
+
+	// .format__list
+	&__list {
+		display: grid;
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: rem(20);
+		}
+
+		@media (min-width: $md2) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: rem(30);
+		}
+	}
+
+	// .format__card
+	&__card {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		background-color: $color-bg-primary;
+		overflow: hidden;
+
+		@media (min-width: $md2) {
+			min-height: rem(400);
+		}
+	}
+
+	// .format__media
+	&__media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 auto;
+		min-height: rem(180);
+		padding: rem(16) rem(20) 0;
+		background-color: $color-bg-primary;
+		background-image: url("@img/decor/dark-pattern.svg");
+
+		@media (min-width: $md4) {
+			min-height: rem(220);
+		}
+
+		@media (min-width: $md2) {
+			min-height: rem(258);
+			padding: rem(12) rem(24) 0;
+		}
+	}
+
+	// .format__image
+	&__image {
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		max-height: rem(220);
+		object-fit: contain;
+
+		@media (min-width: $md2) {
+			max-height: rem(270);
+		}
+	}
+
+	// .format__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: rem(6);
+		margin-top: auto;
+		padding: rem(20);
+
+		@media (min-width: $md4) {
+			padding: rem(30);
+		}
+	}
+
+	// .format__name
+	&__name {
+		@include mobile-heading-h4;
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h3;
+		}
+	}
+
+	// .format__text
+	&__text {
+		color: $color-text-secondary;
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: 1.2;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+		}
+	}
+}

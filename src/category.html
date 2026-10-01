@@ -9,9 +9,50 @@
 			<main class="page">
 				<section class="products">
 					<div class="products__container container">
-						<h1 class="products__title title">прямоточные глушители</h1>
+						<div class="products__head">
+							<h1 class="products__title title decor-line-block">прямоточные глушители</h1>
+							<nav class="breadcrumbs products__breadcrumbs" aria-label="Хлебные крошки">
+								<ol class="breadcrumbs__list">
+									<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Главная</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="catalog.html">Магазин</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<span class="breadcrumbs__link" aria-current="page">Прямоточные глушители</span>
+									</li>
+								</ol>
+							</nav>
+						</div>
+						<ul class="products__filters">
+							<li class="products__filters-item">
+								<a class="products__filter" href="#">вакуумная заслонка</a>
+							</li>
+							<li class="products__filters-item">
+								<a class="products__filter" href="#">управляемый глушитель</a>
+							</li>
+							<li class="products__filters-item">
+								<a class="products__filter" href="#">
+									<span>насадки</span>
+									<span class="products__filter-note">одинарные и двойные</span>
+								</a>
+							</li>
+							<li class="products__filters-item">
+								<a class="products__filter" href="#">прямоточный резонатор</a>
+							</li>
+							<li class="products__filters-item">
+								<a class="products__filter" href="#">катализатор евро-2 стандарта</a>
+							</li>
+							<li class="products__filters-item">
+								<a class="products__filter" href="#">катализатор евро-5 стандарта</a>
+							</li>
+							<li class="products__filters-item products__filters-item--stretch">
+								<a class="products__filter" href="#">пламегаситель</a>
+							</li>
+						</ul>
 						<ul class="products__grid">
-							@@loop('./html/templates/_product-card.html', {})
+							@@loop('./html/templates/_product-card.html', './html/json/products-category.json')
 						</ul>
 					</div>
 				</section>

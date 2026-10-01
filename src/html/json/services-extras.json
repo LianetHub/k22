@@ -5,7 +5,7 @@
 		"price": "? ₽",
 		"iconImg": "@img/icons/mag-logs.svg",
 		"iconAlt": "Настройка по логам",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -14,7 +14,7 @@
 		"price": "5 000 ₽",
 		"iconImg": "@img/icons/bmw-hidden-functions.svg",
 		"iconAlt": "Скрытые функции BMW",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -23,7 +23,7 @@
 		"price": "? ₽",
 		"iconImg": "@img/icons/gearshift.svg",
 		"iconAlt": "Прошивка АКПП",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -32,7 +32,7 @@
 		"price": "20 000 ₽",
 		"iconImg": "@img/icons/carplay.svg",
 		"iconAlt": "Установка CarPlay",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -41,7 +41,7 @@
 		"price": "5 000 ₽",
 		"iconImg": "@img/icons/mercedes-hidden-functions.svg",
 		"iconAlt": "Скрытые функции Mercedes",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -50,7 +50,7 @@
 		"price": "13 000 ₽",
 		"iconImg": "@img/icons/russification.svg",
 		"iconAlt": "Русификация Kia, Hyundai и Genesis",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -59,7 +59,7 @@
 		"price": "5 800 ₽",
 		"iconImg": "@img/icons/immobilizer_disable.svg",
 		"iconAlt": "Отключение иммобилайзера",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	},
 	{
@@ -68,7 +68,7 @@
 		"price": "от 2 800 ₽",
 		"iconImg": "@img/icons/popcorn.svg",
 		"iconAlt": "Popcorn, отстрелы выхлопа",
-		"href": "#",
+		"href": "extras-service-page.html",
 		"link": "Подробнее"
 	}
 ]

@@ -7,21 +7,30 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero hero--oil">
 					<div class="hero__container container">
-						<h1 class="hero__title title">Замена масла в двигателе</h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title-lg">Замена масла в двигателе</h1>
+							<p class="hero__lead">Чистое масло — стабильная работа двигателя и защита от преждевременного износа.</p>
+							<a href="#callback" class="hero__btn btn btn--primary">Записаться</a>
+						</div>
+						<img class="hero__visual" src="@img/hero/oil-change.png" alt="Канистра моторного масла" width="976" height="1024" fetchpriority="high">
 					</div>
 				</section>
 				<section class="description">
 					<div class="description__container container">
-						<div class="description__image"></div>
+						<img class="description__image" src="@img/info/oil-change.png" alt="Механик заливает моторное масло в двигатель" width="1672" height="941" loading="lazy">
 						<div class="description__content">
-							<h2 class="description__title title">Почему важно вовремя менять масло </h2>
+							<h2 class="description__title title decor-line-block">Почему важно вовремя менять масло</h2>
+							<p class="description__lead">Моторное масло защищает детали двигателя от трения и перегрева, отводит тепло и удерживает загрязнения. Со временем оно теряет свои свойства, становится гуще и хуже справляется со своей задачей. Это увеличивает нагрузку на двигатель, ускоряет износ его деталей и может привести к дорогостоящему ремонту.</p>
+							<p class="description__text">Мы заменим моторное масло и масляный фильтр, подберём подходящий состав с учётом марки автомобиля, пробега и рекомендаций производителя. После обслуживания двигатель работает стабильнее и получает необходимую защиту до следующего планового ТО. Оптимальный интервал замены — каждые 7–10 тысяч километров или один раз в год.</p>
+							<a class="btn btn--primary description__btn" href="article.html">Читать далее</a>
 						</div>
 					</div>
 				</section>
 				@@include('html/sections/_callback.html', {
-				"title": 'Стоимость работ',
+				"id": "callback",
+				"title": '<span class="color-primary">Стоимость работ</span>',
 				"variant": "price",
 				"price": "от 7 800 ₽",
 				"priceNote": "Точная стоимость зависит от марки автомобиля",
@@ -39,15 +48,6 @@
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
 				"featuresList": "./html/json/features.json"
 				})
-				<section class="services">
-					<div class="services__container container">
-						<h2 class="services__title title">Что <span class="color-primary">мы делаем</span></h2>
-						<ul class="services__grid">
-							@@loop('./html/templates/_service-card.html', {})
-						</ul>
-					</div>
-				</section>
-
 				@@include('html/sections/_works.html', {
 				"tag": "Автосервис",
 				"worksList": "./html/json/works-service-page.json"

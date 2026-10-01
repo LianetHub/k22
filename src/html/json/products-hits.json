@@ -1,0 +1,71 @@
+[
+	{
+		"itemClass": "swiper-slide",
+		"image": "@img/catalog/stinger.png",
+		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
+		"badge": "новинка",
+		"category": "Прямоточные глушители",
+		"title": "Глушитель «Stinger»",
+		"text": "с двойными квадратными насадками",
+		"sale": "-20%",
+		"oldPrice": "22 500 ₽",
+		"price": "14 500 ₽",
+		"vat": "в том числе НДС 5%",
+		"href": "#",
+		"link": "Узнать наличие"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"image": "@img/catalog/stinger.png",
+		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
+		"badge": "новинка",
+		"category": "Прямоточные глушители",
+		"title": "Глушитель «Stinger»",
+		"text": "с двойными квадратными насадками",
+		"price": "14 500 ₽",
+		"vat": "в том числе НДС 5%",
+		"href": "#",
+		"link": "Узнать наличие"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"image": "@img/catalog/stinger.png",
+		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
+		"category": "Прямоточные глушители",
+		"title": "Глушитель «Stinger»",
+		"text": "с двойными квадратными насадками",
+		"price": "14 500 ₽",
+		"vat": "в том числе НДС 5%",
+		"href": "#",
+		"link": "Узнать наличие"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"image": "@img/catalog/stinger.png",
+		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
+		"badge": "новинка",
+		"category": "Прямоточные глушители",
+		"title": "Глушитель «Stinger»",
+		"text": "с двойными квадратными насадками",
+		"sale": "-20%",
+		"oldPrice": "22 500 ₽",
+		"price": "14 500 ₽",
+		"vat": "в том числе НДС 5%",
+		"href": "#",
+		"link": "Узнать наличие"
+	},
+	{
+		"itemClass": "swiper-slide",
+		"image": "@img/catalog/stinger.png",
+		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
+		"category": "Прямоточные глушители",
+		"title": "Глушитель «Stinger»",
+		"text": "с двойными квадратными насадками",
+		"sale": "-20%",
+		"oldPrice": "22 500 ₽",
+		"price": "14 500 ₽",
+		"vat": "в том числе НДС 5%",
+		"href": "#",
+		"link": "Узнать наличие"
+	}
+]

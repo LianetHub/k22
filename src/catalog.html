@@ -7,25 +7,34 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero hero--catalog">
 					<div class="hero__container container">
-						<h1 class="hero__title title">Техническое обслуживание</h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title">Выгода <span class="color-primary">до 20%</span></h1>
+							<p class="hero__lead">На комплекты для тюнинга выхлопной системы.</p>
+							<a class="hero__btn btn btn--primary" href="#products">Подобрать</a>
+						</div>
 					</div>
 				</section>
-				<div class="services">
-					<div class="services__container container">
-						<h2 class="services__title title decor-line-block">Дополнительные услуги</h2>
-						<ul class="services__grid">
-							@@loop('./html/templates/_service-card.html', './html/json/services-extras.json')
+				<section class="catalog-cats">
+					<div class="catalog-cats__container container">
+						<ul class="catalog-cats__grid">
+							@@loop('./html/templates/_catalog-cat.html', './html/json/catalog-cats.json')
 						</ul>
 					</div>
-				</div>
-				<section class="products">
+				</section>
+				<section class="products" id="products">
 					<div class="products__container container">
-						<h2 class="products__title title">ХИТЫ <span class="color-primary">И СПЕЦПРЕДЛОЖЕНИЯ</span></h2>
+						<div class="products__head">
+							<h2 class="products__title title decor-line-block">Хиты <span class="color-primary">и спецпредложения</span></h2>
+						</div>
+						<div class="products__nav">
+							<button type="button" class="products__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущие товары"></button>
+							<button type="button" class="products__next swiper-button-next icon-arrrow-long" aria-label="Следующие товары"></button>
+						</div>
 						<div class="products__slider swiper">
 							<ul class="swiper-wrapper">
-								@@loop('./html/templates/_product-card.html', {})
+								@@loop('./html/templates/_product-card.html', './html/json/products-hits.json')
 							</ul>
 						</div>
 					</div>

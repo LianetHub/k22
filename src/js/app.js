@@ -260,6 +260,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.addEventListener("click", (e) => {
 			const target = e.target;
 
+			const ratingStar = target.closest("[data-article-star]");
+			if (ratingStar) {
+				const group = ratingStar.closest("[data-article-rating]");
+				const value = Number(ratingStar.getAttribute("data-article-star"));
+
+				group?.querySelectorAll("[data-article-star]").forEach((star) => {
+					const starValue = Number(star.getAttribute("data-article-star"));
+					const isActive = starValue <= value;
+					star.classList.toggle("is-active", isActive);
+					star.setAttribute("aria-pressed", isActive ? "true" : "false");
+				});
+			}
+
 			if (target.closest("[data-menu-burger]")) {
 				if (menu.classList.contains("is-open")) {
 					closeMobileMenu();
@@ -398,6 +411,30 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
+		document.querySelectorAll(".products__slider")?.forEach((slider) => {
+			const section = slider.closest(".products");
+
+			new Swiper(slider, {
+				slidesPerView: 1.15,
+				spaceBetween: 16,
+				watchOverflow: true,
+				navigation: {
+					prevEl: section?.querySelector(".products__prev"),
+					nextEl: section?.querySelector(".products__next"),
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					1200: {
+						slidesPerView: "auto",
+						spaceBetween: 30,
+					},
+				},
+			});
+		});
+
 		document.querySelectorAll(".works__slider")?.forEach((slider) => {
 			const section = slider.closest(".works");
 
@@ -428,6 +465,18 @@ document.addEventListener("DOMContentLoaded", () => {
 				breakpoints: {
 					768: { spaceBetween: 20 },
 					1200: { spaceBetween: 30 },
+				},
+			});
+		});
+
+		document.querySelectorAll(".article__reviews-slider").forEach((slider) => {
+			new Swiper(slider, {
+				slidesPerView: 1,
+				spaceBetween: 16,
+				watchOverflow: true,
+				navigation: {
+					prevEl: slider.querySelector(".swiper-button-prev"),
+					nextEl: slider.querySelector(".swiper-button-next"),
 				},
 			});
 		});

@@ -1,0 +1,185 @@
+@use "../abstracts" as *;
+
+.info-block {
+	&:has(.info-block__lead) {
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+		min-width: 0;
+		padding-block: rem(48);
+		background-color: #000;
+		color: $color-bg-secondary;
+
+		@media (min-width: $md4) {
+			padding-block: rem(80);
+		}
+
+		@media (min-width: $md2) {
+			padding-block: rem(100);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			background-color: #000;
+			background-image:
+				linear-gradient(180deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.84) 100%),
+				var(--info-block-image);
+			background-repeat: no-repeat;
+			background-position: center, 78% 72%;
+			background-size: cover;
+			pointer-events: none;
+
+			@media (min-width: $md2) {
+				background-image:
+					linear-gradient(90deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.62) 32%, rgba(0, 0, 0, 0.22) 52%, rgba(0, 0, 0, 0) 70%),
+					var(--info-block-image);
+				background-position: center, 0% 58%;
+				background-size: cover, 136% auto;
+			}
+		}
+
+		// .info-block__container
+		.info-block__container {
+			position: relative;
+			z-index: 1;
+		}
+
+		// .info-block__content
+		.info-block__content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			max-width: rem(876);
+		}
+
+		// .info-block__title
+		.info-block__title,
+		.info-block__lead,
+		.info-block__text {
+			align-self: stretch;
+			min-width: 0;
+		}
+
+		// .info-block__lead
+		.info-block__lead,
+		.info-block__text {
+			margin-top: rem(24);
+			font-family: $font-inter;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: 1.2;
+			background-repeat: no-repeat;
+			background-clip: text;
+			color: transparent;
+
+			@media (min-width: $md4) {
+				margin-top: rem(32);
+				font-size: rem(22);
+			}
+
+			@media (min-width: $md2) {
+				margin-top: rem(40);
+				@include desktop-body-xl;
+			}
+		}
+
+		// .info-block__lead
+		.info-block__lead {
+			background-image: linear-gradient(180deg, #fff 0%, rgba(153, 153, 153, 0.4) 100%);
+		}
+
+		// .info-block__text
+		.info-block__text {
+			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(153, 153, 153, 0) 100%);
+		}
+
+		// .info-block__btn
+		.info-block__btn {
+			margin-top: rem(24);
+
+			@media (min-width: $md4) {
+				margin-top: rem(16);
+			}
+
+			@media (min-width: $md2) {
+				margin-top: rem(10);
+			}
+		}
+
+		// .info-block--light
+		&.info-block--light {
+			padding-top: rem(300);
+			background-color: $color-bg-primary;
+			color: $color-text-primary;
+
+			@media (min-width: $md4) {
+				padding-top: rem(420);
+			}
+
+			@media (min-width: $md2) {
+				min-height: rem(640);
+				padding-block: rem(100);
+			}
+
+			&::before {
+				background-color: transparent;
+				background-image: var(--info-block-image);
+				background-position: left center;
+				background-size: cover;
+				inset: 0 0 auto;
+				height: rem(260);
+
+				@media (min-width: $md4) {
+					height: rem(380);
+				}
+
+				@media (min-width: $md2) {
+					inset: 0 auto 0 0;
+					width: 48%;
+					height: auto;
+					background-image:
+						linear-gradient(90deg, rgba($color-bg-primary, 0) 72%, $color-bg-primary 100%),
+						var(--info-block-image);
+					background-position: left center, left center;
+					background-size: 100% 100%, auto 100%;
+				}
+
+				@media (min-width: $md0) {
+					width: 54%;
+				}
+			}
+
+			.info-block__content {
+				@media (min-width: $md2) {
+					max-width: rem(640);
+					margin-left: auto;
+				}
+
+				@media (min-width: $md0) {
+					max-width: rem(876);
+				}
+			}
+
+			.info-block__lead {
+				background-image: none;
+				background-clip: border-box;
+				color: $color-text-primary;
+			}
+
+			.info-block__text {
+				background-image: linear-gradient(180deg, rgba($color-text-primary, 0.4) 0%, rgba($color-text-primary, 0) 100%);
+			}
+		}
+	}
+
+	// info-block--photo-end
+	&.info-block--photo-end:has(.info-block__lead)::before {
+		@media (min-width: $md2) {
+			background-position: center, 100% 46%;
+		}
+	}
+}

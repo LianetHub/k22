@@ -7,9 +7,13 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero hero--about" style="background-image: url('@img/hero/about.png');">
 					<div class="hero__container container">
-						<h1 class="hero__title title">Мы занимаемся автомобилями <span class="color-primary">комплексно</span></h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title decor-line-block">Мы занимаемся автомобилями <span class="color-primary">комплексно</span></h1>
+							<p class="hero__lead">Мы команда специалистов по чип-тюнингу, ремонту и доработке автомобилей. Мы работаем комплексно: от диагностики и технического обслуживания до настройки программного обеспечения, ремонта и тюнинга выхлопных систем.</p>
+							<p class="hero__lead">Для нас важно не просто выполнить отдельную работу, а добиться результата, который действительно чувствуется за рулём. Поэтому мы внимательно относимся к каждому автомобилю, подбираем решения под конкретную задачу и используем проверенные технологии и оборудование.</p>
+						</div>
 					</div>
 				</section>
 				@@include('html/sections/_reviews.html', {
@@ -28,8 +32,45 @@
 						</ul>
 					</div>
 				</section>
-				@@include('html/sections/_contacts.html', {})
-				@@include('html/sections/_works.html', {})
+				<section class="contacts contacts--network">
+					<div class="contacts__container container">
+						<h2 class="contacts__title title decor-line-block">
+							<span class="contacts__title-line">Сеть в Санкт-Петербурге</span>
+							<span class="contacts__title-line color-primary">и по всей России</span>
+						</h2>
+						<div class="contacts__map-block">
+							<div class="contacts__map" style="--contacts-map-image: url('../@img/contacts/network-map.png');">
+								<span class="contacts__pin contacts__pin--north icon-locations" aria-hidden="true"></span>
+								<span class="contacts__pin contacts__pin--east icon-locations" aria-hidden="true"></span>
+							</div>
+							<article class="contacts__place contacts__card">
+								<h3 class="contacts__place-title">Кузнецовская, 52к13</h3>
+								<div class="contacts__phone-row">
+									<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
+									<div class="contacts__phone-info">
+										<a href="tel:+79214019898" class="contacts__phone">8(921)401-98-98</a>
+										<p class="contacts__hours">пн-сб с 10:00 до 20:00</p>
+									</div>
+								</div>
+								<div class="contacts__route">
+									<span class="contacts__route-label">Построить маршрут</span>
+									<a class="contacts__route-app" href="https://yandex.ru/maps/?rtext=~59.8689,30.3675" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Яндекс.Картах">
+										<img src="@img/contacts/yandex-navi.svg" alt="Яндекс.Навигатор" width="30" height="30" loading="lazy">
+									</a>
+									<a class="contacts__route-app contacts__route-app--plain" href="https://2gis.ru/spb/search/%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2052%D0%BA13" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в 2ГИС">
+										<img src="@img/contacts/2gis.svg" alt="2ГИС" width="40" height="40" loading="lazy">
+									</a>
+									<a class="contacts__route-app" href="https://www.google.com/maps/dir/?api=1&destination=59.8689,30.3675" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Google Maps">
+										<img src="@img/contacts/google-maps.svg" alt="Google Maps" width="30" height="30" loading="lazy">
+									</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+				@@include('html/sections/_works.html', {
+				"worksList": "./html/json/works-home.json"
+				})
 			</main>
 			@@include('html/_footer.html', {})
 		</div>

@@ -7,9 +7,13 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero hero--maintenance" style="background-image: url('@img/hero/service-category.png');">
 					<div class="hero__container container">
-						<h1 class="hero__title title">Техническое обслуживание</h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title">Техническое обслуживание</h1>
+							<p class="hero__lead">Регулярное техническое обслуживание — залог надёжности, безопасности и комфорта вашего автомобиля. Своевременное ТО помогает продлить срок службы узлов и предотвратить дорогостоящий ремонт.</p>
+							<a href="#callback" class="hero__btn btn btn--primary">Записаться на ТО</a>
+						</div>
 					</div>
 				</section>
 				<section class="services">
@@ -29,7 +33,7 @@
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_callback.html', {
-
+				"id": "callback"
 				})
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-service-category.json"

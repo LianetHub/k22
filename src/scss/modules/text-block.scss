@@ -1,0 +1,171 @@
+@use "../abstracts" as *;
+
+.text-block {
+	padding-block: rem(48);
+	background: $color-bg-secondary;
+	color: $color-text-primary;
+
+	@media (min-width: $md4) {
+		padding-block: rem(80);
+	}
+
+	@media (min-width: $md2) {
+		padding-block: rem(100);
+	}
+
+	// .text-block__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+
+		@media (min-width: $md4) {
+			gap: rem(32);
+		}
+
+		@media (min-width: $md2) {
+			gap: rem(40);
+		}
+	}
+
+	// .text-block__prose
+	&__prose {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+		min-width: 0;
+
+		@media (min-width: $md4) {
+			gap: rem(32);
+		}
+
+		@media (min-width: $md2) {
+			flex: 1 1 0;
+			gap: rem(40);
+		}
+
+		p {
+			font-family: $font-inter;
+			font-size: rem(16);
+			font-weight: 400;
+			line-height: 1.2;
+
+			@media (min-width: $md4) {
+				font-size: rem(22);
+			}
+
+			@media (min-width: $md2) {
+				@include desktop-body-xl;
+			}
+		}
+	}
+
+	// .text-block__split
+	&__split {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+		min-width: 0;
+
+		@media (min-width: $md4) {
+			gap: rem(32);
+		}
+
+		@media (min-width: $md2) {
+			flex-direction: row;
+			align-items: stretch;
+			gap: rem(30);
+		}
+	}
+
+	// .text-block__photos
+	&__photos {
+		display: flex;
+		gap: rem(16);
+		min-width: 0;
+
+		@media (min-width: $md2) {
+			flex: 1 1 0;
+			gap: rem(30);
+		}
+
+		img {
+			flex: 1 1 0;
+			min-width: 0;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 423 / 419;
+			object-fit: cover;
+
+			@media (min-width: $md2) {
+				height: 100%;
+				aspect-ratio: auto;
+			}
+		}
+	}
+
+	// .text-block__points
+	&__points {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+	}
+
+	// .text-block__subtitle
+	&__subtitle {
+		@include mobile-heading-h4;
+
+		@media (min-width: $md4) {
+			font-size: rem(24);
+			line-height: 1.2;
+		}
+
+		@media (min-width: $md2) {
+			@include desktop-heading-h3;
+		}
+	}
+
+	// .text-block__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: 1.2;
+
+		@media (min-width: $md4) {
+			gap: rem(20);
+			font-size: rem(22);
+		}
+
+		@media (min-width: $md2) {
+			@include desktop-body-xl;
+		}
+
+		li {
+			display: flex;
+			align-items: flex-start;
+			gap: rem(10);
+
+			&::before {
+				content: "";
+				flex-shrink: 0;
+				width: rem(12);
+				height: rem(12);
+				margin-top: rem(4);
+				border-radius: 50%;
+				background: $color-accent-primary;
+
+				@media (min-width: $md4) {
+					margin-top: rem(7);
+				}
+
+				@media (min-width: $md2) {
+					margin-top: rem(10);
+				}
+			}
+		}
+	}
+}

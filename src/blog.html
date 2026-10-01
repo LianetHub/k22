@@ -7,10 +7,69 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="blog">
+				<section class="blog blog--page">
 					<div class="blog__container container">
-						<h1 class="blog__title title">Блог</h1>
+						<div class="blog__intro">
+							<nav class="breadcrumbs" aria-label="Хлебные крошки">
+								<ol class="breadcrumbs__list">
+									<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Главная</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<span class="breadcrumbs__link" aria-current="page">Блог</span>
+									</li>
+								</ol>
+							</nav>
+							<div class="blog__heading">
+								<h1 class="blog__title title">Блог</h1>
+								<p class="blog__lead">Полезно об автомобилях, тюнинге и обслуживании</p>
+							</div>
+							<form class="blog__search icon-search" action="#" method="get">
+								<label class="visually-hidden" for="blog-search">Поиск по блогу</label>
+								<input
+									class="blog__search-input"
+									id="blog-search"
+									type="search"
+									name="q"
+									placeholder="например катализатор, выхлоп,Stage"
+								>
+								<button class="blog__search-btn btn btn--primary btn--small" type="submit">найти</button>
+							</form>
+						</div>
 						<div class="blog__catalog">
+							<div class="blog__toolbar">
+								<ul class="blog__filters">
+									<li>
+										<button class="blog__filter is-active" type="button">Все</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Чип-тюнинг</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Выхлоп</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Автосервис</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Диагностика</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">полезное</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Видео</button>
+									</li>
+								</ul>
+								<div class="custom-select custom-select--sort">
+									<label class="visually-hidden" for="blog-sort">Сортировка</label>
+									<select class="custom-select__native" id="blog-sort" name="sort" data-custom-select>
+										<option value="new" selected>Сначала новые</option>
+										<option value="old">Сначала старые</option>
+										<option value="popular">По популярности</option>
+									</select>
+								</div>
+							</div>
 							<div class="blog__row blog__row--split">
 								<ul class="blog__stack">
 									@@loop('./html/templates/_blog-card.html', './html/json/blog-page-overlay.json')
@@ -40,15 +99,18 @@
 							<ul class="blog__row blog__row--cards">
 								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
 							</ul>
-						</div>
-						<div class="blog__footer">
-							<a href="#" class="blog__btn btn btn--primary">Следующая страница</a>
-							@@include('./html/templates/_pagination.html')
+							<ul class="blog__row blog__row--cards">
+								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
+							</ul>
+							<div class="blog__footer">
+								<a href="#" class="blog__btn btn btn--primary">Следующая страница</a>
+								@@include('./html/templates/_pagination.html')
+							</div>
 						</div>
 					</div>
 				</section>
 				@@include('html/sections/_reviews.html', {
-
+				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_callback.html', {
 				"mod": "callback--secondary",

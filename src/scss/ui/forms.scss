@@ -79,38 +79,40 @@ textarea.form-control {
 
 	// form-check__input
 	&__input {
-		&:checked~.form-check__text::before {
-			// @extend %icon-check;
-			font-size: 0.5rem;
-			color: #fff;
+		&:checked ~ .form-check__text::before {
+			font-family: "icons";
+			content: "\e904";
+			font-size: rem(10);
+			color: $color-accent-primary;
 		}
 
-		&:focus-visible~.form-check__text::before {}
+		&:focus-visible ~ .form-check__text::before {
+			outline: 2px solid $color-accent-primary;
+			outline-offset: rem(2);
+		}
 	}
 
 	// form-check__text
 	&__text {
 		display: inline-flex;
-		align-items: center;
-		gap: rem(8);
+		align-items: flex-start;
+		gap: rem(10);
+		font-family: $font-inter;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(20, 14);
 
 
 		&::before {
-			// @extend %ic;
 			flex-shrink: 0;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: rem(20);
-			height: rem(20);
-			border-radius: rem(4);
-
-			font-size: rem(20);
+			width: rem(18);
+			height: rem(18);
+			border: 1px solid $color-accent-primary;
+			font-size: rem(10);
 			line-height: 1;
-
 			content: "";
 		}
 

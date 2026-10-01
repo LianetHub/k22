@@ -1,0 +1,26 @@
+<li class="@@if(typeof itemClass !== 'undefined'){@@itemClass}@@if(typeof itemClass === 'undefined'){products__item}">
+	<article class="product-card">
+		<div class="product-card__media">
+			<img class="product-card__img" src="@@image" alt="@@imageAlt" width="1200" height="800"@@if(typeof fetchpriority !== 'undefined'){ fetchpriority="@@fetchpriority"}@@if(typeof loading !== 'undefined'){ loading="@@loading"}>
+			@@if(typeof badge !== 'undefined'){
+			<span class="product-card__badge">@@badge</span>
+			}
+		</div>
+		<p class="product-card__category">@@category</p>
+		<div class="product-card__heading">
+			<h3 class="product-card__title">@@title</h3>
+			<p class="product-card__text">@@text</p>
+		</div>
+		<div class="product-card__price">
+			@@if(typeof sale !== 'undefined'){
+			<div class="product-card__sale">
+				<span class="product-card__sale-value">@@sale</span>
+				<span class="product-card__old">@@oldPrice</span>
+			</div>
+			}
+			<p class="product-card__current">@@price</p>
+			<p class="product-card__vat">@@vat</p>
+		</div>
+		<a class="btn btn--primary btn--compact product-card__btn" href="@@if(typeof href !== 'undefined'){@@href}@@if(typeof href === 'undefined'){#}">@@if(typeof link !== 'undefined'){@@link}@@if(typeof link === 'undefined'){Узнать наличие}</a>
+	</article>
+</li>

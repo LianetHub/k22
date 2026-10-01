@@ -10,7 +10,8 @@
 				<section class="vacancies">
 					<div class="vacancies__container container">
 						<h1 class="vacancies__title title decor-line-block">
-							<span class="color-primary">Стань частью</span> Нашей команды
+							<span class="vacancies__title-line color-primary">Стань частью</span>
+							<span class="vacancies__title-line">Нашей команды</span>
 						</h1>
 						<ul class="vacancies__grid">
 							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
@@ -21,7 +22,8 @@
 				"faqList": "./html/json/faq-vacancies.json"
 				})
 				@@include('./html/sections/_callback.html', {
-				"title": 'Чтобы стать частью команды <span class="color-primary">K22 Power Team</span>'
+				"id": "callback",
+				"title": '<span class="color-primary">Чтобы стать частью команды</span><br>K22 Power Team'
 				})
 				@@include('./html/sections/_gallery.html', {
 				"galleryList": "./html/json/gallery-vacancies.json"

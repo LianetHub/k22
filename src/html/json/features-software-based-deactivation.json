@@ -1,0 +1,23 @@
+[
+	{
+		"cardMod": "",
+		"image": "@img/features/guarantee.webp",
+		"icon": "shield",
+		"title": "гарантия",
+		"text": "Бессрочная на прошивки"
+	},
+	{
+		"cardMod": "",
+		"image": "@img/features/locations.webp",
+		"icon": "locations",
+		"title": "Локации",
+		"text": "2 удобных адреса"
+	},
+	{
+		"cardMod": "",
+		"image": "@img/features/schedule.webp",
+		"icon": "clock",
+		"title": "График работы",
+		"text": "Работаем ежедневно"
+	}
+]

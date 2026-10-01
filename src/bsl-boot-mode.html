@@ -7,9 +7,13 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero" style="background-image: url('@img/hero/bsl-boot-mode.png');">
 					<div class="hero__container container">
-						<h1 class="hero__title title">BSL/BOOT mode</h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title-lg">BSL/BOOT режим</h1>
+							<p class="hero__lead">Прошиваем блок управления двигателем напрямую, когда стандартная запись через диагностический разъём недоступна. Получаем полный доступ к памяти ЭБУ для корректной записи программного обеспечения.</p>
+							<a href="#callback" class="hero__btn btn btn--primary">Записаться</a>
+						</div>
 					</div>
 				</section>
 				<div class="services">
@@ -19,9 +23,14 @@
 						</ul>
 					</div>
 				</div>
-				<section class="info-block">
+				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/bsl-boot-mode.png');">
 					<div class="info-block__container container">
-						<h2 class="info-block__title title">ВОЗВРАТ В STOCK: ЗАВОДСКИЕ НАСТРОЙКИ АВТОМОБИЛЯ</h2>
+						<div class="info-block__content">
+							<h2 class="info-block__title title decor-line-block">BSL/BOOT: ПРЯМОЙ ДОСТУП К ЭБУ</h2>
+							<p class="info-block__lead">BSL/BOOT режим используется, когда прошить автомобиль стандартным способом через OBD невозможно. Для работы блок управления снимается с автомобиля, после чего специалисты подключаются непосредственно к его плате и получают доступ к памяти ЭБУ.</p>
+							<p class="info-block__text">Такой способ позволяет корректно считать и записать программное обеспечение, обойти ограничения штатного доступа и выполнить необходимую настройку блока. После прошивки ЭБУ устанавливается обратно и проверяется работа автомобиля.</p>
+							<a class="btn btn--primary info-block__btn" href="article.html">Читать далее</a>
+						</div>
 					</div>
 				</section>
 				@@include('html/sections/_features.html', {
@@ -42,6 +51,7 @@
 				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_callback.html', {
+				"id": "callback",
 				"mod": "callback--secondary"
 				})
 				@@include('html/sections/_contacts.html', {})

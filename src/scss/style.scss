@@ -25,12 +25,15 @@
 @use "ui/services-card";
 @use "ui/popup";
 @use "ui/breadcrumbs";
+@use "ui/pagination";
 @use "ui/swiper";
 
 // modules
 @use "modules/product";
+@use "modules/catalog-cats";
 @use "modules/contacts";
 @use "modules/hero";
+@use "modules/format";
 @use "modules/features";
 @use "modules/faq";
 @use "modules/reviews";
@@ -40,6 +43,8 @@
 @use "modules/gallery";
 @use "modules/blog";
 @use "modules/works";
+@use "modules/work";
+@use "modules/portfolio";
 @use "modules/brands-power";
 @use "modules/result";
 @use "modules/services";
@@ -47,6 +52,9 @@
 @use "modules/error-page";
 @use "modules/policy";
 @use "modules/power";
+@use "modules/info-block";
+@use "modules/text-block";
+@use "modules/description";
 
 // utilities
 @use "utilities/decorations";

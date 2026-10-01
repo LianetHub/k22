@@ -748,10 +748,69 @@
 			</header>
 
 			<main class="page">
-				<section class="blog">
+				<section class="blog blog--page">
 					<div class="blog__container container">
-						<h1 class="blog__title title">Блог</h1>
+						<div class="blog__intro">
+							<nav class="breadcrumbs" aria-label="Хлебные крошки">
+								<ol class="breadcrumbs__list">
+									<li class="breadcrumbs__item">
+										<a class="breadcrumbs__link" href="index.html">Главная</a>
+									</li>
+									<li class="breadcrumbs__item">
+										<span class="breadcrumbs__link" aria-current="page">Блог</span>
+									</li>
+								</ol>
+							</nav>
+							<div class="blog__heading">
+								<h1 class="blog__title title">Блог</h1>
+								<p class="blog__lead">Полезно об автомобилях, тюнинге и обслуживании</p>
+							</div>
+							<form class="blog__search icon-search" action="#" method="get">
+								<label class="visually-hidden" for="blog-search">Поиск по блогу</label>
+								<input
+									class="blog__search-input"
+									id="blog-search"
+									type="search"
+									name="q"
+									placeholder="например катализатор, выхлоп,Stage"
+								>
+								<button class="blog__search-btn btn btn--primary btn--small" type="submit">найти</button>
+							</form>
+						</div>
 						<div class="blog__catalog">
+							<div class="blog__toolbar">
+								<ul class="blog__filters">
+									<li>
+										<button class="blog__filter is-active" type="button">Все</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Чип-тюнинг</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Выхлоп</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Автосервис</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Диагностика</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">полезное</button>
+									</li>
+									<li>
+										<button class="blog__filter" type="button">Видео</button>
+									</li>
+								</ul>
+								<div class="custom-select custom-select--sort">
+									<label class="visually-hidden" for="blog-sort">Сортировка</label>
+									<select class="custom-select__native" id="blog-sort" name="sort" data-custom-select>
+										<option value="new" selected>Сначала новые</option>
+										<option value="old">Сначала старые</option>
+										<option value="popular">По популярности</option>
+									</select>
+								</div>
+							</div>
 							<div class="blog__row blog__row--split">
 								<ul class="blog__stack">
 									<li class="blog__item">
@@ -2016,10 +2075,284 @@
 								</li>
 
 							</ul>
-						</div>
-						<div class="blog__footer">
-							<a href="#" class="blog__btn btn btn--primary">Следующая страница</a>
-							pag
+							<ul class="blog__row blog__row--cards">
+								<li class="blog__item">
+									<article class="blog-card ">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/chip-tuning.png"
+												alt="Диагностика автомобиля на стенде"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">4 582</span>
+													</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Почему важна индивидуальная настройка</h3>
+												<p class="blog-card__excerpt">Даже две одинаковые модели автомобилей могут работать по-разному. На параметры двигателя влияют его техническое состояние, качество топлива, пробег и установленные доработки.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item">
+									<article class="blog-card ">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/exhaust.png"
+												alt="Задний бампер автомобиля с управляемым выхлопом"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Выхлоп</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">4 582</span>
+													</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Что даёт управляемый выхлоп?</h3>
+												<p class="blog-card__excerpt">Как работает управляемый выхлоп, чем он отличается от обычного и как позволяет менять характер звучания автомобиля.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item">
+									<article class="blog-card ">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/pro-chip.png"
+												alt="Автомобиль в студии после чип-тюнинга"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">4 582</span>
+													</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">PRO чип-тюнинг</h3>
+												<p class="blog-card__excerpt">Современные автомобили часто имеют запас мощности, который ограничен заводскими настройками электронного блока управления.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item">
+									<article class="blog-card ">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/stock-mode.png"
+												alt="Автомобиль в режиме Stock"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">4 582</span>
+													</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Возврат в Stock: заводские настройки автомобиля</h3>
+												<p class="blog-card__excerpt">Stock-режим позволяет вернуть автомобиль к исходным заводским настройкам после чип-тюнинга или других программных изменений.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+
+							</ul>
+							<div class="blog__footer">
+								<a href="#" class="blog__btn btn btn--primary">Следующая страница</a>
+								<nav class="pagination" aria-label="Страницы">
+									<a class="pagination__arrow pagination__arrow--prev icon-arrrow-long" href="#" aria-label="Предыдущая страница"></a>
+									<a class="pagination__page" href="#">1</a>
+									<a class="pagination__page" href="#">2</a>
+									<a class="pagination__page" href="#">3</a>
+									<span class="pagination__ellipsis">...</span>
+									<a class="pagination__page is-active" href="#" aria-current="page">15</a>
+									<a class="pagination__page" href="#">16</a>
+									<a class="pagination__page" href="#">17</a>
+									<a class="pagination__arrow pagination__arrow--next icon-arrrow-long" href="#" aria-label="Следующая страница"></a>
+								</nav>
+
+							</div>
 						</div>
 					</div>
 				</section>
@@ -2031,6 +2364,112 @@
 							
 							<a class="reviews__more more-link" href="#">Читать все отзывы</a>
 							
+						</div>
+						
+						<div class="swiper reviews__slider">
+							<div class="swiper-wrapper reviews__grid">
+								<div class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__body">
+											<div class="review-card__man">
+												<div class="review-card__avatar icon-user" aria-hidden="true"></div>
+												<div class="review-card__identity">
+													<h3 class="review-card__name">Андрей Валюк</h3>
+													<p class="review-card__car"></p>
+												</div>
+												<div class="review-card__stars" aria-label="Оценка 5 из 5">
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+												</div>
+											</div>
+											<div class="review-card__text"><p>Доброго времени суток! Хочу поделиться своим впечатлением о компании «К22».</p><p>Не так давно мне провели программное отключение AdBlue в этой компании. Обещали за два часа — справились меньше чем за час, цена без доплат.</p><p>Сервисом и работой остался доволен! Если ещё решу что‑то сделать по чип‑тюнингу, обязательно поеду к ним.</p></div>
+										</div>
+										<div class="review-card__foot">
+											<div class="review-card__cut" aria-hidden="true"></div>
+											<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+										</div>
+									</article>
+								</div>
+<div class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__body">
+											<div class="review-card__man">
+												<div class="review-card__avatar icon-user" aria-hidden="true"></div>
+												<div class="review-card__identity">
+													<h3 class="review-card__name">Георгий Клещев</h3>
+													<p class="review-card__car">Chevrolet Cruze</p>
+												</div>
+												<div class="review-card__stars" aria-label="Оценка 5 из 5">
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+												</div>
+											</div>
+											<div class="review-card__text"><p>Первый раз столкнулся с проблемой забитого катализатора — эти ребята уже записали и ждали меня. За 2 часа оживили мою ласточку.</p><p>Убрали катализатор, прошили, всё аккуратно. Машине реально подарили вторую жизнь. Очень рекомендую.</p></div>
+										</div>
+										<div class="review-card__foot">
+											<div class="review-card__cut" aria-hidden="true"></div>
+											<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+										</div>
+									</article>
+								</div>
+<div class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__body">
+											<div class="review-card__man">
+												<div class="review-card__avatar icon-user" aria-hidden="true"></div>
+												<div class="review-card__identity">
+													<h3 class="review-card__name">Fisherman</h3>
+													<p class="review-card__car"></p>
+												</div>
+												<div class="review-card__stars" aria-label="Оценка 5 из 5">
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+												</div>
+											</div>
+											<div class="review-card__text"><p>Обратился с забитым катализатором. Мастера показали всё эндоскопом и предложили оптимальный вариант под «Евро-2».</p><p>Не навязывали лишнего, работа около 2 часов, в зоне ожидания чисто. Рекомендую.</p></div>
+										</div>
+										<div class="review-card__foot">
+											<div class="review-card__cut" aria-hidden="true"></div>
+											<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+										</div>
+									</article>
+								</div>
+<div class="swiper-slide">
+									<article class="review-card">
+										<div class="review-card__body">
+											<div class="review-card__man">
+												<div class="review-card__avatar icon-user" aria-hidden="true"></div>
+												<div class="review-card__identity">
+													<h3 class="review-card__name">Алексей М.</h3>
+													<p class="review-card__car">BMW 320d</p>
+												</div>
+												<div class="review-card__stars" aria-label="Оценка 5 из 5">
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+													<span class="review-card__star icon-star" aria-hidden="true"></span>
+												</div>
+											</div>
+											<div class="review-card__text"><p>Делал Stage 1 и отключение EGR. Всё объяснили до работы, сделали в срок, машина едет заметно бодрее.</p><p>Отдельное спасибо за аккуратность и понятную гарантию на прошивку.</p></div>
+										</div>
+										<div class="review-card__foot">
+											<div class="review-card__cut" aria-hidden="true"></div>
+											<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+										</div>
+									</article>
+								</div>
+
+							</div>
 						</div>
 						
 					</div>

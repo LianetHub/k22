@@ -7,19 +7,23 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero hero--partner">
 					<div class="hero__container container">
-						<h1 class="hero__title title">Станьте партнёром <span class="color-primary">K22</span></h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title decor-line-block">Станьте<br>партнёром <span class="color-primary">K22</span></h1>
+							<p class="hero__lead">Мы не забираем ваших клиентов — мы помогаем вам решать задачи, которые невыгодно выполнять самостоятельно</p>
+							<p class="hero__lead">Вы можете передавать нам специализированные работы, а мы качественно выполняем их и возвращаем автомобиль вам или обслуживаем вашего клиента полностью.</p>
+						</div>
 					</div>
 				</section>
 				<section class="format">
 					<div class="format__container container">
-						<h2 class="format__title title">
-							Выбирайте
+						<h2 class="format__title title decor-line-block">
+							Выбирайте<br>
 							<span class="color-primary">удобный формат:</span>
 						</h2>
 						<ul class="format__list">
-							@@loop('./html/templates/_format-card.html',{})
+							@@loop('./html/templates/_format-card.html', './html/json/formats-partner.json')
 						</ul>
 					</div>
 				</section>

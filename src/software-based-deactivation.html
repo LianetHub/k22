@@ -7,9 +7,13 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero" style="background-image: url('@img/hero/software-based-deactivation.png');">
 					<div class="hero__container container">
-						<h1 class="hero__title title">ПРОГРАММНОЕ ОТКЛЮЧЕНИЕ СИСТЕМ</h1>
+						<div class="hero__offer">
+							<h1 class="hero__title title-lg">ПРОГРАММНОЕ<br>ОТКЛЮЧЕНИЕ СИСТЕМ</h1>
+							<p class="hero__lead">Отключаем экологические и вспомогательные системы автомобиля на программном уровне. Без ошибок на приборной панели, аварийного режима и ограничений мощности.</p>
+							<a href="#callback" class="hero__btn btn btn--primary">Записаться на диагностику</a>
+						</div>
 					</div>
 				</section>
 				<section class="services">
@@ -29,14 +33,19 @@
 								</ul>
 							</div>
 							<div class="services__consult">
-								<a class="btn btn--primary" href="#">Получить консультацию</a>
+								<a class="btn btn--primary" href="#callback">Получить консультацию</a>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="info-block">
+				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/software-based-deactivation.png');">
 					<div class="info-block__container container">
-						<h2 class="info-block__title title">PRO ПРОГРАММНОЕ ОТКЛЮЧЕНИЕ СИСТЕМ</h2>
+						<div class="info-block__content">
+							<h2 class="info-block__title title decor-line-block">PRO ПРОГРАММНОЕ<br>ОТКЛЮЧЕНИЕ СИСТЕМ</h2>
+							<p class="info-block__lead">Современные автомобили часто имеют запас мощности, который ограничен заводскими настройками электронного блока управления. Производитель делает это с учётом экологических требований, особенностей разных рынков и условий эксплуатации. Чип-тюнинг позволяет скорректировать эти настройки и раскрыть возможности двигателя без механического вмешательства.</p>
+							<p class="info-block__text">Во время настройки специалисты корректируют параметры работы двигателя: подачу топлива, давление наддува, угол зажигания и реакцию педали газа. В результате автомобиль быстрее откликается на нажатие акселератора, увереннее разгоняется и легче набирает скорость при обгоне.</p>
+							<a class="btn btn--primary info-block__btn" href="article.html">Подробнее</a>
+						</div>
 					</div>
 				</section>
 				@@include('html/sections/_offers.html', {
@@ -51,7 +60,7 @@
 				})
 				@@include('html/sections/_features.html', {
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
-				"featuresList": "./html/json/features.json"
+				"featuresList": "./html/json/features-software-based-deactivation.json"
 				})
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-software-based-deactivation.json"
@@ -61,6 +70,7 @@
 				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_callback.html', {
+				"id": "callback",
 				"mod": "callback--secondary"
 				})
 				@@include('html/sections/_works.html', {

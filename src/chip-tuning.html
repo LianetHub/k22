@@ -1,49 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.html', {
-	"title": "K22 | Шаблон дополнительной услуги"
+	"title": "K22 | Чип-тюнинг мотоциклов"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero">
+				<section class="hero hero--moto" style="background-image: url('@img/hero/chip-tuning-moto.png');">
 					<div class="hero__container container">
-						<h1 class="hero__title title">Чип-тюнинг <span class="color-primary">мотоциклов</span></h1>
-					</div>
-				</section>
-				<section class="description">
-					<div class="description__container container">
-						<div class="description__image"></div>
-						<div class="description__content">
-							<h2 class="description__title title">PRO чип-тюнинг мотоциклов</h2>
+						<div class="hero__offer">
+							<h1 class="hero__title title-lg">Чип-тюнинг<br><span class="color-primary">мотоциклов</span></h1>
+							<p class="hero__lead">Программная настройка мотоцикла для улучшения отклика на газ, тяги и динамики. Подбираем прошивку индивидуально под модель и блок управления.</p>
+							<a href="#callback" class="hero__btn btn btn--primary">Записаться</a>
+						</div>
+						<div class="hero__side">
+							<div class="hero__note">
+								<p class="hero__note-title">Не все мотоциклы шьются</p>
+								<p class="hero__note-text">обращайтесь за консультацией</p>
+							</div>
 						</div>
 					</div>
 				</section>
-				<section class="result">
+				<section class="info-block info-block--light" style="--info-block-image: url('../@img/info/chip-tuning-moto.png');">
+					<div class="info-block__container container">
+						<div class="info-block__content">
+							<h2 class="info-block__title title decor-line-block">PRO чип-тюнинг мотоциклов</h2>
+							<p class="info-block__lead">Чип-тюнинг мотоцикла позволяет скорректировать программные настройки блока управления двигателем и изменить его поведение без механического вмешательства. Настройка помогает улучшить отклик на ручку газа, сделать тягу более ровной и раскрыть потенциал двигателя.</p>
+							<p class="info-block__text">Параметры прошивки подбираются индивидуально с учётом модели, двигателя и блока управления. Перед началом работ специалисты проверяют возможность программной настройки конкретного мотоцикла.</p>
+							<a class="btn btn--primary info-block__btn" href="article.html">Читать далее</a>
+						</div>
+					</div>
+				</section>
+				<section class="result result--moto">
+					<div class="result__glow" aria-hidden="true"></div>
 					<div class="result__container container">
-
+						<div class="result__main">
+							<h2 class="result__title title decor-line-block">
+								<span class="result__title-line">Что вы получите</span>
+								<span class="result__title-line color-primary">после чип-тюнинга</span>
+							</h2>
+							<div class="result__metrics">
+								<div class="result__metric">
+									<div class="result__metric-main">
+										<div class="result__metric-panel">
+											<p class="result__label icon-engine">мощность</p>
+											<div class="result__compare">
+												<div class="result__point">
+													<p class="result__value">
+														<span class="result__num">310</span>
+														<span class="result__unit">л.с.</span>
+													</p>
+													<p class="result__caption">до</p>
+												</div>
+												<span class="result__arrow" aria-hidden="true"></span>
+												<div class="result__point">
+													<p class="result__value result__value--accent">
+														<span class="result__num">320</span>
+														<span class="result__unit">л.с.</span>
+													</p>
+													<p class="result__caption">после</p>
+												</div>
+											</div>
+										</div>
+										<span class="result__tail result__tail--main" aria-hidden="true"></span>
+									</div>
+									<div class="result__metric-gain">
+										<span class="result__tail result__tail--gain" aria-hidden="true"></span>
+										<div class="result__metric-panel result__metric-panel--gain">
+											<p class="result__label result__label--gain icon-growth">прирост</p>
+											<p class="result__value result__value--accent">
+												<span class="result__num">+6</span>
+												<span class="result__unit result__unit--pct">%</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="result__metric">
+									<div class="result__metric-main">
+										<div class="result__metric-panel">
+											<p class="result__label icon-speedometer">крутящий момент</p>
+											<div class="result__compare">
+												<div class="result__point">
+													<p class="result__value">
+														<span class="result__num">165</span>
+														<span class="result__unit">Nm</span>
+													</p>
+													<p class="result__caption">до</p>
+												</div>
+												<span class="result__arrow" aria-hidden="true"></span>
+												<div class="result__point">
+													<p class="result__value result__value--accent">
+														<span class="result__num">175</span>
+														<span class="result__unit">Nm</span>
+													</p>
+													<p class="result__caption">после</p>
+												</div>
+											</div>
+										</div>
+										<span class="result__tail result__tail--main" aria-hidden="true"></span>
+									</div>
+									<div class="result__metric-gain">
+										<span class="result__tail result__tail--gain" aria-hidden="true"></span>
+										<div class="result__metric-panel result__metric-panel--gain">
+											<p class="result__label result__label--gain icon-growth">прирост</p>
+											<p class="result__value result__value--accent">
+												<span class="result__num">+6</span>
+												<span class="result__unit result__unit--pct">%</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<p class="result__disclaimer">*Фактический прирост мощности и крутящего момента зависит от конфигурации мотоцикла и установленного оборудования.</p>
+							</div>
+							<div class="result__guarantee">
+								<div class="result__guarantee-text">
+									<p class="result__guarantee-title">Бессрочная гарантия</p>
+									<p class="result__guarantee-lead">на выполненные работы</p>
+								</div>
+								<a class="btn btn--primary result__guarantee-btn" href="">Подробнее</a>
+							</div>
+						</div>
+						<p class="result__note">*Для мотоцикла kawasaki ninja h2r</p>
 					</div>
 				</section>
 				@@include('html/sections/_callback.html', {
+				"id": "callback",
 				"mod": "callback--secondary",
 				"title": '<span class="color-primary">подберем решение</span> под ваш бюджет и Мотоцикл',
 				"formTitle": 'Запишитесь <span class="color-primary">на Бесплатную комплексную диагностику</span>'
 				})
 				@@include('html/sections/_features.html', {
+				"mod": "features--light",
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": '<span class="offers__title-line">для владельцев</span><span class="offers__title-line color-primary">авто</span>',
+				"title": '<span class="offers__title-line">для владельцев</span><span class="offers__title-line color-primary">мото</span>',
 				"offersList": "./html/json/offers-chip-tuning.json"
 				})
 				@@include('html/sections/_faq.html', {
 				"faqList": "html/json/faq-chip-tuning.json"
 				})
 
-				@@include('html/sections/_works.html', {})
+				@@include('html/sections/_works.html', {
+				"tag": "Чип-тюнинг мотоциклов",
+				"worksList": "./html/json/works-chip-tuning.json"
+				})
 				@@include('html/sections/_contacts.html', {})
 
 			</main>

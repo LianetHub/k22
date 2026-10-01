@@ -1,0 +1,35 @@
+[
+	{
+		"itemClass": "works__item",
+		"mod": "",
+		"tag": "Выхлоп",
+		"caption": "HYUNDAI SANTA FE 2.2D 2019 Г.",
+		"title": "Удаление катализатора",
+		"image": "@img/portfolio/card-santa-fe.png",
+		"imageAlt": "Hyundai Santa Fe в шоуруме"
+	},
+	{
+		"itemClass": "works__item",
+		"mod": "",
+		"tag": "Выхлоп",
+		"caption": "HYUNDAI SANTA FE 2.2D 2019 Г.",
+		"title": "Удаление катализатора",
+		"image": "@img/portfolio/card-honda.png",
+		"imageAlt": "Мастер осматривает двигатель Honda с открытым капотом"
+	},
+	{
+		"itemClass": "works__item",
+		"mod": "",
+		"tag": "Чип-тюнинг",
+		"caption": "Honda",
+		"title": "Чип-тюнинг",
+		"image": "@img/portfolio/card-honda.png",
+		"imageAlt": "Диагностика двигателя Honda с открытым капотом",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
+	}
+]

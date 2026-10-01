@@ -12,7 +12,9 @@
 		content: '';
 		position: absolute;
 		inset: 0;
+		z-index: 1;
 		background: linear-gradient(to bottom, rgba($color-text-primary, 0) 45%, $color-text-primary 100%);
+		pointer-events: none;
 	}
 
 	// .portfolio-card__img
@@ -22,6 +24,38 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	// .portfolio-card__tag
+	&__tag {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: $ui-index-2;
+		display: flex;
+		align-items: center;
+
+		&::after {
+			content: "";
+			flex-shrink: 0;
+			width: rem(34);
+			height: rem(30);
+			background: url("@img/portfolio/tag-corner.svg") center / rem(34) rem(30) no-repeat;
+			transform: rotate(180deg);
+		}
+	}
+
+	// .portfolio-card__tag-label
+	&__tag-label {
+		padding-right: rem(20);
+		padding-bottom: rem(20);
+		background: $color-bg-secondary;
+		color: $color-accent-primary;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: em(-0.14, 14);
+		text-transform: uppercase;
 	}
 
 	// .portfolio-card__body
@@ -43,6 +77,40 @@
 		}
 	}
 
+	// .portfolio-card__text
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		min-width: 0;
+
+		@media (min-width: $md4) {
+			flex: 1 1 0;
+			gap: rem(20);
+		}
+	}
+
+	&__body:has(.portfolio-card__stats) .portfolio-card__text {
+		@media (min-width: $md4) {
+			gap: rem(10);
+		}
+	}
+
+	// .portfolio-card__caption
+	&__caption {
+		color: $color-bg-primary;
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: em(-0.32, 16);
+
+		@media (min-width: $md4) {
+			font-size: rem(18);
+			letter-spacing: em(-0.36, 18);
+		}
+	}
+
 	// .portfolio-card__title
 	&__title {
 		@include desktop-heading-h4;
@@ -51,9 +119,6 @@
 
 		@media (min-width: $md4) {
 			@include desktop-heading-h3;
-
-			flex: 1 1 0;
-			min-width: 0;
 		}
 
 		@media (min-width: $md0) {
@@ -119,6 +184,63 @@
 		@media (min-width: $md4) {
 			font-size: rem(16);
 			letter-spacing: rem(-0.32);
+		}
+	}
+
+	// .portfolio-card__link
+	&__link {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 100%;
+		color: inherit;
+
+		&:focus-visible {
+			outline: 2px solid $color-accent-primary;
+			outline-offset: rem(-2);
+		}
+	}
+
+	// .portfolio-card__car
+	&__car {
+		color: $color-bg-primary;
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: em(-0.32, 16);
+
+		@media (min-width: $md4) {
+			font-size: rem(18);
+			letter-spacing: em(-0.36, 18);
+		}
+	}
+
+	// .portfolio-card--page
+	&--page {
+		.portfolio-card__body {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(12);
+
+			@media (min-width: $md4) {
+				flex-direction: column;
+				gap: rem(20);
+				padding: rem(16) rem(30);
+			}
+		}
+
+		.portfolio-card__title {
+			@include mobile-heading-h4;
+
+			flex: none;
+			width: 100%;
+			min-width: 0;
+			color: $color-bg-primary;
+
+			@media (min-width: $md4) {
+				@include desktop-heading-h3;
+			}
 		}
 	}
 }

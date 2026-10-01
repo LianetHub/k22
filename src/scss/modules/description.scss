@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+
+.description {
+	position: relative;
+	background: $color-bg-secondary;
+	color: $color-text-primary;
+
+	// .description__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+
+		@media (min-width: $md4) {
+			gap: rem(32);
+		}
+
+		@media (min-width: $md3) {
+			flex-direction: row;
+			align-items: stretch;
+			gap: rem(40);
+		}
+	}
+
+	// .description__image
+	&__image {
+		display: block;
+		width: 100%;
+		height: rem(240);
+		object-fit: cover;
+
+		@media (min-width: $md4) {
+			height: rem(380);
+		}
+
+		@media (min-width: $md3) {
+			flex: 1 1 0;
+			align-self: stretch;
+			width: auto;
+			min-width: 0;
+			height: 100%;
+			min-height: rem(460);
+		}
+
+		@media (min-width: $md2) {
+			min-height: rem(580);
+		}
+	}
+
+	// .description__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-width: 0;
+
+		@media (min-width: $md3) {
+			flex: 0 1 rem(520);
+		}
+
+		@media (min-width: $md2) {
+			flex-basis: rem(640);
+		}
+
+		@media (min-width: $md0) {
+			flex-basis: rem(875);
+		}
+	}
+
+	// .description__lead
+	&__lead,
+	&__text {
+		margin-top: rem(24);
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: 1.2;
+
+		@media (min-width: $md4) {
+			margin-top: rem(32);
+			font-size: rem(22);
+		}
+
+		@media (min-width: $md2) {
+			margin-top: rem(40);
+			@include desktop-body-xl;
+		}
+	}
+
+	// .description__lead
+	&__lead {
+		color: $color-text-primary;
+	}
+
+	// .description__text
+	&__text {
+		background-image: linear-gradient(180deg, $color-text-primary 0%, rgba($color-text-primary, 0) 100%);
+		background-repeat: no-repeat;
+		background-clip: text;
+		color: transparent;
+	}
+
+	// .description__btn
+	&__btn {
+		position: relative;
+		z-index: 1;
+		margin-top: rem(24);
+
+		@media (min-width: $md2) {
+			margin-top: rem(-72);
+		}
+	}
+}
