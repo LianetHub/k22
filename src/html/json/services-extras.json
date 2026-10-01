@@ -1,0 +1,74 @@
+[
+	{
+		"mod": "services-card--compact",
+		"title": "Индивидуальная настройка по логам",
+		"price": "? ₽",
+		"iconImg": "@img/icons/mag-logs.svg",
+		"iconAlt": "Настройка по логам",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Активация скрытых функций BMW G/F-серии",
+		"price": "5 000 ₽",
+		"iconImg": "@img/icons/bmw-hidden-functions.svg",
+		"iconAlt": "Скрытые функции BMW",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Прошивка АКПП",
+		"price": "? ₽",
+		"iconImg": "@img/icons/gearshift.svg",
+		"iconAlt": "Прошивка АКПП",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Установка CarPlay",
+		"price": "20 000 ₽",
+		"iconImg": "@img/icons/carplay.svg",
+		"iconAlt": "Установка CarPlay",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Активация скрытых функций Mercedes",
+		"price": "5 000 ₽",
+		"iconImg": "@img/icons/mercedes-hidden-functions.svg",
+		"iconAlt": "Скрытые функции Mercedes",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Русификация Kia, Hyundai и Genesis",
+		"price": "13 000 ₽",
+		"iconImg": "@img/icons/russification.svg",
+		"iconAlt": "Русификация Kia, Hyundai и Genesis",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Отключение иммобилайзера",
+		"price": "5 800 ₽",
+		"iconImg": "@img/icons/immobilizer_disable.svg",
+		"iconAlt": "Отключение иммобилайзера",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Popcorn (отстрелы)",
+		"price": "от 2 800 ₽",
+		"iconImg": "@img/icons/popcorn.svg",
+		"iconAlt": "Popcorn, отстрелы выхлопа",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]

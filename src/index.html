@@ -40,9 +40,24 @@
 						</div>
 					</div>
 				</section>
-
-
-
+				<section class="services">
+					<div class="services__container container">
+						<ul class="services__grid">
+							@@loop('./html/templates/_service-card.html', './html/json/services-grid.json')
+						</ul>
+					</div>
+				</section>
+				<section class="services services--catalog">
+					<div class="services__container container">
+						<h2 class="services__title title decor-line-block">
+							<span class="services__title-line">Все услуги</span>
+							<span class="services__title-line color-primary">от ремонта до тюнинга</span>
+						</h2>
+						<ul class="services__categories">
+							@@loop('./html/templates/_service-card.html', './html/json/services-categories.json')
+						</ul>
+					</div>
+				</section>
 				@@include('./html/sections/_features.html', {
 				"mod": "features--home",
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
@@ -69,7 +84,98 @@
 				@@include('./html/sections/_works.html', {
 				"worksList": "./html/json/works-home.json"
 				})
-
+				<section class="result">
+					<div class="result__glow" aria-hidden="true"></div>
+					<p class="result__mark" aria-hidden="true">X3</p>
+					<div class="result__container container">
+						<div class="result__main">
+							<h2 class="result__title title decor-line-block">
+								<span class="result__title-line">Что вы получите</span>
+								<span class="result__title-line color-primary">после чип-тюнинга</span>
+							</h2>
+							<div class="result__metrics">
+								<div class="result__metric">
+									<div class="result__metric-main">
+										<div class="result__metric-panel">
+											<p class="result__label icon-engine">мощность</p>
+											<div class="result__compare">
+												<div class="result__point">
+													<p class="result__value">
+														<span class="result__num">250</span>
+														<span class="result__unit">л.с.</span>
+													</p>
+													<p class="result__caption">до</p>
+												</div>
+												<span class="result__arrow" aria-hidden="true"></span>
+												<div class="result__point">
+													<p class="result__value result__value--accent">
+														<span class="result__num">320</span>
+														<span class="result__unit">л.с.</span>
+													</p>
+													<p class="result__caption">после</p>
+												</div>
+											</div>
+										</div>
+										<span class="result__tail result__tail--main" aria-hidden="true"></span>
+									</div>
+									<div class="result__metric-gain">
+										<span class="result__tail result__tail--gain" aria-hidden="true"></span>
+										<div class="result__metric-panel result__metric-panel--gain">
+											<p class="result__label result__label--gain icon-growth">прирост</p>
+											<p class="result__value result__value--accent">
+												<span class="result__num">+28</span>
+												<span class="result__unit result__unit--pct">%</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="result__metric">
+									<div class="result__metric-main">
+										<div class="result__metric-panel">
+											<p class="result__label icon-speedometer">крутящий момент</p>
+											<div class="result__compare">
+												<div class="result__point">
+													<p class="result__value">
+														<span class="result__num">380</span>
+														<span class="result__unit">Nm</span>
+													</p>
+													<p class="result__caption">до</p>
+												</div>
+												<span class="result__arrow" aria-hidden="true"></span>
+												<div class="result__point">
+													<p class="result__value result__value--accent">
+														<span class="result__num">470</span>
+														<span class="result__unit">Nm</span>
+													</p>
+													<p class="result__caption">после</p>
+												</div>
+											</div>
+										</div>
+										<span class="result__tail result__tail--main" aria-hidden="true"></span>
+									</div>
+									<div class="result__metric-gain">
+										<span class="result__tail result__tail--gain" aria-hidden="true"></span>
+										<div class="result__metric-panel result__metric-panel--gain">
+											<p class="result__label result__label--gain icon-growth">прирост</p>
+											<p class="result__value result__value--accent">
+												<span class="result__num">+24</span>
+												<span class="result__unit result__unit--pct">%</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="result__guarantee">
+								<div class="result__guarantee-text">
+									<p class="result__guarantee-title">Бессрочная гарантия</p>
+									<p class="result__guarantee-lead">на выполненные работы</p>
+								</div>
+								<a class="btn btn--primary result__guarantee-btn" href="">Подробнее</a>
+							</div>
+						</div>
+						<p class="result__note">*Для автомобиля BMW X3</p>
+					</div>
+				</section>
 				@@include('./html/sections/_offers.html', {
 				"mod": "offers--muted",
 				"offersList": "./html/json/offers-home.json"

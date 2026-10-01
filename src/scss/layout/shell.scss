@@ -52,6 +52,15 @@ img {
 	overflow-x: clip;
 	display: flex;
 	flex-direction: column;
+
+	&>* {
+		padding: 6.25rem 0;
+
+		&:first-child {
+			padding-top: rem(0);
+		}
+	}
+
 }
 
 .container {
@@ -69,19 +78,12 @@ img {
 		padding: 0 rem(70);
 	}
 
-	@media (min-width: $md1) {
+	@media (min-width: $md0) {
 		box-sizing: content-box;
 		max-width: $maxWidthContainer;
 	}
 }
 
-section {
-	padding: 6.25rem 0;
-
-	&:first-child {
-		padding-top: rem(0);
-	}
-}
 
 .social-item {
 	width: 3.125rem;

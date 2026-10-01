@@ -1,0 +1,66 @@
+[
+	{
+		"mod": "services-card--category",
+		"title": "Чип-тюнинг",
+		"photo": "@img/services/cat-chip.png",
+		"photoAlt": "Ноутбук с графиками чип-тюнинга",
+		"href": "#",
+		"link": "Чип-тюнинг"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "Диагностика",
+		"photo": "@img/services/cat-diagnostics.png",
+		"photoAlt": "Диагностический сканер",
+		"href": "#",
+		"link": "Диагностика"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "Ремонт выхлопных систем",
+		"photo": "@img/services/cat-exhaust-repair.png",
+		"photoAlt": "Катализатор выхлопной системы",
+		"href": "#",
+		"link": "Ремонт выхлопных систем"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "Тюнинг выхлопных систем",
+		"photo": "@img/services/cat-exhaust-tuning.png",
+		"photoAlt": "Спортивные насадки глушителя",
+		"href": "#",
+		"link": "Тюнинг выхлопных систем"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "Автосервис",
+		"photo": "@img/services/cat-service.png",
+		"photoAlt": "Тормозной диск",
+		"href": "#",
+		"link": "Автосервис"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "ТО",
+		"photo": "@img/services/cat-maintenance.png",
+		"photoAlt": "Моторное масло и фильтр",
+		"href": "#",
+		"link": "ТО"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "Дополнительные услуги",
+		"photo": "@img/services/cat-extras.png",
+		"photoAlt": "Приборная панель автомобиля",
+		"href": "#",
+		"link": "Дополнительные услуги"
+	},
+	{
+		"mod": "services-card--category",
+		"title": "Магазин",
+		"photo": "@img/services/cat-shop.png",
+		"photoAlt": "Насадки на глушитель",
+		"href": "#",
+		"link": "Магазин"
+	}
+]

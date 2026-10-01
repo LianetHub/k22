@@ -1,0 +1,148 @@
+@use "../abstracts" as *;
+
+.services {
+	background-color: $color-bg-secondary;
+
+	// services__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+	}
+
+	// services__title
+	&__title {
+		max-width: rem(723);
+	}
+
+	// services__title-line
+	&__title-line {
+		display: block;
+
+		& + & {
+			margin-top: rem(16);
+
+			@media (min-width: $md4) {
+				margin-top: rem(26);
+			}
+		}
+	}
+
+	// services__grid
+	&__grid,
+	&__categories {
+		display: grid;
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: rem(20);
+		}
+
+		@media (min-width: $md1) {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: rem(30);
+		}
+	}
+
+	// services__item
+	&__item {
+		display: contents;
+	}
+
+	// services--catalog
+	&--catalog {
+		background-color: $color-bg-primary;
+	}
+
+	// services__panel
+	&__panel {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		padding: rem(20);
+		background-color: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+			padding: rem(30);
+		}
+
+		.services-card {
+			background-color: $color-bg-secondary;
+		}
+
+		.services-card__price:not(.services-card__price--inline),
+		.services-card__price:not(.services-card__price--inline)::before {
+			background-color: $color-bg-primary;
+		}
+	}
+
+	// services__group
+	&__group {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width: $md4) {
+			gap: rem(30);
+		}
+	}
+
+	// services__group-title
+	&__group-title {
+		margin: 0;
+		color: $color-accent-primary;
+		@include mobile-heading-h4;
+
+		@media (min-width: $md4) {
+			@include mobile-heading-h1;
+		}
+	}
+
+	// services__consult
+	&__consult {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		min-height: rem(114);
+		margin: rem(8) rem(-20) rem(-20);
+		padding: 0 rem(20) rem(20);
+		overflow: hidden;
+
+		@media (min-width: $md4) {
+			margin: rem(10) rem(-30) rem(-30);
+			padding: 0 rem(30) rem(30);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: rem(180);
+			height: 100%;
+			background-color: $color-bg-secondary;
+			clip-path: polygon(100% 0, 100% 100%, 0 100%);
+			pointer-events: none;
+		}
+	}
+}
+
+.services__grid {
+	.services-card:not(.services-card--compact) {
+		@media (min-width: $md4) {
+			grid-column: span 2;
+		}
+	}
+
+	.services-card--featured {
+		@media (min-width: $md1) {
+			grid-row: span 2;
+		}
+	}
+}

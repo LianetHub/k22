@@ -1,0 +1,40 @@
+[
+	{
+		"mod": "services-card--compact",
+		"title": "Отключение управления сажевым фильтром",
+		"price": "9 800 ₽",
+		"iconImg": "@img/icons/opf-disable.svg",
+		"iconAlt": "Отключение управления сажевым фильтром",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Отключение SCR, AdBlue, BlueTech, Eolys",
+		"price": "14 800 ₽",
+		"iconImg": "@img/icons/scr-adblue-disable.svg",
+		"iconAlt": "Отключение SCR, AdBlue, BlueTech, Eolys",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Отключение EGR",
+		"description": "Отключение клапана рециркуляции выхлопных газов",
+		"price": "9 800 ₽",
+		"iconImg": "@img/icons/egr-disable.svg",
+		"iconAlt": "Отключение EGR",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact",
+		"title": "Отключение вихревых заслонок",
+		"description": "(FLAPS)",
+		"price": "12 800 ₽",
+		"iconImg": "@img/icons/flaps-disable.svg",
+		"iconAlt": "Отключение вихревых заслонок",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]

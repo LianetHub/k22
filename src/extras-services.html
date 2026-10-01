@@ -9,9 +9,9 @@
 			<main class="page">
 				<section class="services">
 					<div class="services__container container">
-						<h1 class="services__title">дополнительные услуги</h1>
+						<h1 class="services__title title decor-line-block">дополнительные услуги</h1>
 						<ul class="services__grid">
-							@@loop('./html/templates/_service-card.html', {})
+							@@loop('./html/templates/_service-card.html', './html/json/services-extras.json')
 						</ul>
 					</div>
 				</section>

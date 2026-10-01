@@ -22,6 +22,7 @@
 @use "ui/review-card";
 @use "ui/blog-card";
 @use "ui/portfolio-card";
+@use "ui/services-card";
 @use "ui/popup";
 @use "ui/breadcrumbs";
 @use "ui/swiper";
@@ -40,6 +41,8 @@
 @use "modules/blog";
 @use "modules/works";
 @use "modules/brands-power";
+@use "modules/result";
+@use "modules/services";
 @use "modules/article";
 @use "modules/error-page";
 @use "modules/policy";

@@ -14,10 +14,24 @@
 				</section>
 				<section class="services">
 					<div class="services__container container">
-						<h2 class="services__title title">услуги</h2>
-						<ul class="services__grid">
-							@@loop('./html/templates/_service-card.html', {})
-						</ul>
+						<h2 class="services__title title decor-line-block">услуги</h2>
+						<div class="services__panel">
+							<div class="services__group">
+								<h3 class="services__group-title">Для бензиновых автомобилей</h3>
+								<ul class="services__grid">
+									@@loop('./html/templates/_service-card.html', './html/json/services-deactivation-gas.json')
+								</ul>
+							</div>
+							<div class="services__group">
+								<h3 class="services__group-title">Для дизельных автомобилей</h3>
+								<ul class="services__grid">
+									@@loop('./html/templates/_service-card.html', './html/json/services-deactivation-diesel.json')
+								</ul>
+							</div>
+							<div class="services__consult">
+								<a class="btn btn--primary" href="#">Получить консультацию</a>
+							</div>
+						</div>
 					</div>
 				</section>
 				<section class="info-block">
