@@ -1,7 +1,7 @@
 [
 	{
 		"itemClass": "swiper-slide",
-		"image": "@img/catalog/stinger.png",
+		"image": "@img/catalog/stinger.webp",
 		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
 		"badge": "новинка",
 		"category": "Прямоточные глушители",
@@ -16,7 +16,7 @@
 	},
 	{
 		"itemClass": "swiper-slide",
-		"image": "@img/catalog/stinger.png",
+		"image": "@img/catalog/stinger.webp",
 		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
 		"badge": "новинка",
 		"category": "Прямоточные глушители",
@@ -29,7 +29,7 @@
 	},
 	{
 		"itemClass": "swiper-slide",
-		"image": "@img/catalog/stinger.png",
+		"image": "@img/catalog/stinger.webp",
 		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
 		"category": "Прямоточные глушители",
 		"title": "Глушитель «Stinger»",
@@ -41,7 +41,7 @@
 	},
 	{
 		"itemClass": "swiper-slide",
-		"image": "@img/catalog/stinger.png",
+		"image": "@img/catalog/stinger.webp",
 		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
 		"badge": "новинка",
 		"category": "Прямоточные глушители",
@@ -56,7 +56,7 @@
 	},
 	{
 		"itemClass": "swiper-slide",
-		"image": "@img/catalog/stinger.png",
+		"image": "@img/catalog/stinger.webp",
 		"imageAlt": "Глушитель Stinger с двойными квадратными насадками",
 		"category": "Прямоточные глушители",
 		"title": "Глушитель «Stinger»",

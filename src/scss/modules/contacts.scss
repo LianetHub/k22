@@ -608,21 +608,8 @@
 	&--network {
 		// .contacts__title
 		.contacts__title {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: rem(16);
 			max-width: none;
 			color: $color-bg-primary;
-
-			@media (min-width: $md4) {
-				gap: rem(26);
-			}
-		}
-
-		// .contacts__title-line
-		.contacts__title-line {
-			display: block;
 		}
 
 		// .contacts__map-block

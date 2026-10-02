@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--diagnostics" style="background-image: url('@img/hero/comprehensive-diagnostics.png');">
+				<section class="hero hero--diagnostics" style="background-image: url('@img/hero/comprehensive-diagnostics.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg"><span class="color-primary">Бесплатная</span> комплексная диагностика</h1>
@@ -16,7 +16,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/comprehensive-diagnostics.png');">
+				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/comprehensive-diagnostics.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">ЗАЧЕМ НУЖНА ДИАГНОСТИКА</h2>
@@ -28,7 +28,7 @@
 				</section>
 				@@include('html/sections/_features.html', {
 				"mod": "features--muted",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_reviews.html', {
@@ -37,7 +37,7 @@
 				})
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
+				"title": 'Возможно <span class="color-primary">вас заинтересует</span>',
 				"offersList": "./html/json/offers-comprehensive-diagnostics.json"
 				})
 				@@include('html/sections/_callback.html', {

@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--moto" style="background-image: url('@img/hero/chip-tuning-moto.png');">
+				<section class="hero hero--moto" style="background-image: url('@img/hero/chip-tuning-moto.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">Чип-тюнинг<br><span class="color-primary">мотоциклов</span></h1>
@@ -22,7 +22,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--light" style="--info-block-image: url('../@img/info/chip-tuning-moto.png');">
+				<section class="info-block info-block--light" style="--info-block-image: url('../@img/info/chip-tuning-moto.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">PRO чип-тюнинг мотоциклов</h2>
@@ -36,10 +36,7 @@
 					<div class="result__glow" aria-hidden="true"></div>
 					<div class="result__container container">
 						<div class="result__main">
-							<h2 class="result__title title decor-line-block">
-								<span class="result__title-line">Что вы получите</span>
-								<span class="result__title-line color-primary">после чип-тюнинга</span>
-							</h2>
+							<h2 class="result__title title decor-line-block">Что вы получите <span class="color-primary">после чип-тюнинга</span></h2>
 							<div class="result__metrics">
 								<div class="result__metric">
 									<div class="result__metric-main">
@@ -132,12 +129,12 @@
 				})
 				@@include('html/sections/_features.html', {
 				"mod": "features--light",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": '<span class="offers__title-line">для владельцев</span><span class="offers__title-line color-primary">мото</span>',
+				"title": 'для владельцев <span class="color-primary">мото</span>',
 				"offersList": "./html/json/offers-chip-tuning.json"
 				})
 				@@include('html/sections/_faq.html', {
@@ -146,7 +143,7 @@
 
 				@@include('html/sections/_works.html', {
 				"tag": "Чип-тюнинг мотоциклов",
-				"worksList": "./html/json/works-chip-tuning.json"
+				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_contacts.html', {})
 

@@ -1,7 +1,7 @@
 [
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/maintenance.png",
+		"image": "@img/offers/maintenance.webp",
 		"badge": "",
 		"title": "Техническое обслуживание",
 		"text": "Проведём плановое обслуживание и проверим состояние автомобиля.",
@@ -9,7 +9,7 @@
 	},
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/suspension.png",
+		"image": "@img/offers/suspension.webp",
 		"badge": "",
 		"title": "Ремонт подвески",
 		"text": "Диагностика и ремонт подвески для комфортного и уверенного поведения автомобиля на дороге.",
@@ -17,7 +17,7 @@
 	},
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/catalyst-remove.png",
+		"image": "@img/offers/catalyst-remove.webp",
 		"badge": "",
 		"title": "КОМПЛЕКСНОЕ УДАЛЕНИЕ КАТАЛИЗАТОРА",
 		"text": "Удаление катализатора с корректной настройкой автомобиля.",

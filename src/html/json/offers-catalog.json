@@ -1,7 +1,7 @@
 [
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/exhaust-new.png",
+		"image": "@img/offers/exhaust-new.webp",
 		"badge": "",
 		"title": "создание новой выхлопной системы",
 		"text": "Спроектируем и изготовим выхлопную систему с нуля.",
@@ -9,7 +9,7 @@
 	},
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/power.png",
+		"image": "@img/offers/power.webp",
 		"badge": "",
 		"title": "УВЕЛИЧЕНИЕ МОЩНОСТИ",
 		"text": "Раскройте потенциал двигателя вместе с настройкой коробки.",
@@ -17,7 +17,7 @@
 	},
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/controlled-exhaust.png",
+		"image": "@img/offers/controlled-exhaust.webp",
 		"badge": "",
 		"title": "управляемый выхлоп",
 		"text": "Меняйте громкость и характер звучания выхлопа одним нажатием.",

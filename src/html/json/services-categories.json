@@ -2,7 +2,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Чип-тюнинг",
-		"photo": "@img/services/cat-chip.png",
+		"photo": "@img/services/cat-chip.webp",
 		"photoAlt": "Ноутбук с графиками чип-тюнинга",
 		"href": "#",
 		"link": "Чип-тюнинг"
@@ -10,7 +10,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Диагностика",
-		"photo": "@img/services/cat-diagnostics.png",
+		"photo": "@img/services/cat-diagnostics.webp",
 		"photoAlt": "Диагностический сканер",
 		"href": "#",
 		"link": "Диагностика"
@@ -18,7 +18,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Ремонт выхлопных систем",
-		"photo": "@img/services/cat-exhaust-repair.png",
+		"photo": "@img/services/cat-exhaust-repair.webp",
 		"photoAlt": "Катализатор выхлопной системы",
 		"href": "#",
 		"link": "Ремонт выхлопных систем"
@@ -26,7 +26,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Тюнинг выхлопных систем",
-		"photo": "@img/services/cat-exhaust-tuning.png",
+		"photo": "@img/services/cat-exhaust-tuning.webp",
 		"photoAlt": "Спортивные насадки глушителя",
 		"href": "#",
 		"link": "Тюнинг выхлопных систем"
@@ -34,7 +34,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Автосервис",
-		"photo": "@img/services/cat-service.png",
+		"photo": "@img/services/cat-service.webp",
 		"photoAlt": "Тормозной диск",
 		"href": "#",
 		"link": "Автосервис"
@@ -42,7 +42,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "ТО",
-		"photo": "@img/services/cat-maintenance.png",
+		"photo": "@img/services/cat-maintenance.webp",
 		"photoAlt": "Моторное масло и фильтр",
 		"href": "#",
 		"link": "ТО"
@@ -50,7 +50,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Дополнительные услуги",
-		"photo": "@img/services/cat-extras.png",
+		"photo": "@img/services/cat-extras.webp",
 		"photoAlt": "Приборная панель автомобиля",
 		"href": "#",
 		"link": "Дополнительные услуги"
@@ -58,7 +58,7 @@
 	{
 		"mod": "services-card--category",
 		"title": "Магазин",
-		"photo": "@img/services/cat-shop.png",
+		"photo": "@img/services/cat-shop.webp",
 		"photoAlt": "Насадки на глушитель",
 		"href": "#",
 		"link": "Магазин"

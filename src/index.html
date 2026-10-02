@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero" style="background-image: url('@img/hero/home.png');">
+				<section class="hero" style="background-image: url('@img/hero/home.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">ремонт выхлопных Систем <span class="color-primary">и&nbsp;чип-тюнинг</span></h1>
@@ -49,10 +49,7 @@
 				</section>
 				<section class="services services--catalog">
 					<div class="services__container container">
-						<h2 class="services__title title decor-line-block">
-							<span class="services__title-line">Все услуги</span>
-							<span class="services__title-line color-primary">от ремонта до тюнинга</span>
-						</h2>
+						<h2 class="services__title title decor-line-block">Все услуги <span class="color-primary">от ремонта до тюнинга</span></h2>
 						<ul class="services__categories">
 							@@loop('./html/templates/_service-card.html', './html/json/services-categories.json')
 						</ul>
@@ -60,7 +57,7 @@
 				</section>
 				@@include('./html/sections/_features.html', {
 				"mod": "features--home",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"lead": "Полный спектр работ по обслуживанию систем экологии автомобиля",
 				"featuresList": "./html/json/features-home.json"
 				})
@@ -89,10 +86,7 @@
 					<p class="result__mark" aria-hidden="true">X3</p>
 					<div class="result__container container">
 						<div class="result__main">
-							<h2 class="result__title title decor-line-block">
-								<span class="result__title-line">Что вы получите</span>
-								<span class="result__title-line color-primary">после чип-тюнинга</span>
-							</h2>
+							<h2 class="result__title title decor-line-block">Что вы получите <span class="color-primary">после чип-тюнинга</span></h2>
 							<div class="result__metrics">
 								<div class="result__metric">
 									<div class="result__metric-main">
@@ -212,10 +206,7 @@
 				</section>
 				<section class="vacancies">
 					<div class="vacancies__container container">
-						<h2 class="vacancies__title title decor-line-block">
-							<span class="vacancies__title-line color-primary">Стань частью</span>
-							<span class="vacancies__title-line">Нашей команды</span>
-						</h2>
+						<h2 class="vacancies__title title decor-line-block"><span class="color-primary">Стань частью</span> Нашей команды</h2>
 						<ul class="vacancies__grid">
 							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
 						</ul>

@@ -3,7 +3,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена масла в двигателе",
 		"price": "от 1 500 ₽",
-		"photo": "@img/services/maint-oil.png",
+		"photo": "@img/services/maint-oil.webp",
 		"photoAlt": "Канистра моторного масла",
 		"href": "#",
 		"link": "Подробнее"
@@ -12,7 +12,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена масла в АКПП",
 		"price": "5 000 ₽",
-		"photo": "@img/services/maint-atf.png",
+		"photo": "@img/services/maint-atf.webp",
 		"photoAlt": "Канистра масла для АКПП",
 		"href": "#",
 		"link": "Подробнее"
@@ -21,7 +21,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена масляного фильтра",
 		"price": "5 000 ₽",
-		"photo": "@img/services/maint-oil-filter.png",
+		"photo": "@img/services/maint-oil-filter.webp",
 		"photoAlt": "Масляный фильтр",
 		"href": "#",
 		"link": "Подробнее"
@@ -30,7 +30,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена салонного фильтра",
 		"price": "20 000 ₽",
-		"photo": "@img/services/maint-cabin.png",
+		"photo": "@img/services/maint-cabin.webp",
 		"photoAlt": "Салонный фильтр",
 		"href": "#",
 		"link": "Подробнее"
@@ -39,7 +39,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена масла в вариаторе",
 		"price": "5 000 ₽",
-		"photo": "@img/services/maint-cvt.png",
+		"photo": "@img/services/maint-cvt.webp",
 		"photoAlt": "Канистра масла для вариатора",
 		"href": "#",
 		"link": "Подробнее"
@@ -48,7 +48,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена топливного фильтра",
 		"price": "13 000 ₽",
-		"photo": "@img/services/maint-fuel-filter.png",
+		"photo": "@img/services/maint-fuel-filter.webp",
 		"photoAlt": "Топливный фильтр",
 		"href": "#",
 		"link": "Подробнее"
@@ -57,7 +57,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена масла в редукторе",
 		"price": "5 800 ₽",
-		"photo": "@img/services/maint-reducer.png",
+		"photo": "@img/services/maint-reducer.webp",
 		"photoAlt": "Канистра масла для редуктора",
 		"href": "#",
 		"link": "Подробнее"
@@ -66,7 +66,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Эндоскопия цилиндров",
 		"price": "от 2 800 ₽",
-		"photo": "@img/services/maint-endoscope.png",
+		"photo": "@img/services/maint-endoscope.webp",
 		"photoAlt": "Эндоскоп для осмотра цилиндров",
 		"href": "#",
 		"link": "Подробнее"
@@ -75,7 +75,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Замена свечей зажигания",
 		"price": "от 2 800 ₽",
-		"photo": "@img/services/maint-spark.png",
+		"photo": "@img/services/maint-spark.webp",
 		"photoAlt": "Свечи зажигания",
 		"href": "#",
 		"link": "Подробнее"
@@ -84,7 +84,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Чистка дроссельной заслонки",
 		"price": "от 2 800 ₽",
-		"photo": "@img/services/maint-throttle.png",
+		"photo": "@img/services/maint-throttle.webp",
 		"photoAlt": "Дроссельная заслонка",
 		"href": "#",
 		"link": "Подробнее"
@@ -93,7 +93,7 @@
 		"mod": "services-card--compact services-card--media",
 		"title": "Чистка впускных каналов орехоструем",
 		"price": "от 2 800 ₽",
-		"photo": "@img/services/maint-intake.png",
+		"photo": "@img/services/maint-intake.webp",
 		"photoAlt": "Впускной коллектор",
 		"href": "#",
 		"link": "Подробнее"

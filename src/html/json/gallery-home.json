@@ -1,26 +1,26 @@
 [
 	{
-		"image": "@img/gallery/home-1.png",
+		"image": "@img/gallery/home-1.webp",
 		"alt": "Выхлопной коллектор и детали на верстаке"
 	},
 	{
-		"image": "@img/gallery/home-2.png",
+		"image": "@img/gallery/home-2.webp",
 		"alt": "Забитый фланец выхлопной системы"
 	},
 	{
-		"image": "@img/gallery/shared-exhaust.png",
+		"image": "@img/gallery/shared-exhaust.webp",
 		"alt": "Новая нержавеющая секция выхлопной трубы"
 	},
 	{
-		"image": "@img/gallery/shared-catalyst.png",
+		"image": "@img/gallery/shared-catalyst.webp",
 		"alt": "Соты катализатора в руке мастера"
 	},
 	{
-		"image": "@img/gallery/shared-filter.png",
+		"image": "@img/gallery/shared-filter.webp",
 		"alt": "Цилиндрическая деталь выхлопной системы в цехе"
 	},
 	{
-		"image": "@img/gallery/home-1.png",
+		"image": "@img/gallery/home-1.webp",
 		"alt": "Выхлопной коллектор и детали на верстаке"
 	}
 ]

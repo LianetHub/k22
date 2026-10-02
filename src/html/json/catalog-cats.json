@@ -1,21 +1,21 @@
 [
 	{
 		"title": "прямоточные глушители",
-		"image": "@img/catalog/muffler.png",
+		"image": "@img/catalog/muffler.webp",
 		"imageAlt": "Прямоточный глушитель из нержавеющей стали",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
 		"title": "вакуумная заслонка",
-		"image": "@img/catalog/vacuum-valve.png",
+		"image": "@img/catalog/vacuum-valve.webp",
 		"imageAlt": "Вакуумная заслонка выхлопной системы",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
 		"title": "управляемый глушитель",
-		"image": "@img/catalog/controlled-muffler.png",
+		"image": "@img/catalog/controlled-muffler.webp",
 		"imageAlt": "Управляемый глушитель с вакуумным приводом",
 		"href": "category.html",
 		"link": "Смотреть"
@@ -23,35 +23,35 @@
 	{
 		"title": "насадки",
 		"lead": "одинарные и двойные",
-		"image": "@img/catalog/tips.png",
+		"image": "@img/catalog/tips.webp",
 		"imageAlt": "Двойные насадки на глушитель",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
 		"title": "прямоточный резонатор",
-		"image": "@img/catalog/resonator.png",
+		"image": "@img/catalog/resonator.webp",
 		"imageAlt": "Прямоточный резонатор",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
 		"title": "катализатор евро-2 стандарта",
-		"image": "@img/catalog/catalyst-euro2.png",
+		"image": "@img/catalog/catalyst-euro2.webp",
 		"imageAlt": "Катализатор стандарта Евро-2",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
 		"title": "катализатор евро-5 стандарта",
-		"image": "@img/catalog/catalyst-euro5.png",
+		"image": "@img/catalog/catalyst-euro5.webp",
 		"imageAlt": "Катализатор стандарта Евро-5",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
 		"title": "пламегаситель",
-		"image": "@img/catalog/flame-arrester.png",
+		"image": "@img/catalog/flame-arrester.webp",
 		"imageAlt": "Пламегаситель с перфорированной сеткой",
 		"href": "category.html",
 		"link": "Смотреть"

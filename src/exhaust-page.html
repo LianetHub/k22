@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero" style="background-image: url('@img/hero/exhaust-manifold.png');">
+				<section class="hero" style="background-image: url('@img/hero/exhaust-manifold.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">замена выпускного коллектора</h1>
@@ -29,8 +29,8 @@
 								<p>Виновник — клапан EGR. Часть выхлопных газов клапан направляет обратно во впуск, чтобы снизить количество оксидов азота и сделать выхлоп менее токсичным. Частицы сажи из выхлопных газов смешиваются в двигателе с парами масла из системы вентиляции картера. Образуется вязкая смесь, которая оседает во впуске. С пробегом слой нагара нарастает. Чаще всего владелец даже не замечает снижения мощности, потому что происходит это постепенно.</p>
 							</div>
 							<div class="text-block__photos">
-								<img src="@img/text-block/intake-soot.png" alt="Сажа во впускном канале" width="423" height="419" loading="lazy">
-								<img src="@img/text-block/boost-sensor-soot.png" alt="Датчик давления наддува в саже" width="423" height="419" loading="lazy">
+								<img src="@img/text-block/intake-soot.webp" alt="Сажа во впускном канале" width="423" height="419" loading="lazy">
+								<img src="@img/text-block/boost-sensor-soot.webp" alt="Датчик давления наддува в саже" width="423" height="419" loading="lazy">
 							</div>
 						</div>
 						<div class="text-block__points">
@@ -52,11 +52,11 @@
 				})
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вам понадобится</span>',
+				"title": 'Возможно <span class="color-primary">вам понадобится</span>',
 				"offersList": "./html/json/offers-exhaust-page.json"
 				})
 				@@include('html/sections/_features.html', {
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_works.html', {

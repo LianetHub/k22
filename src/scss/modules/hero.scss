@@ -162,13 +162,13 @@
         position: relative;
         color: $color-bg-primary;
         background-color: $color-bg-elevated;
-        background-image: url("@img/hero/partner-workshop.png");
+        background-image: url("@img/hero/partner-workshop.webp");
         background-position: 70% center;
 
         @media (min-width: $md3) {
             background-image:
-                url("@img/hero/partner-handshake.png"),
-                url("@img/hero/partner-workshop.png");
+                url("@img/hero/partner-handshake.webp"),
+                url("@img/hero/partner-workshop.webp");
             background-repeat: no-repeat;
             background-position: right center, center;
             background-size: auto 120%, cover;
@@ -463,7 +463,7 @@
         background-color: $color-bg-primary;
         background-image:
             linear-gradient(180deg, $color-bg-primary 0%, $color-bg-primary 42%, rgba($color-bg-primary, 0) 72%),
-            url("@img/hero/catalog-exhaust.png");
+            url("@img/hero/catalog-exhaust.webp");
         background-repeat: no-repeat;
         background-position: center, center bottom;
         background-size: auto, cover;
@@ -473,7 +473,7 @@
             min-height: rem(640);
             background-image:
                 linear-gradient(90deg, $color-bg-primary 0%, $color-bg-primary 28%, rgba($color-bg-primary, 0.55) 42%, rgba($color-bg-primary, 0) 58%),
-                url("@img/hero/catalog-exhaust.png");
+                url("@img/hero/catalog-exhaust.webp");
             background-position: center, right center;
             background-size: auto, auto 115%;
         }

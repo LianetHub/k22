@@ -3,42 +3,42 @@
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Замену выпускного коллектора Honda",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Замена выпускного коллектора Honda: моторный отсек с открытым капотом"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Замену выпускного коллектора Mazda",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Замена выпускного коллектора Mazda: снятый узел выпускного тракта"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Замену выпускного коллектора Kia",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Замена выпускного коллектора Kia: подкапотное пространство в сервисе"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Замену выпускного коллектора Toyota",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Замена выпускного коллектора Toyota: демонтированный коллектор в тисках"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Замену выпускного коллектора Volkswagen",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Замена выпускного коллектора Volkswagen: работы в моторном отсеке"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Замену выпускного коллектора Skoda",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Замена выпускного коллектора Skoda: осмотр фланца перед установкой"
 	}
 ]

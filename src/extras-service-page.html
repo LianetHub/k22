@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--log" style="background-image: url('@img/hero/individual-log-tuning.png');">
+				<section class="hero hero--log" style="background-image: url('@img/hero/individual-log-tuning.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">Индивидуальная<br>настройка по логам</h1>
@@ -16,7 +16,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/individual-log-tuning.png');">
+				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/individual-log-tuning.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">Почему важна индивидуальная настройка</h2>
@@ -39,10 +39,10 @@
 				})
 				@@include('html/sections/_works.html', {
 				"tag": "Чип-тюнинг",
-				"worksList": "./html/json/works-extras-service-page.json"
+				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_features.html', {
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_reviews.html', {

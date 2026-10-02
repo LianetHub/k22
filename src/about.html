@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--about" style="background-image: url('@img/hero/about.png');">
+				<section class="hero hero--about" style="background-image: url('@img/hero/about.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title decor-line-block">Мы занимаемся автомобилями <span class="color-primary">комплексно</span></h1>
@@ -17,11 +17,11 @@
 					</div>
 				</section>
 				@@include('html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_features.html', {
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				<section class="services">
@@ -34,12 +34,9 @@
 				</section>
 				<section class="contacts contacts--network">
 					<div class="contacts__container container">
-						<h2 class="contacts__title title decor-line-block">
-							<span class="contacts__title-line">Сеть в Санкт-Петербурге</span>
-							<span class="contacts__title-line color-primary">и по всей России</span>
-						</h2>
+						<h2 class="contacts__title title decor-line-block">Сеть в Санкт-Петербурге <span class="color-primary">и по всей России</span></h2>
 						<div class="contacts__map-block">
-							<div class="contacts__map" style="--contacts-map-image: url('../@img/contacts/network-map.png');">
+							<div class="contacts__map" style="--contacts-map-image: url('../@img/contacts/network-map.webp');">
 								<span class="contacts__pin contacts__pin--north icon-locations" aria-hidden="true"></span>
 								<span class="contacts__pin contacts__pin--east icon-locations" aria-hidden="true"></span>
 							</div>

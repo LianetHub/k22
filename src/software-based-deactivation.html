@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero" style="background-image: url('@img/hero/software-based-deactivation.png');">
+				<section class="hero" style="background-image: url('@img/hero/software-based-deactivation.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">ПРОГРАММНОЕ<br>ОТКЛЮЧЕНИЕ СИСТЕМ</h1>
@@ -38,28 +38,28 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/software-based-deactivation.png');">
+				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/software-based-deactivation.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">PRO ПРОГРАММНОЕ<br>ОТКЛЮЧЕНИЕ СИСТЕМ</h2>
 							<p class="info-block__lead">Современные автомобили часто имеют запас мощности, который ограничен заводскими настройками электронного блока управления. Производитель делает это с учётом экологических требований, особенностей разных рынков и условий эксплуатации. Чип-тюнинг позволяет скорректировать эти настройки и раскрыть возможности двигателя без механического вмешательства.</p>
 							<p class="info-block__text">Во время настройки специалисты корректируют параметры работы двигателя: подачу топлива, давление наддува, угол зажигания и реакцию педали газа. В результате автомобиль быстрее откликается на нажатие акселератора, увереннее разгоняется и легче набирает скорость при обгоне.</p>
-							<a class="btn btn--primary info-block__btn" href="article.html">Подробнее</a>
+							<a class="info-block__btn btn btn--primary" href="article.html">Подробнее</a>
 						</div>
 					</div>
 				</section>
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
+				"title": 'Возможно <span class="color-primary">вас заинтересует</span>',
 				"offersList": "./html/json/offers-software-based-deactivation.json"
 				})
 				@@include('html/sections/_features.html', {
 				"mod": "features--light",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_features.html', {
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features-software-based-deactivation.json"
 				})
 				@@include('html/sections/_faq.html', {
@@ -75,7 +75,7 @@
 				})
 				@@include('html/sections/_works.html', {
 				"tag": "Чип-тюнинг",
-				"worksList": "./html/json/works-software-based-deactivation.json"
+				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_contacts.html', {})
 				@@include('html/sections/_faq.html', {

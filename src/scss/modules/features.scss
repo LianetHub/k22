@@ -39,20 +39,7 @@
 
 	// .features__title
 	&__title {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: rem(16);
 		max-width: 100%;
-
-		@media (min-width: $md4) {
-			gap: rem(26);
-		}
-	}
-
-	// .features__title-line
-	&__title-line {
-		display: block;
 	}
 
 	// .features__lead

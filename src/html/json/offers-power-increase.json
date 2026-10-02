@@ -1,7 +1,7 @@
 [
 	{
 		"mod": "offer--promo",
-		"image": "@img/offers/shop.png",
+		"image": "@img/offers/shop.webp",
 		"badge": "-20%",
 		"title": "Магазин тюнинга выхлопных систем",
 		"text": "",
@@ -9,7 +9,7 @@
 	},
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/controlled-exhaust.png",
+		"image": "@img/offers/controlled-exhaust.webp",
 		"badge": "",
 		"title": "управляемый выхлоп",
 		"text": "Меняйте громкость и характер звучания выхлопа одним нажатием.",
@@ -17,7 +17,7 @@
 	},
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/extras-tuning.png",
+		"image": "@img/offers/extras-tuning.webp",
 		"badge": "",
 		"title": "тюнинг <span class=\"color-primary\">и установка дополнительного оборудования</span>",
 		"text": "Доработаем автомобиль под ваши задачи и стиль.",

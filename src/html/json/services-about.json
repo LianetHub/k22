@@ -2,7 +2,7 @@
 	{
 		"mod": "services-card--compact services-card--media",
 		"title": "Чип-тюнинг",
-		"photo": "@img/services/about-chip.png",
+		"photo": "@img/services/about-chip.webp",
 		"photoAlt": "Ноутбук с графиками чип-тюнинга",
 		"href": "#",
 		"link": "Узнать больше"
@@ -10,7 +10,7 @@
 	{
 		"mod": "services-card--compact services-card--media",
 		"title": "Выхлоп",
-		"photo": "@img/services/about-exhaust.png",
+		"photo": "@img/services/about-exhaust.webp",
 		"photoAlt": "Выхлопная система",
 		"href": "#",
 		"link": "Узнать больше"
@@ -18,7 +18,7 @@
 	{
 		"mod": "services-card--compact services-card--media",
 		"title": "Автосервис",
-		"photo": "@img/services/about-service.png",
+		"photo": "@img/services/about-service.webp",
 		"photoAlt": "Автомобиль в сервисе",
 		"href": "#",
 		"link": "Узнать больше"
@@ -27,7 +27,7 @@
 		"mod": "services-card--compact services-card--media services-card--dark",
 		"title": "магазин",
 		"badge": "-20%",
-		"photo": "@img/services/about-shop.png",
+		"photo": "@img/services/about-shop.webp",
 		"photoAlt": "Насадки выхлопной системы",
 		"href": "#",
 		"link": "Узнать больше"

@@ -11,7 +11,7 @@
 		"item3": "осмотр выхлопной системы",
 		"item4": "рекомендации выдаются в письменном виде",
 		"note": "*Комплексная диагностика проводится бесплатно при ремонте вашего автомобиля в нашем автосервисе",
-		"image": "@img/services/hover-diagnostics.png",
+		"image": "@img/services/hover-diagnostics.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	},
@@ -19,7 +19,7 @@
 		"title": "12. 5 1",
 		"description": "Возвратим стоковые параметры выхлопа",
 		"icon": "icon-speedometer",
-		"image": "@img/services/hover-exhaust.png",
+		"image": "@img/services/hover-exhaust.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	},
@@ -28,7 +28,7 @@
 		"title": "Собственный магазин запчастей",
 		"description": "Для тюнинга выхлопных систем",
 		"badge": "-20%",
-		"image": "@img/services/hover-shop.png",
+		"image": "@img/services/hover-shop.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	},
@@ -37,7 +37,7 @@
 		"title": "Выхлопная система с нуля",
 		"description": "Аргонодуговая или полуавтоматическая сварка",
 		"icon": "icon-exhaust-pipe",
-		"image": "@img/services/hover-exhaust.png",
+		"image": "@img/services/hover-exhaust.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	},
@@ -48,7 +48,7 @@
 		"badge": "новинка",
 		"badgeMod": "services-card__badge--bottom",
 		"icon": "icon-water",
-		"image": "@img/services/hover-dpf.png",
+		"image": "@img/services/hover-dpf.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	},
@@ -56,7 +56,7 @@
 		"title": "Тюнинг тормозной системы",
 		"description": "Установка перфорированных дисков большего диаметра и многопоршневых суппортов",
 		"icon": "icon-brake",
-		"image": "@img/services/hover-exhaust.png",
+		"image": "@img/services/hover-exhaust.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	}

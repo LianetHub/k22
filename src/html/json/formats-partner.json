@@ -2,37 +2,37 @@
 	{
 		"title": "СТО и автосервисы",
 		"text": "подрядные работы и промывка DPF/FAP",
-		"image": "@img/partner/sto.png",
+		"image": "@img/partner/sto.webp",
 		"alt": "Автомобиль на подъёмнике в автосервисе"
 	},
 	{
 		"title": "Автопарки",
 		"text": "регулярное обслуживание и специальные условия",
-		"image": "@img/partner/fleet.png",
+		"image": "@img/partner/fleet.webp",
 		"alt": "Фургон, легковые автомобили и грузовик автопарка"
 	},
 	{
 		"title": "Таксопарки",
 		"text": "обслуживание автомобилей с высоким пробегом",
-		"image": "@img/partner/taxi.png",
+		"image": "@img/partner/taxi.webp",
 		"alt": "Автомобили такси"
 	},
 	{
 		"title": "Автоподборщики",
 		"text": "диагностика перед покупкой",
-		"image": "@img/partner/picker.png",
+		"image": "@img/partner/picker.webp",
 		"alt": "Специалист проверяет автомобиль с открытым капотом"
 	},
 	{
 		"title": "Магазины автозапчастей",
 		"text": "партнёрство по рекомендациям",
-		"image": "@img/partner/shop.png",
+		"image": "@img/partner/shop.webp",
 		"alt": "Шина, тормозные диски и автозапчасти"
 	},
 	{
 		"title": "Другие компании",
 		"text": "индивидуальные условия сотрудничества",
-		"image": "@img/partner/other.png",
+		"image": "@img/partner/other.webp",
 		"alt": "Легковой седан"
 	}
 ]

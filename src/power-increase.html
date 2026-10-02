@@ -69,10 +69,7 @@
 
 							<div class="power__body">
 								<div class="power__results">
-									<h2 class="power__results-title">
-										<span class="power__results-title-line">Что вы получите</span>
-										<span class="power__results-title-line color-primary">после чип-тюнинга</span>
-									</h2>
+									<h2 class="power__results-title">Что вы получите <span class="color-primary">после чип-тюнинга</span></h2>
 
 									<div class="power__table-wrap">
 										<div class="power__stages" role="tablist" aria-label="Stage">
@@ -149,12 +146,12 @@
 
 								<div class="power__charts">
 									<figure class="power__chart">
-										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-power-empty.png" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
-										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-power-filled.png" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-power-empty.webp" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-power-filled.webp" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
 									</figure>
 									<figure class="power__chart">
-										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-torque-empty.png" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
-										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-torque-filled.png" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-torque-empty.webp" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-torque-filled.webp" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
 									</figure>
 								</div>
 							</div>
@@ -178,15 +175,15 @@
 					</div>
 				</div>
 				@@include('html/sections/_offers.html', {
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
+				"title": 'Возможно <span class="color-primary">вас заинтересует</span>',
 				"offersList": "./html/json/offers-power-increase.json"
 				})
 				@@include('html/sections/_features.html', {
 				"mod": "features--muted",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
-				<section class="info-block" style="--info-block-image: url('../@img/info/pro-chip.png');">
+				<section class="info-block" style="--info-block-image: url('../@img/info/pro-chip.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">PRO чип-тюнинг</h2>
@@ -208,7 +205,7 @@
 				})
 				@@include('html/sections/_works.html', {
 				"tag": "Чип-тюнинг",
-				"worksList": "./html/json/works-power-increase.json"
+				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_contacts.html', {})
 			</main>

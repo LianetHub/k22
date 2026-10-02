@@ -3,7 +3,7 @@
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Чип-тюнинг<br>Honda",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Чип-тюнинг Honda: моторный отсек седана с открытым капотом",
 		"powerValue": "+102",
 		"powerUnit": "лс",
@@ -16,14 +16,14 @@
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Удаление катализатора<br>Mazda",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Удаление катализатора Mazda: вырезанный катализатор с оплавленными сотами"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Чип-тюнинг<br>Honda",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Чип-тюнинг Honda: замер параметров двигателя после прошивки",
 		"powerValue": "+102",
 		"powerUnit": "лс",
@@ -36,14 +36,14 @@
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Удаление катализатора<br>Honda",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Удаление катализатора Honda: демонтированная банка катализатора"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Чип-тюнинг<br>Kia",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Чип-тюнинг Kia: подключение к блоку управления двигателем",
 		"powerValue": "+94",
 		"powerUnit": "лс",
@@ -56,7 +56,7 @@
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Удаление катализатора<br>Kia",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Удаление катализатора Kia: разрезанный корпус с забитыми сотами"
 	}
 ]

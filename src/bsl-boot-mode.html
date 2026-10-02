@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero" style="background-image: url('@img/hero/bsl-boot-mode.png');">
+				<section class="hero" style="background-image: url('@img/hero/bsl-boot-mode.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">BSL/BOOT режим</h1>
@@ -23,7 +23,7 @@
 						</ul>
 					</div>
 				</div>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/bsl-boot-mode.png');">
+				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/bsl-boot-mode.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">BSL/BOOT: ПРЯМОЙ ДОСТУП К ЭБУ</h2>
@@ -35,16 +35,16 @@
 				</section>
 				@@include('html/sections/_features.html', {
 				"mod": "features--muted",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_offers.html', {
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вас заинтересует</span>',
+				"title": 'Возможно <span class="color-primary">вас заинтересует</span>',
 				"offersList": "./html/json/offers-bsl-boot-mode.json"
 				})
 				@@include('html/sections/_works.html', {
 				"tag": "Чип-тюнинг",
-				"worksList": "./html/json/works-bsl-boot-mode.json"
+				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_reviews.html', {
 				"moreHref": "#",

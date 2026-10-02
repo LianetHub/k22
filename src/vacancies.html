@@ -9,17 +9,14 @@
 			<main class="page">
 				<section class="vacancies">
 					<div class="vacancies__container container">
-						<h1 class="vacancies__title title decor-line-block">
-							<span class="vacancies__title-line color-primary">Стань частью</span>
-							<span class="vacancies__title-line">Нашей команды</span>
-						</h1>
+						<h1 class="vacancies__title title decor-line-block"><span class="color-primary">Стань частью</span> Нашей команды</h1>
 						<ul class="vacancies__grid">
 							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
 						</ul>
 					</div>
 				</section>
 				@@include('./html/sections/_faq.html', {
-				"faqList": "./html/json/faq-vacancies.json"
+				"faqList": "./html/json/faq-chip-tuning.json"
 				})
 				@@include('./html/sections/_callback.html', {
 				"id": "callback",

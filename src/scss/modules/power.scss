@@ -257,9 +257,6 @@
 
 	// .power__results-title
 	&__results-title {
-		display: flex;
-		flex-direction: column;
-		gap: rem(4);
 		font-family: $fontfamily;
 		font-size: rem(22);
 		font-weight: 700;
@@ -279,11 +276,6 @@
 			line-height: math.div(37, 32);
 			letter-spacing: rem(-0.48);
 		}
-	}
-
-	// .power__results-title-line
-	&__results-title-line {
-		display: block;
 	}
 
 	// .power__table-wrap

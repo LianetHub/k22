@@ -1,7 +1,7 @@
 [
 	{
 		"mod": "offer--lead",
-		"image": "@img/offers/power.png",
+		"image": "@img/offers/power.webp",
 		"badge": "",
 		"title": "УВЕЛИЧЕНИЕ МОЩНОСТИ",
 		"text": "Раскройте потенциал двигателя вместе с настройкой коробки.",
@@ -9,7 +9,7 @@
 	},
 	{
 		"mod": "offer--promo",
-		"image": "@img/offers/shop.png",
+		"image": "@img/offers/shop.webp",
 		"badge": "-20%",
 		"title": "Магазин тюнинга выхлопных систем",
 		"text": "",
@@ -17,7 +17,7 @@
 	},
 	{
 		"mod": "offer--promo",
-		"image": "@img/offers/diagnostics.png",
+		"image": "@img/offers/diagnostics.webp",
 		"badge": "FREE",
 		"title": "бесплатная комплексная диагностика",
 		"text": "",

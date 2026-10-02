@@ -1,26 +1,26 @@
 [
 	{
-		"image": "@img/gallery/vacancies-1.png",
+		"image": "@img/gallery/vacancies-1.webp",
 		"alt": "Интерьер автосервиса K22 с автомобилями"
 	},
 	{
-		"image": "@img/gallery/vacancies-2.png",
+		"image": "@img/gallery/vacancies-2.webp",
 		"alt": "Диагностика автомобиля на ноутбуке"
 	},
 	{
-		"image": "@img/gallery/shared-exhaust.png",
+		"image": "@img/gallery/shared-exhaust.webp",
 		"alt": "Новая нержавеющая секция выхлопной трубы"
 	},
 	{
-		"image": "@img/gallery/shared-catalyst.png",
+		"image": "@img/gallery/shared-catalyst.webp",
 		"alt": "Соты катализатора в руке мастера"
 	},
 	{
-		"image": "@img/gallery/shared-filter.png",
+		"image": "@img/gallery/shared-filter.webp",
 		"alt": "Цилиндрическая деталь выхлопной системы в цехе"
 	},
 	{
-		"image": "@img/gallery/shared-filter.png",
+		"image": "@img/gallery/shared-filter.webp",
 		"alt": "Цилиндрическая деталь выхлопной системы в цехе"
 	}
 ]

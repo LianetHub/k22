@@ -1,7 +1,7 @@
 [
 	{
 		"mod": "offer--promo",
-		"image": "@img/offers/diagnostics.png",
+		"image": "@img/offers/diagnostics.webp",
 		"badge": "FREE",
 		"title": "бесплатная комплексная диагностика",
 		"text": "",
@@ -9,7 +9,7 @@
 	},
 	{
 		"mod": "offer--promo",
-		"image": "@img/offers/shop.png",
+		"image": "@img/offers/shop.webp",
 		"badge": "-20%",
 		"title": "Магазин тюнинга выхлопных систем",
 		"text": "",

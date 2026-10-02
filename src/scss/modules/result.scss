@@ -26,12 +26,12 @@
 			z-index: 0;
 			background-image:
 				linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-				url("@img/result/car.png");
+				url("@img/result/car.webp");
 			background-position: center, right center;
 			background-size: cover, cover;
 
 			@media (min-width: $md2) {
-				background-image: url("@img/result/car.png");
+				background-image: url("@img/result/car.webp");
 				background-position: right center;
 				background-size: cover;
 			}
@@ -39,7 +39,7 @@
 
 		&::after {
 			z-index: 3;
-			background-image: url("@img/result/smoke.png");
+			background-image: url("@img/result/smoke.webp");
 			background-position: right center;
 			background-size: cover;
 		}
@@ -49,15 +49,15 @@
 			&::before {
 				background-image:
 					linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-					url("@img/result/moto.png");
+					url("@img/result/moto.webp");
 
 				@media (min-width: $md2) {
-					background-image: url("@img/result/moto.png");
+					background-image: url("@img/result/moto.webp");
 				}
 			}
 
 			&::after {
-				background-image: url("@img/result/moto-smoke.png");
+				background-image: url("@img/result/moto-smoke.webp");
 			}
 		}
 	}
@@ -144,15 +144,8 @@
 
 	// .result__title
 	&__title {
-		display: flex;
-		flex-direction: column;
 		max-width: rem(687);
 		color: $color-bg-secondary;
-	}
-
-	// .result__title-line
-	&__title-line {
-		display: block;
 		@extend %result-trim;
 	}
 

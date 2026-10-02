@@ -1,6 +1,6 @@
 [
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"fetchpriority": "high",
 		"badge": "новинка",
@@ -13,7 +13,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"fetchpriority": "high",
 		"badge": "новинка",
@@ -26,7 +26,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"fetchpriority": "high",
 		"badge": "новинка",
@@ -37,7 +37,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"fetchpriority": "high",
 		"badge": "новинка",
@@ -48,7 +48,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"fetchpriority": "high",
 		"category": "прямоточные глушители",
@@ -58,7 +58,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"loading": "lazy",
 		"category": "прямоточные глушители",
@@ -68,20 +68,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
-		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
-		"loading": "lazy",
-		"badge": "новинка",
-		"category": "прямоточные глушители",
-		"title": "Глушитель «Stinger»",
-		"text": "с двойными квадратными насадками",
-		"sale": "-20%",
-		"oldPrice": "22 500 ₽",
-		"price": "14 500 ₽",
-		"vat": "в том числе НДС 5%"
-	},
-	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"loading": "lazy",
 		"badge": "новинка",
@@ -94,7 +81,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"loading": "lazy",
 		"badge": "новинка",
@@ -107,7 +94,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"loading": "lazy",
 		"badge": "новинка",
@@ -120,7 +107,20 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
+		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
+		"loading": "lazy",
+		"badge": "новинка",
+		"category": "прямоточные глушители",
+		"title": "Глушитель «Stinger»",
+		"text": "с двойными квадратными насадками",
+		"sale": "-20%",
+		"oldPrice": "22 500 ₽",
+		"price": "14 500 ₽",
+		"vat": "в том числе НДС 5%"
+	},
+	{
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"loading": "lazy",
 		"category": "прямоточные глушители",
@@ -132,7 +132,7 @@
 		"vat": "в том числе НДС 5%"
 	},
 	{
-		"image": "@img/products/stinger.png",
+		"image": "@img/products/stinger.webp",
 		"imageAlt": "Глушитель «Stinger» с двойными квадратными насадками",
 		"loading": "lazy",
 		"category": "прямоточные глушители",

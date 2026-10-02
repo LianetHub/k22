@@ -12,7 +12,7 @@
 						<div class="products__head">
 							<h1 class="products__title title decor-line-block">прямоточные глушители</h1>
 							<nav class="breadcrumbs products__breadcrumbs" aria-label="Хлебные крошки">
-								<ol class="breadcrumbs__list">
+								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item">
 										<a class="breadcrumbs__link" href="index.html">Главная</a>
 									</li>
@@ -22,7 +22,7 @@
 									<li class="breadcrumbs__item">
 										<span class="breadcrumbs__link" aria-current="page">Прямоточные глушители</span>
 									</li>
-								</ol>
+								</ul>
 							</nav>
 						</div>
 						<ul class="products__filters">
@@ -58,8 +58,8 @@
 				</section>
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": '<span class="offers__title-line">Возможно</span><span class="offers__title-line color-primary">вам понадобится</span>',
-				"offersList": "./html/json/offers-category.json"
+				"title": 'Возможно <span class="color-primary">вам понадобится</span>',
+				"offersList": "./html/json/offers-catalog.json"
 				})
 				@@include('html/sections/_reviews.html', {
 				"moreHref": "#",
@@ -70,7 +70,7 @@
 				})
 				@@include('html/sections/_works.html', {
 				"tag": "Чип-тюнинг",
-				"worksList": "./html/json/works-category.json"
+				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_features.html', {
 				"mod": "features--buy",

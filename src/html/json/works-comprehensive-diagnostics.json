@@ -3,42 +3,42 @@
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Диагностика Mazda",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Диагностика Mazda: мастер осматривает моторный отсек"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Диагностика Honda",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Диагностика Honda: проверка состояния катализатора"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Диагностика Kia",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Диагностика Kia: замер параметров двигателя на подъёмнике"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Диагностика Toyota",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Диагностика Toyota: осмотр выпускного тракта"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Диагностика Volkswagen",
-		"image": "@img/works/chip-tuning-honda.png",
+		"image": "@img/works/chip-tuning-honda.webp",
 		"imageAlt": "Диагностика Volkswagen: считывание ошибок блока управления"
 	},
 	{
 		"itemClass": "swiper-slide",
 		"mod": "",
 		"title": "Диагностика Skoda",
-		"image": "@img/works/catalyst-remove-mazda.png",
+		"image": "@img/works/catalyst-remove-mazda.webp",
 		"imageAlt": "Диагностика Skoda: проверка каталитического нейтрализатора"
 	}
 ]
