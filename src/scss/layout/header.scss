@@ -20,8 +20,8 @@
 		}
 	}
 
-	// .header__banner-content
-	&__banner-content {
+	// .header__banner-container
+	&__banner-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -74,8 +74,8 @@
 		}
 	}
 
-	// .header__content-container
-	&__content-container {
+	// .header__container
+	&__container {
 		box-sizing: border-box;
 		padding: 0 rem(16);
 

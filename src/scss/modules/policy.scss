@@ -41,27 +41,30 @@
 		@media (min-width: $md4) {
 			gap: rem(40);
 		}
-	}
 
-	// .policy__date
-	&__date {
-		font-family: $font-inter;
-		font-size: rem(12);
-		font-weight: 700;
-		line-height: math.div(14, 12);
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: $color-text-secondary;
+		> p {
+			font-family: $font-inter;
+			font-size: rem(12);
+			font-weight: 700;
+			line-height: math.div(14, 12);
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: $color-text-secondary;
 
-		@media (min-width: $md4) {
-			font-size: rem(14);
-			line-height: math.div(17, 14);
+			@media (min-width: $md4) {
+				font-size: rem(14);
+				line-height: math.div(17, 14);
+			}
 		}
-	}
 
-	// .policy__title
-	&__title {
-		color: $color-text-primary;
+		h1 {
+			@include mobile-heading-h1;
+			color: $color-text-primary;
+
+			@media (min-width: $md4) {
+				@include desktop-heading-h2;
+			}
+		}
 	}
 
 	// .policy__layout
@@ -84,90 +87,12 @@
 
 	// .policy__body
 	&__body {
-		display: flex;
-		flex-direction: column;
-		gap: rem(40);
 		order: 2;
 		min-width: 0;
 
 		@media (min-width: $md3) {
 			order: 0;
 		}
-	}
-
-	// .policy__intro
-	&__intro {
-		display: flex;
-		flex-direction: column;
-		gap: rem(20);
-		font-family: $font-inter;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: math.div(19, 16);
-		color: $color-text-primary;
-
-		@media (min-width: $md4) {
-			font-size: rem(18);
-			line-height: math.div(22, 18);
-		}
-
-		@media (min-width: $md2) {
-			font-size: rem(22);
-			line-height: math.div(26, 22);
-		}
-	}
-
-	// .policy__section
-	&__section {
-		display: flex;
-		flex-direction: column;
-		gap: rem(20);
-		padding: 0;
-		scroll-margin-top: rem(120);
-
-		@media (min-width: $md4) {
-			scroll-margin-top: rem(160);
-		}
-	}
-
-	// .policy__section-title
-	&__section-title {
-		@include mobile-heading-h4;
-		color: $color-accent-primary;
-
-		@media (min-width: $md4) {
-			@include desktop-heading-h3;
-		}
-	}
-
-	// .policy__section-content
-	&__section-content {
-		display: flex;
-		flex-direction: column;
-		gap: rem(20);
-		font-family: $font-inter;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: math.div(19, 16);
-		color: $color-text-primary;
-
-		@media (min-width: $md4) {
-			font-size: rem(18);
-			line-height: math.div(22, 18);
-		}
-
-		@media (min-width: $md2) {
-			font-size: rem(22);
-			line-height: math.div(26, 22);
-		}
-	}
-
-	// .policy__list
-	&__list {
-		display: flex;
-		flex-direction: column;
-		padding-left: rem(33);
-		list-style: disc;
 	}
 
 	// .policy__nav

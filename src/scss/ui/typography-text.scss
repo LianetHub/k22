@@ -1,0 +1,199 @@
+@use "sass:math";
+@use "../abstracts" as *;
+
+.typography-text {
+	font-family: $font-inter;
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(19, 16);
+	color: $color-text-primary;
+
+	@media (min-width: $md4) {
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+	}
+
+	@media (min-width: $md2) {
+		font-size: rem(22);
+		line-height: math.div(26, 22);
+	}
+
+	> * + * {
+		margin-top: rem(20);
+	}
+
+	> * + h2,
+	> * + h3,
+	> * + h4,
+	> * + h5,
+	> * + h6 {
+		margin-top: rem(40);
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@include mobile-heading-h4;
+		color: $color-accent-primary;
+		scroll-margin-top: rem(120);
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h3;
+			scroll-margin-top: rem(160);
+		}
+	}
+
+	h2[data-article-name] {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10);
+
+		&::before {
+			content: attr(data-article-name);
+			order: -2;
+			color: $color-accent-primary;
+		}
+
+		&::after {
+			content: "";
+			order: -1;
+			flex-shrink: 0;
+			width: rem(79);
+			height: rem(4);
+			background: url("@img/decor/line.svg") 0 0 / rem(79) rem(4) no-repeat;
+		}
+	}
+
+	ul,
+	ol {
+		display: flex;
+		flex-direction: column;
+		padding-left: rem(33);
+		list-style: disc;
+	}
+
+	// .typography-text__note
+	&__note {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10) rem(16);
+		padding: rem(20);
+		background: $color-bg-primary;
+
+		@media (min-width: $md4) {
+			padding: rem(30);
+		}
+	}
+
+	// .typography-text__note-label
+	&__note-label {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		flex-shrink: 0;
+		color: $color-accent-primary;
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 1.2;
+		letter-spacing: em(-0.36, 18);
+		text-transform: uppercase;
+
+		@media (min-width: $md4) {
+			font-size: rem(20);
+			line-height: math.div(24, 20);
+			letter-spacing: em(-0.4, 20);
+		}
+	}
+
+	// .typography-text__note-text
+	&__note-text {
+		flex: 1 1 rem(220);
+		min-width: 0;
+		font-family: $font-inter;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 1.2;
+		letter-spacing: em(-0.32, 16);
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			line-height: math.div(26, 22);
+			letter-spacing: em(-0.44, 22);
+		}
+	}
+
+	// .typography-text__choices
+	ul#{&}__choices {
+		gap: rem(20);
+		padding-left: 0;
+		list-style: none;
+
+		@media (min-width: $md4) {
+			gap: rem(30);
+		}
+
+		> li {
+			display: flex;
+			align-items: flex-start;
+			gap: rem(12);
+
+			&::before {
+				content: "";
+				flex-shrink: 0;
+				width: rem(9);
+				height: rem(9);
+				margin-top: rem(6);
+				background: $color-accent-primary;
+			}
+
+			@media (min-width: $md4) {
+				gap: rem(20);
+			}
+		}
+	}
+
+	// .typography-text__choice
+	&__choice {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		flex: 1 1 auto;
+		min-width: 0;
+
+		@media (min-width: $md4) {
+			gap: rem(14);
+		}
+	}
+
+	// .typography-text__choice-title
+	&__choice-title {
+		color: $color-accent-primary;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 1.2;
+		letter-spacing: em(-0.32, 16);
+		text-transform: uppercase;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			line-height: math.div(26, 22);
+			letter-spacing: em(-0.44, 22);
+		}
+	}
+
+	// .typography-text__choice-text
+	&__choice-text {
+		font-family: $font-inter;
+		font-size: rem(16);
+		line-height: 1.2;
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			line-height: math.div(26, 22);
+		}
+	}
+}

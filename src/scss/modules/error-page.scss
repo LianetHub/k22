@@ -16,42 +16,36 @@
 		padding: rem(220) 0 rem(100);
 	}
 
-	// error-page__bg
-	&__bg {
+	&::before,
+	&::after {
+		content: "";
 		position: absolute;
 		inset: 0;
-		pointer-events: none;
 		z-index: 0;
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			inset: 0;
-			background-repeat: no-repeat;
-		}
-
-		&::before {
-			background-image: url("@img/error-page/smoke-left.webp");
-			background-position: left center;
-			background-size: cover;
-			opacity: 0.65;
-			mask-image: linear-gradient(to right, #000 0%, transparent 50%);
-			-webkit-mask-image: linear-gradient(to right, #000 0%, transparent 50%);
-		}
-
-		&::after {
-			background-image: url("@img/error-page/car.webp");
-			background-position: 90% center;
-			background-size: cover;
-			opacity: 0.45;
-			mask-image: linear-gradient(to left, #000 0%, transparent 45%);
-			-webkit-mask-image: linear-gradient(to left, #000 0%, transparent 45%);
-		}
+		pointer-events: none;
+		background-repeat: no-repeat;
 	}
 
-	// error-page__inner
-	&__inner {
+	&::before {
+		background-image: url("@img/error-page/smoke-left.webp");
+		background-position: left center;
+		background-size: cover;
+		opacity: 0.65;
+		mask-image: linear-gradient(to right, #000 0%, transparent 50%);
+		-webkit-mask-image: linear-gradient(to right, #000 0%, transparent 50%);
+	}
+
+	&::after {
+		background-image: url("@img/error-page/car.webp");
+		background-position: 90% center;
+		background-size: cover;
+		opacity: 0.45;
+		mask-image: linear-gradient(to left, #000 0%, transparent 45%);
+		-webkit-mask-image: linear-gradient(to left, #000 0%, transparent 45%);
+	}
+
+	// error-page__container
+	&__container {
 		position: relative;
 		z-index: 1;
 		display: flex;

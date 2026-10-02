@@ -39,25 +39,25 @@
 						<div class="blog__catalog">
 							<div class="blog__toolbar">
 								<ul class="blog__filters">
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter is-active" type="button">Все</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Чип-тюнинг</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Выхлоп</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Автосервис</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Диагностика</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">полезное</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Видео</button>
 									</li>
 								</ul>
@@ -70,37 +70,8 @@
 									</select>
 								</div>
 							</div>
-							<div class="blog__row blog__row--split">
-								<ul class="blog__stack">
-									@@loop('./html/templates/_blog-card.html', './html/json/blog-page-overlay.json')
-								</ul>
-								<ul class="blog__stack">
-									@@loop('./html/templates/_blog-card.html', './html/json/blog-page-horizontal.json')
-								</ul>
-							</div>
-							<ul class="blog__row blog__row--cards">
-								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
-							</ul>
-							<div class="blog__row blog__row--split">
-								<ul class="blog__stack">
-									@@loop('./html/templates/_blog-card.html', './html/json/blog-page-overlay.json')
-								</ul>
-								<ul class="blog__stack">
-									@@loop('./html/templates/_blog-card.html', './html/json/blog-page-video.json')
-								</ul>
-							</div>
-							<ul class="blog__row blog__row--cards">
-								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
-							</ul>
-							<ul class="blog__row blog__row--pair">
-								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-overlay.json')
-								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-overlay.json')
-							</ul>
-							<ul class="blog__row blog__row--cards">
-								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
-							</ul>
-							<ul class="blog__row blog__row--cards">
-								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
+							<ul class="blog__grid">
+								@@loop('./html/templates/_blog-card.html', './html/json/blog-page.json')
 							</ul>
 							<div class="blog__footer">
 								<a href="#" class="blog__btn btn btn--primary">Следующая страница</a>

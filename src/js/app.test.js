@@ -320,7 +320,7 @@ function powerFixture({ withPrice = true, stages = [1, 2] } = {}) {
 
 const COOKIES = `
 <div class="cookies" data-cookies>
-	<div class="cookies__inner">
+	<div class="cookies__content">
 		<p class="cookies__text">Мы используем файлы cookie.</p>
 		<button type="button" class="cookies__btn" data-cookies-accept>Хорошо</button>
 	</div>

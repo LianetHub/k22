@@ -28,7 +28,7 @@
 		<div class="wrapper">
 			<header class="header">
 			    <div class="header__banner">
-			        <div class="header__banner-content container">
+			        <div class="header__banner-container container">
 			            <div class="header__banner-tagline">
 			                <span class="color-primary">Новая услуга</span>
 			                Промывка сажевого фильтра на гидродинамическом стенде
@@ -37,7 +37,7 @@
 			        </div>
 			    </div>
 			    <div class="header__content">
-			        <div class="header__content-container container">
+			        <div class="header__container container">
 			            <div class="header__main">
 			                <a href="/" class="header__logo">
 			                    <img src="img/logo.svg" alt="Логотип K22 Power Team" width="140" height="60">
@@ -780,25 +780,25 @@
 						<div class="blog__catalog">
 							<div class="blog__toolbar">
 								<ul class="blog__filters">
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter is-active" type="button">Все</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Чип-тюнинг</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Выхлоп</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Автосервис</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Диагностика</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">полезное</button>
 									</li>
-									<li>
+									<li class="blog__filters-item">
 										<button class="blog__filter" type="button">Видео</button>
 									</li>
 								</ul>
@@ -811,211 +811,203 @@
 									</select>
 								</div>
 							</div>
-							<div class="blog__row blog__row--split">
-								<ul class="blog__stack">
-									<li class="blog__item">
-										<article class="blog-card blog-card--overlay">
-											<a class="blog-card__media" href="article.html">
-												<img
-													class="blog-card__img"
-													src="img/blog/check-engine.webp"
-													alt="Выхлопная система автомобиля крупным планом"
-													width="846"
-													height="494"
-													loading="lazy"
-												>
-												<span class="blog-card__tag">Чип-тюнинг</span>
-												<div class="blog-card__meta">
+							<ul class="blog__grid">
+								<li class="blog__item blog__item--feature">
+									<article class="blog-card blog-card--overlay">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/check-engine.webp"
+												alt="Выхлопная система автомобиля крупным планом"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
 													<span class="blog-card__meta-item">
 														<img
 															class="blog-card__meta-icon"
-															src="img/icons/calendar.svg"
-															alt="Дата"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
 															width="14"
 															height="14"
 														>
-														<span class="blog-card__meta-text">29 августа 2026</span>
+														<span class="blog-card__meta-text">4 582</span>
 													</span>
-													<span class="blog-card__meta-stats">
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/eye.svg"
-																alt="Просмотры"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">4 582</span>
-														</span>
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/chat.svg"
-																alt="Комментарии"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">34</span>
-														</span>
-													</span>
-												</div>
-												<span class="blog-card__play" aria-hidden="true">
-													<img
-														class="blog-card__play-icon"
-														src="img/icons/play.svg"
-														alt="Смотреть видео"
-														width="40"
-														height="40"
-													>
-												</span>
-											</a>
-											<div class="blog-card__body">
-												<div class="blog-card__text">
-													<h3 class="blog-card__title">Что делать, если загорелся check engine?</h3>
-													<p class="blog-card__excerpt">Разбираемся, почему загорелся Check Engine, какие неисправности могут быть причиной и когда стоит обратиться на диагностику.</p>
-												</div>
-												<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
-											</div>
-										</article>
-									</li>
-
-								</ul>
-								<ul class="blog__stack">
-									<li class="blog__item">
-										<article class="blog-card blog-card--horizontal">
-											<a class="blog-card__media" href="article.html">
-												<img
-													class="blog-card__img"
-													src="img/blog/pro-chip.webp"
-													alt="Автомобиль в студии после чип-тюнинга"
-													width="846"
-													height="494"
-													loading="lazy"
-												>
-												<span class="blog-card__tag">Чип-тюнинг</span>
-												<div class="blog-card__meta">
 													<span class="blog-card__meta-item">
 														<img
 															class="blog-card__meta-icon"
-															src="img/icons/calendar.svg"
-															alt="Дата"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
 															width="14"
 															height="14"
 														>
-														<span class="blog-card__meta-text">29 августа 2026</span>
+														<span class="blog-card__meta-text">34</span>
 													</span>
-													<span class="blog-card__meta-stats">
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/eye.svg"
-																alt="Просмотры"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">4 582</span>
-														</span>
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/chat.svg"
-																alt="Комментарии"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">34</span>
-														</span>
-													</span>
-												</div>
-												<span class="blog-card__play" aria-hidden="true">
-													<img
-														class="blog-card__play-icon"
-														src="img/icons/play.svg"
-														alt="Смотреть видео"
-														width="40"
-														height="40"
-													>
 												</span>
-											</a>
-											<div class="blog-card__body">
-												<div class="blog-card__text">
-													<h3 class="blog-card__title">PRO чип-тюнинг</h3>
-													<p class="blog-card__excerpt">Современные автомобили часто имеют запас мощности, который ограничен заводскими настройками электронного блока управления.</p>
-												</div>
-												<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
 											</div>
-										</article>
-									</li>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Что делать, если загорелся check engine?</h3>
+												<p class="blog-card__excerpt">Разбираемся, почему загорелся Check Engine, какие неисправности могут быть причиной и когда стоит обратиться на диагностику.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item blog__item--wide">
+									<article class="blog-card blog-card--horizontal">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/pro-chip.webp"
+												alt="Автомобиль в студии после чип-тюнинга"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">4 582</span>
+													</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">PRO чип-тюнинг</h3>
+												<p class="blog-card__excerpt">Современные автомобили часто имеют запас мощности, который ограничен заводскими настройками электронного блока управления.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item blog__item--wide">
+									<article class="blog-card blog-card--horizontal">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/stock-mode.webp"
+												alt="Автомобиль в режиме Stock"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">4 582</span>
+													</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Возврат в Stock: заводские настройки автомобиля</h3>
+												<p class="blog-card__excerpt">Stock-режим позволяет вернуть автомобиль к исходным заводским настройкам после чип-тюнинга или других программных изменений.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
 <li class="blog__item">
-										<article class="blog-card blog-card--horizontal">
-											<a class="blog-card__media" href="article.html">
-												<img
-													class="blog-card__img"
-													src="img/blog/stock-mode.webp"
-													alt="Автомобиль в режиме Stock"
-													width="846"
-													height="494"
-													loading="lazy"
-												>
-												<span class="blog-card__tag">Чип-тюнинг</span>
-												<div class="blog-card__meta">
-													<span class="blog-card__meta-item">
-														<img
-															class="blog-card__meta-icon"
-															src="img/icons/calendar.svg"
-															alt="Дата"
-															width="14"
-															height="14"
-														>
-														<span class="blog-card__meta-text">29 августа 2026</span>
-													</span>
-													<span class="blog-card__meta-stats">
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/eye.svg"
-																alt="Просмотры"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">4 582</span>
-														</span>
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/chat.svg"
-																alt="Комментарии"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">34</span>
-														</span>
-													</span>
-												</div>
-												<span class="blog-card__play" aria-hidden="true">
-													<img
-														class="blog-card__play-icon"
-														src="img/icons/play.svg"
-														alt="Смотреть видео"
-														width="40"
-														height="40"
-													>
-												</span>
-											</a>
-											<div class="blog-card__body">
-												<div class="blog-card__text">
-													<h3 class="blog-card__title">Возврат в Stock: заводские настройки автомобиля</h3>
-													<p class="blog-card__excerpt">Stock-режим позволяет вернуть автомобиль к исходным заводским настройкам после чип-тюнинга или других программных изменений.</p>
-												</div>
-												<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
-											</div>
-										</article>
-									</li>
-
-								</ul>
-							</div>
-							<ul class="blog__row blog__row--cards">
-								<li class="blog__item">
 									<article class="blog-card ">
 										<a class="blog-card__media" href="article.html">
 											<img
@@ -1275,148 +1267,137 @@
 										</div>
 									</article>
 								</li>
-
-							</ul>
-							<div class="blog__row blog__row--split">
-								<ul class="blog__stack">
-									<li class="blog__item">
-										<article class="blog-card blog-card--overlay">
-											<a class="blog-card__media" href="article.html">
-												<img
-													class="blog-card__img"
-													src="img/blog/check-engine.webp"
-													alt="Выхлопная система автомобиля крупным планом"
-													width="846"
-													height="494"
-													loading="lazy"
-												>
-												<span class="blog-card__tag">Чип-тюнинг</span>
-												<div class="blog-card__meta">
+<li class="blog__item blog__item--feature">
+									<article class="blog-card blog-card--overlay">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/check-engine.webp"
+												alt="Выхлопная система автомобиля крупным планом"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Чип-тюнинг</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text">29 августа 2026</span>
+												</span>
+												<span class="blog-card__meta-stats">
 													<span class="blog-card__meta-item">
 														<img
 															class="blog-card__meta-icon"
-															src="img/icons/calendar.svg"
-															alt="Дата"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
 															width="14"
 															height="14"
 														>
-														<span class="blog-card__meta-text">29 августа 2026</span>
+														<span class="blog-card__meta-text">4 582</span>
 													</span>
-													<span class="blog-card__meta-stats">
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/eye.svg"
-																alt="Просмотры"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">4 582</span>
-														</span>
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/chat.svg"
-																alt="Комментарии"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text">34</span>
-														</span>
-													</span>
-												</div>
-												<span class="blog-card__play" aria-hidden="true">
-													<img
-														class="blog-card__play-icon"
-														src="img/icons/play.svg"
-														alt="Смотреть видео"
-														width="40"
-														height="40"
-													>
-												</span>
-											</a>
-											<div class="blog-card__body">
-												<div class="blog-card__text">
-													<h3 class="blog-card__title">Что делать, если загорелся check engine?</h3>
-													<p class="blog-card__excerpt">Разбираемся, почему загорелся Check Engine, какие неисправности могут быть причиной и когда стоит обратиться на диагностику.</p>
-												</div>
-												<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
-											</div>
-										</article>
-									</li>
-
-								</ul>
-								<ul class="blog__stack">
-									<li class="blog__item">
-										<article class="blog-card blog-card--video">
-											<a class="blog-card__media" href="article.html">
-												<img
-													class="blog-card__img"
-													src="img/blog/exhaust.webp"
-													alt="Видео: управляемый выхлоп на автомобиле"
-													width="846"
-													height="494"
-													loading="lazy"
-												>
-												<span class="blog-card__tag">Выхлоп</span>
-												<div class="blog-card__meta">
 													<span class="blog-card__meta-item">
 														<img
 															class="blog-card__meta-icon"
-															src="img/icons/calendar.svg"
-															alt="Дата"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text">34</span>
+													</span>
+												</span>
+											</div>
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Что делать, если загорелся check engine?</h3>
+												<p class="blog-card__excerpt">Разбираемся, почему загорелся Check Engine, какие неисправности могут быть причиной и когда стоит обратиться на диагностику.</p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Читать статью</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item blog__item--feature">
+									<article class="blog-card blog-card--video">
+										<a class="blog-card__media" href="article.html">
+											<img
+												class="blog-card__img"
+												src="img/blog/exhaust.webp"
+												alt="Видео: управляемый выхлоп на автомобиле"
+												width="846"
+												height="494"
+												loading="lazy"
+											>
+											<span class="blog-card__tag">Выхлоп</span>
+											<div class="blog-card__meta">
+												<span class="blog-card__meta-item">
+													<img
+														class="blog-card__meta-icon"
+														src="img/icons/calendar.svg"
+														alt="Дата"
+														width="14"
+														height="14"
+													>
+													<span class="blog-card__meta-text"></span>
+												</span>
+												<span class="blog-card__meta-stats">
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/eye.svg"
+															alt="Просмотры"
 															width="14"
 															height="14"
 														>
 														<span class="blog-card__meta-text"></span>
 													</span>
-													<span class="blog-card__meta-stats">
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/eye.svg"
-																alt="Просмотры"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text"></span>
-														</span>
-														<span class="blog-card__meta-item">
-															<img
-																class="blog-card__meta-icon"
-																src="img/icons/chat.svg"
-																alt="Комментарии"
-																width="14"
-																height="14"
-															>
-															<span class="blog-card__meta-text"></span>
-														</span>
+													<span class="blog-card__meta-item">
+														<img
+															class="blog-card__meta-icon"
+															src="img/icons/chat.svg"
+															alt="Комментарии"
+															width="14"
+															height="14"
+														>
+														<span class="blog-card__meta-text"></span>
 													</span>
-												</div>
-												<span class="blog-card__play" aria-hidden="true">
-													<img
-														class="blog-card__play-icon"
-														src="img/icons/play.svg"
-														alt="Смотреть видео"
-														width="40"
-														height="40"
-													>
 												</span>
-											</a>
-											<div class="blog-card__body">
-												<div class="blog-card__text">
-													<h3 class="blog-card__title">Что даёт управляемый выхлоп?</h3>
-													<p class="blog-card__excerpt"></p>
-												</div>
-												<a class="blog-card__link icon-arrow-top-right" href="article.html">Смотреть видео</a>
 											</div>
-										</article>
-									</li>
-
-								</ul>
-							</div>
-							<ul class="blog__row blog__row--cards">
-								<li class="blog__item">
+											<span class="blog-card__play" aria-hidden="true">
+												<img
+													class="blog-card__play-icon"
+													src="img/icons/play.svg"
+													alt="Смотреть видео"
+													width="40"
+													height="40"
+												>
+											</span>
+										</a>
+										<div class="blog-card__body">
+											<div class="blog-card__text">
+												<h3 class="blog-card__title">Что даёт управляемый выхлоп?</h3>
+												<p class="blog-card__excerpt"></p>
+											</div>
+											<a class="blog-card__link icon-arrow-top-right" href="article.html">Смотреть видео</a>
+										</div>
+									</article>
+								</li>
+<li class="blog__item">
 									<article class="blog-card ">
 										<a class="blog-card__media" href="article.html">
 											<img
@@ -1676,10 +1657,7 @@
 										</div>
 									</article>
 								</li>
-
-							</ul>
-							<ul class="blog__row blog__row--pair">
-								<li class="blog__item">
+<li class="blog__item blog__item--feature">
 									<article class="blog-card blog-card--overlay">
 										<a class="blog-card__media" href="article.html">
 											<img
@@ -1744,8 +1722,7 @@
 										</div>
 									</article>
 								</li>
-
-								<li class="blog__item">
+<li class="blog__item blog__item--feature">
 									<article class="blog-card blog-card--overlay">
 										<a class="blog-card__media" href="article.html">
 											<img
@@ -1810,10 +1787,7 @@
 										</div>
 									</article>
 								</li>
-
-							</ul>
-							<ul class="blog__row blog__row--cards">
-								<li class="blog__item">
+<li class="blog__item">
 									<article class="blog-card ">
 										<a class="blog-card__media" href="article.html">
 											<img
@@ -2073,10 +2047,7 @@
 										</div>
 									</article>
 								</li>
-
-							</ul>
-							<ul class="blog__row blog__row--cards">
-								<li class="blog__item">
+<li class="blog__item">
 									<article class="blog-card ">
 										<a class="blog-card__media" href="article.html">
 											<img
@@ -2686,7 +2657,7 @@
 			</footer>
 
 			<div class="cookies" data-cookies>
-				<div class="cookies__inner">
+				<div class="cookies__content">
 					<p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал корректно, а пользоваться им было удобнее. Продолжая использовать сайт, вы соглашаетесь с использованием cookie и <a href="policy.html" class="cookies__link">Политикой конфиденциальности</a>.</p>
 					<button type="button" class="cookies__btn btn btn--primary btn--compact" data-cookies-accept>Хорошо</button>
 				</div>
