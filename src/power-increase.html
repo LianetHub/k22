@@ -24,13 +24,15 @@
 							<div class="power__picker">
 								<div class="power__picker-head">
 									<h2 class="power__picker-title">Выберите ваш автомобиль</h2>
-									<div class="power__vehicle" role="tablist" aria-label="Тип транспорта">
-										<button type="button" class="power__vehicle-btn icon-car is-active" role="tab" aria-selected="true" data-power-vehicle="car">
+									<div class="power__vehicle">
+										<label class="power__vehicle-btn icon-car" for="power-vehicle-car">
+											<input class="power__vehicle-input visually-hidden" type="radio" name="power-vehicle" id="power-vehicle-car" checked>
 											Автомобиль
-										</button>
-										<button type="button" class="power__vehicle-btn icon-moto" role="tab" aria-selected="false" data-power-vehicle="moto">
+										</label>
+										<label class="power__vehicle-btn icon-moto" for="power-vehicle-moto">
+											<input class="power__vehicle-input visually-hidden" type="radio" name="power-vehicle" id="power-vehicle-moto">
 											Мотоцикл
-										</button>
+										</label>
 									</div>
 								</div>
 
@@ -72,16 +74,19 @@
 									<h2 class="power__results-title">Что вы получите <span class="color-primary">после чип-тюнинга</span></h2>
 
 									<div class="power__table-wrap">
-										<div class="power__stages" role="tablist" aria-label="Stage">
-											<button type="button" class="power__stage is-active" role="tab" aria-selected="true" data-power-stage="1">
+										<div class="power__stages">
+											<label class="power__stage" for="power-stage-1">
+												<input class="power__stage-input visually-hidden" type="radio" name="power-stage" id="power-stage-1" checked>
 												STAGE 1
-											</button>
-											<button type="button" class="power__stage" role="tab" aria-selected="false" data-power-stage="2">
+											</label>
+											<label class="power__stage" for="power-stage-2">
+												<input class="power__stage-input visually-hidden" type="radio" name="power-stage" id="power-stage-2">
 												STAGE 2
-											</button>
+											</label>
 											<span class="power__stage-tail" aria-hidden="true"></span>
 										</div>
 
+										<div class="power__pane power__pane--stage-1">
 										<div class="power__table" role="table" aria-label="Параметры после чип-тюнинга">
 											<div class="power__table-row power__table-row--head" role="row">
 												<div class="power__table-cell power__table-cell--param" role="columnheader">Параметры</div>
@@ -141,6 +146,68 @@
 												</div>
 											</div>
 										</div>
+										</div>
+										<div class="power__pane power__pane--stage-2">
+										<div class="power__table" role="table" aria-label="Параметры после чип-тюнинга, stage 2">
+											<div class="power__table-row power__table-row--head" role="row">
+												<div class="power__table-cell power__table-cell--param" role="columnheader">Параметры</div>
+												<div class="power__table-cell power__table-cell--before" role="columnheader">Заводские</div>
+												<div class="power__table-cell power__table-cell--arrow" role="presentation" aria-hidden="true"></div>
+												<div class="power__table-cell power__table-cell--after" role="columnheader">После</div>
+												<div class="power__table-cell power__table-cell--gain" role="columnheader">Прирост</div>
+											</div>
+
+											<div class="power__table-row" role="row">
+												<div class="power__table-cell power__table-cell--param" role="rowheader">
+													<span class="power__param icon-growth">Мощность</span>
+												</div>
+												<div class="power__table-cell power__table-cell--before" role="cell">
+													<span class="power__value">
+														<span class="power__value-num">177</span>
+														<span class="power__value-unit">л.с.</span>
+													</span>
+												</div>
+												<div class="power__table-cell power__table-cell--arrow" role="presentation" aria-hidden="true"></div>
+												<div class="power__table-cell power__table-cell--after" role="cell">
+													<span class="power__value power__value--accent">
+														<span class="power__value-num">210</span>
+														<span class="power__value-unit">л.с.</span>
+													</span>
+												</div>
+												<div class="power__table-cell power__table-cell--gain" role="cell">
+													<span class="power__value power__value--accent">
+														<span class="power__value-num">+28</span>
+														<span class="power__value-unit">%</span>
+													</span>
+												</div>
+											</div>
+
+											<div class="power__table-row" role="row">
+												<div class="power__table-cell power__table-cell--param" role="rowheader">
+													<span class="power__param icon-speedometer">Крутящий момент</span>
+												</div>
+												<div class="power__table-cell power__table-cell--before" role="cell">
+													<span class="power__value">
+														<span class="power__value-num">350</span>
+														<span class="power__value-unit">Нм</span>
+													</span>
+												</div>
+												<div class="power__table-cell power__table-cell--arrow" role="presentation" aria-hidden="true"></div>
+												<div class="power__table-cell power__table-cell--after" role="cell">
+													<span class="power__value power__value--accent">
+														<span class="power__value-num">420</span>
+														<span class="power__value-unit">Нм</span>
+													</span>
+												</div>
+												<div class="power__table-cell power__table-cell--gain" role="cell">
+													<span class="power__value power__value--accent">
+														<span class="power__value-num">+28</span>
+														<span class="power__value-unit">%</span>
+													</span>
+												</div>
+											</div>
+										</div>
+										</div>
 									</div>
 								</div>
 
@@ -157,12 +224,17 @@
 							</div>
 
 							<div class="power__footer">
-								<div class="power__price">
-									<p class="power__price-label" data-power-price-label>Стоимость stage 1</p>
-									<p class="power__price-value" data-power-price-value>от 35 000 ₽</p>
+								<div class="power__price power__price--stage-1">
+									<p class="power__price-label">Стоимость stage 1</p>
+									<p class="power__price-value">от 35 000 ₽</p>
 									<span class="power__price-tail" aria-hidden="true"></span>
 								</div>
-								<a class="btn btn--primary power__cta" href="#">Записаться на чип-тюнинг</a>
+								<div class="power__price power__price--stage-2">
+									<p class="power__price-label">Стоимость stage 2</p>
+									<p class="power__price-value">от 55 000 ₽</p>
+									<span class="power__price-tail" aria-hidden="true"></span>
+								</div>
+								<a href="#" class="power__cta btn btn--primary">Записаться на чип-тюнинг</a>
 							</div>
 						</div>
 					</div>
@@ -189,7 +261,7 @@
 							<h2 class="info-block__title title decor-line-block">PRO чип-тюнинг</h2>
 							<p class="info-block__lead">Современные автомобили часто имеют запас мощности, который ограничен заводскими настройками электронного блока управления. Производитель делает это с учётом экологических требований, особенностей разных рынков и условий эксплуатации. Чип-тюнинг позволяет скорректировать эти настройки и раскрыть возможности двигателя без механического вмешательства.</p>
 							<p class="info-block__text">Во время настройки специалисты корректируют параметры работы двигателя: подачу топлива, давление наддува, угол зажигания и реакцию педали газа. В результате автомобиль быстрее откликается на нажатие акселератора, увереннее разгоняется и легче набирает скорость при обгоне.</p>
-							<a class="btn btn--primary info-block__btn" href="article.html">Подробнее</a>
+							<a href="article.html" class="info-block__btn btn btn--primary">Подробнее</a>
 						</div>
 					</div>
 				</section>

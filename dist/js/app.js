@@ -486,50 +486,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	const powerSection = document.querySelector("[data-power]");
 	if (powerSection) {
 		const selects = powerSection.querySelectorAll("[data-power-select]");
-		const vehicleTabs = powerSection.querySelectorAll("[data-power-vehicle]");
-		const stageTabs = powerSection.querySelectorAll("[data-power-stage]");
-		const priceLabel = powerSection.querySelector("[data-power-price-label]");
-		const priceValue = powerSection.querySelector("[data-power-price-value]");
-
-		const stagePrices = {
-			1: { label: "Стоимость stage 1", value: "от 35 000 ₽" },
-			2: { label: "Стоимость stage 2", value: "от 55 000 ₽" },
-		};
 
 		function syncPowerEmptyState() {
 			const allSelected = Array.from(selects).every((select) => Boolean(select.value));
 			powerSection.classList.toggle("is-empty", !allSelected);
 		}
 
-		function activateTabGroup(tabs, activeTab, attrName) {
-			tabs.forEach((tab) => {
-				const isActive = tab === activeTab;
-				tab.classList.toggle("is-active", isActive);
-				tab.setAttribute("aria-selected", isActive ? "true" : "false");
-			});
-
-			if (attrName === "data-power-stage" && priceLabel && priceValue) {
-				const stage = activeTab.getAttribute("data-power-stage");
-				const price = stagePrices[stage] || stagePrices[1];
-				priceLabel.textContent = price.label;
-				priceValue.textContent = price.value;
-			}
-		}
-
 		selects.forEach((select) => {
 			select.addEventListener("change", syncPowerEmptyState);
-		});
-
-		vehicleTabs.forEach((tab) => {
-			tab.addEventListener("click", () => {
-				activateTabGroup(vehicleTabs, tab, "data-power-vehicle");
-			});
-		});
-
-		stageTabs.forEach((tab) => {
-			tab.addEventListener("click", () => {
-				activateTabGroup(stageTabs, tab, "data-power-stage");
-			});
 		});
 
 		syncPowerEmptyState();

@@ -390,11 +390,9 @@ describe("app.js на странице без блоков", () => {
 		expect(ctx.errors).toEqual([]);
 	});
 
-	it("[data-power] со stage-табами, но без блока цены не бросает ошибку", () => {
+	it("[data-power] без блока цены не бросает ошибку", () => {
 		const ctx = boot(powerFixture({ withPrice: false }));
-		ctx.clickOn("#stage-2");
 		expect(ctx.errors).toEqual([]);
-		expect(ctx.$("#stage-2").classList.contains("is-active")).toBe(true);
 	});
 
 	it("[data-cookies] без кнопки согласия не бросает ошибку", () => {
@@ -710,52 +708,7 @@ describe("калькулятор мощности", () => {
 		expect(ctx.$("[data-power]").classList.contains("is-empty")).toBe(true);
 	});
 
-	it("переключение stage меняет цену и aria-selected", () => {
-		const ctx = boot(powerFixture());
-
-		ctx.clickOn("#stage-2");
-		expect(ctx.$("[data-power-price-label]").textContent).toBe("Стоимость stage 2");
-		expect(ctx.$("[data-power-price-value]").textContent).toBe("от 55 000 ₽");
-		expect(ctx.$("#stage-2").getAttribute("aria-selected")).toBe("true");
-		expect(ctx.$("#stage-1").getAttribute("aria-selected")).toBe("false");
-		expect(ctx.$("#stage-1").classList.contains("is-active")).toBe(false);
-
-		ctx.clickOn("#stage-1");
-		expect(ctx.$("[data-power-price-label]").textContent).toBe("Стоимость stage 1");
-		expect(ctx.$("[data-power-price-value]").textContent).toBe("от 35 000 ₽");
-	});
-
-	it("неизвестный stage откатывается на цену stage 1", () => {
-		const ctx = boot(powerFixture({ stages: [1, 2, 3] }));
-		ctx.clickOn("#stage-3");
-		expect(ctx.$("[data-power-price-label]").textContent).toBe("Стоимость stage 1");
-		expect(ctx.errors).toEqual([]);
-	});
-
-	it("БАГ: переключение stage не меняет цифры в таблице", () => {
-		const ctx = boot(powerFixture());
-		const before = ctx.$$("[data-power-hp-after], [data-power-nm-after], [data-power-hp-gain], [data-power-nm-gain]").map((el) => el.textContent);
-
-		ctx.clickOn("#stage-2");
-
-		const after = ctx.$$("[data-power-hp-after], [data-power-nm-after], [data-power-hp-gain], [data-power-nm-gain]").map((el) => el.textContent);
-		expect(after).toEqual(before);
-	});
-
-	it("БАГ: переключение Автомобиль/Мотоцикл меняет только подсветку таба", () => {
-		const ctx = boot(powerFixture());
-		const snapshot = ctx.$(".power__table").textContent;
-
-		ctx.clickOn("#vehicle-moto");
-
-		expect(ctx.$("#vehicle-moto").classList.contains("is-active")).toBe(true);
-		expect(ctx.$("#vehicle-car").classList.contains("is-active")).toBe(false);
-		// список марок и цифры таблицы не зависят от типа транспорта
-		expect(ctx.$(".power__table").textContent).toBe(snapshot);
-		expect(ctx.$$("#power-brand option")).toHaveLength(2);
-	});
-
-	it("БАГ: секция без селектов сразу считается заполненной", () => {
+	it("секция без селектов сразу считается заполненной", () => {
 		const ctx = boot(`<section class="power is-empty" data-power><div class="power__stages"></div></section>`);
 		// Array.prototype.every на пустом списке — true, поэтому is-empty снимается
 		expect(ctx.$("[data-power]").classList.contains("is-empty")).toBe(false);

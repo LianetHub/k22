@@ -377,6 +377,30 @@
 		transform: scaleX(-1);
 	}
 
+	// .contacts__switch
+	&__switch {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		&:has(#contacts-city-spb:checked) {
+			.contacts__pane--spb {
+				display: block;
+			}
+		}
+
+		&:has(#contacts-city-barnaul:checked) {
+			.contacts__pane--barnaul {
+				display: block;
+			}
+		}
+	}
+
+	// .contacts__pane
+	&__pane {
+		display: none;
+	}
+
 	// .contacts__cities
 	&__cities {
 		display: flex;
@@ -390,6 +414,7 @@
 	&__city {
 		display: inline-flex;
 		align-items: center;
+		cursor: pointer;
 		padding: rem(12) rem(16);
 		font-family: $fontfamily;
 		font-size: rem(14);
@@ -417,10 +442,15 @@
 			}
 		}
 
-		&.is-active {
+		&:has(:checked) {
 			background: $color-accent-primary;
 			color: $color-bg-primary;
 			opacity: 1;
+		}
+
+		&:has(:focus-visible) {
+			outline: 2px solid $color-accent-primary;
+			outline-offset: 2px;
 		}
 	}
 
@@ -542,6 +572,14 @@
 			width: 100%;
 			padding: rem(20);
 			background: $color-bg-elevated;
+
+			.contacts__switch {
+				gap: rem(24);
+
+				@media (min-width: $md4) {
+					gap: rem(30);
+				}
+			}
 
 			@media (min-width: $md4) {
 				gap: rem(30);

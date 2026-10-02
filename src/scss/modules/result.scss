@@ -416,6 +416,14 @@
 			padding: rem(20) rem(30);
 			color: rgba($color-bg-primary, 0.7);
 		}
+
+		.result__metrics + & {
+			margin-top: rem(-24);
+
+			@media (min-width: $md4) {
+				margin-top: rem(-40);
+			}
+		}
 	}
 
 	// .result__guarantee
