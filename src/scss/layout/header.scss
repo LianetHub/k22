@@ -737,11 +737,19 @@
 	gap: rem(10);
 	width: 100%;
 	color: $color-bg-primary;
-	transition: opacity 0.2s ease;
+	transition: color 0.2s ease;
 
 	@media (any-hover: hover) {
 		&:hover {
-			opacity: 0.75;
+			color: $color-accent-primary;
+
+			.menu-service__price {
+				color: $color-accent-primary;
+			}
+
+			.menu-service__icon {
+				filter: brightness(0) saturate(100%) invert(29%) sepia(70%) saturate(4343%) hue-rotate(342deg) brightness(111%) contrast(97%);
+			}
 		}
 	}
 
@@ -751,6 +759,7 @@
 		height: rem(24);
 		flex-shrink: 0;
 		object-fit: contain;
+		transition: filter 0.2s ease;
 	}
 
 	// .menu-service__body
@@ -790,5 +799,6 @@
 		font-size: rem(14);
 		line-height: 1.2;
 		letter-spacing: -0.01em;
+		transition: color 0.2s ease;
 	}
 }

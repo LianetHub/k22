@@ -942,11 +942,17 @@ img {
   gap: 0.625rem;
   width: 100%;
   color: #fff;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 @media (any-hover: hover) {
   .menu-service:hover {
-    opacity: 0.75;
+    color: #FC373D;
+  }
+  .menu-service:hover .menu-service__price {
+    color: #FC373D;
+  }
+  .menu-service:hover .menu-service__icon {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(70%) saturate(4343%) hue-rotate(342deg) brightness(111%) contrast(97%);
   }
 }
 .menu-service__icon {
@@ -954,6 +960,7 @@ img {
   height: 1.5rem;
   flex-shrink: 0;
   object-fit: contain;
+  transition: filter 0.2s ease;
 }
 .menu-service__body {
   flex: 1 1 auto;
@@ -985,6 +992,7 @@ img {
   font-size: 0.875rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  transition: color 0.2s ease;
 }
 
 .footer {
