@@ -10,105 +10,86 @@
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
-		background: #000;
+		background-color: #000;
+		background-image:
+			url("@img/decor/light-pattern.svg"),
+			linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
+			url("@img/result/car.webp");
+		background-repeat: repeat, no-repeat, no-repeat;
+		background-position: 0 0, center, right center;
+		background-size: auto, cover, cover;
 		color: $color-bg-primary;
 
-		&::before,
+		@media (min-width: $md2) {
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
+				url("@img/result/car.webp");
+			background-blend-mode: normal, overlay, normal;
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
 			inset: 0;
-			pointer-events: none;
-			background-repeat: no-repeat;
-		}
-
-		&::before {
-			z-index: 0;
-			background-image:
-				linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-				url("@img/result/car.webp");
-			background-position: center, right center;
-			background-size: cover, cover;
-
-			@media (min-width: $md2) {
-				background-image: url("@img/result/car.webp");
-				background-position: right center;
-				background-size: cover;
-			}
-		}
-
-		&::after {
 			z-index: 3;
 			background-image: url("@img/result/smoke.webp");
+			background-repeat: no-repeat;
 			background-position: right center;
 			background-size: cover;
+			pointer-events: none;
+		}
+
+		// .result[data-mark]
+		&[data-mark]::before {
+			content: attr(data-mark);
+			display: none;
+
+			@media (min-width: $md2) {
+				display: block;
+				position: absolute;
+				z-index: 2;
+				top: rem(-20);
+				right: rem(-10);
+				font-family: $fontfamily;
+				font-size: rem(220);
+				font-weight: 700;
+				line-height: 1.2;
+				letter-spacing: rem(-4);
+				text-transform: uppercase;
+				color: transparent;
+				-webkit-text-stroke: 2px $color-bg-primary;
+				opacity: 0.2;
+				pointer-events: none;
+				user-select: none;
+			}
+
+			@media (min-width: $md0) {
+				top: rem(-81);
+				right: auto;
+				left: 65.78%;
+				font-size: rem(487);
+				letter-spacing: rem(-9.74);
+			}
 		}
 
 		// .result--moto
 		&.result--moto {
-			&::before {
-				background-image:
-					linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-					url("@img/result/moto.webp");
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
+				url("@img/result/moto.webp");
 
-				@media (min-width: $md2) {
-					background-image: url("@img/result/moto.webp");
-				}
+			@media (min-width: $md2) {
+				background-image:
+					url("@img/decor/light-pattern.svg"),
+					linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
+					url("@img/result/moto.webp");
 			}
 
 			&::after {
 				background-image: url("@img/result/moto-smoke.webp");
 			}
-		}
-	}
-
-	// .result__glow
-	&__glow {
-		display: none;
-
-		@media (min-width: $md2) {
-			display: block;
-			position: absolute;
-			z-index: 1;
-			top: 0;
-			bottom: 0;
-			left: 72.4%;
-			width: 31%;
-			background: $color-accent-primary;
-			mix-blend-mode: overlay;
-			pointer-events: none;
-		}
-	}
-
-	// .result__mark
-	&__mark {
-		display: none;
-
-		@media (min-width: $md2) {
-			display: block;
-			position: absolute;
-			z-index: 2;
-			top: rem(-20);
-			right: rem(-10);
-			font-family: $fontfamily;
-			font-size: rem(220);
-			font-weight: 700;
-			line-height: 1.2;
-			letter-spacing: rem(-4);
-			text-transform: uppercase;
-			color: transparent;
-			-webkit-text-stroke: 2px $color-bg-primary;
-			opacity: 0.2;
-			pointer-events: none;
-			user-select: none;
-		}
-
-		@media (min-width: $md0) {
-			top: rem(-81);
-			right: auto;
-			left: 65.78%;
-			font-size: rem(487);
-			letter-spacing: rem(-9.74);
 		}
 	}
 

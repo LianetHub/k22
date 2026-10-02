@@ -17,17 +17,26 @@
 	@media (any-hover: hover) {
 		&:hover {
 			opacity: 0.75;
+
+			&::before {
+				transform: rotate(90deg);
+			}
 		}
 	}
 
 	&::before {
 		@extend %ic, .icon-arrow-top-right;
+		transition: transform 0.35s ease;
 	}
 
 	&:focus-visible {
 		outline: none;
 
 		border-radius: rem(2);
+
+		&::before {
+			transform: rotate(90deg);
+		}
 	}
 
 	// more-link__arrow

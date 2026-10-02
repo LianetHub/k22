@@ -9,6 +9,27 @@
 	background: $color-bg-primary;
 	overflow: hidden;
 
+	// blog-card, кроме overlay и video
+	&:not(.blog-card--overlay):not(.blog-card--video) {
+		@media (any-hover: hover) {
+			&:hover {
+				.blog-card__media::after {
+					opacity: 0;
+				}
+
+				.blog-card__link::before {
+					transform: rotate(90deg);
+				}
+			}
+		}
+
+		&:focus-within {
+			.blog-card__link::before {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
 	@media (min-width: $md4) {
 		min-height: rem(512);
 	}
@@ -39,6 +60,7 @@
 				$color-bg-elevated 100%
 			);
 			pointer-events: none;
+			transition: opacity 0.35s ease;
 		}
 	}
 
@@ -218,7 +240,6 @@
 		font-weight: 700;
 		line-height: 1;
 		letter-spacing: -0.02em;
-		transition: opacity 0.2s ease;
 
 		@media (min-width: $md4) {
 			font-size: rem(22);
@@ -228,12 +249,7 @@
 			order: 1;
 			font-size: rem(12);
 			line-height: 1;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				opacity: 0.8;
-			}
+			transition: transform 0.35s ease;
 		}
 
 		&:focus-visible {

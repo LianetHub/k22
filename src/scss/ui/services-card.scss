@@ -21,21 +21,8 @@
 		color: $color-bg-primary;
 	}
 
-	.services-card__link {
-		padding-left: 0;
-	}
-
-	.services-card__link-text {
-		align-self: stretch;
-		justify-content: center;
-		padding: 0 rem(24);
-		border-bottom-color: transparent;
-		background-color: $color-accent-primary;
-		color: $color-bg-primary;
-
-		@media (min-width: $md4) {
-			padding-inline: rem(52);
-		}
+	.services-card__link::before {
+		transform: rotate(90deg);
 	}
 
 	&.services-card--featured {
@@ -114,31 +101,18 @@
 		display: inline-flex;
 		align-items: center;
 		height: rem(40);
-		padding: rem(8) rem(16) rem(8) rem(8);
+		padding: rem(8) rem(16) rem(8) rem(54);
 		background-color: $color-accent-primary;
 		color: $color-bg-primary;
 		transition: opacity 0.35s ease;
+		clip-path: polygon(rem(46) 0, 100% 0, 100% 100%, 0 100%);
 		@include mobile-heading-h4;
 
 		@media (min-width: $md4) {
 			height: rem(50);
-			padding: rem(10) rem(20) rem(12) rem(10);
+			padding: rem(10) rem(20) rem(12) rem(68);
+			clip-path: polygon(rem(58) 0, 100% 0, 100% 100%, 0 100%);
 			@include desktop-heading-h4;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 100%;
-			width: rem(46);
-			height: 100%;
-			background: url("@img/decor/offer-badge-tail.svg") center / 100% 100% no-repeat;
-			transform: scaleY(-1);
-
-			@media (min-width: $md4) {
-				width: rem(58);
-			}
 		}
 	}
 
@@ -148,44 +122,22 @@
 		bottom: 0;
 		right: rem(84);
 		height: rem(44);
-		padding: rem(8) rem(12) rem(10);
+		padding: rem(8) rem(48) rem(10);
 		font-family: $font-inter;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: 1.2;
 		letter-spacing: 0;
 		text-transform: uppercase;
+		clip-path: polygon(rem(36) 0, calc(100% - #{rem(36)}) 0, 100% 100%, 0 100%);
 
 		@media (min-width: $md4) {
 			right: rem(108);
 			height: rem(50);
-			padding: rem(10) rem(30) rem(12);
+			padding: rem(10) rem(88) rem(12);
 			font-size: rem(22);
 			line-height: 1.2;
-		}
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			width: rem(36);
-			height: 100%;
-			background: url("@img/decor/offer-badge-tail.svg") center / 100% 100% no-repeat;
-
-			@media (min-width: $md4) {
-				width: rem(58);
-			}
-		}
-
-		&::before {
-			right: 100%;
-			transform: scaleY(-1);
-		}
-
-		&::after {
-			left: 100%;
-			transform: rotate(180deg);
+			clip-path: polygon(rem(58) 0, calc(100% - #{rem(58)}) 0, 100% 100%, 0 100%);
 		}
 	}
 
@@ -447,16 +399,16 @@
 			position: absolute;
 			right: 0;
 			bottom: 0;
-			z-index: 1;
+			z-index: 2;
 			display: inline-flex !important;
 			align-items: center;
 			justify-content: center;
 			width: rem(44);
 			height: rem(44);
-			background-color: $color-bg-secondary;
 			color: $color-accent-primary;
 			font-size: rem(18);
 			line-height: 1;
+			transition: transform 0.35s ease;
 
 			@media (min-width: $md4) {
 				width: rem(50);
@@ -468,19 +420,19 @@
 		&::after {
 			content: "";
 			position: absolute;
-			right: rem(44);
+			right: 0;
 			bottom: 0;
 			z-index: 1;
-			width: rem(40);
+			width: rem(84);
 			height: rem(44);
 			background-color: $color-bg-secondary;
-			clip-path: polygon(100% 0, 100% 100%, 0 100%);
+			clip-path: polygon(rem(40) 0, 100% 0, 100% 100%, 0 100%);
 			pointer-events: none;
 
 			@media (min-width: $md4) {
-				right: rem(50);
-				width: rem(58);
+				width: rem(108);
 				height: rem(50);
+				clip-path: polygon(rem(58) 0, 100% 0, 100% 100%, 0 100%);
 			}
 		}
 	}
@@ -497,7 +449,7 @@
 		font-weight: 700;
 		line-height: 1;
 		letter-spacing: -0.02em;
-		transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, padding 0.35s ease;
+		transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 
 		@media (min-width: $md4) {
 			font-size: rem(22);
@@ -593,7 +545,6 @@
 			min-height: 0;
 			padding: 0;
 
-			&::before,
 			&::after {
 				background-color: $color-bg-primary;
 			}
@@ -622,6 +573,10 @@
 				.services-card__image {
 					opacity: 1;
 				}
+
+				.services-card__link::before {
+					transform: rotate(90deg);
+				}
 			}
 		}
 
@@ -634,6 +589,10 @@
 
 			.services-card__image {
 				opacity: 1;
+			}
+
+			.services-card__link::before {
+				transform: rotate(90deg);
 			}
 		}
 	}

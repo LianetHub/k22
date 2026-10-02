@@ -62,6 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			map.behaviors.disable("scrollZoom");
 
+			const groundPane = map.panes.get("ground");
+			const groundElement = groundPane && groundPane.getElement();
+
+			if (groundElement) {
+				groundElement.style.filter = "grayscale(1)";
+			}
+
 			const placemarks = [];
 
 			markers.forEach((marker) => {

@@ -169,6 +169,10 @@ function boot(body = "", options = {}) {
 						],
 					};
 					this.setBoundsCalls = [];
+					this.groundElement = { style: {} };
+					this.panes = {
+						get: (name) => (name === "ground" ? { getElement: () => this.groundElement } : null),
+					};
 					maps.push(this);
 				}
 				setBounds(bounds, opts) {
@@ -915,6 +919,9 @@ describe("Яндекс.Карта", () => {
 		expect(ctx.placemarks[0].properties.hintContent).toBe("Кузнецовская, 52к13");
 		expect(ctx.placemarks[0].createdWith.iconImageHref).toBe("img/placemark.svg");
 		expect(map.setBoundsCalls).toHaveLength(1);
+		expect(map.groundElement.style.filter).toBe("grayscale(1)");
+		expect(ctx.placemarks[0].createdWith.hasBalloon).toBe(false);
+		expect(ctx.placemarks[0].optionSets).toHaveLength(0);
 	});
 
 	it("для одного адреса bounds не пересчитывается", () => {
