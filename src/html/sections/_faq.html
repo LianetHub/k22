@@ -1,23 +1,21 @@
 <section class="faq">
 	<div class="faq__container container">
 		<div class="faq__row">
-			<div class="faq__offer">
-				<div class="faq__offer-top">
-					<h2 class="faq__title title decor-line-block">
-						вопрос
-						<span class="color-primary">ответ</span>
-					</h2>
-				</div>
-				<div class="faq__offer-bottom">
-					<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
-					<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
-				</div>
+			<div class="faq__offer-top">
+				<h2 class="faq__title title decor-line-block">
+					вопрос
+					<span class="color-primary">ответ</span>
+				</h2>
 			</div>
 			@@if(typeof faqList !== 'undefined') {
 			<ul class="faq__list">
 				@@loop('../templates/_faq-item.html', '@@faqList')
 			</ul>
 			}
+			<div class="faq__offer-bottom">
+				<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
+				<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+			</div>
 		</div>
 	</div>
 </section>

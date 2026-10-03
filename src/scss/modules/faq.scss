@@ -2,15 +2,14 @@
 @use "../abstracts" as *;
 
 .faq {
-	padding: rem(48) 0;
 	background: $color-bg-secondary;
 
-	@media (min-width: $md4) {
-		padding: rem(80) 0;
-	}
+	.page > & {
+		padding: rem(60) 0;
 
-	@media (min-width: $md2) {
-		padding: rem(100) 0;
+		@media (min-width: $md4) {
+			padding: rem(80) 0;
+		}
 	}
 
 	// .faq__container
@@ -20,30 +19,24 @@
 	&__row {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: rem(40);
+		gap: rem(30);
 
-		@media (min-width: $md2) {
-			grid-template-columns: 1fr 2fr;
-			gap: rem(30);
+		@media (min-width: $md1) {
+			grid-template-columns: auto 1fr;
+			grid-template-rows: 1fr auto;
+			column-gap: rem(55);
+			row-gap: 0;
 			align-items: stretch;
 		}
 	}
 
-	// .faq__offer
-	&__offer {
-		display: flex;
-		flex-direction: column;
-		gap: rem(40);
-		height: 100%;
-
-		@media (min-width: $md2) {
-			justify-content: space-between;
-			gap: rem(60);
+	// .faq__offer-top
+	&__offer-top {
+		@media (min-width: $md1) {
+			grid-column: 1;
+			grid-row: 1;
 		}
 	}
-
-	// .faq__offer-top
-	&__offer-top {}
 
 	// .faq__offer-bottom
 	&__offer-bottom {
@@ -51,32 +44,64 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: rem(20);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			align-items: center;
+			gap: rem(10);
+		}
+
+		@media (min-width: $md1) {
+			grid-column: 1;
+			grid-row: 2;
+			align-self: end;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(20);
+		}
 	}
 
 	// .faq__title
 	&__title {
+		// .faq__title.decor-line-block
+		&.decor-line-block {
+			@media (min-width: $md4) {
+				padding-top: rem(44);
+			}
+		}
+
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: flex-start;
-		gap: rem(12);
+		gap: rem(10);
 
 		@media (min-width: $md4) {
+			@include tablet-heading-h1;
+		}
+
+		@media (min-width: $md1) {
+			flex-direction: column;
 			gap: rem(26);
+			@include desktop-heading-h2;
 		}
 	}
 
 	// .faq__subtitle
 	&__subtitle {
-		font-family: $font-inter;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: math.div(20, 16);
+		@include desktop-body-m;
 		color: $color-text-secondary;
-		max-width: rem(416);
 
 		@media (min-width: $md4) {
+			flex: 1;
+			min-width: 0;
 			font-size: rem(22);
 			line-height: math.div(26, 22);
+			letter-spacing: 0;
+		}
+
+		@media (min-width: $md1) {
+			flex: none;
+			width: rem(416);
 		}
 	}
 
@@ -84,10 +109,9 @@
 	&__phone {
 		@include desktop-heading-h4;
 		display: inline-flex;
+		flex-shrink: 0;
 		align-items: center;
 		gap: rem(10);
-		font-size: rem(18);
-		letter-spacing: rem(-0.36);
 		color: $color-text-primary;
 		transition: opacity 0.2s ease;
 
@@ -97,17 +121,6 @@
 			height: rem(16);
 			font-size: rem(16);
 			color: $color-accent-primary;
-		}
-
-		@media (min-width: $md4) {
-			font-size: rem(22);
-			letter-spacing: rem(-0.44);
-
-			&::before {
-				width: rem(16);
-				height: rem(16);
-				font-size: rem(16);
-			}
 		}
 
 		@media (any-hover: hover) {
@@ -122,6 +135,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(10);
+		min-width: 0;
+
+		@media (min-width: $md1) {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+		}
 	}
 
 	// .faq__item
@@ -130,11 +149,7 @@
 	// .faq__details
 	&__details {
 		background: $color-bg-primary;
-		padding: rem(16) rem(20);
-
-		@media (min-width: $md4) {
-			padding: rem(20);
-		}
+		padding: rem(20);
 	}
 
 	// .faq__question

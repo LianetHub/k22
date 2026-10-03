@@ -5,16 +5,28 @@
 	// feature-card--plain
 	&.feature-card--plain {
 		gap: rem(16);
+		height: auto;
+		min-height: rem(280);
+		padding: rem(20) rem(20) rem(24);
 
 		@media (min-width: $md4) {
 			min-height: rem(450);
+			padding: 0 rem(30) rem(30);
 		}
 
 		.feature-card__title {
+			@include mobile-heading-h4;
+
 			@media (min-width: $md4) {
 				font-size: rem(32);
 				line-height: math.div(37, 32);
 				letter-spacing: rem(-0.48);
+			}
+		}
+
+		.feature-card__text {
+			@media (min-width: $md4) {
+				font-size: rem(22);
 			}
 		}
 	}
@@ -22,10 +34,9 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: rem(6);
-	min-height: rem(280);
-	padding: rem(20) rem(20) rem(24);
-	height: 100%;
+	gap: rem(10);
+	height: rem(200);
+	padding: 0 rem(20) rem(20);
 	isolation: isolate;
 	overflow: hidden;
 	background-color: $color-text-primary;
@@ -34,8 +45,7 @@
 	background-size: cover;
 
 	@media (min-width: $md4) {
-		min-height: rem(360);
-		padding: 0 rem(30) rem(30);
+		height: rem(300);
 	}
 
 	&::after {
@@ -43,12 +53,16 @@
 		position: absolute;
 		inset: 0;
 		z-index: 0;
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.9) 100%
-		);
+		background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 60%);
 		pointer-events: none;
+
+		@media (min-width: $md4) {
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.9) 100%
+			);
+		}
 	}
 
 	// feature-card с icon-*
@@ -60,14 +74,16 @@
 			left: 0;
 			z-index: 2;
 			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: rem(50);
-			padding: 0 rem(78) 0 rem(30);
+			align-items: flex-start;
+			justify-content: flex-start;
+			width: rem(70);
+			height: rem(30);
+			padding: 0 rem(50) rem(10) 0;
 			background: var(--feature-card-surface, #{$color-text-primary});
 			color: $color-accent-primary;
-			font-size: rem(30);
-			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
+			font-size: rem(20);
+			line-height: 1;
+			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(40)}) 100%, 0 100%);
 		}
 	}
 
@@ -77,10 +93,13 @@
 		z-index: 1;
 		margin-top: auto;
 		@include mobile-heading-h4;
+		font-size: rem(18);
+		line-height: 1.2;
+		letter-spacing: em(-0.18, 18);
 		color: $color-bg-primary;
 
 		@media (min-width: $md4) {
-			@include desktop-heading-h3;
+			@include desktop-heading-h4;
 		}
 	}
 
@@ -88,14 +107,11 @@
 	&__text {
 		position: relative;
 		z-index: 1;
-		font-family: $font-inter;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: 1.2;
+		@include desktop-body-s;
 		color: $color-text-tertiary;
 
 		@media (min-width: $md4) {
-			font-size: rem(22);
+			@include desktop-body-m;
 		}
 	}
 }

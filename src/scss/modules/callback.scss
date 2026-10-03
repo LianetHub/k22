@@ -8,14 +8,10 @@
 	}
 
 	background: $color-bg-primary;
-	padding: rem(48) 0;
+	padding: rem(60) 0;
 
 	@media (min-width: $md4) {
-		padding: rem(70) 0;
-	}
-
-	@media (min-width: $md2) {
-		padding: rem(100) 0;
+		padding: rem(80) 0;
 	}
 
 	// .callback__container
@@ -46,26 +42,33 @@
 		background-image: url("@img/decor/light-pattern.svg");
 		background-repeat: repeat;
 		background-size: rem(12) rem(12);
-		padding: rem(24);
+		padding: rem(30) rem(20);
 
 		@media (min-width: $md4) {
-			padding: rem(40);
+			padding: rem(50) rem(30);
 		}
 
-		@media (min-width: $md2) {
-			padding: rem(70);
+		@media (min-width: $md1) {
+			padding: rem(50);
 		}
 
 		&::after {
 			content: "";
 			position: absolute;
-			top: 0;
-			right: 0;
-			width: min(100%, rem(977));
-			height: 100%;
-			background: url("@img/decor/callback-stripes.svg") right top / auto 100% no-repeat;
+			inset: 0;
+			background: url("@img/decor/callback-stripes.svg") center bottom / rem(977) auto no-repeat;
 			pointer-events: none;
 			z-index: 0;
+
+			@media (min-width: $md4) {
+				background-position: right bottom;
+				background-size: 120% auto;
+			}
+
+			@media (min-width: $md1) {
+				background-position: right top;
+				background-size: auto 100%;
+			}
 		}
 	}
 
@@ -73,35 +76,28 @@
 	&__row {
 		position: relative;
 		z-index: 1;
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: rem(24);
-		align-items: stretch;
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
 
-		@media (min-width: $md3) {
-			grid-template-columns: 1fr 2fr;
-			gap: rem(30);
-			align-items: center;
-		}
-
-		@media (min-width: $md2) {
-			grid-template-columns: minmax(0, rem(416)) minmax(0, rem(955));
-			justify-content: space-between;
-			gap: rem(40);
+		@media (min-width: $md1) {
+			display: grid;
+			grid-template-columns: minmax(rem(280), rem(416)) 1fr;
+			align-items: stretch;
 		}
 	}
 
 	// .callback__intro
 	&__intro {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: rem(32);
-		height: 100%;
+		display: contents;
 		color: $color-bg-primary;
 
-		@media (min-width: $md2) {
+		@media (min-width: $md1) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			gap: rem(40);
+			height: 100%;
 			min-height: rem(274);
 		}
 	}
@@ -111,17 +107,14 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(20);
+		order: 1;
 
-		@media (min-width: $md2) {
-			gap: rem(40);
+		@media (min-width: $md1) {
+			order: 0;
 		}
 
 		&.decor-line-block {
-			padding-top: rem(28);
-
-			@media (min-width: $md2) {
-				padding-top: rem(44);
-			}
+			padding-top: rem(44);
 		}
 	}
 
@@ -208,28 +201,36 @@
 			.callback__phone {
 				color: $color-text-primary;
 			}
+
+			.callback__call-label {
+				color: $color-text-secondary;
+			}
 		}
 
 		display: flex;
 		flex-direction: column;
-		gap: rem(12);
+		gap: rem(20);
+		order: 3;
 
 		@media (min-width: $md4) {
-			gap: rem(20);
+			order: 2;
+		}
+
+		@media (min-width: $md1) {
+			order: 0;
 		}
 	}
 
 	// .callback__call-label
 	&__call-label {
 		font-family: $font-inter;
-		font-size: rem(16);
+		font-size: rem(22);
 		font-weight: 400;
-		line-height: math.div(19, 16);
-		color: $color-text-secondary;
+		line-height: 1.2;
+		color: $color-bg-primary;
 
 		@media (min-width: $md4) {
-			font-size: rem(22);
-			line-height: math.div(26, 22);
+			color: $color-text-secondary;
 		}
 	}
 
@@ -239,24 +240,13 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(10);
-		font-size: rem(18);
-		letter-spacing: rem(-0.36);
 		color: $color-bg-primary;
 		transition: opacity 0.2s ease;
 
 		&::before {
 			flex-shrink: 0;
-			font-size: rem(16);
-			color: $color-accent-primary;
-		}
-
-		@media (min-width: $md4) {
 			font-size: rem(22);
-			letter-spacing: rem(-0.44);
-
-			&::before {
-				font-size: rem(22);
-			}
+			color: $color-accent-primary;
 		}
 
 		@media (any-hover: hover) {
@@ -271,18 +261,19 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(20);
+		order: 2;
 		padding: rem(20);
 		background: $color-bg-secondary;
 		height: 100%;
 
 		@media (min-width: $md4) {
-			gap: rem(24);
-			padding: rem(24);
-		}
-
-		@media (min-width: $md2) {
+			order: 3;
 			gap: rem(30);
 			padding: rem(30);
+		}
+
+		@media (min-width: $md1) {
+			order: 0;
 			justify-content: center;
 		}
 	}
@@ -304,11 +295,10 @@
 	&__fields {
 		display: flex;
 		flex-direction: column;
-		gap: rem(12);
+		gap: rem(20);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md1) {
 			flex-direction: row;
-			gap: rem(20);
 		}
 	}
 
@@ -317,6 +307,10 @@
 		min-width: 0;
 
 		@media (min-width: $md4) {
+			height: rem(77);
+		}
+
+		@media (min-width: $md1) {
 			flex: 1 1 0;
 		}
 	}
@@ -328,11 +322,10 @@
 		align-items: stretch;
 		gap: rem(20);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md1) {
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			gap: rem(24);
 		}
 	}
 
@@ -343,6 +336,11 @@
 
 		@media (min-width: $md4) {
 			width: auto;
+			flex-shrink: 0;
+			align-self: flex-start;
+		}
+
+		@media (min-width: $md1) {
 			align-self: center;
 		}
 	}
@@ -350,51 +348,49 @@
 	// .callback__messengers
 	&__messengers {
 		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: rem(12) rem(16);
+		flex-shrink: 0;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(20);
 
 		@media (min-width: $md4) {
-			gap: rem(20);
+			flex-direction: row;
+			align-items: center;
 		}
 	}
 
 	// .callback__messengers-label
 	&__messengers-label {
 		@include desktop-heading-h4;
-		font-size: rem(16);
-		letter-spacing: rem(-0.32);
 		color: $color-text-secondary;
-
-		@media (min-width: $md4) {
-			font-size: rem(22);
-			letter-spacing: rem(-0.44);
-		}
+		white-space: nowrap;
 	}
 
 	// .callback__socials
 	&__socials {
 		display: flex;
 		align-items: center;
-		gap: rem(12);
+		justify-content: space-between;
+		width: 100%;
 
 		@media (min-width: $md4) {
+			justify-content: flex-start;
+			width: auto;
 			gap: rem(16);
+		}
+
+		@media (min-width: $md1) {
+			gap: rem(8);
 		}
 	}
 
 	// .callback__social
 	&__social {
-		width: rem(48);
-		height: rem(48);
+		width: rem(60);
+		height: rem(60);
 		background: $color-bg-primary;
 		color: $color-accent-primary;
 		font-size: rem(20);
-
-		@media (min-width: $md4) {
-			width: rem(60);
-			height: rem(60);
-		}
 
 		@media (any-hover: hover) {
 			&:hover {

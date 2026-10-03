@@ -1,34 +1,79 @@
 @use "../abstracts" as *;
 
 .vacancies {
-	padding: rem(48) 0;
+	padding: rem(60) 0;
 	background: $color-bg-primary;
 
 	@media (min-width: $md4) {
 		padding: rem(80) 0;
 	}
 
-	@media (min-width: $md2) {
-		padding: rem(100) 0;
+	// vacancies__container
+	&__container {
+		display: grid;
+		gap: rem(30);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"title"
+			"slider"
+			"nav";
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
 	}
 
 	// vacancies__title
 	&__title {
-		margin-bottom: rem(24);
+		grid-area: title;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(10);
+
+		// vacancies__title.decor-line-block
+		&.decor-line-block {
+			padding-top: rem(30);
+
+			@media (min-width: $md4) {
+				padding-top: rem(40);
+			}
+		}
 
 		@media (min-width: $md4) {
-			margin-bottom: rem(40);
+			gap: rem(26);
+		}
+	}
+
+	// vacancies__slider
+	&__slider {
+		grid-area: slider;
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+
+		.swiper-slide {
+			height: auto;
+			min-width: 0;
+		}
+
+		@media (min-width: $md5) {
+			overflow: visible;
 		}
 	}
 
 	// vacancies__grid
 	&__grid {
-		display: flex;
-		flex-wrap: wrap;
-		gap: rem(20);
-
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
+			display: grid !important;
+			grid-template-columns: 1fr;
 			gap: rem(30);
+			transform: none !important;
+			width: 100%;
+		}
+
+		@media (min-width: $md1) {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
@@ -36,14 +81,43 @@
 	&__item {
 		display: flex;
 		width: 100%;
-		padding-top: rem(12);
+	}
 
-		@media (min-width: $md4) {
-			width: calc((100% - #{rem(30)}) / 2);
+	// vacancies__nav
+	&__nav {
+		grid-area: nav;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-block: rem(10);
+
+		@media (min-width: $md5) {
+			display: none;
 		}
+	}
 
-		@media (min-width: $md2) {
-			width: calc((100% - #{rem(30)} * 2) / 3);
+	// vacancies__prev / vacancies__next
+	&__prev,
+	&__next {
+		position: static;
+		transform: none;
+		width: auto;
+		height: auto;
+		background: transparent;
+		color: $color-text-primary;
+		font-size: rem(33);
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	// vacancies__prev
+	&__prev {
+		&.icon-arrrow-long::before {
+			transform: rotate(180deg);
 		}
 	}
 }

@@ -166,14 +166,16 @@
 
 	// blog__nav
 	&__nav {
-		display: none;
+		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: rem(30);
 		flex-shrink: 0;
-		padding-block: rem(10);
 
 		@media (min-width: $md4) {
-			display: flex;
+			align-self: end;
+			justify-content: flex-end;
+			padding-block: rem(10);
 		}
 	}
 
@@ -186,7 +188,7 @@
 		height: auto;
 		background: transparent;
 		color: $color-text-primary;
-		font-size: rem(18);
+		font-size: rem(33);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -297,6 +299,73 @@
 
 	// blog__more
 	&__more {
-		align-self: flex-start;
+		width: 100%;
+
+		@media (min-width: $md4) {
+			width: auto;
+			justify-self: start;
+		}
+	}
+
+	// blog:has(.blog__slider)
+	&:has(.blog__slider) {
+		.page > & {
+			padding: rem(60) 0;
+
+			@media (min-width: $md4) {
+				padding: rem(80) 0;
+			}
+		}
+
+		.blog__container {
+			display: grid;
+			gap: rem(40);
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"head"
+				"slider"
+				"nav"
+				"more";
+
+			@media (min-width: $md4) {
+				grid-template-columns: 1fr auto;
+				grid-template-areas:
+					"head nav"
+					"slider slider"
+					"more more";
+			}
+		}
+
+		.blog__head {
+			grid-area: head;
+		}
+
+		.blog__title {
+			display: flex;
+			flex-direction: column;
+			gap: rem(10);
+			padding-top: rem(44);
+
+			@media (min-width: $md4) {
+				@include tablet-heading-h1;
+			}
+
+			@media (min-width: $md1) {
+				gap: rem(26);
+				@include desktop-heading-h2;
+			}
+		}
+
+		.blog__slider {
+			grid-area: slider;
+		}
+
+		.blog__nav {
+			grid-area: nav;
+		}
+
+		.blog__more {
+			grid-area: more;
+		}
 	}
 }

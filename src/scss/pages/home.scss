@@ -1,30 +1,137 @@
 @use "abstracts" as *;
 
 .our-goal {
-    padding: 10rem 0;
-    background:
-        url("@img/decor/light-pattern.svg") 0 0 / auto repeat,
-        linear-gradient(90deg, rgba(34, 34, 34, 0.00) 32.5%, rgba(34, 34, 34, 0.90) 62.27%),
-        url("@img/our-goal.webp") 0 0 / cover no-repeat;
-    color: $color-bg-primary;
+	position: relative;
+	overflow: hidden;
+	background-color: $color-text-primary;
+	color: $color-bg-primary;
 
-    // .our-goal__container
-    &__container {}
+	.page > & {
+		padding: rem(60) 0;
 
-    // .our-goal__content
-    &__content {
-        width: 50%;
-        margin-left: auto;
-    }
+		@media (min-width: $md4) {
+			padding: rem(80) 0;
+		}
 
-    // .our-goal__title
-    &__title {
-        color: rgba($color: $color-bg-secondary, $alpha: .4);
-        @include mobile-heading-h1;
-    }
+		@media (min-width: $md1) {
+			padding: rem(100) 0;
+		}
+	}
 
-    // .our-goal__tagline
-    &__tagline {
-        margin-top: 1.875rem;
-    }
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		pointer-events: none;
+	}
+
+	&::before {
+		z-index: 0;
+		top: 0.07%;
+		left: 14.36%;
+		width: 280.78%;
+		height: 100%;
+		background: url("@img/our-goal.webp") 0 0 / 100% 100% no-repeat;
+
+		@media (min-width: $md4) {
+			top: 0;
+			left: 47.94%;
+			width: 145.8%;
+			height: 100%;
+		}
+
+		@media (min-width: $md1) {
+			top: -0.85%;
+			left: 0;
+			width: 103.31%;
+			height: 106.2%;
+		}
+	}
+
+	&::after {
+		z-index: 1;
+		inset: 0;
+		background-image:
+			url("@img/decor/light-pattern.svg"),
+			linear-gradient(90deg, $color-text-primary 43.416%, transparent 74.427%);
+		background-repeat: repeat, no-repeat;
+		background-size: auto, cover;
+
+		@media (min-width: $md4) {
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(90deg, $color-text-primary 48.566%, transparent 62.266%);
+		}
+
+		@media (min-width: $md1) {
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(90deg, transparent 32.5%, rgba($color-text-primary, 0.9) 62.266%);
+		}
+	}
+
+	// .our-goal__container
+	&__container {
+		position: relative;
+		z-index: 2;
+	}
+
+	// .our-goal__content
+	&__content {
+		@media (min-width: $md1) {
+			width: fit-content;
+			margin-left: auto;
+		}
+	}
+
+	// .our-goal__title
+	&__title {
+		color: rgba($color: $color-bg-secondary, $alpha: 0.4);
+		text-box-trim: trim-both;
+		text-box-edge: cap alphabetic;
+		@include mobile-heading-h4;
+
+		@media (min-width: $md4) {
+			@include desktop-heading-h3;
+		}
+
+		@media (min-width: $md1) {
+			@include mobile-heading-h1;
+		}
+	}
+
+	// .our-goal__tagline
+	&__tagline {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+		margin-top: rem(30);
+
+		@media (min-width: $md1) {
+			gap: rem(26);
+		}
+	}
+
+	// .our-goal__line
+	&__line {
+		text-box-trim: trim-both;
+		text-box-edge: cap alphabetic;
+		@include mobile-heading-h1;
+
+		@media (min-width: $md4) {
+			@include tablet-heading-h1;
+
+			&:first-child {
+				max-width: rem(653);
+			}
+
+			&:last-child {
+				white-space: nowrap;
+			}
+		}
+
+		@media (min-width: $md1) {
+			@include desktop-heading-h2;
+		}
+	}
 }

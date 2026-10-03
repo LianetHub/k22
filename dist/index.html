@@ -622,11 +622,11 @@
 			                		</li>
 
 			                		<li class="menu__item menu__item--has-dropdown">
-			                			<button type="button" class="menu__link menu__link--dropdown icon-car" aria-expanded="false" data-menu-trigger>
+			                			<button type="button" class="menu__link menu__link--dropdown icon-engine" aria-expanded="false" data-menu-trigger>
 			                				Автосервис
 			                			</button>
 			                			<div class="menu__dropdown menu__dropdown--compact" hidden data-menu-dropdown>
-			                				<p class="menu__dropdown-title icon-car">Автосервис</p>
+			                				<p class="menu__dropdown-title icon-engine">Автосервис</p>
 			                				<div class="menu__cols">
 			                					<div class="menu__group menu__group--flat">
 			                						<ul class="menu__services">
@@ -708,17 +708,24 @@
 			                			<a href="blog.html" class="menu__link">Блог</a>
 			                		</li>
 			                		<li class="menu__item">
-			                			<a href="contacts.html" class="menu__link">Контакты</a>
+			                			<a href="contacts.html" class="menu__link icon-locations">Контакты</a>
 			                		</li>
 			                	</ul>
 
 			                	<div class="menu__mobile-contacts">
-			                		<a href="tel:+79214019898" class="menu__mobile-phone">8(921)401-98-98</a>
-			                		<p class="menu__mobile-hours icon-clock">пн-сб с 10:00 до 20:00</p>
-			                		<a href="contacts.html" class="menu__mobile-address icon-locations">Лужская, дом 3, корпус 2б</a>
-			                		<div class="menu__mobile-socials">
-			                			<a href="" aria-label="Max" class="menu__mobile-social social-item icon-max"></a>
-			                			<a href="" aria-label="Telegram" class="menu__mobile-social social-item icon-telegram"></a>
+			                		<div class="menu__mobile-addresses">
+			                			<p class="menu__mobile-address">Кузнецовская, 52к13</p>
+			                			<p class="menu__mobile-address">Лужская, дом 3, корпус 2б</p>
+			                		</div>
+			                		<div class="menu__mobile-bottom">
+			                			<a href="tel:+79214019898" class="menu__mobile-phone icon-phone">
+			                				<span class="menu__mobile-phone-value">8(921)401-98-98</span>
+			                				<span class="menu__mobile-hours">пн-сб с 10:00 до 20:00</span>
+			                			</a>
+			                			<div class="menu__mobile-socials">
+			                				<a href="" aria-label="Max" class="menu__mobile-social social-item icon-max"></a>
+			                				<a href="" aria-label="Telegram" class="menu__mobile-social social-item icon-telegram"></a>
+			                			</div>
 			                		</div>
 			                	</div>
 			                </nav>
@@ -748,10 +755,10 @@
 			</header>
 
 			<main class="page">
-				<section class="hero" style="background-image: url('img/hero/home.webp');">
+				<section class="hero hero--home">
 					<div class="hero__container container">
 						<div class="hero__offer">
-							<h1 class="hero__title title-lg">ремонт выхлопных Систем <span class="color-primary">и&nbsp;чип-тюнинг</span></h1>
+							<h1 class="hero__title title-lg">ремонт выхлопных Систем <span class="color-primary">и чип-тюнинг</span></h1>
 							<div class="hero__location icon-locations">в Санкт-Петербурге</div>
 							<a href="" class="hero__btn btn btn--primary">Записаться на диагностику</a>
 						</div>
@@ -760,7 +767,7 @@
 								<div class="hero__rate-header">
 									<div class="hero__rate-stars icon-star" aria-hidden="true"></div>
 									<div class="hero__rate-origin">
-										<img src="img/yandex-maps-horizontal-logo.svg" alt="Логотип Яндекс.Карты">
+										<img src="img/yandex-maps-horizontal-logo.svg" alt="Логотип Яндекс.Карты" width="64" height="10">
 									</div>
 								</div>
 								<div class="hero__rate-details">
@@ -775,11 +782,14 @@
 					<div class="our-goal__container container">
 						<div class="our-goal__content">
 							<h2 class="our-goal__title decor-line-block">Наша цель</h2>
-							<p class="our-goal__tagline title">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ <span class="color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span></p>
+							<p class="our-goal__tagline">
+								<span class="our-goal__line">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ</span>
+								<span class="our-goal__line color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span>
+							</p>
 						</div>
 					</div>
 				</section>
-				<section class="services">
+				<section class="services services--mosaic">
 					<div class="services__container container">
 						<ul class="services__grid">
 							<li class="services__item">
@@ -1173,7 +1183,7 @@
 					<div class="features__container container">
 						<div class="features__head">
 							
-							<h2 class="features__title title decor-line-block">ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM</h2>
+							<h2 class="features__title title decor-line-block"><span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span></h2>
 							
 							
 							<p class="features__lead">Полный спектр работ по обслуживанию систем экологии автомобиля</p>
@@ -1205,258 +1215,257 @@
 
 				<section class="brands-power">
 					<div class="brands-power__container container">
-						<div class="brands-power__header">
-							<h2 class="brands-power__title title decor-line-block">
-								Узнайте <span class="color-primary">прирост мощности</span> своего автомобиля
-							</h2>
-							<form action="#" class="brands-power__form search-form search-form--secondary icon-search">
-								<input type="text" name="q" class="search-form__input">
-								<button type="submit" class="search-form__btn btn btn--primary btn--small">найти</button>
-							</form>
-						</div>
+						<h2 class="brands-power__title title decor-line-block">
+							<span class="brands-power__title-row">Узнайте <span class="color-primary">прирост мощности</span></span>
+							<span class="brands-power__title-row">своего автомобиля</span>
+						</h2>
+						<form action="#" class="brands-power__form search-form search-form--secondary icon-search">
+							<input type="text" name="q" class="search-form__input">
+							<button type="submit" class="search-form__btn btn btn--primary btn--small">найти</button>
+						</form>
 						<ul class="brands-power__list">
 							<li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Audi.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Audi.svg" alt="Audi" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Audi</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/BMW.svg" alt="Логотип компаниии">
+							            <img src="img/brands/BMW.svg" alt="BMW" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">BMW</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Cadillac.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Cadillac.svg" alt="Cadillac" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Cadillac</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Changan.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Changan.svg" alt="Changan" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Changan</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Chery.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Chery.svg" alt="Chery" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Chery</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Chevrolet.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Chevrolet.svg" alt="Chevrolet" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Chevrolet</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Citroën.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Citroën.svg" alt="Citroën" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Citroën</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Daewoo.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Daewoo.svg" alt="Daewoo" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Daewoo</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Datsun.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Datsun.svg" alt="Datsun" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Datsun</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Exeed.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Exeed.svg" alt="Exeed" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Exeed</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Fiat.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Fiat.svg" alt="Fiat" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Fiat</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Ford.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Ford.svg" alt="Ford" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Ford</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Geely.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Geely.svg" alt="Geely" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Geely</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Haval.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Haval.svg" alt="Haval" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Haval</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Honda.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Honda.svg" alt="Honda" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Honda</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Hyundai.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Hyundai.svg" alt="Hyundai" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Hyundai</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Infiniti.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Infiniti.svg" alt="Infiniti" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Infiniti</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/JAC.svg" alt="Логотип компаниии">
+							            <img src="img/brands/JAC.svg" alt="JAC" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">JAC</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Jeep.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Jeep.svg" alt="Jeep" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Jeep</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Jetour.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Jetour.svg" alt="Jetour" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Jetour</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Kia.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Kia.svg" alt="Kia" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Kia</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Lada.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Lada.svg" alt="Lada" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Lada</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Land-Rover.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Land-Rover.svg" alt="Land Rover" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Land Rover</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Lexus.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Lexus.svg" alt="Lexus" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Lexus</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Li.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Li.svg" alt="Li" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Li</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Lifan.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Lifan.svg" alt="Lifan" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Lifan</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Mazda.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Mazda.svg" alt="Mazda" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Mazda</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Mercedes-benz.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Mercedes-benz.svg" alt="Mercedes-Benz" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Mercedes-Benz</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Mini.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Mini.svg" alt="Mini" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Mini</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Mitsubishi.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Mitsubishi.svg" alt="Mitsubishi" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Mitsubishi</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Nissan.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Nissan.svg" alt="Nissan" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Nissan</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Omoda.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Omoda.svg" alt="Omoda" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Omoda</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Opel.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Opel.svg" alt="Opel" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Opel</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Peugeot.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Peugeot.svg" alt="Peugeot" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Peugeot</span>
 							    </a>
 							</li><li class="brands-power__item">
 							    <a href="" class="brands-power__link">
 							        <span class="brands-power__link-image">
-							            <img src="img/brands/Porsche.svg" alt="Логотип компаниии">
+							            <img src="img/brands/Porsche.svg" alt="Porsche" width="30" height="30" loading="lazy">
 							        </span>
 							        <span class="brands-power__link-name">Porsche</span>
 							    </a>
@@ -1469,7 +1478,10 @@
 					<div class="works__container container">
 						<div class="works__head">
 							
-							<h2 class="works__title title decor-line-block"><span class="color-primary">Выполненные</span> работы</h2>
+							<h2 class="works__title title decor-line-block">
+								<span class="color-primary">Выполненные</span>
+								<span>работы</span>
+							</h2>
 						</div>
 						<div class="works__nav">
 							<button type="button" class="works__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущая работа"></button>
@@ -1764,13 +1776,7 @@
 
 				<section class="reviews reviews--trio">
 					<div class="reviews__container container">
-						<div class="reviews__head">
-							<h2 class="reviews__title title decor-line-block">Отзывы</h2>
-							
-							<a class="reviews__more more-link" href="#">Читать все отзывы</a>
-							
-							
-						</div>
+						<h2 class="reviews__title title decor-line-block">Отзывы</h2>
 						
 						<div class="reviews__slider swiper">
 							<div class="reviews__grid swiper-wrapper">
@@ -1829,8 +1835,17 @@
 							</div>
 						</div>
 						
+						
+						<a class="reviews__more more-link" href="#">Читать все отзывы</a>
+						
+						
+						<div class="reviews__nav">
+							<button type="button" class="reviews__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущий отзыв"></button>
+							<button type="button" class="reviews__next swiper-button-next icon-arrrow-long" aria-label="Следующий отзыв"></button>
+						</div>
 					</div>
 				</section>
+
 				<section class="callback" >
 					<div class="callback__container container">
 						
@@ -1889,17 +1904,11 @@
 				<section class="faq">
 					<div class="faq__container container">
 						<div class="faq__row">
-							<div class="faq__offer">
-								<div class="faq__offer-top">
-									<h2 class="faq__title title decor-line-block">
-										вопрос
-										<span class="color-primary">ответ</span>
-									</h2>
-								</div>
-								<div class="faq__offer-bottom">
-									<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
-									<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
-								</div>
+							<div class="faq__offer-top">
+								<h2 class="faq__title title decor-line-block">
+									вопрос
+									<span class="color-primary">ответ</span>
+								</h2>
 							</div>
 							
 							<ul class="faq__list">
@@ -1938,6 +1947,10 @@
 
 							</ul>
 							
+							<div class="faq__offer-bottom">
+								<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
+								<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -2044,11 +2057,10 @@
 				<section class="blog">
 					<div class="blog__container container">
 						<div class="blog__head">
-							<h2 class="blog__title title decor-line-block">Популярные <span class="color-primary">статьи и видео</span></h2>
-							<div class="blog__nav">
-								<button type="button" class="blog__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
-								<button type="button" class="blog__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
-							</div>
+							<h2 class="blog__title title decor-line-block">
+								<span>Популярные</span>
+								<span class="color-primary">статьи и видео</span>
+							</h2>
 						</div>
 						<div class="blog__slider swiper">
 							<ul class="swiper-wrapper">
@@ -2445,90 +2457,112 @@
 
 							</ul>
 						</div>
+						<div class="blog__nav">
+							<button type="button" class="blog__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
+							<button type="button" class="blog__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
+						</div>
 						<a href="blog.html" class="blog__more btn btn--primary">Смотреть все</a>
 					</div>
 				</section>
 				<section class="vacancies">
 					<div class="vacancies__container container">
-						<h2 class="vacancies__title title decor-line-block"><span class="color-primary">Стань частью</span> Нашей команды</h2>
-						<ul class="vacancies__grid">
-							<li class="vacancies__item">
-								<article class="vacancy-card">
-									<div class="vacancy-card__badge">Опыт работы от 1 года</div>
-									<div class="vacancy-card__body">
-										<h3 class="vacancy-card__title">Автоэлектрик</h3>
-										<ul class="vacancy-card__duties">
-											<li class="vacancy-card__duty">Диагностика и ремонт автоэлектрики</li>
-											<li class="vacancy-card__duty">Установка CarPlay и доп. оборудования</li>
-											<li class="vacancy-card__duty">Работа с блоками управления</li>
-											<li class="vacancy-card__duty">Поиск и устранение неисправностей</li>
-										</ul>
-									</div>
-									<div class="vacancy-card__media">
-										<img
-											class="vacancy-card__img"
-											src="img/vacancies/autoelectrician.webp"
-											alt="Автоэлектрик с диагностическим оборудованием"
-											width="474"
-											height="639"
-											loading="lazy"
-										>
-									</div>
-									<a class="vacancy-card__apply icon-arrow-top-right" href="vacancies.html#callback"><span class="vacancy-card__apply-text">Откликнуться на вакансию</span></a>
-								</article>
-							</li>
-<li class="vacancies__item">
-								<article class="vacancy-card">
-									<div class="vacancy-card__badge">Опыт работы от 1 года</div>
-									<div class="vacancy-card__body">
-										<h3 class="vacancy-card__title">Механик</h3>
-										<ul class="vacancy-card__duties">
-											<li class="vacancy-card__duty">Ремонт и обслуживание автомобилей</li>
-											<li class="vacancy-card__duty">Диагностика узлов и агрегатов</li>
-											<li class="vacancy-card__duty">Работа с ходовой и выхлопом</li>
-											<li class="vacancy-card__duty">Технические работы</li>
-										</ul>
-									</div>
-									<div class="vacancy-card__media">
-										<img
-											class="vacancy-card__img"
-											src="img/vacancies/mechanic.webp"
-											alt="Механик с гаечными ключами"
-											width="474"
-											height="639"
-											loading="lazy"
-										>
-									</div>
-									<a class="vacancy-card__apply icon-arrow-top-right" href="vacancies.html#callback"><span class="vacancy-card__apply-text">Откликнуться на вакансию</span></a>
-								</article>
-							</li>
-<li class="vacancies__item">
-								<article class="vacancy-card">
-									<div class="vacancy-card__badge">Опыт работы от 1 года</div>
-									<div class="vacancy-card__body">
-										<h3 class="vacancy-card__title">Мастер-приёмщик</h3>
-										<ul class="vacancy-card__duties">
-											<li class="vacancy-card__duty">Приём автомобилей и клиентов</li>
-											<li class="vacancy-card__duty">Оценка работ и расчёт стоимости</li>
-											<li class="vacancy-card__duty">Контроль ремонта</li>
-											<li class="vacancy-card__duty">Организация работы сервиса</li>
-										</ul>
-									</div>
-									<div class="vacancy-card__media">
-										<img
-											class="vacancy-card__img"
-											src="img/vacancies/service-advisor.webp"
-											alt="Мастер-приёмщик с планшетом"
-											width="474"
-											height="639"
-											loading="lazy"
-										>
-									</div>
-									<a class="vacancy-card__apply icon-arrow-top-right" href="vacancies.html#callback"><span class="vacancy-card__apply-text">Откликнуться на вакансию</span></a>
-								</article>
-							</li>
+						<h2 class="vacancies__title title decor-line-block">
+							<span class="color-primary">Стань частью</span>
+							<span>Нашей команды</span>
+						</h2>
+						<div class="vacancies__slider swiper">
+							<ul class="vacancies__grid swiper-wrapper">
+								<li class="vacancies__item swiper-slide">
+									<article class="vacancy-card">
+										<div class="vacancy-card__badge">Опыт работы от 1 года</div>
+										<div class="vacancy-card__body">
+											<h3 class="vacancy-card__title">Автоэлектрик</h3>
+											<ul class="vacancy-card__duties">
+												<li class="vacancy-card__duty">Диагностика и ремонт автоэлектрики</li>
+												<li class="vacancy-card__duty">Установка CarPlay и доп. оборудования</li>
+												<li class="vacancy-card__duty">Работа с блоками управления</li>
+												<li class="vacancy-card__duty">Поиск и устранение неисправностей</li>
+											</ul>
+										</div>
+										<div class="vacancy-card__media">
+											<img
+												class="vacancy-card__img"
+												src="img/vacancies/autoelectrician.webp"
+												alt="Автоэлектрик с диагностическим оборудованием"
+												width="474"
+												height="639"
+												loading="lazy"
+											>
+										</div>
+										<a class="vacancy-card__apply icon-arrow-top-right" href="vacancies.html#callback">
+											<span class="vacancy-card__apply-text vacancy-card__apply-text--short">Узнать подробнее</span>
+											<span class="vacancy-card__apply-text vacancy-card__apply-text--full">Откликнуться на вакансию</span>
+										</a>
+									</article>
+								</li>
+<li class="vacancies__item swiper-slide">
+									<article class="vacancy-card">
+										<div class="vacancy-card__badge">Опыт работы от 1 года</div>
+										<div class="vacancy-card__body">
+											<h3 class="vacancy-card__title">Механик</h3>
+											<ul class="vacancy-card__duties">
+												<li class="vacancy-card__duty">Ремонт и обслуживание автомобилей</li>
+												<li class="vacancy-card__duty">Диагностика узлов и агрегатов</li>
+												<li class="vacancy-card__duty">Работа с ходовой и выхлопом</li>
+												<li class="vacancy-card__duty">Технические работы</li>
+											</ul>
+										</div>
+										<div class="vacancy-card__media">
+											<img
+												class="vacancy-card__img"
+												src="img/vacancies/mechanic.webp"
+												alt="Механик с гаечными ключами"
+												width="474"
+												height="639"
+												loading="lazy"
+											>
+										</div>
+										<a class="vacancy-card__apply icon-arrow-top-right" href="vacancies.html#callback">
+											<span class="vacancy-card__apply-text vacancy-card__apply-text--short">Узнать подробнее</span>
+											<span class="vacancy-card__apply-text vacancy-card__apply-text--full">Откликнуться на вакансию</span>
+										</a>
+									</article>
+								</li>
+<li class="vacancies__item swiper-slide">
+									<article class="vacancy-card">
+										<div class="vacancy-card__badge">Опыт работы от 1 года</div>
+										<div class="vacancy-card__body">
+											<h3 class="vacancy-card__title">Мастер-приёмщик</h3>
+											<ul class="vacancy-card__duties">
+												<li class="vacancy-card__duty">Приём автомобилей и клиентов</li>
+												<li class="vacancy-card__duty">Оценка работ и расчёт стоимости</li>
+												<li class="vacancy-card__duty">Контроль ремонта</li>
+												<li class="vacancy-card__duty">Организация работы сервиса</li>
+											</ul>
+										</div>
+										<div class="vacancy-card__media">
+											<img
+												class="vacancy-card__img"
+												src="img/vacancies/service-advisor.webp"
+												alt="Мастер-приёмщик с планшетом"
+												width="474"
+												height="639"
+												loading="lazy"
+											>
+										</div>
+										<a class="vacancy-card__apply icon-arrow-top-right" href="vacancies.html#callback">
+											<span class="vacancy-card__apply-text vacancy-card__apply-text--short">Узнать подробнее</span>
+											<span class="vacancy-card__apply-text vacancy-card__apply-text--full">Откликнуться на вакансию</span>
+										</a>
+									</article>
+								</li>
 
-						</ul>
+							</ul>
+						</div>
+						<div class="vacancies__nav">
+							<button type="button" class="vacancies__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
+							<button type="button" class="vacancies__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
+						</div>
 					</div>
 				</section>
 			</main>
@@ -2612,7 +2646,7 @@
 							</div>
 							<a href="contacts.html" class="footer__address icon-locations">Лужская, дом 3, корпус 2б</a>
 							<a href="contacts.html" class="footer__address icon-locations">Кузнецовская, 52к13</a>
-							<a href="#" class="footer__callback btn btn--primary">Заказать звонок</a>
+							<a href="#" class="footer__callback btn btn--primary btn--medium">Заказать звонок</a>
 						</div>
 
 						<p class="footer__copyright footer__copyright--bottom">© 2026. Все права защищены</p>

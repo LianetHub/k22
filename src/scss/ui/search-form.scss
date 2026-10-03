@@ -3,6 +3,8 @@
 .search-form {
 	// search-form--secondary
 	&.search-form--secondary {
+		height: rem(64);
+		padding: rem(10) rem(10) rem(10) rem(20);
 		background: $color-bg-secondary;
 
 		&::before {
@@ -11,6 +13,11 @@
 
 		.search-form__input::placeholder {
 			color: $color-text-secondary;
+		}
+
+		.search-form__btn {
+			min-height: 0;
+			padding: rem(16) rem(22);
 		}
 	}
 

@@ -4,18 +4,17 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	min-height: rem(320);
 	height: 100%;
 	isolation: isolate;
-	overflow: visible;
+	overflow: hidden;
 	background-color: $color-bg-secondary;
 	background-image: url("@img/decor/dark-pattern.svg");
 	background-repeat: repeat;
 	background-position: 0 0;
 	background-size: auto;
 
-	@media (min-width: $md4) {
-		min-height: rem(346);
+	@media (min-width: $md5) {
+		min-height: rem(314);
 	}
 
 	// vacancy-card__badge
@@ -25,23 +24,22 @@
 		align-self: flex-start;
 		display: inline-flex;
 		align-items: center;
-		padding: rem(16) rem(20);
-		padding-right: rem(48);
+		padding: rem(10) rem(20);
+		padding-right: rem(70);
 		background: $color-bg-primary;
 		color: $color-text-secondary;
 		font-family: $font-inter;
-		font-size: rem(12);
+		font-size: rem(14);
 		font-weight: 700;
 		line-height: 1.2;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(36)}) 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(50)}) 100%, 0 100%);
 
-		@media (min-width: $md4) {
-			padding: rem(20) rem(30);
+		@media (min-width: $md5) {
+			padding: rem(20);
 			padding-right: rem(70);
-			font-size: rem(14);
-			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(50)}) 100%, 0 100%);
+			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 		}
 	}
 
@@ -51,35 +49,28 @@
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
-		gap: rem(16);
+		gap: rem(20);
 		padding: rem(20);
-		padding-right: rem(110);
 		flex-grow: 1;
 
-		@media (min-width: $md4) {
-			gap: rem(20);
-			padding: rem(30);
+		@media (min-width: $md5) {
 			padding-right: rem(200);
 		}
 	}
 
 	// vacancy-card__title
 	&__title {
-		@include mobile-heading-h4;
+		@include desktop-heading-h4;
 		color: $color-text-primary;
-
-		@media (min-width: $md4) {
-			@include desktop-heading-h3;
-		}
 	}
 
 	// vacancy-card__duties
 	&__duties {
 		display: flex;
 		flex-direction: column;
-		gap: rem(12);
+		gap: rem(16);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			gap: rem(20);
 		}
 	}
@@ -90,13 +81,7 @@
 		align-items: center;
 		gap: rem(10);
 		color: $color-text-primary;
-		font-size: rem(14);
-		line-height: 1.2;
-		letter-spacing: -0.02em;
-
-		@media (min-width: $md4) {
-			@include desktop-body-m;
-		}
+		@include desktop-body-s;
 
 		&::before {
 			content: "";
@@ -110,19 +95,17 @@
 
 	// vacancy-card__media
 	&__media {
-		position: absolute;
-		z-index: 1;
-		right: 0;
-		bottom: 0;
-		width: rem(120);
-		height: rem(200);
-		pointer-events: none;
+		display: none;
 
-		@media (min-width: $md4) {
-			top: rem(-12);
-			bottom: auto;
-			width: rem(237);
-			height: rem(346);
+		@media (min-width: $md5) {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			right: 0;
+			display: block;
+			width: rem(215);
+			height: rem(314);
+			pointer-events: none;
 		}
 	}
 
@@ -141,20 +124,18 @@
 		z-index: 2;
 		display: flex;
 		align-items: stretch;
-		min-height: rem(56);
-		padding: 0 rem(52) 0 rem(20);
+		min-height: rem(50);
+		padding: 0 rem(108) 0 rem(20);
 		margin-top: auto;
 		color: $color-accent-primary;
 		font-family: $font-inter;
-		font-size: rem(16);
+		font-size: rem(18);
 		font-weight: 700;
 		line-height: 1;
 		letter-spacing: -0.02em;
 
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			min-height: rem(70);
-			padding: 0 rem(58) 0 rem(30);
-			font-size: rem(22);
 		}
 
 		&:focus-visible {
@@ -177,22 +158,14 @@
 			display: inline-flex !important;
 			align-items: center;
 			justify-content: center;
-			width: rem(84);
-			height: rem(44);
-			padding-left: rem(40);
+			width: rem(108);
+			height: rem(50);
+			padding-left: rem(58);
 			background: $color-bg-primary;
 			color: $color-accent-primary;
-			font-size: rem(18);
+			font-size: rem(20);
 			line-height: 1;
-			clip-path: polygon(#{rem(40)} 0, 100% 0, 100% 100%, 0 100%);
-
-			@media (min-width: $md4) {
-				width: rem(108);
-				height: rem(50);
-				padding-left: rem(58);
-				font-size: rem(20);
-				clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
-			}
+			clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
 
@@ -200,8 +173,28 @@
 	&__apply-text {
 		display: inline-flex;
 		align-items: center;
-		padding-bottom: rem(8);
+		padding-bottom: rem(22);
 		border-bottom: 1px solid $color-accent-primary;
 		transition: opacity 0.2s ease;
+
+		@media (min-width: $md5) {
+			padding-bottom: rem(12);
+		}
+
+		// vacancy-card__apply-text--full
+		&--full {
+			display: none;
+
+			@media (min-width: $md5) {
+				display: inline-flex;
+			}
+		}
+
+		// vacancy-card__apply-text--short
+		&--short {
+			@media (min-width: $md5) {
+				display: none;
+			}
+		}
 	}
 }

@@ -7,10 +7,10 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero" style="background-image: url('@img/hero/home.webp');">
+				<section class="hero hero--home">
 					<div class="hero__container container">
 						<div class="hero__offer">
-							<h1 class="hero__title title-lg">ремонт выхлопных Систем <span class="color-primary">и&nbsp;чип-тюнинг</span></h1>
+							<h1 class="hero__title title-lg">ремонт выхлопных Систем <span class="color-primary">и чип-тюнинг</span></h1>
 							<div class="hero__location icon-locations">в Санкт-Петербурге</div>
 							<a href="" class="hero__btn btn btn--primary">Записаться на диагностику</a>
 						</div>
@@ -19,7 +19,7 @@
 								<div class="hero__rate-header">
 									<div class="hero__rate-stars icon-star" aria-hidden="true"></div>
 									<div class="hero__rate-origin">
-										<img src="@img/yandex-maps-horizontal-logo.svg" alt="Логотип Яндекс.Карты">
+										<img src="@img/yandex-maps-horizontal-logo.svg" alt="Логотип Яндекс.Карты" width="64" height="10">
 									</div>
 								</div>
 								<div class="hero__rate-details">
@@ -34,11 +34,14 @@
 					<div class="our-goal__container container">
 						<div class="our-goal__content">
 							<h2 class="our-goal__title decor-line-block">Наша цель</h2>
-							<p class="our-goal__tagline title">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ <span class="color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span></p>
+							<p class="our-goal__tagline">
+								<span class="our-goal__line">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ</span>
+								<span class="our-goal__line color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span>
+							</p>
 						</div>
 					</div>
 				</section>
-				<section class="services">
+				<section class="services services--mosaic">
 					<div class="services__container container">
 						<ul class="services__grid">
 							@@loop('./html/templates/_service-card.html', './html/json/services-grid.json')
@@ -55,21 +58,20 @@
 				</section>
 				@@include('./html/sections/_features.html', {
 				"mod": "features--home",
-				"title": 'ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM',
+				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
 				"lead": "Полный спектр работ по обслуживанию систем экологии автомобиля",
 				"featuresList": "./html/json/features-home.json"
 				})
 				<section class="brands-power">
 					<div class="brands-power__container container">
-						<div class="brands-power__header">
-							<h2 class="brands-power__title title decor-line-block">
-								Узнайте <span class="color-primary">прирост мощности</span> своего автомобиля
-							</h2>
-							<form action="#" class="brands-power__form search-form search-form--secondary icon-search">
-								<input type="text" name="q" class="search-form__input">
-								<button type="submit" class="search-form__btn btn btn--primary btn--small">найти</button>
-							</form>
-						</div>
+						<h2 class="brands-power__title title decor-line-block">
+							<span class="brands-power__title-row">Узнайте <span class="color-primary">прирост мощности</span></span>
+							<span class="brands-power__title-row">своего автомобиля</span>
+						</h2>
+						<form action="#" class="brands-power__form search-form search-form--secondary icon-search">
+							<input type="text" name="q" class="search-form__input">
+							<button type="submit" class="search-form__btn btn btn--primary btn--small">найти</button>
+						</form>
 						<ul class="brands-power__list">
 							@@loop('./html/templates/_brand-item.html', './html/json/brands-poser.json')
 						</ul>
@@ -186,26 +188,38 @@
 				<section class="blog">
 					<div class="blog__container container">
 						<div class="blog__head">
-							<h2 class="blog__title title decor-line-block">Популярные <span class="color-primary">статьи и видео</span></h2>
-							<div class="blog__nav">
-								<button type="button" class="blog__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
-								<button type="button" class="blog__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
-							</div>
+							<h2 class="blog__title title decor-line-block">
+								<span>Популярные</span>
+								<span class="color-primary">статьи и видео</span>
+							</h2>
 						</div>
 						<div class="blog__slider swiper">
 							<ul class="swiper-wrapper">
 								@@loop('./html/templates/_blog-card.html', './html/json/blog.json')
 							</ul>
 						</div>
+						<div class="blog__nav">
+							<button type="button" class="blog__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
+							<button type="button" class="blog__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
+						</div>
 						<a href="blog.html" class="blog__more btn btn--primary">Смотреть все</a>
 					</div>
 				</section>
 				<section class="vacancies">
 					<div class="vacancies__container container">
-						<h2 class="vacancies__title title decor-line-block"><span class="color-primary">Стань частью</span> Нашей команды</h2>
-						<ul class="vacancies__grid">
-							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
-						</ul>
+						<h2 class="vacancies__title title decor-line-block">
+							<span class="color-primary">Стань частью</span>
+							<span>Нашей команды</span>
+						</h2>
+						<div class="vacancies__slider swiper">
+							<ul class="vacancies__grid swiper-wrapper">
+								@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
+							</ul>
+						</div>
+						<div class="vacancies__nav">
+							<button type="button" class="vacancies__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
+							<button type="button" class="vacancies__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
+						</div>
 					</div>
 				</section>
 			</main>

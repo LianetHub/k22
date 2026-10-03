@@ -1,25 +1,28 @@
 @use "../abstracts" as *;
 
 .gallery {
-	padding-block: rem(48);
 	background: $color-bg-primary;
 
-	@media (min-width: $md4) {
-		padding-block: rem(80);
-	}
+	.page > & {
+		padding: rem(60) 0;
 
-	@media (min-width: $md2) {
-		padding-block: rem(100);
+		@media (min-width: $md4) {
+			padding: rem(80) 0;
+		}
 	}
 
 	// .gallery__container
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(32);
+		gap: rem(40);
 
-		@media (min-width: $md4) {
-			gap: rem(40);
+		@media (min-width: $md3) {
+			padding-inline: rem(20);
+		}
+
+		@media (min-width: $md1) {
+			padding-inline: rem(30);
 		}
 	}
 
@@ -30,7 +33,6 @@
 	&__slider {
 		min-width: 0;
 		max-width: 100%;
-		overflow: visible;
 
 		.swiper-slide {
 			height: auto;
@@ -40,16 +42,16 @@
 	// .gallery__slide
 	&__slide {
 		display: block;
-		width: rem(240);
+		width: 100%;
 		aspect-ratio: 1;
 		overflow: hidden;
 
 		@media (min-width: $md4) {
-			width: rem(280);
+			width: rem(212);
 		}
 
-		@media (min-width: $md2) {
-			width: rem(348);
+		@media (min-width: $md1) {
+			width: rem(323);
 		}
 	}
 }

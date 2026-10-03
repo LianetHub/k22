@@ -1,6 +1,194 @@
 @use "abstracts" as *;
 
 .hero {
+    // .hero--home
+    &.hero--home {
+        min-height: rem(770);
+        background-color: $color-bg-secondary;
+        background-image:
+            linear-gradient(180deg, rgba($color-bg-secondary, 0) rem(320), $color-bg-secondary rem(420)),
+            url("@img/hero/home.webp");
+        background-repeat: no-repeat;
+        background-position: center top, 61% -27vw;
+        background-size: auto, 366% auto;
+
+        @media (min-width: $md4) {
+            min-height: rem(600);
+            background-image: url("@img/hero/home.webp");
+            background-position: right center;
+            background-size: cover;
+        }
+
+        @media (min-width: $md1) {
+            min-height: rem(700);
+            background-position: 72% center;
+        }
+
+        // .hero__container
+        .hero__container {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: rem(20);
+            padding-top: rem(450);
+            padding-bottom: rem(40);
+
+            @media (min-width: $md4) {
+                justify-content: space-between;
+                padding-top: rem(100);
+            }
+
+            @media (min-width: $md1) {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 0;
+                padding-top: rem(40);
+            }
+        }
+
+        // .hero__offer
+        .hero__offer {
+            width: 100%;
+            max-width: none;
+            padding-top: 0;
+
+            @media (min-width: $md4) {
+                max-width: rem(548);
+            }
+
+            @media (min-width: $md1) {
+                align-self: center;
+                max-width: rem(681);
+            }
+        }
+
+        // .hero__title
+        .hero__title {
+            @include desktop-heading-h3;
+
+            @media (min-width: $md4) {
+                @include tablet-heading-h1;
+            }
+
+            @media (min-width: $md1) {
+                @include desktop-heading-h2;
+            }
+        }
+
+        // .hero__location
+        .hero__location {
+            margin-top: rem(10);
+            @include mobile-heading-h4;
+
+            &::before {
+                align-self: center;
+                font-size: rem(18);
+                width: rem(18);
+                height: rem(18);
+            }
+
+            @media (min-width: $md4) {
+                margin-top: rem(20);
+                @include desktop-heading-h3;
+
+                &::before {
+                    font-size: rem(24);
+                    width: rem(24);
+                    height: rem(24);
+                }
+            }
+        }
+
+        // .hero__btn
+        .hero__btn {
+            width: 100%;
+            margin-top: rem(20);
+
+            @media (min-width: $md4) {
+                width: auto;
+            }
+
+            @media (min-width: $md1) {
+                margin-top: rem(40);
+            }
+        }
+
+        // .hero__side
+        .hero__side {
+            align-self: stretch;
+            width: 100%;
+            margin-left: 0;
+
+            @media (min-width: $md4) {
+                align-self: flex-start;
+                width: auto;
+            }
+
+            @media (min-width: $md1) {
+                align-self: flex-end;
+                margin-left: auto;
+            }
+        }
+
+        // .hero__rate
+        .hero__rate {
+            width: 100%;
+            max-width: none;
+            padding: rem(20);
+            clip-path: none;
+
+            @media (min-width: $md4) {
+                width: rem(358);
+                max-width: rem(358);
+                padding: rem(24) rem(44) rem(14);
+                clip-path: polygon(rem(20) 0, 100% 0, calc(100% - #{rem(20)}) 100%, 0 100%);
+            }
+        }
+
+        // .hero__rate-origin
+        .hero__rate-origin img {
+            display: block;
+            width: rem(90);
+            height: rem(14);
+
+            @media (min-width: $md4) {
+                width: rem(64);
+                height: rem(10);
+            }
+        }
+
+        // .hero__rate-details
+        .hero__rate-details {
+            margin-top: rem(20);
+            gap: rem(10);
+
+            @media (min-width: $md4) {
+                margin-top: rem(12);
+                gap: rem(6);
+            }
+        }
+
+        // .hero__rate-value
+        .hero__rate-value {
+            @include tablet-heading-h1;
+
+            @media (min-width: $md4) {
+                @include desktop-heading-h2;
+                line-height: 1;
+            }
+        }
+
+        // .hero__rate-text
+        .hero__rate-text {
+            @include desktop-body-s;
+
+            @media (min-width: $md4) {
+                @include desktop-body-m;
+            }
+        }
+    }
+
     // .hero--diagnostics
     &.hero--diagnostics {
         background-position: 18% center;

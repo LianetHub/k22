@@ -1,14 +1,6 @@
 <section class="reviews@@if(typeof mod !== 'undefined'){ @@mod}">
 	<div class="reviews__container container">
-		<div class="reviews__head">
-			<h2 class="reviews__title title decor-line-block">Отзывы</h2>
-			@@if(typeof moreHref !== 'undefined') {
-			<a class="reviews__more more-link" href="@@moreHref">Читать все отзывы</a>
-			}
-			@@if(typeof moreHref === 'undefined') {
-			<a class="reviews__more more-link" href="#">Читать все отзывы</a>
-			}
-		</div>
+		<h2 class="reviews__title title decor-line-block">Отзывы</h2>
 		@@if(typeof reviewsList !== 'undefined') {
 		<div class="reviews__slider swiper">
 			<div class="reviews__grid swiper-wrapper">
@@ -16,5 +8,15 @@
 			</div>
 		</div>
 		}
+		@@if(typeof moreHref !== 'undefined') {
+		<a class="reviews__more more-link" href="@@moreHref">Читать все отзывы</a>
+		}
+		@@if(typeof moreHref === 'undefined') {
+		<a class="reviews__more more-link" href="#">Читать все отзывы</a>
+		}
+		<div class="reviews__nav">
+			<button type="button" class="reviews__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущий отзыв"></button>
+			<button type="button" class="reviews__next swiper-button-next icon-arrrow-long" aria-label="Следующий отзыв"></button>
+		</div>
 	</div>
 </section>

@@ -3,6 +3,8 @@
 .review-card {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	min-width: 0;
 	height: 100%;
 	background-color: $color-bg-secondary;
 	background-image: url("@img/decor/dark-pattern.svg");
@@ -14,25 +16,16 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: rem(24);
+		gap: rem(30);
 		padding: rem(20);
 		flex-grow: 1;
-
-		@media (min-width: $md4) {
-			gap: rem(30);
-			padding: rem(30);
-		}
 	}
 
 	// review-card__man
 	&__man {
 		display: flex;
 		align-items: flex-start;
-		gap: rem(16);
-
-		@media (min-width: $md4) {
-			gap: rem(20);
-		}
+		gap: rem(10);
 
 		&[class^="icon-"]::before,
 		&[class*=" icon-"]::before {
@@ -40,11 +33,16 @@
 			flex-shrink: 0;
 			align-items: center;
 			justify-content: center;
-			width: rem(54);
-			height: rem(54);
+			width: rem(40);
+			height: rem(40);
 			background: $color-accent-secondary;
 			color: $color-accent-primary;
-			font-size: rem(30);
+			font-size: rem(20);
+
+			@media (min-width: $md5) {
+				width: rem(44);
+				height: rem(44);
+			}
 		}
 	}
 
@@ -58,17 +56,22 @@
 		min-width: 0;
 		align-self: stretch;
 
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			gap: rem(10);
 		}
 	}
 
 	// review-card__name
 	&__name {
-		@include mobile-heading-h4;
+		font-family: $fontfamily;
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: em(-0.18, 18);
+		text-transform: uppercase;
 		color: $color-text-primary;
 
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			@include desktop-heading-h4;
 		}
 	}
@@ -87,20 +90,20 @@
 	&__stars {
 		display: flex;
 		flex-shrink: 0;
-		width: rem(96);
+		width: rem(86);
 		color: #ffb800;
 
 		&[class^="icon-"]::before,
 		&[class*=" icon-"]::before {
-			font-size: rem(16);
+			font-size: rem(14);
 			text-shadow:
-				#{rem(20)} 0 0 currentColor,
-				#{rem(40)} 0 0 currentColor,
-				#{rem(60)} 0 0 currentColor,
-				#{rem(80)} 0 0 currentColor;
+				#{rem(18)} 0 0 currentColor,
+				#{rem(36)} 0 0 currentColor,
+				#{rem(54)} 0 0 currentColor,
+				#{rem(72)} 0 0 currentColor;
 		}
 
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			width: rem(116);
 
 			&[class^="icon-"]::before,
@@ -119,10 +122,6 @@
 	&__text {
 		@include desktop-body-s;
 		color: $color-text-primary;
-
-		@media (min-width: $md4) {
-			@include desktop-body-m;
-		}
 
 		p {
 			margin-block: 0;
@@ -146,27 +145,21 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(6);
-		padding: rem(16) rem(20) rem(16) rem(60);
+		padding: rem(20) rem(30) rem(20) rem(88);
 		background: $color-bg-primary;
 		color: $color-text-primary;
 		font-family: $font-inter;
-		font-size: rem(12);
+		font-size: rem(14);
 		font-weight: 700;
 		line-height: 1.2;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		clip-path: polygon(#{rem(40)} 0, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 
 		&::before {
 			display: block;
 			color: $color-accent-primary;
 			font-size: rem(12);
-		}
-
-		@media (min-width: $md4) {
-			padding: rem(20) rem(30) rem(20) rem(88);
-			font-size: rem(14);
-			clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
 }

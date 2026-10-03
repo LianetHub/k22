@@ -622,11 +622,11 @@
 			                		</li>
 
 			                		<li class="menu__item menu__item--has-dropdown">
-			                			<button type="button" class="menu__link menu__link--dropdown icon-car" aria-expanded="false" data-menu-trigger>
+			                			<button type="button" class="menu__link menu__link--dropdown icon-engine" aria-expanded="false" data-menu-trigger>
 			                				Автосервис
 			                			</button>
 			                			<div class="menu__dropdown menu__dropdown--compact" hidden data-menu-dropdown>
-			                				<p class="menu__dropdown-title icon-car">Автосервис</p>
+			                				<p class="menu__dropdown-title icon-engine">Автосервис</p>
 			                				<div class="menu__cols">
 			                					<div class="menu__group menu__group--flat">
 			                						<ul class="menu__services">
@@ -708,17 +708,24 @@
 			                			<a href="blog.html" class="menu__link">Блог</a>
 			                		</li>
 			                		<li class="menu__item">
-			                			<a href="contacts.html" class="menu__link">Контакты</a>
+			                			<a href="contacts.html" class="menu__link icon-locations">Контакты</a>
 			                		</li>
 			                	</ul>
 
 			                	<div class="menu__mobile-contacts">
-			                		<a href="tel:+79214019898" class="menu__mobile-phone">8(921)401-98-98</a>
-			                		<p class="menu__mobile-hours icon-clock">пн-сб с 10:00 до 20:00</p>
-			                		<a href="contacts.html" class="menu__mobile-address icon-locations">Лужская, дом 3, корпус 2б</a>
-			                		<div class="menu__mobile-socials">
-			                			<a href="" aria-label="Max" class="menu__mobile-social social-item icon-max"></a>
-			                			<a href="" aria-label="Telegram" class="menu__mobile-social social-item icon-telegram"></a>
+			                		<div class="menu__mobile-addresses">
+			                			<p class="menu__mobile-address">Кузнецовская, 52к13</p>
+			                			<p class="menu__mobile-address">Лужская, дом 3, корпус 2б</p>
+			                		</div>
+			                		<div class="menu__mobile-bottom">
+			                			<a href="tel:+79214019898" class="menu__mobile-phone icon-phone">
+			                				<span class="menu__mobile-phone-value">8(921)401-98-98</span>
+			                				<span class="menu__mobile-hours">пн-сб с 10:00 до 20:00</span>
+			                			</a>
+			                			<div class="menu__mobile-socials">
+			                				<a href="" aria-label="Max" class="menu__mobile-social social-item icon-max"></a>
+			                				<a href="" aria-label="Telegram" class="menu__mobile-social social-item icon-telegram"></a>
+			                			</div>
 			                		</div>
 			                	</div>
 			                </nav>
@@ -1103,7 +1110,7 @@
 					<div class="features__container container">
 						<div class="features__head">
 							
-							<h2 class="features__title title decor-line-block">ПОЧЕМУ ВЫБИРАЮТ <span class="color-primary">K22</span> POWER TEAM</h2>
+							<h2 class="features__title title decor-line-block"><span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span></h2>
 							
 							
 						</div>
@@ -1185,17 +1192,11 @@
 				<section class="faq">
 					<div class="faq__container container">
 						<div class="faq__row">
-							<div class="faq__offer">
-								<div class="faq__offer-top">
-									<h2 class="faq__title title decor-line-block">
-										вопрос
-										<span class="color-primary">ответ</span>
-									</h2>
-								</div>
-								<div class="faq__offer-bottom">
-									<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
-									<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
-								</div>
+							<div class="faq__offer-top">
+								<h2 class="faq__title title decor-line-block">
+									вопрос
+									<span class="color-primary">ответ</span>
+								</h2>
 							</div>
 							
 							<ul class="faq__list">
@@ -1226,19 +1227,17 @@
 
 							</ul>
 							
+							<div class="faq__offer-bottom">
+								<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
+								<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+							</div>
 						</div>
 					</div>
 				</section>
 
 				<section class="reviews">
 					<div class="reviews__container container">
-						<div class="reviews__head">
-							<h2 class="reviews__title title decor-line-block">Отзывы</h2>
-							
-							<a class="reviews__more more-link" href="#">Читать все отзывы</a>
-							
-							
-						</div>
+						<h2 class="reviews__title title decor-line-block">Отзывы</h2>
 						
 						<div class="reviews__slider swiper">
 							<div class="reviews__grid swiper-wrapper">
@@ -1314,15 +1313,27 @@
 							</div>
 						</div>
 						
+						
+						<a class="reviews__more more-link" href="#">Читать все отзывы</a>
+						
+						
+						<div class="reviews__nav">
+							<button type="button" class="reviews__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущий отзыв"></button>
+							<button type="button" class="reviews__next swiper-button-next icon-arrrow-long" aria-label="Следующий отзыв"></button>
+						</div>
 					</div>
 				</section>
+
 				<section class="works">
 					<div class="works__container container">
 						<div class="works__head">
 							
 							<div class="works__tag decor-line-inline">Автосервис</div>
 							
-							<h2 class="works__title title"><span class="color-primary">Выполненные</span> работы</h2>
+							<h2 class="works__title title">
+								<span class="color-primary">Выполненные</span>
+								<span>работы</span>
+							</h2>
 						</div>
 						<div class="works__nav">
 							<button type="button" class="works__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущая работа"></button>
@@ -1657,7 +1668,7 @@
 							</div>
 							<a href="contacts.html" class="footer__address icon-locations">Лужская, дом 3, корпус 2б</a>
 							<a href="contacts.html" class="footer__address icon-locations">Кузнецовская, 52к13</a>
-							<a href="#" class="footer__callback btn btn--primary">Заказать звонок</a>
+							<a href="#" class="footer__callback btn btn--primary btn--medium">Заказать звонок</a>
 						</div>
 
 						<p class="footer__copyright footer__copyright--bottom">© 2026. Все права защищены</p>
