@@ -585,6 +585,70 @@ document.addEventListener("DOMContentLoaded", () => {
 		phoneInput.addEventListener("paste", onPhonePaste);
 	});
 
+	// forms
+	const leadForms = document.querySelectorAll(".callback__form, .article__form, .article__comment-form");
+	const namePattern = /^[A-Za-zА-Яа-яЁё]+(?:[ -][A-Za-zА-Яа-яЁё]+)*$/;
+
+	function isNameValid(value) {
+		return namePattern.test(value.trim());
+	}
+
+	function isPhoneValid(value) {
+		return value.replace(/\D/g, "").length === 11;
+	}
+
+	function isLeadInputValid(input) {
+		if (input.name === "name") return isNameValid(input.value);
+		if (input.type === "tel") return isPhoneValid(input.value);
+		return true;
+	}
+
+	function setFieldError(field, input, invalid) {
+		field.classList.toggle("is-error", invalid);
+
+		if (invalid) {
+			input.setAttribute("aria-invalid", "true");
+		} else {
+			input.removeAttribute("aria-invalid");
+		}
+	}
+
+	function validateLeadForm(form) {
+		let valid = true;
+
+		form.querySelectorAll(".form-field").forEach((field) => {
+			const input = field.querySelector("input");
+			if (!input || (input.name !== "name" && input.type !== "tel")) return;
+
+			const invalid = !isLeadInputValid(input);
+			setFieldError(field, input, invalid);
+			if (invalid) valid = false;
+		});
+
+		const policy = form.querySelector('input[type="checkbox"][required]');
+		if (policy && !policy.checked) valid = false;
+
+		return valid;
+	}
+
+	leadForms.forEach((form) => {
+		form.addEventListener("submit", (event) => {
+			event.preventDefault();
+			validateLeadForm(form);
+		});
+
+		form.addEventListener("input", (event) => {
+			const input = event.target;
+			if (!input || typeof input.closest !== "function") return;
+
+			const field = input.closest(".form-field");
+			if (!field || !form.contains(field) || !field.classList.contains("is-error")) return;
+			if (input.name !== "name" && input.type !== "tel") return;
+
+			setFieldError(field, input, false);
+		});
+	});
+
 	// cookies
 	const cookies = document.querySelector("[data-cookies]");
 	if (cookies) {

@@ -1082,3 +1082,137 @@ describe("несколько блоков на одной странице", () 
 		expect(ctx.$("[data-power]").classList.contains("is-empty")).toBe(false);
 	});
 });
+
+// ─── 9. Валидация заявок ─────────────────────────────────────────────────────
+
+const LEAD_FORM = `
+<form class="callback__form" action="#" method="post" novalidate>
+	<label class="form-field icon-user">
+		<input class="form-control" type="text" name="name" id="name" placeholder="ваше имя" required>
+		<span class="form-field__error icon-warning"><span>Ошибка<br>имени</span></span>
+	</label>
+	<label class="form-field icon-phone">
+		<input class="form-control" type="tel" name="phone" id="phone" placeholder="+7 (___)-___-__-__" required>
+		<span class="form-field__error icon-warning"><span>Ошибка<br>телефона</span></span>
+	</label>
+	<button type="submit">Оставить заявку</button>
+</form>`;
+
+const ARTICLE_LEAD_FORM = `
+<form class="article__form" action="#" method="post" novalidate>
+	<label class="form-field">
+		<input class="form-control" type="text" name="name" id="article-name" required>
+	</label>
+	<label class="form-field">
+		<input class="form-control" type="tel" name="phone" id="article-phone" required>
+	</label>
+	<label class="form-check">
+		<input type="checkbox" name="policy" required>
+	</label>
+	<button type="submit">Оставить заявку</button>
+</form>`;
+
+function submitForm(ctx, selector) {
+	const form = ctx.$(selector);
+	const event = new ctx.window.Event("submit", { bubbles: true, cancelable: true });
+	form.dispatchEvent(event);
+	return event;
+}
+
+describe("валидация заявок", () => {
+	it("до submit не показывает ошибку", () => {
+		const ctx = boot(LEAD_FORM);
+		const name = ctx.$("#name");
+		name.value = "Алек35сей";
+		name.dispatchEvent(new ctx.window.Event("input", { bubbles: true }));
+
+		expect(ctx.$(".form-field.is-error")).toBeNull();
+		expect(name.getAttribute("aria-invalid")).toBeNull();
+	});
+
+	it("пустое имя помечается после submit", () => {
+		const ctx = boot(LEAD_FORM);
+		submitForm(ctx, ".callback__form");
+
+		const name = ctx.$("#name");
+		expect(name.closest(".form-field").classList.contains("is-error")).toBe(true);
+		expect(name.getAttribute("aria-invalid")).toBe("true");
+	});
+
+	it("имя с цифрами помечается после submit", () => {
+		const ctx = boot(LEAD_FORM);
+		const name = ctx.$("#name");
+		name.value = "Алек35сей";
+		submitForm(ctx, ".callback__form");
+
+		expect(name.closest(".form-field").classList.contains("is-error")).toBe(true);
+	});
+
+	it("неполный телефон помечается после submit", () => {
+		const ctx = boot(LEAD_FORM);
+		type(ctx, "#phone", "921");
+		submitForm(ctx, ".callback__form");
+
+		expect(ctx.$("#phone").closest(".form-field").classList.contains("is-error")).toBe(true);
+	});
+
+	it("ввод в поле с ошибкой снимает её, даже если значение всё ещё неверное", () => {
+		const ctx = boot(LEAD_FORM);
+		const name = ctx.$("#name");
+		name.value = "Алек35сей";
+		submitForm(ctx, ".callback__form");
+
+		name.value = "Алек36сей";
+		name.dispatchEvent(new ctx.window.Event("input", { bubbles: true }));
+
+		expect(name.closest(".form-field").classList.contains("is-error")).toBe(false);
+		expect(name.getAttribute("aria-invalid")).toBeNull();
+	});
+
+	it("ошибка возвращается только на следующем submit", () => {
+		const ctx = boot(LEAD_FORM);
+		const name = ctx.$("#name");
+		name.value = "Алек35сей";
+		submitForm(ctx, ".callback__form");
+
+		name.value = "Алек36сей";
+		name.dispatchEvent(new ctx.window.Event("input", { bubbles: true }));
+		expect(name.closest(".form-field").classList.contains("is-error")).toBe(false);
+
+		submitForm(ctx, ".callback__form");
+		expect(name.closest(".form-field").classList.contains("is-error")).toBe(true);
+
+		name.value = "Алексей";
+		name.dispatchEvent(new ctx.window.Event("input", { bubbles: true }));
+		submitForm(ctx, ".callback__form");
+		expect(name.closest(".form-field").classList.contains("is-error")).toBe(false);
+	});
+
+	it("валидная форма не уходит со страницы", () => {
+		const ctx = boot(LEAD_FORM);
+		const href = ctx.window.location.href;
+
+		ctx.$("#name").value = "Алексей";
+		type(ctx, "#phone", "9214019898");
+
+		const event = submitForm(ctx, ".callback__form");
+
+		expect(event.defaultPrevented).toBe(true);
+		expect(ctx.window.location.href).toBe(href);
+		expect(ctx.$(".form-field.is-error")).toBeNull();
+	});
+
+	it("неотмеченная политика не подсвечивает верные поля и не уводит со страницы", () => {
+		const ctx = boot(ARTICLE_LEAD_FORM);
+		const href = ctx.window.location.href;
+
+		ctx.$("#article-name").value = "Анна-Мария";
+		type(ctx, "#article-phone", "89214019898");
+
+		const event = submitForm(ctx, ".article__form");
+
+		expect(event.defaultPrevented).toBe(true);
+		expect(ctx.window.location.href).toBe(href);
+		expect(ctx.$(".form-field.is-error")).toBeNull();
+	});
+});

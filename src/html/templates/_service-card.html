@@ -8,12 +8,9 @@
 			<img class="services-card__icon-img" src="@@iconImg" alt="@@iconAlt">
 		</span>
 		}
-		@@if(typeof icon !== 'undefined'){
-		<span class="services-card__icon @@icon" aria-hidden="true"></span>
-		}
 		<div class="services-card__body">
 			<div class="services-card__heading">
-				<h3 class="services-card__title">@@title</h3>
+				<h3 class="services-card__title@@if(typeof icon !== 'undefined'){ @@icon}">@@title</h3>
 				@@if(typeof priceInline !== 'undefined'){
 				<p class="services-card__price services-card__price--inline">@@priceInline</p>
 				}
@@ -50,6 +47,7 @@
 		}
 		<a class="services-card__link@@if(typeof price === 'undefined'){ icon-arrow-top-right}" href="@@href">
 			<span class="services-card__link-text">@@link</span>
+			<span class="services-card__link-btn btn btn--primary">@@link</span>
 			@@if(typeof price !== 'undefined'){
 			<span class="services-card__price">@@price</span>
 			}

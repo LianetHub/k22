@@ -63,8 +63,7 @@
 			background-color: $color-bg-secondary;
 		}
 
-		.services-card__price:not(.services-card__price--inline),
-		.services-card__price:not(.services-card__price--inline)::before {
+		.services-card__price:not(.services-card__price--inline) {
 			background-color: $color-bg-primary;
 		}
 	}

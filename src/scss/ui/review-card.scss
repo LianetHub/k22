@@ -33,23 +33,18 @@
 		@media (min-width: $md4) {
 			gap: rem(20);
 		}
-	}
 
-	// review-card__avatar
-	&__avatar {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(54);
-		height: rem(54);
-		background: $color-accent-secondary;
-		color: $color-accent-primary;
-		font-size: rem(30);
-		line-height: 1;
-
-		&::before {
-			display: block;
+		&[class^="icon-"]::before,
+		&[class*=" icon-"]::before {
+			display: flex;
+			flex-shrink: 0;
+			align-items: center;
+			justify-content: center;
+			width: rem(54);
+			height: rem(54);
+			background: $color-accent-secondary;
+			color: $color-accent-primary;
+			font-size: rem(30);
 		}
 	}
 
@@ -92,21 +87,31 @@
 	&__stars {
 		display: flex;
 		flex-shrink: 0;
-		gap: rem(4);
+		width: rem(96);
 		color: #ffb800;
-	}
 
-	// review-card__star
-	&__star {
-		font-size: rem(16);
-		line-height: 1;
-
-		&::before {
-			display: block;
+		&[class^="icon-"]::before,
+		&[class*=" icon-"]::before {
+			font-size: rem(16);
+			text-shadow:
+				#{rem(20)} 0 0 currentColor,
+				#{rem(40)} 0 0 currentColor,
+				#{rem(60)} 0 0 currentColor,
+				#{rem(80)} 0 0 currentColor;
 		}
 
 		@media (min-width: $md4) {
-			font-size: rem(20);
+			width: rem(116);
+
+			&[class^="icon-"]::before,
+			&[class*=" icon-"]::before {
+				font-size: rem(20);
+				text-shadow:
+					#{rem(24)} 0 0 currentColor,
+					#{rem(48)} 0 0 currentColor,
+					#{rem(72)} 0 0 currentColor,
+					#{rem(96)} 0 0 currentColor;
+			}
 		}
 	}
 
@@ -136,24 +141,12 @@
 		margin-top: auto;
 	}
 
-	// review-card__cut
-	&__cut {
-		flex-shrink: 0;
-		width: rem(40);
-		background: $color-bg-primary;
-		clip-path: polygon(100% 0, 100% 100%, 0 100%);
-
-		@media (min-width: $md4) {
-			width: rem(58);
-		}
-	}
-
 	// review-card__address
 	&__address {
 		display: inline-flex;
 		align-items: center;
 		gap: rem(6);
-		padding: rem(16) rem(20);
+		padding: rem(16) rem(20) rem(16) rem(60);
 		background: $color-bg-primary;
 		color: $color-text-primary;
 		font-family: $font-inter;
@@ -162,6 +155,7 @@
 		line-height: 1.2;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
+		clip-path: polygon(#{rem(40)} 0, 100% 0, 100% 100%, 0 100%);
 
 		&::before {
 			display: block;
@@ -170,8 +164,9 @@
 		}
 
 		@media (min-width: $md4) {
-			padding: rem(20) rem(30);
+			padding: rem(20) rem(30) rem(20) rem(88);
 			font-size: rem(14);
+			clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
 }

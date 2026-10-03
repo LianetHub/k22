@@ -87,7 +87,7 @@
 		display: inline-flex;
 		align-items: center;
 		height: rem(40);
-		padding: rem(8) rem(16) rem(10);
+		padding: rem(8) rem(62) rem(10) rem(16);
 		background-color: $color-accent-primary;
 		font-size: rem(16);
 		font-weight: 700;
@@ -95,30 +95,18 @@
 		letter-spacing: -0.02em;
 		text-transform: uppercase;
 		color: $color-bg-primary;
+		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(46)}) 100%, 0 100%);
 
 		@media (min-width: $md4) {
 			height: rem(50);
-			padding: rem(10) rem(20) rem(12);
+			padding: rem(10) rem(78) rem(12) rem(20);
 			font-size: rem(22);
 			letter-spacing: -0.02em;
+			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 		}
 
 		&:empty {
 			display: none;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 100%;
-			width: rem(46);
-			height: 100%;
-			background: url("@img/decor/offer-badge-tail.svg") center / 100% 100% no-repeat;
-
-			@media (min-width: $md4) {
-				width: rem(58);
-			}
 		}
 	}
 

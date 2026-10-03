@@ -9,9 +9,9 @@
 			}
 		</div>
 		@@if(typeof featuresList !== 'undefined') {
-		<div class="features__grid">
+		<ul class="features__grid">
 			@@loop('../templates/_feauture-card.html', '@@featuresList')
-		</div>
+		</ul>
 		}
 	</div>
 </section>

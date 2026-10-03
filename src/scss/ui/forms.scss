@@ -33,8 +33,90 @@
 
 .form-field {
 	position: relative;
-	display: block;
+	display: flex;
+	align-items: center;
+	gap: rem(10);
 	width: 100%;
+	height: rem(48);
+	padding: 0 rem(20);
+	background: $color-bg-primary;
+
+	@media (min-width: $md4) {
+		height: rem(68);
+		padding: 0 rem(30);
+	}
+
+	&::before {
+		flex-shrink: 0;
+		font-size: rem(12);
+		line-height: 1;
+		color: $color-accent-primary;
+		pointer-events: none;
+	}
+
+	.form-control {
+		flex: 1 1 auto;
+		width: auto;
+		min-width: 0;
+		min-height: 0;
+		padding: 0;
+		background: transparent;
+		font-family: $font-inter;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: rem(-0.28);
+		color: $color-text-primary;
+		caret-color: $color-text-secondary;
+
+		&::placeholder {
+			color: $color-text-secondary;
+			letter-spacing: rem(-0.28);
+		}
+
+		@media (min-width: $md4) {
+			font-size: rem(22);
+			letter-spacing: 0;
+
+			&::placeholder {
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	// form-field--xs
+	&--xs {
+		height: rem(48);
+		padding: 0 rem(20);
+
+		.form-control {
+			font-size: rem(14);
+			letter-spacing: rem(-0.28);
+
+			&::placeholder {
+				letter-spacing: rem(-0.28);
+			}
+		}
+
+		.form-field__error {
+			font-size: rem(14);
+			letter-spacing: rem(-0.28);
+		}
+
+		@media (min-width: $md4) {
+			height: rem(48);
+			padding: 0 rem(20);
+
+			.form-control {
+				font-size: rem(14);
+				letter-spacing: rem(-0.28);
+
+				&::placeholder {
+					letter-spacing: rem(-0.28);
+				}
+			}
+		}
+	}
 
 	// form-field__label
 	&__label {
@@ -43,21 +125,45 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
-
 	}
 
 	// form-field__error
 	&__error {
 		display: none;
-		margin-top: rem(6);
-		font-size: rem(12);
-		line-height: math.div(14, 12);
-		color: #c0392b;
+		flex-shrink: 0;
+		align-items: center;
+		gap: rem(10);
+		font-family: $font-inter;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: rem(-0.28);
+		text-align: right;
+		white-space: pre-line;
+		color: $color-accent-primary;
+
+		&::before {
+			order: 1;
+			flex-shrink: 0;
+			font-size: rem(26);
+			line-height: 1;
+		}
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			letter-spacing: rem(-0.32);
+		}
 	}
 
 	&.is-error {
+		background: $color-accent-secondary;
+
+		.form-control {
+			color: $color-accent-primary;
+		}
+
 		.form-field__error {
-			display: block;
+			display: inline-flex;
 		}
 	}
 }

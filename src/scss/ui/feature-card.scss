@@ -5,8 +5,9 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	gap: rem(6);
 	min-height: rem(280);
+	padding: rem(20) rem(20) rem(24);
 	height: 100%;
 	isolation: isolate;
 	overflow: hidden;
@@ -17,6 +18,7 @@
 
 	@media (min-width: $md4) {
 		min-height: rem(360);
+		padding: 0 rem(30) rem(30);
 	}
 
 	&::after {
@@ -32,64 +34,31 @@
 		pointer-events: none;
 	}
 
-	// feature-card__notch
-	&__notch {
-		position: relative;
-		z-index: 2;
-		display: flex;
-		align-items: flex-start;
-		align-self: flex-start;
-	}
-
-	// feature-card__badge
-	&__badge {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0 rem(20) rem(20) rem(30);
-		background: var(--feature-card-surface, #{$color-text-primary});
-	}
-
-	// feature-card__icon
-	&__icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		font-size: rem(30);
-		line-height: 1;
-		color: $color-accent-primary;
-
+	// feature-card с icon-*
+	&[class^="icon-"],
+	&[class*=" icon-"] {
 		&::before {
-			display: block;
-		}
-	}
-
-	// feature-card__cut
-	&__cut {
-		flex-shrink: 0;
-		width: rem(58);
-		height: rem(50);
-		background: var(--feature-card-surface, #{$color-text-primary});
-		clip-path: polygon(0 0, 100% 0, 0 100%);
-	}
-
-	// feature-card__body
-	&__body {
-		position: relative;
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-		gap: rem(6);
-		padding: rem(20) rem(20) rem(24);
-		margin-top: auto;
-
-		@media (min-width: $md4) {
-			padding: 0 rem(30) rem(30);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: rem(50);
+			padding: 0 rem(78) 0 rem(30);
+			background: var(--feature-card-surface, #{$color-text-primary});
+			color: $color-accent-primary;
+			font-size: rem(30);
+			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 		}
 	}
 
 	// feature-card__title
 	&__title {
+		position: relative;
+		z-index: 1;
+		margin-top: auto;
 		@include mobile-heading-h4;
 		color: $color-bg-primary;
 
@@ -100,6 +69,8 @@
 
 	// feature-card__text
 	&__text {
+		position: relative;
+		z-index: 1;
 		font-family: $font-inter;
 		font-size: rem(16);
 		font-weight: 400;
@@ -113,21 +84,10 @@
 
 	// feature-card--plain
 	&--plain {
+		gap: rem(16);
+
 		@media (min-width: $md4) {
 			min-height: rem(450);
-		}
-
-		.feature-card__badge {
-			display: none;
-		}
-
-		.feature-card__body {
-			gap: rem(16);
-			padding-inline: rem(20);
-
-			@media (min-width: $md4) {
-				padding-inline: rem(30);
-			}
 		}
 
 		.feature-card__title {

@@ -16,18 +16,43 @@
 		opacity: 0;
 	}
 
-	.services-card__icon {
+	.services-card__icon,
+	.services-card__title[class^="icon-"]::before,
+	.services-card__title[class*=" icon-"]::before {
 		opacity: 1;
 		color: $color-bg-primary;
 	}
 
-	.services-card__link::before {
-		transform: rotate(90deg);
+	.services-card__link {
+		padding-left: 0;
+	}
+
+	.services-card__link::before,
+	.services-card__link::after {
+		content: none;
+		display: none !important;
+	}
+
+	.services-card__link-text {
+		display: none;
+	}
+
+	.services-card__link-btn {
+		display: inline-flex;
+		position: absolute;
+		left: 0;
+		bottom: 0;
 	}
 
 	&.services-card--featured {
 		.services-card__badge {
 			opacity: 0;
+		}
+
+		.services-card__lead,
+		.services-card__list,
+		.services-card__note {
+			display: none;
 		}
 
 		@media (min-width: $md4) {
@@ -96,22 +121,22 @@
 	&__badge {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: -1px;
 		z-index: $ui-index-3;
 		display: inline-flex;
 		align-items: center;
 		height: rem(40);
-		padding: rem(8) rem(16) rem(8) rem(54);
+		padding: rem(8) calc(#{rem(16)} + 1px) rem(8) rem(54);
 		background-color: $color-accent-primary;
 		color: $color-bg-primary;
 		transition: opacity 0.35s ease;
-		clip-path: polygon(rem(46) 0, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(46)} 100%);
 		@include mobile-heading-h4;
 
 		@media (min-width: $md4) {
 			height: rem(50);
-			padding: rem(10) rem(20) rem(12) rem(68);
-			clip-path: polygon(rem(58) 0, 100% 0, 100% 100%, 0 100%);
+			padding: rem(10) calc(#{rem(20)} + 1px) rem(12) rem(68);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
 			@include desktop-heading-h4;
 		}
 	}
@@ -119,30 +144,32 @@
 	// services-card__badge--bottom
 	&__badge--bottom {
 		top: auto;
-		bottom: 0;
-		right: rem(84);
-		height: rem(44);
-		padding: rem(8) rem(48) rem(10);
+		bottom: -1px;
+		right: calc(#{rem(44)} - 1px);
+		height: calc(#{rem(44)} + 1px);
+		padding: rem(8) calc(#{rem(48)} + 1px) rem(10) rem(48);
 		font-family: $font-inter;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: 1.2;
 		letter-spacing: 0;
 		text-transform: uppercase;
-		clip-path: polygon(rem(36) 0, calc(100% - #{rem(36)}) 0, 100% 100%, 0 100%);
+		clip-path: polygon(#{rem(40)} 0, 100% 0, calc(100% - #{rem(40)}) 100%, 0 100%);
 
 		@media (min-width: $md4) {
-			right: rem(108);
-			height: rem(50);
-			padding: rem(10) rem(88) rem(12);
+			right: calc(#{rem(50)} - 1px);
+			height: calc(#{rem(50)} + 1px);
+			padding: rem(10) calc(#{rem(88)} + 1px) rem(12) rem(88);
 			font-size: rem(22);
 			line-height: 1.2;
-			clip-path: polygon(rem(58) 0, calc(100% - #{rem(58)}) 0, 100% 100%, 0 100%);
+			clip-path: polygon(#{rem(58)} 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 		}
 	}
 
-	// services-card__icon
-	&__icon {
+	// services-card__icon и глиф icon-* на заголовке
+	&__icon,
+	&__title[class^="icon-"]::before,
+	&__title[class*=" icon-"]::before {
 		position: absolute;
 		top: rem(20);
 		right: rem(20);
@@ -197,8 +224,6 @@
 
 	// services-card__title
 	&__title {
-		position: relative;
-		z-index: $ui-index-2;
 		max-width: rem(640);
 		transition: color 0.35s ease;
 		@include mobile-heading-h4;
@@ -233,25 +258,15 @@
 		align-self: stretch;
 		flex-shrink: 0;
 		margin-left: auto;
-		padding: rem(12) rem(16);
+		padding: rem(12) rem(16) rem(12) rem(56);
 		background-color: $color-bg-secondary;
 		color: $color-bg-elevated;
+		clip-path: polygon(#{rem(40)} 0, 100% 0, 100% 100%, 0 100%);
 		@include mobile-heading-h4;
 
-		&::before {
-			content: "";
-			position: absolute;
-			right: 100%;
-			bottom: 0;
-			width: rem(40);
-			height: 100%;
-			background-color: inherit;
-			clip-path: polygon(100% 0, 100% 100%, 0 100%);
-			pointer-events: none;
-
-			@media (min-width: $md4) {
-				width: rem(58);
-			}
+		@media (min-width: $md4) {
+			padding-left: rem(74);
+			clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 		}
 
 		// services-card__price--inline
@@ -261,13 +276,11 @@
 			padding: 0;
 			background-color: transparent;
 			color: $color-accent-primary;
+			clip-path: none;
 
 			@media (min-width: $md4) {
+				padding-left: 0;
 				@include desktop-heading-h4;
-			}
-
-			&::before {
-				content: none;
 			}
 		}
 	}
@@ -437,6 +450,12 @@
 		}
 	}
 
+	// services-card__link-btn
+	&__link-btn {
+		display: none;
+		transition: none;
+	}
+
 	// services-card__link-text
 	&__link-text {
 		display: inline-flex;
@@ -459,7 +478,9 @@
 	// services-card--featured
 	&--featured {
 		@media (min-width: $md1) {
+			height: rem(580);
 			min-height: rem(580);
+			max-height: rem(580);
 		}
 
 		&::before {
@@ -469,7 +490,9 @@
 				var(--services-card-image);
 		}
 
-		.services-card__icon {
+		.services-card__icon,
+		.services-card__title[class^="icon-"]::before,
+		.services-card__title[class*=" icon-"]::before {
 			opacity: 0;
 		}
 
@@ -499,7 +522,9 @@
 
 		.services-card__title,
 		.services-card__description,
-		.services-card__icon {
+		.services-card__icon,
+		.services-card__title[class^="icon-"]::before,
+		.services-card__title[class*=" icon-"]::before {
 			color: $color-bg-primary;
 		}
 	}
@@ -604,7 +629,9 @@
 			max-width: 100%;
 		}
 
-		&:has(.services-card__icon) .services-card__title {
+		&:has(.services-card__icon) .services-card__title,
+		.services-card__title[class^="icon-"],
+		.services-card__title[class*=" icon-"] {
 			@media (min-width: $md4) {
 				@include mobile-heading-h4;
 			}
@@ -614,7 +641,9 @@
 			}
 		}
 
-		.services-card__icon {
+		.services-card__icon,
+		.services-card__title[class^="icon-"]::before,
+		.services-card__title[class*=" icon-"]::before {
 			width: rem(40);
 			height: rem(40);
 			font-size: rem(40);
@@ -625,7 +654,9 @@
 			height: rem(40);
 		}
 
-		&:has(.services-card__icon) .services-card__body {
+		&:has(.services-card__icon) .services-card__body,
+		&:has(.services-card__title[class^="icon-"]) .services-card__body,
+		&:has(.services-card__title[class*=" icon-"]) .services-card__body {
 			padding-right: rem(72);
 
 			@media (min-width: $md0) {
@@ -650,12 +681,16 @@
 		}
 
 		.services-card__price:not(.services-card__price--inline) {
-			padding-inline: rem(10);
+			padding: rem(12) rem(10) rem(12) rem(50);
 			font-size: rem(16);
 			letter-spacing: -0.02em;
 
+			@media (min-width: $md4) {
+				padding-left: rem(68);
+			}
+
 			@media (min-width: $md0) {
-				padding-inline: rem(16);
+				padding: rem(12) rem(16) rem(12) rem(74);
 				font-size: rem(20);
 			}
 		}

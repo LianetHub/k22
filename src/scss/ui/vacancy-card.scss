@@ -177,35 +177,21 @@
 			display: inline-flex !important;
 			align-items: center;
 			justify-content: center;
-			width: rem(44);
+			width: rem(84);
 			height: rem(44);
+			padding-left: rem(40);
 			background: $color-bg-primary;
 			color: $color-accent-primary;
 			font-size: rem(18);
 			line-height: 1;
+			clip-path: polygon(#{rem(40)} 0, 100% 0, 100% 100%, 0 100%);
 
 			@media (min-width: $md4) {
-				width: rem(50);
+				width: rem(108);
 				height: rem(50);
+				padding-left: rem(58);
 				font-size: rem(20);
-			}
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			right: rem(44);
-			bottom: 0;
-			width: rem(40);
-			height: rem(44);
-			background: $color-bg-primary;
-			clip-path: polygon(100% 0, 100% 100%, 0 100%);
-			pointer-events: none;
-
-			@media (min-width: $md4) {
-				right: rem(50);
-				width: rem(58);
-				height: rem(50);
+				clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 			}
 		}
 	}

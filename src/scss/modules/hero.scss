@@ -302,12 +302,17 @@
     // .hero__rate-stars
     &__rate-stars {
         display: flex;
-        gap: 0.1875rem;
-    }
+        width: 4.5rem;
 
-    // .hero__rate-star
-    &__rate-star {
-        font-size: 0.75rem;
+        &[class^="icon-"]::before,
+        &[class*=" icon-"]::before {
+            font-size: 0.75rem;
+            text-shadow:
+                0.9375rem 0 0 currentColor,
+                1.875rem 0 0 currentColor,
+                2.8125rem 0 0 currentColor,
+                3.75rem 0 0 currentColor;
+        }
     }
 
     // .hero__rate-origin

@@ -305,16 +305,18 @@
 	&__stars {
 		display: inline-flex;
 		align-items: center;
-		gap: rem(4);
+		width: rem(106);
 		color: $color-accent-primary;
-		font-size: rem(18);
 		line-height: 1;
-	}
 
-	// article__star
-	&__star {
-		&::before {
-			font-size: inherit;
+		&[class^="icon-"]::before,
+		&[class*=" icon-"]::before {
+			font-size: rem(18);
+			text-shadow:
+				#{rem(22)} 0 0 currentColor,
+				#{rem(44)} 0 0 currentColor,
+				#{rem(66)} 0 0 currentColor,
+				#{rem(88)} 0 0 currentColor;
 		}
 	}
 
@@ -446,6 +448,11 @@
 		@media (min-width: $md4) {
 			gap: rem(30);
 			padding: rem(30);
+		}
+
+		// .article__panel .form-field
+		.form-field:not(.is-error) {
+			background: $color-bg-secondary;
 		}
 	}
 
@@ -601,58 +608,7 @@
 
 	// article__field
 	&__field {
-		flex: 1 1 0;
 		min-width: 0;
-
-		&::before {
-			position: absolute;
-			top: 50%;
-			left: rem(16);
-			z-index: 1;
-			transform: translateY(-50%);
-			font-size: rem(12);
-			line-height: 1;
-			color: $color-accent-primary;
-			pointer-events: none;
-		}
-
-		@media (min-width: $md4) {
-			&::before {
-				left: rem(30);
-			}
-		}
-	}
-
-	// article__input
-	&__input {
-		min-height: rem(56);
-		padding: rem(16) rem(16) rem(16) rem(40);
-		background: $color-bg-secondary;
-		font-family: $font-inter;
-		font-size: rem(16);
-		line-height: math.div(19, 16);
-		color: $color-text-primary;
-
-		&::placeholder {
-			color: $color-text-secondary;
-		}
-
-		@media (min-width: $md4) {
-			min-height: rem(77);
-			padding: rem(26) rem(30) rem(26) rem(52);
-			font-size: rem(22);
-			line-height: math.div(26, 22);
-		}
-	}
-
-	// article__input--compact
-	&__input--compact {
-		@media (min-width: $md4) {
-			min-height: rem(60);
-			padding: rem(16) rem(20) rem(16) rem(48);
-			font-size: rem(18);
-			line-height: math.div(22, 18);
-		}
 	}
 
 	// article__consent
@@ -760,23 +716,18 @@
 		@media (min-width: $md4) {
 			gap: rem(20);
 		}
-	}
 
-	// article__review-avatar
-	&__review-avatar {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(54);
-		height: rem(54);
-		background: $color-accent-secondary;
-		color: $color-accent-primary;
-		font-size: rem(30);
-		line-height: 1;
-
-		&::before {
-			display: block;
+		&[class^="icon-"]::before,
+		&[class*=" icon-"]::before {
+			display: flex;
+			flex-shrink: 0;
+			align-items: center;
+			justify-content: center;
+			width: rem(54);
+			height: rem(54);
+			background: $color-accent-secondary;
+			color: $color-accent-primary;
+			font-size: rem(30);
 		}
 	}
 
