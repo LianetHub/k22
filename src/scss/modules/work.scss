@@ -55,7 +55,7 @@
 
 		@media (min-width: $md3) {
 			display: grid;
-			grid-template-columns: minmax(0, 1fr) minmax(rem(280), rem(573));
+			grid-template-columns: 1fr minmax(rem(280), rem(573));
 			gap: rem(30);
 			align-items: start;
 		}
@@ -112,7 +112,7 @@
 	// .work__step
 	&__step {
 		display: grid;
-		grid-template-columns: rem(9) minmax(0, 1fr);
+		grid-template-columns: rem(9) 1fr;
 		column-gap: rem(20);
 		row-gap: rem(10);
 		align-items: start;
@@ -163,7 +163,7 @@
 		gap: rem(16);
 
 		@media (min-width: $md3) {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
+			grid-template-columns: repeat(3, 1fr);
 			gap: rem(20);
 		}
 

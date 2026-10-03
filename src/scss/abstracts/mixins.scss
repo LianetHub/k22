@@ -217,20 +217,20 @@ $dimensions: (
 /* Desktop/Heading/H1 */
 @mixin desktop-heading-h1 {
 	font-family: $fontfamily;
-	font-size: 60px;
+	font-size: rem(60);
 	font-weight: 700;
 	line-height: 110%;
-	letter-spacing: -1.2px;
+	letter-spacing: em(-1.2, 60);
 	text-transform: uppercase;
 }
 
 /* Tablet/Heading/H1 */
 @mixin tablet-heading-h1 {
 	font-family: $fontfamily;
-	font-size: 40px;
+	font-size: rem(40);
 	font-weight: 700;
 	line-height: 110%;
-	letter-spacing: -0.8px;
+	letter-spacing: em(-0.8, 40);
 	text-transform: uppercase;
 }
 
@@ -238,30 +238,30 @@ $dimensions: (
 /* Desktop/Heading/H2 */
 @mixin desktop-heading-h2 {
 	font-family: $fontfamily;
-	font-size: 50px;
+	font-size: rem(50);
 	font-weight: 700;
 	line-height: 120%;
-	letter-spacing: -1px;
+	letter-spacing: em(-1, 50);
 	text-transform: uppercase;
 }
 
 /* Desktop/Heading/H3 */
 @mixin desktop-heading-h3 {
 	font-family: $fontfamily;
-	font-size: 28px;
+	font-size: rem(28);
 	font-weight: 700;
 	line-height: 120%;
-	letter-spacing: -0.56px;
+	letter-spacing: em(-0.56, 28);
 	text-transform: uppercase;
 }
 
 /* Desktop/Heading/H4 */
 @mixin desktop-heading-h4 {
 	font-family: $fontfamily;
-	font-size: 22px;
+	font-size: rem(22);
 	font-weight: 700;
 	line-height: 120%;
-	letter-spacing: -0.44px;
+	letter-spacing: em(-0.44, 22);
 	text-transform: uppercase;
 }
 

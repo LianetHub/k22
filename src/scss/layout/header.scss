@@ -544,7 +544,7 @@
 
 		@media (min-width: $md4) {
 			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-columns: repeat(2, 1fr);
 			gap: rem(10);
 		}
 
@@ -772,10 +772,6 @@
 			.menu-service__price {
 				color: $color-accent-primary;
 			}
-
-			.menu-service__icon {
-				filter: brightness(0) saturate(100%) invert(29%) sepia(70%) saturate(4343%) hue-rotate(342deg) brightness(111%) contrast(97%);
-			}
 		}
 	}
 
@@ -785,7 +781,6 @@
 		height: rem(24);
 		flex-shrink: 0;
 		object-fit: contain;
-		transition: filter 0.2s ease;
 	}
 
 	// .menu-service__body

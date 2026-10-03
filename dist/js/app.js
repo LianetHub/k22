@@ -342,11 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			closeDesktopDropdowns();
 		});
 
-		if (typeof desktopMenuMq.addEventListener === "function") {
-			desktopMenuMq.addEventListener("change", resetMenuOnBreakpoint);
-		} else {
-			desktopMenuMq.addListener(resetMenuOnBreakpoint);
-		}
+		desktopMenuMq.addEventListener("change", resetMenuOnBreakpoint);
 
 		menu.querySelectorAll(".menu__item--has-dropdown").forEach((item) => {
 			item.addEventListener("mouseenter", () => {

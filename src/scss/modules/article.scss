@@ -101,7 +101,7 @@
 
 		@media (min-width: $md3) {
 			display: grid;
-			grid-template-columns: minmax(0, 2.05fr) minmax(rem(280), 1fr);
+			grid-template-columns: 2.05fr minmax(rem(280), 1fr);
 			gap: rem(24);
 			align-items: start;
 		}
@@ -415,7 +415,7 @@
 		}
 
 		@media (min-width: $md0) {
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(rem(220), 1fr) rem(230);
+			grid-template-columns: 1fr 1fr minmax(rem(220), 1fr) rem(230);
 		}
 	}
 

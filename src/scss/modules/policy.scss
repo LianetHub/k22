@@ -75,13 +75,13 @@
 
 		@media (min-width: $md3) {
 			display: grid;
-			grid-template-columns: minmax(0, 1fr) minmax(rem(280), rem(400));
+			grid-template-columns: 1fr minmax(rem(280), rem(400));
 			gap: rem(40);
 			align-items: start;
 		}
 
 		@media (min-width: $md1) {
-			grid-template-columns: minmax(0, 1fr) rem(572);
+			grid-template-columns: 1fr rem(572);
 		}
 	}
 

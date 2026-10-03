@@ -186,20 +186,20 @@
 @media (min-width: 767.98px) {
   .title {
     font-family: "ActayWide", sans-serif;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 
 .title-lg {
   font-family: "ActayWide", sans-serif;
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
@@ -797,7 +797,7 @@ img {
 @media (min-width: 767.98px) {
   .menu__cols {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.625rem;
   }
 }
@@ -986,16 +986,12 @@ img {
   .menu-service:hover .menu-service__price {
     color: #FC373D;
   }
-  .menu-service:hover .menu-service__icon {
-    filter: brightness(0) saturate(100%) invert(29%) sepia(70%) saturate(4343%) hue-rotate(342deg) brightness(111%) contrast(97%);
-  }
 }
 .menu-service__icon {
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
   object-fit: contain;
-  transition: filter 0.2s ease;
 }
 .menu-service__body {
   flex: 1 1 auto;
@@ -1311,10 +1307,10 @@ img {
 }
 .footer__phone {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -1353,10 +1349,10 @@ img {
 }
 .footer__address {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: flex-start;
@@ -2220,10 +2216,10 @@ textarea.form-control {
 }
 .product-card__current {
   font-family: "ActayWide", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.56px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #222222;
 }
@@ -2314,10 +2310,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .vacancy-card__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -2519,10 +2515,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .feature-card__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -2611,10 +2607,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .review-card__name {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -3106,10 +3102,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .portfolio-card.portfolio-card--page .portfolio-card__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -3215,20 +3211,20 @@ textarea.form-control {
 }
 .portfolio-card__title {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #fff;
 }
 @media (min-width: 767.98px) {
   .portfolio-card__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -3463,10 +3459,10 @@ textarea.form-control {
   .services-card.services-card--compact .services-card__title[class^=icon-],
   .services-card.services-card--compact .services-card__title[class*=" icon-"] {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -3732,10 +3728,10 @@ textarea.form-control {
     padding: 0.625rem calc(1.25rem + 1px) 0.75rem 4.25rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 3.625rem 100%);
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -3824,10 +3820,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .services-card__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -3858,10 +3854,10 @@ textarea.form-control {
   .services-card__price.services-card__price--inline {
     padding-left: 0;
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -4382,6 +4378,57 @@ textarea.form-control {
   letter-spacing: -0.02em;
 }
 
+.search-form.search-form--secondary {
+  background: #F4F4F6;
+}
+.search-form.search-form--secondary::before {
+  color: #8A8A8A;
+}
+.search-form.search-form--secondary .search-form__input::placeholder {
+  color: #8A8A8A;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: #fff;
+}
+@media (min-width: 767.98px) {
+  .search-form {
+    padding: 0.625rem 0.625rem 0.625rem 1.25rem;
+  }
+}
+.search-form::before {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+  color: rgba(138, 138, 138, 0.5);
+}
+.search-form__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  min-height: 2.5rem;
+  background: transparent;
+  color: #222222;
+  font-family: "InterTight", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.search-form__input::placeholder {
+  color: rgba(138, 138, 138, 0.5);
+}
+.search-form__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.search-form__btn {
+  flex-shrink: 0;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
@@ -4532,10 +4579,10 @@ textarea.form-control {
   .typography-text h5,
   .typography-text h6 {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
     scroll-margin-top: 10rem;
   }
@@ -4710,12 +4757,12 @@ textarea.form-control {
 .products__container:has(.products__slider) {
   display: grid;
   gap: 1.875rem;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas: "head" "slider" "nav";
 }
 @media (min-width: 767.98px) {
   .products__container:has(.products__slider) {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 1fr auto;
     grid-template-areas: "head nav" "slider slider";
   }
 }
@@ -4875,24 +4922,24 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .products__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
 @media (min-width: 1199.98px) {
   .products__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.875rem;
   }
 }
 @media (min-width: 1439.98px) {
   .products__grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 1919.98px) {
   .products__grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 .products__item {
@@ -4909,13 +4956,13 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .catalog-cats__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
 @media (min-width: 1439.98px) {
   .catalog-cats__grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem;
   }
 }
@@ -4973,10 +5020,10 @@ textarea.form-control {
   .catalog-cats__title {
     padding: 1.875rem 1.875rem 0;
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -5400,10 +5447,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .contacts__place-title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -5778,20 +5825,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero.hero--diagnostics .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .hero.hero--diagnostics .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -5829,20 +5876,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero.hero--maintenance .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .hero.hero--maintenance .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -5952,20 +5999,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero.hero--log .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .hero.hero--log .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -6046,20 +6093,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero.hero--moto .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .hero.hero--moto .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -6117,20 +6164,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero.hero--catalog .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .hero.hero--catalog .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -6213,20 +6260,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero.hero--oil .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .hero.hero--oil .hero__title {
     font-family: "ActayWide", sans-serif;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -6386,10 +6433,10 @@ textarea.form-control {
 }
 .hero__rate-value {
   font-family: "ActayWide", sans-serif;
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -1px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -6424,10 +6471,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .hero__note-title {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -6473,13 +6520,13 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .format__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
 @media (min-width: 1199.98px) {
   .format__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.875rem;
   }
 }
@@ -6551,10 +6598,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .format__name {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -6754,10 +6801,10 @@ textarea.form-control {
 }
 .faq__phone {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -6843,10 +6890,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .faq__question {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -7310,10 +7357,10 @@ textarea.form-control {
 }
 .callback__discount {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -7383,10 +7430,10 @@ textarea.form-control {
 }
 .callback__phone {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -7438,10 +7485,10 @@ textarea.form-control {
 }
 .callback__form-title {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   font-size: 1.125rem;
   letter-spacing: -0.0225rem;
@@ -7509,10 +7556,10 @@ textarea.form-control {
 }
 .callback__messengers-label {
   font-family: "ActayWide", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -0.44px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: -0.02rem;
@@ -7740,47 +7787,12 @@ textarea.form-control {
   }
 }
 .blog__search {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  width: 100%;
   margin-top: 1.25rem;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  background: #fff;
 }
 @media (min-width: 767.98px) {
   .blog__search {
     margin-top: 1.875rem;
-    padding: 0.625rem 0.625rem 0.625rem 1.25rem;
   }
-}
-.blog__search::before {
-  flex-shrink: 0;
-  font-size: 1rem;
-  line-height: 1;
-  color: rgba(138, 138, 138, 0.5);
-}
-.blog__search-input {
-  flex: 1 1 auto;
-  min-width: 0;
-  width: 100%;
-  min-height: 2.5rem;
-  background: transparent;
-  color: #222222;
-  font-family: "InterTight", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-}
-.blog__search-input::placeholder {
-  color: rgba(138, 138, 138, 0.5);
-}
-.blog__search-input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-.blog__search-btn {
-  flex-shrink: 0;
 }
 .blog__toolbar {
   display: flex;
@@ -7967,13 +7979,13 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .works.works--related .works__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
 @media (min-width: 1199.98px) {
   .works.works--related .works__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.875rem;
   }
 }
@@ -7989,12 +8001,12 @@ textarea.form-control {
 .works__container {
   display: grid;
   gap: 1.875rem;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas: "head" "slider" "nav";
 }
 @media (min-width: 767.98px) {
   .works__container {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 1fr auto;
     grid-template-areas: "head nav" "slider slider";
   }
 }
@@ -8021,20 +8033,20 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .works__tag {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1199.98px) {
   .works__tag {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -8130,7 +8142,7 @@ textarea.form-control {
 @media (min-width: 991.98px) {
   .work__layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(17.5rem, 35.8125rem);
+    grid-template-columns: 1fr minmax(17.5rem, 35.8125rem);
     gap: 1.875rem;
     align-items: start;
   }
@@ -8183,7 +8195,7 @@ textarea.form-control {
 }
 .work__step {
   display: grid;
-  grid-template-columns: 0.5625rem minmax(0, 1fr);
+  grid-template-columns: 0.5625rem 1fr;
   column-gap: 1.25rem;
   row-gap: 0.625rem;
   align-items: start;
@@ -8216,10 +8228,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .work__step-title {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -8241,7 +8253,7 @@ textarea.form-control {
 }
 @media (min-width: 991.98px) {
   .work__gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
   }
 }
@@ -8404,13 +8416,13 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .portfolio__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
 @media (min-width: 1199.98px) {
   .portfolio__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.875rem;
   }
 }
@@ -8466,42 +8478,7 @@ textarea.form-control {
   max-width: 56.25rem;
 }
 .brands-power__form {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
   max-width: 26.25rem;
-  padding: 0.625rem 0.625rem 0.625rem 1.25rem;
-  background: #F4F4F6;
-}
-.brands-power__form::before {
-  flex-shrink: 0;
-  font-size: 1.375rem;
-  line-height: 1;
-  color: #8A8A8A;
-}
-.brands-power__form-input {
-  flex: 1 1 auto;
-  min-width: 0;
-  width: 100%;
-  min-height: 3.5rem;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #222222;
-  font-family: "InterTight", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.3;
-}
-.brands-power__form-input:focus {
-  outline: none;
-}
-.brands-power__form-input::placeholder {
-  color: #8A8A8A;
-}
-.brands-power__form-btn {
-  flex-shrink: 0;
 }
 .brands-power__list {
   display: flex;
@@ -8846,10 +8823,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .result__num {
     font-family: "ActayWide", sans-serif;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -8878,10 +8855,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .result__unit--pct {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
     color: inherit;
     opacity: 0.4;
@@ -8976,10 +8953,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .result__guarantee-title {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -9042,13 +9019,13 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .services__grid, .services__categories {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
 @media (min-width: 1439.98px) {
   .services__grid, .services__categories {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem;
   }
 }
@@ -9229,7 +9206,7 @@ textarea.form-control {
 @media (min-width: 991.98px) {
   .article__content {
     display: grid;
-    grid-template-columns: minmax(0, 2.05fr) minmax(17.5rem, 1fr);
+    grid-template-columns: 2.05fr minmax(17.5rem, 1fr);
     gap: 1.5rem;
     align-items: start;
   }
@@ -9419,10 +9396,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .article__comment-name {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -9505,10 +9482,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .article__useful-label {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -9543,7 +9520,7 @@ textarea.form-control {
 }
 @media (min-width: 1919.98px) {
   .article__comment-row {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(13.75rem, 1fr) 14.375rem;
+    grid-template-columns: 1fr 1fr minmax(13.75rem, 1fr) 14.375rem;
   }
 }
 .article__comment-submit {
@@ -9845,10 +9822,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .article__review-name {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -10117,10 +10094,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .policy__head h1 {
     font-family: "ActayWide", sans-serif;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -10132,14 +10109,14 @@ textarea.form-control {
 @media (min-width: 991.98px) {
   .policy__layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(17.5rem, 25rem);
+    grid-template-columns: 1fr minmax(17.5rem, 25rem);
     gap: 2.5rem;
     align-items: start;
   }
 }
 @media (min-width: 1439.98px) {
   .policy__layout {
-    grid-template-columns: minmax(0, 1fr) 35.75rem;
+    grid-template-columns: 1fr 35.75rem;
   }
 }
 .policy__body {
@@ -10202,10 +10179,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .policy__nav-num {
     font-family: "ActayWide", sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }
@@ -10439,7 +10416,7 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .power__selects {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
   }
 }
@@ -10728,7 +10705,7 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .power__charts {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
 }
@@ -11198,10 +11175,10 @@ textarea.form-control {
 @media (min-width: 1199.98px) {
   .text-block__subtitle {
     font-family: "ActayWide", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -0.56px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 }

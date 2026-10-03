@@ -28,14 +28,14 @@
 		&:has(.products__slider) {
 			display: grid;
 			gap: rem(30);
-			grid-template-columns: minmax(0, 1fr);
+			grid-template-columns: 1fr;
 			grid-template-areas:
 				"head"
 				"slider"
 				"nav";
 
 			@media (min-width: $md4) {
-				grid-template-columns: minmax(0, 1fr) auto;
+				grid-template-columns: 1fr auto;
 				grid-template-areas:
 					"head nav"
 					"slider slider";
@@ -225,21 +225,21 @@
 		gap: rem(16);
 
 		@media (min-width: $md4) {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-columns: repeat(2, 1fr);
 			gap: rem(20);
 		}
 
 		@media (min-width: $md2) {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
+			grid-template-columns: repeat(3, 1fr);
 			gap: rem(30);
 		}
 
 		@media (min-width: $md1) {
-			grid-template-columns: repeat(4, minmax(0, 1fr));
+			grid-template-columns: repeat(4, 1fr);
 		}
 
 		@media (min-width: $md0) {
-			grid-template-columns: repeat(5, minmax(0, 1fr));
+			grid-template-columns: repeat(5, 1fr);
 		}
 	}
 
