@@ -1,19 +1,8 @@
 @use "../abstracts" as *;
 
 .blog {
-	padding: rem(48) 0;
-	background: $color-bg-secondary;
-
-	@media (min-width: $md4) {
-		padding: rem(80) 0;
-	}
-
-	@media (min-width: $md2) {
-		padding: rem(100) 0;
-	}
-
 	// blog--page
-	&--page {
+	&.blog--page {
 		.page > &:first-child {
 			padding-top: rem(40);
 
@@ -33,6 +22,17 @@
 		.custom-select--sort .custom-select__trigger {
 			min-width: rem(248);
 		}
+	}
+
+	padding: rem(48) 0;
+	background: $color-bg-secondary;
+
+	@media (min-width: $md4) {
+		padding: rem(80) 0;
+	}
+
+	@media (min-width: $md2) {
+		padding: rem(100) 0;
 	}
 
 	// blog__container

@@ -2,6 +2,244 @@
 @use "../abstracts" as *;
 
 .contacts {
+	// .contacts--page
+	&.contacts--page {
+		@media (min-width: $md2) {
+			padding: rem(100) 0;
+		}
+
+		.contacts__map-block {
+			border-radius: 0;
+			overflow: visible;
+
+			@media (min-width: $md3) {
+				flex-direction: row;
+				align-items: stretch;
+			}
+		}
+
+		.contacts__panel {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(24);
+			width: 100%;
+			padding: rem(20);
+			background: $color-bg-elevated;
+
+			.contacts__switch {
+				gap: rem(24);
+
+				@media (min-width: $md4) {
+					gap: rem(30);
+				}
+			}
+
+			@media (min-width: $md4) {
+				gap: rem(30);
+				padding: rem(30);
+			}
+
+			@media (min-width: $md3) {
+				flex: 0 1 rem(480);
+				max-width: rem(725);
+			}
+
+			@media (min-width: $md2) {
+				flex: 0 0 rem(725);
+				max-width: rem(725);
+			}
+		}
+
+		.contacts__map {
+			height: rem(280);
+			border-radius: 0;
+
+			@media (min-width: $md4) {
+				height: rem(360);
+			}
+
+			@media (min-width: $md3) {
+				flex: 1 1 auto;
+				min-width: 0;
+				height: auto;
+				min-height: rem(400);
+				align-self: stretch;
+			}
+
+			@media (min-width: $md2) {
+				min-height: rem(442);
+			}
+		}
+
+		.contacts__phone {
+			font-size: rem(18);
+			letter-spacing: rem(-0.36);
+
+			@media (min-width: $md4) {
+				font-size: rem(18);
+				letter-spacing: rem(-0.36);
+			}
+		}
+
+		.contacts__hours {
+			@media (min-width: $md4) {
+				font-size: rem(16);
+				line-height: math.div(19, 16);
+				letter-spacing: rem(-0.32);
+			}
+		}
+
+		.contacts__route {
+			flex-wrap: nowrap;
+			flex-shrink: 0;
+		}
+	}
+
+	// .contacts--network
+	&.contacts--network {
+		// .contacts__title
+		.contacts__title {
+			max-width: none;
+			color: $color-bg-primary;
+		}
+
+		// .contacts__map-block
+		.contacts__map-block {
+			position: relative;
+			border-radius: 0;
+			overflow: visible;
+		}
+
+		// .contacts__map
+		.contacts__map {
+			position: relative;
+			height: rem(280);
+			overflow: hidden;
+			border-radius: 0;
+			background: $color-bg-secondary;
+
+			&::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: 0;
+				background-image: var(--contacts-map-image);
+				background-repeat: no-repeat;
+				background-position: center 42%;
+				background-size: cover;
+				filter: grayscale(1);
+			}
+
+			@media (min-width: $md4) {
+				height: rem(420);
+			}
+
+			@media (min-width: $md3) {
+				height: rem(600);
+			}
+		}
+
+		// .contacts__pin
+		.contacts__pin {
+			position: absolute;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(64);
+			height: rem(64);
+			background: $color-bg-primary;
+			color: $color-accent-primary;
+			font-size: rem(32);
+			filter: drop-shadow(0 #{rem(12)} #{rem(12)} rgba(0, 0, 0, 0.1));
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 100%;
+				transform: translateX(-50%);
+				border-left: rem(10) solid transparent;
+				border-right: rem(10) solid transparent;
+				border-top: rem(16) solid $color-bg-primary;
+			}
+
+			@media (min-width: $md4) {
+				width: rem(90);
+				height: rem(90);
+				font-size: rem(50);
+				filter: drop-shadow(0 #{rem(20)} #{rem(20)} rgba(0, 0, 0, 0.1));
+
+				&::after {
+					border-left-width: rem(13.5);
+					border-right-width: rem(13.5);
+					border-top-width: rem(23);
+				}
+			}
+		}
+
+		// .contacts__pin--north
+		.contacts__pin--north {
+			left: 46%;
+			top: 12%;
+
+			@media (min-width: $md3) {
+				left: 60%;
+				top: 8%;
+			}
+		}
+
+		// .contacts__pin--east
+		.contacts__pin--east {
+			left: 70%;
+			top: 28%;
+
+			@media (min-width: $md3) {
+				left: 82%;
+				top: 12%;
+			}
+		}
+
+		// .contacts__card
+		.contacts__card {
+			position: relative;
+			z-index: 2;
+			flex: none;
+			width: 100%;
+			max-width: none;
+			background: $color-bg-elevated;
+			filter: drop-shadow(0 #{rem(20)} #{rem(20)} rgba(0, 0, 0, 0.1));
+
+			&::after {
+				content: none;
+			}
+
+			@media (min-width: $md3) {
+				position: absolute;
+				left: 39%;
+				top: 42%;
+				width: min(#{rem(508)}, 46%);
+				max-width: rem(508);
+
+				&::after {
+					content: "";
+					position: absolute;
+					left: 50%;
+					bottom: rem(-22);
+					transform: translateX(-50%);
+					border-left: rem(13.5) solid transparent;
+					border-right: rem(13.5) solid transparent;
+					border-top: rem(23) solid $color-bg-elevated;
+				}
+			}
+		}
+
+		// .contacts__route-app
+		.contacts__route-app {
+			border-radius: rem(6);
+		}
+	}
+
 	padding: rem(48) 0;
 	background: $color-text-primary;
 	color: $color-bg-secondary;
@@ -549,241 +787,5 @@
 		}
 	}
 
-	// .contacts--page
-	&--page {
-		@media (min-width: $md2) {
-			padding: rem(100) 0;
-		}
 
-		.contacts__map-block {
-			border-radius: 0;
-			overflow: visible;
-
-			@media (min-width: $md3) {
-				flex-direction: row;
-				align-items: stretch;
-			}
-		}
-
-		.contacts__panel {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: rem(24);
-			width: 100%;
-			padding: rem(20);
-			background: $color-bg-elevated;
-
-			.contacts__switch {
-				gap: rem(24);
-
-				@media (min-width: $md4) {
-					gap: rem(30);
-				}
-			}
-
-			@media (min-width: $md4) {
-				gap: rem(30);
-				padding: rem(30);
-			}
-
-			@media (min-width: $md3) {
-				flex: 0 1 rem(480);
-				max-width: rem(725);
-			}
-
-			@media (min-width: $md2) {
-				flex: 0 0 rem(725);
-				max-width: rem(725);
-			}
-		}
-
-		.contacts__map {
-			height: rem(280);
-			border-radius: 0;
-
-			@media (min-width: $md4) {
-				height: rem(360);
-			}
-
-			@media (min-width: $md3) {
-				flex: 1 1 auto;
-				min-width: 0;
-				height: auto;
-				min-height: rem(400);
-				align-self: stretch;
-			}
-
-			@media (min-width: $md2) {
-				min-height: rem(442);
-			}
-		}
-
-		.contacts__phone {
-			font-size: rem(18);
-			letter-spacing: rem(-0.36);
-
-			@media (min-width: $md4) {
-				font-size: rem(18);
-				letter-spacing: rem(-0.36);
-			}
-		}
-
-		.contacts__hours {
-			@media (min-width: $md4) {
-				font-size: rem(16);
-				line-height: math.div(19, 16);
-				letter-spacing: rem(-0.32);
-			}
-		}
-
-		.contacts__route {
-			flex-wrap: nowrap;
-			flex-shrink: 0;
-		}
-	}
-
-	// .contacts--network
-	&--network {
-		// .contacts__title
-		.contacts__title {
-			max-width: none;
-			color: $color-bg-primary;
-		}
-
-		// .contacts__map-block
-		.contacts__map-block {
-			position: relative;
-			border-radius: 0;
-			overflow: visible;
-		}
-
-		// .contacts__map
-		.contacts__map {
-			position: relative;
-			height: rem(280);
-			overflow: hidden;
-			border-radius: 0;
-			background: $color-bg-secondary;
-
-			&::before {
-				content: "";
-				position: absolute;
-				inset: 0;
-				z-index: 0;
-				background-image: var(--contacts-map-image);
-				background-repeat: no-repeat;
-				background-position: center 42%;
-				background-size: cover;
-				filter: grayscale(1);
-			}
-
-			@media (min-width: $md4) {
-				height: rem(420);
-			}
-
-			@media (min-width: $md3) {
-				height: rem(600);
-			}
-		}
-
-		// .contacts__pin
-		.contacts__pin {
-			position: absolute;
-			z-index: 1;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: rem(64);
-			height: rem(64);
-			background: $color-bg-primary;
-			color: $color-accent-primary;
-			font-size: rem(32);
-			filter: drop-shadow(0 #{rem(12)} #{rem(12)} rgba(0, 0, 0, 0.1));
-
-			&::after {
-				content: "";
-				position: absolute;
-				left: 50%;
-				top: 100%;
-				transform: translateX(-50%);
-				border-left: rem(10) solid transparent;
-				border-right: rem(10) solid transparent;
-				border-top: rem(16) solid $color-bg-primary;
-			}
-
-			@media (min-width: $md4) {
-				width: rem(90);
-				height: rem(90);
-				font-size: rem(50);
-				filter: drop-shadow(0 #{rem(20)} #{rem(20)} rgba(0, 0, 0, 0.1));
-
-				&::after {
-					border-left-width: rem(13.5);
-					border-right-width: rem(13.5);
-					border-top-width: rem(23);
-				}
-			}
-		}
-
-		// .contacts__pin--north
-		.contacts__pin--north {
-			left: 46%;
-			top: 12%;
-
-			@media (min-width: $md3) {
-				left: 60%;
-				top: 8%;
-			}
-		}
-
-		// .contacts__pin--east
-		.contacts__pin--east {
-			left: 70%;
-			top: 28%;
-
-			@media (min-width: $md3) {
-				left: 82%;
-				top: 12%;
-			}
-		}
-
-		// .contacts__card
-		.contacts__card {
-			position: relative;
-			z-index: 2;
-			flex: none;
-			width: 100%;
-			max-width: none;
-			background: $color-bg-elevated;
-			filter: drop-shadow(0 #{rem(20)} #{rem(20)} rgba(0, 0, 0, 0.1));
-
-			&::after {
-				content: none;
-			}
-
-			@media (min-width: $md3) {
-				position: absolute;
-				left: 39%;
-				top: 42%;
-				width: min(#{rem(508)}, 46%);
-				max-width: rem(508);
-
-				&::after {
-					content: "";
-					position: absolute;
-					left: 50%;
-					bottom: rem(-22);
-					transform: translateX(-50%);
-					border-left: rem(13.5) solid transparent;
-					border-right: rem(13.5) solid transparent;
-					border-top: rem(23) solid $color-bg-elevated;
-				}
-			}
-		}
-
-		// .contacts__route-app
-		.contacts__route-app {
-			border-radius: rem(6);
-		}
-	}
 }

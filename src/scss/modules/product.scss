@@ -81,6 +81,11 @@
 
 	// .products__filters-item
 	&__filters-item {
+		// .products__filters-item--stretch
+		&.products__filters-item--stretch {
+			align-self: stretch;
+		}
+
 		flex: 1 1 100%;
 		min-width: 0;
 		max-width: 100%;
@@ -95,11 +100,6 @@
 
 		@media (min-width: $md0) {
 			flex: 1 1 0;
-		}
-
-		// .products__filters-item--stretch
-		&--stretch {
-			align-self: stretch;
 		}
 	}
 

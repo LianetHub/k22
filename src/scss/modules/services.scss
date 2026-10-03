@@ -1,6 +1,11 @@
 @use "../abstracts" as *;
 
 .services {
+	// services--catalog
+	&.services--catalog {
+		background-color: $color-bg-primary;
+	}
+
 	background-color: $color-bg-secondary;
 
 	// services__container
@@ -39,11 +44,6 @@
 	// services__item
 	&__item {
 		display: contents;
-	}
-
-	// services--catalog
-	&--catalog {
-		background-color: $color-bg-primary;
 	}
 
 	// services__panel

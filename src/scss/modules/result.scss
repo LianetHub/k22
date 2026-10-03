@@ -7,6 +7,25 @@
 
 .result {
 	&:has(.result__main) {
+		// .result--moto
+		&.result--moto {
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
+				url("@img/result/moto.webp");
+
+			@media (min-width: $md2) {
+				background-image:
+					url("@img/decor/light-pattern.svg"),
+					linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
+					url("@img/result/moto.webp");
+			}
+
+			&::after {
+				background-image: url("@img/result/moto-smoke.webp");
+			}
+		}
+
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
@@ -70,25 +89,6 @@
 				left: 65.78%;
 				font-size: rem(487);
 				letter-spacing: rem(-9.74);
-			}
-		}
-
-		// .result--moto
-		&.result--moto {
-			background-image:
-				url("@img/decor/light-pattern.svg"),
-				linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-				url("@img/result/moto.webp");
-
-			@media (min-width: $md2) {
-				background-image:
-					url("@img/decor/light-pattern.svg"),
-					linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
-					url("@img/result/moto.webp");
-			}
-
-			&::after {
-				background-image: url("@img/result/moto-smoke.webp");
 			}
 		}
 	}

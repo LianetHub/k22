@@ -2,6 +2,23 @@
 @use "../abstracts" as *;
 
 .feature-card {
+	// feature-card--plain
+	&.feature-card--plain {
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			min-height: rem(450);
+		}
+
+		.feature-card__title {
+			@media (min-width: $md4) {
+				font-size: rem(32);
+				line-height: math.div(37, 32);
+				letter-spacing: rem(-0.48);
+			}
+		}
+	}
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -79,23 +96,6 @@
 
 		@media (min-width: $md4) {
 			font-size: rem(22);
-		}
-	}
-
-	// feature-card--plain
-	&--plain {
-		gap: rem(16);
-
-		@media (min-width: $md4) {
-			min-height: rem(450);
-		}
-
-		.feature-card__title {
-			@media (min-width: $md4) {
-				font-size: rem(32);
-				line-height: math.div(37, 32);
-				letter-spacing: rem(-0.48);
-			}
 		}
 	}
 }

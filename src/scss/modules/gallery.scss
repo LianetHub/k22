@@ -24,11 +24,14 @@
 	}
 
 	// .gallery__title
-	&__title {
-	}
+	&__title {}
 
 	// .gallery__slider
 	&__slider {
+		min-width: 0;
+		max-width: 100%;
+		overflow: visible;
+
 		.swiper-slide {
 			height: auto;
 		}

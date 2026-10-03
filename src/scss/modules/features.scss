@@ -2,6 +2,76 @@
 @use "../abstracts" as *;
 
 .features {
+	// .features--light
+	&.features--light {
+		--feature-card-surface: #{$color-bg-primary};
+
+		background-color: $color-bg-primary;
+		background-image: none;
+		color: $color-text-primary;
+
+		.features__lead {
+			color: $color-text-primary;
+		}
+	}
+
+	// .features--muted
+	&.features--muted {
+		--feature-card-surface: #{$color-bg-secondary};
+
+		background-color: $color-bg-secondary;
+		background-image: none;
+		color: $color-text-primary;
+
+		.features__lead {
+			color: $color-text-primary;
+		}
+	}
+
+	// .features--buy
+	&.features--buy {
+		.features__title {
+			display: block;
+		}
+
+		.feature-card__text {
+			@media (min-width: $md4) {
+				font-size: rem(22);
+			}
+		}
+	}
+
+	// .features--home
+	&.features--home {
+		.features__grid {
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media (min-width: $md2) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+
+		.feature-card {
+			gap: rem(16);
+		}
+
+		.feature-card__title {
+			@media (min-width: $md4) {
+				font-size: rem(32);
+				line-height: math.div(37, 32);
+				letter-spacing: rem(-0.48);
+			}
+		}
+
+		.feature-card__text {
+			@media (min-width: $md4) {
+				font-size: rem(26);
+			}
+		}
+	}
+
 	--feature-card-surface: #{$color-text-primary};
 
 	padding-block: rem(60);
@@ -64,76 +134,6 @@
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(3, 1fr);
 			gap: rem(30);
-		}
-	}
-
-	// .features--light
-	&--light {
-		--feature-card-surface: #{$color-bg-primary};
-
-		background-color: $color-bg-primary;
-		background-image: none;
-		color: $color-text-primary;
-
-		.features__lead {
-			color: $color-text-primary;
-		}
-	}
-
-	// .features--muted
-	&--muted {
-		--feature-card-surface: #{$color-bg-secondary};
-
-		background-color: $color-bg-secondary;
-		background-image: none;
-		color: $color-text-primary;
-
-		.features__lead {
-			color: $color-text-primary;
-		}
-	}
-
-	// .features--buy
-	&--buy {
-		.features__title {
-			display: block;
-		}
-
-		.feature-card__text {
-			@media (min-width: $md4) {
-				font-size: rem(22);
-			}
-		}
-	}
-
-	// .features--home
-	&--home {
-		.features__grid {
-			@media (min-width: $md4) {
-				grid-template-columns: repeat(2, 1fr);
-			}
-
-			@media (min-width: $md2) {
-				grid-template-columns: repeat(4, 1fr);
-			}
-		}
-
-		.feature-card {
-			gap: rem(16);
-		}
-
-		.feature-card__title {
-			@media (min-width: $md4) {
-				font-size: rem(32);
-				line-height: math.div(37, 32);
-				letter-spacing: rem(-0.48);
-			}
-		}
-
-		.feature-card__text {
-			@media (min-width: $md4) {
-				font-size: rem(26);
-			}
 		}
 	}
 }

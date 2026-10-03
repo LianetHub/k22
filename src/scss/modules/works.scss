@@ -1,6 +1,42 @@
 @use "../abstracts" as *;
 
 .works {
+	// .works--related
+	&.works--related {
+		.page > & {
+			padding-top: 0;
+		}
+
+		// .works__container
+		.works__container {
+			display: flex;
+			flex-direction: column;
+			gap: rem(24);
+
+			@media (min-width: $md4) {
+				gap: rem(40);
+				grid-template-columns: none;
+				grid-template-areas: none;
+			}
+		}
+
+		// .works__list
+		.works__list {
+			display: grid;
+			gap: rem(16);
+
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: rem(20);
+			}
+
+			@media (min-width: $md2) {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: rem(30);
+			}
+		}
+	}
+
 	padding-block: rem(60);
 	background: $color-bg-secondary;
 
@@ -90,42 +126,6 @@
 	&__prev {
 		&.icon-arrrow-long::before {
 			transform: rotate(180deg);
-		}
-	}
-
-	// .works--related
-	&--related {
-		.page > & {
-			padding-top: 0;
-		}
-
-		// .works__container
-		.works__container {
-			display: flex;
-			flex-direction: column;
-			gap: rem(24);
-
-			@media (min-width: $md4) {
-				gap: rem(40);
-				grid-template-columns: none;
-				grid-template-areas: none;
-			}
-		}
-
-		// .works__list
-		.works__list {
-			display: grid;
-			gap: rem(16);
-
-			@media (min-width: $md4) {
-				grid-template-columns: repeat(2, minmax(0, 1fr));
-				gap: rem(20);
-			}
-
-			@media (min-width: $md2) {
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: rem(30);
-			}
 		}
 	}
 

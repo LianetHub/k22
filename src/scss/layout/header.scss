@@ -154,12 +154,16 @@
 		@include desktop-body-s;
 		display: inline-flex;
 		align-items: center;
-		gap: 0.25rem;
+		gap: rem(4);
 
 		&::before {
-			width: 0.75rem;
-			height: 0.75rem;
-			font-size: 0.75rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(12);
+			height: rem(12);
+			font-size: rem(12);
+			line-height: 1;
 			flex-shrink: 0;
 			color: $color-accent-primary;
 		}
@@ -358,7 +362,8 @@
 					background-color: $color-accent-primary;
 					color: $color-bg-primary;
 
-					&::before {
+					&::before,
+					&::after {
 						color: $color-bg-primary;
 					}
 				}
@@ -417,7 +422,7 @@
 			gap: rem(4);
 			margin: 0 rem(-4.5);
 			background: transparent;
-			color: inherit;
+			color: $color-text-primary;
 			clip-path: polygon(0 0, calc(100% - rem(9)) 0, 100% 100%, rem(9) 100%);
 			transition: color 0.3s ease, background-color 0.3s ease;
 			z-index: 1;
@@ -426,10 +431,22 @@
 				display: none;
 			}
 
+			&.icon-speedometer,
+			&.icon-exhaust-pipe {
+				padding-left: rem(8);
+				padding-right: rem(12);
+				color: $color-accent-primary;
+			}
+
 			&.icon-speedometer::before,
 			&.icon-exhaust-pipe::before {
-				display: block;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: rem(12);
+				height: rem(12);
 				font-size: rem(12);
+				line-height: 1;
 				color: $color-accent-primary;
 			}
 
@@ -439,7 +456,14 @@
 
 			&.menu__link--dropdown::after {
 				content: "\e905";
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: rem(12);
+				height: rem(12);
 				margin-left: 0;
+				font-size: rem(12);
+				line-height: 1;
 				color: inherit;
 			}
 
@@ -448,7 +472,8 @@
 					background-color: $color-accent-primary;
 					color: $color-bg-primary;
 
-					&::before {
+					&::before,
+					&::after {
 						color: $color-bg-primary;
 					}
 				}
@@ -542,6 +567,13 @@
 
 	// .menu__group
 	&__group {
+		// .menu__group--flat
+		&.menu__group--flat {
+			.menu__services {
+				display: flex;
+			}
+		}
+
 		background: $color-bg-elevated;
 		color: $color-bg-primary;
 
@@ -568,12 +600,6 @@
 			}
 		}
 
-		// .menu__group--flat
-		&--flat {
-			.menu__services {
-				display: flex;
-			}
-		}
 	}
 
 	.menu__cols--wrap .menu__group {

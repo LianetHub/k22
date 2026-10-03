@@ -2,6 +2,11 @@
 @use "abstracts" as *;
 
 .callback {
+	// .callback--secondary
+	&.callback--secondary {
+		background: $color-bg-secondary;
+	}
+
 	background: $color-bg-primary;
 	padding: rem(48) 0;
 
@@ -11,11 +16,6 @@
 
 	@media (min-width: $md2) {
 		padding: rem(100) 0;
-	}
-
-	// .callback--secondary
-	&.callback--secondary {
-		background: $color-bg-secondary;
 	}
 
 	// .callback__container
@@ -197,14 +197,6 @@
 
 	// .callback__call
 	&__call {
-		display: flex;
-		flex-direction: column;
-		gap: rem(12);
-
-		@media (min-width: $md4) {
-			gap: rem(20);
-		}
-
 		// .callback__call--form
 		&.callback__call--form {
 			align-items: flex-start;
@@ -216,6 +208,14 @@
 			.callback__phone {
 				color: $color-text-primary;
 			}
+		}
+
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+
+		@media (min-width: $md4) {
+			gap: rem(20);
 		}
 	}
 

@@ -2,31 +2,6 @@
 @use "../abstracts" as *;
 
 .btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-
-
-	font-family: $font-inter;
-	padding: rem(31) 3.25rem;
-	font-size: 1.375rem;
-	font-weight: 700;
-	line-height: 100%;
-	letter-spacing: -0.0275rem;
-
-	&:focus-visible {
-		outline: none;
-	}
-
-	&:disabled,
-	&.is-disabled {
-		opacity: 0.55;
-		cursor: not-allowed;
-		pointer-events: none;
-	}
-
-
 	// .btn--primary
 	&.btn--primary {
 		background-color: $color-accent-primary;
@@ -37,6 +12,7 @@
 		}
 	}
 
+	// .btn--small
 	&.btn--small {
 		padding: 1.125rem 2rem;
 		font-size: 1rem;
@@ -56,6 +32,29 @@
 			font-size: rem(16);
 			letter-spacing: em(-0.32, 16);
 		}
+	}
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+
+	font-family: $font-inter;
+	padding: rem(31) 3.25rem;
+	font-size: 1.375rem;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: -0.0275rem;
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		opacity: 0.55;
+		cursor: not-allowed;
+		pointer-events: none;
 	}
 
 	&.icon-chevron-right::before,

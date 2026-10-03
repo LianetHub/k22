@@ -32,6 +32,40 @@
 
 
 .form-field {
+	// form-field--xs
+	&.form-field--xs {
+		height: rem(48);
+		padding: 0 rem(20);
+
+		.form-control {
+			font-size: rem(14);
+			letter-spacing: rem(-0.28);
+
+			&::placeholder {
+				letter-spacing: rem(-0.28);
+			}
+		}
+
+		.form-field__error {
+			font-size: rem(14);
+			letter-spacing: rem(-0.28);
+		}
+
+		@media (min-width: $md4) {
+			height: rem(48);
+			padding: 0 rem(20);
+
+			.form-control {
+				font-size: rem(14);
+				letter-spacing: rem(-0.28);
+
+				&::placeholder {
+					letter-spacing: rem(-0.28);
+				}
+			}
+		}
+	}
+
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -80,40 +114,6 @@
 
 			&::placeholder {
 				letter-spacing: 0;
-			}
-		}
-	}
-
-	// form-field--xs
-	&--xs {
-		height: rem(48);
-		padding: 0 rem(20);
-
-		.form-control {
-			font-size: rem(14);
-			letter-spacing: rem(-0.28);
-
-			&::placeholder {
-				letter-spacing: rem(-0.28);
-			}
-		}
-
-		.form-field__error {
-			font-size: rem(14);
-			letter-spacing: rem(-0.28);
-		}
-
-		@media (min-width: $md4) {
-			height: rem(48);
-			padding: 0 rem(20);
-
-			.form-control {
-				font-size: rem(14);
-				letter-spacing: rem(-0.28);
-
-				&::placeholder {
-					letter-spacing: rem(-0.28);
-				}
 			}
 		}
 	}

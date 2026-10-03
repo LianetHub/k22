@@ -86,9 +86,8 @@ img {
 
 
 .social-item {
-	width: 3.125rem;
-	height: 3.125rem;
-	font-size: 1.25rem;
+	width: rem(50);
+	height: rem(50);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -96,6 +95,16 @@ img {
 	background: $color-bg-secondary;
 	color: $color-accent-primary;
 	transition: background-color 0.3s ease;
+
+	&[class*="icon-"]::before {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(20);
+		height: rem(20);
+		font-size: rem(20);
+		line-height: 1;
+	}
 
 	@media (any-hover: hover) {
 		&:hover {

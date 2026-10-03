@@ -697,6 +697,168 @@ document.addEventListener("DOMContentLoaded", () => {
 			cookies.querySelector("[data-cookies-accept]")?.addEventListener("click", acceptCookies);
 		}
 	}
+
+	// slide
+	const collapsedBox = {
+		height: 0,
+		paddingTop: 0,
+		paddingBottom: 0,
+		marginTop: 0,
+		marginBottom: 0,
+	};
+
+	function parseLength(value) {
+		const number = parseFloat(value);
+		return Number.isFinite(number) ? number : 0;
+	}
+
+	function readBox(style) {
+		return {
+			height: parseLength(style.getPropertyValue("height")),
+			paddingTop: parseLength(style.getPropertyValue("padding-top")),
+			paddingBottom: parseLength(style.getPropertyValue("padding-bottom")),
+			marginTop: parseLength(style.getPropertyValue("margin-top")),
+			marginBottom: parseLength(style.getPropertyValue("margin-bottom")),
+		};
+	}
+
+	function writeBox(el, box) {
+		el.style.height = `${box.height}px`;
+		el.style.paddingTop = `${box.paddingTop}px`;
+		el.style.paddingBottom = `${box.paddingBottom}px`;
+		el.style.marginTop = `${box.marginTop}px`;
+		el.style.marginBottom = `${box.marginBottom}px`;
+	}
+
+	function mixBox(from, to, progress) {
+		return {
+			height: from.height + (to.height - from.height) * progress,
+			paddingTop: from.paddingTop + (to.paddingTop - from.paddingTop) * progress,
+			paddingBottom: from.paddingBottom + (to.paddingBottom - from.paddingBottom) * progress,
+			marginTop: from.marginTop + (to.marginTop - from.marginTop) * progress,
+			marginBottom: from.marginBottom + (to.marginBottom - from.marginBottom) * progress,
+		};
+	}
+
+	function easeOutCubic(progress) {
+		return 1 - Math.pow(1 - progress, 3);
+	}
+
+	function prefersReducedMotion() {
+		return typeof window.matchMedia === "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+	}
+
+	function finishSlide(el, isDown, callback) {
+		el.style.height = "";
+		el.style.paddingTop = "";
+		el.style.paddingBottom = "";
+		el.style.marginTop = "";
+		el.style.marginBottom = "";
+		el.style.overflow = "";
+		if (!isDown) el.style.display = "none";
+		if (typeof callback === "function") callback();
+	}
+
+	function runSlide(el, duration, callback, isDown) {
+		if (typeof duration === "undefined") duration = 400;
+		if (typeof isDown === "undefined") isDown = false;
+
+		const token = (el._slideToken || 0) + 1;
+		el._slideToken = token;
+
+		if (el._slideFrame && typeof window.cancelAnimationFrame === "function") {
+			window.cancelAnimationFrame(el._slideFrame);
+			el._slideFrame = 0;
+		}
+
+		el.style.overflow = "hidden";
+		if (isDown) el.style.display = "block";
+
+		if (prefersReducedMotion() || duration <= 0 || typeof window.requestAnimationFrame !== "function") {
+			finishSlide(el, isDown, callback);
+			return;
+		}
+
+		const inlineFrom = el.style.height ? readBox(el.style) : null;
+
+		el.style.height = "";
+		el.style.paddingTop = "";
+		el.style.paddingBottom = "";
+		el.style.marginTop = "";
+		el.style.marginBottom = "";
+
+		const natural = readBox(window.getComputedStyle(el));
+		if (natural.height === 0 && el.scrollHeight > 0) natural.height = el.scrollHeight;
+
+		const from = inlineFrom || (isDown ? collapsedBox : natural);
+		const to = isDown ? natural : collapsedBox;
+
+		// В том же кадре, иначе перед анимацией ответ мигнёт в полный рост.
+		writeBox(el, from);
+
+		let start;
+
+		function step(timestamp) {
+			if (el._slideToken !== token) return;
+			if (start === undefined) start = timestamp;
+
+			const progress = Math.min((timestamp - start) / duration, 1);
+
+			if (progress >= 1) {
+				el._slideFrame = 0;
+				finishSlide(el, isDown, callback);
+				return;
+			}
+
+			writeBox(el, mixBox(from, to, easeOutCubic(progress)));
+			el._slideFrame = window.requestAnimationFrame(step);
+		}
+
+		el._slideFrame = window.requestAnimationFrame(step);
+	}
+
+	HTMLElement.prototype.slideToggle = function (duration, callback) {
+		runSlide(this, duration, callback, this.clientHeight === 0);
+	};
+
+	HTMLElement.prototype.slideUp = function (duration, callback) {
+		runSlide(this, duration, callback, false);
+	};
+
+	HTMLElement.prototype.slideDown = function (duration, callback) {
+		runSlide(this, duration, callback, true);
+	};
+
+	// faq
+	const faqDuration = 400;
+
+	document.querySelectorAll(".faq__details").forEach((details) => {
+		const question = details.querySelector(".faq__question");
+		const answer = details.querySelector(".faq__answer");
+		if (!question || !answer) return;
+
+		if (details.open) details.classList.add("is-open");
+
+		question.addEventListener("click", (event) => {
+			event.preventDefault();
+
+			const willOpen = !details.classList.contains("is-open");
+			details.classList.toggle("is-open", willOpen);
+			details.classList.toggle("is-closing", !willOpen);
+
+			if (willOpen) {
+				details.open = true;
+				answer.slideDown(faqDuration);
+				return;
+			}
+
+			answer.slideUp(faqDuration, () => {
+				if (details.classList.contains("is-open")) return;
+				details.open = false;
+				details.classList.remove("is-closing");
+			});
+		});
+	});
 });
 
 if (typeof Fancybox !== "undefined") {

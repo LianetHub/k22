@@ -10,7 +10,7 @@ const booted = [];
 /**
  * Поднимает app.js в изолированном JSDOM: своё окно, свои слушатели, свой localStorage.
  * @param {string} body
- * @param {{ width?: number, desktop?: boolean, withSwiper?: boolean, withYmaps?: boolean, withFancybox?: boolean, withResizeObserver?: boolean, brokenStorage?: boolean, scrollY?: number }} [options]
+ * @param {{ width?: number, desktop?: boolean, withSwiper?: boolean, withYmaps?: boolean, withFancybox?: boolean, withResizeObserver?: boolean, brokenStorage?: boolean, scrollY?: number, reduceMotion?: boolean }} [options]
  */
 function boot(body = "", options = {}) {
 	const {
@@ -22,6 +22,7 @@ function boot(body = "", options = {}) {
 		withResizeObserver = false,
 		brokenStorage = false,
 		scrollY = 0,
+		reduceMotion = false,
 	} = options;
 
 	// jsdom сообщает о необработанном исключении дважды: событием error и jsdomError
@@ -68,6 +69,7 @@ function boot(body = "", options = {}) {
 		const list = {
 			media,
 			get matches() {
+				if (String(media).includes("prefers-reduced-motion")) return reduceMotion;
 				return isDesktop;
 			},
 			listeners: [],
@@ -1214,5 +1216,264 @@ describe("валидация заявок", () => {
 		expect(event.defaultPrevented).toBe(true);
 		expect(ctx.window.location.href).toBe(href);
 		expect(ctx.$(".form-field.is-error")).toBeNull();
+	});
+});
+
+const FAQ = `
+<section class="faq">
+	<ul class="faq__list">
+		<li class="faq__item">
+			<details class="faq__details" id="faq-1">
+				<summary class="faq__question" id="q1">Как проходит чип-тюнинг?</summary>
+				<div class="faq__answer" id="a1"><p id="a1-text">Диагностика, запись программы и проверка.</p></div>
+			</details>
+		</li>
+		<li class="faq__item">
+			<details class="faq__details" id="faq-2">
+				<summary class="faq__question" id="q2">Сколько занимает работа?</summary>
+				<div class="faq__answer" id="a2"><p>Обычно один-два часа.</p></div>
+			</details>
+		</li>
+	</ul>
+</section>
+<section class="faq">
+	<ul class="faq__list">
+		<li class="faq__item">
+			<details class="faq__details" id="faq-3" open>
+				<summary class="faq__question" id="q3">Уже открытый вопрос</summary>
+				<div class="faq__answer" id="a3"><p>Ответ виден сразу.</p></div>
+			</details>
+		</li>
+	</ul>
+</section>`;
+
+function clickFaq(ctx, selector) {
+	const el = ctx.$(selector);
+	const event = new ctx.window.MouseEvent("click", { bubbles: true, cancelable: true });
+	el.dispatchEvent(event);
+	return event;
+}
+
+function mockSlideClock(ctx) {
+	const queue = [];
+	let nextId = 0;
+
+	ctx.window.requestAnimationFrame = (cb) => {
+		nextId += 1;
+		queue.push({ id: nextId, cb });
+		return nextId;
+	};
+	ctx.window.cancelAnimationFrame = (id) => {
+		const index = queue.findIndex((frame) => frame.id === id);
+		if (index >= 0) queue.splice(index, 1);
+	};
+	ctx.frames = queue;
+	ctx.stepFrame = (time) => {
+		const frame = queue.shift();
+		if (!frame) throw new Error("кадр анимации не запланирован");
+		frame.cb(time);
+	};
+}
+
+function mockAnswerMetrics(ctx, naturalHeight = 100, naturalPaddingTop = 20) {
+	ctx.window.getComputedStyle = (el) => ({
+		getPropertyValue(name) {
+			if (el.style.display === "none") return "0px";
+
+			const inline = {
+				height: el.style.height,
+				"padding-top": el.style.paddingTop,
+				"padding-bottom": el.style.paddingBottom,
+				"margin-top": el.style.marginTop,
+				"margin-bottom": el.style.marginBottom,
+			}[name];
+
+			if (inline) return inline;
+			if (name === "height") return `${naturalHeight}px`;
+			if (name === "padding-top") return `${naturalPaddingTop}px`;
+			return "0px";
+		},
+	});
+}
+
+function playSlide(ctx, start = 1000) {
+	ctx.stepFrame(start);
+	ctx.stepFrame(start + 200);
+	ctx.stepFrame(start + 400);
+}
+
+describe("faq", () => {
+	it("помечает уже открытый пункт и не трогает закрытые", () => {
+		const ctx = boot(FAQ);
+
+		expect(ctx.$("#faq-3").classList.contains("is-open")).toBe(true);
+		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(false);
+		expect(ctx.$("#faq-1").open).toBe(false);
+		expect(typeof ctx.window.HTMLElement.prototype.slideToggle).toBe("function");
+	});
+
+	it("раскрывает ответ с нуля, ease-out, без мгновенного скачка", () => {
+		const ctx = boot(FAQ);
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx);
+
+		const event = clickFaq(ctx, "#q1");
+		const answer = ctx.$("#a1");
+		const details = ctx.$("#faq-1");
+
+		expect(event.defaultPrevented).toBe(true);
+		expect(details.open).toBe(true);
+		expect(details.classList.contains("is-open")).toBe(true);
+		expect(details.classList.contains("is-closing")).toBe(false);
+		expect(answer.style.display).toBe("block");
+		expect(answer.style.overflow).toBe("hidden");
+		expect(answer.style.height).toBe("0px");
+		expect(answer.style.paddingTop).toBe("0px");
+
+		ctx.stepFrame(1000);
+		expect(answer.style.height).toBe("0px");
+
+		ctx.stepFrame(1200);
+		expect(parseFloat(answer.style.height)).toBeCloseTo(87.5);
+		expect(parseFloat(answer.style.paddingTop)).toBeCloseTo(17.5);
+
+		ctx.stepFrame(1400);
+		expect(answer.style.height).toBe("");
+		expect(answer.style.paddingTop).toBe("");
+		expect(answer.style.overflow).toBe("");
+		expect(answer.style.display).toBe("block");
+		expect(details.open).toBe(true);
+		expect(ctx.frames).toHaveLength(0);
+	});
+
+	it("сворачивает ответ и только потом снимает open", () => {
+		const ctx = boot(FAQ);
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx);
+		const details = ctx.$("#faq-1");
+		const answer = ctx.$("#a1");
+
+		clickFaq(ctx, "#q1");
+		playSlide(ctx);
+
+		clickFaq(ctx, "#q1");
+		expect(details.open).toBe(true);
+		expect(details.classList.contains("is-open")).toBe(false);
+		expect(details.classList.contains("is-closing")).toBe(true);
+		expect(answer.style.height).toBe("100px");
+
+		ctx.stepFrame(2000);
+		ctx.stepFrame(2200);
+		expect(parseFloat(answer.style.height)).toBeCloseTo(12.5);
+
+		ctx.stepFrame(2400);
+		expect(answer.style.display).toBe("none");
+		expect(answer.style.height).toBe("");
+		expect(details.open).toBe(false);
+		expect(details.classList.contains("is-closing")).toBe(false);
+	});
+
+	it("повторный клик в середине закрытия раскрывает обратно с текущей высоты", () => {
+		const ctx = boot(FAQ);
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx);
+		const details = ctx.$("#faq-1");
+		const answer = ctx.$("#a1");
+
+		clickFaq(ctx, "#q1");
+		playSlide(ctx);
+		clickFaq(ctx, "#q1");
+		ctx.stepFrame(2000);
+		ctx.stepFrame(2200);
+		expect(parseFloat(answer.style.height)).toBeCloseTo(12.5);
+
+		clickFaq(ctx, "#q1");
+		expect(details.open).toBe(true);
+		expect(details.classList.contains("is-open")).toBe(true);
+		expect(details.classList.contains("is-closing")).toBe(false);
+		expect(parseFloat(answer.style.height)).toBeCloseTo(12.5);
+
+		ctx.stepFrame(3000);
+		ctx.stepFrame(3200);
+		expect(parseFloat(answer.style.height)).toBeCloseTo(89.0625);
+
+		ctx.stepFrame(3400);
+		expect(details.open).toBe(true);
+		expect(answer.style.display).toBe("block");
+		expect(answer.style.height).toBe("");
+		expect(ctx.frames).toHaveLength(0);
+	});
+
+	it("не закрывает соседние вопросы и второй блок faq", () => {
+		const ctx = boot(FAQ);
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx);
+
+		clickFaq(ctx, "#q1");
+		playSlide(ctx);
+		clickFaq(ctx, "#q2");
+
+		expect(ctx.$("#faq-1").open).toBe(true);
+		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(true);
+		expect(ctx.$("#faq-2").open).toBe(true);
+		expect(ctx.$("#faq-3").open).toBe(true);
+		expect(ctx.$("#faq-3").classList.contains("is-open")).toBe(true);
+	});
+
+	it("клик по тексту ответа не переключает пункт", () => {
+		const ctx = boot(FAQ);
+		clickFaq(ctx, "#a1-text");
+
+		expect(ctx.$("#faq-1").open).toBe(false);
+		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(false);
+	});
+
+	it("при reduced motion открывает и закрывает сразу", () => {
+		const ctx = boot(FAQ, { reduceMotion: true });
+		const raf = vi.fn();
+		ctx.window.requestAnimationFrame = raf;
+
+		clickFaq(ctx, "#q1");
+		expect(ctx.$("#faq-1").open).toBe(true);
+		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(true);
+		expect(ctx.$("#a1").style.height).toBe("");
+		expect(raf).not.toHaveBeenCalled();
+
+		clickFaq(ctx, "#q1");
+		expect(ctx.$("#faq-1").open).toBe(false);
+		expect(ctx.$("#faq-1").classList.contains("is-closing")).toBe(false);
+		expect(ctx.$("#a1").style.display).toBe("none");
+	});
+
+	it("сворачивает пункт, который был открыт в разметке", () => {
+		const ctx = boot(FAQ);
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx);
+		const details = ctx.$("#faq-3");
+
+		clickFaq(ctx, "#q3");
+		expect(details.classList.contains("is-open")).toBe(false);
+		expect(details.classList.contains("is-closing")).toBe(true);
+		expect(details.open).toBe(true);
+
+		playSlide(ctx, 1000);
+		expect(details.open).toBe(false);
+		expect(ctx.$("#a3").style.display).toBe("none");
+	});
+
+	it("slideToggle выбирает направление по clientHeight", () => {
+		const ctx = boot("<div id='panel'>текст</div>");
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx, 80, 10);
+		const panel = ctx.$("#panel");
+
+		panel.slideToggle(400);
+		expect(panel.style.display).toBe("block");
+		expect(panel.style.height).toBe("0px");
+
+		panel.style.height = "";
+		Object.defineProperty(panel, "clientHeight", { configurable: true, get: () => 80 });
+		panel.slideToggle(400);
+		expect(panel.style.height).toBe("80px");
 	});
 });

@@ -2,6 +2,11 @@
 @use "../abstracts" as *;
 
 .offers {
+	// .offers--muted
+	&.offers--muted {
+		background-color: $color-bg-secondary;
+	}
+
 	padding-block: rem(60);
 	background-color: $color-bg-primary;
 
@@ -35,14 +40,72 @@
 			gap: rem(20);
 		}
 	}
-
-	// .offers--muted
-	&--muted {
-		background-color: $color-bg-secondary;
-	}
 }
 
 .offer {
+	// .offer--promo
+	&.offer--promo {
+		background-position: left center;
+
+		&::before {
+			background: linear-gradient(
+				90deg,
+				rgba($color-bg-elevated, 0) 26%,
+				$color-bg-elevated 100%
+			);
+		}
+
+		@media (min-width: $md4) {
+			justify-content: flex-end;
+			gap: rem(50);
+			padding-left: rem(280);
+		}
+
+		@media (min-width: $md2) {
+			padding-left: rem(600);
+		}
+
+		.offer__content {
+			@media (min-width: $md4) {
+				flex: 0 1 rem(711);
+				align-items: flex-end;
+			}
+		}
+
+		.offer__title {
+			@media (min-width: $md4) {
+				text-align: right;
+			}
+		}
+	}
+
+	// .offer--lead
+	&.offer--lead {
+		background-position: right center;
+
+		&::before {
+			background: linear-gradient(
+				90deg,
+				$color-bg-elevated 0%,
+				rgba($color-bg-elevated, 0) 45%,
+				$color-bg-elevated 100%
+			);
+
+			@media (min-width: $md4) {
+				background: linear-gradient(
+					90deg,
+					$color-bg-elevated 33%,
+					rgba($color-bg-elevated, 0) 62%
+				);
+			}
+		}
+
+		@media (min-width: $md4) {
+			justify-content: space-between;
+			gap: rem(50);
+		}
+	}
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -173,69 +236,6 @@
 
 		@media (min-width: $md4) {
 			align-self: center;
-		}
-	}
-
-	// .offer--promo
-	&--promo {
-		background-position: left center;
-
-		&::before {
-			background: linear-gradient(
-				90deg,
-				rgba($color-bg-elevated, 0) 26%,
-				$color-bg-elevated 100%
-			);
-		}
-
-		@media (min-width: $md4) {
-			justify-content: flex-end;
-			gap: rem(50);
-			padding-left: rem(280);
-		}
-
-		@media (min-width: $md2) {
-			padding-left: rem(600);
-		}
-
-		.offer__content {
-			@media (min-width: $md4) {
-				flex: 0 1 rem(711);
-				align-items: flex-end;
-			}
-		}
-
-		.offer__title {
-			@media (min-width: $md4) {
-				text-align: right;
-			}
-		}
-	}
-
-	// .offer--lead
-	&--lead {
-		background-position: right center;
-
-		&::before {
-			background: linear-gradient(
-				90deg,
-				$color-bg-elevated 0%,
-				rgba($color-bg-elevated, 0) 45%,
-				$color-bg-elevated 100%
-			);
-
-			@media (min-width: $md4) {
-				background: linear-gradient(
-					90deg,
-					$color-bg-elevated 33%,
-					rgba($color-bg-elevated, 0) 62%
-				);
-			}
-		}
-
-		@media (min-width: $md4) {
-			justify-content: space-between;
-			gap: rem(50);
 		}
 	}
 }

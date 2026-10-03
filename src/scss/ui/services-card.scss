@@ -64,6 +64,274 @@
 }
 
 .services-card {
+	// services-card--featured
+	&.services-card--featured {
+		@media (min-width: $md1) {
+			height: rem(580);
+			min-height: rem(580);
+			max-height: rem(580);
+		}
+
+		&::before {
+			background-color: $color-text-primary;
+			background-image:
+				linear-gradient(rgba($color-text-primary, 0.6), rgba($color-text-primary, 0.6)),
+				var(--services-card-image);
+		}
+
+		.services-card__icon,
+		.services-card__title[class^="icon-"]::before,
+		.services-card__title[class*=" icon-"]::before {
+			opacity: 0;
+		}
+
+		.services-card__body {
+			gap: rem(16);
+			padding-right: rem(96);
+
+			@media (min-width: $md4) {
+				gap: rem(30);
+				padding-right: rem(140);
+			}
+		}
+	}
+
+	// services-card--dark
+	&.services-card--dark {
+		background-color: $color-bg-elevated;
+		background-image: url("@img/decor/light-pattern.svg");
+		color: $color-bg-primary;
+
+		&::before {
+			background-color: $color-bg-elevated;
+			background-image:
+				linear-gradient(rgba($color-bg-elevated, 0.6), rgba($color-bg-elevated, 0.6)),
+				var(--services-card-image);
+		}
+
+		.services-card__title,
+		.services-card__description,
+		.services-card__icon,
+		.services-card__title[class^="icon-"]::before,
+		.services-card__title[class*=" icon-"]::before {
+			color: $color-bg-primary;
+		}
+	}
+
+	// services-card--category
+	&.services-card--category {
+		min-height: rem(168);
+		background-color: $color-bg-secondary;
+		background-image: url("@img/decor/dark-pattern.svg");
+		transition: background-color 0.35s ease;
+
+		@media (min-width: $md4) {
+			min-height: rem(180);
+		}
+
+		@media (min-width: $md1) {
+			min-height: rem(220);
+		}
+
+		&::before {
+			content: none;
+		}
+
+		.services-card__body {
+			max-width: calc(100% - #{rem(108)});
+			padding: rem(20);
+			pointer-events: none;
+		}
+
+		.services-card__title {
+			max-width: rem(310);
+		}
+
+		.services-card__image {
+			opacity: 0.6;
+			transition: opacity 0.35s ease;
+		}
+
+		.services-card__link {
+			position: absolute;
+			inset: 0;
+			z-index: $ui-index-2;
+			min-height: 0;
+			padding: 0;
+
+			&::after {
+				background-color: $color-bg-primary;
+			}
+		}
+
+		.services-card__link-text {
+			position: absolute;
+			width: rem(1);
+			height: rem(1);
+			margin: rem(-1);
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border: 0;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $color-text-primary;
+
+				.services-card__title {
+					color: $color-bg-primary;
+				}
+
+				.services-card__image {
+					opacity: 1;
+				}
+
+				.services-card__link::before {
+					transform: rotate(90deg);
+				}
+			}
+		}
+
+		&:focus-within {
+			background-color: $color-text-primary;
+
+			.services-card__title {
+				color: $color-bg-primary;
+			}
+
+			.services-card__image {
+				opacity: 1;
+			}
+
+			.services-card__link::before {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	// services-card--compact
+	&.services-card--compact {
+		.services-card__title {
+			min-width: 0;
+			max-width: 100%;
+		}
+
+		&:has(.services-card__icon) .services-card__title,
+		.services-card__title[class^="icon-"],
+		.services-card__title[class*=" icon-"] {
+			@media (min-width: $md4) {
+				@include mobile-heading-h4;
+			}
+
+			@media (min-width: $md0) {
+				@include desktop-heading-h3;
+			}
+		}
+
+		.services-card__icon,
+		.services-card__title[class^="icon-"]::before,
+		.services-card__title[class*=" icon-"]::before {
+			width: rem(40);
+			height: rem(40);
+			font-size: rem(40);
+		}
+
+		.services-card__icon-img {
+			width: rem(40);
+			height: rem(40);
+		}
+
+		&:has(.services-card__icon) .services-card__body,
+		&:has(.services-card__title[class^="icon-"]) .services-card__body,
+		&:has(.services-card__title[class*=" icon-"]) .services-card__body {
+			padding-right: rem(72);
+
+			@media (min-width: $md0) {
+				padding-right: rem(96);
+			}
+		}
+
+		.services-card__link {
+			padding-left: rem(16);
+
+			@media (min-width: $md4) {
+				padding-left: rem(20);
+			}
+		}
+
+		.services-card__link-text {
+			font-size: rem(16);
+
+			@media (min-width: $md0) {
+				font-size: rem(22);
+			}
+		}
+
+		.services-card__price:not(.services-card__price--inline) {
+			padding: rem(12) rem(10) rem(12) rem(50);
+			font-size: rem(16);
+			letter-spacing: -0.02em;
+
+			@media (min-width: $md4) {
+				padding-left: rem(68);
+			}
+
+			@media (min-width: $md0) {
+				padding: rem(12) rem(16) rem(12) rem(74);
+				font-size: rem(20);
+			}
+		}
+	}
+
+	&.services-card--compact:has(.services-card__badge:not(.services-card__badge--bottom)) {
+		.services-card__body {
+			padding-top: rem(52);
+		}
+
+		@media (min-width: $md0) {
+			.services-card__body {
+				padding-top: rem(30);
+			}
+
+			.services-card__heading {
+				padding-right: rem(120);
+			}
+		}
+	}
+
+	// services-card--media
+	&.services-card--media {
+		min-height: rem(280);
+
+		@media (min-width: $md1) {
+			min-height: rem(300);
+		}
+
+		.services-card__image {
+			bottom: 0;
+			z-index: 1;
+			height: 78%;
+			max-width: 58%;
+			opacity: 1;
+		}
+
+		&:not(:has(.services-card__price)) {
+			min-height: rem(320);
+
+			@media (min-width: $md4) {
+				min-height: rem(400);
+			}
+
+			.services-card__image {
+				bottom: rem(70);
+				height: 58%;
+				max-width: 72%;
+			}
+		}
+	}
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -251,6 +519,21 @@
 
 	// services-card__price
 	&__price {
+		// services-card__price--inline
+		&.services-card__price--inline {
+			align-self: flex-start;
+			margin-left: 0;
+			padding: 0;
+			background-color: transparent;
+			color: $color-accent-primary;
+			clip-path: none;
+
+			@media (min-width: $md4) {
+				padding-left: 0;
+				@include desktop-heading-h4;
+			}
+		}
+
 		position: relative;
 		z-index: $ui-index-2;
 		display: inline-flex;
@@ -269,20 +552,6 @@
 			clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 		}
 
-		// services-card__price--inline
-		&--inline {
-			align-self: flex-start;
-			margin-left: 0;
-			padding: 0;
-			background-color: transparent;
-			color: $color-accent-primary;
-			clip-path: none;
-
-			@media (min-width: $md4) {
-				padding-left: 0;
-				@include desktop-heading-h4;
-			}
-		}
 	}
 
 	&:has(> .services-card__link > .services-card__price) {
@@ -475,271 +744,9 @@
 		}
 	}
 
-	// services-card--featured
-	&--featured {
-		@media (min-width: $md1) {
-			height: rem(580);
-			min-height: rem(580);
-			max-height: rem(580);
-		}
 
-		&::before {
-			background-color: $color-text-primary;
-			background-image:
-				linear-gradient(rgba($color-text-primary, 0.6), rgba($color-text-primary, 0.6)),
-				var(--services-card-image);
-		}
 
-		.services-card__icon,
-		.services-card__title[class^="icon-"]::before,
-		.services-card__title[class*=" icon-"]::before {
-			opacity: 0;
-		}
 
-		.services-card__body {
-			gap: rem(16);
-			padding-right: rem(96);
 
-			@media (min-width: $md4) {
-				gap: rem(30);
-				padding-right: rem(140);
-			}
-		}
-	}
 
-	// services-card--dark
-	&--dark {
-		background-color: $color-bg-elevated;
-		background-image: url("@img/decor/light-pattern.svg");
-		color: $color-bg-primary;
-
-		&::before {
-			background-color: $color-bg-elevated;
-			background-image:
-				linear-gradient(rgba($color-bg-elevated, 0.6), rgba($color-bg-elevated, 0.6)),
-				var(--services-card-image);
-		}
-
-		.services-card__title,
-		.services-card__description,
-		.services-card__icon,
-		.services-card__title[class^="icon-"]::before,
-		.services-card__title[class*=" icon-"]::before {
-			color: $color-bg-primary;
-		}
-	}
-
-	// services-card--category
-	&--category {
-		min-height: rem(168);
-		background-color: $color-bg-secondary;
-		background-image: url("@img/decor/dark-pattern.svg");
-		transition: background-color 0.35s ease;
-
-		@media (min-width: $md4) {
-			min-height: rem(180);
-		}
-
-		@media (min-width: $md1) {
-			min-height: rem(220);
-		}
-
-		&::before {
-			content: none;
-		}
-
-		.services-card__body {
-			max-width: calc(100% - #{rem(108)});
-			padding: rem(20);
-			pointer-events: none;
-		}
-
-		.services-card__title {
-			max-width: rem(310);
-		}
-
-		.services-card__image {
-			opacity: 0.6;
-			transition: opacity 0.35s ease;
-		}
-
-		.services-card__link {
-			position: absolute;
-			inset: 0;
-			z-index: $ui-index-2;
-			min-height: 0;
-			padding: 0;
-
-			&::after {
-				background-color: $color-bg-primary;
-			}
-		}
-
-		.services-card__link-text {
-			position: absolute;
-			width: rem(1);
-			height: rem(1);
-			margin: rem(-1);
-			padding: 0;
-			overflow: hidden;
-			clip: rect(0, 0, 0, 0);
-			white-space: nowrap;
-			border: 0;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $color-text-primary;
-
-				.services-card__title {
-					color: $color-bg-primary;
-				}
-
-				.services-card__image {
-					opacity: 1;
-				}
-
-				.services-card__link::before {
-					transform: rotate(90deg);
-				}
-			}
-		}
-
-		&:focus-within {
-			background-color: $color-text-primary;
-
-			.services-card__title {
-				color: $color-bg-primary;
-			}
-
-			.services-card__image {
-				opacity: 1;
-			}
-
-			.services-card__link::before {
-				transform: rotate(90deg);
-			}
-		}
-	}
-
-	// services-card--compact
-	&--compact {
-		.services-card__title {
-			min-width: 0;
-			max-width: 100%;
-		}
-
-		&:has(.services-card__icon) .services-card__title,
-		.services-card__title[class^="icon-"],
-		.services-card__title[class*=" icon-"] {
-			@media (min-width: $md4) {
-				@include mobile-heading-h4;
-			}
-
-			@media (min-width: $md0) {
-				@include desktop-heading-h3;
-			}
-		}
-
-		.services-card__icon,
-		.services-card__title[class^="icon-"]::before,
-		.services-card__title[class*=" icon-"]::before {
-			width: rem(40);
-			height: rem(40);
-			font-size: rem(40);
-		}
-
-		.services-card__icon-img {
-			width: rem(40);
-			height: rem(40);
-		}
-
-		&:has(.services-card__icon) .services-card__body,
-		&:has(.services-card__title[class^="icon-"]) .services-card__body,
-		&:has(.services-card__title[class*=" icon-"]) .services-card__body {
-			padding-right: rem(72);
-
-			@media (min-width: $md0) {
-				padding-right: rem(96);
-			}
-		}
-
-		.services-card__link {
-			padding-left: rem(16);
-
-			@media (min-width: $md4) {
-				padding-left: rem(20);
-			}
-		}
-
-		.services-card__link-text {
-			font-size: rem(16);
-
-			@media (min-width: $md0) {
-				font-size: rem(22);
-			}
-		}
-
-		.services-card__price:not(.services-card__price--inline) {
-			padding: rem(12) rem(10) rem(12) rem(50);
-			font-size: rem(16);
-			letter-spacing: -0.02em;
-
-			@media (min-width: $md4) {
-				padding-left: rem(68);
-			}
-
-			@media (min-width: $md0) {
-				padding: rem(12) rem(16) rem(12) rem(74);
-				font-size: rem(20);
-			}
-		}
-	}
-
-	&--compact:has(.services-card__badge:not(.services-card__badge--bottom)) {
-		.services-card__body {
-			padding-top: rem(52);
-		}
-
-		@media (min-width: $md0) {
-			.services-card__body {
-				padding-top: rem(30);
-			}
-
-			.services-card__heading {
-				padding-right: rem(120);
-			}
-		}
-	}
-
-	// services-card--media
-	&--media {
-		min-height: rem(280);
-
-		@media (min-width: $md1) {
-			min-height: rem(300);
-		}
-
-		.services-card__image {
-			bottom: 0;
-			z-index: 1;
-			height: 78%;
-			max-width: 58%;
-			opacity: 1;
-		}
-
-		&:not(:has(.services-card__price)) {
-			min-height: rem(320);
-
-			@media (min-width: $md4) {
-				min-height: rem(400);
-			}
-
-			.services-card__image {
-				bottom: rem(70);
-				height: 58%;
-				max-width: 72%;
-			}
-		}
-	}
 }

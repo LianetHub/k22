@@ -1,6 +1,15 @@
 @use "../abstracts" as *;
 
 .reviews {
+	// .reviews--trio
+	&.reviews--trio {
+		.reviews__grid {
+			@media (min-width: $md2) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+
 	padding-block: rem(48);
 	background: $color-bg-primary;
 
@@ -82,15 +91,6 @@
 
 		@media (min-width: $md2) {
 			grid-template-columns: repeat(4, 1fr);
-		}
-	}
-
-	// .reviews--trio
-	&.reviews--trio {
-		.reviews__grid {
-			@media (min-width: $md2) {
-				grid-template-columns: repeat(3, 1fr);
-			}
 		}
 	}
 }
