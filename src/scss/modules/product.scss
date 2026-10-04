@@ -1,6 +1,13 @@
 @use "../abstracts" as *;
 
 .products {
+	// .products.is-filters-open
+	&.is-filters-open {
+		.products__filters {
+			display: flex;
+		}
+	}
+
 	background-color: $color-bg-secondary;
 
 	.page > &:first-child {
@@ -13,6 +20,26 @@
 		@media (min-width: $md2) {
 			padding-top: rem(54);
 		}
+
+		// .products__title
+		.products__title {
+			overflow: hidden;
+			height: rem(4);
+			padding-top: 0;
+			font-size: 0;
+			line-height: 0;
+
+			@media (min-width: $md4) {
+				overflow: visible;
+				height: auto;
+				padding-top: rem(44);
+				@include tablet-heading-h1;
+			}
+
+			@media (min-width: $md1) {
+				@include desktop-heading-h2;
+			}
+		}
 	}
 
 	// .page > .products:has(.products__slider)
@@ -22,28 +49,33 @@
 		@media (min-width: $md4) {
 			padding: rem(80) 0;
 		}
+
+		@media (min-width: $md0) {
+			padding: rem(100) 0;
+		}
 	}
 
 	// .products__container
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(24);
+		gap: rem(30);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md1) {
 			gap: rem(40);
 		}
 
 		&:has(.products__slider) {
 			display: grid;
-			gap: rem(40);
+			gap: rem(30);
 			grid-template-columns: 1fr;
 			grid-template-areas:
 				"head"
 				"slider"
 				"nav";
 
-			@media (min-width: $md4) {
+			@media (min-width: $md1) {
+				gap: rem(40);
 				grid-template-columns: 1fr auto;
 				grid-template-areas:
 					"head nav"
@@ -61,7 +93,7 @@
 		grid-area: head;
 		width: 100%;
 
-		@media (min-width: $md2) {
+		@media (min-width: $md1) {
 			flex-direction: row;
 			justify-content: space-between;
 			gap: rem(24);
@@ -70,22 +102,68 @@
 
 	// .products__breadcrumbs
 	&__breadcrumbs {
+		display: none;
 		padding: 0;
-		order: -1;
 
-		@media (min-width: $md2) {
-			order: 0;
+		@media (min-width: $md4) {
+			display: block;
+		}
+
+		@media (min-width: $md1) {
 			flex-shrink: 0;
-			padding-top: rem(2);
+		}
+	}
+
+	// .products__switch
+	&__switch {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		width: 100%;
+		padding: rem(14) rem(20);
+		border: 0;
+		background-color: $color-bg-primary;
+		color: $color-text-primary;
+		font-family: $font-inter;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1.3;
+		letter-spacing: em(-0.32, 16);
+		text-align: left;
+
+		&::before {
+			order: 1;
+			margin-left: auto;
+			color: $color-accent-primary;
+			font-size: rem(16);
+			transition: transform 0.2s ease;
+		}
+
+		&[aria-expanded="true"]::before {
+			transform: rotate(180deg);
+		}
+
+		&:focus-visible {
+			outline: rem(2) solid $color-accent-primary;
+			outline-offset: rem(2);
+		}
+
+		@media (min-width: $md1) {
+			display: none;
 		}
 	}
 
 	// .products__filters
 	&__filters {
-		display: flex;
+		display: none;
 		flex-wrap: wrap;
-		align-items: flex-start;
+		align-items: stretch;
 		gap: rem(10);
+
+		@media (min-width: $md1) {
+			display: flex;
+			flex-wrap: nowrap;
+		}
 	}
 
 	// .products__filters-item
@@ -99,16 +177,9 @@
 		min-width: 0;
 		max-width: 100%;
 
-		@media (min-width: $md5) {
-			flex-basis: calc(50% - #{rem(5)});
-		}
-
-		@media (min-width: $md3) {
-			flex-basis: calc(33.333% - #{rem(7)});
-		}
-
-		@media (min-width: $md0) {
+		@media (min-width: $md1) {
 			flex: 1 1 0;
+			max-width: none;
 		}
 	}
 
@@ -139,7 +210,9 @@
 		}
 
 		&:has(.products__filter-note) {
-			padding-block: rem(26);
+			@media (min-width: $md0) {
+				padding-block: rem(26);
+			}
 		}
 
 		@media (min-width: $md0) {
@@ -190,7 +263,7 @@
 		justify-content: space-between;
 		gap: rem(30);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md1) {
 			align-self: end;
 			justify-content: flex-end;
 			padding-block: rem(10);
@@ -236,8 +309,12 @@
 			height: auto;
 			display: flex;
 
-			@media (min-width: $md2) {
-				width: rem(332);
+			@media (min-width: $md4) {
+				width: rem(322);
+			}
+
+			@media (min-width: $md1) {
+				width: auto;
 			}
 		}
 	}
@@ -245,15 +322,10 @@
 	// .products__grid
 	&__grid {
 		display: grid;
-		gap: rem(16);
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(10);
 
 		@media (min-width: $md4) {
-			grid-template-columns: repeat(2, 1fr);
-			gap: rem(20);
-		}
-
-		@media (min-width: $md2) {
-			grid-template-columns: repeat(3, 1fr);
 			gap: rem(30);
 		}
 

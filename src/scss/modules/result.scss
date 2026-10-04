@@ -13,16 +13,66 @@
 				url("@img/decor/light-pattern.svg"),
 				linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
 				url("@img/result/moto.webp");
+			background-position: 0 0, center top, 70% top;
+			background-size: auto, 100% rem(447), auto rem(447);
+
+			@media (min-width: $md4) {
+				background-size: auto, 100% rem(373), auto rem(373);
+			}
 
 			@media (min-width: $md1) {
 				background-image:
 					url("@img/decor/light-pattern.svg"),
 					linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
 					url("@img/result/moto.webp");
+				background-position: 0 0, center, right center;
+				background-size: auto, cover, cover;
+			}
+
+			@media (min-width: $md0) {
+				padding-block: rem(100);
 			}
 
 			&::after {
 				background-image: url("@img/result/moto-smoke.webp");
+			}
+
+			// .result__title
+			.result__title {
+				@media (min-width: $md4) {
+					max-width: rem(339);
+					margin-bottom: rem(40);
+				}
+
+				@media (min-width: $md1) {
+					max-width: rem(687);
+					margin-bottom: 0;
+				}
+			}
+
+			// .result__main
+			.result__main {
+				@media (min-width: $md0) {
+					max-width: rem(757);
+				}
+			}
+
+			// .result__note
+			.result__note {
+				margin-bottom: rem(10);
+
+				@media (min-width: $md4) {
+					margin-bottom: 0;
+				}
+			}
+
+			// .result__disclaimer
+			.result__disclaimer {
+				margin-bottom: rem(20);
+
+				@media (min-width: $md1) {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -451,7 +501,7 @@
 
 	// .result__disclaimer
 	&__disclaimer {
-		order: 3;
+		order: 4;
 		width: 100%;
 		margin-bottom: rem(10);
 		@extend %result-trim;
@@ -532,7 +582,7 @@
 
 	// .result__note
 	&__note {
-		order: 4;
+		order: 3;
 		align-self: flex-start;
 		width: 100%;
 		margin-bottom: rem(30);

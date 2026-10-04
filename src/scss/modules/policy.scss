@@ -1,67 +1,90 @@
-@use "sass:math";
 @use "../abstracts" as *;
 
 .policy {
-	padding: rem(40) 0 rem(48);
+	padding: rem(32) 0 rem(60);
 	background: $color-bg-secondary;
 
-	&:first-child {
-		padding-top: rem(40);
+	.page > & {
+		padding-bottom: rem(60);
+
+		@media (min-width: $md4) {
+			padding-bottom: rem(80);
+		}
+
+		@media (min-width: $md0) {
+			padding-bottom: rem(100);
+		}
+	}
+
+	.page > &:first-child {
+		padding-top: rem(32);
+
+		@media (min-width: $md4) {
+			padding-top: rem(70);
+		}
+
+		@media (min-width: $md0) {
+			padding-top: rem(54);
+		}
 	}
 
 	@media (min-width: $md4) {
-		padding: rem(48) 0 rem(80);
-
-		&:first-child {
-			padding-top: rem(48);
-		}
+		padding: rem(70) 0 rem(80);
 	}
 
-	@media (min-width: $md2) {
+	@media (min-width: $md0) {
 		padding: rem(54) 0 rem(100);
-
-		&:first-child {
-			padding-top: rem(54);
-		}
 	}
 
 	// .policy__container
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
+		gap: rem(30);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
 	}
 
 	// .policy__head
 	&__head {
 		display: flex;
 		flex-direction: column;
-		gap: rem(24);
+		padding-top: rem(44);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md1) {
+			gap: rem(20);
+		}
+
+		@media (min-width: $md0) {
 			gap: rem(40);
 		}
 
 		> p {
+			display: none;
 			font-family: $font-inter;
-			font-size: rem(12);
+			font-size: rem(14);
 			font-weight: 700;
-			line-height: math.div(14, 12);
+			line-height: 1.2;
 			letter-spacing: 0.08em;
 			text-transform: uppercase;
 			color: $color-text-secondary;
 
-			@media (min-width: $md4) {
-				font-size: rem(14);
-				line-height: math.div(17, 14);
+			@media (min-width: $md1) {
+				display: block;
 			}
 		}
 
 		h1 {
-			@include mobile-heading-h1;
+			@include desktop-heading-h4;
 			color: $color-text-primary;
 
 			@media (min-width: $md4) {
+				@include tablet-heading-h1;
+			}
+
+			@media (min-width: $md1) {
 				@include desktop-heading-h2;
 			}
 		}
@@ -71,50 +94,45 @@
 	&__layout {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
 
-		@media (min-width: $md3) {
+		@media (min-width: $md0) {
 			display: grid;
-			grid-template-columns: 1fr minmax(rem(280), rem(400));
+			grid-template-columns: 1fr rem(572);
 			gap: rem(40);
 			align-items: start;
-		}
-
-		@media (min-width: $md1) {
-			grid-template-columns: 1fr rem(572);
 		}
 	}
 
 	// .policy__body
 	&__body {
-		order: 2;
 		min-width: 0;
+		font-size: rem(18);
+		line-height: 1.2;
 
-		@media (min-width: $md3) {
-			order: 0;
+		@media (min-width: $md0) {
+			font-size: rem(22);
+		}
+
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@include desktop-heading-h3;
 		}
 	}
 
 	// .policy__nav
 	&__nav {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		gap: rem(20);
-		order: 1;
-		padding: rem(20);
+		padding: rem(30);
 		background: $color-bg-primary;
 
-		@media (min-width: $md4) {
-			padding: rem(30);
-		}
-
-		@media (min-width: $md3) {
-			order: 0;
+		@media (min-width: $md0) {
+			display: flex;
 			position: sticky;
-			top: rem(120);
-		}
-
-		@media (min-width: $md2) {
 			top: rem(160);
 		}
 	}
@@ -136,14 +154,10 @@
 
 	// .policy__nav-num
 	&__nav-num {
-		@include mobile-heading-h4;
+		@include desktop-heading-h4;
 		flex-shrink: 0;
 		width: rem(30);
 		color: $color-accent-primary;
-
-		@media (min-width: $md4) {
-			@include desktop-heading-h4;
-		}
 	}
 
 	// .policy__nav-text
@@ -151,19 +165,9 @@
 		flex: 1 1 auto;
 		min-width: 0;
 		font-family: $font-inter;
-		font-size: rem(16);
+		font-size: rem(22);
 		font-weight: 400;
-		line-height: math.div(19, 16);
+		line-height: 1.2;
 		color: $color-text-primary;
-
-		@media (min-width: $md4) {
-			font-size: rem(18);
-			line-height: math.div(22, 18);
-		}
-
-		@media (min-width: $md2) {
-			font-size: rem(22);
-			line-height: math.div(26, 22);
-		}
 	}
 }

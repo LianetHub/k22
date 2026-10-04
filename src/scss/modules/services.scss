@@ -49,6 +49,249 @@
 		}
 	}
 
+	// services--about
+	&.services--about {
+		.page > & {
+			padding: rem(60) 0;
+
+			@media (min-width: $md4) {
+				padding: rem(80) 0;
+			}
+
+			@media (min-width: $md0) {
+				padding: rem(100) 0;
+			}
+		}
+
+		.services__container {
+			gap: rem(30);
+		}
+
+		.services__grid {
+			gap: rem(30);
+		}
+
+		.services-card--media:not(:has(.services-card__price)) {
+			min-height: rem(320);
+
+			@media (min-width: $md4) {
+				min-height: rem(320);
+			}
+
+			@media (min-width: $md0) {
+				min-height: rem(400);
+			}
+
+			.services-card__image {
+				right: 0;
+				bottom: rem(70);
+				left: auto;
+				width: auto;
+				height: rem(156);
+				max-width: 78%;
+				object-fit: contain;
+				object-position: right bottom;
+				transform: none;
+
+				@media (min-width: $md0) {
+					height: rem(236);
+				}
+			}
+		}
+	}
+
+	// services--category
+	&.services--category {
+		.page > & {
+			padding: rem(60) 0;
+
+			@media (min-width: $md4) {
+				padding: rem(80) 0;
+			}
+
+			@media (min-width: $md0) {
+				padding: rem(100) 0;
+			}
+		}
+
+		.services__container {
+			gap: rem(30);
+		}
+
+		.services__grid {
+			gap: rem(10);
+
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(2, 1fr);
+				gap: rem(30);
+			}
+
+			@media (min-width: $md1) {
+				grid-template-columns: repeat(4, 1fr);
+				gap: rem(30);
+			}
+		}
+
+		.services-card--compact.services-card--media {
+			min-height: rem(200);
+
+			@media (min-width: $md4) {
+				min-height: rem(260);
+			}
+
+			@media (min-width: $md0) {
+				min-height: rem(300);
+			}
+
+			.services-card__title {
+				font-size: rem(18);
+				line-height: 1.2;
+				letter-spacing: em(-0.18, 18);
+
+				@media (min-width: $md4) {
+					@include desktop-heading-h3;
+				}
+			}
+
+			.services-card__image {
+				right: 0;
+				bottom: 0;
+				height: 72%;
+				max-width: 60%;
+				object-fit: contain;
+				object-position: right bottom;
+
+				@media (min-width: $md4) {
+					height: 70%;
+					max-width: 62%;
+				}
+
+				@media (min-width: $md0) {
+					height: 61%;
+					max-width: 62%;
+				}
+			}
+		}
+	}
+
+	// services--extras
+	&.services--extras {
+		.page > & {
+			padding: rem(140) 0 rem(20);
+
+			@media (min-width: $md4) {
+				padding: rem(200) 0 rem(80);
+			}
+
+			@media (min-width: $md0) {
+				padding: rem(200) 0 rem(100);
+			}
+		}
+
+		.services__container {
+			gap: rem(30);
+		}
+
+		.services__title {
+			max-width: none;
+			padding-top: rem(44);
+		}
+
+		.services__grid {
+			gap: rem(10);
+
+			@media (min-width: $md4) {
+				gap: rem(30);
+			}
+		}
+
+		.services-card--compact {
+			min-height: 0;
+			container-type: inline-size;
+			container-name: extras-card;
+
+			@media (min-width: $md4) {
+				min-height: rem(181);
+			}
+
+			@media (min-width: $md0) {
+				min-height: rem(256);
+			}
+
+			.services-card__title {
+				font-size: rem(18);
+				line-height: 1.2;
+				letter-spacing: em(-0.18, 18);
+
+				@media (min-width: $md4) {
+					@include desktop-heading-h4;
+				}
+
+				@media (min-width: $md0) {
+					@include desktop-heading-h3;
+				}
+			}
+
+			.services-card__icon {
+				top: rem(20);
+				right: rem(20);
+
+				@container extras-card (max-width: #{rem(330)}) {
+					right: rem(8);
+				}
+
+				@media (min-width: $md0) {
+					top: rem(30);
+					right: rem(30);
+				}
+			}
+
+			.services-card__body {
+				padding: rem(20);
+				padding-right: rem(70);
+
+				@media (min-width: $md0) {
+					padding: rem(30);
+					padding-right: rem(80);
+				}
+			}
+
+			.services-card__link {
+				min-height: 0;
+				padding-left: rem(20);
+
+				@media (min-width: $md0) {
+					padding-left: rem(30);
+				}
+			}
+
+			.services-card__link-text {
+				padding-bottom: rem(12);
+				font-size: rem(18);
+				letter-spacing: em(-0.36, 18);
+
+				@media (min-width: $md0) {
+					padding-bottom: rem(4);
+					font-size: rem(22);
+					letter-spacing: em(-0.44, 22);
+				}
+			}
+
+			.services-card__price:not(.services-card__price--inline) {
+				padding: rem(20);
+				padding-left: rem(78);
+				white-space: nowrap;
+				clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
+				@include mobile-heading-h4;
+
+				@media (min-width: $md0) {
+					padding: rem(30) rem(20);
+					padding-left: rem(78);
+				}
+			}
+		}
+	}
+
 	// services--mosaic
 	&.services--mosaic {
 		.page > & {
@@ -300,6 +543,62 @@
 				line-height: 1;
 				letter-spacing: em(-0.36, 18);
 			}
+		}
+	}
+
+	// .services:has(.services__panel)
+	&:has(.services__panel) {
+		.page > & {
+			padding: rem(60) 0;
+
+			@media (min-width: $md4) {
+				padding: rem(80) 0;
+			}
+
+			@media (min-width: $md0) {
+				padding: rem(100) 0;
+			}
+		}
+
+		// .services__group-title
+		.services__group-title {
+			@media (min-width: $md4) {
+				@include mobile-heading-h4;
+			}
+
+			@media (min-width: $md0) {
+				@include desktop-heading-h4;
+			}
+		}
+
+		// .services__consult
+		.services__consult .btn {
+			width: 100%;
+
+			@media (min-width: $md4) {
+				width: auto;
+			}
+		}
+	}
+
+	// .services--pair
+	&.services--pair {
+		.page > & {
+			padding-top: 0;
+			padding-bottom: rem(60);
+
+			@media (min-width: $md4) {
+				padding-block: rem(80);
+			}
+
+			@media (min-width: $md0) {
+				padding-block: rem(100);
+			}
+		}
+
+		// .services__grid
+		.services__grid {
+			gap: rem(30);
 		}
 	}
 

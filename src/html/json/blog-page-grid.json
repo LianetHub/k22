@@ -1,6 +1,6 @@
 [
 	{
-		"itemClass": "blog__item",
+		"itemClass": "swiper-slide",
 		"mod": "",
 		"tag": "Чип-тюнинг",
 		"title": "Почему важна индивидуальная настройка",
@@ -14,7 +14,7 @@
 		"linkText": "Читать статью"
 	},
 	{
-		"itemClass": "blog__item",
+		"itemClass": "swiper-slide",
 		"mod": "",
 		"tag": "Выхлоп",
 		"title": "Что даёт управляемый выхлоп?",
@@ -28,7 +28,7 @@
 		"linkText": "Читать статью"
 	},
 	{
-		"itemClass": "blog__item",
+		"itemClass": "swiper-slide",
 		"mod": "",
 		"tag": "Чип-тюнинг",
 		"title": "PRO чип-тюнинг",
@@ -42,7 +42,7 @@
 		"linkText": "Читать статью"
 	},
 	{
-		"itemClass": "blog__item",
+		"itemClass": "swiper-slide",
 		"mod": "",
 		"tag": "Чип-тюнинг",
 		"title": "Возврат в Stock: заводские настройки автомобиля",

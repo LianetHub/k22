@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero" style="background-image: url('@img/hero/stock-mode.webp');">
+				<section class="hero hero--stock" style="background-image: url('@img/hero/stock-mode.webp');">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">STOCK-РЕЖИМ</h1>
@@ -16,14 +16,14 @@
 						</div>
 					</div>
 				</section>
-				<div class="services">
+				<section class="services services--pair">
 					<div class="services__container container">
 						<ul class="services__grid">
 							@@loop('./html/templates/_service-card.html', './html/json/services-firmware.json')
 						</ul>
 					</div>
-				</div>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/stock-mode.webp');">
+				</section>
+				<section class="info-block info-block--photo-end info-block--stock" style="--info-block-image: url('../@img/info/stock-mode.webp');">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">ВОЗВРАТ В STOCK: ЗАВОДСКИЕ НАСТРОЙКИ АВТОМОБИЛЯ</h2>

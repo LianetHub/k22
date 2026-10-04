@@ -13,15 +13,9 @@
 							<span class="color-primary">Стань частью</span>
 							<span>Нашей команды</span>
 						</h1>
-						<div class="vacancies__slider swiper">
-							<ul class="vacancies__grid swiper-wrapper">
-								@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
-							</ul>
-						</div>
-						<div class="vacancies__nav">
-							<button type="button" class="vacancies__prev swiper-button-prev icon-arrrow-long" aria-label="Назад"></button>
-							<button type="button" class="vacancies__next swiper-button-next icon-arrrow-long" aria-label="Далее"></button>
-						</div>
+						<ul class="vacancies__grid">
+							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
+						</ul>
 					</div>
 				</section>
 				@@include('./html/sections/_faq.html', {

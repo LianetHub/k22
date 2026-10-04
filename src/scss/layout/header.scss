@@ -15,7 +15,7 @@
 		color: $color-bg-secondary;
 		background: url("@img/banner-bg.webp") 0 center / cover no-repeat, $color-text-primary;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: block;
 		}
 	}
@@ -49,7 +49,7 @@
 		background: $color-bg-primary;
 		margin: 0;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			margin: 0 rem(40);
 
 			&::before,
@@ -79,7 +79,7 @@
 		box-sizing: border-box;
 		padding: 0 rem(16);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			padding: 0;
 		}
 	}
@@ -91,7 +91,7 @@
 		gap: rem(12);
 		min-height: rem(60);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			gap: rem(10);
 			min-height: rem(53);
 		}
@@ -126,13 +126,14 @@
 	&__contacts {
 		display: none;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
-			gap: rem(8);
+			justify-content: center;
+			gap: rem(4);
 			margin-left: auto;
-			padding: rem(10) rem(18);
+			padding: 0 rem(18);
 		}
 	}
 
@@ -189,7 +190,7 @@
 	&__socials {
 		display: none;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: flex;
 			gap: rem(16);
 			margin-left: rem(10);
@@ -198,7 +199,7 @@
 
 	// .header__social
 	&__social {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			width: rem(40);
 			height: rem(40);
 		}
@@ -225,7 +226,7 @@
 		cursor: pointer;
 		border: 0;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 	}
@@ -283,11 +284,12 @@
 		}
 	}
 
-	@media (min-width: $md1) {
+	@media (min-width: $md2) {
 		position: static;
 		inset: auto;
 		z-index: auto;
-		display: block;
+		display: flex;
+		align-self: stretch;
 		padding: 0;
 		overflow: visible;
 		visibility: visible;
@@ -306,7 +308,7 @@
 		padding: rem(20) rem(20) 0;
 		flex-shrink: 0;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 	}
@@ -361,18 +363,26 @@
 		flex: 1 1 auto;
 		padding: 0 rem(20);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			flex-direction: row;
-			align-items: center;
+			align-items: stretch;
 			gap: 0;
+			height: 100%;
 			padding: 0 rem(9);
 			flex: 0 0 auto;
+		}
+
+		@media (min-width: $md0) {
+			padding: 0 rem(4.5);
 		}
 	}
 
 	// .menu__item
 	&__item {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
+			display: flex;
+			align-items: stretch;
+
 			&:has(.menu__dropdown--compact) {
 				position: relative;
 			}
@@ -380,7 +390,7 @@
 
 		// .menu__item.is-open
 		&.is-open {
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				.menu__link {
 					z-index: 2;
 					background-color: $color-accent-primary;
@@ -394,6 +404,10 @@
 					&::before,
 					&::after {
 						color: $color-bg-primary;
+					}
+
+					&.menu__link--dropdown::after {
+						transform: rotate(180deg);
 					}
 				}
 
@@ -447,9 +461,9 @@
 			flex-shrink: 0;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			width: auto;
-			height: rem(53);
+			height: 100%;
 			min-height: rem(53);
 			padding: 0 rem(12);
 			gap: rem(4);
@@ -503,6 +517,7 @@
 				font-size: rem(12);
 				line-height: 1;
 				color: inherit;
+				transition: transform 0.3s ease;
 			}
 
 			@media (any-hover: hover) {
@@ -516,15 +531,26 @@
 					&::after {
 						color: $color-bg-primary;
 					}
+
+					&.menu__link--dropdown::after {
+						transform: rotate(180deg);
+					}
 				}
 			}
 		}
 
 		@media (min-width: $md0) {
-			height: rem(70);
 			min-height: rem(70);
+			margin: 0 rem(-4.5);
+			padding: 0 rem(16);
 			font-size: rem(20);
 			letter-spacing: em(-0.4, 20);
+
+			&.icon-speedometer,
+			&.icon-exhaust-pipe {
+				padding-left: rem(12);
+				padding-right: rem(16);
+			}
 		}
 	}
 
@@ -532,7 +558,7 @@
 	&__dropdown {
 		display: none;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			position: absolute;
 			top: 100%;
 			z-index: 10;
@@ -543,7 +569,7 @@
 
 	// .menu__dropdown--mega
 	&__dropdown--mega {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			left: 50%;
 			width: rem(1016);
 			padding: 0 rem(18);
@@ -557,7 +583,7 @@
 
 	// .menu__dropdown--compact
 	&__dropdown--compact {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			left: 0;
 			width: max-content;
 			min-width: rem(250);
@@ -588,7 +614,7 @@
 			font-size: rem(12);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 	}
@@ -605,7 +631,7 @@
 			gap: rem(10);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
@@ -615,7 +641,7 @@
 
 	// .menu__cols--wrap
 	&__cols--wrap {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			flex-wrap: wrap;
 			align-items: stretch;
 		}
@@ -629,7 +655,7 @@
 				display: flex;
 				padding-top: rem(20);
 
-				@media (min-width: $md1) {
+				@media (min-width: $md2) {
 					padding-top: 0;
 				}
 			}
@@ -638,7 +664,7 @@
 		background: $color-bg-secondary;
 		color: $color-text-primary;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			flex: 1 1 0;
 			min-width: 0;
 			padding: rem(20);
@@ -669,7 +695,7 @@
 	}
 
 	.menu__cols--wrap .menu__group {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			flex: 1 1 25%;
 			max-width: 25%;
 			border-top: 1px solid $color-text-primary;
@@ -716,7 +742,7 @@
 			transition: transform 0.2s ease;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: block;
 			padding: 0;
 			margin-bottom: rem(20);
@@ -750,7 +776,7 @@
 			padding-top: rem(20);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: flex;
 			gap: rem(10);
 			padding: 0;
@@ -779,7 +805,7 @@
 			padding-top: 0;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			font-size: rem(10);
 			letter-spacing: em(-0.1, 10);
 		}
@@ -798,7 +824,7 @@
 		background: $color-bg-elevated;
 		color: $color-bg-primary;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 	}
@@ -902,7 +928,7 @@
 	color: $color-text-primary;
 	transition: color 0.2s ease;
 
-	@media (min-width: $md1) {
+	@media (min-width: $md2) {
 		gap: rem(6);
 		color: $color-bg-primary;
 	}
@@ -928,7 +954,7 @@
 		flex-shrink: 0;
 		object-fit: contain;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			width: rem(18);
 			height: rem(18);
 		}
@@ -956,7 +982,7 @@
 		line-height: 1.3;
 		letter-spacing: em(-0.32, 16);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			font-size: rem(12);
 			letter-spacing: em(-0.24, 12);
 		}
@@ -975,7 +1001,7 @@
 		line-height: 1.2;
 		letter-spacing: em(-0.28, 14);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 
@@ -995,7 +1021,7 @@
 		letter-spacing: em(-0.14, 14);
 		transition: color 0.2s ease;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			font-size: rem(10);
 			letter-spacing: em(-0.1, 10);
 		}

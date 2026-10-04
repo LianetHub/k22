@@ -49,6 +49,122 @@
 		}
 	}
 
+	// .features--about
+	&.features--about {
+		.page > & {
+			padding-block: rem(60);
+
+			@media (min-width: $md4) {
+				padding-block: rem(80);
+			}
+
+			@media (min-width: $md0) {
+				padding-block: rem(100);
+			}
+		}
+
+		.features__title {
+			@media (min-width: $md4) {
+				gap: rem(10);
+				@include desktop-heading-h2;
+			}
+
+			@media (min-width: $md1) {
+				gap: rem(26);
+			}
+		}
+
+		.features__grid {
+			grid-template-columns: 1fr;
+			gap: rem(10);
+
+			@media (min-width: $md1) {
+				grid-template-columns: repeat(3, 1fr);
+				gap: rem(30);
+			}
+		}
+
+		.feature-card {
+			justify-content: center;
+			gap: rem(10);
+			height: rem(120);
+			padding: 0 rem(70) 0 rem(20);
+
+			&::after {
+				background: linear-gradient(
+					90deg,
+					rgba(0, 0, 0, 0.92) 0%,
+					rgba(0, 0, 0, 0.55) 42%,
+					rgba(0, 0, 0, 0) 72%
+				);
+			}
+
+			@media (min-width: $md4) {
+				padding-right: rem(100);
+			}
+
+			@media (min-width: $md1) {
+				justify-content: flex-end;
+				gap: rem(6);
+				height: rem(360);
+				padding: 0 rem(30) rem(30);
+
+				&::after {
+					background: linear-gradient(
+						180deg,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.9) 100%
+					);
+				}
+			}
+		}
+
+		.feature-card__title {
+			margin-top: 0;
+
+			@media (min-width: $md4) {
+				@include desktop-heading-h3;
+			}
+		}
+
+		.feature-card__text {
+			@media (min-width: $md4) {
+				font-size: rem(22);
+				line-height: 1.2;
+			}
+		}
+
+		.feature-card[class^="icon-"]::before,
+		.feature-card[class*=" icon-"]::before {
+			top: 0;
+			right: 0;
+			left: auto;
+			align-items: flex-start;
+			justify-content: flex-end;
+			width: rem(50);
+			height: rem(40);
+			padding: rem(10) rem(10) 0 rem(16);
+			clip-path: polygon(#{rem(24)} 0, 100% 0, 100% 100%, 0 100%);
+
+			@media (min-width: $md4) {
+				width: rem(80);
+				height: rem(50);
+				padding: rem(20) rem(20) 0 rem(24);
+				font-size: rem(30);
+			}
+
+			@media (min-width: $md1) {
+				right: auto;
+				left: 0;
+				justify-content: flex-start;
+				width: rem(100);
+				height: rem(50);
+				padding: rem(20) rem(20) 0 rem(30);
+				clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(40)}) 100%, 0 100%);
+			}
+		}
+	}
+
 	.page > & {
 		padding-block: rem(80);
 	}

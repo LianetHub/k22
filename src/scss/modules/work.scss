@@ -1,8 +1,8 @@
-@use "sass:math";
 @use "../abstracts" as *;
 
 .work {
 	.page > & {
+		padding-bottom: 0;
 		background: $color-bg-secondary;
 	}
 
@@ -34,17 +34,55 @@
 		}
 	}
 
+	// .work__title
+	&__title {
+		@media (min-width: $md4) {
+			@include tablet-heading-h1;
+		}
+
+		@media (min-width: $md1) {
+			@include desktop-heading-h2;
+		}
+	}
+
+	// .work .breadcrumbs__item
+	.breadcrumbs__item {
+		font-size: rem(12);
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+		}
+	}
+
+	// .work .breadcrumbs__item:last-child
+	.breadcrumbs__item:last-child {
+		min-width: max-content;
+		overflow: visible;
+		text-overflow: clip;
+
+		.breadcrumbs__link {
+			overflow: visible;
+			text-overflow: clip;
+		}
+
+		@media (min-width: $md4) {
+			min-width: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			.breadcrumbs__link {
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
 	// .work__meta
 	&__meta {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(12) rem(20);
-
-		@media (min-width: $md4) {
-			justify-content: flex-end;
-			padding-right: rem(30);
-		}
 	}
 
 	// .work__layout
@@ -53,11 +91,15 @@
 		flex-direction: column;
 		gap: rem(40);
 
-		@media (min-width: $md3) {
+		@media (min-width: $md1) {
 			display: grid;
-			grid-template-columns: 1fr minmax(rem(280), rem(573));
+			grid-template-columns: 1fr rem(440);
 			gap: rem(30);
 			align-items: start;
+		}
+
+		@media (min-width: $md0) {
+			grid-template-columns: 1fr rem(573);
 		}
 	}
 
@@ -65,10 +107,14 @@
 	&__main {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
+		gap: rem(30);
 		min-width: 0;
 
 		@media (min-width: $md4) {
+			gap: rem(40);
+		}
+
+		@media (min-width: $md1) {
 			gap: rem(60);
 		}
 	}
@@ -95,7 +141,11 @@
 
 	// .work__procedures-title
 	&__procedures-title {
-		@include mobile-heading-h1;
+		@include mobile-heading-h4;
+
+		@media (min-width: $md4) {
+			@include mobile-heading-h1;
+		}
 	}
 
 	// .work__steps
@@ -104,7 +154,7 @@
 		flex-direction: column;
 		gap: rem(20);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md1) {
 			gap: rem(30);
 		}
 	}
@@ -114,7 +164,7 @@
 		display: grid;
 		grid-template-columns: rem(9) 1fr;
 		column-gap: rem(20);
-		row-gap: rem(10);
+		row-gap: rem(14);
 		align-items: start;
 
 		&::before {
@@ -126,10 +176,6 @@
 			margin-top: rem(4);
 			background: $color-accent-primary;
 		}
-
-		@media (min-width: $md4) {
-			row-gap: rem(14);
-		}
 	}
 
 	// .work__step-title
@@ -137,7 +183,12 @@
 		grid-column: 2;
 		grid-row: 1;
 		color: $color-accent-primary;
-		@include mobile-heading-h4;
+		font-family: $fontfamily;
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: em(-0.18, 18);
+		text-transform: uppercase;
 
 		@media (min-width: $md4) {
 			@include desktop-heading-h4;
@@ -148,34 +199,30 @@
 	&__step-text {
 		grid-column: 2;
 		font-family: $font-inter;
-		font-size: rem(16);
-		line-height: math.div(19, 16);
+		font-size: rem(18);
+		line-height: 1.2;
+		letter-spacing: em(-0.36, 18);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md0) {
 			font-size: rem(22);
-			line-height: math.div(26, 22);
+			letter-spacing: 0;
 		}
 	}
 
 	// .work__gallery
 	&__gallery {
 		display: grid;
-		gap: rem(16);
+		gap: rem(30);
 
-		@media (min-width: $md3) {
+		@media (min-width: $md4) {
 			grid-template-columns: repeat(3, 1fr);
-			gap: rem(20);
-		}
-
-		@media (min-width: $md2) {
-			gap: rem(30);
 		}
 	}
 
 	// .work__photo
 	&__photo {
 		display: block;
-		aspect-ratio: 372 / 348;
+		aspect-ratio: 1 / 1;
 		overflow: hidden;
 
 		img {
@@ -183,6 +230,10 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		@media (min-width: $md0) {
+			aspect-ratio: 372 / 348;
 		}
 	}
 }

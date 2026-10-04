@@ -1,7 +1,7 @@
 [
 	{
 		"itemClass": "blog__item",
-		"size": "blog__item--feature",
+		"size": "blog__item--feature blog__item--tall",
 		"mod": "blog-card--overlay",
 		"tag": "Чип-тюнинг",
 		"title": "Что делать, если загорелся check engine?",

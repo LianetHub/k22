@@ -1,14 +1,14 @@
 @use "../abstracts" as *;
 
 .format {
-	padding: rem(48) 0;
+	padding: rem(60) 0;
 	background-color: $color-bg-secondary;
 
 	@media (min-width: $md4) {
 		padding: rem(80) 0;
 	}
 
-	@media (min-width: $md2) {
+	@media (min-width: $md0) {
 		padding: rem(100) 0;
 	}
 
@@ -16,11 +16,7 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(24);
-
-		@media (min-width: $md4) {
-			gap: rem(30);
-		}
+		gap: rem(30);
 	}
 
 	// .format__title
@@ -31,16 +27,14 @@
 	// .format__list
 	&__list {
 		display: grid;
-		gap: rem(16);
+		gap: rem(30);
 
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(2, 1fr);
-			gap: rem(20);
 		}
 
-		@media (min-width: $md2) {
+		@media (min-width: $md1) {
 			grid-template-columns: repeat(3, 1fr);
-			gap: rem(30);
 		}
 	}
 
@@ -49,11 +43,12 @@
 		display: flex;
 		flex-direction: column;
 		min-width: 0;
+		height: rem(300);
 		background-color: $color-bg-primary;
 		overflow: hidden;
 
-		@media (min-width: $md2) {
-			min-height: rem(400);
+		@media (min-width: $md0) {
+			height: rem(400);
 		}
 	}
 
@@ -63,19 +58,11 @@
 		align-items: center;
 		justify-content: center;
 		flex: 1 1 auto;
-		min-height: rem(180);
-		padding: rem(16) rem(20) 0;
+		min-height: 0;
+		overflow: hidden;
+		padding: rem(12) rem(16) 0;
 		background-color: $color-bg-primary;
 		background-image: url("@img/decor/dark-pattern.svg");
-
-		@media (min-width: $md4) {
-			min-height: rem(220);
-		}
-
-		@media (min-width: $md2) {
-			min-height: rem(258);
-			padding: rem(12) rem(24) 0;
-		}
 	}
 
 	// .format__image
@@ -83,46 +70,27 @@
 		width: auto;
 		max-width: 100%;
 		height: auto;
-		max-height: rem(220);
+		max-height: 100%;
 		object-fit: contain;
-
-		@media (min-width: $md2) {
-			max-height: rem(270);
-		}
 	}
 
 	// .format__body
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: rem(6);
+		gap: rem(14);
 		margin-top: auto;
-		padding: rem(20);
-
-		@media (min-width: $md4) {
-			padding: rem(30);
-		}
+		padding: rem(30);
 	}
 
 	// .format__name
 	&__name {
-		@include mobile-heading-h4;
-
-		@media (min-width: $md4) {
-			@include desktop-heading-h3;
-		}
+		@include desktop-heading-h4;
 	}
 
 	// .format__text
 	&__text {
 		color: $color-text-secondary;
-		font-family: $font-inter;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: 1.2;
-
-		@media (min-width: $md4) {
-			font-size: rem(22);
-		}
+		@include desktop-body-m;
 	}
 }

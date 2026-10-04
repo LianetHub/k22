@@ -598,20 +598,84 @@
 	}
 
 	&:has(.services-card__price--inline) {
+		// .services-card__body
 		.services-card__body {
-			gap: rem(16);
+			gap: rem(20);
+			padding: rem(20);
 
-			@media (min-width: $md4) {
+			@media (min-width: $md1) {
 				gap: rem(30);
+				padding: rem(30);
 			}
 		}
 
+		// .services-card__title
+		.services-card__title {
+			font-size: rem(18);
+			line-height: 1.2;
+			letter-spacing: em(-0.18, 18);
+
+			@media (min-width: $md1) {
+				@include desktop-heading-h3;
+			}
+		}
+
+		// .services-card__price--inline
+		.services-card__price--inline {
+			font-size: rem(14);
+			line-height: 1.2;
+			letter-spacing: em(-0.14, 14);
+
+			@media (min-width: $md1) {
+				@include desktop-heading-h4;
+			}
+		}
+
+		// .services-card__description
 		.services-card__description {
 			max-width: rem(560);
 			color: $color-text-primary;
+			font-size: rem(16);
+			line-height: 1.2;
+			letter-spacing: em(-0.32, 16);
 
-			@media (min-width: $md4) {
+			@media (min-width: $md1) {
 				@include desktop-body-xl;
+			}
+		}
+
+		// .services-card__link
+		.services-card__link {
+			min-height: rem(50);
+			padding-left: rem(30);
+
+			@media (min-width: $md1) {
+				min-height: rem(70);
+			}
+
+			&::before {
+				width: rem(50);
+				height: rem(50);
+				font-size: rem(20);
+			}
+
+			&::after {
+				width: rem(108);
+				height: rem(50);
+				clip-path: polygon(rem(58) 0, 100% 0, 100% 100%, 0 100%);
+			}
+		}
+
+		// .services-card__link-text
+		.services-card__link-text {
+			font-size: rem(14);
+			line-height: 1.3;
+			letter-spacing: em(-0.28, 14);
+
+			@media (min-width: $md1) {
+				font-size: rem(22);
+				line-height: 1;
+				letter-spacing: em(-0.44, 22);
 			}
 		}
 	}

@@ -25,12 +25,9 @@
 	align-items: center;
 	gap: rem(10);
 	width: 100%;
-	padding: rem(8) rem(8) rem(8) rem(16);
+	height: rem(64);
+	padding: rem(10) rem(10) rem(10) rem(20);
 	background: $color-bg-primary;
-
-	@media (min-width: $md4) {
-		padding: rem(10) rem(10) rem(10) rem(20);
-	}
 
 	&::before {
 		flex-shrink: 0;
@@ -65,5 +62,10 @@
 	// search-form__btn
 	&__btn {
 		flex-shrink: 0;
+
+		&.btn {
+			min-height: 0;
+			padding: rem(16) rem(22);
+		}
 	}
 }

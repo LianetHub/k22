@@ -7,6 +7,13 @@
 		background: $color-bg-secondary;
 	}
 
+	// .callback--article
+	&.callback--article {
+		@media (min-width: $md1) {
+			display: none;
+		}
+	}
+
 	background: $color-bg-primary;
 	padding: rem(60) 0;
 
@@ -121,6 +128,23 @@
 	// .callback__heading
 	&__heading {
 		color: $color-bg-primary;
+
+		&:has(.callback__heading-md) {
+			.callback__heading-main {
+				@media (min-width: $md4) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .callback__heading-md
+	&__heading-md {
+		display: none;
+
+		@media (min-width: $md4) {
+			display: inline;
+		}
 	}
 
 	// .callback__lead

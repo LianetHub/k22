@@ -21,7 +21,17 @@
 					}
 					@@if(typeof variant === 'undefined' || variant !== 'price'){
 					<div class="callback__intro-top decor-line-block">
-						<p class="callback__heading title">Оставьте<br>заявку</p>
+						<p class="callback__heading title">
+							@@if(typeof bannerTitle !== 'undefined'){
+							<span class="callback__heading-main">@@bannerTitle</span>
+							}
+							@@if(typeof bannerTitleMd !== 'undefined'){
+							<span class="callback__heading-md">@@bannerTitleMd</span>
+							}
+							@@if(typeof bannerTitle === 'undefined'){
+							Оставьте<br>заявку
+							}
+						</p>
 						@@if(typeof lead !== 'undefined'){
 						<p class="callback__lead">@@lead</p>
 						}

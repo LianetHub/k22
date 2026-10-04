@@ -16,7 +16,7 @@
 		}
 
 		.portfolio-card__title {
-			@include mobile-heading-h4;
+			@include desktop-heading-h4;
 
 			flex: none;
 			width: 100%;

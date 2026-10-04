@@ -5,15 +5,20 @@
 	position: relative;
 	overflow: hidden;
 	background-color: #000;
-	padding: rem(80) 0 rem(60);
 	color: $color-bg-primary;
 
-	@media (min-width: $md4) {
-		padding: rem(140) 0 rem(80);
-	}
+	// .page > .error-page
+	.page > & {
+		padding-top: rem(62);
+		padding-bottom: rem(100);
 
-	@media (min-width: $md2) {
-		padding: rem(220) 0 rem(100);
+		@media (min-width: $md4) {
+			padding-top: rem(91);
+		}
+
+		@media (min-width: $md0) {
+			padding-top: rem(74);
+		}
 	}
 
 	&::before,
@@ -28,20 +33,44 @@
 
 	&::before {
 		background-image: url("@img/error-page/smoke-left.webp");
-		background-position: left center;
-		background-size: cover;
+		background-position: 20% center;
+		background-size: auto 130%;
 		opacity: 0.65;
-		mask-image: linear-gradient(to right, #000 0%, transparent 50%);
-		-webkit-mask-image: linear-gradient(to right, #000 0%, transparent 50%);
+		mask-image: linear-gradient(to right, #000 0%, transparent 55%);
+		-webkit-mask-image: linear-gradient(to right, #000 0%, transparent 55%);
+
+		@media (min-width: $md4) {
+			background-position: left center;
+			background-size: auto 160%;
+		}
+
+		@media (min-width: $md1) {
+			background-position: left center;
+			background-size: cover;
+			mask-image: linear-gradient(to right, #000 0%, transparent 50%);
+			-webkit-mask-image: linear-gradient(to right, #000 0%, transparent 50%);
+		}
 	}
 
 	&::after {
 		background-image: url("@img/error-page/car.webp");
-		background-position: 90% center;
-		background-size: cover;
+		background-position: 80% 40%;
+		background-size: auto 180%;
 		opacity: 0.45;
-		mask-image: linear-gradient(to left, #000 0%, transparent 45%);
-		-webkit-mask-image: linear-gradient(to left, #000 0%, transparent 45%);
+		mask-image: linear-gradient(to left, #000 0%, transparent 40%);
+		-webkit-mask-image: linear-gradient(to left, #000 0%, transparent 40%);
+
+		@media (min-width: $md4) {
+			background-position: 85% center;
+			background-size: auto 150%;
+		}
+
+		@media (min-width: $md1) {
+			background-position: 90% center;
+			background-size: cover;
+			mask-image: linear-gradient(to left, #000 0%, transparent 45%);
+			-webkit-mask-image: linear-gradient(to left, #000 0%, transparent 45%);
+		}
 	}
 
 	// error-page__container
@@ -51,7 +80,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: rem(24);
+		gap: rem(50);
 
 		@media (min-width: $md4) {
 			gap: rem(40);
@@ -65,17 +94,24 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		max-width: rem(1100);
+		min-width: 0;
+		gap: rem(200);
+
+		@media (min-width: $md4) {
+			gap: rem(90);
+		}
+
+		@media (min-width: $md1) {
+			gap: rem(180);
+		}
 	}
 
 	// error-page__code
 	&__code {
 		position: relative;
 		z-index: 1;
-		margin: 0;
-		font-family: $fontfamily, sans-serif;
 		font-weight: 700;
-		font-size: clamp(rem(96), 28vw, rem(350));
+		font-size: rem(169);
 		line-height: 1.1;
 		letter-spacing: -0.02em;
 		text-align: center;
@@ -83,8 +119,12 @@
 		color: $color-accent-primary;
 		white-space: nowrap;
 
-		@media (min-width: $md2) {
-			letter-spacing: rem(-7);
+		@media (min-width: $md4) {
+			font-size: rem(280);
+		}
+
+		@media (min-width: $md1) {
+			font-size: rem(350);
 		}
 	}
 
@@ -93,21 +133,35 @@
 		position: absolute;
 		z-index: 2;
 		left: 50%;
-		top: 22%;
-		width: min(155%, rem(1200));
-		height: auto;
+		top: rem(40);
+		width: 160vw;
+		height: rem(520);
+		max-width: none;
 		transform: translateX(-50%);
-		object-fit: contain;
+		object-fit: cover;
+		object-position: center 48%;
 		pointer-events: none;
+		mask-image:
+			linear-gradient(to bottom, transparent 0%, #000 18%, #000 76%, transparent 100%),
+			linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+		mask-composite: intersect;
+		-webkit-mask-image:
+			linear-gradient(to bottom, transparent 0%, #000 18%, #000 76%, transparent 100%),
+			linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+		-webkit-mask-composite: source-in;
 
 		@media (min-width: $md4) {
-			top: 16%;
-			width: min(145%, rem(1300));
+			top: rem(120);
+			width: 120vw;
+			height: rem(460);
+			object-position: center 46%;
 		}
 
-		@media (min-width: $md2) {
-			top: 12%;
-			width: rem(1200);
+		@media (min-width: $md1) {
+			top: rem(170);
+			width: rem(1280);
+			height: rem(520);
+			object-position: center 42%;
 		}
 	}
 
@@ -115,23 +169,29 @@
 	&__text {
 		position: relative;
 		z-index: 3;
-		margin: rem(110) 0 0;
-		max-width: rem(803);
-		font-family: $font-inter, sans-serif;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: math.div(20, 16);
+		width: 100%;
+		font-family: $font-inter;
+		font-size: rem(18);
+		line-height: math.div(21.6, 18);
+		letter-spacing: em(-0.36, 18);
 		text-align: center;
-		color: $color-bg-primary;
 
-		@media (min-width: $md4) {
-			margin-top: rem(160);
-			font-size: rem(20);
-			line-height: math.div(24, 20);
+		br {
+			display: none;
 		}
 
-		@media (min-width: $md2) {
-			margin-top: rem(180);
+		@media (min-width: $md4) {
+			max-width: rem(803);
+			font-size: rem(22);
+			line-height: math.div(26.4, 22);
+			letter-spacing: 0;
+
+			br {
+				display: initial;
+			}
+		}
+
+		@media (min-width: $md1) {
 			font-size: rem(26);
 			line-height: math.div(31.2, 26);
 		}

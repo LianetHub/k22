@@ -4,17 +4,22 @@
 	// .works--related
 	&.works--related {
 		.page > & {
-			padding-top: 0;
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+
+			@media (min-width: $md4) {
+				padding-top: rem(100);
+				padding-bottom: rem(100);
+			}
 		}
 
 		// .works__container
 		.works__container {
 			display: flex;
 			flex-direction: column;
-			gap: rem(24);
+			gap: rem(40);
 
 			@media (min-width: $md4) {
-				gap: rem(40);
 				grid-template-columns: none;
 				grid-template-areas: none;
 			}
@@ -34,16 +39,37 @@
 		// .works__list
 		.works__list {
 			display: grid;
-			gap: rem(16);
+			gap: rem(30);
 
 			@media (min-width: $md4) {
-				grid-template-columns: repeat(2, 1fr);
-				gap: rem(20);
+				display: flex;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
 			}
 
-			@media (min-width: $md2) {
+			@media (min-width: $md1) {
+				display: grid;
 				grid-template-columns: repeat(3, 1fr);
-				gap: rem(30);
+				overflow: visible;
+				scroll-snap-type: none;
+			}
+		}
+
+		// .works__item
+		.works__item {
+			min-width: 0;
+
+			@media (min-width: $md4) {
+				flex: 0 0 rem(440);
+				min-width: rem(440);
+				scroll-snap-align: start;
+			}
+
+			@media (min-width: $md1) {
+				flex: none;
+				width: auto;
+				min-width: 0;
+				scroll-snap-align: none;
 			}
 		}
 	}

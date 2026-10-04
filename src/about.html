@@ -11,8 +11,10 @@
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title decor-line-block">Мы занимаемся автомобилями <span class="color-primary">комплексно</span></h1>
-							<p class="hero__lead">Мы команда специалистов по чип-тюнингу, ремонту и доработке автомобилей. Мы работаем комплексно: от диагностики и технического обслуживания до настройки программного обеспечения, ремонта и тюнинга выхлопных систем.</p>
-							<p class="hero__lead">Для нас важно не просто выполнить отдельную работу, а добиться результата, который действительно чувствуется за рулём. Поэтому мы внимательно относимся к каждому автомобилю, подбираем решения под конкретную задачу и используем проверенные технологии и оборудование.</p>
+							<div class="hero__copy">
+								<p class="hero__lead">Мы команда специалистов по чип-тюнингу, ремонту и доработке автомобилей. Мы работаем комплексно: от диагностики и технического обслуживания до настройки программного обеспечения, ремонта и тюнинга выхлопных систем.</p>
+								<p class="hero__lead">Для нас важно не просто выполнить отдельную работу, а добиться результата, который действительно чувствуется за рулём. Поэтому мы внимательно относимся к каждому автомобилю, подбираем решения под конкретную задачу и используем проверенные технологии и оборудование.</p>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -21,10 +23,11 @@
 				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('html/sections/_features.html', {
+				"mod": "features--about",
 				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
 				"featuresList": "./html/json/features.json"
 				})
-				<section class="services">
+				<section class="services services--about">
 					<div class="services__container container">
 						<h2 class="services__title title decor-line-block">Что <span class="color-primary">мы делаем</span></h2>
 						<ul class="services__grid">
@@ -38,9 +41,10 @@
 						<div class="contacts__map-block">
 							<div class="contacts__map" style="--contacts-map-image: url('../@img/contacts/network-map.webp');">
 								<span class="contacts__pin contacts__pin--north icon-locations" aria-hidden="true"></span>
-								<span class="contacts__pin contacts__pin--east icon-locations" aria-hidden="true"></span>
+								<span class="contacts__pin contacts__pin--east contacts__pin--active icon-locations" aria-hidden="true"></span>
 							</div>
 							<article class="contacts__place contacts__card">
+								<p class="contacts__city-label">Санкт-Петербург</p>
 								<h3 class="contacts__place-title">Кузнецовская, 52к13</h3>
 								<div class="contacts__phone-row">
 									<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>

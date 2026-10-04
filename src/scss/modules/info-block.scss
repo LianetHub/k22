@@ -11,34 +11,41 @@
 	&:has(.info-block__lead) {
 		// .info-block--light
 		&.info-block--light {
-			padding-top: rem(300);
+			padding-top: rem(60);
+			padding-bottom: rem(221);
 			background-color: $color-bg-primary;
 			color: $color-text-primary;
 
 			@media (min-width: $md4) {
-				padding-top: rem(420);
+				padding-top: rem(80);
+				padding-bottom: rem(402);
 			}
 
-			@media (min-width: $md2) {
-				min-height: rem(640);
+			@media (min-width: $md1) {
+				min-height: rem(687);
+				padding-block: rem(80);
+			}
+
+			@media (min-width: $md0) {
+				min-height: rem(737);
 				padding-block: rem(100);
 			}
 
 			&::before {
 				background-color: transparent;
 				background-image: var(--info-block-image);
-				background-position: left center;
+				background-position: center bottom;
 				background-size: cover;
-				inset: 0 0 auto;
-				height: rem(260);
+				inset: auto 0 0;
+				height: rem(221);
 
 				@media (min-width: $md4) {
-					height: rem(380);
+					height: rem(402);
 				}
 
-				@media (min-width: $md2) {
+				@media (min-width: $md1) {
 					inset: 0 auto 0 0;
-					width: 48%;
+					width: 50%;
 					height: auto;
 					background-image:
 						linear-gradient(90deg, rgba($color-bg-primary, 0) 72%, $color-bg-primary 100%),
@@ -53,8 +60,8 @@
 			}
 
 			.info-block__content {
-				@media (min-width: $md2) {
-					max-width: rem(640);
+				@media (min-width: $md1) {
+					max-width: rem(674);
 					margin-left: auto;
 				}
 
@@ -71,6 +78,66 @@
 
 			.info-block__text {
 				background-image: linear-gradient(180deg, rgba($color-text-primary, 0.4) 0%, rgba($color-text-primary, 0) 100%);
+			}
+		}
+
+		// .info-block--band
+		&.info-block--band {
+			padding-top: rem(60);
+			padding-bottom: rem(210);
+
+			@media (min-width: $md4) {
+				padding-top: rem(80);
+				padding-bottom: rem(300);
+			}
+
+			@media (min-width: $md1) {
+				padding-block: rem(100);
+			}
+
+			&::before {
+				background-image: var(--info-block-image);
+				background-position: center bottom;
+				background-size: cover;
+				inset: auto 0 0;
+				height: rem(210);
+
+				@media (min-width: $md4) {
+					height: rem(300);
+				}
+
+				@media (min-width: $md1) {
+					inset: 0 0 0 auto;
+					width: 60%;
+					height: auto;
+					background-image:
+						linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 36%),
+						var(--info-block-image);
+					background-position: left center, right center;
+					background-size: 100% 100%, cover;
+				}
+			}
+
+			// .info-block__text
+			.info-block__text {
+				display: none;
+
+				@media (min-width: $md4) {
+					display: block;
+				}
+			}
+
+			// .info-block__lead
+			.info-block__lead,
+			.info-block__text {
+				@media (min-width: $md2) {
+					font-size: rem(22);
+					line-height: 1.2;
+				}
+
+				@media (min-width: $md1) {
+					@include desktop-body-xl;
+				}
 			}
 		}
 
@@ -179,6 +246,107 @@
 
 			@media (min-width: $md2) {
 				margin-top: rem(10);
+			}
+		}
+
+		// .info-block--bsl
+		&.info-block--bsl {
+			padding-top: rem(60);
+			padding-bottom: rem(280);
+
+			@media (min-width: $md4) {
+				padding-top: rem(80);
+				padding-bottom: rem(360);
+			}
+
+			@media (min-width: $md1) {
+				min-height: rem(609);
+				padding-block: rem(80);
+			}
+
+			@media (min-width: $md0) {
+				min-height: rem(737);
+				padding-block: rem(100);
+			}
+
+			&::before {
+				background-color: #000;
+				background-image:
+					linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.55) 38%, rgba(0, 0, 0, 0) 72%),
+					var(--info-block-image);
+				background-position: center, center bottom;
+				background-size: cover, cover;
+				inset: auto 0 0;
+				height: rem(360);
+
+				@media (min-width: $md4) {
+					height: rem(480);
+				}
+
+				@media (min-width: $md1) {
+					inset: 0 0 0 auto;
+					width: 60%;
+					height: auto;
+					background-image:
+						linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 36%),
+						var(--info-block-image);
+					background-position: left center, right center;
+					background-size: 100% 100%, cover;
+				}
+			}
+		}
+
+		// .info-block--stock
+		&.info-block--stock {
+			padding-top: rem(60);
+			padding-bottom: rem(210);
+
+			@media (min-width: $md4) {
+				padding-top: rem(80);
+				padding-bottom: rem(360);
+			}
+
+			@media (min-width: $md1) {
+				min-height: rem(609);
+				padding-block: rem(80);
+			}
+
+			@media (min-width: $md0) {
+				min-height: rem(737);
+				padding-block: rem(100);
+			}
+
+			&::before {
+				background-color: #000;
+				background-image:
+					linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.72) 28%, rgba(0, 0, 0, 0) 68%),
+					var(--info-block-image);
+				background-position: center, 78% bottom;
+				background-size: cover, cover;
+				inset: auto 0 0;
+				height: rem(320);
+
+				@media (min-width: $md4) {
+					height: rem(480);
+					background-position: center, center bottom;
+				}
+
+				@media (min-width: $md1) {
+					inset: 0 0 0 auto;
+					width: 60%;
+					height: auto;
+					background-image:
+						linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 36%),
+						var(--info-block-image);
+					background-position: left center, 72% center;
+					background-size: 100% 100%, cover;
+				}
+			}
+
+			.info-block__content {
+				@media (min-width: $md0) {
+					max-width: rem(876);
+				}
 			}
 		}
 	}

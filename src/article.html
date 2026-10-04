@@ -137,13 +137,13 @@
 								</section>
 							</article>
 							<aside class="article__sidebar">
-								<div class="article__panel">
+								<div class="article__panel article__panel--articles">
 									<h2 class="article__panel-title decor-line-block">Полезные статьи</h2>
 									<ul class="article__aside-list">
 										@@loop('./html/templates/_article-aside-card.html', './html/json/article-aside.json')
 									</ul>
 								</div>
-								<div class="article__panel">
+								<div class="article__panel article__panel--ask">
 									<div class="article__panel-intro">
 										<h2 class="article__panel-title decor-line-block">Остались вопросы?</h2>
 										<p class="article__panel-lead">Мы поможем подобрать подходящую конфигурацию и ответим на вопросы</p>
@@ -181,7 +181,7 @@
 										</div>
 									</form>
 								</div>
-								<div class="article__panel">
+								<div class="article__panel article__panel--reviews">
 									<h2 class="article__panel-title decor-line-block">отзывы</h2>
 									<div class="article__reviews-slider swiper">
 										<div class="swiper-wrapper">
@@ -200,12 +200,20 @@
 						</div>
 					</div>
 				</section>
-				<section class="blog">
+				@@include('html/sections/_callback.html', {
+				"mod": " callback--secondary callback--article",
+				"lead": "Мы поможем подобрать подходящую конфигурацию и ответим на вопросы",
+				"bannerTitle": "Оставьте<br>заявку",
+				"bannerTitleMd": "Остались вопросы?"
+				})
+				<section class="blog blog--related">
 					<div class="blog__container container">
 						<h2 class="blog__title title decor-line-block">еще по теме</h2>
-						<ul class="blog__list">
-							@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
-						</ul>
+						<div class="blog__related-slider swiper" data-article-related>
+							<ul class="swiper-wrapper blog__list">
+								@@loop('./html/templates/_blog-card.html', './html/json/blog-page-grid.json')
+							</ul>
+						</div>
 					</div>
 				</section>
 			</main>
