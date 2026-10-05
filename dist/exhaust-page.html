@@ -42,7 +42,7 @@
 			                <a href="/" class="header__logo">
 			                    <img src="img/logo.svg" alt="Логотип K22 Power Team" width="140" height="60">
 			                </a>
-			                <nav class="menu" id="site-menu" data-menu aria-label="Меню в шапке">
+			                <nav class="heaader__menu menu" id="site-menu" data-menu aria-label="Меню в шапке">
 			                	<div class="menu__mobile-bar">
 			                		<a href="/" class="menu__mobile-logo">
 			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34">
@@ -52,8 +52,8 @@
 			                	</div>
 
 			                	<ul class="menu__list">
-			                		<li class="menu__item menu__item--has-dropdown">
-			                			<button type="button" class="menu__link menu__link--dropdown icon-speedometer" aria-expanded="false" data-menu-trigger>
+			                		<li class="menu__item menu__item--has-dropdown is-open">
+			                			<button type="button" class="menu__link  menu__link--dropdown icon-speedometer" aria-expanded="false" data-menu-trigger>
 			                				Чип-тюнинг
 			                			</button>
 			                			<div class="menu__dropdown menu__dropdown--mega" hidden data-menu-dropdown>
@@ -729,7 +729,6 @@
 			                		</div>
 			                	</div>
 			                </nav>
-
 			                <div class="header__contacts">
 			                    <a href="tel:+79214019898" class="header__phone">8(921)401-98-98</a>
 			                    <p class="header__work-time icon-clock">пн-сб с 10:00 до 20:00</p>
@@ -738,13 +737,7 @@
 			                    <a href="" aria-label="Max" class="header__social social-item icon-max"></a>
 			                    <a href="" aria-label="Telegram" class="header__social social-item icon-telegram"></a>
 			                </div>
-			                <button
-			                    type="button"
-			                    class="header__burger"
-			                    aria-label="Открыть меню"
-			                    aria-expanded="false"
-			                    aria-controls="site-menu"
-			                    data-menu-burger>
+			                <button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu" data-menu-burger>
 			                    <span class="header__burger-line"></span>
 			                    <span class="header__burger-line"></span>
 			                    <span class="header__burger-line"></span>
@@ -753,7 +746,6 @@
 			        </div>
 			    </div>
 			</header>
-
 			<main class="page">
 				<section class="hero" style="background-image: url('img/hero/exhaust-manifold.webp');">
 					<div class="hero__container container">
