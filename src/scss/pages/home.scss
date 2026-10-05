@@ -6,7 +6,7 @@
 	background-color: $color-text-primary;
 	color: $color-bg-primary;
 
-	.page > & {
+	.page>& {
 		padding: rem(60) 0;
 
 		@media (min-width: $md4) {
@@ -14,7 +14,7 @@
 		}
 
 		@media (min-width: $md1) {
-			padding: rem(100) 0;
+			padding: rem(160) 0 rem(145);
 		}
 	}
 
@@ -79,7 +79,7 @@
 	// .our-goal__content
 	&__content {
 		@media (min-width: $md1) {
-			width: fit-content;
+			width: 45%;
 			margin-left: auto;
 		}
 	}
@@ -87,8 +87,7 @@
 	// .our-goal__title
 	&__title {
 		color: rgba($color: $color-bg-secondary, $alpha: 0.4);
-		text-box-trim: trim-both;
-		text-box-edge: cap alphabetic;
+		padding-top: 1.75rem;
 		@include mobile-heading-h4;
 
 		@media (min-width: $md4) {
@@ -104,34 +103,23 @@
 	&__tagline {
 		display: flex;
 		flex-direction: column;
-		gap: rem(20);
-		margin-top: rem(30);
+		margin-top: rem(14);
 
-		@media (min-width: $md1) {
-			gap: rem(26);
-		}
+
 	}
 
 	// .our-goal__line
 	&__line {
-		text-box-trim: trim-both;
-		text-box-edge: cap alphabetic;
-		@include mobile-heading-h1;
 
-		@media (min-width: $md4) {
-			@include tablet-heading-h1;
+		// @include mobile-heading-h1;
 
-			&:first-child {
-				max-width: rem(653);
-			}
+		// @media (min-width: $md4) {
+		// 	@include tablet-heading-h1;
 
-			&:last-child {
-				white-space: nowrap;
-			}
-		}
+		// }
 
-		@media (min-width: $md1) {
-			@include desktop-heading-h2;
-		}
+		// @media (min-width: $md1) {
+		// 	@include desktop-heading-h2;
+		// }
 	}
 }
