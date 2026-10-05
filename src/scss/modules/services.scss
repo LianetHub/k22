@@ -1,11 +1,12 @@
 @use "../abstracts" as *;
 
 .services {
+
 	// services--catalog
 	&.services--catalog {
 		background-color: $color-bg-primary;
 
-		.page > & {
+		.page>& {
 			padding: rem(60) 0;
 
 			@media (min-width: $md4) {
@@ -51,7 +52,7 @@
 
 	// services--about
 	&.services--about {
-		.page > & {
+		.page>& {
 			padding: rem(60) 0;
 
 			@media (min-width: $md4) {
@@ -102,7 +103,7 @@
 
 	// services--category
 	&.services--category {
-		.page > & {
+		.page>& {
 			padding: rem(60) 0;
 
 			@media (min-width: $md4) {
@@ -176,7 +177,7 @@
 
 	// services--extras
 	&.services--extras {
-		.page > & {
+		.page>& {
 			padding: rem(140) 0 rem(20);
 
 			@media (min-width: $md4) {
@@ -294,11 +295,15 @@
 
 	// services--mosaic
 	&.services--mosaic {
-		.page > & {
+		.page>& {
 			padding-block: rem(20);
 
 			@media (min-width: $md1) {
 				padding-block: rem(80);
+			}
+
+			@media (min-width: $md0) {
+				padding-block: rem(100);
 			}
 		}
 
@@ -360,6 +365,7 @@
 
 			// services-card--compact
 			&.services-card--compact {
+
 				.services-card__icon,
 				.services-card__title[class^="icon-"]::before,
 				.services-card__title[class*=" icon-"]::before {
@@ -543,12 +549,178 @@
 				line-height: 1;
 				letter-spacing: em(-0.36, 18);
 			}
+
+			@media (min-width: $md0) {
+				min-height: rem(275);
+
+				// services-card--featured
+				&.services-card--featured {
+					height: auto;
+					min-height: rem(580);
+					max-height: none;
+
+					.services-card__body {
+						gap: rem(30);
+						padding: rem(30);
+					}
+
+					.services-card__title {
+						max-width: rem(513);
+						@include desktop-heading-h3;
+					}
+
+					.services-card__link-text {
+						padding-bottom: rem(8);
+						font-size: rem(22);
+						line-height: 1;
+						letter-spacing: em(-0.44, 22);
+					}
+				}
+
+				// services-card--compact
+				&.services-card--compact {
+
+					&:has(.services-card__icon) .services-card__body,
+					&:has(.services-card__title[class^="icon-"]) .services-card__body,
+					&:has(.services-card__title[class*=" icon-"]) .services-card__body {
+						padding-right: rem(80);
+					}
+
+					&:has(.services-card__badge:not(.services-card__badge--bottom)) {
+						.services-card__body {
+							padding: rem(30) rem(30) 0;
+						}
+
+						.services-card__title {
+							padding-right: rem(100);
+						}
+					}
+				}
+
+				// services-card--dark
+				&.services-card--dark {
+					.services-card__description {
+						color: $color-bg-primary;
+					}
+				}
+
+				// services-card__badge
+				.services-card__badge {
+					height: rem(50);
+					padding: rem(10) calc(#{rem(20)} + 1px) rem(12) rem(68);
+					clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
+					@include desktop-heading-h4;
+				}
+
+				// services-card__badge--bottom
+				.services-card__badge--bottom {
+					right: calc(#{rem(50)} - 1px);
+					height: calc(#{rem(50)} + 1px);
+					padding: rem(10) calc(#{rem(88)} + 1px) rem(12) rem(88);
+					font-family: $font-inter;
+					font-size: rem(22);
+					font-weight: 400;
+					line-height: 1.2;
+					letter-spacing: 0;
+					text-transform: none;
+					clip-path: polygon(#{rem(58)} 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
+				}
+
+				// services-card__icon
+				.services-card__icon,
+				.services-card__title[class^="icon-"]::before,
+				.services-card__title[class*=" icon-"]::before {
+					top: rem(30);
+					right: rem(30);
+					width: rem(30);
+					height: rem(30);
+					font-size: rem(30);
+				}
+
+				// services-card__body
+				.services-card__body {
+					gap: rem(6);
+					padding: rem(30) rem(30) 0;
+					padding-right: rem(70);
+				}
+
+				// services-card__title
+				.services-card__title {
+					@include desktop-heading-h3;
+				}
+
+				// services-card__description
+				.services-card__description {
+					font-size: rem(22);
+					font-weight: 400;
+					line-height: 1.2;
+					letter-spacing: 0;
+					text-box-trim: trim-both;
+					text-box-edge: cap alphabetic;
+				}
+
+				// services-card__lead
+				.services-card__lead {
+					font-weight: 700;
+					font-size: rem(22);
+					line-height: 1.4;
+					letter-spacing: em(-0.44, 22);
+				}
+
+				// services-card__list
+				.services-card__list {
+					gap: rem(26);
+				}
+
+				// services-card__item
+				.services-card__item {
+					display: block;
+					letter-spacing: 0;
+					text-box-trim: trim-both;
+					text-box-edge: cap alphabetic;
+					@include desktop-body-xl;
+
+					&::before {
+						display: inline-block;
+						height: rem(15);
+						margin-right: rem(10);
+						vertical-align: top;
+					}
+				}
+
+				// services-card__note
+				.services-card__note {
+					max-width: rem(550);
+					font-size: rem(22);
+					font-weight: 400;
+					line-height: 1.2;
+					letter-spacing: 0;
+					text-box-trim: trim-both;
+					text-box-edge: cap alphabetic;
+				}
+
+				// services-card__link
+				.services-card__link {
+					min-height: rem(70);
+					padding-left: rem(30);
+				}
+
+				// services-card__link-text
+				.services-card__link-text {
+					padding-bottom: rem(8);
+					font-size: rem(22);
+					line-height: 1;
+					letter-spacing: em(-0.44, 22);
+					text-box-trim: trim-both;
+					text-box-edge: cap alphabetic;
+				}
+			}
 		}
 	}
 
 	// .services:has(.services__panel)
 	&:has(.services__panel) {
-		.page > & {
+		.page>& {
 			padding: rem(60) 0;
 
 			@media (min-width: $md4) {
@@ -583,7 +755,7 @@
 
 	// .services--pair
 	&.services--pair {
-		.page > & {
+		.page>& {
 			padding-top: 0;
 			padding-bottom: rem(60);
 

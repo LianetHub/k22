@@ -64,6 +64,7 @@
 }
 
 .services-card {
+
 	// services-card--featured
 	&.services-card--featured {
 		@media (min-width: $md1) {
@@ -482,7 +483,7 @@
 		justify-content: center;
 		width: rem(30);
 		height: rem(30);
-		color: $color-text-primary;
+		color: $color-text-tertiary;
 		font-size: rem(30);
 		line-height: 1;
 		transition: color 0.35s ease, opacity 0.35s ease;
@@ -531,6 +532,10 @@
 		transition: color 0.35s ease;
 		@include mobile-heading-h4;
 
+		&::before {
+			color: $color-text-tertiary;
+		}
+
 		@media (min-width: $md4) {
 			@include desktop-heading-h3;
 		}
@@ -554,6 +559,7 @@
 
 	// services-card__price
 	&__price {
+
 		// services-card__price--inline
 		&.services-card__price--inline {
 			align-self: flex-start;
@@ -590,6 +596,7 @@
 	}
 
 	&:has(> .services-card__link > .services-card__price) {
+
 		.services-card__link::before,
 		.services-card__link::after {
 			content: none;
@@ -598,6 +605,7 @@
 	}
 
 	&:has(.services-card__price--inline) {
+
 		// .services-card__body
 		.services-card__body {
 			gap: rem(20);
@@ -781,7 +789,7 @@
 			right: 0;
 			bottom: 0;
 			z-index: 2;
-			display: inline-flex !important;
+			display: inline-flex;
 			align-items: center;
 			justify-content: center;
 			width: rem(44);
