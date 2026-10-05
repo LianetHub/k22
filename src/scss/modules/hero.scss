@@ -1,192 +1,21 @@
 @use "abstracts" as *;
 
 .hero {
+
     // .hero--home
     &.hero--home {
-        min-height: rem(770);
-        background-color: $color-bg-secondary;
         background-image:
             linear-gradient(180deg, rgba($color-bg-secondary, 0) rem(320), $color-bg-secondary rem(420)),
             url("@img/hero/home.webp");
-        background-repeat: no-repeat;
         background-position: center top, 61% -27vw;
         background-size: auto, 366% auto;
 
         @media (min-width: $md4) {
-            min-height: rem(600);
             background-image: url("@img/hero/home.webp");
-            background-position: right center;
-            background-size: cover;
+            background-position: right 0;
         }
 
-        @media (min-width: $md1) {
-            min-height: rem(700);
-            background-position: 72% center;
-        }
 
-        // .hero__container
-        .hero__container {
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: flex-start;
-            gap: rem(20);
-            padding-top: rem(450);
-            padding-bottom: rem(40);
-
-            @media (min-width: $md4) {
-                justify-content: space-between;
-                padding-top: rem(100);
-            }
-
-            @media (min-width: $md1) {
-                flex-direction: row;
-                align-items: flex-end;
-                justify-content: space-between;
-                gap: 0;
-                padding-top: rem(40);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            max-width: none;
-            padding-top: 0;
-
-            @media (min-width: $md4) {
-                max-width: rem(548);
-            }
-
-            @media (min-width: $md1) {
-                align-self: center;
-                max-width: rem(681);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            @include desktop-heading-h3;
-
-            @media (min-width: $md4) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md1) {
-                @include desktop-heading-h2;
-            }
-        }
-
-        // .hero__location
-        .hero__location {
-            margin-top: rem(10);
-            @include mobile-heading-h4;
-
-            &::before {
-                align-self: center;
-                font-size: rem(18);
-                width: rem(18);
-                height: rem(18);
-            }
-
-            @media (min-width: $md4) {
-                margin-top: rem(20);
-                @include desktop-heading-h3;
-
-                &::before {
-                    font-size: rem(24);
-                    width: rem(24);
-                    height: rem(24);
-                }
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            width: 100%;
-            margin-top: rem(20);
-
-            @media (min-width: $md4) {
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                margin-top: rem(40);
-            }
-        }
-
-        // .hero__side
-        .hero__side {
-            align-self: stretch;
-            width: 100%;
-            margin-left: 0;
-
-            @media (min-width: $md4) {
-                align-self: flex-start;
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                align-self: flex-end;
-                margin-left: auto;
-            }
-        }
-
-        // .hero__rate
-        .hero__rate {
-            width: 100%;
-            max-width: none;
-            padding: rem(20);
-            clip-path: none;
-
-            @media (min-width: $md4) {
-                width: rem(358);
-                max-width: rem(358);
-                padding: rem(24) rem(44) rem(14);
-                clip-path: polygon(rem(20) 0, 100% 0, calc(100% - #{rem(20)}) 100%, 0 100%);
-            }
-        }
-
-        // .hero__rate-origin
-        .hero__rate-origin img {
-            display: block;
-            width: rem(90);
-            height: rem(14);
-
-            @media (min-width: $md4) {
-                width: rem(64);
-                height: rem(10);
-            }
-        }
-
-        // .hero__rate-details
-        .hero__rate-details {
-            margin-top: rem(20);
-            gap: rem(10);
-
-            @media (min-width: $md4) {
-                margin-top: rem(12);
-                gap: rem(6);
-            }
-        }
-
-        // .hero__rate-value
-        .hero__rate-value {
-            @include tablet-heading-h1;
-
-            @media (min-width: $md4) {
-                @include desktop-heading-h2;
-                line-height: 1;
-            }
-        }
-
-        // .hero__rate-text
-        .hero__rate-text {
-            @include desktop-body-s;
-
-            @media (min-width: $md4) {
-                @include desktop-body-m;
-            }
-        }
     }
 
     // .hero--diagnostics
@@ -200,517 +29,100 @@
         @media (min-width: $md0) {
             background-position: center;
         }
-
-        // .hero__title
-        .hero__title {
-            @include mobile-heading-h1;
-
-            @media (min-width: $md4) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md2) {
-                @include desktop-heading-h1;
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            @media (min-width: $md4) {
-                max-width: rem(520);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(803);
-            }
-        }
     }
 
     // .hero--maintenance
     &.hero--maintenance {
-        min-height: rem(720);
-        background-color: $color-bg-secondary;
-        background-repeat: no-repeat;
         background-position: 78% top;
         background-size: auto rem(363);
 
         @media (min-width: $md4) {
-            min-height: rem(600);
             background-position: right center;
             background-size: cover;
         }
 
         @media (min-width: $md1) {
-            min-height: rem(700);
             background-position: 72% center;
         }
 
         @media (min-width: $md0) {
-            min-height: rem(800);
             background-position: center right;
-        }
-
-        // .hero__container
-        .hero__container {
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding-top: rem(363);
-            padding-bottom: 0;
-
-            @media (min-width: $md4) {
-                align-items: center;
-                padding-top: rem(40);
-                padding-bottom: rem(40);
-            }
-
-            @media (min-width: $md1) {
-                padding-top: rem(80);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            max-width: none;
-            padding-top: 0;
-
-            @media (min-width: $md4) {
-                max-width: rem(578);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(647);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(947);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            @include mobile-heading-h1;
-
-            @media (min-width: $md1) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-heading-h1;
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: none;
-            margin-top: rem(10);
-            font-size: rem(16);
-
-            @media (min-width: $md4) {
-                margin-top: rem(20);
-                font-size: rem(16);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(647);
-                font-size: rem(22);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(803);
-                @include desktop-body-xl;
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            width: 100%;
-            margin-top: rem(20);
-
-            @media (min-width: $md4) {
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                margin-top: rem(40);
-            }
         }
     }
 
     // .hero--deactivation
     &.hero--deactivation {
-        min-height: rem(720);
-        background-color: $color-bg-secondary;
-        background-repeat: no-repeat;
         background-position: 70% top;
         background-size: auto rem(363);
 
         @media (min-width: $md4) {
-            min-height: rem(600);
             background-position: right center;
             background-size: cover;
         }
 
         @media (min-width: $md1) {
-            min-height: rem(700);
             background-position: 72% center;
         }
 
         @media (min-width: $md0) {
-            min-height: rem(800);
             background-position: right center;
-        }
-
-        // .hero__container
-        .hero__container {
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding-top: rem(363);
-            padding-bottom: rem(40);
-
-            @media (min-width: $md4) {
-                align-items: center;
-                padding-top: rem(40);
-                padding-bottom: rem(40);
-            }
-
-            @media (min-width: $md1) {
-                padding-top: rem(80);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            max-width: none;
-            padding-top: 0;
-
-            @media (min-width: $md4) {
-                max-width: rem(578);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(647);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(947);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            @include desktop-heading-h3;
-
-            @media (min-width: $md4) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md1) {
-                @include desktop-heading-h2;
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-heading-h1;
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: none;
-            margin-top: rem(10);
-            @include desktop-body-s;
-
-            @media (min-width: $md4) {
-                margin-top: rem(20);
-                @include desktop-body-m;
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(578);
-                @include desktop-body-xl;
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(803);
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            width: 100%;
-            margin-top: rem(20);
-
-            @media (min-width: $md4) {
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                margin-top: rem(40);
-            }
         }
     }
 
     // .hero--bsl
     &.hero--bsl {
-        min-height: rem(670);
-        background-color: $color-bg-secondary;
-        background-repeat: no-repeat;
         background-position: center top;
         background-size: auto rem(363);
 
         @media (min-width: $md4) {
-            min-height: rem(600);
             background-position: right center;
             background-size: cover;
         }
 
         @media (min-width: $md1) {
-            min-height: rem(700);
             background-position: 72% center;
         }
 
         @media (min-width: $md0) {
-            min-height: rem(800);
             background-position: right center;
-        }
-
-        .page > & {
-            padding: 0;
-        }
-
-        // .hero__container
-        .hero__container {
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding-top: rem(363);
-            padding-bottom: rem(40);
-
-            @media (min-width: $md4) {
-                align-items: center;
-                padding-top: rem(40);
-                padding-bottom: rem(40);
-            }
-
-            @media (min-width: $md1) {
-                padding-top: rem(80);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            max-width: none;
-            padding-top: 0;
-
-            @media (min-width: $md4) {
-                max-width: rem(578);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(647);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(947);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            @include desktop-heading-h3;
-
-            @media (min-width: $md4) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md1) {
-                @include desktop-heading-h2;
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-heading-h1;
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: none;
-            margin-top: rem(10);
-            @include desktop-body-s;
-
-            @media (min-width: $md4) {
-                margin-top: rem(20);
-                @include desktop-body-m;
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(578);
-                @include desktop-body-xl;
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(803);
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            width: 100%;
-            margin-top: rem(20);
-
-            @media (min-width: $md4) {
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                margin-top: rem(40);
-            }
         }
     }
 
     // .hero--stock
     &.hero--stock {
-        min-height: rem(670);
-        background-color: $color-bg-secondary;
-        background-repeat: no-repeat;
         background-position: 62% top;
         background-size: auto rem(363);
 
         @media (min-width: $md4) {
-            min-height: rem(600);
             background-position: 78% center;
             background-size: cover;
         }
 
         @media (min-width: $md1) {
-            min-height: rem(700);
             background-position: 72% center;
         }
 
         @media (min-width: $md0) {
-            min-height: rem(800);
             background-position: 54% 78%;
             background-size: auto 118%;
-        }
-
-        .page > & {
-            padding: 0;
-        }
-
-        // .hero__container
-        .hero__container {
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding-top: rem(363);
-            padding-bottom: rem(40);
-
-            @media (min-width: $md4) {
-                align-items: center;
-                padding-top: rem(40);
-                padding-bottom: rem(40);
-            }
-
-            @media (min-width: $md1) {
-                padding-top: rem(80);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            max-width: none;
-            padding-top: 0;
-
-            @media (min-width: $md4) {
-                max-width: rem(578);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(647);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(947);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            @include desktop-heading-h3;
-
-            @media (min-width: $md4) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md1) {
-                @include desktop-heading-h2;
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-heading-h1;
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: none;
-            margin-top: rem(10);
-            @include desktop-body-s;
-
-            @media (min-width: $md4) {
-                margin-top: rem(20);
-                @include desktop-body-m;
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(578);
-                @include desktop-body-xl;
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(803);
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            width: 100%;
-            margin-top: rem(20);
-
-            @media (min-width: $md4) {
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                margin-top: rem(40);
-            }
         }
     }
 
     // .hero--about
     &.hero--about {
-        position: relative;
-        min-height: 0;
-        padding-bottom: rem(60);
         color: $color-bg-primary;
         background-color: $color-bg-elevated;
         background-position: 58% 46%;
-        background-size: cover;
 
         @media (min-width: $md4) {
-            padding-bottom: rem(80);
             background-position: 64% 42%;
         }
 
         @media (min-width: $md1) {
-            min-height: rem(747);
             background-position: 68% center;
         }
 
         @media (min-width: $md0) {
-            min-height: rem(712);
-            padding-bottom: rem(100);
             background-position: 58% center;
         }
 
@@ -719,127 +131,35 @@
             position: absolute;
             inset: 0;
             z-index: 0;
-            background: linear-gradient(
-                180deg,
-                rgba($color-bg-elevated, 0.92) 0%,
-                rgba($color-bg-elevated, 0.55) 18%,
-                rgba($color-bg-elevated, 0.12) 42%,
-                rgba($color-bg-elevated, 0.35) 68%,
-                rgba($color-bg-elevated, 0.88) 100%
-            );
+            background: linear-gradient(180deg,
+                    rgba($color-bg-elevated, 0.92) 0%,
+                    rgba($color-bg-elevated, 0.55) 18%,
+                    rgba($color-bg-elevated, 0.12) 42%,
+                    rgba($color-bg-elevated, 0.35) 68%,
+                    rgba($color-bg-elevated, 0.88) 100%);
             pointer-events: none;
 
             @media (min-width: $md1) {
-                background: linear-gradient(
-                    90deg,
-                    rgba($color-bg-elevated, 0.94) 0%,
-                    rgba($color-bg-elevated, 0.78) 28%,
-                    rgba($color-bg-elevated, 0.28) 52%,
-                    rgba($color-bg-elevated, 0) 74%
-                );
-            }
-        }
-
-        // .hero__container
-        .hero__container {
-            position: relative;
-            z-index: 1;
-            align-items: flex-start;
-            padding-top: rem(24);
-
-            @media (min-width: $md4) {
-                padding-top: rem(40);
-            }
-
-            @media (min-width: $md1) {
-                padding-top: rem(54);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-width: 0;
-            max-width: none;
-            padding-top: 0;
-        }
-
-        // .hero__title
-        .hero__title {
-            @media (min-width: $md1) {
-                max-width: rem(751);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(1028);
-            }
-        }
-
-        // .hero__copy
-        .hero__copy {
-            display: flex;
-            flex-direction: column;
-            gap: rem(20);
-            margin-top: rem(200);
-
-            @media (min-width: $md4) {
-                gap: rem(40);
-                margin-top: rem(220);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(751);
-                margin-top: rem(40);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(1028);
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: none;
-            margin-top: 0;
-            color: $color-bg-primary;
-            @include desktop-body-s;
-
-            @media (min-width: $md4) {
-                font-size: rem(22);
-                line-height: 1.2;
-                letter-spacing: 0;
-            }
-
-            @media (min-width: $md2) {
-                font-size: rem(22);
-                line-height: 1.2;
-                letter-spacing: 0;
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-body-xl;
+                background: linear-gradient(90deg,
+                        rgba($color-bg-elevated, 0.94) 0%,
+                        rgba($color-bg-elevated, 0.78) 28%,
+                        rgba($color-bg-elevated, 0.28) 52%,
+                        rgba($color-bg-elevated, 0) 74%);
             }
         }
     }
 
     // .hero--partner
     &.hero--partner {
-        position: relative;
-        min-height: 0;
-        padding-bottom: rem(60);
         color: $color-bg-primary;
         background-color: $color-bg-elevated;
         background-image:
             url("@img/hero/partner-handshake.webp"),
             url("@img/hero/partner-workshop.webp");
-        background-repeat: no-repeat;
         background-position: 86% -210px, center top;
         background-size: auto 145%, cover;
 
         @media (min-width: $md4) {
-            padding-bottom: rem(80);
             background-position: 70% 38%, center;
             background-size: auto 92%, cover;
         }
@@ -849,129 +169,40 @@
             background-size: auto 120%, cover;
         }
 
-        @media (min-width: $md0) {
-            padding-bottom: rem(100);
-        }
-
         &::before {
             content: "";
             position: absolute;
             inset: 0;
             z-index: 0;
-            background: linear-gradient(
-                180deg,
-                rgba($color-bg-elevated, 0) 0%,
-                rgba($color-bg-elevated, 0.15) 34%,
-                rgba($color-bg-elevated, 0.78) 56%,
-                $color-bg-elevated 74%
-            );
+            background: linear-gradient(180deg,
+                    rgba($color-bg-elevated, 0) 0%,
+                    rgba($color-bg-elevated, 0.15) 34%,
+                    rgba($color-bg-elevated, 0.78) 56%,
+                    $color-bg-elevated 74%);
             pointer-events: none;
 
             @media (min-width: $md4) {
-                background: linear-gradient(
-                    180deg,
-                    rgba($color-bg-elevated, 0.78) 0%,
-                    rgba($color-bg-elevated, 0.28) 24%,
-                    rgba($color-bg-elevated, 0.05) 44%,
-                    rgba($color-bg-elevated, 0.22) 64%,
-                    rgba($color-bg-elevated, 0.82) 84%,
-                    $color-bg-elevated 100%
-                );
+                background: linear-gradient(180deg,
+                        rgba($color-bg-elevated, 0.78) 0%,
+                        rgba($color-bg-elevated, 0.28) 24%,
+                        rgba($color-bg-elevated, 0.05) 44%,
+                        rgba($color-bg-elevated, 0.22) 64%,
+                        rgba($color-bg-elevated, 0.82) 84%,
+                        $color-bg-elevated 100%);
             }
 
             @media (min-width: $md1) {
-                background: linear-gradient(
-                    90deg,
-                    rgba($color-bg-elevated, 0.92) 0%,
-                    rgba($color-bg-elevated, 0.72) 34%,
-                    rgba($color-bg-elevated, 0.28) 58%,
-                    rgba($color-bg-elevated, 0) 78%
-                );
-            }
-        }
-
-        // .hero__container
-        .hero__container {
-            position: relative;
-            z-index: 1;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding-top: rem(300);
-
-            @media (min-width: $md4) {
-                padding-top: rem(100);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            max-width: none;
-            padding-top: 0;
-
-            @media (min-width: $md1) {
-                max-width: rem(751);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(1028);
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: none;
-            margin-top: rem(20);
-            color: $color-bg-primary;
-            font-size: rem(16);
-            line-height: 1.2;
-
-            &:first-of-type {
-                margin-top: rem(40);
-            }
-
-            @media (min-width: $md4) {
-                margin-top: rem(40);
-                font-size: rem(22);
-
-                &:first-of-type {
-                    margin-top: rem(220);
-                }
-            }
-
-            @media (min-width: $md1) {
-                &:first-of-type {
-                    margin-top: rem(40);
-                }
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-body-xl;
-            }
-        }
-    }
-
-    // .hero--log
-    &.hero--log {
-        // .hero__title
-        .hero__title {
-            @include mobile-heading-h1;
-
-            @media (min-width: $md4) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md2) {
-                @include desktop-heading-h1;
+                background: linear-gradient(90deg,
+                        rgba($color-bg-elevated, 0.92) 0%,
+                        rgba($color-bg-elevated, 0.72) 34%,
+                        rgba($color-bg-elevated, 0.28) 58%,
+                        rgba($color-bg-elevated, 0) 78%);
             }
         }
     }
 
     // .hero--moto
     &.hero--moto {
-        position: relative;
-        min-height: rem(770);
-        padding-bottom: rem(40);
         background-color: $color-bg-primary;
         background-position: 65% top;
         background-size: auto rem(349);
@@ -981,8 +212,6 @@
         }
 
         @media (min-width: $md4) {
-            min-height: rem(600);
-            padding-bottom: rem(20);
             background-position: center 30%;
             background-size: cover;
 
@@ -996,8 +225,6 @@
         }
 
         @media (min-width: $md1) {
-            min-height: rem(700);
-            padding-bottom: rem(40);
             background-position: right center;
 
             &::after {
@@ -1006,170 +233,21 @@
         }
 
         @media (min-width: $md0) {
-            min-height: rem(800);
             background-position: center right;
-        }
-
-        // .hero__container
-        .hero__container {
-            position: relative;
-            z-index: 1;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: flex-start;
-            gap: rem(20);
-            padding-top: rem(369);
-
-            @media (min-width: $md4) {
-                justify-content: flex-start;
-                gap: rem(24);
-                padding-top: rem(80);
-            }
-
-            @media (min-width: $md1) {
-                flex-direction: row;
-                align-items: flex-end;
-                justify-content: space-between;
-                gap: 0;
-                padding-top: rem(40);
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            width: 100%;
-            min-width: 0;
-            max-width: 100%;
-            padding-top: 0;
-
-            @media (min-width: $md4) {
-                max-width: rem(548);
-            }
-
-            @media (min-width: $md1) {
-                align-self: center;
-                width: auto;
-                max-width: rem(647);
-                flex: 0 1 rem(647);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(947);
-                flex-basis: rem(947);
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: 100%;
-
-            @media (min-width: $md4) {
-                max-width: rem(386);
-            }
-
-            @media (min-width: $md1) {
-                max-width: rem(578);
-            }
-
-            @media (min-width: $md0) {
-                max-width: rem(803);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            @include mobile-heading-h1;
-
-            @media (min-width: $md1) {
-                @include tablet-heading-h1;
-            }
-
-            @media (min-width: $md0) {
-                @include desktop-heading-h1;
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            width: 100%;
-            margin-top: rem(20);
-
-            @media (min-width: $md4) {
-                width: auto;
-            }
-
-            @media (min-width: $md1) {
-                margin-top: rem(40);
-            }
-        }
-
-        // .hero__side
-        .hero__side {
-            align-self: stretch;
-            width: 100%;
-            margin-left: 0;
-
-            @media (min-width: $md4) {
-                align-self: flex-start;
-                width: auto;
-                margin-top: auto;
-            }
-
-            @media (min-width: $md1) {
-                align-self: flex-end;
-                margin-top: 0;
-                margin-left: auto;
-            }
-        }
-
-        // .hero__note
-        .hero__note {
-            width: 100%;
-            padding: rem(20);
-            clip-path: none;
-
-            @media (min-width: $md4) {
-                width: rem(397);
-                max-width: 100%;
-                padding: rem(24);
-                clip-path: polygon(1.25rem 0, 100% 0, calc(100% - 1.25rem) 100%, 0 100%);
-            }
-
-            @media (min-width: $md1) {
-                width: rem(358);
-                padding: rem(24) rem(44);
-            }
-        }
-
-        // .hero__note-title
-        .hero__note-title {
-            max-width: none;
-            text-transform: uppercase;
-            @include desktop-body-m;
-            font-weight: 700;
-
-            @media (min-width: $md1) {
-                max-width: rem(270);
-                @include desktop-heading-h4;
-            }
         }
     }
 
     // .hero--catalog
     &.hero--catalog {
-        min-height: rem(640);
-        padding-bottom: 0;
+        color: $color-bg-primary;
         background-color: $color-bg-elevated;
         background-image:
             linear-gradient(180deg, rgba($color-bg-elevated, 0) 0%, rgba($color-bg-elevated, 0) 32%, $color-bg-elevated 68%),
             url("@img/hero/catalog-exhaust.webp");
-        background-repeat: no-repeat;
         background-position: center, center top;
         background-size: auto, rem(527) auto;
-        color: $color-bg-primary;
 
         @media (min-width: $md4) {
-            min-height: rem(580);
             background-image:
                 linear-gradient(90deg, $color-bg-elevated 0%, rgba($color-bg-elevated, 0.82) 38%, rgba($color-bg-elevated, 0) 62%),
                 url("@img/hero/catalog-exhaust.webp");
@@ -1178,308 +256,107 @@
         }
 
         @media (min-width: $md1) {
-            min-height: rem(580);
+            color: $color-text-primary;
             background-color: $color-bg-primary;
             background-image:
                 linear-gradient(90deg, $color-bg-primary 0%, $color-bg-primary 28%, rgba($color-bg-primary, 0.55) 42%, rgba($color-bg-primary, 0) 58%),
                 url("@img/hero/catalog-exhaust.webp");
             background-position: center, right center;
             background-size: auto, auto 115%;
-            color: $color-text-primary;
-        }
-
-        @media (min-width: $md0) {
-            min-height: rem(640);
-        }
-
-        // .hero__container
-        .hero__container {
-            align-items: flex-end;
-            padding-top: rem(146);
-            padding-bottom: rem(40);
-
-            @media (min-width: $md1) {
-                align-items: center;
-                padding-top: rem(80);
-                padding-bottom: 0;
-            }
-        }
-
-        // .hero__offer
-        .hero__offer {
-            max-width: rem(423);
-
-            @media (min-width: $md1) {
-                max-width: rem(947);
-            }
-        }
-
-        // .hero__title
-        .hero__title {
-            color: $color-bg-primary;
-            @include desktop-heading-h2;
-
-            // .hero__title br
-            br {
-                @media (min-width: $md1) {
-                    display: none;
-                }
-            }
-
-            @media (min-width: $md4) {
-                @include desktop-heading-h1;
-            }
-
-            @media (min-width: $md1) {
-                color: $color-text-primary;
-            }
-        }
-
-        // .hero__lead
-        .hero__lead {
-            max-width: rem(423);
-            color: $color-bg-primary;
-            font-size: rem(26);
-
-            @media (min-width: $md1) {
-                max-width: rem(571);
-                color: $color-text-primary;
-            }
-        }
-
-        // .hero__btn
-        .hero__btn {
-            margin-top: rem(40);
         }
     }
 
-	// .hero--oil
-	&.hero--oil {
-		position: relative;
-		z-index: 1;
-		overflow: visible;
-		min-height: rem(720);
-		margin-top: 0;
-		padding-bottom: 0;
-		background-color: #1e1d20;
-		background-image: radial-gradient(ellipse at 72% 78%, rgba(90, 28, 18, 0.55), transparent 58%);
-		color: $color-bg-primary;
+    // .hero--oil
+    &.hero--oil {
+        color: $color-bg-primary;
+        background-color: #1e1d20;
+        background-image: radial-gradient(ellipse at 72% 78%, rgba(90, 28, 18, 0.55), transparent 58%);
 
-		.page > & {
-			padding-bottom: 0;
-		}
+        @media (min-width: $md4) {
+            background-color: #0d0d0d;
+        }
+    }
 
-		@media (min-width: $md4) {
-			min-height: rem(600);
-			margin-top: rem(-70);
-			background-color: #0d0d0d;
-		}
-
-		@media (min-width: $md1) {
-			min-height: rem(700);
-		}
-
-		@media (min-width: $md0) {
-			min-height: rem(800);
-		}
-
-		// .hero__media
-		.hero__media {
-			position: relative;
-			z-index: 1;
-			height: rem(363);
-			overflow: hidden;
-			pointer-events: none;
-
-			@media (min-width: $md4) {
-				position: absolute;
-				inset: 0;
-				height: auto;
-				overflow: visible;
-			}
-		}
-
-		// .hero__container
-		.hero__container {
-			position: relative;
-			z-index: 2;
-			flex: 1 1 auto;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: flex-end;
-			min-width: 0;
-			max-width: 100%;
-			margin-top: auto;
-			padding-top: rem(16);
-			padding-bottom: rem(40);
-
-			@media (min-width: $md4) {
-				justify-content: center;
-				margin-top: 0;
-				padding-top: rem(40);
-			}
-
-			@media (min-width: $md1) {
-				padding-top: rem(40);
-				padding-bottom: rem(40);
-			}
-		}
-
-		// .hero__offer
-		.hero__offer {
-			width: 100%;
-			max-width: none;
-			padding-top: 0;
-
-			@media (min-width: $md4) {
-				max-width: rem(548);
-			}
-
-			@media (min-width: $md1) {
-				max-width: rem(647);
-			}
-
-			@media (min-width: $md0) {
-				max-width: rem(947);
-			}
-		}
-
-		// .hero__title
-		.hero__title {
-			@include desktop-heading-h3;
-
-			@media (min-width: $md4) {
-				@include tablet-heading-h1;
-			}
-
-			@media (min-width: $md1) {
-				@include desktop-heading-h2;
-			}
-
-			@media (min-width: $md0) {
-				@include desktop-heading-h1;
-			}
-		}
-
-		// .hero__lead
-		.hero__lead {
-			max-width: none;
-			margin-top: rem(10);
-			color: $color-bg-primary;
-			letter-spacing: em(-0.32, 16);
-
-			@media (min-width: $md4) {
-				max-width: rem(309);
-				margin-top: rem(20);
-				@include desktop-body-m;
-			}
-
-			@media (min-width: $md1) {
-				max-width: rem(578);
-				letter-spacing: 0;
-				@include desktop-body-xl;
-			}
-
-			@media (min-width: $md0) {
-				max-width: rem(803);
-			}
-		}
-
-		// .hero__btn
-		.hero__btn {
-			width: 100%;
-			margin-top: rem(20);
-			padding: rem(30) rem(44);
-			font-size: rem(16);
-			line-height: 1.3;
-			letter-spacing: em(-0.32, 16);
-
-			@media (min-width: $md4) {
-				width: auto;
-				padding: rem(22) rem(44);
-			}
-
-			@media (min-width: $md1) {
-				margin-top: rem(40);
-				padding: rem(31) rem(52);
-				font-size: rem(22);
-				line-height: 1;
-				letter-spacing: em(-0.44, 22);
-			}
-		}
-
-		// .hero__visual
-		.hero__visual {
-			position: absolute;
-			top: rem(-8);
-			left: 46%;
-			display: block;
-			width: rem(430);
-			max-width: none;
-			height: auto;
-			transform: translateX(-38%) rotate(-26deg);
-			transform-origin: center center;
-			pointer-events: none;
-
-			@media (min-width: $md4) {
-				top: rem(36);
-				right: rem(-210);
-				left: auto;
-				width: rem(600);
-				transform: rotate(-26deg);
-			}
-
-			@media (min-width: $md1) {
-				top: rem(8);
-				right: rem(-150);
-				width: rem(795);
-			}
-
-			@media (min-width: $md0) {
-				top: rem(-16);
-				right: rem(-40);
-				width: rem(965);
-			}
-		}
-	}
-
+    position: relative;
+    z-index: 1;
     margin-top: rem(-70);
-    min-height: rem(724);
-    padding-bottom: rem(40);
+    min-height: rem(770);
     display: flex;
     flex-direction: column;
+    background-color: $color-bg-secondary;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-bottom: rem(0);
+
+    @media (min-width: $md4) {
+        min-height: rem(600);
+    }
+
+    @media (min-width: $md1) {
+        min-height: rem(700);
+    }
+
+    @media (min-width: $md0) {
+        min-height: rem(724);
+
+    }
 
     // .hero__container
     &__container {
+        position: relative;
+        z-index: 1;
         flex: 1 1 auto;
-        padding-top: rem(50);
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: rem(20);
+        padding-top: rem(450);
+        padding-bottom: rem(40);
+
+        @media (min-width: $md4) {
+            justify-content: space-between;
+            padding-top: rem(100);
+        }
+
+        @media (min-width: $md1) {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 0;
+            padding-top: rem(40);
+        }
     }
 
     // .hero__offer
     &__offer {
+        width: 100%;
+        max-width: rem(947);
         padding-top: rem(20);
-        max-width: 59.1875rem;
+        align-self: center;
     }
 
+    // .hero__copy
+    &__copy {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
 
+        @media (min-width: $md4) {
+            gap: rem(40);
+        }
 
-
-
-
-    // .hero__title
-    &__title {}
+        // .hero__lead
+        .hero__lead {
+            margin-top: 0;
+        }
+    }
 
     // .hero__lead
     &__lead {
         margin-top: rem(20);
         max-width: rem(803);
-        color: $color-bg-elevated;
         font-family: $font-inter;
         font-size: rem(16);
         font-weight: 400;
@@ -1496,43 +373,79 @@
 
     // .hero__location
     &__location {
-        margin-top: 1rem;
+        margin-top: rem(10);
         display: flex;
         align-items: center;
-        gap: 0.625rem;
-
+        gap: rem(10);
+        @include mobile-heading-h4;
 
         &::before {
             color: $color-accent-primary;
-            font-size: 1.5rem;
-            width: 1.5rem;
-            height: 1.5rem;
+            align-self: center;
             flex-shrink: 0;
-            align-self: flex-start;
+            font-size: rem(18);
+            width: rem(18);
+            height: rem(18);
         }
 
-        @include mobile-heading-h1;
+        @media (min-width: $md4) {
+            margin-top: rem(20);
+            @include mobile-heading-h1;
+
+            &::before {
+                font-size: rem(24);
+                width: rem(24);
+                height: rem(24);
+            }
+        }
     }
 
     // .hero__btn
     &__btn {
-        margin-top: rem(32);
+        width: 100%;
+        margin-top: rem(20);
+
+        @media (min-width: $md4) {
+            width: auto;
+        }
+
+        @media (min-width: $md1) {
+            margin-top: rem(40);
+        }
     }
 
     // .hero__side
     &__side {
-        align-self: flex-end;
-        margin-left: auto;
+        align-self: stretch;
+        width: 100%;
+        margin-left: 0;
+
+        @media (min-width: $md4) {
+            align-self: flex-start;
+            width: auto;
+        }
+
+        @media (min-width: $md1) {
+            align-self: flex-end;
+            margin-left: auto;
+        }
     }
 
     // .hero__rate
     &__rate {
+        width: 100%;
+        max-width: none;
+        padding: rem(20);
         background: $color-text-primary;
         color: $color-bg-secondary;
-        padding: 1.5rem 2.75rem 0.875rem;
-        max-width: 22.375rem;
-        clip-path: polygon(1.25rem 0, 100% 0, calc(100% - 1.25rem) 100%, 0 100%);
+        clip-path: none;
 
+        @media (min-width: $md4) {
+            width: rem(358);
+            max-width: rem(358);
+            padding: rem(24) rem(44) rem(14);
+            clip-path: polygon(rem(20) 0, 100% 0, calc(100% - #{rem(20)}) 100%, 0 100%);
+        }
     }
 
     // .hero__rate-header
@@ -1559,26 +472,48 @@
     }
 
     // .hero__rate-origin
-    &__rate-origin {}
+    &__rate-origin img {
+        display: block;
+        width: rem(90);
+        height: rem(14);
+
+        @media (min-width: $md4) {
+            width: rem(64);
+            height: rem(10);
+        }
+    }
 
     // .hero__rate-details
     &__rate-details {
-        margin-top: 0.375rem;
+        margin-top: rem(20);
         display: flex;
         align-items: center;
-        gap: 0.38rem;
+        gap: rem(10);
+
+        @media (min-width: $md4) {
+            margin-top: rem(12);
+            gap: rem(6);
+        }
     }
 
     // .hero__rate-value
     &__rate-value {
-        @include desktop-heading-h2;
-        line-height: 1;
+        @include tablet-heading-h1;
+
+        @media (min-width: $md4) {
+            @include desktop-heading-h2;
+            line-height: 1;
+        }
     }
 
     // .hero__rate-text
     &__rate-text {
         color: $color-text-secondary;
-        @include desktop-body-m;
+        @include desktop-body-s;
+
+        @media (min-width: $md4) {
+            @include desktop-body-m;
+        }
     }
 
     // .hero__note
@@ -1586,20 +521,35 @@
         display: flex;
         flex-direction: column;
         gap: rem(12);
-        width: min(100%, #{rem(358)});
-        padding: rem(24) rem(44);
+        width: 100%;
+        padding: rem(20);
         background: $color-text-primary;
         color: $color-bg-primary;
-        clip-path: polygon(1.25rem 0, 100% 0, calc(100% - 1.25rem) 100%, 0 100%);
+        clip-path: none;
+
+        @media (min-width: $md4) {
+            width: rem(397);
+            max-width: 100%;
+            padding: rem(24);
+            clip-path: polygon(rem(20) 0, 100% 0, calc(100% - #{rem(20)}) 100%, 0 100%);
+        }
+
+        @media (min-width: $md1) {
+            width: rem(358);
+            padding: rem(24) rem(44);
+        }
     }
 
     // .hero__note-title
     &__note-title {
-        max-width: rem(270);
+        max-width: none;
         color: $color-accent-primary;
-        @include mobile-heading-h4;
+        text-transform: uppercase;
+        @include desktop-body-m;
+        font-weight: 700;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md1) {
+            max-width: rem(270);
             @include desktop-heading-h4;
         }
     }
@@ -1610,6 +560,53 @@
         @include desktop-body-m;
     }
 
+    // .hero__media
+    &__media {
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 0;
+        height: rem(363);
+        overflow: hidden;
+        pointer-events: none;
 
+        @media (min-width: $md4) {
+            inset: 0;
+            height: auto;
+            overflow: visible;
+        }
+    }
 
+    // .hero__visual
+    &__visual {
+        position: absolute;
+        top: rem(-8);
+        left: 46%;
+        display: block;
+        width: rem(430);
+        max-width: none;
+        height: auto;
+        transform: translateX(-38%) rotate(-26deg);
+        transform-origin: center center;
+        pointer-events: none;
+
+        @media (min-width: $md4) {
+            top: rem(36);
+            right: rem(-210);
+            left: auto;
+            width: rem(600);
+            transform: rotate(-26deg);
+        }
+
+        @media (min-width: $md1) {
+            top: rem(8);
+            right: rem(-150);
+            width: rem(795);
+        }
+
+        @media (min-width: $md0) {
+            top: rem(-16);
+            right: rem(-40);
+            width: rem(965);
+        }
+    }
 }
