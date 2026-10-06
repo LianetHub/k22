@@ -575,7 +575,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		overflow: hidden;
+		overflow: visible;
 	}
 
 	// .contacts__map
@@ -818,12 +818,9 @@
 		left: 0;
 		display: none;
 		flex-direction: column;
-		align-items: flex-start;
-		gap: rem(30);
+		align-items: center;
 		width: max-content;
 		max-width: calc(100% - #{rem(32)});
-		padding: rem(30);
-		background: $color-bg-elevated;
 		pointer-events: auto;
 		transform: translate(-50%, -100%);
 
@@ -863,6 +860,26 @@
 		.contacts__route-app {
 			border-radius: rem(6);
 		}
+	}
+
+	// .contacts__balloon-body
+	&__balloon-body {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(30);
+		width: 100%;
+		padding: rem(30);
+		background: $color-bg-elevated;
+	}
+
+	// .contacts__balloon-tail
+	&__balloon-tail {
+		display: block;
+		width: rem(27);
+		height: rem(23);
+		margin-top: rem(-1);
+		flex-shrink: 0;
 	}
 
 	// .contacts__switch

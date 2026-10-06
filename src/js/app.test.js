@@ -180,6 +180,11 @@ function boot(body = "", options = {}) {
 					};
 					opts.get = (key) => (key === "projection" ? this.projection : undefined);
 					this.getZoom = () => opts.zoom;
+					this.setZoomCalls = [];
+					this.setZoom = (value) => {
+						this.setZoomCalls.push(value);
+						opts.zoom = value;
+					};
 					this.pagePoint = [120, 80];
 					this.converter = {
 						globalToPage: () => this.pagePoint,
@@ -988,6 +993,15 @@ describe("Яндекс.Карта", () => {
 		const ctx = boot(mapFixture('data-markers="59.8,30.3|Адрес" data-zoom="abc"'), { withYmaps: true });
 		ctx.observers[0].intersect();
 		expect(ctx.maps[0].options.zoom).toBe(12);
+		expect(ctx.maps[0].setZoomCalls).toEqual([]);
+	});
+
+	it("data-zoom применяется после setBounds", () => {
+		const ctx = boot(mapFixture('data-zoom="20" data-markers="59.8689,30.3675|А;59.8336,30.3758|Б"'), { withYmaps: true });
+		ctx.observers[0].intersect();
+		expect(ctx.maps[0].setBoundsCalls).toHaveLength(1);
+		expect(ctx.maps[0].setZoomCalls).toEqual([20]);
+		expect(ctx.maps[0].options.zoom).toBe(20);
 	});
 
 	it("размер иконки зависит от ширины окна", () => {
@@ -1081,7 +1095,8 @@ describe("Яндекс.Карта", () => {
 		expect(first.classList.contains("is-open")).toBe(true);
 		expect(second.classList.contains("is-open")).toBe(false);
 		expect(first.style.left).toBe("120px");
-		expect(first.style.top).toBe("22px");
+		expect(first.style.top).toBe("80px");
+		expect(ctx.placemarks[0].optionSets).toContainEqual({ visible: false });
 
 		ctx.maps[0].fire("click");
 		expect(first.classList.contains("is-open")).toBe(true);
@@ -1089,6 +1104,8 @@ describe("Яндекс.Карта", () => {
 		ctx.placemarks[1].fire("click", { stopPropagation() {} });
 		expect(first.classList.contains("is-open")).toBe(false);
 		expect(second.classList.contains("is-open")).toBe(true);
+		expect(ctx.placemarks[0].optionSets.at(-1)).toEqual({ visible: true });
+		expect(ctx.placemarks[1].optionSets).toContainEqual({ visible: false });
 
 		ctx.placemarks[1].fire("click", { stopPropagation() {} });
 		expect(second.classList.contains("is-open")).toBe(false);
@@ -1100,8 +1117,7 @@ describe("Яндекс.Карта", () => {
 		expect(ctx.errors).toEqual([]);
 	});
 
-	it("балун переезжает при сдвиге карты и при ресайзе", () => {
-		vi.useFakeTimers();
+	it("сдвиг карты закрывает балун и возвращает метку", async () => {
 		const ctx = boot(
 			`<div class="contacts__map-block">${mapFixture()}<div class="contacts__balloon" data-marker="Кузнецовская, 52к13"></div></div>`,
 			{ withYmaps: true, width: 1440 },
@@ -1110,16 +1126,15 @@ describe("Яндекс.Карта", () => {
 
 		const balloon = ctx.$('[data-marker="Кузнецовская, 52к13"]');
 		ctx.placemarks[0].fire("click", { stopPropagation() {} });
+		expect(balloon.classList.contains("is-open")).toBe(true);
 
-		ctx.maps[0].pagePoint = [200, 90];
-		ctx.maps[0].fire("boundschange");
-		expect(balloon.style.left).toBe("200px");
-		expect(balloon.style.top).toBe("32px");
+		ctx.maps[0].fire("actionbegin");
+		expect(balloon.classList.contains("is-open")).toBe(true);
 
-		ctx.setWidth(375);
-		vi.advanceTimersByTime(200);
-		expect(balloon.style.left).toBe("200px");
-		expect(balloon.style.top).toBe("49px");
+		await Promise.resolve();
+		ctx.maps[0].fire("actionbegin");
+		expect(balloon.classList.contains("is-open")).toBe(false);
+		expect(ctx.placemarks[0].optionSets.at(-1)).toEqual({ visible: true });
 		expect(ctx.errors).toEqual([]);
 	});
 });

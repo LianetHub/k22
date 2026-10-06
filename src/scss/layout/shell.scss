@@ -60,10 +60,10 @@ img {
 	flex-direction: column;
 
 	&>* {
-		@include section-margin($space-section);
+		padding: 6.25rem 0;
 
 		&:first-child {
-			margin-top: 0;
+			padding-top: rem(0);
 		}
 	}
 

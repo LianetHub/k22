@@ -259,11 +259,10 @@ img {
   flex-direction: column;
 }
 .page > * {
-  padding-block: 0;
-  margin-block: 6.25rem;
+  padding: 6.25rem 0;
 }
 .page > *:first-child {
-  margin-top: 0;
+  padding-top: 0rem;
 }
 
 .container {
@@ -6251,7 +6250,7 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 .contacts__map {
   width: 100%;
@@ -6458,12 +6457,9 @@ textarea.form-control {
   left: 0;
   display: none;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1.875rem;
+  align-items: center;
   width: max-content;
   max-width: calc(100% - 2rem);
-  padding: 1.875rem;
-  background: #16161B;
   pointer-events: auto;
   transform: translate(-50%, -100%);
 }
@@ -6500,6 +6496,22 @@ textarea.form-control {
 }
 .contacts__balloon .contacts__route-app {
   border-radius: 0.375rem;
+}
+.contacts__balloon-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.875rem;
+  width: 100%;
+  padding: 1.875rem;
+  background: #16161B;
+}
+.contacts__balloon-tail {
+  display: block;
+  width: 1.6875rem;
+  height: 1.4375rem;
+  margin-top: -0.0625rem;
+  flex-shrink: 0;
 }
 .contacts__switch {
   display: flex;
@@ -8589,7 +8601,7 @@ textarea.form-control {
 }
 
 .vacancies {
-  background: #F4F4F6;
+  background: #fff;
 }
 .vacancies__container {
   display: grid;

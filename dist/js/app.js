@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			const markers = parseMarkers();
 			if (!markers.length) return;
 
-			const zoom = parseInt(mapContainer.dataset.zoom, 10) || 12;
+			const parsedZoom = parseInt(mapContainer.dataset.zoom, 10);
+			const zoom = Number.isFinite(parsedZoom) ? parsedZoom : 12;
 			const iconPath = mapContainer.dataset.icon;
 			const iconParams = getIconParams();
 
@@ -101,14 +102,28 @@ document.addEventListener("DOMContentLoaded", () => {
 				placemarks.push(placemark);
 			});
 
+			let boundsResult = null;
+
 			if (markers.length > 1) {
 				const bounds = map.geoObjects.getBounds();
 				if (bounds) {
-					map.setBounds(bounds, {
+					boundsResult = map.setBounds(bounds, {
 						checkZoomRange: true,
 						zoomMargin: 40,
 					});
 				}
+			}
+
+			const applyZoom = () => {
+				if (!Number.isFinite(parsedZoom) || typeof map.setZoom !== "function") return;
+
+				map.setZoom(parsedZoom);
+			};
+
+			if (boundsResult && typeof boundsResult.then === "function") {
+				boundsResult.then(applyZoom);
+			} else {
+				applyZoom();
 			}
 
 			const fitMap = () => {
@@ -122,8 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			const mapBlock = mapContainer.closest(".contacts__map-block");
 			const balloons = mapBlock ? Array.from(mapBlock.querySelectorAll(".contacts__balloon")) : [];
 			let openedMarker = "";
+			let openedPlacemark = null;
 			let skipMapClick = false;
 			let syncOpenBalloon = () => {};
+
+			const setPlacemarkVisible = (placemark, visible) => {
+				if (!placemark || !placemark.options || typeof placemark.options.set !== "function") return;
+				placemark.options.set({ visible });
+			};
 
 			if (balloons.length && mapBlock) {
 				const closeBalloons = () => {
@@ -131,6 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					balloons.forEach((balloon) => {
 						balloon.classList.remove("is-open");
 					});
+					setPlacemarkVisible(openedPlacemark, true);
+					openedPlacemark = null;
 				};
 
 				const placeBalloon = (balloon, coords) => {
@@ -142,9 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (!pagePixels) return;
 
 					const blockRect = mapBlock.getBoundingClientRect();
-					const icon = getIconParams();
-					balloon.style.left = `${pagePixels[0] - blockRect.left}px`;
-					balloon.style.top = `${pagePixels[1] - blockRect.top + icon.offset[1]}px`;
+					const scrollX = window.pageXOffset || 0;
+					const scrollY = window.pageYOffset || 0;
+
+					balloon.style.left = `${pagePixels[0] - blockRect.left - scrollX}px`;
+					balloon.style.top = `${pagePixels[1] - blockRect.top - scrollY}px`;
 				};
 
 				syncOpenBalloon = () => {
@@ -182,7 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 						if (willOpen) {
 							openedMarker = marker.title;
+							openedPlacemark = placemark;
 							balloon.classList.add("is-open");
+							setPlacemarkVisible(placemark, false);
 							placeBalloon(balloon, marker.coords);
 						}
 					});
@@ -190,6 +217,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				if (map.events && typeof map.events.add === "function") {
 					map.events.add("click", () => {
+						if (skipMapClick) return;
+						closeBalloons();
+					});
+
+					map.events.add("actionbegin", () => {
 						if (skipMapClick) return;
 						closeBalloons();
 					});
