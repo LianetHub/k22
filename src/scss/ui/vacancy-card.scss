@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 
+$vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 50'%3E%3Cpolygon points='58,0 108,0 108,50 0,50' fill='%23fff'/%3E%3C/svg%3E");
+
 .vacancy-card {
 	position: relative;
 	display: flex;
@@ -9,13 +11,47 @@
 	isolation: isolate;
 	overflow: hidden;
 	background-color: $color-bg-secondary;
-	background-image: url("@img/decor/dark-pattern.svg");
-	background-repeat: repeat;
-	background-position: 0 0;
-	background-size: auto;
+	background-image: url("@img/decor/vacancy-card-light.webp");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	// текстура по нижнему краю
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		background-image: url("@img/decor/vacancy-card-texture.webp");
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	// полоса точек по верхнему краю
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+		height: rem(50);
+		background-image: url("@img/decor/vacancy-dotts.svg");
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: rem(574) rem(50);
+		pointer-events: none;
+	}
 
 	@media (min-width: $md4) {
 		min-height: rem(314);
+	}
+
+	@media (min-width: $md0) {
+		min-height: rem(346);
 	}
 
 	// vacancy-card__badge
@@ -42,6 +78,11 @@
 			padding-right: rem(70);
 			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 		}
+
+		@media (min-width: $md0) {
+			padding: rem(20) rem(30);
+			padding-right: rem(88);
+		}
 	}
 
 	// vacancy-card__body
@@ -57,12 +98,20 @@
 		@media (min-width: $md4) {
 			padding-right: rem(200);
 		}
+
+		@media (min-width: $md0) {
+			padding: rem(30);
+		}
 	}
 
 	// vacancy-card__title
 	&__title {
 		@include desktop-heading-h4;
 		color: $color-text-primary;
+
+		@media (min-width: $md0) {
+			@include desktop-heading-h3;
+		}
 	}
 
 	// vacancy-card__duties
@@ -92,6 +141,10 @@
 			border-radius: 50%;
 			background: $color-accent-primary;
 		}
+
+		@media (min-width: $md0) {
+			@include desktop-body-m;
+		}
 	}
 
 	// vacancy-card__media
@@ -108,6 +161,12 @@
 			height: rem(314);
 			pointer-events: none;
 		}
+
+		@media (min-width: $md0) {
+			width: rem(237);
+			height: 100%;
+			overflow: hidden;
+		}
 	}
 
 	// vacancy-card__img
@@ -117,11 +176,19 @@
 		height: 100%;
 		object-fit: contain;
 		object-position: bottom right;
+
+		@media (min-width: $md0) {
+			position: absolute;
+			bottom: 1px;
+			right: 1px;
+			width: 100%;
+			max-width: none;
+			object-fit: contain;
+		}
 	}
 
 	// vacancy-card__apply
 	&__apply {
-		position: relative;
 		z-index: 2;
 		display: flex;
 		align-items: stretch;
@@ -139,6 +206,12 @@
 			min-height: rem(70);
 		}
 
+		@media (min-width: $md0) {
+			padding: 0 0 0 rem(30);
+			font-size: rem(22);
+			letter-spacing: em(-0.44, 22);
+		}
+
 		&:focus-visible {
 			@include focus-ring;
 		}
@@ -151,27 +224,44 @@
 			}
 		}
 
+		// глиф стрелки в правом нижнем квадрате
 		&::before {
 			position: absolute;
-			right: 0;
-			bottom: 0;
-			z-index: 1;
+			right: -1px;
+			bottom: -1px;
+			z-index: 2;
 			display: inline-flex;
 			align-items: center;
-			justify-content: center;
-			width: rem(108);
+			justify-content: flex-start;
+			width: rem(50);
 			height: rem(50);
-			padding-left: rem(58);
-			background: $color-bg-primary;
 			color: $color-accent-primary;
-			font-size: rem(20);
+			font-size: rem(16);
 			line-height: 1;
-			clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
+		}
+
+		// зона клика на всю карточку и белая плашка стрелки
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			background-color: $color-bg-primary;
+			mask-image: $vacancy-card-arrow-mask;
+			mask-repeat: no-repeat;
+			mask-position: right #{rem(-1)} bottom #{rem(-1)};
+			mask-size: #{rem(108)} #{rem(50)};
+			-webkit-mask-image: $vacancy-card-arrow-mask;
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-position: right #{rem(-1)} bottom #{rem(-1)};
+			-webkit-mask-size: #{rem(108)} #{rem(50)};
 		}
 	}
 
 	// vacancy-card__apply-text
 	&__apply-text {
+		position: relative;
+		z-index: 1;
 		display: inline-flex;
 		align-items: center;
 		padding-bottom: rem(22);
@@ -180,6 +270,10 @@
 
 		@media (min-width: $md4) {
 			padding-bottom: rem(12);
+		}
+
+		@media (min-width: $md0) {
+			padding-bottom: rem(8);
 		}
 
 		// vacancy-card__apply-text--full

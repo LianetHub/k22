@@ -10,6 +10,10 @@
 		padding: rem(80) 0;
 	}
 
+	@media (min-width: $md0) {
+		padding: $space-100 0;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -36,6 +40,12 @@
 			align-items: flex-start;
 			gap: rem(30);
 		}
+
+		@media (min-width: $md0) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: rem(30);
+		}
 	}
 
 	// .footer__brand
@@ -57,7 +67,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-start;
-			gap: rem(40);
+			gap: rem(34);
 		}
 	}
 
@@ -104,7 +114,11 @@
 
 		@media (min-width: $md2) {
 			order: 3;
-			max-width: rem(332);
+			max-width: 17rem;
+		}
+
+		@media (min-width: $md0) {
+			@include desktop-body-m;
 		}
 	}
 
@@ -154,6 +168,10 @@
 			flex-direction: row;
 			gap: rem(30);
 		}
+
+		@media (min-width: $md0) {
+			display: contents;
+		}
 	}
 
 	// .footer__col
@@ -164,9 +182,7 @@
 		flex-direction: column;
 		gap: rem(30);
 
-		@media (min-width: $md2) {
-			gap: rem(40);
-		}
+
 	}
 
 	// .footer__col-title
@@ -182,6 +198,12 @@
 			font-size: rem(22);
 			line-height: 1;
 			letter-spacing: rem(-0.44);
+		}
+
+		@media (min-width: $md0) {
+			@include desktop-body-m;
+			font-weight: 700;
+			line-height: 1;
 		}
 	}
 
@@ -200,7 +222,6 @@
 		@media (min-width: $md2) {
 			flex-direction: column;
 			flex-wrap: nowrap;
-			gap: rem(40);
 		}
 	}
 
@@ -233,6 +254,11 @@
 				opacity: 0.7;
 			}
 		}
+
+		@media (min-width: $md0) {
+			font-size: rem(18);
+			letter-spacing: em(-0.18, 18);
+		}
 	}
 
 	// .footer__contacts
@@ -248,7 +274,7 @@
 		@media (min-width: $md2) {
 			flex: 1 1 0;
 			min-width: 0;
-			gap: rem(40);
+			gap: rem(32);
 		}
 	}
 
@@ -256,7 +282,7 @@
 	&__phone-block {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
+
 
 		@media (min-width: $md4) {
 			flex-direction: row;
@@ -296,6 +322,10 @@
 				opacity: 0.7;
 			}
 		}
+
+		@media (min-width: $md0) {
+			@include desktop-heading-h4;
+		}
 	}
 
 	// .footer__hours
@@ -331,6 +361,10 @@
 				opacity: 0.7;
 			}
 		}
+
+		@media (min-width: $md0) {
+			@include desktop-heading-h4;
+		}
 	}
 
 	// .footer__callback
@@ -351,6 +385,10 @@
 		line-height: 1.2;
 		letter-spacing: rem(-0.28);
 		color: $color-text-secondary;
+
+		@media (min-width: $md0) {
+			@include desktop-body-m;
+		}
 	}
 
 	// .footer__copyright--brand

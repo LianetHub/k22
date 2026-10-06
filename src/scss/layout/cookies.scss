@@ -5,8 +5,9 @@
 	inset: auto 0 0;
 	z-index: $ui-index-7;
 	display: none;
-	padding: rem(20) 0;
+	padding: rem(12) 0;
 	background: $color-text-primary;
+	min-height: rem(77);
 
 	&.is-visible {
 		display: block;

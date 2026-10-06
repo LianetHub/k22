@@ -154,17 +154,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "ActayWide";
-  font-display: swap;
-  src: url("../fonts/ActayWide-Bold.woff2") format("woff2"), url("../fonts/ActayWide-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ActayWide";
+  font-display: swap;
+  src: url("../fonts/ActayWide-Bold.woff2") format("woff2"), url("../fonts/ActayWide-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -294,6 +294,7 @@ img {
 @media (min-width: 1919.98px) {
   .container.container--large {
     max-width: 120rem;
+    padding: 0 1.25rem;
   }
 }
 
@@ -1276,6 +1277,11 @@ img {
     padding: 5rem 0;
   }
 }
+@media (min-width: 1919.98px) {
+  .footer {
+    padding: 6.25rem 0;
+  }
+}
 .footer::before {
   content: "";
   position: absolute;
@@ -1300,6 +1306,13 @@ img {
     gap: 1.875rem;
   }
 }
+@media (min-width: 1919.98px) {
+  .footer__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+  }
+}
 .footer__brand {
   display: flex;
   flex-direction: column;
@@ -1320,7 +1333,7 @@ img {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 2.5rem;
+    gap: 2.125rem;
   }
 }
 .footer__brand-top {
@@ -1363,7 +1376,16 @@ img {
 @media (min-width: 1199.98px) {
   .footer__tagline {
     order: 3;
-    max-width: 20.75rem;
+    max-width: 17rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .footer__tagline {
+    font-family: "InterTight", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0225rem;
   }
 }
 .footer__socials {
@@ -1410,17 +1432,17 @@ img {
     gap: 1.875rem;
   }
 }
+@media (min-width: 1919.98px) {
+  .footer__nav {
+    display: contents;
+  }
+}
 .footer__col {
   flex: 1 1 0;
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
-}
-@media (min-width: 1199.98px) {
-  .footer__col {
-    gap: 2.5rem;
-  }
 }
 .footer__col-title {
   font-family: "InterTight", sans-serif;
@@ -1435,6 +1457,17 @@ img {
     font-size: 1.375rem;
     line-height: 1;
     letter-spacing: -0.0275rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .footer__col-title {
+    font-family: "InterTight", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0225rem;
+    font-weight: 700;
+    line-height: 1;
   }
 }
 .footer__list {
@@ -1453,7 +1486,6 @@ img {
   .footer__list {
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 2.5rem;
   }
 }
 @media (min-width: 767.98px) {
@@ -1480,6 +1512,12 @@ img {
     opacity: 0.7;
   }
 }
+@media (min-width: 1919.98px) {
+  .footer__link {
+    font-size: 1.125rem;
+    letter-spacing: -0.01em;
+  }
+}
 .footer__contacts {
   display: flex;
   flex-direction: column;
@@ -1494,13 +1532,12 @@ img {
   .footer__contacts {
     flex: 1 1 0;
     min-width: 0;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 .footer__phone-block {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
 }
 @media (min-width: 767.98px) {
   .footer__phone-block {
@@ -1539,6 +1576,16 @@ img {
     opacity: 0.7;
   }
 }
+@media (min-width: 1919.98px) {
+  .footer__phone {
+    font-family: "ActayWide", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+}
 .footer__hours {
   font-family: "InterTight", sans-serif;
   font-size: 1.125rem;
@@ -1572,6 +1619,16 @@ img {
     opacity: 0.7;
   }
 }
+@media (min-width: 1919.98px) {
+  .footer__address {
+    font-family: "ActayWide", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+}
 .footer__callback {
   align-self: flex-start;
   width: auto;
@@ -1588,6 +1645,15 @@ img {
   line-height: 1.2;
   letter-spacing: -0.0175rem;
   color: #8A8A8A;
+}
+@media (min-width: 1919.98px) {
+  .footer__copyright {
+    font-family: "InterTight", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0225rem;
+  }
 }
 .footer__copyright--brand {
   display: none;
@@ -1610,8 +1676,9 @@ img {
   inset: auto 0 0;
   z-index: 7;
   display: none;
-  padding: 1.25rem 0;
+  padding: 0.75rem 0;
   background: #222222;
+  min-height: 4.8125rem;
 }
 .cookies.is-visible {
   display: block;
@@ -1687,6 +1754,13 @@ img {
   font-size: 1.125rem;
   line-height: 1;
   letter-spacing: -0.0225rem;
+}
+@media (min-width: 1919.98px) {
+  .btn.btn--medium.footer__callback {
+    padding: 1.9375rem 3.25rem;
+    font-size: 1.375rem;
+    letter-spacing: -0.0275rem;
+  }
 }
 .btn {
   display: inline-flex;
@@ -2531,14 +2605,45 @@ textarea.form-control {
   isolation: isolate;
   overflow: hidden;
   background-color: #F4F4F6;
-  background-image: url("../img/decor/dark-pattern.svg");
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-size: auto;
+  background-image: url("../img/decor/vacancy-card-light.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.vacancy-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../img/decor/vacancy-card-texture.webp");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.vacancy-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 3.125rem;
+  background-image: url("../img/decor/vacancy-dotts.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 35.875rem 3.125rem;
+  pointer-events: none;
 }
 @media (min-width: 767.98px) {
   .vacancy-card {
     min-height: 19.625rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .vacancy-card {
+    min-height: 21.625rem;
   }
 }
 .vacancy-card__badge {
@@ -2566,6 +2671,12 @@ textarea.form-control {
     clip-path: polygon(0 0, 100% 0, calc(100% - 3.625rem) 100%, 0 100%);
   }
 }
+@media (min-width: 1919.98px) {
+  .vacancy-card__badge {
+    padding: 1.25rem 1.875rem;
+    padding-right: 5.5rem;
+  }
+}
 .vacancy-card__body {
   position: relative;
   z-index: 1;
@@ -2580,6 +2691,11 @@ textarea.form-control {
     padding-right: 12.5rem;
   }
 }
+@media (min-width: 1919.98px) {
+  .vacancy-card__body {
+    padding: 1.875rem;
+  }
+}
 .vacancy-card__title {
   font-family: "ActayWide", sans-serif;
   font-size: 1.375rem;
@@ -2588,6 +2704,16 @@ textarea.form-control {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #222222;
+}
+@media (min-width: 1919.98px) {
+  .vacancy-card__title {
+    font-family: "ActayWide", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
 }
 .vacancy-card__duties {
   display: flex;
@@ -2618,6 +2744,15 @@ textarea.form-control {
   border-radius: 50%;
   background: #FC373D;
 }
+@media (min-width: 1919.98px) {
+  .vacancy-card__duty {
+    font-family: "InterTight", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0225rem;
+  }
+}
 .vacancy-card__media {
   display: none;
 }
@@ -2633,6 +2768,13 @@ textarea.form-control {
     pointer-events: none;
   }
 }
+@media (min-width: 1919.98px) {
+  .vacancy-card__media {
+    width: 14.8125rem;
+    height: 100%;
+    overflow: hidden;
+  }
+}
 .vacancy-card__img {
   display: block;
   width: 100%;
@@ -2640,8 +2782,17 @@ textarea.form-control {
   object-fit: contain;
   object-position: bottom right;
 }
+@media (min-width: 1919.98px) {
+  .vacancy-card__img {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 100%;
+    max-width: none;
+    object-fit: contain;
+  }
+}
 .vacancy-card__apply {
-  position: relative;
   z-index: 2;
   display: flex;
   align-items: stretch;
@@ -2660,6 +2811,13 @@ textarea.form-control {
     min-height: 4.375rem;
   }
 }
+@media (min-width: 1919.98px) {
+  .vacancy-card__apply {
+    padding: 0 0 0 1.875rem;
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+  }
+}
 .vacancy-card__apply:focus-visible {
   outline: 2px solid #FC373D;
   outline-offset: 0.125rem;
@@ -2671,22 +2829,36 @@ textarea.form-control {
 }
 .vacancy-card__apply::before {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+  right: -1px;
+  bottom: -1px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 6.75rem;
+  justify-content: flex-start;
+  width: 3.125rem;
   height: 3.125rem;
-  padding-left: 3.625rem;
-  background: #fff;
   color: #FC373D;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1;
-  clip-path: polygon(3.625rem 0, 100% 0, 100% 100%, 0 100%);
+}
+.vacancy-card__apply::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #fff;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 50'%3E%3Cpolygon points='58,0 108,0 108,50 0,50' fill='%23fff'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-position: right -0.0625rem bottom -0.0625rem;
+  mask-size: 6.75rem 3.125rem;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 50'%3E%3Cpolygon points='58,0 108,0 108,50 0,50' fill='%23fff'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: right -0.0625rem bottom -0.0625rem;
+  -webkit-mask-size: 6.75rem 3.125rem;
 }
 .vacancy-card__apply-text {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   padding-bottom: 1.375rem;
@@ -2696,6 +2868,11 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .vacancy-card__apply-text {
     padding-bottom: 0.75rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .vacancy-card__apply-text {
+    padding-bottom: 0.5rem;
   }
 }
 .vacancy-card__apply-text--full {

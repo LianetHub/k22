@@ -42,6 +42,15 @@
 		letter-spacing: rem(-0.36);
 	}
 
+	// .footer__callback.btn--medium
+	&.btn--medium.footer__callback {
+		@media (min-width: $md0) {
+			padding: rem(31) 3.25rem;
+			font-size: 1.375rem;
+			letter-spacing: -0.0275rem;
+		}
+	}
+
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
