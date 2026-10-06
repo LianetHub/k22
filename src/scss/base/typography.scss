@@ -12,5 +12,10 @@
 }
 
 .title-lg {
-    @include desktop-heading-h1;
+    @include desktop-heading-h2;
+
+    @media (min-width:$md0) {
+        @include desktop-heading-h1;
+
+    }
 }

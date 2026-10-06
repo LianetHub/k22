@@ -13,10 +13,15 @@
 		display: none;
 		padding: 0.625rem 0;
 		color: $color-bg-secondary;
-		background: url("@img/banner-bg.webp") 0 center / cover no-repeat, $color-text-primary;
+		background: url("@img/banner-bg.webp") 31% 0% / cover no-repeat, $color-text-primary;
 
 		@media (min-width: $md2) {
 			display: block;
+		}
+
+		@media (min-width:$md0) {
+			background: url("@img/banner-bg.webp") 0 center / cover no-repeat, $color-text-primary;
+
 		}
 	}
 
@@ -588,7 +593,7 @@
 		}
 
 		@media (min-width: $md0) {
-			width: rem(1464);
+			width: rem(1468);
 		}
 	}
 

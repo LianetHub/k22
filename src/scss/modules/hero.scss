@@ -13,7 +13,12 @@
         @media (min-width: $md4) {
             background-size: cover;
             background-image: url("@img/hero/home.webp");
+            background-position: right 10%;
+        }
+
+        @media (min-width:$md0) {
             background-position: right 0;
+
         }
 
 
@@ -281,10 +286,16 @@
     position: relative;
     z-index: 1;
 
-    .page > & {
-        margin-top: rem(-70);
+    .page>& {
         margin-bottom: 0;
+        margin-top: rem(-53);
+
+        @media (min-width:$md0) {
+            margin-top: rem(-70);
+
+        }
     }
+
     min-height: rem(770);
     display: flex;
     flex-direction: column;
@@ -299,7 +310,7 @@
     }
 
     @media (min-width: $md1) {
-        min-height: rem(700);
+        min-height: rem(620);
     }
 
     @media (min-width: $md0) {
@@ -337,9 +348,14 @@
     // .hero__offer
     &__offer {
         width: 100%;
-        max-width: rem(947);
         padding-top: rem(20);
         align-self: center;
+        max-width: rem(680);
+
+        @media (min-width:$md0) {
+            max-width: rem(947);
+
+        }
     }
 
     // .hero__copy
@@ -395,13 +411,18 @@
 
         @media (min-width: $md4) {
             margin-top: rem(20);
-            @include mobile-heading-h1;
+            @include desktop-heading-h3;
 
             &::before {
                 font-size: rem(24);
                 width: rem(24);
                 height: rem(24);
             }
+        }
+
+        @media (min-width:$md0) {
+            @include mobile-heading-h1;
+
         }
     }
 
