@@ -21,11 +21,6 @@
 			}
 		}
 
-		.contacts__title.decor-line-block {
-			@media (min-width: $md4) {
-				padding-top: rem(44);
-			}
-		}
 
 		.contacts__map-block {
 			border-radius: 0;
@@ -576,6 +571,7 @@
 
 	// .contacts__map-block
 	&__map-block {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -793,7 +789,6 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: rem(10);
 			flex: 0 0 auto;
 			align-self: stretch;
 		}
@@ -802,44 +797,71 @@
 	// .contacts__brand-logo
 	&__brand-logo {
 		display: block;
-		width: rem(284);
-		height: auto;
+		width: rem(520);
+		height: rem(234);
 		flex-shrink: 0;
 	}
 
-	// .contacts__brand-lines
-	&__brand-lines {
-		position: relative;
-		flex-shrink: 0;
-		align-self: stretch;
-		width: rem(108);
-		overflow: hidden;
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 70%;
-			background: rgba($color-bg-primary, 0.08);
-			transform: skewX(-18deg);
-		}
-
-		&::before {
-			left: 0;
-			box-shadow: rem(16) 0 0 rgba($color-bg-primary, 0.08);
-		}
-
-		&::after {
-			left: rem(32);
-			opacity: 0.7;
-		}
+	// .contacts__balloons
+	&__balloons {
+		position: absolute;
+		inset: 0;
+		z-index: $ui-index-3;
+		pointer-events: none;
 	}
 
-	// .contacts__brand-lines--flip
-	&__brand-lines--flip {
-		transform: scaleX(-1);
+	// .contacts__balloon
+	&__balloon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(30);
+		width: max-content;
+		max-width: calc(100% - #{rem(32)});
+		padding: rem(30);
+		background: $color-bg-elevated;
+		pointer-events: auto;
+		transform: translate(-50%, -100%);
+
+		// .contacts__balloon.is-open
+		&.is-open {
+			display: flex;
+		}
+
+		.contacts__place-title {
+			@include desktop-heading-h3;
+			white-space: nowrap;
+		}
+
+		.contacts__phone,
+		.contacts__hours {
+			white-space: nowrap;
+		}
+
+		.contacts__phone {
+			font-size: rem(22);
+			line-height: 1;
+			letter-spacing: rem(-0.44);
+		}
+
+		.contacts__hours {
+			font-size: rem(18);
+			line-height: math.div(22, 18);
+			letter-spacing: rem(-0.36);
+		}
+
+		.contacts__route-label {
+			font-size: rem(16);
+			line-height: math.div(21, 16);
+			letter-spacing: rem(-0.32);
+		}
+
+		.contacts__route-app {
+			border-radius: rem(6);
+		}
 	}
 
 	// .contacts__switch
@@ -1013,6 +1035,7 @@
 			}
 		}
 	}
+
 
 
 }

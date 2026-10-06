@@ -210,7 +210,7 @@
 	// blog-card__img
 	&__img {
 		position: absolute;
-		inset: 0;
+		inset: 1px;
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -237,7 +237,7 @@
 		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(28)}) 100%, 0 100%);
 
 		@media (min-width: $md4) {
-			padding: rem(14) rem(48) rem(20) rem(20);
+			padding: rem(0) rem(54) rem(16) rem(0);
 			font-size: rem(14);
 			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(34)}) 100%, 0 100%);
 		}
@@ -325,7 +325,7 @@
 		background: $color-bg-primary;
 
 		@media (min-width: $md4) {
-			padding: rem(30);
+			padding: rem(24);
 		}
 	}
 
@@ -336,7 +336,7 @@
 		gap: rem(10);
 
 		@media (min-width: $md4) {
-			gap: rem(20);
+			gap: rem(8);
 		}
 	}
 
@@ -380,5 +380,9 @@
 	// blog-card__link
 	&__link {
 		align-self: flex-start;
+
+		&.more-link {
+			padding-bottom: 0.5rem;
+		}
 	}
 }

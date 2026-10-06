@@ -119,19 +119,100 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			fitMap();
 
+			const mapBlock = mapContainer.closest(".contacts__map-block");
+			const balloons = mapBlock ? Array.from(mapBlock.querySelectorAll(".contacts__balloon")) : [];
+			let openedMarker = "";
+			let skipMapClick = false;
+			let syncOpenBalloon = () => {};
+
+			if (balloons.length && mapBlock) {
+				const closeBalloons = () => {
+					openedMarker = "";
+					balloons.forEach((balloon) => {
+						balloon.classList.remove("is-open");
+					});
+				};
+
+				const placeBalloon = (balloon, coords) => {
+					const projection = map.options.get && map.options.get("projection");
+					if (!projection || typeof projection.toGlobalPixels !== "function") return;
+					if (!map.converter || typeof map.converter.globalToPage !== "function" || typeof map.getZoom !== "function") return;
+
+					const pagePixels = map.converter.globalToPage(projection.toGlobalPixels(coords, map.getZoom()));
+					if (!pagePixels) return;
+
+					const blockRect = mapBlock.getBoundingClientRect();
+					const icon = getIconParams();
+					balloon.style.left = `${pagePixels[0] - blockRect.left}px`;
+					balloon.style.top = `${pagePixels[1] - blockRect.top + icon.offset[1]}px`;
+				};
+
+				syncOpenBalloon = () => {
+					if (!openedMarker) return;
+
+					const balloon = balloons.find((item) => item.dataset.marker === openedMarker);
+					const marker = markers.find((item) => item.title === openedMarker);
+					if (!balloon || !marker) return;
+
+					placeBalloon(balloon, marker.coords);
+				};
+
+				placemarks.forEach((placemark, index) => {
+					const marker = markers[index];
+					if (!marker || !placemark.events || typeof placemark.events.add !== "function") return;
+
+					placemark.events.add("click", (event) => {
+						if (event && typeof event.stopPropagation === "function") {
+							event.stopPropagation();
+						}
+
+						skipMapClick = true;
+						queueMicrotask(() => {
+							skipMapClick = false;
+						});
+
+						const balloon = balloons.find((item) => item.dataset.marker === marker.title);
+						if (!balloon) {
+							closeBalloons();
+							return;
+						}
+
+						const willOpen = openedMarker !== marker.title;
+						closeBalloons();
+
+						if (willOpen) {
+							openedMarker = marker.title;
+							balloon.classList.add("is-open");
+							placeBalloon(balloon, marker.coords);
+						}
+					});
+				});
+
+				if (map.events && typeof map.events.add === "function") {
+					map.events.add("click", () => {
+						if (skipMapClick) return;
+						closeBalloons();
+					});
+
+					map.events.add("boundschange", syncOpenBalloon);
+				}
+			}
+
 			let resizeTimer = null;
 			window.addEventListener("resize", () => {
 				clearTimeout(resizeTimer);
 				resizeTimer = setTimeout(() => {
 					fitMap();
-					if (!iconPath) return;
-					const nextParams = getIconParams();
-					placemarks.forEach((placemark) => {
-						placemark.options.set({
-							iconImageSize: nextParams.size,
-							iconImageOffset: nextParams.offset,
+					if (iconPath) {
+						const nextParams = getIconParams();
+						placemarks.forEach((placemark) => {
+							placemark.options.set({
+								iconImageSize: nextParams.size,
+								iconImageOffset: nextParams.offset,
+							});
 						});
-					});
+					}
+					syncOpenBalloon();
 				}, 150);
 			});
 		};

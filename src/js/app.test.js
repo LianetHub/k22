@@ -175,6 +175,24 @@ function boot(body = "", options = {}) {
 					this.panes = {
 						get: (name) => (name === "ground" ? { getElement: () => this.groundElement } : null),
 					};
+					this.projection = {
+						toGlobalPixels: (coords) => coords,
+					};
+					opts.get = (key) => (key === "projection" ? this.projection : undefined);
+					this.getZoom = () => opts.zoom;
+					this.pagePoint = [120, 80];
+					this.converter = {
+						globalToPage: () => this.pagePoint,
+					};
+					this.listenerMap = {};
+					this.events = {
+						add: (name, cb) => {
+							(this.listenerMap[name] ||= []).push(cb);
+						},
+					};
+					this.fire = (name, event) => {
+						(this.listenerMap[name] || []).forEach((cb) => cb(event || {}));
+					};
 					maps.push(this);
 				}
 				setBounds(bounds, opts) {
@@ -188,6 +206,15 @@ function boot(body = "", options = {}) {
 					this.createdWith = opts;
 					this.optionSets = [];
 					this.options = { set: (value) => this.optionSets.push(value) };
+					this.listenerMap = {};
+					this.events = {
+						add: (name, cb) => {
+							(this.listenerMap[name] ||= []).push(cb);
+						},
+					};
+					this.fire = (name, event) => {
+						(this.listenerMap[name] || []).forEach((cb) => cb(event || {}));
+					};
 					placemarks.push(this);
 				}
 			},
@@ -1026,6 +1053,73 @@ describe("Яндекс.Карта", () => {
 		ctx.observers[0].intersect();
 		ctx.observers[0].intersect();
 		expect(ctx.maps.length).toBeGreaterThanOrEqual(1);
+		expect(ctx.errors).toEqual([]);
+	});
+
+	it("без балунов в разметке клик по метке не нужен и карта не падает", () => {
+		const ctx = boot(mapFixture(), { withYmaps: true });
+		ctx.observers[0].intersect();
+
+		expect(ctx.placemarks[0].listenerMap.click).toBeUndefined();
+		expect(ctx.maps[0].listenerMap.click).toBeUndefined();
+		expect(ctx.errors).toEqual([]);
+	});
+
+	it("клик по метке открывает свой балун, повторный и клик по карте закрывают", async () => {
+		const ctx = boot(
+			`<div class="contacts__map-block">${mapFixture()}<div class="contacts__balloons"><div class="contacts__balloon" data-marker="Кузнецовская, 52к13"></div><div class="contacts__balloon" data-marker="Лужская, 3к2б"></div></div></div>`,
+			{ withYmaps: true, width: 1440 },
+		);
+		ctx.observers[0].intersect();
+
+		const stop = vi.fn();
+		const first = ctx.$('[data-marker="Кузнецовская, 52к13"]');
+		const second = ctx.$('[data-marker="Лужская, 3к2б"]');
+
+		ctx.placemarks[0].fire("click", { stopPropagation: stop });
+		expect(stop).toHaveBeenCalledOnce();
+		expect(first.classList.contains("is-open")).toBe(true);
+		expect(second.classList.contains("is-open")).toBe(false);
+		expect(first.style.left).toBe("120px");
+		expect(first.style.top).toBe("22px");
+
+		ctx.maps[0].fire("click");
+		expect(first.classList.contains("is-open")).toBe(true);
+
+		ctx.placemarks[1].fire("click", { stopPropagation() {} });
+		expect(first.classList.contains("is-open")).toBe(false);
+		expect(second.classList.contains("is-open")).toBe(true);
+
+		ctx.placemarks[1].fire("click", { stopPropagation() {} });
+		expect(second.classList.contains("is-open")).toBe(false);
+
+		ctx.placemarks[0].fire("click", { stopPropagation() {} });
+		await Promise.resolve();
+		ctx.maps[0].fire("click");
+		expect(first.classList.contains("is-open")).toBe(false);
+		expect(ctx.errors).toEqual([]);
+	});
+
+	it("балун переезжает при сдвиге карты и при ресайзе", () => {
+		vi.useFakeTimers();
+		const ctx = boot(
+			`<div class="contacts__map-block">${mapFixture()}<div class="contacts__balloon" data-marker="Кузнецовская, 52к13"></div></div>`,
+			{ withYmaps: true, width: 1440 },
+		);
+		ctx.observers[0].intersect();
+
+		const balloon = ctx.$('[data-marker="Кузнецовская, 52к13"]');
+		ctx.placemarks[0].fire("click", { stopPropagation() {} });
+
+		ctx.maps[0].pagePoint = [200, 90];
+		ctx.maps[0].fire("boundschange");
+		expect(balloon.style.left).toBe("200px");
+		expect(balloon.style.top).toBe("32px");
+
+		ctx.setWidth(375);
+		vi.advanceTimersByTime(200);
+		expect(balloon.style.left).toBe("200px");
+		expect(balloon.style.top).toBe("49px");
 		expect(ctx.errors).toEqual([]);
 	});
 });

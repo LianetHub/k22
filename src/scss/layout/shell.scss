@@ -123,7 +123,8 @@ img {
 	}
 }
 
-.decor-line-block {
+.decor-line-block,
+.decor-line-block-alternate {
 	padding-top: rem(34);
 	position: relative;
 
@@ -135,5 +136,17 @@ img {
 		width: rem(79);
 		height: rem(4);
 		background: url("@img/decor/line.svg") 0 0 / rem(79) rem(4) no-repeat;
+	}
+}
+
+.decor-line-block {
+	&::before {
+		background: url("@img/decor/line.svg") 0 0 / rem(79) rem(4) no-repeat;
+	}
+}
+
+.decor-line-block-alternate {
+	&::before {
+		background: url("@img/decor/line-alternate.svg") 0 0 / rem(79) rem(4) no-repeat;
 	}
 }

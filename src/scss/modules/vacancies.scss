@@ -1,12 +1,9 @@
 @use "../abstracts" as *;
 
 .vacancies {
-	@include section-margin($space-60);
+
 	background: $color-bg-secondary;
 
-	@media (min-width: $md4) {
-		@include section-margin($space-80);
-	}
 
 	// vacancies__container
 	&__container {

@@ -2,6 +2,7 @@
 @use "abstracts" as *;
 
 .callback {
+
 	// .callback--secondary
 	&.callback--secondary {
 		background: $color-bg-secondary;
@@ -142,9 +143,6 @@
 			order: 0;
 		}
 
-		&.decor-line-block {
-			padding-top: rem(44);
-		}
 	}
 
 	// .callback__heading
@@ -236,6 +234,7 @@
 
 	// .callback__call
 	&__call {
+
 		// .callback__call--form
 		&.callback__call--form {
 			align-items: flex-start;

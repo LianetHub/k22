@@ -179,20 +179,20 @@
 				@@include('./html/sections/_contacts.html')
 				<section class="blog">
 					<div class="blog__container container">
-						<div class="blog__head">
-							<h2 class="blog__title title decor-line-block">
-								Популярные
+						<div class="blog__header">
+							<h2 class="blog__title title decor-line-block-alternate">
+								Популярные <br>
 								<span class="color-primary">статьи и видео</span>
 							</h2>
+							<div class="blog__nav">
+								<button type="button" class="blog__prev swiper-button-prev icon-prev" aria-label="Назад"></button>
+								<button type="button" class="blog__next swiper-button-next icon-next" aria-label="Далее"></button>
+							</div>
 						</div>
 						<div class="blog__slider swiper">
 							<ul class="swiper-wrapper">
 								@@loop('./html/templates/_blog-card.html', './html/json/blog.json')
 							</ul>
-						</div>
-						<div class="blog__nav">
-							<button type="button" class="blog__prev swiper-button-prev icon-prev" aria-label="Назад"></button>
-							<button type="button" class="blog__next swiper-button-next icon-next" aria-label="Далее"></button>
 						</div>
 						<a href="blog.html" class="blog__more btn btn--primary">Смотреть все</a>
 					</div>
@@ -200,7 +200,7 @@
 				<section class="vacancies">
 					<div class="vacancies__container container">
 						<h2 class="vacancies__title title decor-line-block">
-							<span class="color-primary">Стань частью</span>
+							<span class="color-primary">Стань частью</span> <br>
 							Нашей команды
 						</h2>
 						<ul class="vacancies__grid">

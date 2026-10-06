@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .blog {
+
 	// blog--related
 	&.blog--related {
 		@include section-margin($space-60);
@@ -22,7 +23,7 @@
 				grid-template-columns: repeat(4, 1fr);
 			}
 
-			> li {
+			>li {
 				display: flex;
 				min-width: 0;
 				min-height: 0;
@@ -45,7 +46,7 @@
 
 	// blog--page
 	&.blog--page {
-		.page > &:first-child {
+		.page>&:first-child {
 			margin-top: $space-40;
 
 			@media (min-width: $md4) {
@@ -88,14 +89,14 @@
 	}
 
 	// blog__container
-	&__container {
-		display: flex;
-		flex-direction: column;
-		gap: rem(24);
+	&__container {}
 
-		@media (min-width: $md4) {
-			gap: rem(40);
-		}
+	// .blog__header
+	&__header {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: rem(20);
 	}
 
 	// blog__head
@@ -248,8 +249,9 @@
 
 	// blog__slider
 	&__slider {
+		margin-top: 1.5rem;
 		width: 100%;
-		overflow: hidden;
+		overflow: visible;
 
 		.swiper-slide {
 			height: auto;
@@ -338,8 +340,8 @@
 
 	// первая пара horizontal: зазор ряда 10px, без верхней добавки
 	&__item--tall,
-	&__item--tall + &__item--wide,
-	&__item--wide + &__item--wide {
+	&__item--tall+&__item--wide,
+	&__item--wide+&__item--wide {
 		@media (min-width: $md2) {
 			margin-top: 0;
 		}
@@ -376,6 +378,7 @@
 
 	// blog__more
 	&__more {
+		margin-top: 2.5rem;
 		width: 100%;
 
 		@media (min-width: $md4) {
@@ -384,65 +387,5 @@
 		}
 	}
 
-	// blog:has(.blog__slider)
-	&:has(.blog__slider) {
-		.page > & {
-			@include section-margin($space-60);
 
-			@media (min-width: $md4) {
-				@include section-margin($space-80);
-			}
-		}
-
-		.blog__container {
-			display: grid;
-			gap: rem(40);
-			grid-template-columns: 1fr;
-			grid-template-areas:
-				"head"
-				"slider"
-				"nav"
-				"more";
-
-			@media (min-width: $md4) {
-				grid-template-columns: 1fr auto;
-				grid-template-areas:
-					"head nav"
-					"slider slider"
-					"more more";
-			}
-		}
-
-		.blog__head {
-			grid-area: head;
-		}
-
-		.blog__title {
-			display: flex;
-			flex-direction: column;
-			gap: rem(10);
-			padding-top: rem(44);
-
-			@media (min-width: $md4) {
-				@include tablet-heading-h1;
-			}
-
-			@media (min-width: $md1) {
-				gap: rem(26);
-				@include desktop-heading-h2;
-			}
-		}
-
-		.blog__slider {
-			grid-area: slider;
-		}
-
-		.blog__nav {
-			grid-area: nav;
-		}
-
-		.blog__more {
-			grid-area: more;
-		}
-	}
 }
