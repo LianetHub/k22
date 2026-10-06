@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-%result-trim {}
+
 
 .result {
 	&:has(.result__main) {
@@ -33,26 +33,6 @@
 
 			&::after {
 				background-image: url("@img/result/moto-smoke.webp");
-			}
-
-			// .result__title
-			.result__title {
-				@media (min-width: $md4) {
-					max-width: rem(339);
-					margin-bottom: rem(40);
-				}
-
-				@media (min-width: $md1) {
-					max-width: rem(687);
-					margin-bottom: 0;
-				}
-			}
-
-			// .result__main
-			.result__main {
-				@media (min-width: $md0) {
-					max-width: rem(757);
-				}
 			}
 
 			// .result__note
@@ -180,7 +160,7 @@
 		@media (min-width: $md1) {
 			display: flex;
 			flex-direction: column;
-			gap: rem(40);
+			gap: rem(30);
 			width: 100%;
 			max-width: rem(757);
 			min-width: 0;
@@ -191,22 +171,8 @@
 	&__title {
 		order: 1;
 		width: 100%;
-		margin-bottom: rem(170);
-		color: $color-bg-secondary;
-		@extend %result-trim;
 
-		@media (min-width: $md4) {
-			@include tablet-heading-h1;
-			max-width: rem(539);
-			margin-bottom: rem(280);
-		}
 
-		@media (min-width: $md1) {
-			@include desktop-heading-h2;
-			max-width: rem(687);
-			margin-bottom: 0;
-			padding-top: rem(44);
-		}
 	}
 
 	// .result__metrics
@@ -263,7 +229,7 @@
 			align-items: stretch;
 			flex: 0 0 auto;
 			min-width: 0;
-			margin-right: rem(-60);
+			margin-right: rem(-58);
 		}
 	}
 
@@ -290,12 +256,13 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			gap: rem(20);
-			flex: 0 0 rem(471);
-			width: rem(471);
+			gap: rem(10);
+			flex: 0 0 rem(529);
+			width: rem(529);
 			min-width: 0;
-			padding: rem(20) rem(30);
+			padding: rem(20) rem(88) rem(20) rem(30);
 			background: $color-text-primary;
+			clip-path: polygon(0 0, calc(100% - #{rem(58)}) 0, 100% 100%, 0 100%);
 		}
 
 		@media (min-width: $md1) {
@@ -312,15 +279,17 @@
 		flex: 0 0 auto;
 		width: auto;
 		min-width: 0;
-		padding: rem(10);
+		padding: rem(10) rem(10) rem(10) rem(50);
 		text-align: center;
 		background: $color-bg-elevated;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(40)} 100%);
 
 		@media (min-width: $md4) {
 			flex: 1 1 auto;
-			gap: rem(20);
+
 			width: auto;
-			padding: rem(20) rem(30);
+			padding: rem(20) rem(30) rem(20) rem(88);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
 		}
 
 		@media (min-width: $md1) {
@@ -360,41 +329,6 @@
 		}
 	}
 
-	// .result__tail
-	&__tail {
-		display: none;
-		flex: 0 0 rem(58);
-		width: rem(58);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 100% 100%;
-
-		@media (min-width: $md4) {
-			display: block;
-		}
-	}
-
-	// .result__tail--main
-	&__tail--main {
-		background-image: url("@img/result/tail-left.svg");
-		transform: scaleY(-1) rotate(180deg);
-	}
-
-	// .result__tail--gain
-	&__tail--gain {
-		display: block;
-		flex-basis: rem(40);
-		width: rem(40);
-		background-image: url("@img/result/tail-right.svg");
-		background-size: 100% 100%;
-		transform: scaleY(-1);
-
-		@media (min-width: $md4) {
-			flex-basis: rem(58);
-			width: rem(58);
-		}
-	}
-
 	// .result__label
 	&__label {
 		grid-area: label;
@@ -403,7 +337,7 @@
 		gap: rem(6);
 		min-width: 0;
 		padding-left: rem(20);
-		@extend %result-trim;
+
 		@include desktop-body-m;
 		color: $color-bg-primary;
 
@@ -461,7 +395,6 @@
 		display: flex;
 		flex-direction: column;
 		flex: 0 0 auto;
-		gap: rem(10);
 		min-width: 0;
 	}
 
@@ -481,17 +414,19 @@
 
 	// .result__num
 	&__num {
-		@extend %result-trim;
+
 		@include mobile-heading-h1;
 
 		@media (min-width: $md1) {
 			@include desktop-heading-h2;
 		}
+
+		line-height: 1;
 	}
 
 	// .result__unit
 	&__unit {
-		@extend %result-trim;
+
 		@include desktop-body-m;
 		color: $color-bg-primary;
 		opacity: 0.4;
@@ -511,7 +446,7 @@
 
 	// .result__caption
 	&__caption {
-		@extend %result-trim;
+
 		font-family: $font-inter;
 		font-size: rem(22);
 		font-weight: 400;
@@ -545,7 +480,7 @@
 		order: 4;
 		width: 100%;
 		margin-bottom: rem(10);
-		@extend %result-trim;
+
 		padding: rem(16);
 		background: $color-bg-elevated;
 		color: rgba($color-bg-primary, 0.7);
@@ -600,7 +535,7 @@
 
 	// .result__guarantee-title
 	&__guarantee-title {
-		@extend %result-trim;
+
 		color: $color-bg-primary;
 		@include desktop-heading-h4;
 
@@ -611,7 +546,7 @@
 
 	// .result__guarantee-lead
 	&__guarantee-lead {
-		@extend %result-trim;
+
 		@include desktop-body-m;
 		color: $color-bg-primary;
 
@@ -638,7 +573,7 @@
 		align-self: flex-start;
 		width: 100%;
 		margin-bottom: rem(30);
-		@extend %result-trim;
+
 		font-size: rem(14);
 		font-weight: 700;
 		line-height: 1.2;

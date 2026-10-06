@@ -10,7 +10,7 @@
 		}
 
 		@media (min-width: $md0) {
-			padding: rem(100) 0;
+			padding: rem(100) 0 rem(100);
 		}
 	}
 
@@ -26,7 +26,7 @@
 	&__header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 	}
 
 	// .brands-power__form
@@ -46,6 +46,7 @@
 			justify-self: end;
 			width: rem(320);
 			margin-top: 0;
+			margin-bottom: 1rem;
 		}
 
 		@media (min-width: $md0) {
@@ -166,6 +167,6 @@
 
 	// .brands-power__more
 	&__more {
-		margin-top: 2rem;
+		margin-top: 4rem;
 	}
 }

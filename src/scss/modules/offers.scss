@@ -1,12 +1,13 @@
 @use "../abstracts" as *;
 
 .offers {
+
 	// .offers--muted
 	&.offers--muted {
 		background-color: $color-bg-secondary;
 	}
 
-	.page > & {
+	.page>& {
 		padding-block: rem(20);
 
 		@media (min-width: $md1) {
@@ -49,16 +50,11 @@
 }
 
 .offer {
+
 	// .offer--promo
 	&.offer--promo {
 		padding-block: rem(50);
 
-		.offer__badge {
-			right: 0;
-			left: auto;
-			padding: rem(10) rem(20) rem(12) rem(78);
-			clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
-		}
 
 		@media (min-width: $md4) {
 			padding-block: rem(30);
@@ -71,19 +67,11 @@
 			background-position: left center;
 
 			&::before {
-				background: linear-gradient(
-					90deg,
-					rgba($color-bg-elevated, 0) 26%,
-					$color-bg-elevated 100%
-				);
+				background: linear-gradient(90deg,
+						rgba($color-bg-elevated, 0) 26%,
+						$color-bg-elevated 100%);
 			}
 
-			.offer__badge {
-				right: auto;
-				left: 0;
-				padding: rem(10) rem(78) rem(12) rem(20);
-				clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
-			}
 
 			.offer__content {
 				align-items: flex-end;
@@ -98,9 +86,7 @@
 			gap: rem(50);
 			padding: rem(40) rem(50) rem(40) rem(600);
 
-			.offer__title {
-				width: rem(700);
-			}
+
 		}
 	}
 
@@ -151,11 +137,9 @@
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
-		background: linear-gradient(
-			90deg,
-			$color-bg-elevated 33%,
-			rgba($color-bg-elevated, 0) 68%
-		);
+		background: linear-gradient(90deg,
+				$color-bg-elevated 33%,
+				rgba($color-bg-elevated, 0) 68%);
 	}
 
 	// .offer__badge
@@ -167,7 +151,7 @@
 		display: inline-flex;
 		align-items: center;
 		height: rem(50);
-		padding: rem(10) rem(78) rem(12) rem(20);
+		padding: rem(10) rem(70) rem(12) rem(20);
 		background-color: $color-accent-primary;
 		color: $color-bg-primary;
 		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);

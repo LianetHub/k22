@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .portfolio-card {
+
 	// .portfolio-card--page
 	&.portfolio-card--page {
 		.portfolio-card__body {
@@ -35,6 +36,11 @@
 	justify-content: flex-end;
 	height: rem(340);
 	overflow: hidden;
+
+	&:focus-visible {
+		outline: 2px solid $color-accent-primary;
+		outline-offset: rem(-2);
+	}
 
 	&::after {
 		content: '';
@@ -172,7 +178,7 @@
 		align-items: center;
 		gap: rem(10);
 		min-width: 0;
-		padding: rem(6) rem(12);
+		padding: rem(2) rem(12);
 		background: $color-bg-primary;
 
 		@media (min-width: $md4) {
@@ -212,20 +218,6 @@
 		@media (min-width: $md4) {
 			font-size: rem(16);
 			letter-spacing: rem(-0.32);
-		}
-	}
-
-	// .portfolio-card__link
-	&__link {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		height: 100%;
-		color: inherit;
-
-		&:focus-visible {
-			outline: 2px solid $color-accent-primary;
-			outline-offset: rem(-2);
 		}
 	}
 

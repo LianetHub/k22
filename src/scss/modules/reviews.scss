@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .reviews {
+
 	// .reviews--trio
 	&.reviews--trio {
 		.reviews__grid {
@@ -14,7 +15,7 @@
 	max-width: 100%;
 	background: $color-bg-primary;
 
-	.page > & {
+	.page>& {
 		padding: rem(60) 0;
 
 		@media (min-width: $md5) {
@@ -29,7 +30,7 @@
 	// .reviews__container
 	&__container {
 		display: grid;
-		gap: rem(40);
+		gap: rem(30);
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			"title"
@@ -48,26 +49,12 @@
 
 	// .reviews__title
 	&__title {
-		// .reviews__title.decor-line-block
-		&.decor-line-block {
-			@media (min-width: $md0) {
-				padding-top: rem(44);
-			}
-		}
+
+
 
 		grid-area: title;
 
-		@media (min-width: $md5) {
-			@include tablet-heading-h1;
-		}
 
-		@media (min-width: $md4) {
-			@include tablet-heading-h1;
-		}
-
-		@media (min-width: $md1) {
-			@include desktop-heading-h2;
-		}
 	}
 
 	// .reviews__slider
@@ -109,6 +96,10 @@
 	// .reviews__more
 	&__more {
 		grid-area: more;
+
+		&.more-link {
+			padding-bottom: rem(10);
+		}
 	}
 
 	// .reviews__nav

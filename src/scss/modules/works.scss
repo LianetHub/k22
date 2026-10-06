@@ -1,18 +1,19 @@
 @use "../abstracts" as *;
 
 .works {
+	.page>& {
+		padding-top: rem(60);
+		padding-bottom: rem(60);
+
+		@media (min-width: $md4) {
+			padding-top: rem(100);
+			padding-bottom: rem(90);
+		}
+	}
 
 	// .works--related
 	&.works--related {
-		.page>& {
-			padding-top: rem(60);
-			padding-bottom: rem(60);
 
-			@media (min-width: $md4) {
-				padding-top: rem(100);
-				padding-bottom: rem(100);
-			}
-		}
 
 		// .works__container
 		.works__container {
