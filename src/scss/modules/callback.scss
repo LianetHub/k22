@@ -451,8 +451,27 @@
 		width: rem(60);
 		height: rem(60);
 		background: $color-bg-primary;
-		color: $color-accent-primary;
 		font-size: rem(20);
+
+		// .callback__social.icon-max
+		&.icon-max {
+			color: #8a38f5;
+		}
+
+		// .callback__social.icon-telegram
+		&.icon-telegram {
+			color: #41a0cf;
+		}
+
+		// .callback__social.icon-vk
+		&.icon-vk {
+			color: #554da3;
+		}
+
+		// .callback__social.icon-whatsapp
+		&.icon-whatsapp {
+			color: #28d565;
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

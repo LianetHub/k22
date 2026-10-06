@@ -45,7 +45,6 @@
 		@media (min-width: $md1) {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
 			flex: 0 0 auto;
 		}
 
@@ -66,6 +65,7 @@
 		order: 1;
 
 		@media (min-width: $md4) {
+			margin-top: 5.25rem;
 			flex-direction: row;
 			align-items: center;
 			gap: rem(10);
@@ -75,7 +75,7 @@
 			order: 0;
 			flex-direction: column;
 			align-items: flex-start;
-			gap: rem(20);
+			gap: rem(10);
 		}
 	}
 

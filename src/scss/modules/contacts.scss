@@ -2,9 +2,10 @@
 @use "../abstracts" as *;
 
 .contacts {
+
 	// .contacts--page
 	&.contacts--page {
-		.page > & {
+		.page>& {
 			@include section-inset($space-32, $space-60);
 
 			@media (min-width: $md4) {
@@ -269,7 +270,7 @@
 		background-image: url("@img/decor/light-pattern.svg");
 		background-repeat: repeat;
 
-		.page > & {
+		.page>& {
 			@include section-inset($space-60);
 
 			@media (min-width: $md4) {
@@ -518,7 +519,7 @@
 	background: $color-text-primary;
 	color: $color-bg-secondary;
 
-	.page > &:not(.contacts--page):not(.contacts--network) {
+	.page>&:not(.contacts--page):not(.contacts--network) {
 		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
@@ -537,7 +538,7 @@
 		gap: rem(30);
 
 		@media (min-width: $md4) {
-			gap: rem(40);
+			gap: rem(32);
 		}
 	}
 
@@ -549,20 +550,12 @@
 		max-width: rem(687);
 
 		@media (min-width: $md4) {
-			gap: rem(40);
+			gap: rem(18);
 		}
 	}
 
 	// .contacts__title
-	&__title {
-		color: $color-bg-secondary;
-
-		.contacts:not(.contacts--page):not(.contacts--network) & {
-			@media (min-width: $md4) {
-				padding-top: rem(44);
-			}
-		}
-	}
+	&__title {}
 
 	// .contacts__subtitle
 	&__subtitle {
@@ -592,7 +585,7 @@
 	// .contacts__map
 	&__map {
 		width: 100%;
-		height: rem(339);
+		height: 27.625rem;
 		background: $color-bg-secondary;
 
 		ymaps,

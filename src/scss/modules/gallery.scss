@@ -7,7 +7,7 @@
 		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
-			@include section-inset($space-80);
+			@include section-inset($space-100);
 		}
 	}
 
@@ -15,7 +15,7 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
+		gap: rem(32);
 
 		@media (min-width: $md3) {
 			padding-inline: rem(20);
@@ -34,9 +34,7 @@
 		min-width: 0;
 		max-width: 100%;
 
-		.swiper-slide {
-			height: auto;
-		}
+		overflow: visible;
 	}
 
 	// .gallery__slide
