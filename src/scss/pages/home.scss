@@ -12,10 +12,10 @@
 		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
-			@include section-inset($space-80);
+			@include section-inset($space-100);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			@include section-inset(rem(160), rem(145));
 		}
 	}
@@ -30,9 +30,11 @@
 	// .our-goal__content
 	&__content {
 		@media (min-width: $md1) {
-			width: 45%;
+			width: calc(50% - #{rem(20)});
 			margin-left: auto;
 		}
+
+
 	}
 
 	// .our-goal__title

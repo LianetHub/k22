@@ -13683,10 +13683,10 @@ textarea.form-control {
 @media (min-width: 767.98px) {
   .page > .our-goal {
     margin-block: 0;
-    padding-block: 5rem;
+    padding-block: 6.25rem;
   }
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1919.98px) {
   .page > .our-goal {
     margin-block: 0;
     padding-top: 10rem;
@@ -13699,7 +13699,7 @@ textarea.form-control {
 }
 @media (min-width: 1439.98px) {
   .our-goal__content {
-    width: 45%;
+    width: calc(50% - 1.25rem);
     margin-left: auto;
   }
 }
