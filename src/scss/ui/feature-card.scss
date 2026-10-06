@@ -2,6 +2,7 @@
 @use "../abstracts" as *;
 
 .feature-card {
+
 	// feature-card--plain
 	&.feature-card--plain {
 		gap: rem(16);
@@ -34,7 +35,6 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: rem(10);
 	height: rem(200);
 	padding: 0 rem(20) rem(20);
 	isolation: isolate;
@@ -48,6 +48,12 @@
 		height: rem(300);
 	}
 
+	@media (min-width: $md0) {
+
+		height: rem(360);
+		padding: 0 rem(30) rem(30);
+	}
+
 	&::after {
 		content: "";
 		position: absolute;
@@ -57,11 +63,9 @@
 		pointer-events: none;
 
 		@media (min-width: $md4) {
-			background: linear-gradient(
-				180deg,
-				rgba(0, 0, 0, 0) 0%,
-				rgba(0, 0, 0, 0.9) 100%
-			);
+			background: linear-gradient(180deg,
+					rgba(0, 0, 0, 0) 0%,
+					rgba(0, 0, 0, 0.9) 100%);
 		}
 	}
 
@@ -70,8 +74,8 @@
 	&[class*=" icon-"] {
 		&::before {
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: -1px;
+			left: -1px;
 			z-index: 2;
 			display: flex;
 			align-items: flex-start;
@@ -79,11 +83,22 @@
 			width: rem(70);
 			height: rem(30);
 			padding: 0 rem(50) rem(10) 0;
-			background: var(--feature-card-surface, #{$color-text-primary});
-			color: $color-accent-primary;
+			background-color: var(--feature-card-surface, #{$color-text-primary});
+			background-image: var(--feature-card-pattern, none);
+			background-repeat: repeat;
+			background-position: 0 0;
+			color: $color-text-secondary;
 			font-size: rem(20);
 			line-height: 1;
 			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(40)}) 100%, 0 100%);
+
+			@media (min-width: $md0) {
+				width: rem(138);
+				height: rem(50);
+				padding: 0 rem(78) rem(20) rem(30);
+				font-size: rem(30);
+				clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
+			}
 		}
 	}
 
@@ -101,6 +116,10 @@
 		@media (min-width: $md4) {
 			@include desktop-heading-h4;
 		}
+
+		@media (min-width: $md0) {
+			@include mobile-heading-h1;
+		}
 	}
 
 	// feature-card__text
@@ -112,6 +131,10 @@
 
 		@media (min-width: $md4) {
 			@include desktop-body-m;
+		}
+
+		@media (min-width: $md0) {
+			@include desktop-body-xl;
 		}
 	}
 }

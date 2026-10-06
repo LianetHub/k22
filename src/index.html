@@ -34,10 +34,7 @@
 					<div class="our-goal__container container">
 						<div class="our-goal__content">
 							<h2 class="our-goal__title decor-line-block">Наша цель</h2>
-							<p class="our-goal__tagline title">
-								<span class="our-goal__line">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ</span>
-								<span class="our-goal__line color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span>
-							</p>
+							<p class="our-goal__tagline title">ЧТОБЫ ВЫ ПОЛУЧАЛИ УДОВОЛЬСТВИЕ<br><span class="color-primary">ОТ КАЖДОЙ ПОЕЗДКИ</span></p>
 						</div>
 					</div>
 				</section>
@@ -50,7 +47,7 @@
 				</section>
 				<section class="services services--catalog">
 					<div class="services__container container">
-						<h2 class="services__title title decor-line-block">Все услуги <span class="color-primary">от ремонта до тюнинга</span></h2>
+						<h2 class="services__title title decor-line-block">Все услуги <br> <span class="color-primary">от ремонта до тюнинга</span></h2>
 						<ul class="services__categories">
 							@@loop('./html/templates/_service-card.html', './html/json/services-categories.json')
 						</ul>
@@ -58,20 +55,19 @@
 				</section>
 				@@include('./html/sections/_features.html', {
 				"mod": "features--home",
-				"title": '<span class="features__title-line">ПОЧЕМУ ВЫБИРАЮТ</span><span class="features__title-line"><span class="color-primary">K22</span> POWER TEAM</span>',
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM',
 				"lead": "Полный спектр работ по обслуживанию систем экологии автомобиля",
 				"featuresList": "./html/json/features-home.json"
 				})
 				<section class="brands-power">
 					<div class="brands-power__container container">
-						<h2 class="brands-power__title title decor-line-block">
-							<span class="brands-power__title-row">Узнайте <span class="color-primary">прирост мощности</span></span>
-							<span class="brands-power__title-row">своего автомобиля</span>
-						</h2>
-						<form action="#" class="brands-power__form search-form search-form--secondary icon-search">
-							<input type="text" name="q" class="search-form__input">
-							<button type="submit" class="search-form__btn btn btn--primary btn--small">найти</button>
-						</form>
+						<div class="brands-power__header">
+							<h2 class="brands-power__title title decor-line-block">Узнайте <span class="color-primary">прирост мощности</span><br>своего автомобиля</h2>
+							<form action="#" class="brands-power__form search-form search-form--secondary icon-search">
+								<input type="text" name="q" class="search-form__input">
+								<button type="submit" class="search-form__btn btn btn--primary btn--small">найти</button>
+							</form>
+						</div>
 						<ul class="brands-power__list">
 							@@loop('./html/templates/_brand-item.html', './html/json/brands-poser.json')
 						</ul>

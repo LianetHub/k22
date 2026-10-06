@@ -14,8 +14,7 @@
 	padding: 0;
 	border: none;
 	border-radius: 50%;
-
-
+	color: $color-text-primary;
 
 	font-size: rem(12);
 	line-height: 1;
@@ -30,7 +29,7 @@
 	@media (min-width: $md4) {
 		width: rem(48);
 		height: rem(48);
-		font-size: rem(14);
+		font-size: rem(36);
 	}
 
 	@media (any-hover: hover) {

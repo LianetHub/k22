@@ -308,14 +308,6 @@
 		.swiper-slide {
 			height: auto;
 			display: flex;
-
-			@media (min-width: $md4) {
-				width: rem(322);
-			}
-
-			@media (min-width: $md1) {
-				width: auto;
-			}
 		}
 	}
 

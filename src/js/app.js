@@ -483,7 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				},
 				breakpoints: {
 					768: {
-						slidesPerView: "auto",
+						slidesPerView: 2.22,
 						spaceBetween: 10,
 					},
 					1440: {
@@ -499,6 +499,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		document.querySelectorAll(".works__slider")?.forEach((slider) => {
+			if (slider.closest(".works--related")) return;
+
 			const section = slider.closest(".works");
 
 			new Swiper(slider, {
@@ -510,7 +512,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				},
 				breakpoints: {
 					768: {
-						slidesPerView: "auto",
+						slidesPerView: 1.61,
 						spaceBetween: 30,
 					},
 					1440: {
@@ -521,12 +523,45 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
+		document.querySelectorAll(".works--related .works__slider").forEach((slider) => {
+			let swiper = null;
+			let init = false;
+
+			function mountRelatedWorks() {
+				const tablet = window.innerWidth >= 767.98 && window.innerWidth < 1439.98;
+
+				if (tablet) {
+					if (!init) {
+						init = true;
+						swiper = new Swiper(slider, {
+							slidesPerView: 1.61,
+							spaceBetween: 30,
+						});
+					}
+				} else if (init) {
+					swiper.destroy(true, true);
+					swiper = null;
+					init = false;
+				}
+			}
+
+			mountRelatedWorks();
+			window.addEventListener("resize", mountRelatedWorks);
+		});
+
 		document.querySelectorAll(".gallery__slider")?.forEach((el) => {
 			new Swiper(el, {
-				slidesPerView: "auto",
+				slidesPerView: 1,
 				spaceBetween: 10,
 				breakpoints: {
-					768: { spaceBetween: 30 },
+					768: {
+						slidesPerView: 3.13,
+						spaceBetween: 30,
+					},
+					1440: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
 				},
 			});
 		});

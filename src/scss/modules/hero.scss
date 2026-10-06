@@ -11,6 +11,7 @@
         background-size: auto, 366% auto;
 
         @media (min-width: $md4) {
+            background-size: cover;
             background-image: url("@img/hero/home.webp");
             background-position: right 0;
         }

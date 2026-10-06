@@ -1,6 +1,6 @@
 [
 	{
-		"mod": "services-card--compact",
+		"mod": "services-card--compact services-card--inverse",
 		"title": "Прошивка EURO-2",
 		"description": "Отключение контроля катализатора",
 		"price": "5 600 ₽",
@@ -10,7 +10,7 @@
 		"link": "Подробнее"
 	},
 	{
-		"mod": "services-card--compact",
+		"mod": "services-card--compact services-card--inverse",
 		"title": "Отключение OPF",
 		"description": "Отключение сажевого фильтра",
 		"price": "9 800 ₽",
@@ -20,7 +20,7 @@
 		"link": "Подробнее"
 	},
 	{
-		"mod": "services-card--compact",
+		"mod": "services-card--compact services-card--inverse",
 		"title": "Отключение EGR",
 		"description": "Отключение клапана рециркуляции выхлопных газов",
 		"price": "5 800 ₽",
@@ -30,7 +30,7 @@
 		"link": "Подробнее"
 	},
 	{
-		"mod": "services-card--compact",
+		"mod": "services-card--compact services-card--inverse",
 		"title": "Отключение вихревых заслонок",
 		"description": "(FLAPS)",
 		"price": "? ₽",

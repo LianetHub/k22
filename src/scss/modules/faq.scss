@@ -10,6 +10,10 @@
 		@media (min-width: $md4) {
 			padding: rem(80) 0;
 		}
+
+		@media (min-width: $md0) {
+			padding: rem(100) 0;
+		}
 	}
 
 	// .faq__container
@@ -27,6 +31,12 @@
 			column-gap: rem(55);
 			row-gap: 0;
 			align-items: stretch;
+		}
+
+		@media (min-width: $md0) {
+			grid-template-columns: rem(416) rem(1025);
+			justify-content: space-between;
+			column-gap: 0;
 		}
 	}
 
@@ -102,6 +112,10 @@
 		@media (min-width: $md1) {
 			flex: none;
 			width: rem(416);
+		}
+
+		@media (min-width: $md0) {
+			line-height: 1.2;
 		}
 	}
 
@@ -188,6 +202,13 @@
 
 		@media (min-width: $md4) {
 			@include desktop-heading-h4;
+		}
+
+		@media (min-width: $md0) {
+			display: grid;
+			grid-template-columns: rem(456) auto;
+			justify-content: space-between;
+			column-gap: 0;
 		}
 	}
 

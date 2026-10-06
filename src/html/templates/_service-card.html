@@ -1,5 +1,5 @@
 <li class="services__item">
-	<article class="services-card@@if(typeof mod !== 'undefined'){ @@mod}"@@if(typeof image !== 'undefined'){ style="--services-card-image: url('../@@image');"}>
+	<article class="services-card@@if(typeof mod !== 'undefined'){ @@mod}@@if(typeof icon !== 'undefined'){ services-card--icon}@@if(typeof iconImg !== 'undefined'){ services-card--icon}@@if(typeof image !== 'undefined'){ services-card--hover}"@@if(typeof image !== 'undefined'){ style="--services-card-image: url('../@@image');"}>
 		@@if(typeof badge !== 'undefined'){
 		<span class="services-card__badge@@if(typeof badgeMod !== 'undefined'){ @@badgeMod}">@@badge</span>
 		}

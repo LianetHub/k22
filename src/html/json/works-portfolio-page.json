@@ -1,6 +1,6 @@
 [
 	{
-		"itemClass": "works__item",
+		"itemClass": "works__item swiper-slide",
 		"mod": "",
 		"tag": "Выхлоп",
 		"caption": "HYUNDAI SANTA FE 2.2D 2019 Г.",
@@ -9,7 +9,7 @@
 		"imageAlt": "Hyundai Santa Fe в шоуруме"
 	},
 	{
-		"itemClass": "works__item",
+		"itemClass": "works__item swiper-slide",
 		"mod": "",
 		"tag": "Выхлоп",
 		"caption": "HYUNDAI SANTA FE 2.2D 2019 Г.",
@@ -18,7 +18,7 @@
 		"imageAlt": "Мастер осматривает двигатель Honda с открытым капотом"
 	},
 	{
-		"itemClass": "works__item",
+		"itemClass": "works__item swiper-slide",
 		"mod": "",
 		"tag": "Чип-тюнинг",
 		"caption": "Honda",

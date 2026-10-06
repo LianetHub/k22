@@ -140,7 +140,8 @@ $dimensions: (
 }
 
 
-/// Pre-JS / FOUC layout for Swiper: grid matching slidesPerView until .is-swiper-ready
+/// Pre-JS / FOUC layout for Swiper: grid matching slidesPerView until .is-swiper-ready.
+/// width: 100% below only resets Swiper's default slide width so the grid cell sizes the fallback. Live slide width is slidesPerView — see swiper-sliders.mdc.
 /// $cols — map of min-width (0 or px number) → column count (int or float for peek)
 @mixin swiper-grid-fallback($cols,
 	$gap-mobile: rem(12),

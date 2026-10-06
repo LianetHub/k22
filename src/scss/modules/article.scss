@@ -845,24 +845,6 @@
 	// article__more
 	&__more {
 		flex-shrink: 0;
-		justify-content: space-between;
-		width: 100%;
-		flex-direction: row-reverse;
-		gap: rem(10);
-		padding-bottom: rem(8);
-		border-bottom: 1px solid $color-accent-primary;
-		color: $color-accent-primary;
-		font-family: $font-inter;
-		font-size: rem(16);
-		font-weight: 700;
-		line-height: 1;
-		letter-spacing: -0.02em;
-
-		@media (min-width: $md4) {
-			justify-content: flex-start;
-			width: auto;
-			font-size: rem(22);
-		}
 	}
 }
 

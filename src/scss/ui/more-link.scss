@@ -1,17 +1,33 @@
-@use "abstracts" as *;
+@use "../abstracts" as *;
 
 
 .more-link {
 	display: inline-flex;
 	align-items: center;
-	gap: rem(8);
-	font-weight: 500;
-	line-height: 1.1;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	gap: rem(10);
+	width: 100%;
+	padding-bottom: rem(12);
+	border-bottom: 1px solid $color-accent-primary;
+	color: $color-accent-primary;
+	font-family: $font-inter;
+	font-size: rem(18);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: em(-0.36, 18);
 	transition: opacity 0.2s ease;
-	font-size: rem(12);
 
-	@media (min-width:$md5) {
-		font-size: rem(14);
+	@media (min-width: $md4) {
+		justify-content: flex-start;
+		justify-self: start;
+		width: auto;
+	}
+
+	@media (min-width: $md0) {
+		padding-bottom: rem(8);
+		font-size: rem(22);
+		letter-spacing: em(-0.44, 22);
 	}
 
 	@media (any-hover: hover) {
@@ -26,33 +42,20 @@
 
 	&::before {
 		@extend %ic, .icon-arrow-top-right;
+		font-size: rem(12);
 		transition: transform 0.35s ease;
+
+		@media (min-width: $md0) {
+			font-size: rem(16);
+		}
 	}
 
 	&:focus-visible {
 		outline: none;
-
 		border-radius: rem(2);
 
 		&::before {
 			transform: rotate(90deg);
-		}
-	}
-
-	// more-link__arrow
-	&__arrow {
-		flex-shrink: 0;
-		width: rem(15);
-		height: rem(15);
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-
-		img,
-		svg {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
 		}
 	}
 }

@@ -42,16 +42,7 @@
 	// .gallery__slide
 	&__slide {
 		display: block;
-		width: 100%;
 		aspect-ratio: 1;
 		overflow: hidden;
-
-		@media (min-width: $md4) {
-			width: rem(212);
-		}
-
-		@media (min-width: $md1) {
-			width: rem(323);
-		}
 	}
 }

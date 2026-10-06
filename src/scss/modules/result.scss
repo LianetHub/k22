@@ -1,12 +1,10 @@
 @use "../abstracts" as *;
 
-%result-trim {
-	text-box-trim: trim-both;
-	text-box-edge: cap alphabetic;
-}
+%result-trim {}
 
 .result {
 	&:has(.result__main) {
+
 		// .result--moto
 		&.result--moto {
 			background-image:
@@ -81,13 +79,18 @@
 		overflow: hidden;
 		padding-block: rem(60);
 		background-color: #000;
-		background-image:
-			url("@img/decor/light-pattern.svg"),
-			linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-			url("@img/result/car.webp");
-		background-repeat: repeat, no-repeat, no-repeat;
-		background-position: 0 0, center, right center;
-		background-size: auto, cover, cover;
+		background-image: url("@img/decor/light-pattern.svg"),
+		linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
+		url("@img/result/car.webp");
+		background-repeat: repeat,
+		no-repeat,
+		no-repeat;
+		background-position: 0 0,
+		center,
+		right center;
+		background-size: auto,
+		cover,
+		cover;
 		color: $color-bg-primary;
 
 		@media (min-width: $md4) {
@@ -95,6 +98,7 @@
 		}
 
 		@media (min-width: $md1) {
+			padding-block: rem(100);
 			background-image:
 				url("@img/decor/light-pattern.svg"),
 				linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
@@ -178,7 +182,7 @@
 			flex-direction: column;
 			gap: rem(40);
 			width: 100%;
-			max-width: rem(674);
+			max-width: rem(757);
 			min-width: 0;
 		}
 	}
@@ -201,6 +205,7 @@
 			@include desktop-heading-h2;
 			max-width: rem(687);
 			margin-bottom: 0;
+			padding-top: rem(44);
 		}
 	}
 
@@ -243,7 +248,7 @@
 			align-items: stretch;
 			background: transparent;
 
-			& + & {
+			&+& {
 				border-top: 1px solid rgba($color-bg-primary, 0.2);
 			}
 		}
@@ -292,6 +297,10 @@
 			padding: rem(20) rem(30);
 			background: $color-text-primary;
 		}
+
+		@media (min-width: $md1) {
+			height: rem(146);
+		}
 	}
 
 	// .result__metric-panel--gain
@@ -314,6 +323,10 @@
 			padding: rem(20) rem(30);
 		}
 
+		@media (min-width: $md1) {
+			height: rem(146);
+		}
+
 		.result__value {
 			gap: 0;
 
@@ -327,6 +340,10 @@
 
 			@media (min-width: $md4) {
 				@include mobile-heading-h1;
+			}
+
+			@media (min-width: $md1) {
+				@include desktop-heading-h2;
 			}
 		}
 
@@ -395,10 +412,20 @@
 			padding-left: 0;
 		}
 
+		@media (min-width: $md1) {
+			font-size: rem(22);
+			line-height: 1.2;
+			letter-spacing: 0;
+		}
+
 		&::before {
 			flex-shrink: 0;
 			font-size: rem(16);
 			color: $color-bg-primary;
+
+			@media (min-width: $md1) {
+				font-size: rem(22);
+			}
 		}
 	}
 
@@ -456,6 +483,10 @@
 	&__num {
 		@extend %result-trim;
 		@include mobile-heading-h1;
+
+		@media (min-width: $md1) {
+			@include desktop-heading-h2;
+		}
 	}
 
 	// .result__unit
@@ -464,6 +495,12 @@
 		@include desktop-body-m;
 		color: $color-bg-primary;
 		opacity: 0.4;
+
+		@media (min-width: $md1) {
+			font-size: rem(22);
+			line-height: 1.2;
+			letter-spacing: 0;
+		}
 	}
 
 	// .result__unit--pct
@@ -481,6 +518,10 @@
 		line-height: 1.2;
 		color: $color-bg-primary;
 		opacity: 0.3;
+
+		@media (min-width: $md1) {
+			@include desktop-body-xl;
+		}
 	}
 
 	// .result__arrow
@@ -546,6 +587,7 @@
 
 		@media (min-width: $md1) {
 			margin-bottom: 0;
+			padding: rem(30);
 		}
 	}
 
@@ -561,6 +603,10 @@
 		@extend %result-trim;
 		color: $color-bg-primary;
 		@include desktop-heading-h4;
+
+		@media (min-width: $md1) {
+			@include desktop-heading-h3;
+		}
 	}
 
 	// .result__guarantee-lead
@@ -568,6 +614,12 @@
 		@extend %result-trim;
 		@include desktop-body-m;
 		color: $color-bg-primary;
+
+		@media (min-width: $md1) {
+			font-size: rem(22);
+			line-height: 1.2;
+			letter-spacing: 0;
+		}
 	}
 
 	// .result__guarantee-btn
@@ -604,9 +656,9 @@
 			align-self: flex-end;
 			flex-shrink: 0;
 			width: auto;
-			max-width: rem(223);
+			max-width: rem(263);
 			text-align: right;
-			@include desktop-heading-h4;
+			@include mobile-heading-h1;
 		}
 	}
 }

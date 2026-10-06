@@ -3,7 +3,9 @@
 .our-goal {
 	position: relative;
 	overflow: hidden;
-	background-color: $color-text-primary;
+	background: url("@img/decor/light-pattern.svg"),
+		linear-gradient(90deg, transparent 32.5%, rgba($color-text-primary, 0.9) 62.266%),
+		url("@img/our-goal.webp") center center / cover no-repeat, $color-text-primary;
 	color: $color-bg-primary;
 
 	.page>& {
@@ -18,57 +20,6 @@
 		}
 	}
 
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		pointer-events: none;
-	}
-
-	&::before {
-		z-index: 0;
-		top: 0.07%;
-		left: 14.36%;
-		width: 280.78%;
-		height: 100%;
-		background: url("@img/our-goal.webp") 0 0 / 100% 100% no-repeat;
-
-		@media (min-width: $md4) {
-			top: 0;
-			left: 47.94%;
-			width: 145.8%;
-			height: 100%;
-		}
-
-		@media (min-width: $md1) {
-			top: -0.85%;
-			left: 0;
-			width: 103.31%;
-			height: 106.2%;
-		}
-	}
-
-	&::after {
-		z-index: 1;
-		inset: 0;
-		background-image:
-			url("@img/decor/light-pattern.svg"),
-			linear-gradient(90deg, $color-text-primary 43.416%, transparent 74.427%);
-		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
-
-		@media (min-width: $md4) {
-			background-image:
-				url("@img/decor/light-pattern.svg"),
-				linear-gradient(90deg, $color-text-primary 48.566%, transparent 62.266%);
-		}
-
-		@media (min-width: $md1) {
-			background-image:
-				url("@img/decor/light-pattern.svg"),
-				linear-gradient(90deg, transparent 32.5%, rgba($color-text-primary, 0.9) 62.266%);
-		}
-	}
 
 	// .our-goal__container
 	&__container {
@@ -101,25 +52,6 @@
 
 	// .our-goal__tagline
 	&__tagline {
-		display: flex;
-		flex-direction: column;
 		margin-top: rem(14);
-
-
-	}
-
-	// .our-goal__line
-	&__line {
-
-		// @include mobile-heading-h1;
-
-		// @media (min-width: $md4) {
-		// 	@include tablet-heading-h1;
-
-		// }
-
-		// @media (min-width: $md1) {
-		// 	@include desktop-heading-h2;
-		// }
 	}
 }

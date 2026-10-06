@@ -12,6 +12,10 @@
 		@media (min-width: $md1) {
 			padding-block: rem(80);
 		}
+
+		@media (min-width: $md0) {
+			padding-block: rem(100);
+		}
 	}
 
 	background-color: $color-bg-primary;
@@ -37,6 +41,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(10);
+
+		@media (min-width: $md0) {
+			gap: rem(20);
+		}
 	}
 }
 
@@ -85,6 +93,15 @@
 				text-align: right;
 			}
 		}
+
+		@media (min-width: $md0) {
+			gap: rem(50);
+			padding: rem(40) rem(50) rem(40) rem(600);
+
+			.offer__title {
+				width: rem(700);
+			}
+		}
 	}
 
 	// .offer--lead
@@ -122,6 +139,11 @@
 		justify-content: flex-start;
 		gap: rem(20);
 		padding: rem(20) rem(30);
+	}
+
+	@media (min-width: $md0) {
+		gap: rem(300);
+		padding: rem(40) rem(50);
 	}
 
 	&::before {
@@ -169,6 +191,10 @@
 		@media (min-width: $md1) {
 			gap: rem(20);
 		}
+
+		@media (min-width: $md0) {
+			gap: rem(30);
+		}
 	}
 
 	// .offer__title
@@ -179,6 +205,10 @@
 		@media (min-width: $md4) {
 			@include mobile-heading-h1;
 		}
+
+		@media (min-width: $md0) {
+			@include tablet-heading-h1;
+		}
 	}
 
 	// .offer__text
@@ -188,6 +218,10 @@
 
 		@media (min-width: $md4) {
 			@include desktop-body-m;
+		}
+
+		@media (min-width: $md0) {
+			@include desktop-body-xl;
 		}
 
 		&:empty {

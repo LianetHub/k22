@@ -59,6 +59,10 @@
 			padding: rem(50);
 		}
 
+		@media (min-width: $md0) {
+			padding: rem(70);
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -76,6 +80,11 @@
 				background-position: right top;
 				background-size: auto 100%;
 			}
+
+			@media (min-width: $md0) {
+				background-position: right top;
+				background-size: rem(977) rem(439);
+			}
 		}
 	}
 
@@ -92,6 +101,13 @@
 			grid-template-columns: minmax(rem(280), rem(416)) 1fr;
 			align-items: stretch;
 		}
+
+		@media (min-width: $md0) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
 	}
 
 	// .callback__intro
@@ -106,6 +122,12 @@
 			gap: rem(40);
 			height: 100%;
 			min-height: rem(274);
+		}
+
+		@media (min-width: $md0) {
+			flex-shrink: 0;
+			width: rem(416);
+			height: rem(274);
 		}
 	}
 
@@ -300,6 +322,12 @@
 			order: 0;
 			justify-content: center;
 		}
+
+		@media (min-width: $md0) {
+			flex-shrink: 0;
+			width: rem(955);
+			height: auto;
+		}
 	}
 
 	// .callback__form-title
@@ -405,6 +433,10 @@
 
 		@media (min-width: $md1) {
 			gap: rem(8);
+		}
+
+		@media (min-width: $md0) {
+			gap: rem(16);
 		}
 	}
 

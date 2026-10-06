@@ -116,9 +116,11 @@
 				<section class="works works--related">
 					<div class="works__container container">
 						<h2 class="works__title title decor-line-block">другие наши работы</h2>
-						<ul class="works__list">
-							@@loop('./html/templates/_portfolio-card.html', './html/json/works-portfolio-page.json')
-						</ul>
+						<div class="works__slider swiper">
+							<ul class="swiper-wrapper works__list">
+								@@loop('./html/templates/_portfolio-card.html', './html/json/works-portfolio-page.json')
+							</ul>
+						</div>
 					</div>
 				</section>
 			</main>

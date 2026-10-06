@@ -1,9 +1,10 @@
 @use "../abstracts" as *;
 
 .works {
+
 	// .works--related
 	&.works--related {
-		.page > & {
+		.page>& {
 			padding-top: rem(60);
 			padding-bottom: rem(60);
 
@@ -25,108 +26,49 @@
 			}
 		}
 
-		// .works__title
-		.works__title {
-			display: block;
 
-			@media (min-width: $md4) {
-				gap: 0;
-				padding-top: rem(34);
-				@include desktop-heading-h2;
-			}
+		// .works__slider
+		.works__slider {
+			margin-top: 0;
 		}
 
-		// .works__list
-		.works__list {
-			display: grid;
-			gap: rem(30);
+		.works__slider:not(.swiper-initialized) {
+			overflow: visible;
 
-			@media (min-width: $md4) {
-				display: flex;
-				overflow-x: auto;
-				scroll-snap-type: x mandatory;
-			}
-
-			@media (min-width: $md1) {
+			// .works__list
+			.works__list {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				overflow: visible;
-				scroll-snap-type: none;
-			}
-		}
+				gap: rem(30);
 
-		// .works__item
-		.works__item {
-			min-width: 0;
-
-			@media (min-width: $md4) {
-				flex: 0 0 rem(440);
-				min-width: rem(440);
-				scroll-snap-align: start;
+				@media (min-width: $md1) {
+					grid-template-columns: repeat(3, 1fr);
+				}
 			}
 
-			@media (min-width: $md1) {
-				flex: none;
+			.swiper-slide {
 				width: auto;
 				min-width: 0;
-				scroll-snap-align: none;
 			}
 		}
 	}
 
 	background: $color-bg-secondary;
 
-	.page > &:not(.works--related) {
-		padding: rem(60) 0;
-
-		@media (min-width: $md4) {
-			padding: rem(80) 0;
-		}
-	}
 
 	// .works__container
-	&__container {
-		display: grid;
-		gap: rem(40);
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			"head"
-			"slider"
-			"nav";
-
-		@media (min-width: $md4) {
-			grid-template-columns: 1fr auto;
-			grid-template-areas:
-				"head nav"
-				"slider slider";
-		}
-	}
+	&__container {}
 
 	// .works__title
-	&__title {
+	&__title {}
+
+	&__header {
 		display: flex;
-		flex-direction: column;
-		gap: rem(10);
-
-		@media (min-width: $md4) {
-			@include tablet-heading-h1;
-		}
-
-		@media (min-width: $md1) {
-			gap: rem(26);
-			@include desktop-heading-h2;
-		}
-
-		&.decor-line-block {
-			@media (min-width: $md4) {
-				padding-top: rem(44);
-			}
-		}
+		justify-content: space-between;
+		align-items: flex-end;
 	}
 
 	// .works__head
 	&__head {
-		grid-area: head;
 		display: flex;
 		flex-direction: column;
 		gap: rem(20);
@@ -174,14 +116,7 @@
 		width: auto;
 		height: auto;
 		background: transparent;
-		color: $color-text-primary;
-		font-size: rem(33);
 
-		@media (any-hover: hover) {
-			&:hover {
-				opacity: 0.7;
-			}
-		}
 	}
 
 	// .works__prev
@@ -193,18 +128,8 @@
 
 	// .works__slider
 	&__slider {
-		grid-area: slider;
+		margin-top: rem(12);
 		width: 100%;
 		overflow: hidden;
-
-		.swiper-slide {
-			@media (min-width: $md4) {
-				width: rem(440);
-			}
-
-			@media (min-width: $md1) {
-				width: auto;
-			}
-		}
 	}
 }

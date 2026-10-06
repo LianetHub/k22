@@ -1,17 +1,19 @@
 <section class="works@@if(typeof mod !== 'undefined'){ @@mod}">
 	<div class="works__container container">
-		<div class="works__head">
-			@@if(typeof tag !== 'undefined') {
-			<div class="works__tag decor-line-inline">@@tag</div>
-			}
-			<h2 class="works__title title@@if(typeof tag === 'undefined'){ decor-line-block}">
-				<span class="color-primary">Выполненные</span>
-				<span>работы</span>
-			</h2>
-		</div>
-		<div class="works__nav">
-			<button type="button" class="works__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущая работа"></button>
-			<button type="button" class="works__next swiper-button-next icon-arrrow-long" aria-label="Следующая работа"></button>
+		<div class="works__header">
+			<div class="works__head">
+				@@if(typeof tag !== 'undefined') {
+				<div class="works__tag decor-line-inline">@@tag</div>
+				}
+				<h2 class="works__title title@@if(typeof tag === 'undefined'){ decor-line-block}">
+					<span class="color-primary">Выполненные</span> <br>
+					работы
+				</h2>
+			</div>
+			<div class="works__nav">
+				<button type="button" class="works__prev swiper-button-prev icon-prev" aria-label="Предыдущая работа"></button>
+				<button type="button" class="works__next swiper-button-next icon-next" aria-label="Следующая работа"></button>
+			</div>
 		</div>
 		@@if(typeof worksList !== 'undefined') {
 		<div class="works__slider swiper">

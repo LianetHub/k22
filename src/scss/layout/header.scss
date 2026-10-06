@@ -516,12 +516,17 @@
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
+				position: relative;
 				width: rem(12);
 				height: rem(12);
+				// флекс центрирует иконку по line-box, а оптически она должна стоять по капители
+				top: rem(-1.5);
 				margin-left: 0;
 				font-size: rem(12);
 				line-height: 1;
 				color: inherit;
+				// центр массы шеврона выше центра бокса — иначе при повороте он съезжает вниз
+				transform-origin: 50% 47.44%;
 				transition: transform 0.3s ease;
 			}
 

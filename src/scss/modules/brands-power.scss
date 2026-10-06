@@ -2,78 +2,41 @@
 @use "../abstracts" as *;
 
 .brands-power {
-	.page > & {
+	.page>& {
 		padding: rem(60) 0;
 
 		@media (min-width: $md4) {
 			padding: rem(80) 0;
+		}
+
+		@media (min-width: $md0) {
+			padding: rem(100) 0;
 		}
 	}
 
 	background: $color-bg-primary;
 
 	// .brands-power__container
-	&__container {
-		display: grid;
-		grid-template-areas:
-			"title"
-			"brands"
-			"more";
-		row-gap: rem(30);
-
-		@media (min-width: $md4) {
-			grid-template-areas:
-				"title"
-				"form"
-				"brands"
-				"more";
-		}
-
-		@media (min-width: $md1) {
-			grid-template-columns: 1fr auto;
-			grid-template-areas:
-				"title form"
-				"brands brands"
-				"more more";
-			column-gap: rem(40);
-			row-gap: rem(40);
-		}
-	}
+	&__container {}
 
 	// .brands-power__title
-	&__title {
+	&__title {}
+
+	// .brands-power__header
+	&__header {
 		display: flex;
-		flex-direction: column;
-		grid-area: title;
-		gap: rem(16);
-
-		@media (min-width: $md4) {
-			@include tablet-heading-h1;
-		}
-
-		@media (min-width: $md1) {
-			gap: rem(26);
-			@include desktop-heading-h2;
-		}
-	}
-
-	// .brands-power__title-row
-	&__title-row {
-		@media (min-width: $md4) {
-			white-space: nowrap;
-		}
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	// .brands-power__form
 	&__form {
 		z-index: $ui-index-2;
-		grid-area: brands;
 		align-self: end;
 		width: 100%;
 		max-width: none;
 
 		@media (min-width: $md4) {
-			grid-area: form;
 			align-self: stretch;
 			margin-top: rem(-10);
 		}
@@ -84,14 +47,31 @@
 			width: rem(320);
 			margin-top: 0;
 		}
+
+		@media (min-width: $md0) {
+			width: rem(420);
+
+			&.search-form--secondary {
+				height: rem(76);
+
+				&::before {
+					font-size: rem(22);
+				}
+
+				.search-form__btn.btn {
+					min-height: rem(56);
+					padding: 0 rem(32);
+				}
+			}
+		}
 	}
 
 	// .brands-power__list
 	&__list {
+		margin-top: 1.5rem;
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
-		grid-area: brands;
 		gap: rem(20);
 		min-height: 0;
 		max-height: rem(551);
@@ -143,6 +123,10 @@
 		&:focus-visible {
 			outline: none;
 		}
+
+		@media (min-width: $md0) {
+			gap: rem(12);
+		}
 	}
 
 	// .brands-power__link-image
@@ -153,6 +137,11 @@
 		justify-content: center;
 		width: rem(30);
 		height: rem(30);
+
+		@media (min-width: $md0) {
+			width: rem(40);
+			height: rem(40);
+		}
 
 		img {
 			display: block;
@@ -169,29 +158,14 @@
 		line-height: math.div(22, 18);
 		letter-spacing: em(-0.18, 18);
 		text-transform: uppercase;
+
+		@media (min-width: $md0) {
+			@include mobile-heading-h4;
+		}
 	}
 
 	// .brands-power__more
 	&__more {
-		grid-area: more;
-		justify-self: stretch;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-		gap: rem(10);
-		width: 100%;
-		padding-bottom: rem(12);
-		border-bottom: 1px solid $color-accent-primary;
-		color: $color-accent-primary;
-		font-family: $font-inter;
-		font-size: rem(18);
-		font-weight: 700;
-		line-height: 1;
-		letter-spacing: em(-0.36, 18);
-
-		@media (min-width: $md4) {
-			justify-self: start;
-			justify-content: flex-start;
-			width: auto;
-		}
+		margin-top: 2rem;
 	}
 }

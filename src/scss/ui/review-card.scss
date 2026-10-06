@@ -19,6 +19,10 @@
 		gap: rem(30);
 		padding: rem(20);
 		flex-grow: 1;
+
+		@media (min-width: $md0) {
+			padding: rem(30);
+		}
 	}
 
 	// review-card__man
@@ -26,6 +30,10 @@
 		display: flex;
 		align-items: flex-start;
 		gap: rem(10);
+
+		@media (min-width: $md0) {
+			gap: rem(20);
+		}
 
 		&[class^="icon-"]::before,
 		&[class*=" icon-"]::before {
@@ -42,6 +50,12 @@
 			@media (min-width: $md5) {
 				width: rem(44);
 				height: rem(44);
+			}
+
+			@media (min-width: $md0) {
+				width: rem(54);
+				height: rem(54);
+				font-size: rem(30);
 			}
 		}
 	}
@@ -122,6 +136,10 @@
 	&__text {
 		@include desktop-body-s;
 		color: $color-text-primary;
+
+		@media (min-width: $md0) {
+			@include desktop-body-m;
+		}
 
 		p {
 			margin-block: 0;
