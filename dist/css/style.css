@@ -207,6 +207,12 @@
   scroll-margin-top: 0;
 }
 
+@media (min-width: 1919.98px) {
+  html {
+    font-size: 0.8333333333vw;
+  }
+}
+
 body {
   font-family: "ActayWide", sans-serif, sans-serif;
   font-size: 1rem;
@@ -6283,6 +6289,7 @@ textarea.form-control {
 }
 @media (min-width: 1439.98px) {
   .contacts__place {
+    gap: 1.75rem;
     padding: 1.875rem;
   }
 }
@@ -6303,7 +6310,7 @@ textarea.form-control {
 }
 .contacts__place-title {
   font-family: "ActayWide", sans-serif;
-  font-size: 1.375rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -0.02em;
@@ -6339,14 +6346,13 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.625rem;
 }
 .contacts__phone {
   font-family: "InterTight", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.0225rem;
+  letter-spacing: -0.0275rem;
   color: #fff;
   transition: opacity 0.2s ease;
 }

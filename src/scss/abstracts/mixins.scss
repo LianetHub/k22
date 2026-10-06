@@ -131,6 +131,7 @@
 // );
 
 $dimensions: (
+	fullHD: 1920,
 	desktop: 1440,
 	tablet: 768,
 	mobile: 320,
@@ -158,6 +159,10 @@ $dimensions: (
 
 @mixin fs($sizeValue, $sizeValueTablet: $sizeValue, $sizeValueMobile: $sizeValue) {
 	@include font-size($sizeValue, $sizeValueTablet, $sizeValueMobile);
+}
+
+@function vwfullHD($value) {
+	@return pxToVw($value, fullHD);
 }
 
 @function vwd($value) {

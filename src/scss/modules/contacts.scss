@@ -617,6 +617,7 @@
 		}
 
 		@media (min-width: $md1) {
+			gap: rem(28);
 			padding: rem(30);
 		}
 	}
@@ -643,7 +644,7 @@
 
 	// .contacts__place-title
 	&__place-title {
-		@include desktop-heading-h4;
+		@include desktop-heading-h3;
 		color: $color-bg-primary;
 	}
 
@@ -683,16 +684,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: rem(10);
+
 	}
 
 	// .contacts__phone
 	&__phone {
 		font-family: $font-inter;
-		font-size: rem(18);
+		font-size: 1.375rem;
 		font-weight: 700;
 		line-height: 1;
-		letter-spacing: rem(-0.36);
+		letter-spacing: -0.0275rem;
 		color: $color-bg-primary;
 		transition: opacity 0.2s ease;
 

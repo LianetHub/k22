@@ -5,6 +5,12 @@
 	scroll-margin-top: 0;
 }
 
+html {
+	@media (min-width:$md0) {
+		font-size: vwfullHD(16)
+	}
+}
+
 body {
 	font-family: $fontfamily, sans-serif;
 	font-size: rem(16);
