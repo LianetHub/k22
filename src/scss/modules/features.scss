@@ -51,14 +51,14 @@
 	// .features--about
 	&.features--about {
 		.page>& {
-			padding-block: rem(60);
+			@include section-inset($space-60);
 
 			@media (min-width: $md4) {
-				padding-block: rem(80);
+				@include section-inset($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding-block: rem(100);
+				@include section-inset($space-100);
 			}
 		}
 
@@ -165,6 +165,10 @@
 	background-repeat: repeat;
 	background-position: 0 0;
 	color: $color-bg-primary;
+
+	.page>& {
+		@include section-inset($space-section);
+	}
 
 	// .features__container
 	&__container {

@@ -9,8 +9,7 @@
 
 	// .page > .error-page
 	.page > & {
-		padding-top: rem(62);
-		padding-bottom: rem(100);
+		@include section-inset(rem(62), $space-100);
 
 		@media (min-width: $md4) {
 			padding-top: rem(91);

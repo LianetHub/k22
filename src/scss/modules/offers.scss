@@ -8,14 +8,14 @@
 	}
 
 	.page>& {
-		padding-block: rem(20);
+		@include section-inset($space-20);
 
 		@media (min-width: $md1) {
-			padding-block: rem(80);
+			@include section-inset($space-80);
 		}
 
 		@media (min-width: $md0) {
-			padding-block: rem(100);
+			@include section-inset($space-100);
 		}
 	}
 

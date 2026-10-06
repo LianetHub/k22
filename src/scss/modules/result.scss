@@ -57,6 +57,7 @@
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
+		margin-block: 0;
 		padding-block: rem(60);
 		background-color: #000;
 		background-image: url("@img/decor/light-pattern.svg"),

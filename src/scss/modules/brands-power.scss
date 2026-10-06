@@ -3,14 +3,14 @@
 
 .brands-power {
 	.page>& {
-		padding: rem(60) 0;
+		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
-			padding: rem(80) 0;
+			@include section-inset($space-80);
 		}
 
 		@media (min-width: $md0) {
-			padding: rem(100) 0 rem(100);
+			@include section-inset($space-100);
 		}
 	}
 
@@ -122,7 +122,7 @@
 		}
 
 		&:focus-visible {
-			outline: none;
+			@include focus-ring;
 		}
 
 		@media (min-width: $md0) {

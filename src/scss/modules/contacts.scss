@@ -5,20 +5,18 @@
 	// .contacts--page
 	&.contacts--page {
 		.page > & {
-			padding-top: rem(32);
-			padding-bottom: rem(60);
+			@include section-inset($space-32, $space-60);
 
 			@media (min-width: $md4) {
-				padding-top: rem(70);
-				padding-bottom: rem(80);
+				@include section-inset($space-70, $space-80);
 			}
 
 			@media (min-width: $md1) {
-				padding-bottom: rem(100);
+				padding-bottom: $space-100;
 			}
 
 			@media (min-width: $md0) {
-				padding-top: rem(54);
+				padding-top: $space-54;
 			}
 		}
 
@@ -272,14 +270,14 @@
 		background-repeat: repeat;
 
 		.page > & {
-			padding: rem(60) 0;
+			@include section-inset($space-60);
 
 			@media (min-width: $md4) {
-				padding: rem(80) 0;
+				@include section-inset($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding: rem(100) 0;
+				@include section-inset($space-100);
 			}
 		}
 
@@ -521,14 +519,14 @@
 	color: $color-bg-secondary;
 
 	.page > &:not(.contacts--page):not(.contacts--network) {
-		padding: rem(60) 0;
+		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
-			padding: rem(80) 0;
+			@include section-inset($space-80);
 		}
 
 		@media (min-width: $md1) {
-			padding: rem(100) 0;
+			@include section-inset($space-100);
 		}
 	}
 

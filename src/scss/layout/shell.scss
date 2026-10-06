@@ -24,7 +24,7 @@ a {
 	color: inherit;
 
 	&:focus-visible {
-		outline: none;
+		@include focus-ring;
 		border-radius: rem(2);
 	}
 }
@@ -54,10 +54,10 @@ img {
 	flex-direction: column;
 
 	&>* {
-		padding: 6.25rem 0;
+		@include section-margin($space-section);
 
 		&:first-child {
-			padding-top: rem(0);
+			margin-top: 0;
 		}
 	}
 
@@ -68,14 +68,14 @@ img {
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: 100%;
-	padding: 0 rem(20);
+	padding: 0 $space-20;
 
 	@media (min-width: $md3) {
-		padding: 0 rem(40);
+		padding: 0 $space-40;
 	}
 
 	@media (min-width: $md2) {
-		padding: 0 rem(70);
+		padding: 0 $space-70;
 	}
 
 	@media (min-width: $md0) {

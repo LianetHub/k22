@@ -191,9 +191,8 @@
 		}
 
 		&:focus-visible {
-			outline: none;
+			@include focus-ring($color-bg-primary);
 			border-radius: 50%;
-
 		}
 	}
 }

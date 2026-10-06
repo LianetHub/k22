@@ -33,13 +33,6 @@
 		}
 	}
 
-	// pagination__arrow--prev
-	&__arrow--prev {
-		&::before {
-			transform: rotate(180deg);
-		}
-	}
-
 	// pagination__page
 	&__page {
 		display: inline-flex;

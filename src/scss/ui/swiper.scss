@@ -37,8 +37,7 @@
 	}
 
 	&:focus-visible {
-		outline: none;
-
+		@include focus-ring;
 	}
 
 	&.swiper-button-disabled {
@@ -53,10 +52,6 @@
 
 .swiper-button-prev {
 	left: rem(8);
-
-	&.icon-chevron-right::before {
-		transform: rotate(180deg);
-	}
 
 	@media (min-width: $md4) {
 		left: 0;

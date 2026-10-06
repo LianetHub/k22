@@ -45,7 +45,7 @@
 			                <nav class="heaader__menu menu" id="site-menu" data-menu aria-label="Меню в шапке">
 			                	<div class="menu__mobile-bar">
 			                		<a href="/" class="menu__mobile-logo">
-			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34">
+			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34" loading="lazy">
 			                		</a>
 			                		<button type="button" class="menu__back icon-chevron-left" hidden aria-label="Назад" data-menu-back></button>
 			                		<button type="button" class="menu__close icon-cross" aria-label="Закрыть меню" data-menu-close></button>
@@ -959,12 +959,12 @@
 
 								<div class="power__charts">
 									<div class="power__chart">
-										<img class="power__chart-img power__chart-img--empty" src="img/power/chart-power-empty.webp" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
-										<img class="power__chart-img power__chart-img--filled" src="img/power/chart-power-filled.webp" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="img/power/chart-power-empty.webp" srcset="img/power/chart-power-empty.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="img/power/chart-power-filled.webp" srcset="img/power/chart-power-filled.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
 									</div>
 									<div class="power__chart">
-										<img class="power__chart-img power__chart-img--empty" src="img/power/chart-torque-empty.webp" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
-										<img class="power__chart-img power__chart-img--filled" src="img/power/chart-torque-filled.webp" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="img/power/chart-torque-empty.webp" srcset="img/power/chart-torque-empty.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="img/power/chart-torque-filled.webp" srcset="img/power/chart-torque-filled.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
 									</div>
 								</div>
 							</div>
@@ -1127,12 +1127,18 @@
 				<section class="faq">
 					<div class="faq__container container">
 						<div class="faq__row">
-							<div class="faq__offer-top">
-								<h2 class="faq__title title decor-line-block">
-									вопрос
-									<span class="color-primary">ответ</span>
-								</h2>
-							</div>
+							<aside class="faq__aside">
+								<div class="faq__offer-top">
+									<h2 class="faq__title title decor-line-block">
+										вопрос
+										<span class="color-primary">ответ</span>
+									</h2>
+								</div>
+								<div class="faq__offer-bottom">
+									<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер&nbsp;бесплатно проконсультирует.</p>
+									<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+								</div>
+							</aside>
 							
 							<ul class="faq__list">
 								<li class="faq__item">
@@ -1170,14 +1176,9 @@
 
 							</ul>
 							
-							<div class="faq__offer-bottom">
-								<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
-								<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
-							</div>
 						</div>
 					</div>
 				</section>
-
 				<section class="reviews">
 					<div class="reviews__container container">
 						<h2 class="reviews__title title decor-line-block">Отзывы</h2>
@@ -1261,8 +1262,8 @@
 						
 						
 						<div class="reviews__nav">
-							<button type="button" class="reviews__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущий отзыв"></button>
-							<button type="button" class="reviews__next swiper-button-next icon-arrrow-long" aria-label="Следующий отзыв"></button>
+							<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
+							<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
 						</div>
 					</div>
 				</section>
@@ -1352,6 +1353,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/chip-tuning-honda.webp"
+											srcset="img/works/chip-tuning-honda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Чип-тюнинг Honda: моторный отсек седана с открытым капотом"
 											width="573"
 											height="340"
@@ -1384,6 +1387,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/catalyst-remove-mazda.webp"
+											srcset="img/works/catalyst-remove-mazda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Чип-тюнинг Honda: выпускной тракт до доработки прошивки"
 											width="573"
 											height="340"
@@ -1416,6 +1421,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/chip-tuning-honda.webp"
+											srcset="img/works/chip-tuning-honda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Чип-тюнинг Honda: замер параметров двигателя после прошивки"
 											width="573"
 											height="340"
@@ -1448,6 +1455,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/catalyst-remove-mazda.webp"
+											srcset="img/works/catalyst-remove-mazda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Чип-тюнинг Mazda: диагностика выпускной системы перед прошивкой"
 											width="573"
 											height="340"
@@ -1480,6 +1489,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/chip-tuning-honda.webp"
+											srcset="img/works/chip-tuning-honda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Чип-тюнинг Kia: подключение к блоку управления двигателем"
 											width="573"
 											height="340"
@@ -1512,6 +1523,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/catalyst-remove-mazda.webp"
+											srcset="img/works/catalyst-remove-mazda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Чип-тюнинг Toyota: проверка выпускного тракта на стенде"
 											width="573"
 											height="340"
@@ -1618,25 +1631,25 @@
 						<div class="footer__brand">
 							<div class="footer__brand-top">
 								<a href="/" class="footer__logo">
-									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50">
+									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50" loading="lazy">
 								</a>
 								<p class="footer__tagline">Ремонт и тюнинг выхлопных систем любой сложности</p>
 							</div>
 							<div class="footer__socials">
 								<a href="" class="footer__social social-item" aria-label="Max">
-									<img src="img/icons/max.svg" alt="Max" width="20" height="20">
+									<img src="img/icons/max.svg" alt="Max" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="Telegram">
-									<img src="img/icons/telegram.svg" alt="Telegram" width="20" height="20">
+									<img src="img/icons/telegram.svg" alt="Telegram" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="VK">
-									<img src="img/icons/vk.svg" alt="VK" width="20" height="20">
+									<img src="img/icons/vk.svg" alt="VK" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="Rutube">
-									<img src="img/icons/rutube.svg" alt="Rutube" width="20" height="20">
+									<img src="img/icons/rutube.svg" alt="Rutube" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="YouTube">
-									<img src="img/icons/youtube.svg" alt="YouTube" width="20" height="20">
+									<img src="img/icons/youtube.svg" alt="YouTube" loading="lazy">
 								</a>
 							</div>
 							<p class="footer__copyright footer__copyright--brand">© 2026. Все права защищены</p>

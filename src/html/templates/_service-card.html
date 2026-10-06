@@ -5,7 +5,7 @@
 		}
 		@@if(typeof iconImg !== 'undefined'){
 		<span class="services-card__icon">
-			<img class="services-card__icon-img" src="@@iconImg" alt="@@iconAlt">
+			<img class="services-card__icon-img" src="@@iconImg" alt="@@iconAlt" loading="lazy">
 		</span>
 		}
 		<div class="services-card__body">
@@ -43,7 +43,7 @@
 			}
 		</div>
 		@@if(typeof photo !== 'undefined'){
-		<img class="services-card__image" src="@@photo" alt="@@photoAlt" width="282" height="220" loading="lazy">
+		<img class="services-card__image" src="@@photo" srcset="@@photo 282w" sizes="(min-width: 768px) 282px, 100vw" alt="@@photoAlt" width="282" height="220" loading="lazy">
 		}
 		<a class="services-card__link@@if(typeof price === 'undefined'){ icon-arrow-top-right}" href="@@href">
 			<span class="services-card__link-text">@@link</span>

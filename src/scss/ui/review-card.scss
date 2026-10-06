@@ -7,16 +7,12 @@
 	min-width: 0;
 	height: 100%;
 	background-color: $color-bg-secondary;
-	background-image: url("@img/decor/dark-pattern.svg");
-	background-repeat: repeat;
-	background-position: 0 0;
-	background-size: auto;
 
 	// review-card__body
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: rem(30);
+		gap: rem(20);
 		padding: rem(20);
 		flex-grow: 1;
 
@@ -65,14 +61,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: rem(6);
+		gap: rem(3);
 		flex-grow: 1;
 		min-width: 0;
 		align-self: stretch;
 
-		@media (min-width: $md5) {
-			gap: rem(10);
-		}
+
 	}
 
 	// review-card__name
@@ -110,11 +104,10 @@
 		&[class^="icon-"]::before,
 		&[class*=" icon-"]::before {
 			font-size: rem(14);
-			text-shadow:
-				#{rem(18)} 0 0 currentColor,
-				#{rem(36)} 0 0 currentColor,
-				#{rem(54)} 0 0 currentColor,
-				#{rem(72)} 0 0 currentColor;
+			text-shadow: #{rem(18)} 0 0 currentColor,
+			#{rem(36)} 0 0 currentColor,
+			#{rem(54)} 0 0 currentColor,
+			#{rem(72)} 0 0 currentColor;
 		}
 
 		@media (min-width: $md5) {
@@ -123,11 +116,10 @@
 			&[class^="icon-"]::before,
 			&[class*=" icon-"]::before {
 				font-size: rem(20);
-				text-shadow:
-					#{rem(24)} 0 0 currentColor,
-					#{rem(48)} 0 0 currentColor,
-					#{rem(72)} 0 0 currentColor,
-					#{rem(96)} 0 0 currentColor;
+				text-shadow: #{rem(24)} 0 0 currentColor,
+				#{rem(48)} 0 0 currentColor,
+				#{rem(72)} 0 0 currentColor,
+				#{rem(96)} 0 0 currentColor;
 			}
 		}
 	}
@@ -144,7 +136,7 @@
 		p {
 			margin-block: 0;
 
-			& + p {
+			&+p {
 				margin-top: rem(16);
 			}
 		}
@@ -156,6 +148,10 @@
 		align-items: stretch;
 		justify-content: flex-end;
 		margin-top: auto;
+		background-image: url("@img/decor/dark-pattern.svg");
+		background-repeat: repeat;
+		background-position: 0 0;
+		background-size: auto;
 	}
 
 	// review-card__address

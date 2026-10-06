@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 
+$services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 50'%3E%3Cpolygon points='58,0 108,0 108,50 0,50' fill='%23fff'/%3E%3C/svg%3E");
+
 // активное состояние карточки с hover-подложкой
 @mixin services-card-active {
 	&::before {
@@ -33,7 +35,7 @@
 		transform: rotate(90deg);
 	}
 
-	&::after {
+	.services-card__link::after {
 		background-color: $color-bg-primary;
 	}
 
@@ -250,12 +252,14 @@
 
 			&::after {
 				inset: auto;
-				right: 0;
-				bottom: 0;
+				right: -1px;
+				bottom: -1px;
 				z-index: 1;
 				width: rem(98);
 				height: rem(40);
 				background-color: $color-bg-primary;
+				mask-image: none;
+				-webkit-mask-image: none;
 				clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 				pointer-events: none;
 			}
@@ -461,25 +465,6 @@
 		pointer-events: none;
 	}
 
-	// плашка под стрелкой: лежит под полосой ссылки, поэтому меняет цвет на ховере
-	&:not(.services-card--category)::after {
-		content: "";
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		z-index: 1;
-		width: rem(108);
-		height: rem(50);
-		background-color: $color-bg-secondary;
-		clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
-		transition: background-color 0.35s ease;
-		pointer-events: none;
-	}
-
-	&:not(.services-card--category):has(.services-card__link .services-card__price)::after {
-		content: none;
-	}
-
 	&:focus-within {
 		outline: rem(2) solid $color-accent-primary;
 		outline-offset: rem(2);
@@ -562,8 +547,8 @@
 	&__badge--bottom {
 		top: auto;
 		bottom: -1px;
-		right: calc(#{rem(50)} - 1px);
-		height: calc(#{rem(50)} + 1px);
+		right: calc(#{rem(49)} - 1px);
+		height: calc(#{rem(49)} + 1px);
 		padding: rem(10) rem(58) rem(12) rem(58);
 		font-family: $font-inter;
 		font-size: rem(16);
@@ -820,8 +805,8 @@
 	&__image {
 		position: absolute;
 		z-index: 1;
-		right: 0;
-		bottom: 0;
+		right: -1px;
+		bottom: -1px;
 		width: auto;
 		height: 100%;
 		max-width: 68%;
@@ -849,26 +834,43 @@
 
 		&::before {
 			position: absolute;
-			right: 0;
-			bottom: 0;
+			right: -1px;
+			bottom: -1px;
 			z-index: 2;
 			display: inline-flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			width: rem(50);
 			height: rem(50);
 			color: $color-accent-primary;
-			font-size: rem(20);
+			font-size: rem(16);
 			line-height: 1;
 			transition: transform 0.35s ease;
 		}
 
-		// зона клика: ссылка не создаёт containing block, поэтому inset считается по карточке
+		// зона клика на всю карточку и плашка стрелки поверх паттерна
 		&::after {
 			content: "";
 			position: absolute;
 			inset: 0;
 			z-index: 0;
+			background-color: $color-bg-secondary;
+			mask-image: $services-card-arrow-mask;
+			mask-repeat: no-repeat;
+			mask-position: right #{rem(-1)} bottom #{rem(-1)};
+			mask-size: #{rem(108)} #{rem(50)};
+			-webkit-mask-image: $services-card-arrow-mask;
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-position: right #{rem(-1)} bottom #{rem(-1)};
+			-webkit-mask-size: #{rem(108)} #{rem(50)};
+			transition: background-color 0.35s ease;
+		}
+
+		// у карточки с ценой угол занимает сама цена
+		&:has(.services-card__price)::after {
+			background-color: transparent;
+			mask-image: none;
+			-webkit-mask-image: none;
 		}
 	}
 

@@ -2,6 +2,7 @@
 @use "../abstracts" as *;
 
 .page > .article {
+	margin-bottom: 0;
 	padding-bottom: 0;
 	background: $color-bg-secondary;
 	color: $color-text-primary;
@@ -832,13 +833,6 @@
 			background: transparent;
 			color: $color-text-primary;
 			font-size: rem(18);
-		}
-	}
-
-	// article__reviews-prev
-	&__reviews-prev {
-		&.icon-arrrow-long::before {
-			transform: rotate(180deg);
 		}
 	}
 

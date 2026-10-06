@@ -18,8 +18,8 @@
 
 	&::placeholder {}
 
-	&:focus {
-		outline: none;
+	&:focus-visible {
+		@include focus-ring;
 	}
 
 	&.is-error {

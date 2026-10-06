@@ -6,17 +6,14 @@
 	color: $color-text-primary;
 
 	.page > & {
-		padding-top: rem(60);
-		padding-bottom: rem(60);
+		@include section-margin($space-60);
 
 		@media (min-width: $md4) {
-			padding-top: rem(80);
-			padding-bottom: rem(80);
+			@include section-margin($space-80);
 		}
 
 		@media (min-width: $md0) {
-			padding-top: rem(100);
-			padding-bottom: rem(100);
+			@include section-margin($space-100);
 		}
 	}
 

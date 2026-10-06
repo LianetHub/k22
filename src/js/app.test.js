@@ -1430,12 +1430,44 @@ describe("faq", () => {
 		expect(ctx.$("#faq-3").classList.contains("is-open")).toBe(true);
 	});
 
-	it("клик по тексту ответа не переключает пункт", () => {
+	it("клик по карточке и по тексту ответа переключает пункт", () => {
 		const ctx = boot(FAQ);
-		clickFaq(ctx, "#a1-text");
+		mockSlideClock(ctx);
+		mockAnswerMetrics(ctx);
 
+		clickFaq(ctx, "#faq-1");
+		expect(ctx.$("#faq-1").open).toBe(true);
+		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(true);
+
+		clickFaq(ctx, "#a1-text");
+		expect(ctx.$("#faq-1").open).toBe(true);
+		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(false);
+		expect(ctx.$("#faq-1").classList.contains("is-closing")).toBe(true);
+	});
+
+	it("не переключает пункт, если в ответе выделен текст или клик по ссылке", () => {
+		const ctx = boot(FAQ);
+		const answer = ctx.$("#a1");
+		const link = ctx.window.document.createElement("a");
+		link.href = "#more";
+		link.id = "a1-link";
+		link.textContent = "подробнее";
+		answer.append(link);
+
+		const selection = ctx.window.getSelection();
+		const range = ctx.window.document.createRange();
+		range.selectNodeContents(ctx.$("#a1-text"));
+		selection.removeAllRanges();
+		selection.addRange(range);
+
+		clickFaq(ctx, "#a1-text");
 		expect(ctx.$("#faq-1").open).toBe(false);
 		expect(ctx.$("#faq-1").classList.contains("is-open")).toBe(false);
+
+		selection.removeAllRanges();
+		const event = clickFaq(ctx, "#a1-link");
+		expect(event.defaultPrevented).toBe(false);
+		expect(ctx.$("#faq-1").open).toBe(false);
 	});
 
 	it("при reduced motion открывает и закрывает сразу", () => {

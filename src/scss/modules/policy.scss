@@ -1,39 +1,39 @@
 @use "../abstracts" as *;
 
 .policy {
-	padding: rem(32) 0 rem(60);
+	@include section-margin($space-32, $space-60);
 	background: $color-bg-secondary;
 
 	.page > & {
-		padding-bottom: rem(60);
+		margin-bottom: $space-60;
 
 		@media (min-width: $md4) {
-			padding-bottom: rem(80);
+			margin-bottom: $space-80;
 		}
 
 		@media (min-width: $md0) {
-			padding-bottom: rem(100);
+			margin-bottom: $space-100;
 		}
 	}
 
 	.page > &:first-child {
-		padding-top: rem(32);
+		margin-top: $space-32;
 
 		@media (min-width: $md4) {
-			padding-top: rem(70);
+			margin-top: $space-70;
 		}
 
 		@media (min-width: $md0) {
-			padding-top: rem(54);
+			margin-top: $space-54;
 		}
 	}
 
 	@media (min-width: $md4) {
-		padding: rem(70) 0 rem(80);
+		@include section-margin($space-70, $space-80);
 	}
 
 	@media (min-width: $md0) {
-		padding: rem(54) 0 rem(100);
+		@include section-margin($space-54, $space-100);
 	}
 
 	// .policy__container

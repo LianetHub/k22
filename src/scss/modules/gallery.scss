@@ -3,11 +3,11 @@
 .gallery {
 	background: $color-bg-primary;
 
-	.page > & {
-		padding: rem(60) 0;
+	.page>& {
+		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
-			padding: rem(80) 0;
+			@include section-inset($space-80);
 		}
 	}
 
@@ -44,5 +44,25 @@
 		display: block;
 		aspect-ratio: 1;
 		overflow: hidden;
+		width: rem(353);
+		height: rem(353);
+
+		@media (min-width:$md5) {
+			width: rem(212);
+			height: rem(212);
+
+		}
+
+		@media (min-width:$md3) {
+			width: rem(323);
+			height: rem(323);
+
+		}
+
+		@media (min-width:$md0) {
+			width: rem(348);
+			height: rem(348);
+
+		}
 	}
 }

@@ -55,7 +55,7 @@
 	letter-spacing: -0.0275rem;
 
 	&:focus-visible {
-		outline: none;
+		@include focus-ring;
 	}
 
 	&:disabled,

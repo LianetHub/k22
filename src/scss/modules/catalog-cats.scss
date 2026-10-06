@@ -4,18 +4,18 @@
 	background-color: $color-bg-primary;
 
 	.page > & {
-		padding: rem(20) 0;
+		@include section-inset($space-20);
 
 		@media (min-width: $md4) {
-			padding: rem(60) 0;
+			@include section-inset($space-60);
 		}
 
 		@media (min-width: $md1) {
-			padding: rem(80) 0;
+			@include section-inset($space-80);
 		}
 
 		@media (min-width: $md0) {
-			padding: rem(100) 0;
+			@include section-inset($space-100);
 		}
 	}
 

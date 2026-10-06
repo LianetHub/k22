@@ -551,15 +551,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		document.querySelectorAll(".gallery__slider")?.forEach((el) => {
 			new Swiper(el, {
-				slidesPerView: 1,
+				slidesPerView: "auto",
 				spaceBetween: 10,
 				breakpoints: {
-					768: {
-						slidesPerView: 3.13,
+					767.98: {
 						spaceBetween: 30,
 					},
-					1440: {
-						slidesPerView: 4,
+					1439.98: {
 						spaceBetween: 30,
 					},
 				},
@@ -980,7 +978,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (details.open) details.classList.add("is-open");
 
-		question.addEventListener("click", (event) => {
+		details.addEventListener("click", (event) => {
+			if (event.target.closest("a, button")) return;
+
+			const selection = window.getSelection();
+			if (selection && !selection.isCollapsed && details.contains(selection.anchorNode)) return;
+
 			event.preventDefault();
 
 			const willOpen = !details.classList.contains("is-open");

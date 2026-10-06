@@ -13,20 +13,20 @@
 }
 
 .tablet-only {
-	display: none !important;
+	display: none;
 
 	@media (min-width: $md4) {
-		display: block !important;
+		display: block;
 	}
 
 	@media (min-width: $md3) {
-		display: none !important;
+		display: none;
 	}
 }
 
 .mobile-only {
 	@media (min-width: $md5) {
-		display: none !important;
+		display: none;
 	}
 }
 

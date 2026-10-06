@@ -15,10 +15,10 @@
 	}
 
 	background: $color-bg-primary;
-	padding: rem(60) 0;
+	@include section-inset($space-60);
 
 	@media (min-width: $md4) {
-		padding: rem(80) 0;
+		@include section-inset($space-80);
 	}
 
 	// .callback__container
@@ -365,6 +365,12 @@
 		@media (min-width: $md1) {
 			flex: 1 1 0;
 		}
+	}
+
+	// .callback__input
+	&__input:focus,
+	&__input:focus-visible {
+		outline: none;
 	}
 
 	// .callback__actions

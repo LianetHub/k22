@@ -6,21 +6,22 @@
 	&.services--catalog {
 		background-color: $color-bg-primary;
 
-
-
+		.page>& {
+			@include section-inset($space-section);
+		}
 	}
 
 	// services--about
 	&.services--about {
 		.page>& {
-			padding: rem(60) 0;
+			@include section-margin($space-60);
 
 			@media (min-width: $md4) {
-				padding: rem(80) 0;
+				@include section-margin($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding: rem(100) 0;
+				@include section-margin($space-100);
 			}
 		}
 
@@ -36,14 +37,14 @@
 	// services--category
 	&.services--category {
 		.page>& {
-			padding: rem(60) 0;
+			@include section-margin($space-60);
 
 			@media (min-width: $md4) {
-				padding: rem(80) 0;
+				@include section-margin($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding: rem(100) 0;
+				@include section-margin($space-100);
 			}
 		}
 
@@ -69,14 +70,14 @@
 	// services--extras
 	&.services--extras {
 		.page>& {
-			padding: rem(140) 0 rem(20);
+			@include section-margin(rem(140), $space-20);
 
 			@media (min-width: $md4) {
-				padding: rem(200) 0 rem(80);
+				@include section-margin(rem(200), $space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding: rem(200) 0 rem(100);
+				@include section-margin(rem(200), $space-100);
 			}
 		}
 
@@ -101,14 +102,14 @@
 	// services--mosaic
 	&.services--mosaic {
 		.page>& {
-			padding-block: rem(20);
+			@include section-margin($space-20);
 
 			@media (min-width: $md1) {
-				padding-block: rem(80);
+				@include section-margin($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding-block: rem(100);
+				@include section-margin($space-100);
 			}
 		}
 
@@ -128,14 +129,14 @@
 	// .services:has(.services__panel)
 	&:has(.services__panel) {
 		.page>& {
-			padding: rem(60) 0;
+			@include section-margin($space-60);
 
 			@media (min-width: $md4) {
-				padding: rem(80) 0;
+				@include section-margin($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding: rem(100) 0;
+				@include section-margin($space-100);
 			}
 		}
 
@@ -163,15 +164,14 @@
 	// .services--pair
 	&.services--pair {
 		.page>& {
-			padding-top: 0;
-			padding-bottom: rem(60);
+			@include section-margin(0, $space-60);
 
 			@media (min-width: $md4) {
-				padding-block: rem(80);
+				@include section-margin($space-80);
 			}
 
 			@media (min-width: $md0) {
-				padding-block: rem(100);
+				@include section-margin($space-100);
 			}
 		}
 

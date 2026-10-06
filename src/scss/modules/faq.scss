@@ -4,15 +4,15 @@
 .faq {
 	background: $color-bg-secondary;
 
-	.page > & {
-		padding: rem(60) 0;
+	.page>& {
+		@include section-margin($space-60);
 
 		@media (min-width: $md4) {
-			padding: rem(80) 0;
+			@include section-margin($space-80);
 		}
 
 		@media (min-width: $md0) {
-			padding: rem(100) 0;
+			@include section-margin($space-100);
 		}
 	}
 
@@ -21,32 +21,41 @@
 
 	// .faq__row
 	&__row {
-		display: grid;
-		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
 		gap: rem(30);
 
 		@media (min-width: $md1) {
-			grid-template-columns: auto 1fr;
-			grid-template-rows: 1fr auto;
+			flex-direction: row;
+			align-items: stretch;
 			column-gap: rem(55);
 			row-gap: 0;
-			align-items: stretch;
 		}
 
 		@media (min-width: $md0) {
-			grid-template-columns: rem(416) rem(1025);
 			justify-content: space-between;
 			column-gap: 0;
 		}
 	}
 
-	// .faq__offer-top
-	&__offer-top {
+	// .faq__aside
+	&__aside {
+		display: contents;
+
 		@media (min-width: $md1) {
-			grid-column: 1;
-			grid-row: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex: 0 0 auto;
+		}
+
+		@media (min-width: $md0) {
+			width: rem(416);
 		}
 	}
+
+	// .faq__offer-top
+	&__offer-top {}
 
 	// .faq__offer-bottom
 	&__offer-bottom {
@@ -54,6 +63,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: rem(20);
+		order: 1;
 
 		@media (min-width: $md4) {
 			flex-direction: row;
@@ -62,9 +72,7 @@
 		}
 
 		@media (min-width: $md1) {
-			grid-column: 1;
-			grid-row: 2;
-			align-self: end;
+			order: 0;
 			flex-direction: column;
 			align-items: flex-start;
 			gap: rem(20);
@@ -72,29 +80,7 @@
 	}
 
 	// .faq__title
-	&__title {
-		// .faq__title.decor-line-block
-		&.decor-line-block {
-			@media (min-width: $md4) {
-				padding-top: rem(44);
-			}
-		}
-
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		gap: rem(10);
-
-		@media (min-width: $md4) {
-			@include tablet-heading-h1;
-		}
-
-		@media (min-width: $md1) {
-			flex-direction: column;
-			gap: rem(26);
-			@include desktop-heading-h2;
-		}
-	}
+	&__title {}
 
 	// .faq__subtitle
 	&__subtitle {
@@ -152,8 +138,13 @@
 		min-width: 0;
 
 		@media (min-width: $md1) {
-			grid-column: 2;
-			grid-row: 1 / span 2;
+			flex: 1;
+			min-width: 0;
+		}
+
+		@media (min-width: $md0) {
+			flex: none;
+			width: rem(1025);
 		}
 	}
 
@@ -164,6 +155,7 @@
 	&__details {
 		background: $color-bg-primary;
 		padding: rem(20);
+		cursor: pointer;
 	}
 
 	// .faq__question
@@ -172,7 +164,6 @@
 		display: flex;
 		align-items: center;
 		gap: rem(16);
-		cursor: pointer;
 		color: $color-text-primary;
 		list-style: none;
 

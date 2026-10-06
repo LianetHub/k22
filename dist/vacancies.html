@@ -45,7 +45,7 @@
 			                <nav class="heaader__menu menu" id="site-menu" data-menu aria-label="Меню в шапке">
 			                	<div class="menu__mobile-bar">
 			                		<a href="/" class="menu__mobile-logo">
-			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34">
+			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34" loading="lazy">
 			                		</a>
 			                		<button type="button" class="menu__back icon-chevron-left" hidden aria-label="Назад" data-menu-back></button>
 			                		<button type="button" class="menu__close icon-cross" aria-label="Закрыть меню" data-menu-close></button>
@@ -770,6 +770,8 @@
 										<img
 											class="vacancy-card__img"
 											src="img/vacancies/autoelectrician.webp"
+											srcset="img/vacancies/autoelectrician.webp 474w"
+											sizes="(min-width: 768px) 280px, 70vw"
 											alt="Автоэлектрик с диагностическим оборудованием"
 											width="474"
 											height="639"
@@ -798,6 +800,8 @@
 										<img
 											class="vacancy-card__img"
 											src="img/vacancies/mechanic.webp"
+											srcset="img/vacancies/mechanic.webp 474w"
+											sizes="(min-width: 768px) 280px, 70vw"
 											alt="Механик с гаечными ключами"
 											width="474"
 											height="639"
@@ -826,6 +830,8 @@
 										<img
 											class="vacancy-card__img"
 											src="img/vacancies/service-advisor.webp"
+											srcset="img/vacancies/service-advisor.webp 474w"
+											sizes="(min-width: 768px) 280px, 70vw"
 											alt="Мастер-приёмщик с планшетом"
 											width="474"
 											height="639"
@@ -845,12 +851,18 @@
 				<section class="faq">
 					<div class="faq__container container">
 						<div class="faq__row">
-							<div class="faq__offer-top">
-								<h2 class="faq__title title decor-line-block">
-									вопрос
-									<span class="color-primary">ответ</span>
-								</h2>
-							</div>
+							<aside class="faq__aside">
+								<div class="faq__offer-top">
+									<h2 class="faq__title title decor-line-block">
+										вопрос
+										<span class="color-primary">ответ</span>
+									</h2>
+								</div>
+								<div class="faq__offer-bottom">
+									<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер&nbsp;бесплатно проконсультирует.</p>
+									<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+								</div>
+							</aside>
 							
 							<ul class="faq__list">
 								<li class="faq__item">
@@ -880,14 +892,9 @@
 
 							</ul>
 							
-							<div class="faq__offer-bottom">
-								<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
-								<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
-							</div>
 						</div>
 					</div>
 				</section>
-
 				<section class="callback"  id="callback" >
 					<div class="callback__container container">
 						
@@ -961,22 +968,22 @@
 						<div class="gallery__slider swiper">
 							<div class="swiper-wrapper">
 								<a href="img/gallery/vacancies-1.webp" data-fancybox="gallery" class="gallery__slide swiper-slide">
-									<img src="img/gallery/vacancies-1.webp" class="cover-image" alt="Интерьер автосервиса K22 с автомобилями" width="348" height="348" loading="lazy">
+									<img src="img/gallery/vacancies-1.webp" srcset="img/gallery/vacancies-1.webp 348w" sizes="(min-width: 768px) 348px, 80vw" class="cover-image" alt="Интерьер автосервиса K22 с автомобилями" width="348" height="348" loading="lazy">
 								</a>
 <a href="img/gallery/vacancies-2.webp" data-fancybox="gallery" class="gallery__slide swiper-slide">
-									<img src="img/gallery/vacancies-2.webp" class="cover-image" alt="Диагностика автомобиля на ноутбуке" width="348" height="348" loading="lazy">
+									<img src="img/gallery/vacancies-2.webp" srcset="img/gallery/vacancies-2.webp 348w" sizes="(min-width: 768px) 348px, 80vw" class="cover-image" alt="Диагностика автомобиля на ноутбуке" width="348" height="348" loading="lazy">
 								</a>
 <a href="img/gallery/shared-exhaust.webp" data-fancybox="gallery" class="gallery__slide swiper-slide">
-									<img src="img/gallery/shared-exhaust.webp" class="cover-image" alt="Новая нержавеющая секция выхлопной трубы" width="348" height="348" loading="lazy">
+									<img src="img/gallery/shared-exhaust.webp" srcset="img/gallery/shared-exhaust.webp 348w" sizes="(min-width: 768px) 348px, 80vw" class="cover-image" alt="Новая нержавеющая секция выхлопной трубы" width="348" height="348" loading="lazy">
 								</a>
 <a href="img/gallery/shared-catalyst.webp" data-fancybox="gallery" class="gallery__slide swiper-slide">
-									<img src="img/gallery/shared-catalyst.webp" class="cover-image" alt="Соты катализатора в руке мастера" width="348" height="348" loading="lazy">
+									<img src="img/gallery/shared-catalyst.webp" srcset="img/gallery/shared-catalyst.webp 348w" sizes="(min-width: 768px) 348px, 80vw" class="cover-image" alt="Соты катализатора в руке мастера" width="348" height="348" loading="lazy">
 								</a>
 <a href="img/gallery/shared-filter.webp" data-fancybox="gallery" class="gallery__slide swiper-slide">
-									<img src="img/gallery/shared-filter.webp" class="cover-image" alt="Цилиндрическая деталь выхлопной системы в цехе" width="348" height="348" loading="lazy">
+									<img src="img/gallery/shared-filter.webp" srcset="img/gallery/shared-filter.webp 348w" sizes="(min-width: 768px) 348px, 80vw" class="cover-image" alt="Цилиндрическая деталь выхлопной системы в цехе" width="348" height="348" loading="lazy">
 								</a>
 <a href="img/gallery/shared-filter.webp" data-fancybox="gallery" class="gallery__slide swiper-slide">
-									<img src="img/gallery/shared-filter.webp" class="cover-image" alt="Цилиндрическая деталь выхлопной системы в цехе" width="348" height="348" loading="lazy">
+									<img src="img/gallery/shared-filter.webp" srcset="img/gallery/shared-filter.webp 348w" sizes="(min-width: 768px) 348px, 80vw" class="cover-image" alt="Цилиндрическая деталь выхлопной системы в цехе" width="348" height="348" loading="lazy">
 								</a>
 
 							</div>
@@ -1057,25 +1064,25 @@
 						<div class="footer__brand">
 							<div class="footer__brand-top">
 								<a href="/" class="footer__logo">
-									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50">
+									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50" loading="lazy">
 								</a>
 								<p class="footer__tagline">Ремонт и тюнинг выхлопных систем любой сложности</p>
 							</div>
 							<div class="footer__socials">
 								<a href="" class="footer__social social-item" aria-label="Max">
-									<img src="img/icons/max.svg" alt="Max" width="20" height="20">
+									<img src="img/icons/max.svg" alt="Max" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="Telegram">
-									<img src="img/icons/telegram.svg" alt="Telegram" width="20" height="20">
+									<img src="img/icons/telegram.svg" alt="Telegram" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="VK">
-									<img src="img/icons/vk.svg" alt="VK" width="20" height="20">
+									<img src="img/icons/vk.svg" alt="VK" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="Rutube">
-									<img src="img/icons/rutube.svg" alt="Rutube" width="20" height="20">
+									<img src="img/icons/rutube.svg" alt="Rutube" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="YouTube">
-									<img src="img/icons/youtube.svg" alt="YouTube" width="20" height="20">
+									<img src="img/icons/youtube.svg" alt="YouTube" loading="lazy">
 								</a>
 							</div>
 							<p class="footer__copyright footer__copyright--brand">© 2026. Все права защищены</p>

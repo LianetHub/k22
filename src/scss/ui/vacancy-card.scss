@@ -140,7 +140,7 @@
 		}
 
 		&:focus-visible {
-			outline: none;
+			@include focus-ring;
 		}
 
 		@media (any-hover: hover) {
@@ -156,7 +156,7 @@
 			right: 0;
 			bottom: 0;
 			z-index: 1;
-			display: inline-flex !important;
+			display: inline-flex;
 			align-items: center;
 			justify-content: center;
 			width: rem(108);

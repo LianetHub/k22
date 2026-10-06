@@ -1,11 +1,11 @@
 @use "../abstracts" as *;
 
 .vacancies {
-	padding: rem(60) 0;
+	@include section-margin($space-60);
 	background: $color-bg-secondary;
 
 	@media (min-width: $md4) {
-		padding: rem(80) 0;
+		@include section-margin($space-80);
 	}
 
 	// vacancies__container
@@ -16,21 +16,7 @@
 	}
 
 	// vacancies__title
-	&__title {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: rem(10);
-
-		// vacancies__title.decor-line-block
-		&.decor-line-block {
-			padding-top: rem(40);
-		}
-
-		@media (min-width: $md4) {
-			gap: rem(26);
-		}
-	}
+	&__title {}
 
 	// vacancies__grid
 	&__grid {

@@ -16,14 +16,14 @@
 	background: $color-bg-primary;
 
 	.page>& {
-		padding: rem(60) 0;
+		@include section-inset($space-60);
 
 		@media (min-width: $md5) {
-			padding: rem(80) 0;
+			@include section-inset($space-80);
 		}
 
 		@media (min-width: $md0) {
-			padding: rem(100) 0;
+			@include section-inset($space-100);
 		}
 	}
 
@@ -77,10 +77,10 @@
 	// .reviews__grid
 	&__grid {
 		@media (min-width: $md5) {
-			display: grid !important;
+			display: grid;
 			grid-template-columns: 1fr;
 			gap: rem(30);
-			transform: none !important;
+			transform: none;
 			width: 100%;
 		}
 
@@ -133,10 +133,4 @@
 		}
 	}
 
-	// .reviews__prev
-	&__prev {
-		&.icon-arrrow-long::before {
-			transform: rotate(180deg);
-		}
-	}
 }

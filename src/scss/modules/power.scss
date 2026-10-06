@@ -2,15 +2,15 @@
 @use "../abstracts" as *;
 
 .power {
-	padding-block: rem(48);
+	@include section-margin($space-48);
 	background: $color-bg-secondary;
 
 	@media (min-width: $md4) {
-		padding-block: rem(80);
+		@include section-margin($space-80);
 	}
 
 	@media (min-width: $md2) {
-		padding-block: rem(100);
+		@include section-margin($space-100);
 	}
 
 	&:has(#power-stage-1:checked) {

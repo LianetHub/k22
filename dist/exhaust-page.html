@@ -45,7 +45,7 @@
 			                <nav class="heaader__menu menu" id="site-menu" data-menu aria-label="Меню в шапке">
 			                	<div class="menu__mobile-bar">
 			                		<a href="/" class="menu__mobile-logo">
-			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34">
+			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34" loading="lazy">
 			                		</a>
 			                		<button type="button" class="menu__back icon-chevron-left" hidden aria-label="Назад" data-menu-back></button>
 			                		<button type="button" class="menu__close icon-cross" aria-label="Закрыть меню" data-menu-close></button>
@@ -769,8 +769,8 @@
 								<p>Виновник — клапан EGR. Часть выхлопных газов клапан направляет обратно во впуск, чтобы снизить количество оксидов азота и сделать выхлоп менее токсичным. Частицы сажи из выхлопных газов смешиваются в двигателе с парами масла из системы вентиляции картера. Образуется вязкая смесь, которая оседает во впуске. С пробегом слой нагара нарастает. Чаще всего владелец даже не замечает снижения мощности, потому что происходит это постепенно.</p>
 							</div>
 							<div class="text-block__photos">
-								<img src="img/text-block/intake-soot.webp" alt="Сажа во впускном канале" width="423" height="419" loading="lazy">
-								<img src="img/text-block/boost-sensor-soot.webp" alt="Датчик давления наддува в саже" width="423" height="419" loading="lazy">
+								<img src="img/text-block/intake-soot.webp" srcset="img/text-block/intake-soot.webp 423w" sizes="(min-width: 768px) 50vw, 100vw" alt="Сажа во впускном канале" width="423" height="419" loading="lazy">
+								<img src="img/text-block/boost-sensor-soot.webp" srcset="img/text-block/boost-sensor-soot.webp 423w" sizes="(min-width: 768px) 50vw, 100vw" alt="Датчик давления наддува в саже" width="423" height="419" loading="lazy">
 							</div>
 						</div>
 						<div class="text-block__points">
@@ -865,8 +865,8 @@
 						
 						
 						<div class="reviews__nav">
-							<button type="button" class="reviews__prev swiper-button-prev icon-arrrow-long" aria-label="Предыдущий отзыв"></button>
-							<button type="button" class="reviews__next swiper-button-next icon-arrrow-long" aria-label="Следующий отзыв"></button>
+							<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
+							<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
 						</div>
 					</div>
 				</section>
@@ -1020,6 +1020,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/chip-tuning-honda.webp"
+											srcset="img/works/chip-tuning-honda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Замена выпускного коллектора Honda: моторный отсек с открытым капотом"
 											width="573"
 											height="340"
@@ -1041,6 +1043,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/catalyst-remove-mazda.webp"
+											srcset="img/works/catalyst-remove-mazda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Замена выпускного коллектора Mazda: снятый узел выпускного тракта"
 											width="573"
 											height="340"
@@ -1062,6 +1066,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/chip-tuning-honda.webp"
+											srcset="img/works/chip-tuning-honda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Замена выпускного коллектора Kia: подкапотное пространство в сервисе"
 											width="573"
 											height="340"
@@ -1083,6 +1089,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/catalyst-remove-mazda.webp"
+											srcset="img/works/catalyst-remove-mazda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Замена выпускного коллектора Toyota: демонтированный коллектор в тисках"
 											width="573"
 											height="340"
@@ -1104,6 +1112,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/chip-tuning-honda.webp"
+											srcset="img/works/chip-tuning-honda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Замена выпускного коллектора Volkswagen: работы в моторном отсеке"
 											width="573"
 											height="340"
@@ -1125,6 +1135,8 @@
 										<img
 											class="portfolio-card__img"
 											src="img/works/catalyst-remove-mazda.webp"
+											srcset="img/works/catalyst-remove-mazda.webp 573w"
+											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
 											alt="Замена выпускного коллектора Skoda: осмотр фланца перед установкой"
 											width="573"
 											height="340"
@@ -1216,12 +1228,18 @@
 				<section class="faq">
 					<div class="faq__container container">
 						<div class="faq__row">
-							<div class="faq__offer-top">
-								<h2 class="faq__title title decor-line-block">
-									вопрос
-									<span class="color-primary">ответ</span>
-								</h2>
-							</div>
+							<aside class="faq__aside">
+								<div class="faq__offer-top">
+									<h2 class="faq__title title decor-line-block">
+										вопрос
+										<span class="color-primary">ответ</span>
+									</h2>
+								</div>
+								<div class="faq__offer-bottom">
+									<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер&nbsp;бесплатно проконсультирует.</p>
+									<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+								</div>
+							</aside>
 							
 							<ul class="faq__list">
 								<li class="faq__item">
@@ -1251,14 +1269,9 @@
 
 							</ul>
 							
-							<div class="faq__offer-bottom">
-								<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер бесплатно проконсультирует.</p>
-								<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
-							</div>
 						</div>
 					</div>
 				</section>
-
 			</main>
 			<footer class="footer">
 				<div class="footer__container container">
@@ -1266,25 +1279,25 @@
 						<div class="footer__brand">
 							<div class="footer__brand-top">
 								<a href="/" class="footer__logo">
-									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50">
+									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50" loading="lazy">
 								</a>
 								<p class="footer__tagline">Ремонт и тюнинг выхлопных систем любой сложности</p>
 							</div>
 							<div class="footer__socials">
 								<a href="" class="footer__social social-item" aria-label="Max">
-									<img src="img/icons/max.svg" alt="Max" width="20" height="20">
+									<img src="img/icons/max.svg" alt="Max" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="Telegram">
-									<img src="img/icons/telegram.svg" alt="Telegram" width="20" height="20">
+									<img src="img/icons/telegram.svg" alt="Telegram" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="VK">
-									<img src="img/icons/vk.svg" alt="VK" width="20" height="20">
+									<img src="img/icons/vk.svg" alt="VK" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="Rutube">
-									<img src="img/icons/rutube.svg" alt="Rutube" width="20" height="20">
+									<img src="img/icons/rutube.svg" alt="Rutube" loading="lazy">
 								</a>
 								<a href="" class="footer__social social-item" aria-label="YouTube">
-									<img src="img/icons/youtube.svg" alt="YouTube" width="20" height="20">
+									<img src="img/icons/youtube.svg" alt="YouTube" loading="lazy">
 								</a>
 							</div>
 							<p class="footer__copyright footer__copyright--brand">© 2026. Все права защищены</p>

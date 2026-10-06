@@ -1,15 +1,15 @@
 @use "../abstracts" as *;
 
 .format {
-	padding: rem(60) 0;
+	@include section-margin($space-60);
 	background-color: $color-bg-secondary;
 
 	@media (min-width: $md4) {
-		padding: rem(80) 0;
+		@include section-margin($space-80);
 	}
 
 	@media (min-width: $md0) {
-		padding: rem(100) 0;
+		@include section-margin($space-100);
 	}
 
 	// .format__container

@@ -3,14 +3,14 @@
 .blog {
 	// blog--related
 	&.blog--related {
-		padding: rem(60) 0;
+		@include section-margin($space-60);
 
 		@media (min-width: $md4) {
-			padding: rem(100) 0;
+			@include section-margin($space-100);
 		}
 
 		@media (min-width: $md1) {
-			padding: 0 0 rem(100);
+			@include section-margin(0, $space-100);
 		}
 
 		.blog__list {
@@ -46,14 +46,14 @@
 	// blog--page
 	&.blog--page {
 		.page > &:first-child {
-			padding-top: rem(40);
+			margin-top: $space-40;
 
 			@media (min-width: $md4) {
-				padding-top: rem(48);
+				margin-top: $space-48;
 			}
 
 			@media (min-width: $md2) {
-				padding-top: rem(54);
+				margin-top: $space-54;
 			}
 		}
 
@@ -76,15 +76,15 @@
 		}
 	}
 
-	padding: rem(48) 0;
+	@include section-margin($space-48);
 	background: $color-bg-secondary;
 
 	@media (min-width: $md4) {
-		padding: rem(80) 0;
+		@include section-margin($space-80);
 	}
 
 	@media (min-width: $md2) {
-		padding: rem(100) 0;
+		@include section-margin($space-100);
 	}
 
 	// blog__container
@@ -233,12 +233,6 @@
 			&:hover {
 				opacity: 0.7;
 			}
-		}
-	}
-
-	&__prev {
-		&.icon-arrrow-long::before {
-			transform: rotate(180deg);
 		}
 	}
 
@@ -393,10 +387,10 @@
 	// blog:has(.blog__slider)
 	&:has(.blog__slider) {
 		.page > & {
-			padding: rem(60) 0;
+			@include section-margin($space-60);
 
 			@media (min-width: $md4) {
-				padding: rem(80) 0;
+				@include section-margin($space-80);
 			}
 		}
 

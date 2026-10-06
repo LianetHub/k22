@@ -1,7 +1,7 @@
 <li class="@@if(typeof itemClass !== 'undefined'){@@itemClass}@@if(typeof itemClass === 'undefined'){products__item}">
 	<article class="product-card">
 		<div class="product-card__media">
-			<img class="product-card__img" src="@@image" alt="@@imageAlt" width="1200" height="800" @@if(typeof fetchpriority !=='undefined' ){ fetchpriority="@@fetchpriority" }@@if(typeof loading !=='undefined' ){ loading="@@loading" }>
+			<img class="product-card__img" src="@@image" srcset="@@image 1200w" sizes="(min-width: 1440px) 25vw, (min-width: 768px) 50vw, 100vw" alt="@@imageAlt" width="1200" height="800" @@if(typeof fetchpriority !=='undefined' ){ fetchpriority="@@fetchpriority" }@@if(typeof loading !=='undefined' ){ loading="@@loading" }@@if(typeof loading === 'undefined' && typeof fetchpriority === 'undefined'){ loading="lazy"}>
 			@@if(typeof badge !== 'undefined'){
 			<span class="product-card__badge">@@badge</span>
 			}

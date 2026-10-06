@@ -9,14 +9,14 @@
 	color: $color-bg-primary;
 
 	.page>& {
-		padding: rem(60) 0;
+		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
-			padding: rem(80) 0;
+			@include section-inset($space-80);
 		}
 
 		@media (min-width: $md1) {
-			padding: rem(160) 0 rem(145);
+			@include section-inset(rem(160), rem(145));
 		}
 	}
 

@@ -15,6 +15,39 @@
 	}
 }
 
+@mixin focus-ring($color: $color-accent-primary) {
+	outline: 2px solid $color;
+	outline-offset: rem(2);
+}
+
+/// Внешний ритм секции: соседи во flex не схлопывают margin.
+@mixin section-margin($start, $end: null) {
+	padding-block: 0;
+
+	@if $end ==null {
+		margin-block: $start;
+	}
+
+	@else {
+		margin-top: $start;
+		margin-bottom: $end;
+	}
+}
+
+/// Внутренний отступ залитой секции. Фон остаётся на блоке, внешний ритм сброшен.
+@mixin section-inset($start, $end: null) {
+	margin-block: 0;
+
+	@if $end ==null {
+		padding-block: $start;
+	}
+
+	@else {
+		padding-top: $start;
+		padding-bottom: $end;
+	}
+}
+
 //К псевдоэлементам
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
 	content: $content;
@@ -206,8 +239,8 @@ $dimensions: (
 		}
 
 		.swiper-slide {
-			width: 100% !important;
-			margin: 0 !important;
+			width: 100%;
+			margin: 0;
 			height: auto;
 			min-width: 0;
 		}
@@ -292,9 +325,10 @@ $dimensions: (
 /* Desktop/Body/XL */
 @mixin desktop-body-xl {
 	font-family: $font-inter;
-	font-size: 26px;
+	font-size: rem(26);
 	font-weight: 400;
-	line-height: 120%;
+	line-height: 1.2;
+	letter-spacing: em(-0.52, 26);
 }
 
 /* Desktop/Body/S */
