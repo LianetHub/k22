@@ -343,6 +343,14 @@
             gap: 0;
             padding-top: rem(40);
         }
+
+        &.container {
+            padding-inline: $space-70;
+
+            @media (min-width:$md0) {
+                padding-inline: $space-70;
+            }
+        }
     }
 
     // .hero__offer

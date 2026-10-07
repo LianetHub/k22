@@ -82,7 +82,11 @@
 	// .header__container
 	&__container {
 		box-sizing: border-box;
-		padding: 0 rem(32);
+		padding: 0 rem(16);
+
+		@media (min-width:$md1) {
+			padding: 0 rem(32);
+		}
 
 		@media (min-width: $md0) {
 			padding: 0;
@@ -108,13 +112,19 @@
 
 	// .header__logo
 	&__logo {
-		width: rem(114);
+		width: rem(70);
 		height: rem(34);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-shrink: 0;
-		margin-right: 0.75rem;
+
+
+		@media (min-width:$md1) {
+			margin-right: 0.75rem;
+			width: rem(114);
+
+		}
 
 		@media (min-width: $md0) {
 			width: rem(133);
@@ -139,11 +149,15 @@
 		@media (min-width: $md2) {
 			display: flex;
 			flex-direction: column;
-			align-items: flex-end;
+			align-items: flex-start;
 			justify-content: center;
 			gap: rem(2);
 			margin-left: auto;
+		}
+
+		@media (min-width:$md1) {
 			padding: 0 rem(18);
+
 		}
 	}
 
@@ -156,6 +170,7 @@
 		letter-spacing: em(-0.18, 18);
 		text-transform: uppercase;
 		transition: color 0.3s ease;
+		white-space: nowrap;
 
 		@media (min-width: $md0) {
 			font-size: rem(20);
@@ -203,7 +218,11 @@
 		@media (min-width: $md2) {
 			display: flex;
 			gap: rem(16);
+		}
+
+		@media (min-width:$md1) {
 			margin-left: rem(10);
+
 		}
 	}
 
@@ -436,7 +455,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(10);
-		padding: rem(20);
+
 		background: $color-bg-secondary;
 		color: $color-text-primary;
 		text-transform: uppercase;
@@ -457,7 +476,11 @@
 		&::before {
 			font-size: rem(12);
 			flex-shrink: 0;
-			margin-right: 0.5rem;
+
+			@media (min-width:$md1) {
+				margin-right: 0.5rem;
+
+			}
 		}
 
 		&::after {
@@ -477,7 +500,7 @@
 			width: auto;
 			height: 100%;
 			min-height: rem(53);
-			padding: 0 rem(12);
+			padding-inline: rem(10);
 			gap: rem(4);
 			margin: 0 rem(-5);
 			flex-shrink: 0;
@@ -558,6 +581,10 @@
 			}
 		}
 
+		@media (min-width:$md1) {
+			padding-inline: rem(22);
+		}
+
 		@media (min-width: $md0) {
 			min-height: rem(70);
 			margin: 0 rem(-5);
@@ -597,14 +624,14 @@
 		}
 
 		@media (min-width: $md0) {
-			width: rem(1468);
+			width: rem(1469);
 		}
 	}
 
 	// .menu__dropdown--compact
 	&__dropdown--compact {
 		@media (min-width: $md2) {
-			left: 0;
+			left: rem(4);
 			width: rem(281);
 		}
 
