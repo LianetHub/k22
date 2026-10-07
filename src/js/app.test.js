@@ -1137,6 +1137,27 @@ describe("Яндекс.Карта", () => {
 		expect(ctx.placemarks[0].optionSets.at(-1)).toEqual({ visible: true });
 		expect(ctx.errors).toEqual([]);
 	});
+
+	it("клик по документу вне балуна закрывает его, клик по балуну оставляет открытым", async () => {
+		const ctx = boot(
+			`<div class="contacts__map-block">${mapFixture()}<p id="outside">контент</p><div class="contacts__balloon" data-marker="Кузнецовская, 52к13"><a href="tel:+79214019898">8(921)401-98-98</a></div></div>`,
+			{ withYmaps: true, width: 1440 },
+		);
+		ctx.observers[0].intersect();
+
+		const balloon = ctx.$('[data-marker="Кузнецовская, 52к13"]');
+		ctx.placemarks[0].fire("click", { stopPropagation() {} });
+		await Promise.resolve();
+		expect(balloon.classList.contains("is-open")).toBe(true);
+
+		ctx.clickOn('[data-marker="Кузнецовская, 52к13"] a');
+		expect(balloon.classList.contains("is-open")).toBe(true);
+
+		ctx.clickOn("#outside");
+		expect(balloon.classList.contains("is-open")).toBe(false);
+		expect(ctx.placemarks[0].optionSets.at(-1)).toEqual({ visible: true });
+		expect(ctx.errors).toEqual([]);
+	});
 });
 
 // ─── 10. Fancybox ────────────────────────────────────────────────────────────

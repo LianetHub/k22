@@ -228,6 +228,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 					map.events.add("boundschange", syncOpenBalloon);
 				}
+
+				document.addEventListener("click", (event) => {
+					if (skipMapClick || !openedMarker) return;
+					if (event.target?.closest?.(".contacts__balloon")) return;
+
+					closeBalloons();
+				});
 			}
 
 			let resizeTimer = null;
@@ -305,10 +312,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	const menuBack = menu?.querySelector("[data-menu-back]");
 	const menuClose = menu?.querySelector("[data-menu-close]");
 	const desktopMenuMq = window.matchMedia("(min-width: 1199.98px)");
+	const menuHoverMq = window.matchMedia("(hover: hover) and (pointer: fine)");
 	let menuScrollY = 0;
 
 	function isDesktopMenu() {
 		return desktopMenuMq.matches;
+	}
+
+	function canHoverMenu() {
+		return menuHoverMq.matches;
 	}
 
 	function lockBody(lock) {
@@ -513,12 +525,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		menu.querySelectorAll(".menu__item--has-dropdown").forEach((item) => {
 			item.addEventListener("mouseenter", () => {
-				if (!isDesktopMenu()) return;
+				if (!isDesktopMenu() || !canHoverMenu()) return;
 				openDesktopDropdown(item);
 			});
 
 			item.addEventListener("mouseleave", () => {
-				if (!isDesktopMenu()) return;
+				if (!isDesktopMenu() || !canHoverMenu()) return;
 				closeDesktopDropdowns();
 			});
 		});

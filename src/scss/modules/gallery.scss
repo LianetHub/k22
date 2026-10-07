@@ -45,6 +45,26 @@
 		width: rem(353);
 		height: rem(353);
 
+		.cover-image {
+			transition: transform 0.4s ease;
+		}
+
+		&:focus-visible .cover-image {
+			transform: scale(1.06);
+		}
+
+		@media (any-hover: hover) {
+			&:hover .cover-image {
+				transform: scale(1.06);
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.cover-image {
+				transition: none;
+			}
+		}
+
 		@media (min-width:$md5) {
 			width: rem(212);
 			height: rem(212);
