@@ -5,7 +5,7 @@ const BP_MD0 = 1919.98;
 const BP_MD1 = 1439.98;
 const BP_MD2 = 1199.98;
 const BP_MD3 = 991.98;
-const BP_MD4 = 767.98;
+const BP_MD4 = 766.98;
 const BP_MD5 = 575.98;
 
 document.addEventListener("DOMContentLoaded", () => {

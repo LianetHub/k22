@@ -58,6 +58,10 @@
 
 		@media (min-width: $md4) {
 			padding-block: rem(30);
+
+			.offer__title {
+				max-width: rem(436);
+			}
 		}
 
 		@media (min-width: $md2) {
@@ -66,6 +70,7 @@
 			}
 
 			.offer__title {
+				max-width: none;
 				text-align: right;
 			}
 
@@ -164,16 +169,24 @@
 	&__badge {
 		position: absolute;
 		top: 0;
-		left: 0;
+		right: 0;
+		left: auto;
 		z-index: $ui-index-2;
 		display: inline-flex;
 		align-items: center;
 		height: rem(50);
-		padding: rem(10) rem(70) rem(12) rem(20);
+		padding: rem(10) rem(20) rem(12) rem(70);
 		background-color: $color-accent-primary;
 		color: $color-bg-primary;
-		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
+		clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 		@include desktop-heading-h4;
+
+		@media (min-width: $md2) {
+			right: auto;
+			left: 0;
+			padding: rem(10) rem(70) rem(12) rem(20);
+			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
+		}
 
 		&:empty {
 			display: none;

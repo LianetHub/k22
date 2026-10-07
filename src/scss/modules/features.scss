@@ -179,9 +179,9 @@
 	&__head {
 		display: flex;
 		flex-direction: column;
-		gap: rem(30);
+		gap: rem(12);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md3) {
 			gap: rem(24);
 		}
 	}

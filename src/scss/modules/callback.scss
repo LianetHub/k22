@@ -150,6 +150,10 @@
 	&__heading {
 		color: $color-bg-primary;
 
+		@media (min-width: $md4) {
+			@include desktop-heading-h2;
+		}
+
 		&:has(.callback__heading-md) {
 			.callback__heading-main {
 				@media (min-width: $md4) {

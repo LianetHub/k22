@@ -12,7 +12,13 @@
 	}
 
 	// vacancies__title
-	&__title {}
+	&__title {
+		@media (max-width:$md3) {
+			@media (min-width:$md5) {
+				@include desktop-heading-h2;
+			}
+		}
+	}
 
 	// vacancies__grid
 	&__grid {

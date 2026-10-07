@@ -180,9 +180,11 @@
 		min-width: 0;
 		display: flex;
 		flex-direction: column;
-		gap: rem(30);
+		gap: rem(20);
 
-
+		@media (min-width: $md4) {
+			gap: rem(30);
+		}
 	}
 
 	// .footer__col-title
@@ -228,7 +230,7 @@
 	// .footer__list--company
 	&__list--company {
 		@media (min-width: $md4) {
-			max-width: rem(470);
+			max-width: rem(469);
 		}
 
 		@media (min-width: $md2) {
@@ -283,16 +285,17 @@
 		display: flex;
 		flex-direction: column;
 
-
 		@media (min-width: $md4) {
 			flex-direction: row;
 			align-items: center;
 			flex-wrap: wrap;
+			gap: rem(10);
 		}
 
 		@media (min-width: $md2) {
 			flex-direction: column;
 			align-items: flex-start;
+			gap: 0;
 		}
 	}
 

@@ -77,6 +77,13 @@
 
 		@media (min-width: $md4) {
 			padding-block: rem(80);
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(90deg, transparent 36%, rgba($color-accent-primary, 0.35) 58%, rgba($color-accent-primary, 0.72) 82%, rgba($color-accent-primary, 0.28) 100%),
+				url("@img/result/bg-tablet.webp");
+			background-repeat: repeat, no-repeat, no-repeat;
+			background-position: 0 0, center, center rem(98);
+			background-size: auto, cover, auto rem(686);
 		}
 
 		@media (min-width: $md2) {
@@ -84,7 +91,9 @@
 				url("@img/decor/light-pattern.svg"),
 				linear-gradient(90deg, transparent 77%, $color-accent-primary 80% 100%, transparent 111%),
 				url("@img/result/car.webp");
+			background-repeat: repeat, no-repeat, no-repeat;
 			background-position: 0 0, center, right center;
+			background-size: auto, cover, cover;
 			background-blend-mode: normal, overlay, normal;
 		}
 
@@ -108,6 +117,21 @@
 			pointer-events: none;
 		}
 
+		// .result:not(.result--moto)::after
+		&:not(.result--moto)::after {
+			@media (min-width: $md4) {
+				background-image: url("@img/result/car-tablet.webp");
+				background-position: center rem(98);
+				background-size: auto rem(686);
+			}
+
+			@media (min-width: $md2) {
+				background-image: url("@img/result/smoke.webp");
+				background-position: right center;
+				background-size: cover;
+			}
+		}
+
 		// .result[data-mark]
 		&[data-mark]::before {
 			content: attr(data-mark);
@@ -128,10 +152,10 @@
 			user-select: none;
 
 			@media (min-width: $md4) {
-				top: rem(200);
-				left: 6%;
-				font-size: rem(240);
-				letter-spacing: rem(-4.8);
+				top: rem(138);
+				left: 0;
+				font-size: rem(555);
+				letter-spacing: rem(-11.1);
 				opacity: 0.2;
 			}
 
@@ -191,6 +215,15 @@
 		order: 1;
 		width: 100%;
 
+		@media (min-width: $md4) {
+			padding-top: rem(54);
+			@include tablet-heading-h1;
+		}
+
+		@media (min-width: $md2) {
+			padding-top: rem(34);
+			@include desktop-heading-h2;
+		}
 	}
 
 	// .result__metrics
@@ -205,10 +238,12 @@
 
 		@media (min-width: $md4) {
 			gap: 0;
+			margin-top: rem(280);
 			margin-bottom: rem(20);
 		}
 
 		@media (min-width: $md2) {
+			margin-top: 0;
 			margin-bottom: 0;
 		}
 	}
@@ -247,7 +282,7 @@
 			align-items: stretch;
 			flex: 0 0 auto;
 			min-width: 0;
-			margin-right: rem(-58);
+			margin-right: rem(-60);
 		}
 
 		@media (min-width: $md2) {
@@ -543,10 +578,12 @@
 			flex-direction: row;
 			align-items: center;
 			gap: rem(90);
+			margin-top: 0;
 			margin-bottom: rem(20);
 		}
 
 		@media (min-width: $md2) {
+			margin-top: 1.5rem;
 			margin-bottom: 0;
 		}
 

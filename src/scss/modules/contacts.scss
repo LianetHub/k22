@@ -550,7 +550,13 @@
 	}
 
 	// .contacts__title
-	&__title {}
+	&__title {
+		@media (max-width:$md3) {
+			@media (min-width:$md5) {
+				@include desktop-heading-h2;
+			}
+		}
+	}
 
 	// .contacts__subtitle
 	&__subtitle {
@@ -650,6 +656,12 @@
 	// .contacts__place-title
 	&__place-title {
 		@include desktop-heading-h4;
+
+		@media (min-width:$md3) {
+			br {
+				display: none;
+			}
+		}
 
 		@media (min-width:$md0) {
 			@include desktop-heading-h3;

@@ -1,13 +1,7 @@
 @use "../abstracts" as *;
 
 .works {
-	.page>& {
-		@include section-margin($space-60);
 
-		@media (min-width: $md4) {
-			@include section-margin($space-100, $space-90);
-		}
-	}
 
 	// .works--related
 	&.works--related {
