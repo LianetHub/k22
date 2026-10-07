@@ -199,6 +199,7 @@
 	&__more {
 		order: 4;
 		margin-top: rem(30);
+		align-self: flex-start;
 
 		@media (min-width: $md4) {
 			order: 0;

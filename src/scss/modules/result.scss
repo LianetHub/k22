@@ -106,16 +106,16 @@
 			position: absolute;
 			inset: 0;
 			z-index: 3;
-			background-image: url("@img/result/smoke.webp");
+			background-image: url("@img/result/car-tablet.webp");
 			background-repeat: no-repeat;
-			background-position: right center;
+			background-position: center center;
 			background-size: cover;
 			pointer-events: none;
 		}
 
 		// .result:not(.result--moto)::after
 		&:not(.result--moto)::after {
-			background-position: 90% rem(142);
+			background-position: center rem(142);
 			background-size: auto rem(398);
 
 			@media (min-width: $md4) {

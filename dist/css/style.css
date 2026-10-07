@@ -167,19 +167,19 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "InterTight";
   src: url("../fonts/InterTight-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/InterTight-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/InterTight-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 .title {
   font-family: "ActayWide", sans-serif;
@@ -5274,7 +5274,7 @@ textarea.form-control {
 }
 @media (min-width: 1919.98px) {
   .services-card__link-text {
-    padding-bottom: 0.5rem;
+    padding-bottom: 1.875rem;
     font-size: 1.375rem;
     letter-spacing: -0.02em;
   }
@@ -10180,6 +10180,7 @@ textarea.form-control {
     margin-top: 2.5rem;
     width: auto;
     justify-self: start;
+    align-self: flex-start;
   }
 }
 
@@ -10967,6 +10968,7 @@ textarea.form-control {
 .brands-power__more {
   order: 4;
   margin-top: 1.875rem;
+  align-self: flex-start;
 }
 @media (min-width: 766.98px) {
   .brands-power__more {
@@ -11067,14 +11069,14 @@ textarea.form-control {
   position: absolute;
   inset: 0;
   z-index: 3;
-  background-image: url("../img/result/smoke.webp");
+  background-image: url("../img/result/car-tablet.webp");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center center;
   background-size: cover;
   pointer-events: none;
 }
 .result:has(.result__main):not(.result--moto)::after {
-  background-position: 90% 8.875rem;
+  background-position: center 8.875rem;
   background-size: auto 24.875rem;
 }
 @media (min-width: 766.98px) {
