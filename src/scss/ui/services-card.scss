@@ -118,7 +118,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			padding-right: rem(110);
 
 			@media (min-width: $md4) {
-				gap: rem(20);
+				gap: rem(10);
 			}
 
 			@media (min-width: $md0) {
@@ -360,7 +360,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 	&.services-card--compact:has(.services-card__badge:not(.services-card__badge--bottom)) {
 		.services-card__body {
 			padding-top: rem(20);
-			padding-right: rem(20);
+			padding-right: rem(60);
 
 			@media (min-width: $md0) {
 				padding: rem(30) rem(30) 0;
@@ -537,9 +537,14 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
 		pointer-events: none;
 
-		@media (min-width: $md0) {
+		@media (min-width: $md1) {
 			padding: rem(10) calc(#{rem(20)} + 1px) rem(12) rem(60);
+
+		}
+
+		@media (min-width:$md0) {
 			@include desktop-heading-h4;
+
 		}
 	}
 
@@ -735,7 +740,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		transition: opacity 0.35s ease;
 
 		@media (min-width: $md4) {
-			gap: rem(20);
+			gap: rem(10);
 		}
 
 		@media (min-width: $md0) {
@@ -839,7 +844,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			z-index: 2;
 			display: inline-flex;
 			align-items: center;
-			justify-content: flex-start;
+			justify-content: center;
 			width: rem(50);
 			height: rem(50);
 			color: $color-accent-primary;

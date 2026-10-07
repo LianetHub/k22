@@ -76,15 +76,13 @@ img {
 	max-width: 100%;
 	padding: 0 $space-20;
 
-	@media (min-width: $md3) {
-		padding: 0 $space-40;
-	}
 
 	@media (min-width: $md2) {
-		padding: 0 $space-70;
+		padding: 0 rem(30);
 	}
 
 	@media (min-width: $md0) {
+		padding: 0 $space-70;
 		box-sizing: content-box;
 		max-width: $maxWidthContainer;
 	}

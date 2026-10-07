@@ -377,7 +377,7 @@
 			align-items: stretch;
 			gap: 0;
 			height: 100%;
-			padding: 0 rem(9);
+			padding: 0 rem(5);
 			flex: 0 0 auto;
 		}
 
@@ -391,6 +391,7 @@
 		@media (min-width: $md2) {
 			display: flex;
 			align-items: stretch;
+			flex-shrink: 0;
 
 			&:has(.menu__dropdown--compact) {
 				position: relative;
@@ -477,7 +478,9 @@
 			min-height: rem(53);
 			padding: 0 rem(12);
 			gap: rem(4);
-			margin: 0 rem(-9);
+			margin: 0 rem(-5);
+			flex-shrink: 0;
+			white-space: nowrap;
 			background: transparent;
 			color: $color-text-primary;
 			clip-path: polygon(0 0, calc(100% - rem(9)) 0, 100% 100%, rem(9) 100%);
@@ -601,12 +604,11 @@
 	&__dropdown--compact {
 		@media (min-width: $md2) {
 			left: 0;
-			width: max-content;
-			min-width: rem(250);
-			max-width: rem(320);
+			width: rem(281);
 		}
 
 		@media (min-width: $md0) {
+			width: max-content;
 			min-width: rem(358);
 			max-width: rem(420);
 		}
