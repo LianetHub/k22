@@ -196,11 +196,21 @@
 
 .title-lg {
   font-family: "ActayWide", sans-serif;
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 110%;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+@media (min-width: 1439.98px) {
+  .title-lg {
+    font-family: "ActayWide", sans-serif;
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
 }
 @media (min-width: 1919.98px) {
   .title-lg {
@@ -888,9 +898,14 @@ img {
 @media (min-width: 1199.98px) {
   .menu__dropdown--mega {
     left: 50%;
-    width: 62.9375rem;
-    padding: 0 1.125rem;
+    width: 56.9375rem;
     transform: translateX(-50%);
+  }
+}
+@media (min-width: 1439.98px) {
+  .menu__dropdown--mega {
+    padding: 0 1.125rem;
+    width: 62.9375rem;
   }
 }
 @media (min-width: 1919.98px) {
@@ -7155,7 +7170,7 @@ textarea.form-control {
 }
 @media (min-width: 767.98px) {
   .hero {
-    min-height: 37.5rem;
+    min-height: 31.25rem;
   }
 }
 @media (min-width: 1439.98px) {
@@ -7186,7 +7201,7 @@ textarea.form-control {
     padding-top: 6.25rem;
   }
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1199.98px) {
   .hero__container {
     flex-direction: row;
     align-items: flex-end;
@@ -7207,7 +7222,12 @@ textarea.form-control {
   width: 100%;
   padding-top: 1.25rem;
   align-self: center;
-  max-width: 42.5rem;
+  max-width: 37.5rem;
+}
+@media (min-width: 1439.98px) {
+  .hero__offer {
+    max-width: 42.5rem;
+  }
 }
 @media (min-width: 1919.98px) {
   .hero__offer {
@@ -7320,7 +7340,7 @@ textarea.form-control {
     width: auto;
   }
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1199.98px) {
   .hero__side {
     align-self: flex-end;
     margin-left: auto;

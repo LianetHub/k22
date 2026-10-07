@@ -306,7 +306,7 @@
     padding-bottom: rem(0);
 
     @media (min-width: $md4) {
-        min-height: rem(600);
+        min-height: rem(500);
     }
 
     @media (min-width: $md1) {
@@ -336,7 +336,7 @@
             padding-top: rem(100);
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             flex-direction: row;
             align-items: flex-end;
             justify-content: space-between;
@@ -358,7 +358,12 @@
         width: 100%;
         padding-top: rem(20);
         align-self: center;
-        max-width: rem(680);
+        max-width: rem(600);
+
+        @media (min-width:$md1) {
+            max-width: rem(680);
+
+        }
 
         @media (min-width:$md0) {
             max-width: rem(947);
@@ -428,6 +433,7 @@
             }
         }
 
+
         @media (min-width:$md0) {
             @include mobile-heading-h1;
 
@@ -459,7 +465,7 @@
             width: auto;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             align-self: flex-end;
             margin-left: auto;
         }
