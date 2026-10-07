@@ -196,11 +196,21 @@
 
 .title-lg {
   font-family: "ActayWide", sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 120%;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+}
+@media (min-width: 766.98px) {
+  .title-lg {
+    font-family: "ActayWide", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
 }
 @media (min-width: 1439.98px) {
   .title-lg {
@@ -364,6 +374,10 @@ img {
   background: url("../img/decor/line-alternate.svg") 0 0/4.9375rem 0.25rem no-repeat;
 }
 
+.text-nowrap {
+  white-space: nowrap;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -474,27 +488,30 @@ img {
 .header__content {
   position: relative;
   background: #fff;
-  margin: 0;
+  margin: 0 1.125rem;
+}
+.header__content::before, .header__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1.125rem;
+  height: 100%;
+  background: #fff;
+}
+.header__content::before {
+  right: calc(100% - 0.0625rem);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+.header__content::after {
+  left: calc(100% - 0.0625rem);
+  clip-path: polygon(100% 0, 0 100%, 0 0);
 }
 @media (min-width: 766.98px) {
   .header__content {
     margin: 0 1.25rem;
   }
   .header__content::before, .header__content::after {
-    content: "";
-    position: absolute;
-    top: 0;
     width: 1.125rem;
-    height: 100%;
-    background: #fff;
-  }
-  .header__content::before {
-    right: calc(100% - 0.0625rem);
-    clip-path: polygon(100% 0, 100% 100%, 0 0);
-  }
-  .header__content::after {
-    left: calc(100% - 0.0625rem);
-    clip-path: polygon(100% 0, 0 100%, 0 0);
   }
 }
 @media (min-width: 1199.98px) {
@@ -528,12 +545,7 @@ img {
   display: flex;
   align-items: center;
   gap: 2.125rem;
-  min-height: 3.75rem;
-}
-@media (min-width: 766.98px) {
-  .header__main {
-    min-height: 3.3125rem;
-  }
+  min-height: 3.3125rem;
 }
 @media (min-width: 1199.98px) {
   .header__main {
@@ -653,6 +665,12 @@ img {
 .header__actions {
   display: flex;
   gap: 1rem;
+  margin-left: auto;
+}
+@media (min-width: 1199.98px) {
+  .header__actions {
+    margin-left: 0;
+  }
 }
 @media (min-width: 1439.98px) {
   .header__actions {
@@ -6987,9 +7005,9 @@ textarea.form-control {
 }
 
 .hero.hero--home {
-  background-image: linear-gradient(180deg, rgba(244, 244, 246, 0) 20rem, #F4F4F6 26.25rem), url("../img/hero/home.webp");
-  background-position: center top, 61% -27vw;
-  background-size: auto, 366% auto;
+  background-image: url("../img/hero/home-mobile.webp");
+  background-size: contain;
+  background-position: center 0;
 }
 @media (min-width: 766.98px) {
   .hero.hero--home {
@@ -7254,14 +7272,22 @@ textarea.form-control {
   }
 }
 .hero {
-  min-height: 48.125rem;
   display: flex;
   flex-direction: column;
   background-color: #F4F4F6;
   background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 0rem;
-  min-height: 40.875rem;
+}
+@media (max-width: 766.98px) {
+  .hero {
+    aspect-ratio: 0.5496503497;
+  }
+}
+@media (min-width: 766.98px) {
+  .hero {
+    min-height: 40.875rem;
+  }
 }
 @media (min-width: 1199.98px) {
   .hero {
@@ -7286,13 +7312,13 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: flex-end;
   gap: 1.25rem;
-  padding-top: 28.125rem;
   padding-bottom: 2.5rem;
 }
 @media (min-width: 766.98px) {
   .hero__container {
+    justify-content: flex-start;
     justify-content: space-between;
     padding-top: 4.125rem;
   }
@@ -7427,6 +7453,11 @@ textarea.form-control {
   width: 100%;
   margin-top: 1.25rem;
 }
+@media (max-width: 766.98px) {
+  .hero__btn {
+    min-height: 4.5rem;
+  }
+}
 @media (min-width: 766.98px) {
   .hero__btn {
     width: auto;
@@ -7457,7 +7488,7 @@ textarea.form-control {
 .hero__rate {
   width: 100%;
   max-width: none;
-  padding: 1.25rem;
+  padding: 1rem 1.25rem 0.625rem;
   background: #222222;
   color: #F4F4F6;
   clip-path: none;

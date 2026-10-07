@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "abstracts" as *;
 
 .hero {
@@ -5,10 +6,10 @@
     // .hero--home
     &.hero--home {
         background-image:
-            linear-gradient(180deg, rgba($color-bg-secondary, 0) rem(320), $color-bg-secondary rem(420)),
-            url("@img/hero/home.webp");
-        background-position: center top, 61% -27vw;
-        background-size: auto, 366% auto;
+            url("@img/hero/home-mobile.webp");
+        background-size: contain;
+        background-position: center 0;
+
 
         @media (min-width:$md4) {
             background-image: url("@img/hero/home-tablet.webp");
@@ -302,7 +303,7 @@
         }
     }
 
-    min-height: rem(770);
+
     display: flex;
     flex-direction: column;
     background-color: $color-bg-secondary;
@@ -310,7 +311,16 @@
     background-position: center;
 
     padding-bottom: rem(0);
-    min-height: rem(654);
+
+    @media (max-width:$md4) {
+        aspect-ratio: math.div(393, 715);
+
+    }
+
+    @media (min-width:$md4) {
+        min-height: rem(654);
+
+    }
 
     @media (min-width: $md2) {
         background-size: cover;
@@ -334,12 +344,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: flex-end;
         gap: rem(20);
-        padding-top: rem(450);
+        // padding-top: rem(450);
         padding-bottom: rem(40);
 
         @media (min-width: $md4) {
+            justify-content: flex-start;
             justify-content: space-between;
             padding-top: rem(66);
         }
@@ -465,6 +476,10 @@
         width: 100%;
         margin-top: rem(20);
 
+        @media (max-width:$md4) {
+            min-height: rem(72);
+        }
+
         @media (min-width: $md4) {
             width: auto;
         }
@@ -495,7 +510,7 @@
     &__rate {
         width: 100%;
         max-width: none;
-        padding: rem(20);
+        padding: rem(16) rem(20) rem(10);
         background: $color-text-primary;
         color: $color-bg-secondary;
         clip-path: none;

@@ -120,30 +120,37 @@
 	&__content {
 		position: relative;
 		background: $color-bg-primary;
-		margin: 0;
+
+		margin: 0 rem(18);
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: rem(18);
+			height: 100%;
+			background: $color-bg-primary;
+		}
+
+		&::before {
+			right: calc(100% - rem(1));
+			clip-path: polygon(100% 0, 100% 100%, 0 0);
+		}
+
+		&::after {
+			left: calc(100% - rem(1));
+			clip-path: polygon(100% 0, 0 100%, 0 0);
+		}
 
 		@media (min-width: $md4) {
 			margin: 0 rem(20);
 
 			&::before,
 			&::after {
-				content: "";
-				position: absolute;
-				top: 0;
 				width: rem(18);
-				height: 100%;
-				background: $color-bg-primary;
 			}
 
-			&::before {
-				right: calc(100% - rem(1));
-				clip-path: polygon(100% 0, 100% 100%, 0 0);
-			}
-
-			&::after {
-				left: calc(100% - rem(1));
-				clip-path: polygon(100% 0, 0 100%, 0 0);
-			}
 		}
 
 		@media (min-width: $md2) {
@@ -151,24 +158,18 @@
 
 			&::before,
 			&::after {
-
 				width: rem(36);
-
 			}
-
-
 		}
 	}
 
 	// .header__container
 	&__container {
 		box-sizing: border-box;
-
 		padding: 0 rem(10);
 
 		@media (min-width:$md2) {
 			padding: 0 rem(16);
-
 		}
 
 		@media (min-width:$md2) {
@@ -185,15 +186,10 @@
 		display: flex;
 		align-items: center;
 		gap: rem(34);
-		min-height: rem(60);
-
-		@media (min-width: $md4) {
-			min-height: rem(53);
-		}
+		min-height: rem(53);
 
 		@media (min-width:$md2) {
 			gap: rem(10);
-
 		}
 
 		@media (min-width: $md0) {
@@ -316,10 +312,14 @@
 	&__actions {
 		display: flex;
 		gap: rem(16);
+		margin-left: auto;
+
+		@media (min-width:$md2) {
+			margin-left: 0;
+		}
 
 		@media (min-width:$md1) {
 			margin-left: rem(10);
-
 		}
 	}
 

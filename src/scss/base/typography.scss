@@ -12,7 +12,11 @@
 }
 
 .title-lg {
-    @include tablet-heading-h1;
+    @include desktop-heading-h3;
+
+    @media (min-width:$md4) {
+        @include tablet-heading-h1;
+    }
 
     @media (min-width:$md1) {
         @include desktop-heading-h2;
