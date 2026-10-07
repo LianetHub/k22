@@ -183,7 +183,17 @@
   letter-spacing: -0.015em;
   text-transform: uppercase;
 }
-@media (min-width: 766.98px) {
+@media (min-width: 575.98px) {
+  .title {
+    font-family: "ActayWide", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 991.98px) {
   .title {
     font-family: "ActayWide", sans-serif;
     font-size: 3.125rem;
@@ -14062,14 +14072,30 @@ textarea.form-control {
 .our-goal {
   position: relative;
   overflow: hidden;
-  background: url("../img/decor/light-pattern.svg"), linear-gradient(90deg, transparent 32.5%, rgba(34, 34, 34, 0.9) 62.266%), url("../img/our-goal.webp") center center/cover no-repeat, #222222;
   color: #fff;
+  background: url("../img/decor/light-pattern.svg"), linear-gradient(90deg, #222 48.57%, rgba(34, 34, 34, 0) 62.27%), url("../img/our-goal-mobile.webp") center center/cover no-repeat, #222222;
+}
+@media (min-width: 766.98px) {
+  .our-goal {
+    background: url("../img/decor/light-pattern.svg"), linear-gradient(90deg, #222 48.57%, rgba(34, 34, 34, 0) 62.27%), url("../img/our-goal-tablet.webp") center center/cover no-repeat, #222222;
+  }
+}
+@media (min-width: 1199.98px) {
+  .our-goal {
+    background: url("../img/decor/light-pattern.svg"), linear-gradient(90deg, transparent 32.5%, rgba(34, 34, 34, 0.9) 62.266%), url("../img/our-goal.webp") center center/cover no-repeat, #222222;
+  }
 }
 .page > .our-goal {
   margin-block: 0;
   padding-block: 3.75rem;
 }
 @media (min-width: 766.98px) {
+  .page > .our-goal {
+    margin-block: 0;
+    padding-block: 5rem;
+  }
+}
+@media (min-width: 1199.98px) {
   .page > .our-goal {
     margin-block: 0;
     padding-block: 6.25rem;
@@ -14086,7 +14112,7 @@ textarea.form-control {
   position: relative;
   z-index: 2;
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1199.98px) {
   .our-goal__content {
     width: calc(50% - 1.25rem);
     margin-left: auto;
@@ -14123,5 +14149,10 @@ textarea.form-control {
   }
 }
 .our-goal__tagline {
-  margin-top: 0.875rem;
+  margin-top: 1.75rem;
+}
+@media (min-width: 991.98px) {
+  .our-goal__tagline {
+    margin-top: 0.875rem;
+  }
 }

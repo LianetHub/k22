@@ -3,15 +3,32 @@
 .our-goal {
 	position: relative;
 	overflow: hidden;
-	background: url("@img/decor/light-pattern.svg"),
-		linear-gradient(90deg, transparent 32.5%, rgba($color-text-primary, 0.9) 62.266%),
-		url("@img/our-goal.webp") center center / cover no-repeat, $color-text-primary;
 	color: $color-bg-primary;
+	background: url("@img/decor/light-pattern.svg"),
+		linear-gradient(90deg, #222 48.57%, rgba(34, 34, 34, 0.00) 62.27%),
+		url("@img/our-goal-mobile.webp") center center / cover no-repeat, $color-text-primary;
+
+	@media (min-width:$md4) {
+		background: url("@img/decor/light-pattern.svg"),
+			linear-gradient(90deg, #222 48.57%, rgba(34, 34, 34, 0.00) 62.27%),
+			url("@img/our-goal-tablet.webp") center center / cover no-repeat, $color-text-primary;
+
+	}
+
+	@media (min-width: $md2) {
+		background: url("@img/decor/light-pattern.svg"),
+			linear-gradient(90deg, transparent 32.5%, rgba($color-text-primary, 0.9) 62.266%),
+			url("@img/our-goal.webp") center center / cover no-repeat, $color-text-primary;
+	}
 
 	.page>& {
 		@include section-inset($space-60);
 
 		@media (min-width: $md4) {
+			@include section-inset($space-80);
+		}
+
+		@media (min-width: $md2) {
 			@include section-inset($space-100);
 		}
 
@@ -29,7 +46,7 @@
 
 	// .our-goal__content
 	&__content {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			width: calc(50% - #{rem(20)});
 			margin-left: auto;
 		}
@@ -54,6 +71,11 @@
 
 	// .our-goal__tagline
 	&__tagline {
-		margin-top: rem(14);
+		margin-top: rem(28);
+
+		@media (min-width:$md3) {
+			margin-top: rem(14);
+
+		}
 	}
 }

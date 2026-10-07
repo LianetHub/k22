@@ -6,7 +6,11 @@
 .title {
     @include mobile-heading-h1;
 
-    @media (min-width:$md4) {
+    @media (min-width:$md5) {
+        @include tablet-heading-h1
+    }
+
+    @media (min-width:$md3) {
         @include desktop-heading-h2
     }
 }
