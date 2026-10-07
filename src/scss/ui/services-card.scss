@@ -224,7 +224,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 				transform: none;
 			}
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				top: 0;
 				height: 100%;
 			}
@@ -370,7 +370,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		.services-card__title {
 			padding-right: rem(72);
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				padding-right: rem(48);
 			}
 
@@ -485,7 +485,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			gap: rem(20);
 			padding: rem(20);
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				gap: rem(30);
 				padding: rem(30);
 			}
@@ -493,7 +493,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 		// services-card__title
 		.services-card__title {
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				@include desktop-heading-h3;
 			}
 		}
@@ -503,7 +503,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			max-width: rem(560);
 			color: $color-text-primary;
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				@include desktop-body-xl;
 			}
 		}
@@ -512,7 +512,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		.services-card__link {
 			padding-left: rem(30);
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				min-height: rem(70);
 			}
 		}
@@ -537,7 +537,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
 		pointer-events: none;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			padding: rem(10) calc(#{rem(20)} + 1px) rem(12) rem(60);
 
 		}
@@ -562,7 +562,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		text-transform: none;
 		clip-path: polygon(#{rem(58)} 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			font-size: rem(18);
 			letter-spacing: em(-0.36, 18);
 		}
@@ -677,7 +677,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			letter-spacing: em(-0.14, 14);
 			clip-path: none;
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				@include desktop-heading-h4;
 			}
 		}
@@ -719,7 +719,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		letter-spacing: em(-0.28, 14);
 		transition: opacity 0.35s ease;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			font-size: rem(16);
 			letter-spacing: em(-0.32, 16);
 		}
@@ -769,7 +769,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			background: $color-accent-primary;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			@include desktop-body-m;
 
 
@@ -794,7 +794,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		letter-spacing: em(-0.28, 14);
 		transition: opacity 0.35s ease;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			font-size: rem(16);
 			letter-spacing: em(-0.32, 16);
 		}

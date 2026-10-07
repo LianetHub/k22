@@ -25,8 +25,14 @@
 	// .brands-power__header
 	&__header {
 		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width:$md1) {
+			justify-content: space-between;
+			align-items: flex-end;
+			flex-direction: row;
+		}
 	}
 
 	// .brands-power__form
@@ -57,6 +63,12 @@
 
 				&::before {
 					font-size: rem(22);
+				}
+
+				.search-form__input {
+					padding-left: rem(52);
+					padding-right: rem(137);
+					line-height: rem(76);
 				}
 
 				.search-form__btn.btn {

@@ -8,9 +8,9 @@ const APP_JS = fs.readFileSync(path.resolve("src/js/app.js"), "utf8");
 const booted = [];
 
 /**
- * Поднимает app.js в изолированном JSDOM: своё окно, свои слушатели, свой localStorage.
+ * Поднимает app.js в изолированном JSDOM: своё окно, свои слушатели, свои cookies.
  * @param {string} body
- * @param {{ width?: number, desktop?: boolean, withSwiper?: boolean, withYmaps?: boolean, withFancybox?: boolean, withResizeObserver?: boolean, brokenStorage?: boolean, scrollY?: number, reduceMotion?: boolean }} [options]
+ * @param {{ width?: number, desktop?: boolean, withSwiper?: boolean, withYmaps?: boolean, withFancybox?: boolean, withResizeObserver?: boolean, brokenCookies?: boolean, scrollY?: number, reduceMotion?: boolean }} [options]
  */
 function boot(body = "", options = {}) {
 	const {
@@ -20,7 +20,7 @@ function boot(body = "", options = {}) {
 		withYmaps = false,
 		withFancybox = false,
 		withResizeObserver = false,
-		brokenStorage = false,
+		brokenCookies = false,
 		scrollY = 0,
 		reduceMotion = false,
 	} = options;
@@ -227,10 +227,13 @@ function boot(body = "", options = {}) {
 		};
 	}
 
-	if (brokenStorage) {
-		Object.defineProperty(window, "localStorage", {
+	if (brokenCookies) {
+		Object.defineProperty(window.document, "cookie", {
 			configurable: true,
 			get() {
+				throw new window.DOMException("blocked", "SecurityError");
+			},
+			set() {
 				throw new window.DOMException("blocked", "SecurityError");
 			},
 		});
@@ -910,18 +913,18 @@ describe("cookies", () => {
 		expect(ctx.document.documentElement.style.getPropertyValue("--cookies-height")).toBe("0px");
 	});
 
-	it("кнопка согласия убирает баннер и пишет флаг в localStorage", () => {
+	it("кнопка согласия убирает баннер и пишет флаг в cookie", () => {
 		const ctx = boot(COOKIES);
 		ctx.clickOn("[data-cookies-accept]");
 
 		expect(ctx.$("[data-cookies]")).toBeNull();
-		expect(ctx.window.localStorage.getItem("k22-cookies-accepted")).toBe("1");
+		expect(ctx.document.cookie.split(";").some((part) => part.trim() === "k22-cookies-accepted=1")).toBe(true);
 		expect(ctx.document.documentElement.style.getPropertyValue("--cookies-height")).toBe("0px");
 	});
 
 	it("при выставленном флаге баннер удаляется сразу", () => {
 		const ctx = boot(COOKIES);
-		ctx.window.localStorage.setItem("k22-cookies-accepted", "1");
+		ctx.document.cookie = "k22-cookies-accepted=1; path=/";
 
 		// повторный прогон в том же окне имитирует следующую загрузку страницы
 		ctx.body.innerHTML = COOKIES;
@@ -932,8 +935,8 @@ describe("cookies", () => {
 		expect(ctx.errors).toEqual([]);
 	});
 
-	it("недоступный localStorage не ломает баннер", () => {
-		const ctx = boot(COOKIES, { brokenStorage: true });
+	it("недоступные cookies не ломают баннер", () => {
+		const ctx = boot(COOKIES, { brokenCookies: true });
 		expect(ctx.errors).toEqual([]);
 		expect(ctx.$("[data-cookies]").classList.contains("is-visible")).toBe(true);
 

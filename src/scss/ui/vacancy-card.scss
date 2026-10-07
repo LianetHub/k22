@@ -50,6 +50,10 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 		min-height: rem(314);
 	}
 
+	@media (min-width: $md1) {
+		min-height: rem(303);
+	}
+
 	@media (min-width: $md0) {
 		min-height: rem(346);
 	}
@@ -74,7 +78,7 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(50)}) 100%, 0 100%);
 
 		@media (min-width: $md4) {
-			padding: rem(20);
+			padding: rem(14) rem(20);
 			padding-right: rem(70);
 			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(58)}) 100%, 0 100%);
 		}
@@ -91,7 +95,7 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
-		gap: rem(20);
+		gap: rem(8);
 		padding: rem(20);
 		flex-grow: 1;
 
@@ -99,7 +103,12 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 			padding-right: rem(200);
 		}
 
+		@media (min-width: $md1) {
+			padding-right: rem(20);
+		}
+
 		@media (min-width: $md0) {
+			gap: rem(20);
 			padding: rem(30);
 		}
 	}
@@ -118,10 +127,11 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 	&__duties {
 		display: flex;
 		flex-direction: column;
-		gap: rem(16);
+		gap: rem(12);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md0) {
 			gap: rem(20);
+			padding-right: 0;
 		}
 	}
 
@@ -162,7 +172,12 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 			pointer-events: none;
 		}
 
+		@media (min-width: $md1) {
+			right: rem(-41);
+		}
+
 		@media (min-width: $md0) {
+			right: 0;
 			width: rem(237);
 			height: 100%;
 			overflow: hidden;
@@ -177,6 +192,11 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 		object-fit: contain;
 		object-position: bottom right;
 
+		@media (min-width: $md1) {
+			object-fit: cover;
+			object-position: right top;
+		}
+
 		@media (min-width: $md0) {
 			position: absolute;
 			bottom: 1px;
@@ -184,6 +204,7 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 			width: 100%;
 			max-width: none;
 			object-fit: contain;
+			object-position: bottom right;
 		}
 	}
 
@@ -240,7 +261,7 @@ $vacancy-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.or
 			line-height: 1;
 		}
 
-		// зона клика на всю карточку и белая плашка стрелки
+		// // зона клика на всю карточку и белая плашка стрелки
 		&::after {
 			content: "";
 			position: absolute;

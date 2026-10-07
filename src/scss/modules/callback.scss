@@ -10,7 +10,7 @@
 
 	// .callback--article
 	&.callback--article {
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 	}
@@ -56,7 +56,7 @@
 			padding: rem(50) rem(30);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			padding: rem(50);
 		}
 
@@ -68,7 +68,7 @@
 			content: "";
 			position: absolute;
 			inset: 0;
-			background: url("@img/decor/callback-stripes.svg") center bottom / rem(977) auto no-repeat;
+			background: url("@img/decor/callback-stripes-tablet.svg") center bottom / 100% auto no-repeat;
 			pointer-events: none;
 			z-index: 0;
 
@@ -77,7 +77,8 @@
 				background-size: 120% auto;
 			}
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
+				background: url("@img/decor/callback-stripes.svg") center bottom / rem(977) auto no-repeat;
 				background-position: right top;
 				background-size: auto 100%;
 			}
@@ -97,7 +98,7 @@
 		flex-direction: column;
 		gap: rem(30);
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: grid;
 			grid-template-columns: minmax(rem(280), rem(416)) 1fr;
 			align-items: stretch;
@@ -116,7 +117,7 @@
 		display: contents;
 		color: $color-bg-primary;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -139,7 +140,7 @@
 		gap: rem(20);
 		order: 1;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			order: 0;
 		}
 
@@ -261,7 +262,7 @@
 			order: 2;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			order: 0;
 		}
 	}
@@ -317,7 +318,7 @@
 			padding: rem(30);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			order: 0;
 			justify-content: center;
 		}
@@ -359,6 +360,10 @@
 
 		@media (min-width: $md4) {
 			height: rem(77);
+
+			.form-control {
+				line-height: rem(77);
+			}
 		}
 
 		@media (min-width: $md1) {
@@ -376,7 +381,7 @@
 	&__actions {
 		display: flex;
 		flex-direction: column;
-		align-items: stretch;
+		align-items: flex-start;
 		gap: rem(20);
 
 		@media (min-width: $md1) {
@@ -397,7 +402,12 @@
 			align-self: flex-start;
 		}
 
+		@media (min-width:$md2) {
+			width: 100%;
+		}
+
 		@media (min-width: $md1) {
+			width: auto;
 			align-self: center;
 		}
 	}
@@ -436,7 +446,7 @@
 			gap: rem(16);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			gap: rem(8);
 		}
 

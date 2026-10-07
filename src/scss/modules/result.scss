@@ -49,7 +49,7 @@
 			.result__disclaimer {
 				margin-bottom: rem(20);
 
-				@media (min-width: $md1) {
+				@media (min-width: $md2) {
 					margin-bottom: 0;
 				}
 			}
@@ -79,7 +79,7 @@
 			padding-block: rem(80);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			background-image:
 				url("@img/decor/light-pattern.svg"),
 				linear-gradient(90deg, transparent 77%, $color-accent-primary 80% 100%, transparent 111%),
@@ -135,10 +135,10 @@
 				opacity: 0.2;
 			}
 
-			@media (min-width: $md1) {
+			@media (min-width: $md2) {
 				top: rem(-78);
-				right: auto;
-				left: rem(786);
+				right: 0;
+				left: auto;
 				font-size: rem(487);
 				letter-spacing: rem(-9.74);
 				opacity: 0.2;
@@ -159,7 +159,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			flex-direction: row;
 			align-items: flex-end;
 			justify-content: space-between;
@@ -171,7 +171,7 @@
 	&__main {
 		display: contents;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			display: flex;
 			flex-direction: column;
 			gap: rem(20);
@@ -208,7 +208,7 @@
 			margin-bottom: rem(20);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			margin-bottom: 0;
 		}
 	}
@@ -250,7 +250,7 @@
 			margin-right: rem(-58);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			margin-right: rem(-60);
 		}
 
@@ -342,7 +342,7 @@
 			clip-path: polygon(0 0, calc(100% - #{rem(58)}) 0, 100% 100%, 0 100%);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			height: rem(130);
 		}
 
@@ -522,7 +522,7 @@
 			color: rgba($color-bg-primary, 0.7);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			margin-bottom: 0;
 		}
 	}
@@ -546,7 +546,7 @@
 			margin-bottom: rem(20);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			margin-bottom: 0;
 		}
 
@@ -601,12 +601,7 @@
 			flex: 1 1 auto;
 		}
 
-		@media (max-width:$md0) {
-			&.btn {
-				font-size: 1.125rem;
-				padding: 1.75rem 3.25rem;
-			}
-		}
+
 	}
 
 	// .result__note
@@ -629,7 +624,7 @@
 			@include mobile-heading-h4;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md2) {
 			align-self: flex-end;
 			flex-shrink: 0;
 			width: auto;

@@ -1,56 +1,54 @@
-<li class="services__item">
-	<article class="services-card@@if(typeof mod !== 'undefined'){ @@mod}@@if(typeof icon !== 'undefined'){ services-card--icon}@@if(typeof iconImg !== 'undefined'){ services-card--icon}@@if(typeof image !== 'undefined'){ services-card--hover}" @@if(typeof image !=='undefined' ){ style="--services-card-image: url('../@@image');" }>
-		@@if(typeof badge !== 'undefined'){
-		<span class="services-card__badge@@if(typeof badgeMod !== 'undefined'){ @@badgeMod}">@@badge</span>
-		}
-		@@if(typeof iconImg !== 'undefined'){
-		<span class="services-card__icon">
-			<img class="services-card__icon-img" src="@@iconImg" alt="@@iconAlt" loading="lazy">
-		</span>
-		}
-		<div class="services-card__body">
-			<div class="services-card__heading">
-				<h3 class="services-card__title@@if(typeof icon !== 'undefined'){ @@icon}">@@title</h3>
-				@@if(typeof priceInline !== 'undefined'){
-				<p class="services-card__price services-card__price--inline">@@priceInline</p>
-				}
-			</div>
-			@@if(typeof description !== 'undefined'){
-			<p class="services-card__description">@@description</p>
-			}
-			@@if(typeof description2 !== 'undefined'){
-			<p class="services-card__description">@@description2</p>
-			}
-			@@if(typeof lead !== 'undefined'){
-			<p class="services-card__lead">@@lead</p>
-			}
-			@@if(typeof item1 !== 'undefined'){
-			<ul class="services-card__list">
-				<li class="services-card__item">@@item1</li>
-				@@if(typeof item2 !== 'undefined'){
-				<li class="services-card__item">@@item2</li>
-				}
-				@@if(typeof item3 !== 'undefined'){
-				<li class="services-card__item">@@item3</li>
-				}
-				@@if(typeof item4 !== 'undefined'){
-				<li class="services-card__item">@@item4</li>
-				}
-			</ul>
-			}
-			@@if(typeof note !== 'undefined'){
-			<p class="services-card__note">@@note</p>
+<li class="services__item services-card@@if(typeof mod !== 'undefined'){ @@mod}@@if(typeof icon !== 'undefined'){ services-card--icon}@@if(typeof iconImg !== 'undefined'){ services-card--icon}@@if(typeof image !== 'undefined'){ services-card--hover}" @@if(typeof image !=='undefined' ){ style="--services-card-image: url('../@@image');" }>
+	@@if(typeof badge !== 'undefined'){
+	<span class="services-card__badge@@if(typeof badgeMod !== 'undefined'){ @@badgeMod}">@@badge</span>
+	}
+	@@if(typeof iconImg !== 'undefined'){
+	<span class="services-card__icon">
+		<img class="services-card__icon-img" src="@@iconImg" alt="@@iconAlt" loading="lazy">
+	</span>
+	}
+	<div class="services-card__body">
+		<div class="services-card__heading">
+			<h3 class="services-card__title@@if(typeof icon !== 'undefined'){ @@icon}">@@title</h3>
+			@@if(typeof priceInline !== 'undefined'){
+			<p class="services-card__price services-card__price--inline">@@priceInline</p>
 			}
 		</div>
-		@@if(typeof photo !== 'undefined'){
-		<img class="services-card__image" src="@@photo" srcset="@@photo 282w" sizes="(min-width: 766.98px) 282px, 100vw" alt="@@photoAlt" width="282" height="220" loading="lazy">
+		@@if(typeof description !== 'undefined'){
+		<p class="services-card__description">@@description</p>
 		}
-		<a class="services-card__link@@if(typeof price === 'undefined'){ icon-arrow-top-right}" href="@@href">
-			<span class="services-card__link-text">@@link</span>
-			<span class="services-card__link-btn btn btn--primary">@@link</span>
-			@@if(typeof price !== 'undefined'){
-			<span class="services-card__price">@@price</span>
+		@@if(typeof description2 !== 'undefined'){
+		<p class="services-card__description">@@description2</p>
+		}
+		@@if(typeof lead !== 'undefined'){
+		<p class="services-card__lead">@@lead</p>
+		}
+		@@if(typeof item1 !== 'undefined'){
+		<ul class="services-card__list">
+			<li class="services-card__item">@@item1</li>
+			@@if(typeof item2 !== 'undefined'){
+			<li class="services-card__item">@@item2</li>
 			}
-		</a>
-	</article>
+			@@if(typeof item3 !== 'undefined'){
+			<li class="services-card__item">@@item3</li>
+			}
+			@@if(typeof item4 !== 'undefined'){
+			<li class="services-card__item">@@item4</li>
+			}
+		</ul>
+		}
+		@@if(typeof note !== 'undefined'){
+		<p class="services-card__note">@@note</p>
+		}
+	</div>
+	@@if(typeof photo !== 'undefined'){
+	<img class="services-card__image" src="@@photo" srcset="@@photo 282w" sizes="(min-width: 766.98px) 282px, 100vw" alt="@@photoAlt" width="282" height="220" loading="lazy">
+	}
+	<a class="services-card__link@@if(typeof price === 'undefined'){ icon-arrow-top-right}" href="@@href">
+		<span class="services-card__link-text">@@link</span>
+		<span class="services-card__link-btn btn btn--primary">@@link</span>
+		@@if(typeof price !== 'undefined'){
+		<span class="services-card__price">@@price</span>
+		}
+	</a>
 </li>

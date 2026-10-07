@@ -122,6 +122,11 @@
 	&__slider {
 		margin-top: rem(12);
 		width: 100%;
-		overflow: hidden;
+		overflow: visible;
+
+		@media (min-width:$md1) {
+			overflow: hidden;
+
+		}
 	}
 }
