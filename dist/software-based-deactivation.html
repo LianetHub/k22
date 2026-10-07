@@ -30,8 +30,8 @@
 			    <div class="header__banner">
 			        <div class="header__banner-container container">
 			            <div class="header__banner-tagline">
-			                <span class="color-primary">Новая услуга</span>
-			                Промывка сажевого фильтра на гидродинамическом стенде
+			                <span class="header__banner-label color-primary">Новая услуга</span>
+			                <span class="header__banner-text">Промывка сажевого фильтра <br>на гидродинамическом стенде</span>
 			            </div>
 			            <a href="" class="header__banner-btn btn btn--primary btn--small">Подробнее</a>
 			        </div>
@@ -733,15 +733,15 @@
 			                    <a href="tel:+79214019898" class="header__phone">8(921)401-98-98</a>
 			                    <p class="header__work-time icon-clock">пн-сб с 10:00 до 20:00</p>
 			                </div>
-			                <div class="header__socials">
+			                <div class="header__actions">
 			                    <a href="" aria-label="Max" class="header__social social-item icon-max"></a>
 			                    <a href="" aria-label="Telegram" class="header__social social-item icon-telegram"></a>
+			                    <button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu" data-menu-burger>
+			                        <span class="header__burger-line"></span>
+			                        <span class="header__burger-line"></span>
+			                        <span class="header__burger-line"></span>
+			                    </button>
 			                </div>
-			                <button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu" data-menu-burger>
-			                    <span class="header__burger-line"></span>
-			                    <span class="header__burger-line"></span>
-			                    <span class="header__burger-line"></span>
-			                </button>
 			            </div>
 			        </div>
 			    </div>
@@ -764,7 +764,7 @@
 								<h3 class="services__group-title">Для бензиновых автомобилей</h3>
 								<ul class="services__grid">
 									<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -793,9 +793,8 @@
 												
 											</a>
 										</article>
-									</li>
-<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+									</li><li class="services__item">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -824,9 +823,8 @@
 												
 											</a>
 										</article>
-									</li>
-<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+									</li><li class="services__item">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -855,9 +853,8 @@
 												
 											</a>
 										</article>
-									</li>
-<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+									</li><li class="services__item">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -887,14 +884,13 @@
 											</a>
 										</article>
 									</li>
-
 								</ul>
 							</div>
 							<div class="services__group">
 								<h3 class="services__group-title">Для дизельных автомобилей</h3>
 								<ul class="services__grid">
 									<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -921,9 +917,8 @@
 												
 											</a>
 										</article>
-									</li>
-<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+									</li><li class="services__item">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -950,9 +945,8 @@
 												
 											</a>
 										</article>
-									</li>
-<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+									</li><li class="services__item">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -981,9 +975,8 @@
 												
 											</a>
 										</article>
-									</li>
-<li class="services__item">
-										<article class="services-card services-card--compact services-card--inverse services-card--icon">
+									</li><li class="services__item">
+										<article class="services-card services-card--compact services-card--inverse services-card--icon" >
 											
 											
 											<span class="services-card__icon">
@@ -1013,7 +1006,6 @@
 											</a>
 										</article>
 									</li>
-
 								</ul>
 							</div>
 							<div class="services__consult">
@@ -1342,16 +1334,7 @@
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide">
 									<a class="portfolio-card " href="portfolio-page.html">
-										<img
-											class="portfolio-card__img"
-											src="img/works/chip-tuning-honda.webp"
-											srcset="img/works/chip-tuning-honda.webp 573w"
-											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
-											alt="Чип-тюнинг Honda: моторный отсек седана с открытым капотом"
-											width="573"
-											height="340"
-											loading="lazy"
-										>
+										<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Чип-тюнинг Honda: моторный отсек седана с открытым капотом" width="573" height="340" loading="lazy">
 										
 										<div class="portfolio-card__body">
 											<div class="portfolio-card__text">
@@ -1373,19 +1356,9 @@
 											
 										</div>
 									</a>
-								</li>
-<li class="swiper-slide">
+								</li><li class="swiper-slide">
 									<a class="portfolio-card " href="portfolio-page.html">
-										<img
-											class="portfolio-card__img"
-											src="img/works/catalyst-remove-mazda.webp"
-											srcset="img/works/catalyst-remove-mazda.webp 573w"
-											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
-											alt="Чип-тюнинг Honda: выпускной тракт до доработки прошивки"
-											width="573"
-											height="340"
-											loading="lazy"
-										>
+										<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Чип-тюнинг Honda: выпускной тракт до доработки прошивки" width="573" height="340" loading="lazy">
 										
 										<div class="portfolio-card__body">
 											<div class="portfolio-card__text">
@@ -1407,19 +1380,9 @@
 											
 										</div>
 									</a>
-								</li>
-<li class="swiper-slide">
+								</li><li class="swiper-slide">
 									<a class="portfolio-card " href="portfolio-page.html">
-										<img
-											class="portfolio-card__img"
-											src="img/works/chip-tuning-honda.webp"
-											srcset="img/works/chip-tuning-honda.webp 573w"
-											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
-											alt="Чип-тюнинг Honda: замер параметров двигателя после прошивки"
-											width="573"
-											height="340"
-											loading="lazy"
-										>
+										<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Чип-тюнинг Honda: замер параметров двигателя после прошивки" width="573" height="340" loading="lazy">
 										
 										<div class="portfolio-card__body">
 											<div class="portfolio-card__text">
@@ -1441,19 +1404,9 @@
 											
 										</div>
 									</a>
-								</li>
-<li class="swiper-slide">
+								</li><li class="swiper-slide">
 									<a class="portfolio-card " href="portfolio-page.html">
-										<img
-											class="portfolio-card__img"
-											src="img/works/catalyst-remove-mazda.webp"
-											srcset="img/works/catalyst-remove-mazda.webp 573w"
-											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
-											alt="Чип-тюнинг Mazda: диагностика выпускной системы перед прошивкой"
-											width="573"
-											height="340"
-											loading="lazy"
-										>
+										<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Чип-тюнинг Mazda: диагностика выпускной системы перед прошивкой" width="573" height="340" loading="lazy">
 										
 										<div class="portfolio-card__body">
 											<div class="portfolio-card__text">
@@ -1475,19 +1428,9 @@
 											
 										</div>
 									</a>
-								</li>
-<li class="swiper-slide">
+								</li><li class="swiper-slide">
 									<a class="portfolio-card " href="portfolio-page.html">
-										<img
-											class="portfolio-card__img"
-											src="img/works/chip-tuning-honda.webp"
-											srcset="img/works/chip-tuning-honda.webp 573w"
-											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
-											alt="Чип-тюнинг Kia: подключение к блоку управления двигателем"
-											width="573"
-											height="340"
-											loading="lazy"
-										>
+										<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Чип-тюнинг Kia: подключение к блоку управления двигателем" width="573" height="340" loading="lazy">
 										
 										<div class="portfolio-card__body">
 											<div class="portfolio-card__text">
@@ -1509,19 +1452,9 @@
 											
 										</div>
 									</a>
-								</li>
-<li class="swiper-slide">
+								</li><li class="swiper-slide">
 									<a class="portfolio-card " href="portfolio-page.html">
-										<img
-											class="portfolio-card__img"
-											src="img/works/catalyst-remove-mazda.webp"
-											srcset="img/works/catalyst-remove-mazda.webp 573w"
-											sizes="(min-width: 1200px) 440px, (min-width: 768px) 50vw, 85vw"
-											alt="Чип-тюнинг Toyota: проверка выпускного тракта на стенде"
-											width="573"
-											height="340"
-											loading="lazy"
-										>
+										<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Чип-тюнинг Toyota: проверка выпускного тракта на стенде" width="573" height="340" loading="lazy">
 										
 										<div class="portfolio-card__body">
 											<div class="portfolio-card__text">
@@ -1544,7 +1477,6 @@
 										</div>
 									</a>
 								</li>
-
 							</ul>
 						</div>
 						

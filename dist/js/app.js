@@ -1,5 +1,13 @@
 "use strict";
 
+// Breakpoints
+const BP_MD0 = 1919.98;
+const BP_MD1 = 1439.98;
+const BP_MD2 = 1199.98;
+const BP_MD3 = 991.98;
+const BP_MD4 = 767.98;
+const BP_MD5 = 575.98;
+
 document.addEventListener("DOMContentLoaded", () => {
 	// maps
 	function initYandexMap() {
@@ -10,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			const width = window.innerWidth;
 			let size = [62, 70];
 
-			if (width <= 767) {
+			if (width <= BP_MD4) {
 				size = [47, 53];
-			} else if (width <= 1024) {
+			} else if (width <= BP_MD3) {
 				size = [40, 45];
 			}
 
@@ -291,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// contacts cities
 	const contactsCities = document.querySelector("[data-contacts-cities]");
-	const contactsCitiesMq = window.matchMedia("(max-width: 767.98px)");
+	const contactsCitiesMq = window.matchMedia(`(max-width: ${BP_MD4}px)`);
 
 	function setContactsCitiesOpen(open) {
 		if (!contactsCities) return;
@@ -311,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const menuBurger = document.querySelector("[data-menu-burger]");
 	const menuBack = menu?.querySelector("[data-menu-back]");
 	const menuClose = menu?.querySelector("[data-menu-close]");
-	const desktopMenuMq = window.matchMedia("(min-width: 1199.98px)");
+	const desktopMenuMq = window.matchMedia(`(min-width: ${BP_MD2}px)`);
 	const menuHoverMq = window.matchMedia("(hover: hover) and (pointer: fine)");
 	let menuScrollY = 0;
 
@@ -542,7 +550,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		let swiper = null;
 
 		function getSwiper() {
-			if (window.innerWidth <= 575.98) {
+			if (window.innerWidth <= BP_MD5) {
 				if (!init) {
 					init = true;
 					swiper = new Swiper(sliderName, options);
@@ -583,11 +591,11 @@ document.addEventListener("DOMContentLoaded", () => {
 					nextEl: section?.querySelector(".blog__next"),
 				},
 				breakpoints: {
-					768: {
+					[BP_MD4]: {
 						slidesPerView: 2,
 						spaceBetween: 30,
 					},
-					1440: {
+					[BP_MD1]: {
 						slidesPerView: 4,
 						spaceBetween: 30,
 					},
@@ -607,15 +615,15 @@ document.addEventListener("DOMContentLoaded", () => {
 					nextEl: section?.querySelector(".products__next"),
 				},
 				breakpoints: {
-					768: {
+					[BP_MD4]: {
 						slidesPerView: 2.22,
 						spaceBetween: 10,
 					},
-					1440: {
+					[BP_MD1]: {
 						slidesPerView: 4,
 						spaceBetween: 30,
 					},
-					1920: {
+					[BP_MD0]: {
 						slidesPerView: 5,
 						spaceBetween: 30,
 					},
@@ -636,11 +644,11 @@ document.addEventListener("DOMContentLoaded", () => {
 					nextEl: section?.querySelector(".works__next"),
 				},
 				breakpoints: {
-					768: {
+					[BP_MD4]: {
 						slidesPerView: 1.61,
 						spaceBetween: 30,
 					},
-					1440: {
+					[BP_MD1]: {
 						slidesPerView: 3,
 						spaceBetween: 30,
 					},
@@ -653,7 +661,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			let init = false;
 
 			function mountRelatedWorks() {
-				const tablet = window.innerWidth >= 767.98 && window.innerWidth < 1439.98;
+				const tablet = window.innerWidth >= BP_MD4 && window.innerWidth < BP_MD1;
 
 				if (tablet) {
 					if (!init) {
@@ -679,10 +687,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				slidesPerView: "auto",
 				spaceBetween: 10,
 				breakpoints: {
-					767.98: {
+					[BP_MD4]: {
 						spaceBetween: 30,
 					},
-					1439.98: {
+					[BP_MD1]: {
 						spaceBetween: 30,
 					},
 				},
@@ -694,8 +702,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			let mode = "";
 
 			function reviewsMode() {
-				if (window.innerWidth >= 1439.98) return "sidebar";
-				if (window.innerWidth >= 767.98) return "grid";
+				if (window.innerWidth >= BP_MD1) return "sidebar";
+				if (window.innerWidth >= BP_MD4) return "grid";
 				return "mobile";
 			}
 
@@ -733,7 +741,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			let init = false;
 
 			function mountRelatedSlider() {
-				if (window.innerWidth < 767.98) {
+				if (window.innerWidth < BP_MD4) {
 					if (!init) {
 						init = true;
 						swiper = new Swiper(slider, {

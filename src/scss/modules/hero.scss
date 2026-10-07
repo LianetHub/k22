@@ -325,7 +325,7 @@
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
         justify-content: flex-start;
         gap: rem(20);
         padding-top: rem(450);
@@ -336,7 +336,7 @@
             padding-top: rem(100);
         }
 
-        @media (min-width: $md2) {
+        @media (min-width: $md3) {
             flex-direction: row;
             align-items: flex-end;
             justify-content: space-between;
@@ -345,7 +345,10 @@
         }
 
         &.container {
-            padding-inline: $space-70;
+            @media (min-width:$md2) {
+                padding-inline: $space-70;
+
+            }
 
             @media (min-width:$md0) {
                 padding-inline: $space-70;
@@ -357,8 +360,12 @@
     &__offer {
         width: 100%;
         padding-top: rem(20);
-        align-self: center;
-        max-width: rem(600);
+        max-width: rem(548);
+
+        @media (min-width:$md3) {
+            align-self: center;
+            max-width: rem(600);
+        }
 
         @media (min-width:$md1) {
             max-width: rem(680);
@@ -465,7 +472,7 @@
             width: auto;
         }
 
-        @media (min-width: $md2) {
+        @media (min-width: $md3) {
             align-self: flex-end;
             margin-left: auto;
         }
