@@ -47,7 +47,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
-	padding-bottom: $cookies-height;
+	padding-bottom: calc(#{$cookies-height} + #{$header-banner-height});
 	overflow-x: clip;
 }
 

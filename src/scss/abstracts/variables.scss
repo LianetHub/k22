@@ -53,6 +53,12 @@ $ui-index-7: 7;
 
 :root {
 	--cookies-height: 0px;
+	--header-banner-height: #{rem(76)};
+
+	@media (min-width: $md4) {
+		--header-banner-height: 0px;
+	}
 }
 
 $cookies-height: var(--cookies-height);
+$header-banner-height: var(--header-banner-height);

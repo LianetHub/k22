@@ -2,12 +2,18 @@
 
 .cookies {
 	position: fixed;
-	inset: auto 0 0;
+	inset: auto 0 $header-banner-height;
 	z-index: $ui-index-7;
 	display: none;
-	padding: rem(12) 0;
-	background: $color-text-primary;
+	padding-block: rem(20);
+	background: #000;
 	min-height: rem(77);
+
+	@media (min-width: $md4) {
+		inset: auto 0 0;
+		padding: rem(12) 0;
+		background: $color-text-primary;
+	}
 
 	&.is-visible {
 		display: block;

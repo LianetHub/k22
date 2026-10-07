@@ -1032,6 +1032,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initCookies();
 
+	// header banner
+	function initHeaderBanner() {
+		const banner = document.querySelector(".header__banner");
+		if (!banner) return;
+
+		const mobileMq = window.matchMedia(`(max-width: ${BP_MD4}px)`);
+
+		function setBannerHeight(value) {
+			document.documentElement.style.setProperty("--header-banner-height", value);
+		}
+
+		function updateBannerHeight() {
+			if (!mobileMq.matches) {
+				setBannerHeight("0px");
+				return;
+			}
+
+			setBannerHeight(`${banner.offsetHeight}px`);
+		}
+
+		updateBannerHeight();
+
+		if (typeof ResizeObserver !== "undefined") {
+			new ResizeObserver(() => {
+				if (!banner.isConnected) return;
+				updateBannerHeight();
+			}).observe(banner);
+		}
+
+		mobileMq.addEventListener("change", updateBannerHeight);
+	}
+
+	initHeaderBanner();
+
 	// slide
 	function initSlide() {
 		const collapsedBox = {
