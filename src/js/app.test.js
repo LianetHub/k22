@@ -669,7 +669,7 @@ describe("меню: краевые случаи", () => {
 
 describe("слайдеры", () => {
 	const REVIEWS = `<section class="reviews"><div class="swiper reviews__slider"><div class="swiper-wrapper reviews__grid"><div class="swiper-slide">1</div></div></div><button class="reviews__prev"></button><button class="reviews__next"></button></section>`;
-	const VACANCIES = `<section class="vacancies"><ul class="vacancies__grid"><li class="vacancies__item">1</li></ul></section>`;
+	const VACANCIES = `<section class="vacancies"><div class="swiper vacancies__slider"><div class="swiper-wrapper vacancies__grid"><div class="swiper-slide">1</div></div></div><button class="vacancies__prev"></button><button class="vacancies__next"></button></section>`;
 	const GALLERY = `<section class="gallery"><div class="gallery__slider swiper"><div class="swiper-wrapper"><div class="swiper-slide">1</div></div></div></section>`;
 	const BLOG = `<section class="blog"><div class="swiper blog__slider"><div class="swiper-wrapper"><div class="swiper-slide">1</div></div></div><button class="blog__prev"></button><button class="blog__next"></button></section>`;
 
@@ -707,10 +707,25 @@ describe("слайдеры", () => {
 		expect(boot(REVIEWS, { width: 576 }).swipers).toHaveLength(0);
 	});
 
-	it("vacancies не инициализирует слайдер", () => {
-		expect(boot(VACANCIES, { width: 375 }).swipers).toHaveLength(0);
-		expect(boot(VACANCIES, { width: 768 }).swipers).toHaveLength(0);
-		expect(boot(VACANCIES, { width: 1440 }).swipers).toHaveLength(0);
+	it("vacancies не инициализируется на десктопе", () => {
+		const ctx = boot(VACANCIES, { width: 1440 });
+		expect(ctx.swipers).toHaveLength(0);
+	});
+
+	it("vacancies инициализируется на мобильной ширине и уничтожается на десктопной", () => {
+		const ctx = boot(VACANCIES, { width: 375 });
+		expect(ctx.swipers).toHaveLength(1);
+		expect(ctx.swipers[0].options.slidesPerView).toBe(1.05);
+		expect(ctx.swipers[0].options.spaceBetween).toBe(10);
+		expect(ctx.swipers[0].options.navigation.prevEl).toBe(ctx.$(".vacancies__prev"));
+		expect(ctx.swipers[0].options.navigation.nextEl).toBe(ctx.$(".vacancies__next"));
+
+		ctx.setWidth(1440);
+		expect(ctx.swipers[0].destroyed).toBe(true);
+
+		ctx.setWidth(375);
+		expect(ctx.swipers).toHaveLength(2);
+		expect(ctx.swipers[1].destroyed).toBe(false);
 	});
 
 	it("gallery инициализируется на любой ширине", () => {

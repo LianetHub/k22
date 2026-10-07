@@ -53,11 +53,22 @@
 
 	// .offer--promo
 	&.offer--promo {
-		padding-block: rem(50);
+		padding-block: rem(20);
 
+		.offer__content {
+			flex-grow: 0;
+		}
+
+		.offer__title {
+			max-width: rem(237);
+		}
 
 		@media (min-width: $md4) {
 			padding-block: rem(30);
+
+			.offer__content {
+				flex-grow: 1;
+			}
 
 			.offer__title {
 				max-width: rem(436);

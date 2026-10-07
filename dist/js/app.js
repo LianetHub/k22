@@ -622,6 +622,19 @@ document.addEventListener("DOMContentLoaded", () => {
 				});
 			});
 
+			document.querySelectorAll(".vacancies__slider")?.forEach((el) => {
+				const section = el.closest(".vacancies");
+
+				getMobileSlider(el, {
+					slidesPerView: 1.05,
+					spaceBetween: 10,
+					navigation: {
+						prevEl: section?.querySelector(".vacancies__prev"),
+						nextEl: section?.querySelector(".vacancies__next"),
+					},
+				});
+			});
+
 			document.querySelectorAll(".blog__slider")?.forEach((slider) => {
 				const section = slider.closest(".blog");
 

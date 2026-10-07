@@ -1,1201 +1,1043 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-	  <title>K22 | Бесплатная комплексная диагностика</title>
-	  <meta charset="UTF-8">
-	  <meta name="format-detection" content="telephone=no">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-	  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	  <link rel="shortcut icon" href="/favicon.ico">
-	  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	  <meta name="apple-mobile-web-app-title" content="K22">
-	  <link rel="manifest" href="/site.webmanifest">
+<head>
+	<title>K22 | Бесплатная комплексная диагностика</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="K22">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20261007175443">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20261007175443">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20261007175443">
+	<link rel="stylesheet" href="css/style.min.css?_v=20261007175443">
+</head>
 
-
-	  <!-- plugins -->
-	  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
-	  <link rel="stylesheet" href="css/libs/fancybox.css">
-	  <!-- plugins -->
-
-	  <link rel="stylesheet" href="css/reset.min.css">
-	  <link rel="stylesheet" href="css/style.min.css">
-
-	</head>
-	<body>
-		<div class="wrapper">
-			<header class="header">
-			    <div class="header__banner">
-			        <div class="header__banner-container container">
-			            <div class="header__banner-tagline">
-			                <span class="header__banner-label color-primary">Новая услуга</span>
-			                <span class="header__banner-text">Промывка сажевого фильтра <br>на гидродинамическом стенде</span>
-			            </div>
-			            <a href="" class="header__banner-btn btn btn--primary btn--small">Подробнее</a>
-			        </div>
-			    </div>
-			    <div class="header__content">
-			        <div class="header__container container">
-			            <div class="header__main">
-			                <a href="/" class="header__logo">
-			                    <img src="img/logo.svg" alt="Логотип K22 Power Team" width="140" height="60">
-			                </a>
-			                <nav class="heaader__menu menu" id="site-menu" data-menu aria-label="Меню в шапке">
-			                	<div class="menu__mobile-bar">
-			                		<a href="/" class="menu__mobile-logo">
-			                			<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34" loading="lazy">
-			                		</a>
-			                		<button type="button" class="menu__back icon-chevron-left" hidden aria-label="Назад" data-menu-back></button>
-			                		<button type="button" class="menu__close icon-cross" aria-label="Закрыть меню" data-menu-close></button>
-			                	</div>
-
-			                	<ul class="menu__list">
-			                		<li class="menu__item menu__item--has-dropdown">
-			                			<button type="button" class="menu__link menu__link--dropdown icon-speedometer" aria-expanded="false" data-menu-trigger>
-			                				Чип-тюнинг
-			                			</button>
-			                			<div class="menu__dropdown menu__dropdown--mega" hidden data-menu-dropdown>
-			                				<p class="menu__dropdown-title icon-speedometer">Чип-тюнинг</p>
-			                				<div class="menu__cols">
-			                					<div class="menu__group menu__group--power">
-			                						<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group>
-			                							Увеличение мощности
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="power-increase.html">
-			                									<img class="menu-service__icon" src="img/icons/stage1.svg" alt="Stage 1" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Stage 1</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="power-increase.html">
-			                									<img class="menu-service__icon" src="img/icons/stage2.svg" alt="Stage 2" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Stage 2</span>
-			                									</span>
-			                									<span class="menu-service__price">от 7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="stock-mode.html">
-			                									<img class="menu-service__icon" src="img/icons/stock-plus.svg" alt="Stock" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Stock</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="bsl-boot-mode.html">
-			                									<img class="menu-service__icon" src="img/icons/bsl-boot-mode.svg" alt="BSL/BOOT режим" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">BSL/BOOT режим</span>
-			                										<span class="menu-service__desc">Прошивка ЭБУ со вскрытием</span>
-			                									</span>
-			                									<span class="menu-service__price">? ₽</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group menu__group--software">
-			                						<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group>
-			                							Программное отключение
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-label">Бензиновые автомобили</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/euro2-oxygen-sensor.svg" alt="Прошивка EURO-2" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Прошивка EURO-2</span>
-			                										<span class="menu-service__desc">Отключение датчика кислорода</span>
-			                									</span>
-			                									<span class="menu-service__price">5 600 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/opf-disable.svg" alt="Отключение OPF" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение OPF</span>
-			                										<span class="menu-service__desc">Отключение сажевого фильтра</span>
-			                									</span>
-			                									<span class="menu-service__price">9 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/egr-disable.svg" alt="Отключение EGR" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение EGR</span>
-			                										<span class="menu-service__desc">Отключение клапана рециркуляции выхлопных газов</span>
-			                									</span>
-			                									<span class="menu-service__price">5 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/flaps-disable.svg" alt="Отключение вихревых заслонок FLAPS" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение вихревых заслонок (FLAPS)</span>
-			                									</span>
-			                									<span class="menu-service__price">12 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-label">Дизельные автомобили</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/opf-disable.svg" alt="Отключение управления сажевым фильтром" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение управления сажевым фильтром</span>
-			                									</span>
-			                									<span class="menu-service__price">9 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/scr-adblue-disable.svg" alt="Отключение SCR AdBlue" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение SCR, AdBlue, BlueTech, Eolys</span>
-			                									</span>
-			                									<span class="menu-service__price">14 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/egr_disable.svg" alt="Отключение EGR дизель" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение EGR</span>
-			                									</span>
-			                									<span class="menu-service__price">9 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="software-based-deactivation.html">
-			                									<img class="menu-service__icon" src="img/icons/flaps-disable.svg" alt="Отключение вихревых заслонок дизель" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение вихревых заслонок (FLAPS)</span>
-			                									</span>
-			                									<span class="menu-service__price">12 800 ₽</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group menu__group--extras">
-			                						<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group>
-			                							Дополнительные услуги
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-services.html">
-			                									<img class="menu-service__icon" src="img/icons/mag-logs.svg" alt="Индивидуальная настройка по логам" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Индивидуальная настройка по логам</span>
-			                									</span>
-			                									<span class="menu-service__price">? ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/bmw-hidden-functions.svg" alt="Активация скрытых функций BMW" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Активация скрытых функций BMW G/F-серии</span>
-			                									</span>
-			                									<span class="menu-service__price">5 000 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/carplay.svg" alt="Установка CarPlay" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Установка CarPlay</span>
-			                									</span>
-			                									<span class="menu-service__price">20 000 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/mercedes-hidden-functions.svg" alt="Активация скрытых функций Mercedes" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Активация скрытых функций Mercedes</span>
-			                									</span>
-			                									<span class="menu-service__price">5 000 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/russification.svg" alt="Русификация Kia Hyundai Genesis" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Русификация Kia, Hyundai и Genesis</span>
-			                									</span>
-			                									<span class="menu-service__price">13 000 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/immobilizer_disable.svg" alt="Отключение иммобилайзера" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение иммобилайзера</span>
-			                									</span>
-			                									<span class="menu-service__price">5 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/popcorn.svg" alt="Popcorn отстрелы" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Popcorn (отстрелы)</span>
-			                									</span>
-			                									<span class="menu-service__price">от 2 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="extras-service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/gearshift.svg" alt="Прошивка АКПП" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Прошивка АКПП</span>
-			                									</span>
-			                									<span class="menu-service__price">от 2 800 ₽</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group menu__group--moto">
-			                						<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group>
-			                							Чип-тюнинг мотоциклов
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="chip-tuning.html">
-			                									<img class="menu-service__icon" src="img/icons/moto-plus.svg" alt="Stock+" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Stock+</span>
-			                									</span>
-			                									<span class="menu-service__price">? ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="chip-tuning.html">
-			                									<img class="menu-service__icon" src="img/icons/moto-one.svg" alt="Stage 1 мото" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Stage 1</span>
-			                									</span>
-			                									<span class="menu-service__price">? ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="chip-tuning.html">
-			                									<img class="menu-service__icon" src="img/icons/moto-dissable.svg" alt="Отключение экологии" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Отключение экологии</span>
-			                									</span>
-			                									<span class="menu-service__price">? ₽</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-			                				</div>
-			                			</div>
-			                		</li>
-
-			                		<li class="menu__item menu__item--has-dropdown">
-			                			<button type="button" class="menu__link menu__link--dropdown icon-exhaust-pipe" aria-expanded="false" data-menu-trigger>
-			                				Выхлоп
-			                			</button>
-			                			<div class="menu__dropdown menu__dropdown--mega" hidden data-menu-dropdown>
-			                				<p class="menu__dropdown-title icon-exhaust-pipe">Выхлоп</p>
-			                				<div class="menu__cols menu__cols--wrap">
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Выпускной коллектор
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/manifold-replace.svg" alt="Замена выпускного коллектора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена выпускного коллектора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/manifold-repair.svg" alt="Ремонт выпускного коллектора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Ремонт выпускного коллектора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/manifold-remove-install.svg" alt="Снятие и установка выпускного коллектора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Снятие и установка выпускного коллектора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Катализатор
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/catalyst-remove.svg" alt="Удаление катализатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Удаление катализатора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/catalyst-repair.svg" alt="Ремонт катализатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Ремонт катализатора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/repair-catalyst-install.svg" alt="Установка ремонтного катализатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Установка ремонтного катализатора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/flame-arrester-or-euro-catalyst.svg" alt="Установка пламегасителя или катализатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Установка пламегасителя/катализатора Евро-2 или Евро-5 стандартов</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/catalyst-complete-remove.svg" alt="Комплексное удаление катализатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Комплексное удаление катализатора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Сажевый фильтр
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/dpf-wash.svg" alt="Промывка сажевого фильтра" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Промывка сажевого фильтра</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/dpf-remove-install.svg" alt="Снятие и установка сажевого фильтра" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Снятие/установка сажевого фильтра</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/dpf-remove.svg" alt="Удаление сажевого фильтра" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Удаление сажевого фильтра</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Резонатор и гофра
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/resonator-replace.svg" alt="Замена резонатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена резонатора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/resonator-repair.svg" alt="Ремонт резонатора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Ремонт резонатора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/flex-pipe-replace.svg" alt="Замена гофры" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена гофры</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Глушитель
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/muffler-replace.svg" alt="Замена глушителя" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена глушителя</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/muffler-install.svg" alt="Установка глушителя" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Установка глушителя</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Тюнинг
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/new-exhaust-system.svg" alt="Создание новой выхлопной системы" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Создание новой выхлопной системы</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/argon-welding.svg" alt="Аргонодуговая сварка" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Аргонодуговая сварка</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/controlled-exhaust.svg" alt="Управляемый выхлоп" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Управляемый выхлоп</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/controlled-valve.svg" alt="Управляемая заслонка" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Управляемая заслонка</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="exhaust-page.html">
-			                									<img class="menu-service__icon" src="img/icons/exhaust-tips-install.svg" alt="Установка насадок на глушитель" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Установка насадок на глушитель</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="stock-mode.html">
-			                									<img class="menu-service__icon" src="img/icons/restore-stock.svg" alt="Возврат в сток" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Возврат в сток по 12.5.1</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Соединения и прокладки
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/flex-joint_replace.svg" alt="Замена демпферного соединения" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена демпферного соединения</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/muffler-mount_repair.svg" alt="Ремонт крепления глушителя" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Ремонт крепления глушителя</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/flange-replace.svg" alt="Замена фланца" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена фланца</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/coupling-replace.svg" alt="Замена соединительной муфты" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена соединительной муфты</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/muffler-gasket-replace.svg" alt="Замена прокладки глушителя" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена прокладки глушителя</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/intake-manifold_gasket_replace.svg" alt="Замена прокладки впускного коллектора" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена прокладки впускного коллектора</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-
-			                					<div class="menu__group">
-			                						<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group>
-			                							Датчики
-			                						</button>
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/lambda-sensor-replace.svg" alt="Замена датчика лямбда зонд" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Замена датчика лямбда зонд</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-page.html">
-			                									<img class="menu-service__icon" src="img/icons/oxygen-sensor-spacer.svg" alt="Установка обманки датчика кислорода" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Установка обманки датчика кислорода</span>
-			                									</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-			                				</div>
-			                			</div>
-			                		</li>
-
-			                		<li class="menu__item menu__item--has-dropdown">
-			                			<button type="button" class="menu__link menu__link--dropdown icon-engine" aria-expanded="false" data-menu-trigger>
-			                				Автосервис
-			                			</button>
-			                			<div class="menu__dropdown menu__dropdown--compact" hidden data-menu-dropdown>
-			                				<p class="menu__dropdown-title icon-engine">Автосервис</p>
-			                				<div class="menu__cols">
-			                					<div class="menu__group menu__group--flat">
-			                						<ul class="menu__services">
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/technical-maintenance.svg" alt="ТО" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">ТО</span>
-			                										<span class="menu-service__desc">техническое обслуживание</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/suspension.svg" alt="Подвеска" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Подвеска</span>
-			                										<span class="menu-service__desc">ходовая часть</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/braking-system.svg" alt="Тормозная система" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Тормозная система</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/cooling-system.svg" alt="Система охлаждения" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Система охлаждения</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/air-conditioning-system.svg" alt="Система кондиционирования" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Система кондиционирования</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/transmission.svg" alt="Трансмиссия" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Трансмиссия</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                							<li class="menu__services-item">
-			                								<a class="menu-service" href="service-category.html">
-			                									<img class="menu-service__icon" src="img/icons/tuning-and-installation-of-additional-equipment.svg" alt="Тюнинг и установка дополнительного оборудования" width="24" height="24" loading="lazy">
-			                									<span class="menu-service__body">
-			                										<span class="menu-service__name">Тюнинг и установка дополнительного оборудования</span>
-			                									</span>
-			                									<span class="menu-service__price">7 800 ₽</span>
-			                								</a>
-			                							</li>
-			                						</ul>
-			                					</div>
-			                				</div>
-			                			</div>
-			                		</li>
-
-			                		<li class="menu__item">
-			                			<a href="catalog.html" class="menu__link">
-			                				<img class="menu__link-icon" src="img/icons/gasoline.svg" alt="Магазин" width="12" height="12" loading="lazy">
-			                				Магазин
-			                			</a>
-			                		</li>
-			                		<li class="menu__item">
-			                			<a href="blog.html" class="menu__link">
-			                				<img class="menu__link-icon" src="img/icons/blog.svg" alt="Блог" width="12" height="12" loading="lazy">
-			                				Блог
-			                			</a>
-			                		</li>
-			                		<li class="menu__item">
-			                			<a href="contacts.html" class="menu__link icon-locations">Контакты</a>
-			                		</li>
-			                	</ul>
-
-			                	<div class="menu__mobile-contacts">
-			                		<div class="menu__mobile-addresses">
-			                			<p class="menu__mobile-address">Кузнецовская, 52к13</p>
-			                			<p class="menu__mobile-address">Лужская, дом 3, корпус 2б</p>
-			                		</div>
-			                		<div class="menu__mobile-bottom">
-			                			<a href="tel:+79214019898" class="menu__mobile-phone icon-phone">
-			                				<span class="menu__mobile-phone-value">8(921)401-98-98</span>
-			                				<span class="menu__mobile-hours">пн-сб с 10:00 до 20:00</span>
-			                			</a>
-			                			<div class="menu__mobile-socials">
-			                				<a href="" aria-label="Max" class="menu__mobile-social social-item icon-max"></a>
-			                				<a href="" aria-label="Telegram" class="menu__mobile-social social-item icon-telegram"></a>
-			                			</div>
-			                		</div>
-			                	</div>
-			                </nav>
-			                <div class="header__contacts">
-			                    <a href="tel:+79214019898" class="header__phone">8(921)401-98-98</a>
-			                    <p class="header__work-time icon-clock">пн-сб с 10:00 до 20:00</p>
-			                </div>
-			                <div class="header__actions">
-			                    <a href="" aria-label="Max" class="header__social social-item icon-max"></a>
-			                    <a href="" aria-label="Telegram" class="header__social social-item icon-telegram"></a>
-			                    <button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu" data-menu-burger>
-			                        <span class="header__burger-line"></span>
-			                        <span class="header__burger-line"></span>
-			                        <span class="header__burger-line"></span>
-			                    </button>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-			</header>
-			<main class="page">
-				<section class="hero hero--diagnostics" style="background-image: url('img/hero/comprehensive-diagnostics.webp');">
-					<div class="hero__container container">
-						<div class="hero__offer">
-							<h1 class="hero__title title-lg"><span class="color-primary">Бесплатная</span> комплексная диагностика</h1>
-							<p class="hero__lead">Проверим основные системы автомобиля, найдём неисправности и расскажем, на что стоит обратить внимание.</p>
-							<a href="#callback" class="hero__btn btn btn--primary">Записаться</a>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__banner">
+				<div class="header__banner-container container">
+					<div class="header__banner-tagline">
+						<span class="header__banner-label color-primary">Новая услуга</span>
+						<span class="header__banner-text">Промывка сажевого фильтра <br>на гидродинамическом стенде</span>
+					</div>
+					<a href="" class="header__banner-btn btn btn--primary btn--small">Подробнее</a>
+				</div>
+			</div>
+			<div class="header__content">
+				<div class="header__container container">
+					<div class="header__main">
+						<a href="/" class="header__logo">
+							<img src="img/logo.svg" alt="Логотип K22 Power Team" width="140" height="60">
+						</a>
+						<nav class="heaader__menu menu" id="site-menu" data-menu aria-label="Меню в шапке">
+							<div class="menu__mobile-bar">
+								<a href="/" class="menu__mobile-logo">
+									<img src="img/logo.svg" alt="Логотип K22 Power Team" width="77" height="34" loading="lazy">
+								</a>
+								<button type="button" class="menu__back icon-chevron-left" hidden aria-label="Назад" data-menu-back></button>
+								<button type="button" class="menu__close icon-cross" aria-label="Закрыть меню" data-menu-close></button>
+							</div>
+							<ul class="menu__list">
+								<li class="menu__item menu__item--has-dropdown">
+									<button type="button" class="menu__link menu__link--dropdown icon-speedometer" aria-expanded="false" data-menu-trigger> Чип-тюнинг </button>
+									<div class="menu__dropdown menu__dropdown--mega" hidden data-menu-dropdown>
+										<p class="menu__dropdown-title icon-speedometer">Чип-тюнинг</p>
+										<div class="menu__cols">
+											<div class="menu__group menu__group--power">
+												<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group> Увеличение мощности </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="power-increase.html">
+															<img class="menu-service__icon" src="img/icons/stage1.svg" alt="Stage 1" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Stage 1</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="power-increase.html">
+															<img class="menu-service__icon" src="img/icons/stage2.svg" alt="Stage 2" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Stage 2</span>
+															</span>
+															<span class="menu-service__price">от 7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="stock-mode.html">
+															<img class="menu-service__icon" src="img/icons/stock-plus.svg" alt="Stock" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Stock</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="bsl-boot-mode.html">
+															<img class="menu-service__icon" src="img/icons/bsl-boot-mode.svg" alt="BSL/BOOT режим" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">BSL/BOOT режим</span>
+																<span class="menu-service__desc">Прошивка ЭБУ со вскрытием</span>
+															</span>
+															<span class="menu-service__price">? ₽</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group menu__group--software">
+												<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group> Программное отключение </button>
+												<ul class="menu__services">
+													<li class="menu__services-label">Бензиновые автомобили</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/euro2-oxygen-sensor.svg" alt="Прошивка EURO-2" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Прошивка EURO-2</span>
+																<span class="menu-service__desc">Отключение датчика кислорода</span>
+															</span>
+															<span class="menu-service__price">5 600 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/opf-disable.svg" alt="Отключение OPF" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение OPF</span>
+																<span class="menu-service__desc">Отключение сажевого фильтра</span>
+															</span>
+															<span class="menu-service__price">9 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/egr-disable.svg" alt="Отключение EGR" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение EGR</span>
+																<span class="menu-service__desc">Отключение клапана рециркуляции выхлопных газов</span>
+															</span>
+															<span class="menu-service__price">5 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/flaps-disable.svg" alt="Отключение вихревых заслонок FLAPS" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение вихревых заслонок (FLAPS)</span>
+															</span>
+															<span class="menu-service__price">12 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-label">Дизельные автомобили</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/opf-disable.svg" alt="Отключение управления сажевым фильтром" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение управления сажевым фильтром</span>
+															</span>
+															<span class="menu-service__price">9 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/scr-adblue-disable.svg" alt="Отключение SCR AdBlue" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение SCR, AdBlue, BlueTech, Eolys</span>
+															</span>
+															<span class="menu-service__price">14 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/egr_disable.svg" alt="Отключение EGR дизель" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение EGR</span>
+															</span>
+															<span class="menu-service__price">9 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="software-based-deactivation.html">
+															<img class="menu-service__icon" src="img/icons/flaps-disable.svg" alt="Отключение вихревых заслонок дизель" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение вихревых заслонок (FLAPS)</span>
+															</span>
+															<span class="menu-service__price">12 800 ₽</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group menu__group--extras">
+												<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group> Дополнительные услуги </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-services.html">
+															<img class="menu-service__icon" src="img/icons/mag-logs.svg" alt="Индивидуальная настройка по логам" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Индивидуальная настройка по логам</span>
+															</span>
+															<span class="menu-service__price">? ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/bmw-hidden-functions.svg" alt="Активация скрытых функций BMW" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Активация скрытых функций BMW G/F-серии</span>
+															</span>
+															<span class="menu-service__price">5 000 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/carplay.svg" alt="Установка CarPlay" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Установка CarPlay</span>
+															</span>
+															<span class="menu-service__price">20 000 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/mercedes-hidden-functions.svg" alt="Активация скрытых функций Mercedes" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Активация скрытых функций Mercedes</span>
+															</span>
+															<span class="menu-service__price">5 000 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/russification.svg" alt="Русификация Kia Hyundai Genesis" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Русификация Kia, Hyundai и Genesis</span>
+															</span>
+															<span class="menu-service__price">13 000 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/immobilizer_disable.svg" alt="Отключение иммобилайзера" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение иммобилайзера</span>
+															</span>
+															<span class="menu-service__price">5 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/popcorn.svg" alt="Popcorn отстрелы" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Popcorn (отстрелы)</span>
+															</span>
+															<span class="menu-service__price">от 2 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="extras-service-page.html">
+															<img class="menu-service__icon" src="img/icons/gearshift.svg" alt="Прошивка АКПП" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Прошивка АКПП</span>
+															</span>
+															<span class="menu-service__price">от 2 800 ₽</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group menu__group--moto">
+												<button type="button" class="menu__group-toggle icon-speedometer" aria-expanded="false" data-menu-group> Чип-тюнинг мотоциклов </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="chip-tuning.html">
+															<img class="menu-service__icon" src="img/icons/moto-plus.svg" alt="Stock+" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Stock+</span>
+															</span>
+															<span class="menu-service__price">? ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="chip-tuning.html">
+															<img class="menu-service__icon" src="img/icons/moto-one.svg" alt="Stage 1 мото" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Stage 1</span>
+															</span>
+															<span class="menu-service__price">? ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="chip-tuning.html">
+															<img class="menu-service__icon" src="img/icons/moto-dissable.svg" alt="Отключение экологии" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Отключение экологии</span>
+															</span>
+															<span class="menu-service__price">? ₽</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item menu__item--has-dropdown">
+									<button type="button" class="menu__link menu__link--dropdown icon-exhaust-pipe" aria-expanded="false" data-menu-trigger> Выхлоп </button>
+									<div class="menu__dropdown menu__dropdown--mega" hidden data-menu-dropdown>
+										<p class="menu__dropdown-title icon-exhaust-pipe">Выхлоп</p>
+										<div class="menu__cols menu__cols--wrap">
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Выпускной коллектор </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/manifold-replace.svg" alt="Замена выпускного коллектора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена выпускного коллектора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/manifold-repair.svg" alt="Ремонт выпускного коллектора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Ремонт выпускного коллектора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/manifold-remove-install.svg" alt="Снятие и установка выпускного коллектора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Снятие и установка выпускного коллектора</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Катализатор </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/catalyst-remove.svg" alt="Удаление катализатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Удаление катализатора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/catalyst-repair.svg" alt="Ремонт катализатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Ремонт катализатора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/repair-catalyst-install.svg" alt="Установка ремонтного катализатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Установка ремонтного катализатора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/flame-arrester-or-euro-catalyst.svg" alt="Установка пламегасителя или катализатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Установка пламегасителя/катализатора Евро-2 или Евро-5 стандартов</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/catalyst-complete-remove.svg" alt="Комплексное удаление катализатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Комплексное удаление катализатора</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Сажевый фильтр </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/dpf-wash.svg" alt="Промывка сажевого фильтра" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Промывка сажевого фильтра</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/dpf-remove-install.svg" alt="Снятие и установка сажевого фильтра" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Снятие/установка сажевого фильтра</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/dpf-remove.svg" alt="Удаление сажевого фильтра" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Удаление сажевого фильтра</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Резонатор и гофра </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/resonator-replace.svg" alt="Замена резонатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена резонатора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/resonator-repair.svg" alt="Ремонт резонатора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Ремонт резонатора</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/flex-pipe-replace.svg" alt="Замена гофры" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена гофры</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Глушитель </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/muffler-replace.svg" alt="Замена глушителя" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена глушителя</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/muffler-install.svg" alt="Установка глушителя" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Установка глушителя</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Тюнинг </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/new-exhaust-system.svg" alt="Создание новой выхлопной системы" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Создание новой выхлопной системы</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/argon-welding.svg" alt="Аргонодуговая сварка" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Аргонодуговая сварка</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/controlled-exhaust.svg" alt="Управляемый выхлоп" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Управляемый выхлоп</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/controlled-valve.svg" alt="Управляемая заслонка" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Управляемая заслонка</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="exhaust-page.html">
+															<img class="menu-service__icon" src="img/icons/exhaust-tips-install.svg" alt="Установка насадок на глушитель" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Установка насадок на глушитель</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="stock-mode.html">
+															<img class="menu-service__icon" src="img/icons/restore-stock.svg" alt="Возврат в сток" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Возврат в сток по 12.5.1</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Соединения и прокладки </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/flex-joint_replace.svg" alt="Замена демпферного соединения" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена демпферного соединения</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/muffler-mount_repair.svg" alt="Ремонт крепления глушителя" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Ремонт крепления глушителя</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/flange-replace.svg" alt="Замена фланца" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена фланца</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/coupling-replace.svg" alt="Замена соединительной муфты" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена соединительной муфты</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/muffler-gasket-replace.svg" alt="Замена прокладки глушителя" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена прокладки глушителя</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/intake-manifold_gasket_replace.svg" alt="Замена прокладки впускного коллектора" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена прокладки впускного коллектора</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu__group">
+												<button type="button" class="menu__group-toggle" aria-expanded="false" data-menu-group> Датчики </button>
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/lambda-sensor-replace.svg" alt="Замена датчика лямбда зонд" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Замена датчика лямбда зонд</span>
+															</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-page.html">
+															<img class="menu-service__icon" src="img/icons/oxygen-sensor-spacer.svg" alt="Установка обманки датчика кислорода" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Установка обманки датчика кислорода</span>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item menu__item--has-dropdown">
+									<button type="button" class="menu__link menu__link--dropdown icon-engine" aria-expanded="false" data-menu-trigger> Автосервис </button>
+									<div class="menu__dropdown menu__dropdown--compact" hidden data-menu-dropdown>
+										<p class="menu__dropdown-title icon-engine">Автосервис</p>
+										<div class="menu__cols">
+											<div class="menu__group menu__group--flat">
+												<ul class="menu__services">
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/technical-maintenance.svg" alt="ТО" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">ТО</span>
+																<span class="menu-service__desc">техническое обслуживание</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/suspension.svg" alt="Подвеска" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Подвеска</span>
+																<span class="menu-service__desc">ходовая часть</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/braking-system.svg" alt="Тормозная система" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Тормозная система</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/cooling-system.svg" alt="Система охлаждения" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Система охлаждения</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/air-conditioning-system.svg" alt="Система кондиционирования" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Система кондиционирования</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/transmission.svg" alt="Трансмиссия" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Трансмиссия</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+													<li class="menu__services-item">
+														<a class="menu-service" href="service-category.html">
+															<img class="menu-service__icon" src="img/icons/tuning-and-installation-of-additional-equipment.svg" alt="Тюнинг и установка дополнительного оборудования" width="24" height="24" loading="lazy">
+															<span class="menu-service__body">
+																<span class="menu-service__name">Тюнинг и установка дополнительного оборудования</span>
+															</span>
+															<span class="menu-service__price">7 800 ₽</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu__item">
+									<a href="catalog.html" class="menu__link">
+										<img class="menu__link-icon" src="img/icons/gasoline.svg" alt="Магазин" width="12" height="12" loading="lazy"> Магазин </a>
+								</li>
+								<li class="menu__item">
+									<a href="blog.html" class="menu__link">
+										<img class="menu__link-icon" src="img/icons/blog.svg" alt="Блог" width="12" height="12" loading="lazy"> Блог </a>
+								</li>
+								<li class="menu__item">
+									<a href="contacts.html" class="menu__link icon-locations">Контакты</a>
+								</li>
+							</ul>
+							<div class="menu__mobile-contacts">
+								<div class="menu__mobile-addresses">
+									<p class="menu__mobile-address">Кузнецовская, 52к13</p>
+									<p class="menu__mobile-address">Лужская, дом 3, корпус 2б</p>
+								</div>
+								<div class="menu__mobile-bottom">
+									<a href="tel:+79214019898" class="menu__mobile-phone icon-phone">
+										<span class="menu__mobile-phone-value">8(921)401-98-98</span>
+										<span class="menu__mobile-hours">пн-сб с 10:00 до 20:00</span>
+									</a>
+									<div class="menu__mobile-socials">
+										<a href="" aria-label="Max" class="menu__mobile-social social-item icon-max"></a>
+										<a href="" aria-label="Telegram" class="menu__mobile-social social-item icon-telegram"></a>
+									</div>
+								</div>
+							</div>
+						</nav>
+						<div class="header__contacts">
+							<a href="tel:+79214019898" class="header__phone">8(921)401-98-98</a>
+							<p class="header__work-time icon-clock">пн-сб с 10:00 до 20:00</p>
+						</div>
+						<div class="header__actions">
+							<a href="" aria-label="Max" class="header__social social-item icon-max"></a>
+							<a href="" aria-label="Telegram" class="header__social social-item icon-telegram"></a>
+							<button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu" data-menu-burger>
+								<span class="header__burger-line"></span>
+								<span class="header__burger-line"></span>
+								<span class="header__burger-line"></span>
+							</button>
 						</div>
 					</div>
-				</section>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../img/info/comprehensive-diagnostics.webp');">
-					<div class="info-block__container container">
-						<div class="info-block__content">
-							<h2 class="info-block__title title decor-line-block">ЗАЧЕМ НУЖНА ДИАГНОСТИКА</h2>
-							<p class="info-block__lead">Комплексная диагностика позволяет оценить состояние основных систем автомобиля и вовремя обнаружить детали, которые требуют внимания. Специалисты проверят ходовую часть, тормозную и выхлопную системы, осветительные приборы и состояние технических жидкостей.</p>
-							<p class="info-block__text">После проверки вы получите рекомендации по дальнейшему обслуживанию автомобиля. Если обнаружатся неисправности, мастер расскажет, какие работы необходимы сейчас, а какие можно запланировать на будущее. Диагностика проводится бесплатно при последующем ремонте автомобиля в нашем сервисе.</p>
-							<a href="article.html" class="info-block__btn btn btn--primary">Читать далее</a>
-						</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero hero--diagnostics" style="background-image: url('img/hero/comprehensive-diagnostics.webp');">
+				<div class="hero__container container">
+					<div class="hero__offer">
+						<h1 class="hero__title title-lg"><span class="color-primary">Бесплатная</span> комплексная диагностика</h1>
+						<p class="hero__lead">Проверим основные системы автомобиля, найдём неисправности и расскажем, на что стоит обратить внимание.</p>
+						<a href="#callback" class="hero__btn btn btn--primary">Записаться</a>
 					</div>
-				</section>
-				<section class="features features--muted">
-					<div class="features__container container">
-						<div class="features__head">
-							
-							<h2 class="features__title title decor-line-block">ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM</h2>
-							
-							
-						</div>
-						
-						<ul class="features__grid">
-							<li class="feature-card icon-shield " style="background-image: url('img/features/guarantee.webp');">
-								<h3 class="feature-card__title">гарантия</h3>
-								<p class="feature-card__text">Бессрочная на прошивки</p>
+				</div>
+			</section>
+			<section class="info-block info-block--photo-end" style="--info-block-image: url('../img/info/comprehensive-diagnostics.webp');">
+				<div class="info-block__container container">
+					<div class="info-block__content">
+						<h2 class="info-block__title title decor-line-block">ЗАЧЕМ НУЖНА ДИАГНОСТИКА</h2>
+						<p class="info-block__lead">Комплексная диагностика позволяет оценить состояние основных систем автомобиля и вовремя обнаружить детали, которые требуют внимания. Специалисты проверят ходовую часть, тормозную и выхлопную системы, осветительные приборы и состояние технических жидкостей.</p>
+						<p class="info-block__text">После проверки вы получите рекомендации по дальнейшему обслуживанию автомобиля. Если обнаружатся неисправности, мастер расскажет, какие работы необходимы сейчас, а какие можно запланировать на будущее. Диагностика проводится бесплатно при последующем ремонте автомобиля в нашем сервисе.</p>
+						<a href="article.html" class="info-block__btn btn btn--primary">Читать далее</a>
+					</div>
+				</div>
+			</section>
+			<section class="features features--muted">
+				<div class="features__container container">
+					<div class="features__head">
+						<h2 class="features__title title decor-line-block">ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM</h2>
+					</div>
+					<ul class="features__grid">
+						<li class="feature-card icon-shield " style="background-image: url('img/features/guarantee.webp');">
+							<h3 class="feature-card__title">гарантия</h3>
+							<p class="feature-card__text">Бессрочная на прошивки</p>
+						</li>
+						<li class="feature-card icon-locations " style="background-image: url('img/features/locations.webp');">
+							<h3 class="feature-card__title">Локации</h3>
+							<p class="feature-card__text">2 удобных адреса</p>
+						</li>
+						<li class="feature-card icon-clock " style="background-image: url('img/features/schedule.webp');">
+							<h3 class="feature-card__title">График работы</h3>
+							<p class="feature-card__text">пн-сб с 10:00 до 20:00</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container container">
+					<h2 class="reviews__title title decor-line-block">Отзывы</h2>
+					<div class="reviews__slider swiper">
+						<ul class="reviews__grid swiper-wrapper">
+							<li class="swiper-slide review-card">
+								<div class="review-card__body">
+									<div class="review-card__man icon-user">
+										<div class="review-card__identity">
+											<h3 class="review-card__name">Андрей Валюк</h3>
+											<p class="review-card__car"></p>
+										</div>
+										<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
+									</div>
+									<div class="review-card__text">
+										<p>Доброго времени суток! Хочу поделиться своим впечатлением о компании «К22».</p>
+										<p>Не так давно мне провели программное отключение AdBlue в этой компании. Обещали за два часа — справились меньше чем за час, цена без доплат.</p>
+										<p>Сервисом и работой остался доволен! Если ещё решу что‑то сделать по чип‑тюнингу, обязательно поеду к ним.</p>
+									</div>
+								</div>
+								<div class="review-card__foot">
+									<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+								</div>
 							</li>
-<li class="feature-card icon-locations " style="background-image: url('img/features/locations.webp');">
-								<h3 class="feature-card__title">Локации</h3>
-								<p class="feature-card__text">2 удобных адреса</p>
+							<li class="swiper-slide review-card">
+								<div class="review-card__body">
+									<div class="review-card__man icon-user">
+										<div class="review-card__identity">
+											<h3 class="review-card__name">Георгий Клещев</h3>
+											<p class="review-card__car">Chevrolet Cruze</p>
+										</div>
+										<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
+									</div>
+									<div class="review-card__text">
+										<p>Первый раз столкнулся с проблемой забитого катализатора — эти ребята уже записали и ждали меня. За 2 часа оживили мою ласточку.</p>
+										<p>Убрали катализатор, прошили, всё аккуратно. Машине реально подарили вторую жизнь. Очень рекомендую.</p>
+									</div>
+								</div>
+								<div class="review-card__foot">
+									<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+								</div>
 							</li>
-<li class="feature-card icon-clock " style="background-image: url('img/features/schedule.webp');">
-								<h3 class="feature-card__title">График работы</h3>
-								<p class="feature-card__text">пн-сб с 10:00 до 20:00</p>
+							<li class="swiper-slide review-card">
+								<div class="review-card__body">
+									<div class="review-card__man icon-user">
+										<div class="review-card__identity">
+											<h3 class="review-card__name">Fisherman</h3>
+											<p class="review-card__car"></p>
+										</div>
+										<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
+									</div>
+									<div class="review-card__text">
+										<p>Обратился с забитым катализатором. Мастера показали всё эндоскопом и предложили оптимальный вариант под «Евро-2».</p>
+										<p>Не навязывали лишнего, работа около 2 часов, в зоне ожидания чисто. Рекомендую.</p>
+									</div>
+								</div>
+								<div class="review-card__foot">
+									<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+								</div>
 							</li>
-
+							<li class="swiper-slide review-card">
+								<div class="review-card__body">
+									<div class="review-card__man icon-user">
+										<div class="review-card__identity">
+											<h3 class="review-card__name">Алексей М.</h3>
+											<p class="review-card__car">BMW 320d</p>
+										</div>
+										<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
+									</div>
+									<div class="review-card__text">
+										<p>Делал Stage 1 и отключение EGR. Всё объяснили до работы, сделали в срок, машина едет заметно бодрее.</p>
+										<p>Отдельное спасибо за аккуратность и понятную гарантию на прошивку.</p>
+									</div>
+								</div>
+								<div class="review-card__foot">
+									<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
+								</div>
+							</li>
 						</ul>
-						
 					</div>
-				</section>
-
-				<section class="reviews">
-					<div class="reviews__container container">
-						<h2 class="reviews__title title decor-line-block">Отзывы</h2>
-						
-						<div class="reviews__slider swiper">
-							<ul class="reviews__grid swiper-wrapper">
-								<li class="swiper-slide review-card">
-									<div class="review-card__body">
-										<div class="review-card__man icon-user">
-											<div class="review-card__identity">
-												<h3 class="review-card__name">Андрей Валюк</h3>
-												<p class="review-card__car"></p>
-											</div>
-											<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
-										</div>
-										<div class="review-card__text"><p>Доброго времени суток! Хочу поделиться своим впечатлением о компании «К22».</p><p>Не так давно мне провели программное отключение AdBlue в этой компании. Обещали за два часа — справились меньше чем за час, цена без доплат.</p><p>Сервисом и работой остался доволен! Если ещё решу что‑то сделать по чип‑тюнингу, обязательно поеду к ним.</p></div>
-									</div>
-									<div class="review-card__foot">
-										<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
-									</div>
-								</li><li class="swiper-slide review-card">
-									<div class="review-card__body">
-										<div class="review-card__man icon-user">
-											<div class="review-card__identity">
-												<h3 class="review-card__name">Георгий Клещев</h3>
-												<p class="review-card__car">Chevrolet Cruze</p>
-											</div>
-											<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
-										</div>
-										<div class="review-card__text"><p>Первый раз столкнулся с проблемой забитого катализатора — эти ребята уже записали и ждали меня. За 2 часа оживили мою ласточку.</p><p>Убрали катализатор, прошили, всё аккуратно. Машине реально подарили вторую жизнь. Очень рекомендую.</p></div>
-									</div>
-									<div class="review-card__foot">
-										<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
-									</div>
-								</li><li class="swiper-slide review-card">
-									<div class="review-card__body">
-										<div class="review-card__man icon-user">
-											<div class="review-card__identity">
-												<h3 class="review-card__name">Fisherman</h3>
-												<p class="review-card__car"></p>
-											</div>
-											<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
-										</div>
-										<div class="review-card__text"><p>Обратился с забитым катализатором. Мастера показали всё эндоскопом и предложили оптимальный вариант под «Евро-2».</p><p>Не навязывали лишнего, работа около 2 часов, в зоне ожидания чисто. Рекомендую.</p></div>
-									</div>
-									<div class="review-card__foot">
-										<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
-									</div>
-								</li><li class="swiper-slide review-card">
-									<div class="review-card__body">
-										<div class="review-card__man icon-user">
-											<div class="review-card__identity">
-												<h3 class="review-card__name">Алексей М.</h3>
-												<p class="review-card__car">BMW 320d</p>
-											</div>
-											<div class="review-card__stars icon-star" aria-label="Оценка 5 из 5"></div>
-										</div>
-										<div class="review-card__text"><p>Делал Stage 1 и отключение EGR. Всё объяснили до работы, сделали в срок, машина едет заметно бодрее.</p><p>Отдельное спасибо за аккуратность и понятную гарантию на прошивку.</p></div>
-									</div>
-									<div class="review-card__foot">
-										<div class="review-card__address icon-locations">ул. Лужская, 3, корп. 2Б</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						
-						
-						<a class="reviews__more more-link" href="#">Читать все отзывы</a>
-						
-						
-						<div class="reviews__nav">
-							<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
-							<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
-						</div>
+					<a class="reviews__more more-link" href="#">Читать все отзывы</a>
+					<div class="reviews__nav">
+						<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
+						<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
 					</div>
-				</section>
-				<section class="offers offers--muted">
-					<div class="offers__container container">
-						
-						<h2 class="offers__title title decor-line-block">Возможно <span class="color-primary">вас заинтересует</span></h2>
-						
-						
-						<div class="offers__list">
-							<div class="offer offer--lead" style="background-image: url('img/offers/maintenance.webp');">
-								<span class="offer__badge"></span>
-								<div class="offer__content">
-									<h3 class="offer__title">Техническое обслуживание</h3>
-									<p class="offer__text">Проведём плановое обслуживание и проверим состояние автомобиля.</p>
-								</div>
-								<a href="#" class="offer__btn btn btn--primary btn--large">Перейти</a>
-							</div><div class="offer offer--lead" style="background-image: url('img/offers/suspension.webp');">
-								<span class="offer__badge"></span>
-								<div class="offer__content">
-									<h3 class="offer__title">Ремонт подвески</h3>
-									<p class="offer__text">Диагностика и ремонт подвески для комфортного и уверенного поведения автомобиля на дороге.</p>
-								</div>
-								<a href="#" class="offer__btn btn btn--primary btn--large">Перейти</a>
-							</div><div class="offer offer--lead" style="background-image: url('img/offers/catalyst-remove.webp');">
-								<span class="offer__badge"></span>
-								<div class="offer__content">
-									<h3 class="offer__title">КОМПЛЕКСНОЕ УДАЛЕНИЕ КАТАЛИЗАТОРА</h3>
-									<p class="offer__text">Удаление катализатора с корректной настройкой автомобиля.</p>
-								</div>
-								<a href="#" class="offer__btn btn btn--primary btn--large">Перейти</a>
+				</div>
+			</section>
+			<section class="offers offers--muted">
+				<div class="offers__container container">
+					<h2 class="offers__title title decor-line-block">Возможно <span class="color-primary">вас заинтересует</span></h2>
+					<div class="offers__list">
+						<div class="offer offer--lead" style="background-image: url('img/offers/maintenance.webp');">
+							<span class="offer__badge"></span>
+							<div class="offer__content">
+								<h3 class="offer__title">Техническое обслуживание</h3>
+								<p class="offer__text">Проведём плановое обслуживание и проверим состояние автомобиля.</p>
 							</div>
+							<a href="#" class="offer__btn btn btn--primary btn--large">Перейти</a>
 						</div>
-						
-					</div>
-				</section>
-				<section class="callback"  id="callback" >
-					<div class="callback__container container">
-						
-						<h2 class="callback__title title decor-line-block"><span class="color-primary">подберем решение</span><br>под ваш бюджет и автомобиль</h2>
-						
-						<div class="callback__banner">
-							<div class="callback__row">
-								<div class="callback__intro">
-									
-									
-									<div class="callback__intro-top decor-line-block">
-										<p class="callback__heading title">
-											
-											
-											
-											Оставьте<br>заявку
-											
-										</p>
-										
-									</div>
-									<div class="callback__call">
-										<p class="callback__call-label">Или позвоните по телефону:</p>
-										<a href="tel:+79214019898" class="callback__phone icon-phone">8(921)401-98-98</a>
-									</div>
-									
-								</div>
-								<form class="callback__form" action="#" method="post" novalidate>
-									
-									<p class="callback__form-title">Запишитесь <span class="color-primary">на Бесплатную комплексную диагностику</span></p>
-									
-									<div class="callback__fields">
-										<label class="form-field callback__field icon-user">
-											<span class="visually-hidden">Ваше имя</span>
-											<input class="form-control callback__input" type="text" name="name" placeholder="ваше имя" autocomplete="name" required>
-											<span class="form-field__error icon-warning"><span>Ошибка<br>имени</span></span>
-										</label>
-										<label class="form-field callback__field icon-phone">
-											<span class="visually-hidden">Телефон</span>
-											<input class="form-control callback__input" type="tel" name="phone" placeholder="+7 (___)-___-__-__" autocomplete="tel" required>
-											<span class="form-field__error icon-warning"><span>Ошибка<br>телефона</span></span>
-										</label>
-									</div>
-									<div class="callback__actions">
-										<button class="callback__submit btn btn--primary btn--large" type="submit">
-											
-											Оставить заявку
-										</button>
-										
-										
-										<div class="callback__messengers">
-											<p class="callback__messengers-label">Напишите нам:</p>
-											<div class="callback__socials">
-												<a href="#" class="callback__social social-item icon-max" aria-label="Max"></a>
-												<a href="#" class="callback__social social-item icon-telegram" aria-label="Telegram"></a>
-												<a href="#" class="callback__social social-item icon-vk" aria-label="VK"></a>
-												<a href="#" class="callback__social social-item icon-whatsapp" aria-label="WhatsApp"></a>
-											</div>
-										</div>
-										
-									</div>
-								</form>
+						<div class="offer offer--lead" style="background-image: url('img/offers/suspension.webp');">
+							<span class="offer__badge"></span>
+							<div class="offer__content">
+								<h3 class="offer__title">Ремонт подвески</h3>
+								<p class="offer__text">Диагностика и ремонт подвески для комфортного и уверенного поведения автомобиля на дороге.</p>
 							</div>
+							<a href="#" class="offer__btn btn btn--primary btn--large">Перейти</a>
+						</div>
+						<div class="offer offer--lead" style="background-image: url('img/offers/catalyst-remove.webp');">
+							<span class="offer__badge"></span>
+							<div class="offer__content">
+								<h3 class="offer__title">КОМПЛЕКСНОЕ УДАЛЕНИЕ КАТАЛИЗАТОРА</h3>
+								<p class="offer__text">Удаление катализатора с корректной настройкой автомобиля.</p>
+							</div>
+							<a href="#" class="offer__btn btn btn--primary btn--large">Перейти</a>
 						</div>
 					</div>
-				</section>
-				<section class="faq">
-					<div class="faq__container container">
-						<div class="faq__row">
-							<aside class="faq__aside">
-								<div class="faq__offer-top">
-									<h2 class="faq__title title decor-line-block">
-										вопрос
-										<span class="color-primary">ответ</span>
-									</h2>
+				</div>
+			</section>
+			<section class="callback" id="callback">
+				<div class="callback__container container">
+					<h2 class="callback__title title decor-line-block"><span class="color-primary">подберем решение</span><br>под ваш бюджет и автомобиль</h2>
+					<div class="callback__banner">
+						<div class="callback__row">
+							<div class="callback__intro">
+								<div class="callback__intro-top decor-line-block">
+									<p class="callback__heading title"> Оставьте<br>заявку </p>
 								</div>
-								<div class="faq__offer-bottom">
-									<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер&nbsp;бесплатно проконсультирует.</p>
-									<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
+								<div class="callback__call">
+									<p class="callback__call-label">Или позвоните по телефону:</p>
+									<a href="tel:+79214019898" class="callback__phone icon-phone">8(921)401-98-98</a>
 								</div>
-							</aside>
-							
-							<ul class="faq__list">
-								<li class="faq__item">
-									<details class="faq__details">
-										<summary class="faq__question icon-chevron-down">Безопасен ли чип-тюнинг для двигателя?</summary>
-										<div class="faq__answer">
-											<p>Комплексная диагностика не вмешивается в ПО без вашего согласия. Сначала находим проблемы, затем предлагаем безопасные решения.</p>
+							</div>
+							<form class="callback__form" action="#" method="post" novalidate>
+								<p class="callback__form-title">Запишитесь <span class="color-primary">на Бесплатную комплексную диагностику</span></p>
+								<div class="callback__fields">
+									<label class="form-field callback__field icon-user">
+										<span class="visually-hidden">Ваше имя</span>
+										<input class="form-control callback__input" type="text" name="name" placeholder="ваше имя" autocomplete="name" required>
+										<span class="form-field__error icon-warning"><span>Ошибка<br>имени</span></span>
+									</label>
+									<label class="form-field callback__field icon-phone">
+										<span class="visually-hidden">Телефон</span>
+										<input class="form-control callback__input" type="tel" name="phone" placeholder="+7 (___)-___-__-__" autocomplete="tel" required>
+										<span class="form-field__error icon-warning"><span>Ошибка<br>телефона</span></span>
+									</label>
+								</div>
+								<div class="callback__actions">
+									<button class="callback__submit btn btn--primary btn--large" type="submit"> Оставить заявку </button>
+									<div class="callback__messengers">
+										<p class="callback__messengers-label">Напишите нам:</p>
+										<div class="callback__socials">
+											<a href="#" class="callback__social social-item icon-max" aria-label="Max"></a>
+											<a href="#" class="callback__social social-item icon-telegram" aria-label="Telegram"></a>
+											<a href="#" class="callback__social social-item icon-vk" aria-label="VK"></a>
+											<a href="#" class="callback__social social-item icon-whatsapp" aria-label="WhatsApp"></a>
 										</div>
-									</details>
-								</li>
-<li class="faq__item">
-									<details class="faq__details">
-										<summary class="faq__question icon-chevron-down">Насколько увеличится мощность после чип-тюнинга?</summary>
-										<div class="faq__answer">
-											<p>Диагностика показывает реальный запас мощности и ограничения. Если решите делать Stage — дадим прогноз прироста по замерам.</p>
-										</div>
-									</details>
-								</li>
-<li class="faq__item">
-									<details class="faq__details">
-										<summary class="faq__question icon-chevron-down">Увеличится ли расход топлива после прошивки?</summary>
-										<div class="faq__answer">
-											<p>После устранения неисправностей расход часто нормализуется. Изменения ПО обсуждаем отдельно по результатам проверки.</p>
-										</div>
-									</details>
-								</li>
-
-							</ul>
-							
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
-				</section>
-				<section class="works">
-					<div class="works__container container">
-						<div class="works__header">
-							<div class="works__head">
-								
-								<div class="works__tag decor-line-inline">Диагностика</div>
-								
-								<h2 class="works__title title">
-									<span class="color-primary">Выполненные</span> <br>
-									работы
+				</div>
+			</section>
+			<section class="faq">
+				<div class="faq__container container">
+					<div class="faq__row">
+						<aside class="faq__aside">
+							<div class="faq__offer-top">
+								<h2 class="faq__title title decor-line-block"> вопрос <span class="color-primary">ответ</span>
 								</h2>
 							</div>
-							<div class="works__nav">
-								<button type="button" class="works__prev swiper-button-prev icon-prev" aria-label="Предыдущая работа"></button>
-								<button type="button" class="works__next swiper-button-next icon-next" aria-label="Следующая работа"></button>
+							<div class="faq__offer-bottom">
+								<p class="faq__subtitle">Не нашли ответ? Позвоните — мастер&nbsp;бесплатно проконсультирует.</p>
+								<a href="tel:+79214019898" class="faq__phone icon-phone">8(921)401-98-98</a>
 							</div>
-						</div>
-						
-						<div class="works__slider swiper">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<a class="portfolio-card " href="portfolio-page.html">
-										<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Mazda: мастер осматривает моторный отсек" width="573" height="340" loading="lazy">
-										
-										<div class="portfolio-card__body">
-											<div class="portfolio-card__text">
-												
-												
-												<h3 class="portfolio-card__title">Диагностика Mazda</h3>
-											</div>
-											
-										</div>
-									</a>
-								</li><li class="swiper-slide">
-									<a class="portfolio-card " href="portfolio-page.html">
-										<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Honda: проверка состояния катализатора" width="573" height="340" loading="lazy">
-										
-										<div class="portfolio-card__body">
-											<div class="portfolio-card__text">
-												
-												
-												<h3 class="portfolio-card__title">Диагностика Honda</h3>
-											</div>
-											
-										</div>
-									</a>
-								</li><li class="swiper-slide">
-									<a class="portfolio-card " href="portfolio-page.html">
-										<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Kia: замер параметров двигателя на подъёмнике" width="573" height="340" loading="lazy">
-										
-										<div class="portfolio-card__body">
-											<div class="portfolio-card__text">
-												
-												
-												<h3 class="portfolio-card__title">Диагностика Kia</h3>
-											</div>
-											
-										</div>
-									</a>
-								</li><li class="swiper-slide">
-									<a class="portfolio-card " href="portfolio-page.html">
-										<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Toyota: осмотр выпускного тракта" width="573" height="340" loading="lazy">
-										
-										<div class="portfolio-card__body">
-											<div class="portfolio-card__text">
-												
-												
-												<h3 class="portfolio-card__title">Диагностика Toyota</h3>
-											</div>
-											
-										</div>
-									</a>
-								</li><li class="swiper-slide">
-									<a class="portfolio-card " href="portfolio-page.html">
-										<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Volkswagen: считывание ошибок блока управления" width="573" height="340" loading="lazy">
-										
-										<div class="portfolio-card__body">
-											<div class="portfolio-card__text">
-												
-												
-												<h3 class="portfolio-card__title">Диагностика Volkswagen</h3>
-											</div>
-											
-										</div>
-									</a>
-								</li><li class="swiper-slide">
-									<a class="portfolio-card " href="portfolio-page.html">
-										<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Skoda: проверка каталитического нейтрализатора" width="573" height="340" loading="lazy">
-										
-										<div class="portfolio-card__body">
-											<div class="portfolio-card__text">
-												
-												
-												<h3 class="portfolio-card__title">Диагностика Skoda</h3>
-											</div>
-											
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-						
+						</aside>
+						<ul class="faq__list">
+							<li class="faq__item">
+								<details class="faq__details">
+									<summary class="faq__question icon-chevron-down">Безопасен ли чип-тюнинг для двигателя?</summary>
+									<div class="faq__answer">
+										<p>Комплексная диагностика не вмешивается в ПО без вашего согласия. Сначала находим проблемы, затем предлагаем безопасные решения.</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__details">
+									<summary class="faq__question icon-chevron-down">Насколько увеличится мощность после чип-тюнинга?</summary>
+									<div class="faq__answer">
+										<p>Диагностика показывает реальный запас мощности и ограничения. Если решите делать Stage — дадим прогноз прироста по замерам.</p>
+									</div>
+								</details>
+							</li>
+							<li class="faq__item">
+								<details class="faq__details">
+									<summary class="faq__question icon-chevron-down">Увеличится ли расход топлива после прошивки?</summary>
+									<div class="faq__answer">
+										<p>После устранения неисправностей расход часто нормализуется. Изменения ПО обсуждаем отдельно по результатам проверки.</p>
+									</div>
+								</details>
+							</li>
+						</ul>
 					</div>
-				</section>
-				<section class="contacts">
-					<div class="contacts__container container">
-						<div class="contacts__intro">
-							<h2 class="contacts__title title decor-line-block">НАши сервисы</h2>
-							<p class="contacts__subtitle">Два сервисных центра в Санкт-Петербурге. Выберите удобный для вас адрес</p>
+				</div>
+			</section>
+			<section class="works">
+				<div class="works__container container">
+					<div class="works__header">
+						<div class="works__head">
+							<div class="works__tag decor-line-inline">Диагностика</div>
+							<h2 class="works__title title">
+								<span class="color-primary">Выполненные</span> <br> работы
+							</h2>
 						</div>
-
-						<div class="contacts__map-block">
-							<div class="contacts__map" id="contacts-map" data-zoom="11" data-icon="img/placemark.svg" data-apikey="" data-markers="59.8689,30.3675|Кузнецовская, 52к13;59.8336,30.3758|Лужская, 3к2б"></div>
-
-							<div class="contacts__balloons">
-								<div class="contacts__balloon" data-marker="Кузнецовская, 52к13">
-									<div class="contacts__balloon-body">
-										<h3 class="contacts__place-title">Кузнецовская, 52к13</h3>
-										<div class="contacts__phone-row">
-											<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
-											<div class="contacts__phone-info">
-												<a href="tel:+79214019898" class="contacts__phone">8(921)401-98-98</a>
-												<p class="contacts__hours">пн-сб с 10:00 до 20:00</p>
-											</div>
-										</div>
-										<div class="contacts__route">
-											<span class="contacts__route-label">Построить маршрут</span>
-											<a class="contacts__route-app" href="https://yandex.ru/maps/?rtext=~59.8689,30.3675" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Яндекс.Картах">
-												<img src="img/contacts/yandex-navi.svg" alt="Яндекс.Навигатор" width="30" height="30" loading="lazy">
-											</a>
-											<a class="contacts__route-app contacts__route-app--plain" href="https://2gis.ru/spb/search/%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2052%D0%BA13" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в 2ГИС">
-												<img src="img/contacts/2gis.svg" alt="2ГИС" width="40" height="40" loading="lazy">
-											</a>
-											<a class="contacts__route-app" href="https://www.google.com/maps/dir/?api=1&destination=59.8689,30.3675" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Google Maps">
-												<img src="img/contacts/google-maps.svg" alt="Google Maps" width="30" height="30" loading="lazy">
-											</a>
+						<div class="works__nav">
+							<button type="button" class="works__prev swiper-button-prev icon-prev" aria-label="Предыдущая работа"></button>
+							<button type="button" class="works__next swiper-button-next icon-next" aria-label="Следующая работа"></button>
+						</div>
+					</div>
+					<div class="works__slider swiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a class="portfolio-card " href="portfolio-page.html">
+									<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Mazda: мастер осматривает моторный отсек" width="573" height="340" loading="lazy">
+									<div class="portfolio-card__body">
+										<div class="portfolio-card__text">
+											<h3 class="portfolio-card__title">Диагностика Mazda</h3>
 										</div>
 									</div>
-									<svg class="contacts__balloon-tail" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23" fill="none" aria-hidden="true">
-										<path d="M13.5 23L2.01072e-06 -4.53066e-07L27 1.90735e-06L13.5 23Z" fill="#16161B" />
-									</svg>
-								</div>
-
-								<div class="contacts__balloon" data-marker="Лужская, 3к2б">
-									<div class="contacts__balloon-body">
-										<h3 class="contacts__place-title">Лужская, 3к2б</h3>
-										<div class="contacts__phone-row">
-											<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
-											<div class="contacts__phone-info">
-												<a href="tel:+79214019898" class="contacts__phone">8(921)401-98-98</a>
-												<p class="contacts__hours">пн-сб с 10:00 до 20:00</p>
-											</div>
-										</div>
-										<div class="contacts__route">
-											<span class="contacts__route-label">Построить маршрут</span>
-											<a class="contacts__route-app" href="https://yandex.ru/maps/?rtext=~59.8336,30.3758" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Яндекс.Картах">
-												<img src="img/contacts/yandex-navi.svg" alt="Яндекс.Навигатор" width="30" height="30" loading="lazy">
-											</a>
-											<a class="contacts__route-app contacts__route-app--plain" href="https://2gis.ru/spb/search/%D0%9B%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F%203%D0%BA2%D0%B1" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в 2ГИС">
-												<img src="img/contacts/2gis.svg" alt="2ГИС" width="40" height="40" loading="lazy">
-											</a>
-											<a class="contacts__route-app" href="https://www.google.com/maps/dir/?api=1&destination=59.8336,30.3758" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Google Maps">
-												<img src="img/contacts/google-maps.svg" alt="Google Maps" width="30" height="30" loading="lazy">
-											</a>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a class="portfolio-card " href="portfolio-page.html">
+									<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Honda: проверка состояния катализатора" width="573" height="340" loading="lazy">
+									<div class="portfolio-card__body">
+										<div class="portfolio-card__text">
+											<h3 class="portfolio-card__title">Диагностика Honda</h3>
 										</div>
 									</div>
-									<svg class="contacts__balloon-tail" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23" fill="none" aria-hidden="true">
-										<path d="M13.5 23L2.01072e-06 -4.53066e-07L27 1.90735e-06L13.5 23Z" fill="#16161B" />
-									</svg>
-								</div>
-							</div>
-
-							<div class="contacts__panel">
-								<div class="contacts__place">
-									<h3 class="contacts__place-title">Кузнецовская, <br> 52к13</h3>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a class="portfolio-card " href="portfolio-page.html">
+									<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Kia: замер параметров двигателя на подъёмнике" width="573" height="340" loading="lazy">
+									<div class="portfolio-card__body">
+										<div class="portfolio-card__text">
+											<h3 class="portfolio-card__title">Диагностика Kia</h3>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a class="portfolio-card " href="portfolio-page.html">
+									<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Toyota: осмотр выпускного тракта" width="573" height="340" loading="lazy">
+									<div class="portfolio-card__body">
+										<div class="portfolio-card__text">
+											<h3 class="portfolio-card__title">Диагностика Toyota</h3>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a class="portfolio-card " href="portfolio-page.html">
+									<img class="portfolio-card__img" src="img/works/chip-tuning-honda.webp" srcset="img/works/chip-tuning-honda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Volkswagen: считывание ошибок блока управления" width="573" height="340" loading="lazy">
+									<div class="portfolio-card__body">
+										<div class="portfolio-card__text">
+											<h3 class="portfolio-card__title">Диагностика Volkswagen</h3>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a class="portfolio-card " href="portfolio-page.html">
+									<img class="portfolio-card__img" src="img/works/catalyst-remove-mazda.webp" srcset="img/works/catalyst-remove-mazda.webp 573w" sizes="(min-width: 1200px) 440px, (min-width: 766.98px) 50vw, 85vw" alt="Диагностика Skoda: проверка каталитического нейтрализатора" width="573" height="340" loading="lazy">
+									<div class="portfolio-card__body">
+										<div class="portfolio-card__text">
+											<h3 class="portfolio-card__title">Диагностика Skoda</h3>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="contacts">
+				<div class="contacts__container container">
+					<div class="contacts__intro">
+						<h2 class="contacts__title title decor-line-block">НАши сервисы</h2>
+						<p class="contacts__subtitle">Два сервисных центра в Санкт-Петербурге. Выберите удобный для вас адрес</p>
+					</div>
+					<div class="contacts__map-block">
+						<div class="contacts__map" id="contacts-map" data-zoom="11" data-icon="img/placemark.svg" data-apikey="" data-markers="59.8689,30.3675|Кузнецовская, 52к13;59.8336,30.3758|Лужская, 3к2б"></div>
+						<div class="contacts__balloons">
+							<div class="contacts__balloon" data-marker="Кузнецовская, 52к13">
+								<div class="contacts__balloon-body">
+									<h3 class="contacts__place-title">Кузнецовская, 52к13</h3>
 									<div class="contacts__phone-row">
 										<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
 										<div class="contacts__phone-info">
@@ -1216,19 +1058,19 @@
 										</a>
 									</div>
 								</div>
-
-								<div class="contacts__brand">
-									<img class="contacts__brand-logo" src="img/contacts/logo.svg" alt="K22 Powerteam" width="520" height="234" loading="lazy">
-								</div>
-
-								<div class="contacts__place contacts__place--end">
-									<h3 class="contacts__place-title">Лужская, <br> 3к2б</h3>
+								<svg class="contacts__balloon-tail" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23" fill="none" aria-hidden="true">
+									<path d="M13.5 23L2.01072e-06 -4.53066e-07L27 1.90735e-06L13.5 23Z" fill="#16161B" />
+								</svg>
+							</div>
+							<div class="contacts__balloon" data-marker="Лужская, 3к2б">
+								<div class="contacts__balloon-body">
+									<h3 class="contacts__place-title">Лужская, 3к2б</h3>
 									<div class="contacts__phone-row">
+										<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
 										<div class="contacts__phone-info">
 											<a href="tel:+79214019898" class="contacts__phone">8(921)401-98-98</a>
 											<p class="contacts__hours">пн-сб с 10:00 до 20:00</p>
 										</div>
-										<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
 									</div>
 									<div class="contacts__route">
 										<span class="contacts__route-label">Построить маршрут</span>
@@ -1243,114 +1085,162 @@
 										</a>
 									</div>
 								</div>
+								<svg class="contacts__balloon-tail" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23" fill="none" aria-hidden="true">
+									<path d="M13.5 23L2.01072e-06 -4.53066e-07L27 1.90735e-06L13.5 23Z" fill="#16161B" />
+								</svg>
 							</div>
 						</div>
-					</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<div class="footer__container container">
-					<div class="footer__main">
-						<div class="footer__brand">
-							<div class="footer__brand-top">
-								<a href="/" class="footer__logo">
-									<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50" loading="lazy">
-								</a>
-								<p class="footer__tagline">Ремонт и тюнинг выхлопных систем любой сложности</p>
+						<div class="contacts__panel">
+							<div class="contacts__place">
+								<h3 class="contacts__place-title">Кузнецовская, <br> 52к13</h3>
+								<div class="contacts__phone-row">
+									<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
+									<div class="contacts__phone-info">
+										<a href="tel:+79214019898" class="contacts__phone">8(921)401-98-98</a>
+										<p class="contacts__hours">пн-сб с 10:00 до 20:00</p>
+									</div>
+								</div>
+								<div class="contacts__route">
+									<span class="contacts__route-label">Построить маршрут</span>
+									<a class="contacts__route-app" href="https://yandex.ru/maps/?rtext=~59.8689,30.3675" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Яндекс.Картах">
+										<img src="img/contacts/yandex-navi.svg" alt="Яндекс.Навигатор" width="30" height="30" loading="lazy">
+									</a>
+									<a class="contacts__route-app contacts__route-app--plain" href="https://2gis.ru/spb/search/%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%86%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2052%D0%BA13" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в 2ГИС">
+										<img src="img/contacts/2gis.svg" alt="2ГИС" width="40" height="40" loading="lazy">
+									</a>
+									<a class="contacts__route-app" href="https://www.google.com/maps/dir/?api=1&destination=59.8689,30.3675" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Google Maps">
+										<img src="img/contacts/google-maps.svg" alt="Google Maps" width="30" height="30" loading="lazy">
+									</a>
+								</div>
 							</div>
-							<div class="footer__socials">
-								<a href="" class="footer__social social-item" aria-label="Max">
-									<img src="img/icons/max.svg" alt="Max" loading="lazy">
-								</a>
-								<a href="" class="footer__social social-item" aria-label="Telegram">
-									<img src="img/icons/telegram.svg" alt="Telegram" loading="lazy">
-								</a>
-								<a href="" class="footer__social social-item" aria-label="VK">
-									<img src="img/icons/vk.svg" alt="VK" loading="lazy">
-								</a>
-								<a href="" class="footer__social social-item" aria-label="Rutube">
-									<img src="img/icons/rutube.svg" alt="Rutube" loading="lazy">
-								</a>
-								<a href="" class="footer__social social-item" aria-label="YouTube">
-									<img src="img/icons/youtube.svg" alt="YouTube" loading="lazy">
-								</a>
+							<div class="contacts__brand">
+								<img class="contacts__brand-logo" src="img/contacts/logo.svg" alt="K22 Powerteam" width="520" height="234" loading="lazy">
 							</div>
-							<p class="footer__copyright footer__copyright--brand">© 2026. Все права защищены</p>
+							<div class="contacts__place contacts__place--end">
+								<h3 class="contacts__place-title">Лужская, <br> 3к2б</h3>
+								<div class="contacts__phone-row">
+									<div class="contacts__phone-info">
+										<a href="tel:+79214019898" class="contacts__phone">8(921)401-98-98</a>
+										<p class="contacts__hours">пн-сб с 10:00 до 20:00</p>
+									</div>
+									<a href="tel:+79214019898" class="contacts__phone-icon icon-phone" aria-label="Позвонить"></a>
+								</div>
+								<div class="contacts__route">
+									<span class="contacts__route-label">Построить маршрут</span>
+									<a class="contacts__route-app" href="https://yandex.ru/maps/?rtext=~59.8336,30.3758" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Яндекс.Картах">
+										<img src="img/contacts/yandex-navi.svg" alt="Яндекс.Навигатор" width="30" height="30" loading="lazy">
+									</a>
+									<a class="contacts__route-app contacts__route-app--plain" href="https://2gis.ru/spb/search/%D0%9B%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F%203%D0%BA2%D0%B1" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в 2ГИС">
+										<img src="img/contacts/2gis.svg" alt="2ГИС" width="40" height="40" loading="lazy">
+									</a>
+									<a class="contacts__route-app" href="https://www.google.com/maps/dir/?api=1&destination=59.8336,30.3758" target="_blank" rel="noopener noreferrer" aria-label="Маршрут в Google Maps">
+										<img src="img/contacts/google-maps.svg" alt="Google Maps" width="30" height="30" loading="lazy">
+									</a>
+								</div>
+							</div>
 						</div>
-
-						<nav class="footer__nav" aria-label="Меню в подвале">
-							<div class="footer__col">
-								<div class="footer__col-title">Услуги</div>
-								<ul class="footer__list">
-									<li class="footer__item">
-										<a href="chip-tuning.html" class="footer__link">Чип-тюнинг</a>
-									</li>
-									<li class="footer__item">
-										<a href="exhaust-page.html" class="footer__link">Выхлоп</a>
-									</li>
-									<li class="footer__item">
-										<a href="service-category.html" class="footer__link">АВтосервис</a>
-									</li>
-									<li class="footer__item">
-										<a href="catalog.html" class="footer__link">Магазин</a>
-									</li>
-								</ul>
-							</div>
-							<div class="footer__col">
-								<div class="footer__col-title">Компания</div>
-								<ul class="footer__list footer__list--company">
-									<li class="footer__item">
-										<a href="about.html" class="footer__link">О сервисе</a>
-									</li>
-									<li class="footer__item">
-										<a href="portfolio-hub.html" class="footer__link">Выполненные работы</a>
-									</li>
-									<li class="footer__item">
-										<a href="partner.html" class="footer__link">Партнерам</a>
-									</li>
-									<li class="footer__item">
-										<a href="about.html" class="footer__link">Отзывы</a>
-									</li>
-									<li class="footer__item">
-										<a href="vacancies.html" class="footer__link">Вакансии</a>
-									</li>
-									<li class="footer__item">
-										<a href="blog.html" class="footer__link">Блог</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-
-						<div class="footer__contacts">
-							<div class="footer__phone-block">
-								<a href="tel:+79214019898" class="footer__phone icon-phone">+7 (921) 401-98-98</a>
-								<p class="footer__hours">пн-сб с 10:00 до 20:00</p>
-							</div>
-							<a href="contacts.html" class="footer__address icon-locations">Лужская, дом 3, корпус 2б</a>
-							<a href="contacts.html" class="footer__address icon-locations">Кузнецовская, 52к13</a>
-							<a href="#" class="footer__callback btn btn--primary btn--medium">Заказать звонок</a>
-						</div>
-
-						<p class="footer__copyright footer__copyright--bottom">© 2026. Все права защищены</p>
 					</div>
 				</div>
-			</footer>
-
-			<div class="cookies" data-cookies>
-				<div class="cookies__container container container--large">
-					<div class="cookies__content">
-						<p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал корректно, а пользоваться им было удобнее. Продолжая использовать сайт, вы соглашаетесь с использованием cookie и <a href="policy.html" class="cookies__link">Политикой конфиденциальности</a>.</p>
-						<button type="button" class="cookies__btn btn btn--primary btn--small" data-cookies-accept>Хорошо</button>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__main">
+					<div class="footer__brand">
+						<div class="footer__brand-top">
+							<a href="/" class="footer__logo">
+								<img src="img/logo-white.svg" alt="K22 Power Team" width="115" height="50" loading="lazy">
+							</a>
+							<p class="footer__tagline">Ремонт и тюнинг выхлопных систем любой сложности</p>
+						</div>
+						<div class="footer__socials">
+							<a href="" class="footer__social social-item" aria-label="Max">
+								<img src="img/icons/max.svg" alt="Max" loading="lazy">
+							</a>
+							<a href="" class="footer__social social-item" aria-label="Telegram">
+								<img src="img/icons/telegram.svg" alt="Telegram" loading="lazy">
+							</a>
+							<a href="" class="footer__social social-item" aria-label="VK">
+								<img src="img/icons/vk.svg" alt="VK" loading="lazy">
+							</a>
+							<a href="" class="footer__social social-item" aria-label="Rutube">
+								<img src="img/icons/rutube.svg" alt="Rutube" loading="lazy">
+							</a>
+							<a href="" class="footer__social social-item" aria-label="YouTube">
+								<img src="img/icons/youtube.svg" alt="YouTube" loading="lazy">
+							</a>
+						</div>
+						<p class="footer__copyright footer__copyright--brand">© 2026. Все права защищены</p>
 					</div>
+					<nav class="footer__nav" aria-label="Меню в подвале">
+						<div class="footer__col">
+							<div class="footer__col-title">Услуги</div>
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a href="chip-tuning.html" class="footer__link">Чип-тюнинг</a>
+								</li>
+								<li class="footer__item">
+									<a href="exhaust-page.html" class="footer__link">Выхлоп</a>
+								</li>
+								<li class="footer__item">
+									<a href="service-category.html" class="footer__link">АВтосервис</a>
+								</li>
+								<li class="footer__item">
+									<a href="catalog.html" class="footer__link">Магазин</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<div class="footer__col-title">Компания</div>
+							<ul class="footer__list footer__list--company">
+								<li class="footer__item">
+									<a href="about.html" class="footer__link">О сервисе</a>
+								</li>
+								<li class="footer__item">
+									<a href="portfolio-hub.html" class="footer__link">Выполненные работы</a>
+								</li>
+								<li class="footer__item">
+									<a href="partner.html" class="footer__link">Партнерам</a>
+								</li>
+								<li class="footer__item">
+									<a href="about.html" class="footer__link">Отзывы</a>
+								</li>
+								<li class="footer__item">
+									<a href="vacancies.html" class="footer__link">Вакансии</a>
+								</li>
+								<li class="footer__item">
+									<a href="blog.html" class="footer__link">Блог</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="footer__contacts">
+						<div class="footer__phone-block">
+							<a href="tel:+79214019898" class="footer__phone icon-phone">+7 (921) 401-98-98</a>
+							<p class="footer__hours">пн-сб с 10:00 до 20:00</p>
+						</div>
+						<a href="contacts.html" class="footer__address icon-locations">Лужская, дом 3, корпус 2б</a>
+						<a href="contacts.html" class="footer__address icon-locations">Кузнецовская, 52к13</a>
+						<a href="#" class="footer__callback btn btn--primary btn--medium">Заказать звонок</a>
+					</div>
+					<p class="footer__copyright footer__copyright--bottom">© 2026. Все права защищены</p>
+				</div>
+			</div>
+		</footer>
+		<div class="cookies" data-cookies>
+			<div class="cookies__container container container--large">
+				<div class="cookies__content">
+					<p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал корректно, а пользоваться им было удобнее. Продолжая использовать сайт, вы соглашаетесь с использованием cookie и <a href="policy.html" class="cookies__link">Политикой конфиденциальности</a>.</p>
+					<button type="button" class="cookies__btn btn btn--primary btn--small" data-cookies-accept>Хорошо</button>
 				</div>
 			</div>
 		</div>
-		<!-- plugins -->
-		<script defer src="js/libs/swiper-bundle.min.js"></script>
-		<script defer src="js/libs/fancybox.umd.js"></script>
-		<!-- plugins -->
+	</div> <!-- plugins -->
+	<script defer src="js/libs/swiper-bundle.min.js?_v=20261007175443"></script>
+	<script defer src="js/libs/fancybox.umd.js?_v=20261007175443"></script>
+	<!-- plugins -->
+	<script type="module" src="js/modules/custom-select.js?_v=20261007175443"></script>
+	<script defer src="js/app.js?_v=20261007175443"></script>
+</body>
 
-		<script type="module" src="js/modules/custom-select.js"></script>
-		<script defer src="js/app.js"></script>
-	</body>
 </html>

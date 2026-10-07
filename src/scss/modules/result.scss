@@ -62,24 +62,21 @@
 		padding-block: rem(60);
 		background-color: #000;
 		background-image: url("@img/decor/light-pattern.svg"),
-		linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 46%, rgba(0, 0, 0, 0.2) 100%),
-		url("@img/result/car.webp");
+		url("@img/result/bg-tablet.webp");
 		background-repeat: repeat,
 		no-repeat,
 		no-repeat;
 		background-position: 0 0,
-		center,
-		right center;
+		right top,
+		90% rem(142);
 		background-size: auto,
-		cover,
-		cover;
+		100% rem(546),
+		auto rem(398);
 		color: $color-bg-primary;
 
 		@media (min-width: $md4) {
 			padding-block: rem(80);
-			background-image:
-				url("@img/decor/light-pattern.svg"),
-				url("@img/result/bg-tablet.webp");
+
 			background-repeat: repeat, no-repeat, no-repeat;
 			background-position: 0 0, center, center rem(98);
 			background-size: auto, cover, auto rem(686);
@@ -118,6 +115,9 @@
 
 		// .result:not(.result--moto)::after
 		&:not(.result--moto)::after {
+			background-position: 90% rem(142);
+			background-size: auto rem(398);
+
 			@media (min-width: $md4) {
 				background-image: url("@img/result/car-tablet.webp");
 				background-position: center rem(98);
@@ -136,7 +136,7 @@
 			content: attr(data-mark);
 			position: absolute;
 			z-index: 2;
-			top: rem(168);
+			top: rem(98);
 			left: rem(-8);
 			font-size: rem(298);
 			font-weight: 700;
@@ -213,6 +213,7 @@
 	&__title {
 		order: 1;
 		width: 100%;
+		@include mobile-heading-h1;
 
 		@media (min-width: $md4) {
 			padding-top: rem(54);
@@ -233,6 +234,7 @@
 		gap: rem(10);
 		width: 100%;
 		min-width: 0;
+		margin-top: rem(170);
 		margin-bottom: rem(10);
 
 		@media (min-width: $md4) {
@@ -396,6 +398,7 @@
 		gap: rem(6);
 		min-width: 0;
 		padding-left: rem(20);
+		white-space: nowrap;
 
 		@include desktop-body-m;
 		color: $color-bg-primary;
@@ -454,7 +457,12 @@
 		display: flex;
 		flex-direction: column;
 		flex: 0 0 auto;
+		gap: rem(10);
 		min-width: 0;
+
+		@media (min-width: $md4) {
+			gap: 0;
+		}
 	}
 
 	// .result__value
@@ -476,11 +484,14 @@
 
 		@include mobile-heading-h1;
 
-		@media (min-width: $md0) {
-			@include desktop-heading-h2;
+		@media (min-width: $md4) {
+			line-height: 1;
 		}
 
-		line-height: 1;
+		@media (min-width: $md0) {
+			@include desktop-heading-h2;
+			line-height: 1;
+		}
 	}
 
 	// .result__unit
@@ -571,7 +582,7 @@
 		width: 100%;
 		padding: rem(20);
 		background: $color-text-primary;
-		margin-top: 1.5rem;
+		margin-top: 0;
 
 		@media (min-width: $md4) {
 			flex-direction: row;
@@ -596,11 +607,14 @@
 	&__guarantee-text {
 		display: flex;
 		flex-direction: column;
-		gap: rem(2);
+		gap: rem(10);
 
-		@media (min-width:$md0) {
+		@media (min-width: $md4) {
+			gap: rem(2);
+		}
+
+		@media (min-width: $md0) {
 			gap: rem(10);
-
 		}
 	}
 

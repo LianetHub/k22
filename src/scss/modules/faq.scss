@@ -81,16 +81,26 @@
 	}
 
 	// .faq__title
-	&__title {}
+	&__title {
+		padding-top: rem(27);
+		margin-bottom: rem(-7);
+
+		@media (min-width: $md4) {
+			padding-top: rem(34);
+			margin-bottom: 0;
+		}
+	}
 
 	// .faq__subtitle
 	&__subtitle {
 		@include desktop-body-m;
+		margin-bottom: rem(-4);
 		color: $color-text-secondary;
 
 		@media (min-width: $md4) {
 			flex: 1;
 			min-width: 0;
+			margin-bottom: 0;
 			font-size: rem(22);
 			line-height: math.div(26, 22);
 			letter-spacing: 0;
@@ -154,9 +164,19 @@
 
 	// .faq__details
 	&__details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: rem(66);
 		background: $color-bg-primary;
-		padding: rem(20);
+		padding: rem(21) rem(20);
 		cursor: pointer;
+
+		@media (min-width: $md4) {
+			display: block;
+			min-height: 0;
+			padding: rem(20);
+		}
 	}
 
 	// .faq__question

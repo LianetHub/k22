@@ -108,6 +108,12 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		}
 
 		.services-card__title {
+			padding-right: rem(90);
+
+			@media (min-width: $md4) {
+				padding-right: 0;
+			}
+
 			@media (min-width: $md0) {
 				max-width: rem(513);
 			}
@@ -115,7 +121,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 		.services-card__body {
 			gap: rem(16);
-			padding-right: rem(110);
+			padding: rem(20);
 
 			@media (min-width: $md4) {
 				gap: rem(10);
@@ -188,6 +194,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 		.services-card__title {
 			max-width: none;
+			overflow-wrap: break-word;
 			font-size: rem(14);
 			letter-spacing: em(-0.14, 14);
 
@@ -359,8 +366,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 	// services-card--compact с бейджем в углу
 	&.services-card--compact:has(.services-card__badge:not(.services-card__badge--bottom)) {
 		.services-card__body {
-			padding-top: rem(20);
-			padding-right: rem(60);
+			padding: rem(20);
 
 			@media (min-width: $md0) {
 				padding: rem(30) rem(30) 0;
@@ -368,8 +374,6 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		}
 
 		.services-card__title {
-			padding-right: rem(72);
-
 			@media (min-width: $md2) {
 				padding-right: rem(48);
 			}
@@ -528,7 +532,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		display: inline-flex;
 		align-items: center;
 		height: rem(50);
-		padding: rem(10) rem(12) rem(12) rem(32);
+		padding: rem(10) calc(#{rem(20)} + 1px) rem(12) rem(60);
 		background-color: $color-accent-primary;
 		color: $color-bg-primary;
 		font-size: rem(18);
@@ -536,11 +540,6 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		transition: opacity 0.35s ease;
 		clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
 		pointer-events: none;
-
-		@media (min-width: $md2) {
-			padding: rem(10) calc(#{rem(20)} + 1px) rem(12) rem(60);
-
-		}
 
 		@media (min-width:$md0) {
 			@include desktop-heading-h4;
@@ -552,9 +551,9 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 	&__badge--bottom {
 		top: auto;
 		bottom: -1px;
-		right: calc(#{rem(49)} - 1px);
+		right: calc(#{rem(50)} - 1px);
 		height: calc(#{rem(49)} + 1px);
-		padding: rem(10) rem(58) rem(12) rem(58);
+		padding: rem(10) rem(50) rem(12) rem(58);
 		font-family: $font-inter;
 		font-size: rem(16);
 		font-weight: 400;
@@ -888,8 +887,9 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 	// services-card__link-text
 	&__link-text {
 		display: inline-flex;
+		align-self: flex-end;
 		align-items: center;
-		align-self: center;
+
 		padding-bottom: rem(12);
 		border-bottom: 1px solid $color-accent-primary;
 		font-family: $font-inter;

@@ -17,16 +17,29 @@
 	background: $color-bg-primary;
 
 	// .brands-power__container
-	&__container {}
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
 
 	// .brands-power__title
-	&__title {}
+	&__title {
+		order: 1;
+
+		@media (min-width: $md4) {
+			order: 0;
+		}
+	}
 
 	// .brands-power__header
 	&__header {
-		display: flex;
-		flex-direction: column;
-		gap: rem(20);
+		display: contents;
+
+		@media (min-width: $md4) {
+			display: flex;
+			flex-direction: column;
+			gap: rem(20);
+		}
 
 		@media (min-width:$md1) {
 			justify-content: space-between;
@@ -37,12 +50,15 @@
 
 	// .brands-power__form
 	&__form {
+		order: 3;
 		z-index: $ui-index-2;
 		align-self: end;
 		width: 100%;
 		max-width: none;
+		margin-top: rem(-64);
 
 		@media (min-width: $md4) {
+			order: 0;
 			align-self: stretch;
 			margin-top: rem(-10);
 		}
@@ -81,7 +97,8 @@
 
 	// .brands-power__list
 	&__list {
-		margin-top: 1.5rem;
+		order: 2;
+		margin-top: rem(30);
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
@@ -102,6 +119,7 @@
 		}
 
 		@media (min-width: $md4) {
+			order: 0;
 			max-height: none;
 			overflow: visible;
 
@@ -179,7 +197,12 @@
 
 	// .brands-power__more
 	&__more {
-		margin-top: 2rem;
+		order: 4;
+		margin-top: rem(30);
+
+		@media (min-width: $md4) {
+			order: 0;
+		}
 
 		@media (min-width:$md2) {
 			margin-top: 2.5rem;
