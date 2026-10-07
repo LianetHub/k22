@@ -79,9 +79,7 @@
 			width: 100%;
 		}
 
-		@media (min-width: $md4) {
-			grid-template-columns: repeat(2, 1fr);
-		}
+
 
 		@media (min-width: $md2) {
 			grid-template-columns: repeat(4, 1fr);

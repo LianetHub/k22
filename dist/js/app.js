@@ -689,7 +689,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						[BP_MD4]: {
 							slidesPerView: 1.61,
 						},
-						[BP_MD2]: {
+						[BP_MD3]: {
 							slidesPerView: 2,
 						},
 						[BP_MD1]: {

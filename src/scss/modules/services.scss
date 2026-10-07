@@ -119,6 +119,10 @@
 			order: -1;
 
 			@media (min-width: $md2) {
+				order: 1;
+			}
+
+			@media (min-width: $md1) {
 				order: 0;
 			}
 
@@ -456,6 +460,17 @@
 .services__grid {
 	.services-card:not(.services-card--compact) {
 		@media (min-width: $md4) {
+			grid-column: span 2;
+		}
+	}
+
+	// .services--mosaic .services-card--dark
+	.services--mosaic & .services-card--dark {
+		@media (min-width: $md2) {
+			grid-column: 1 / -1;
+		}
+
+		@media (min-width: $md1) {
 			grid-column: span 2;
 		}
 	}

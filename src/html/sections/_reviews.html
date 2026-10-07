@@ -3,9 +3,9 @@
 		<h2 class="reviews__title title decor-line-block">Отзывы</h2>
 		@@if(typeof reviewsList !== 'undefined') {
 		<div class="reviews__slider swiper">
-			<div class="reviews__grid swiper-wrapper">
+			<ul class="reviews__grid swiper-wrapper">
 				@@loop('../templates/_review-card.html', '@@reviewsList')
-			</div>
+			</ul>
 		</div>
 		}
 		@@if(typeof moreHref !== 'undefined') {

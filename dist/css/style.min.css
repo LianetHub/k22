@@ -8355,7 +8355,6 @@ textarea.form-control {
 }
 @media (min-width: 766.98px) {
   .faq__offer-bottom {
-    margin-top: 5.25rem;
     flex-direction: row;
     align-items: center;
     gap: 0.625rem;
@@ -8363,6 +8362,7 @@ textarea.form-control {
 }
 @media (min-width: 1439.98px) {
   .faq__offer-bottom {
+    margin-top: 5.25rem;
     order: 0;
     flex-direction: column;
     align-items: flex-start;
@@ -8585,11 +8585,6 @@ textarea.form-control {
     gap: 1.875rem;
     transform: none;
     width: 100%;
-  }
-}
-@media (min-width: 766.98px) {
-  .reviews__grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1199.98px) {
@@ -11293,6 +11288,11 @@ textarea.form-control {
 }
 @media (min-width: 1199.98px) {
   .services.services--mosaic .services-card--dark {
+    order: 1;
+  }
+}
+@media (min-width: 1439.98px) {
+  .services.services--mosaic .services-card--dark {
     order: 0;
   }
 }
@@ -11608,6 +11608,16 @@ textarea.form-control {
 
 @media (min-width: 766.98px) {
   .services__grid .services-card:not(.services-card--compact) {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1199.98px) {
+  .services--mosaic .services__grid .services-card--dark {
+    grid-column: 1/-1;
+  }
+}
+@media (min-width: 1439.98px) {
+  .services--mosaic .services__grid .services-card--dark {
     grid-column: span 2;
   }
 }

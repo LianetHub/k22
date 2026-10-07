@@ -65,13 +65,14 @@
 		order: 1;
 
 		@media (min-width: $md4) {
-			margin-top: 5.25rem;
+
 			flex-direction: row;
 			align-items: center;
 			gap: rem(10);
 		}
 
 		@media (min-width: $md1) {
+			margin-top: 5.25rem;
 			order: 0;
 			flex-direction: column;
 			align-items: flex-start;
