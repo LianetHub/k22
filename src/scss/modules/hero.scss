@@ -10,8 +10,13 @@
         background-position: center top, 61% -27vw;
         background-size: auto, 366% auto;
 
-        @media (min-width: $md4) {
+        @media (min-width:$md4) {
+            background-image: url("@img/hero/home-tablet.webp");
             background-size: cover;
+
+        }
+
+        @media (min-width: $md3) {
             background-image: url("@img/hero/home.webp");
             background-position: right 10%;
         }
@@ -302,10 +307,12 @@
     background-color: $color-bg-secondary;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    padding-bottom: rem(0);
 
-    @media (min-width: $md4) {
+    padding-bottom: rem(0);
+    min-height: rem(654);
+
+    @media (min-width: $md3) {
+        background-size: cover;
         min-height: rem(500);
     }
 
@@ -333,7 +340,7 @@
 
         @media (min-width: $md4) {
             justify-content: space-between;
-            padding-top: rem(100);
+            padding-top: rem(66);
         }
 
         @media (min-width: $md3) {
@@ -361,6 +368,7 @@
         width: 100%;
         padding-top: rem(20);
         max-width: rem(548);
+
 
         @media (min-width:$md3) {
             align-self: center;
@@ -430,7 +438,7 @@
         }
 
         @media (min-width: $md4) {
-            margin-top: rem(20);
+            margin-top: rem(12);
             @include desktop-heading-h3;
 
             &::before {
@@ -438,6 +446,10 @@
                 width: rem(24);
                 height: rem(24);
             }
+        }
+
+        @media (min-width:$md2) {
+            margin-top: rem(20);
         }
 
 

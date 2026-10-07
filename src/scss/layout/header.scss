@@ -380,6 +380,7 @@
 	z-index: 20;
 	display: flex;
 	flex-direction: column;
+	padding-bottom: $cookies-height;
 	background: $color-bg-primary;
 	overflow: auto;
 	visibility: hidden;
@@ -560,6 +561,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(10);
+		padding-inline: rem(20);
 
 		background: $color-bg-secondary;
 		color: $color-text-primary;
@@ -576,6 +578,17 @@
 		&.icon-speedometer,
 		&.icon-exhaust-pipe {
 			color: $color-accent-primary;
+		}
+
+		// .menu__link-icon
+		.menu__link-icon {
+			width: rem(12);
+			height: rem(12);
+			flex-shrink: 0;
+
+			@media (min-width: $md2) {
+				display: none;
+			}
 		}
 
 		&::before {
@@ -599,6 +612,7 @@
 			font-size: rem(12);
 			margin-left: auto;
 			flex-shrink: 0;
+			color: $color-accent-primary;
 		}
 
 		@media (min-width: $md2) {
