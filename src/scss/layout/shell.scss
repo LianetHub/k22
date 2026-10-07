@@ -60,7 +60,12 @@ img {
 	flex-direction: column;
 
 	&>* {
-		padding: 6.25rem 0;
+		padding: 5rem 0;
+
+		@media (min-width:$md0) {
+			padding: 6.25rem 0;
+
+		}
 
 		&:first-child {
 			padding-top: rem(0);

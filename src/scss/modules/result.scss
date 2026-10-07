@@ -19,6 +19,7 @@
 			}
 
 			@media (min-width: $md1) {
+				padding-block: rem(100);
 				background-image:
 					url("@img/decor/light-pattern.svg"),
 					linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
@@ -79,13 +80,20 @@
 		}
 
 		@media (min-width: $md1) {
+			background-image:
+				url("@img/decor/light-pattern.svg"),
+				linear-gradient(90deg, transparent 77%, $color-accent-primary 80% 100%, transparent 111%),
+				url("@img/result/car.webp");
+			background-position: 0 0, center, right center;
+			background-blend-mode: normal, overlay, normal;
+		}
+
+		@media (min-width: $md0) {
 			padding-block: rem(100);
 			background-image:
 				url("@img/decor/light-pattern.svg"),
 				linear-gradient(90deg, transparent 72.4%, $color-accent-primary 72.4% 103.4%, transparent 103.4%),
 				url("@img/result/car.webp");
-			background-position: 0 0, center, right center;
-			background-blend-mode: normal, overlay, normal;
 		}
 
 		&::after {
@@ -128,12 +136,17 @@
 			}
 
 			@media (min-width: $md1) {
-				top: rem(-81);
+				top: rem(-78);
 				right: auto;
-				left: 65.78%;
+				left: rem(786);
 				font-size: rem(487);
 				letter-spacing: rem(-9.74);
 				opacity: 0.2;
+			}
+
+			@media (min-width: $md0) {
+				top: rem(-81);
+				left: 65.78%;
 			}
 		}
 	}
@@ -161,10 +174,15 @@
 		@media (min-width: $md1) {
 			display: flex;
 			flex-direction: column;
-			gap: rem(30);
+			gap: rem(20);
 			width: 100%;
-			max-width: rem(757);
+			max-width: rem(674);
 			min-width: 0;
+		}
+
+		@media (min-width: $md0) {
+			gap: rem(30);
+			max-width: rem(757);
 		}
 	}
 
@@ -172,7 +190,6 @@
 	&__title {
 		order: 1;
 		width: 100%;
-
 
 	}
 
@@ -232,6 +249,14 @@
 			min-width: 0;
 			margin-right: rem(-58);
 		}
+
+		@media (min-width: $md1) {
+			margin-right: rem(-60);
+		}
+
+		@media (min-width: $md0) {
+			margin-right: rem(-58);
+		}
 	}
 
 	// .result__metric-gain
@@ -253,10 +278,61 @@
 	&__metric-panel {
 		display: contents;
 
+		&.result__metric-panel--gain {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			flex: 0 0 auto;
+			width: auto;
+			min-width: 0;
+			padding: rem(10) rem(10) rem(10) rem(50);
+			text-align: center;
+			background: $color-bg-elevated;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(40)} 100%);
+
+			@media (min-width: $md4) {
+				flex: 1 1 auto;
+				padding: rem(20) rem(30) rem(20) rem(88);
+				clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
+			}
+
+			.result__value {
+				gap: 0;
+
+				@media (min-width: $md4) {
+					gap: rem(10);
+				}
+			}
+
+			.result__num {
+				@include mobile-heading-h4;
+
+				@media (min-width: $md4) {
+					@include mobile-heading-h1;
+				}
+
+				@media (min-width: $md0) {
+					@include desktop-heading-h2;
+				}
+			}
+
+			.result__unit--pct {
+				@include desktop-heading-h4;
+				color: inherit;
+				opacity: 0.4;
+
+				@media (min-width: $md4) {
+					@include desktop-heading-h3;
+				}
+			}
+		}
+
 		@media (min-width: $md4) {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-start;
+
 			gap: rem(10);
 			flex: 0 0 rem(529);
 			width: rem(529);
@@ -267,68 +343,16 @@
 		}
 
 		@media (min-width: $md1) {
+			height: rem(130);
+		}
+
+		@media (min-width: $md0) {
+			justify-content: center;
 			height: rem(146);
 		}
 	}
 
-	// .result__metric-panel--gain
-	&__metric-panel--gain {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 auto;
-		width: auto;
-		min-width: 0;
-		padding: rem(10) rem(10) rem(10) rem(50);
-		text-align: center;
-		background: $color-bg-elevated;
-		clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(40)} 100%);
 
-		@media (min-width: $md4) {
-			flex: 1 1 auto;
-
-			width: auto;
-			padding: rem(20) rem(30) rem(20) rem(88);
-			clip-path: polygon(0 0, 100% 0, 100% 100%, #{rem(58)} 100%);
-		}
-
-		@media (min-width: $md1) {
-			height: rem(146);
-		}
-
-		.result__value {
-			gap: 0;
-
-			@media (min-width: $md4) {
-				gap: rem(10);
-			}
-		}
-
-		.result__num {
-			@include mobile-heading-h4;
-
-			@media (min-width: $md4) {
-				@include mobile-heading-h1;
-			}
-
-			@media (min-width: $md1) {
-				@include desktop-heading-h2;
-			}
-		}
-
-		.result__unit--pct {
-			@include desktop-heading-h4;
-			color: inherit;
-			opacity: 0.4;
-
-			@media (min-width: $md4) {
-				@include desktop-heading-h3;
-				color: inherit;
-				opacity: 0.4;
-			}
-		}
-	}
 
 	// .result__label
 	&__label {
@@ -347,7 +371,7 @@
 			padding-left: 0;
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			font-size: rem(22);
 			line-height: 1.2;
 			letter-spacing: 0;
@@ -358,7 +382,7 @@
 			font-size: rem(16);
 			color: $color-bg-primary;
 
-			@media (min-width: $md1) {
+			@media (min-width: $md0) {
 				font-size: rem(22);
 			}
 		}
@@ -418,7 +442,7 @@
 
 		@include mobile-heading-h1;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			@include desktop-heading-h2;
 		}
 
@@ -432,7 +456,7 @@
 		color: $color-bg-primary;
 		opacity: 0.4;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			font-size: rem(22);
 			line-height: 1.2;
 			letter-spacing: 0;
@@ -455,7 +479,7 @@
 		color: $color-bg-primary;
 		opacity: 0.3;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			@include desktop-body-xl;
 		}
 	}
@@ -513,6 +537,7 @@
 		width: 100%;
 		padding: rem(20);
 		background: $color-text-primary;
+		margin-top: 1.5rem;
 
 		@media (min-width: $md4) {
 			flex-direction: row;
@@ -523,6 +548,10 @@
 
 		@media (min-width: $md1) {
 			margin-bottom: 0;
+		}
+
+		@media (min-width: $md0) {
+			margin-top: 0;
 			padding: rem(30);
 		}
 	}
@@ -531,7 +560,12 @@
 	&__guarantee-text {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
+		gap: rem(2);
+
+		@media (min-width:$md0) {
+			gap: rem(10);
+
+		}
 	}
 
 	// .result__guarantee-title
@@ -540,7 +574,7 @@
 		color: $color-bg-primary;
 		@include desktop-heading-h4;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			@include desktop-heading-h3;
 		}
 	}
@@ -551,7 +585,7 @@
 		@include desktop-body-m;
 		color: $color-bg-primary;
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			font-size: rem(22);
 			line-height: 1.2;
 			letter-spacing: 0;
@@ -565,6 +599,13 @@
 		@media (min-width: $md4) {
 			width: auto;
 			flex: 1 1 auto;
+		}
+
+		@media (max-width:$md0) {
+			&.btn {
+				font-size: 1.125rem;
+				padding: 1.75rem 3.25rem;
+			}
 		}
 	}
 
@@ -592,8 +633,13 @@
 			align-self: flex-end;
 			flex-shrink: 0;
 			width: auto;
-			max-width: rem(263);
+			max-width: rem(223);
 			text-align: right;
+			@include desktop-heading-h4;
+		}
+
+		@media (min-width: $md0) {
+			max-width: rem(263);
 			@include mobile-heading-h1;
 		}
 	}

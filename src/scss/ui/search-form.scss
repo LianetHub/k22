@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .search-form {
+
 	// search-form--secondary
 	&.search-form--secondary {
 		height: rem(64);
@@ -15,10 +16,7 @@
 			color: $color-text-secondary;
 		}
 
-		.search-form__btn {
-			min-height: 0;
-			padding: rem(16) rem(22);
-		}
+
 	}
 
 	display: flex;
@@ -64,8 +62,13 @@
 		flex-shrink: 0;
 
 		&.btn {
+			padding: rem(12) rem(22);
 			min-height: 0;
-			padding: rem(16) rem(22);
+
+			@media (min-width:$md0) {
+				padding: rem(16) rem(22);
+
+			}
 		}
 	}
 }

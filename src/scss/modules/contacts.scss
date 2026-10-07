@@ -581,8 +581,13 @@
 	// .contacts__map
 	&__map {
 		width: 100%;
-		height: 27.625rem;
 		background: $color-bg-secondary;
+		height: 21.1875rem;
+
+		@media (min-width:$md0) {
+			height: 27.625rem;
+
+		}
 
 		ymaps,
 		[class*="ymaps-"] {
@@ -644,8 +649,12 @@
 
 	// .contacts__place-title
 	&__place-title {
-		@include desktop-heading-h3;
-		color: $color-bg-primary;
+		@include desktop-heading-h4;
+
+		@media (min-width:$md0) {
+			@include desktop-heading-h3;
+
+		}
 	}
 
 	// .contacts__phone-row
@@ -690,12 +699,17 @@
 	// .contacts__phone
 	&__phone {
 		font-family: $font-inter;
-		font-size: 1.375rem;
 		font-weight: 700;
 		line-height: 1;
 		letter-spacing: -0.0275rem;
 		color: $color-bg-primary;
 		transition: opacity 0.2s ease;
+		font-size: 1.125rem;
+
+		@media (min-width:$md0) {
+			font-size: 1.375rem;
+
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

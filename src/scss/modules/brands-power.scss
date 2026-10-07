@@ -167,6 +167,11 @@
 
 	// .brands-power__more
 	&__more {
-		margin-top: 4rem;
+		margin-top: 2.5rem;
+
+		@media (min-width:$md0) {
+			margin-top: 4rem;
+
+		}
 	}
 }

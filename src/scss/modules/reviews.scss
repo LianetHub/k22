@@ -49,12 +49,7 @@
 
 	// .reviews__title
 	&__title {
-
-
-
 		grid-area: title;
-
-
 	}
 
 	// .reviews__slider
@@ -97,8 +92,11 @@
 	&__more {
 		grid-area: more;
 
+
 		&.more-link {
-			padding-bottom: rem(10);
+			@media (min-width:$md0) {
+				padding-bottom: rem(10);
+			}
 		}
 	}
 

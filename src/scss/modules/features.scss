@@ -166,9 +166,6 @@
 	background-position: 0 0;
 	color: $color-bg-primary;
 
-	.page>& {
-		@include section-inset($space-section);
-	}
 
 	// .features__container
 	&__container {

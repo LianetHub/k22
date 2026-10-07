@@ -3,19 +3,13 @@
 .gallery {
 	background: $color-bg-primary;
 
-	.page>& {
-		@include section-inset($space-60);
-
-		@media (min-width: $md4) {
-			@include section-inset($space-100);
-		}
-	}
 
 	// .gallery__container
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(32);
+		gap: rem(24);
+
 
 		@media (min-width: $md3) {
 			padding-inline: rem(20);
@@ -23,6 +17,10 @@
 
 		@media (min-width: $md1) {
 			padding-inline: rem(30);
+		}
+
+		@media (min-width:$md0) {
+			gap: rem(32);
 		}
 	}
 
@@ -33,7 +31,6 @@
 	&__slider {
 		min-width: 0;
 		max-width: 100%;
-
 		overflow: visible;
 	}
 

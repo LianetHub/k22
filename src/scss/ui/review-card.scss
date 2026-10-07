@@ -137,7 +137,12 @@
 			margin-block: 0;
 
 			&+p {
-				margin-top: rem(16);
+				margin-top: rem(8);
+
+				@media (min-width:$md0) {
+					margin-top: rem(16);
+
+				}
 			}
 		}
 	}

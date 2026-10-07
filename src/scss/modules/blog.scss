@@ -77,16 +77,16 @@
 		}
 	}
 
-	@include section-margin($space-48);
+
 	background: $color-bg-secondary;
+	// @include section-margin($space-48);
+	// @media (min-width: $md4) {
+	// 	@include section-margin($space-80);
+	// }
 
-	@media (min-width: $md4) {
-		@include section-margin($space-80);
-	}
-
-	@media (min-width: $md2) {
-		@include section-margin($space-100);
-	}
+	// @media (min-width: $md2) {
+	// 	@include section-margin($space-100);
+	// }
 
 	// blog__container
 	&__container {}
