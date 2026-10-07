@@ -13,10 +13,11 @@
         @media (min-width:$md4) {
             background-image: url("@img/hero/home-tablet.webp");
             background-size: cover;
+            background-position: right center;
 
         }
 
-        @media (min-width: $md3) {
+        @media (min-width: $md2) {
             background-image: url("@img/hero/home.webp");
             background-position: right 10%;
         }
@@ -311,7 +312,7 @@
     padding-bottom: rem(0);
     min-height: rem(654);
 
-    @media (min-width: $md3) {
+    @media (min-width: $md2) {
         background-size: cover;
         min-height: rem(500);
     }
@@ -343,7 +344,7 @@
             padding-top: rem(66);
         }
 
-        @media (min-width: $md3) {
+        @media (min-width: $md2) {
             flex-direction: row;
             align-items: flex-end;
             justify-content: space-between;
@@ -370,7 +371,7 @@
         max-width: rem(548);
 
 
-        @media (min-width:$md3) {
+        @media (min-width:$md2) {
             align-self: center;
             max-width: rem(600);
         }
@@ -484,7 +485,7 @@
             width: auto;
         }
 
-        @media (min-width: $md3) {
+        @media (min-width: $md2) {
             align-self: flex-end;
             margin-left: auto;
         }

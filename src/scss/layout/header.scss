@@ -314,12 +314,8 @@
 
 	// .header__actions
 	&__actions {
-		display: none;
-
-		@media (min-width: $md4) {
-			display: flex;
-			gap: rem(16);
-		}
+		display: flex;
+		gap: rem(16);
 
 		@media (min-width:$md1) {
 			margin-left: rem(10);
@@ -483,7 +479,7 @@
 		width: rem(22);
 		height: rem(22);
 		margin-left: auto;
-		font-size: rem(14);
+		font-size: rem(22);
 		color: $color-accent-primary;
 		cursor: pointer;
 		background: transparent;
@@ -496,7 +492,7 @@
 		flex-direction: column;
 		gap: rem(10);
 		flex: 1 1 auto;
-		padding: 0 rem(20);
+		padding: rem(8) rem(20) rem(20);
 
 		@media (min-width: $md2) {
 			flex-direction: row;
@@ -578,6 +574,11 @@
 		&.icon-speedometer,
 		&.icon-exhaust-pipe {
 			color: $color-accent-primary;
+
+			&::before {
+				color: $color-accent-primary;
+
+			}
 		}
 
 		// .menu__link-icon
@@ -594,6 +595,7 @@
 		&::before {
 			font-size: rem(12);
 			flex-shrink: 0;
+			color: $color-text-secondary;
 
 			@media (min-width:$md1) {
 				margin-right: 0.5rem;
