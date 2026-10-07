@@ -70,6 +70,7 @@ function boot(body = "", options = {}) {
 			media,
 			get matches() {
 				if (String(media).includes("prefers-reduced-motion")) return reduceMotion;
+				if (String(media) === "(min-width: 575.98px)") return currentWidth >= 575.98;
 				return isDesktop;
 			},
 			listeners: [],
@@ -507,6 +508,22 @@ describe("меню на мобильном", () => {
 		expect(ctx.$("#group-power").classList.contains("is-open")).toBe(true);
 		expect(ctx.$("#toggle-power").getAttribute("aria-expanded")).toBe("true");
 
+		ctx.clickOn("#toggle-power");
+		expect(ctx.$("#group-power").classList.contains("is-open")).toBe(false);
+		expect(ctx.$("#toggle-power").getAttribute("aria-expanded")).toBe("false");
+	});
+
+	it("ссылка без подменю не открывает drill", () => {
+		const ctx = boot(MENU, { width: 375, desktop: false });
+		ctx.clickOn("[data-menu-burger]");
+		ctx.clickOn("#link-shop");
+		expect(ctx.$("[data-menu]").classList.contains("is-drill")).toBe(false);
+		expect(ctx.$("#link-shop").getAttribute("href")).toBe("catalog.html");
+	});
+
+	it("на планшете тоггл группы не открывает аккордеон", () => {
+		const ctx = boot(MENU, { width: 600, desktop: false });
+		ctx.clickOn("#trigger-chip");
 		ctx.clickOn("#toggle-power");
 		expect(ctx.$("#group-power").classList.contains("is-open")).toBe(false);
 		expect(ctx.$("#toggle-power").getAttribute("aria-expanded")).toBe("false");

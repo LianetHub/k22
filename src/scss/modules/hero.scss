@@ -5,13 +5,14 @@
 
     // .hero--home
     &.hero--home {
+        background-color: #F4F4F6;
         background-image:
             url("@img/hero/home-mobile.webp");
         background-size: contain;
         background-position: center 0;
 
 
-        @media (min-width:$md4) {
+        @media (min-width:$md5) {
             background-image: url("@img/hero/home-tablet.webp");
             background-size: cover;
             background-position: right center;
@@ -312,14 +313,13 @@
 
     padding-bottom: rem(0);
 
-    @media (max-width:$md4) {
+    @media (max-width:$md5) {
         aspect-ratio: math.div(393, 715);
 
     }
 
-    @media (min-width:$md4) {
+    @media (min-width:$md5) {
         min-height: rem(654);
-
     }
 
     @media (min-width: $md2) {
@@ -349,7 +349,7 @@
         // padding-top: rem(450);
         padding-bottom: rem(40);
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             justify-content: flex-start;
             justify-content: space-between;
             padding-top: rem(66);
@@ -404,7 +404,7 @@
         flex-direction: column;
         gap: rem(20);
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             gap: rem(40);
         }
 
@@ -423,7 +423,7 @@
         font-weight: 400;
         line-height: 1.2;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             font-size: rem(22);
         }
 
@@ -449,7 +449,7 @@
             height: rem(18);
         }
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             margin-top: rem(12);
             @include desktop-heading-h3;
 
@@ -476,11 +476,11 @@
         width: 100%;
         margin-top: rem(20);
 
-        @media (max-width:$md4) {
+        @media (max-width:$md5) {
             min-height: rem(72);
         }
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             width: auto;
         }
 
@@ -495,7 +495,7 @@
         width: 100%;
         margin-left: 0;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             align-self: flex-start;
             width: auto;
         }
@@ -515,7 +515,7 @@
         color: $color-bg-secondary;
         clip-path: none;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             width: rem(358);
             max-width: rem(358);
             padding: rem(24) rem(44) rem(14);
@@ -552,7 +552,7 @@
         width: rem(90);
         height: rem(14);
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             width: rem(64);
             height: rem(10);
         }
@@ -565,7 +565,7 @@
         align-items: center;
         gap: rem(10);
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             margin-top: rem(12);
             gap: rem(6);
         }
@@ -575,7 +575,7 @@
     &__rate-value {
         @include tablet-heading-h1;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             @include desktop-heading-h2;
             line-height: 1;
         }
@@ -602,7 +602,7 @@
         color: $color-bg-primary;
         clip-path: none;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             width: rem(397);
             max-width: 100%;
             padding: rem(24);
@@ -644,7 +644,7 @@
         overflow: hidden;
         pointer-events: none;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             inset: 0;
             height: auto;
             overflow: visible;
@@ -664,7 +664,7 @@
         transform-origin: center center;
         pointer-events: none;
 
-        @media (min-width: $md4) {
+        @media (min-width: $md5) {
             top: rem(36);
             right: rem(-210);
             left: auto;

@@ -320,6 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const menuBack = menu?.querySelector("[data-menu-back]");
 	const menuClose = menu?.querySelector("[data-menu-close]");
 	const desktopMenuMq = window.matchMedia(`(min-width: ${BP_MD2}px)`);
+	const tabletMenuMq = window.matchMedia(`(min-width: ${BP_MD5}px)`);
 	const menuHoverMq = window.matchMedia("(hover: hover) and (pointer: fine)");
 	let menuScrollY = 0;
 
@@ -485,7 +486,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 
 			const groupToggle = target.closest("[data-menu-group]");
-			if (groupToggle && !isDesktopMenu()) {
+			if (groupToggle && !tabletMenuMq.matches) {
 				const group = groupToggle.closest(".menu__group");
 				if (!group || group.classList.contains("menu__group--flat")) return;
 
