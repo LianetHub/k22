@@ -12975,17 +12975,26 @@ textarea.form-control {
   overflow: hidden;
   background-color: #000;
   background-image: url("../img/error-page/bg.webp");
-  background-size: cover;
-  background-position: center 115%;
+  background-position: center;
   color: #fff;
+  background-size: auto 28.33244rem;
+  background-repeat: no-repeat;
+  background-position: center 4.4%;
+}
+@media (min-width: 575.98px) {
+  .error-page {
+    background-position: center 115%;
+    background-size: cover;
+  }
 }
 .page > .error-page {
   margin-bottom: 0;
   margin-top: -3.3125rem;
+  padding-top: 6.125rem;
 }
 @media (min-width: 766.98px) {
   .page > .error-page {
-    padding-top: 5.6875rem;
+    padding-top: 6.6875rem;
   }
 }
 @media (min-width: 1919.98px) {
@@ -12998,24 +13007,27 @@ textarea.form-control {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   height: 100%;
-  width: 44.65256rem;
   background: #FC373D;
   mix-blend-mode: overlay;
+  pointer-events: none;
+  width: 50%;
+  right: 0;
+}
+@media (min-width: 575.98px) {
+  .error-page::before {
+    width: 44.65256rem;
+    transform: translateX(-50%);
+    left: 50%;
+    right: auto;
+  }
 }
 .error-page__container {
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.125rem;
-}
-@media (min-width: 766.98px) {
-  .error-page__container {
-    gap: 2.5rem;
-  }
+  gap: 2.75rem;
 }
 .error-page__visual {
   display: flex;
@@ -13023,9 +13035,14 @@ textarea.form-control {
   align-items: center;
   width: 100%;
   min-width: 0;
-  gap: 12.5rem;
+  gap: 9.125rem;
 }
 @media (min-width: 766.98px) {
+  .error-page__visual {
+    gap: 0.625rem;
+  }
+}
+@media (min-width: 991.98px) {
   .error-page__visual {
     gap: 5.625rem;
   }
@@ -13060,15 +13077,26 @@ textarea.form-control {
 .error-page__media {
   position: absolute;
   z-index: 2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 115%;
+  top: 35.4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40.46438rem;
+  height: 28.33244rem;
   pointer-events: none;
+  object-fit: cover;
+}
+@media (min-width: 575.98px) {
+  .error-page__media {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    transform: none;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 115%;
+  }
 }
 .error-page__text {
   position: relative;
@@ -13104,6 +13132,11 @@ textarea.form-control {
   position: relative;
   z-index: 3;
   flex-shrink: 0;
+}
+.error-page__btn.btn {
+  padding: 2rem 3.25rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.0275rem;
 }
 
 .policy {

@@ -7,9 +7,17 @@
 	overflow: hidden;
 	background-color: #000;
 	background-image: url("@img/error-page/bg.webp");
-	background-size: cover;
-	background-position: center 115%;
+	background-position: center;
 	color: $color-bg-primary;
+	background-size: auto 28.33244rem;
+	background-repeat: no-repeat;
+	background-position: center 4.4%;
+
+	@media (min-width:$md5) {
+		background-position: center 115%;
+		background-size: cover;
+
+	}
 
 
 
@@ -17,9 +25,10 @@
 	.page>& {
 		margin-bottom: 0;
 		margin-top: rem(-53);
+		padding-top: rem(98);
 
 		@media (min-width: $md4) {
-			padding-top: rem(91);
+			padding-top: rem(107);
 		}
 
 		@media (min-width: $md0) {
@@ -32,12 +41,20 @@
 		content: '';
 		position: absolute;
 		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
 		height: 100%;
-		width: 44.65256rem;
 		background: $color-accent-primary;
 		mix-blend-mode: overlay;
+		pointer-events: none;
+		width: 50%;
+		right: 0;
+
+		@media (min-width:$md5) {
+			width: 44.65256rem;
+			transform: translateX(-50%);
+			left: 50%;
+			right: auto;
+
+		}
 	}
 
 
@@ -48,11 +65,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: rem(50);
+		gap: rem(44);
 
-		@media (min-width: $md4) {
-			gap: rem(40);
-		}
 	}
 
 	// error-page__visual
@@ -62,9 +76,13 @@
 		align-items: center;
 		width: 100%;
 		min-width: 0;
-		gap: rem(200);
+		gap: rem(146);
 
 		@media (min-width: $md4) {
+			gap: 0.625rem
+		}
+
+		@media (min-width: $md3) {
 			gap: rem(90);
 		}
 
@@ -99,15 +117,26 @@
 	&__media {
 		position: absolute;
 		z-index: 2;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center 115%;
+		top: 35.4%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 40.46438rem;
+		height: 28.33244rem;
 		pointer-events: none;
+		object-fit: cover;
+
+		@media (min-width:$md5) {
+			top: 0;
+			left: 0;
+			bottom: 0;
+			height: 100%;
+			right: 0;
+			transform: none;
+			width: 100%;
+			object-fit: cover;
+			object-position: center 115%;
+
+		}
 	}
 
 	// error-page__text
@@ -147,5 +176,11 @@
 		position: relative;
 		z-index: 3;
 		flex-shrink: 0;
+
+		&.btn {
+			padding: rem(32) 3.25rem;
+			font-size: 1.375rem;
+			letter-spacing: -0.0275rem;
+		}
 	}
 }
