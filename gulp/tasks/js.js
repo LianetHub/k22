@@ -1,5 +1,10 @@
+import rename from "gulp-rename";
+import uglifyEs from "gulp-uglify-es";
+
+const uglify = uglifyEs.default;
+
 export const js = () => {
-	return app.gulp
+	const stream = app.gulp
 		.src(app.path.src.js, { sourcemaps: app.isDev })
 		.pipe(
 			app.plugins.plumber(
@@ -8,6 +13,19 @@ export const js = () => {
 					message: "Error: <%= error.message %>",
 				})
 			)
+		)
+		.pipe(app.gulp.dest(app.path.build.js));
+
+	if (!app.isBuild) {
+		return stream.pipe(app.plugins.browsersync.stream());
+	}
+
+	return stream
+		.pipe(uglify())
+		.pipe(
+			rename({
+				extname: ".min.js",
+			})
 		)
 		.pipe(app.gulp.dest(app.path.build.js))
 		.pipe(app.plugins.browsersync.stream());

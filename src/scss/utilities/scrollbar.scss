@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-$scrollbarColor: #fff;
+$scrollbarColor: $color-accent-primary;
 
 ::-webkit-scrollbar {
 	width: rem(8);
