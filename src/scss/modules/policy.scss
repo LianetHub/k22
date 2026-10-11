@@ -4,7 +4,7 @@
 	@include section-margin($space-32, $space-60);
 	background: $color-bg-secondary;
 
-	.page > & {
+	.page>& {
 		margin-bottom: $space-60;
 
 		@media (min-width: $md4) {
@@ -16,7 +16,7 @@
 		}
 	}
 
-	.page > &:first-child {
+	.page>&:first-child {
 		margin-top: $space-32;
 
 		@media (min-width: $md4) {
@@ -43,7 +43,7 @@
 		gap: rem(30);
 
 		@media (min-width: $md4) {
-			gap: rem(40);
+			gap: rem(20);
 		}
 	}
 
@@ -58,10 +58,10 @@
 		}
 
 		@media (min-width: $md0) {
-			gap: rem(40);
+			gap: rem(24);
 		}
 
-		> p {
+		>p {
 			display: none;
 			font-family: $font-inter;
 			font-size: rem(14);
@@ -79,6 +79,7 @@
 		h1 {
 			@include desktop-heading-h4;
 			color: $color-text-primary;
+			max-width: rem(1200);
 
 			@media (min-width: $md4) {
 				@include tablet-heading-h1;
@@ -126,9 +127,10 @@
 	&__nav {
 		display: none;
 		flex-direction: column;
-		gap: rem(20);
+		gap: rem(10);
 		padding: rem(30);
 		background: $color-bg-primary;
+		counter-reset: policy-nav;
 
 		@media (min-width: $md0) {
 			display: flex;
@@ -140,34 +142,29 @@
 	// .policy__nav-link
 	&__nav-link {
 		display: flex;
-		gap: rem(10);
+		gap: rem(12);
 		align-items: flex-start;
-		color: $color-text-primary;
-		transition: opacity 0.2s ease;
-
-		@media (any-hover: hover) {
-			&:hover {
-				opacity: 0.7;
-			}
-		}
-	}
-
-	// .policy__nav-num
-	&__nav-num {
-		@include desktop-heading-h4;
-		flex-shrink: 0;
-		width: rem(30);
-		color: $color-accent-primary;
-	}
-
-	// .policy__nav-text
-	&__nav-text {
-		flex: 1 1 auto;
 		min-width: 0;
 		font-family: $font-inter;
 		font-size: rem(22);
 		font-weight: 400;
 		line-height: 1.2;
 		color: $color-text-primary;
+		transition: opacity 0.2s ease;
+		counter-increment: policy-nav;
+
+		&::before {
+			@include desktop-heading-h4;
+			content: counter(policy-nav, decimal-leading-zero);
+			flex-shrink: 0;
+			width: rem(30);
+			color: $color-accent-primary;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
 	}
 }
