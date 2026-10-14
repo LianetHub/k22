@@ -62,15 +62,7 @@
 			margin-top: 0;
 		}
 
-		.breadcrumbs__item {
-			font-size: rem(12);
-			letter-spacing: em(-0.24, 12);
 
-			@media (min-width: $md4) {
-				font-size: rem(16);
-				letter-spacing: em(-0.32, 16);
-			}
-		}
 
 		.custom-select--sort .custom-select__trigger {
 			min-width: rem(180);

@@ -121,6 +121,22 @@ img {
 	color: $color-accent-primary;
 	transition: background-color 0.3s ease;
 
+	&.icon-max {
+		color: #8a38f5;
+	}
+
+	&.icon-telegram {
+		color: #41a0cf;
+	}
+
+	&.icon-vk {
+		color: #554da3;
+	}
+
+	&.icon-whatsapp {
+		color: #28d565;
+	}
+
 	&[class*="icon-"]::before {
 		display: inline-flex;
 		align-items: center;

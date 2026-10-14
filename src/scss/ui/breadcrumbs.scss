@@ -10,6 +10,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(4);
+		row-gap: 0;
 
 		@media (min-width: $md2) {
 			flex-wrap: nowrap;
@@ -23,10 +24,15 @@
 		min-width: 0;
 		color: rgba($color-text-secondary, 0.5);
 		font-family: $font-inter;
-		font-size: rem(16);
+
 		font-weight: 700;
 		line-height: 1.3;
 		letter-spacing: em(-0.32, 16);
+		font-size: rem(12);
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+		}
 
 		&:not(:last-child) {
 			flex-shrink: 0;
@@ -35,10 +41,14 @@
 				content: "/";
 				display: inline-block;
 				margin-left: rem(4);
-				color: $color-accent-primary;
+				color: rgba($color-text-secondary, 0.5);
 				font-size: inherit;
 				line-height: inherit;
 			}
+		}
+
+		&:nth-last-child(2)::after {
+			color: $color-accent-primary;
 		}
 
 		&:last-child {

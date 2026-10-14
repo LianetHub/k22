@@ -12,7 +12,7 @@
 		@include section-margin($space-100);
 	}
 
-	.page > &:first-child {
+	.page>&:first-child {
 		margin-top: $space-40;
 
 		@media (min-width: $md4) {
@@ -24,20 +24,6 @@
 		}
 	}
 
-	.breadcrumbs__item {
-		font-size: rem(12);
-		letter-spacing: em(-0.24, 12);
-
-		&:not(:last-child)::after {
-			font-size: rem(16);
-			letter-spacing: em(-0.32, 16);
-		}
-
-		@media (min-width: $md4) {
-			font-size: rem(16);
-			letter-spacing: em(-0.32, 16);
-		}
-	}
 
 	// portfolio__container
 	&__container {

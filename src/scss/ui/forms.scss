@@ -260,10 +260,15 @@ textarea.form-control {
 			justify-content: center;
 			width: rem(18);
 			height: rem(18);
+			margin-top: rem(2);
 			border: 1px solid $color-accent-primary;
 			font-size: rem(10);
 			line-height: 1;
 			content: "";
+
+			@media (min-width: $md4) {
+				margin-top: rem(4);
+			}
 		}
 
 		& a {
