@@ -7746,38 +7746,18 @@ textarea.form-control {
 .hero.hero--partner {
   color: #fff;
   background-color: #16161B;
-  background-image: url("../img/hero/partner-handshake.webp"), url("../img/hero/partner-workshop.webp");
-  background-position: 86% -210px, center top;
-  background-size: auto 145%, cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero/partner-mobile.webp");
 }
-@media (min-width: 766.98px) {
+@media (min-width: 575.98px) {
   .hero.hero--partner {
-    background-position: 70% 38%, center;
-    background-size: auto 92%, cover;
+    background-image: url("../img/hero/partner-tablet.webp");
   }
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1199.98px) {
   .hero.hero--partner {
-    background-position: right center, center;
-    background-size: auto 120%, cover;
-  }
-}
-.hero.hero--partner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: linear-gradient(180deg, rgba(22, 22, 27, 0) 0%, rgba(22, 22, 27, 0.15) 34%, rgba(22, 22, 27, 0.78) 56%, #16161B 74%);
-  pointer-events: none;
-}
-@media (min-width: 766.98px) {
-  .hero.hero--partner::before {
-    background: linear-gradient(180deg, rgba(22, 22, 27, 0.78) 0%, rgba(22, 22, 27, 0.28) 24%, rgba(22, 22, 27, 0.05) 44%, rgba(22, 22, 27, 0.22) 64%, rgba(22, 22, 27, 0.82) 84%, #16161B 100%);
-  }
-}
-@media (min-width: 1439.98px) {
-  .hero.hero--partner::before {
-    background: linear-gradient(90deg, rgba(22, 22, 27, 0.92) 0%, rgba(22, 22, 27, 0.72) 34%, rgba(22, 22, 27, 0.28) 58%, rgba(22, 22, 27, 0) 78%);
+    background-image: url("../img/hero/partner.webp");
   }
 }
 .hero.hero--moto {
@@ -8314,9 +8294,30 @@ textarea.form-control {
   background-color: #fff;
   overflow: hidden;
 }
+@media (any-hover: hover) {
+  .format__card:hover .format__image {
+    transform: scale(1.025);
+  }
+}
 @media (min-width: 1919.98px) {
   .format__card {
     height: 25rem;
+  }
+}
+.format__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+@media (any-hover: hover) {
+  .format__card-wrapper:hover .format__image {
+    transform: scale(1.025);
+  }
+  .format__card-wrapper:hover .format__name {
+    color: #FC373D;
   }
 }
 .format__media {
@@ -8336,6 +8337,7 @@ textarea.form-control {
   height: auto;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .format__body {
   display: flex;
@@ -8345,6 +8347,7 @@ textarea.form-control {
   padding: 1.875rem;
 }
 .format__name {
+  transition: color 0.3s ease;
   font-family: "ActayWide", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;

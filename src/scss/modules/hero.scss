@@ -167,51 +167,18 @@
     &.hero--partner {
         color: $color-bg-primary;
         background-color: $color-bg-elevated;
-        background-image:
-            url("@img/hero/partner-handshake.webp"),
-            url("@img/hero/partner-workshop.webp");
-        background-position: 86% -210px, center top;
-        background-size: auto 145%, cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/partner-mobile.webp");
 
-        @media (min-width: $md4) {
-            background-position: 70% 38%, center;
-            background-size: auto 92%, cover;
+        @media (min-width:$md5) {
+            background-image: url("@img/hero/partner-tablet.webp");
+
         }
 
-        @media (min-width: $md1) {
-            background-position: right center, center;
-            background-size: auto 120%, cover;
-        }
+        @media (min-width:$md2) {
+            background-image: url("@img/hero/partner.webp");
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            background: linear-gradient(180deg,
-                    rgba($color-bg-elevated, 0) 0%,
-                    rgba($color-bg-elevated, 0.15) 34%,
-                    rgba($color-bg-elevated, 0.78) 56%,
-                    $color-bg-elevated 74%);
-            pointer-events: none;
-
-            @media (min-width: $md4) {
-                background: linear-gradient(180deg,
-                        rgba($color-bg-elevated, 0.78) 0%,
-                        rgba($color-bg-elevated, 0.28) 24%,
-                        rgba($color-bg-elevated, 0.05) 44%,
-                        rgba($color-bg-elevated, 0.22) 64%,
-                        rgba($color-bg-elevated, 0.82) 84%,
-                        $color-bg-elevated 100%);
-            }
-
-            @media (min-width: $md1) {
-                background: linear-gradient(90deg,
-                        rgba($color-bg-elevated, 0.92) 0%,
-                        rgba($color-bg-elevated, 0.72) 34%,
-                        rgba($color-bg-elevated, 0.28) 58%,
-                        rgba($color-bg-elevated, 0) 78%);
-            }
         }
     }
 

@@ -47,9 +47,41 @@
 		background-color: $color-bg-primary;
 		overflow: hidden;
 
+		@media (any-hover: hover) {
+			&:hover {
+				.format__image {
+					transform: scale(1.025);
+				}
+			}
+		}
+
 		@media (min-width: $md0) {
 			height: rem(400);
 		}
+	}
+
+	// .format__card-wrapper
+	&__card-wrapper {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		height: 100%;
+		background-color: $color-bg-primary;
+		overflow: hidden;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.format__image {
+					transform: scale(1.025);
+				}
+
+				.format__name {
+					color: $color-accent-primary;
+				}
+			}
+		}
+
+
 	}
 
 	// .format__media
@@ -63,6 +95,7 @@
 		padding: rem(12) rem(16) 0;
 		background-color: $color-bg-primary;
 		background-image: url("@img/decor/dark-pattern.svg");
+
 	}
 
 	// .format__image
@@ -72,6 +105,7 @@
 		height: auto;
 		max-height: 100%;
 		object-fit: contain;
+		transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 	}
 
 	// .format__body
@@ -85,6 +119,7 @@
 
 	// .format__name
 	&__name {
+		transition: color 0.3s ease;
 		@include desktop-heading-h4;
 	}
 
