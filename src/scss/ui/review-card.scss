@@ -1,184 +1,197 @@
 @use "../abstracts" as *;
 
 .review-card {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	min-width: 0;
-	height: 100%;
-	background-color: $color-bg-secondary;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    background-color: $color-bg-secondary;
 
-	// review-card__body
-	&__body {
-		display: flex;
-		flex-direction: column;
-		gap: rem(20);
-		padding: rem(20);
-		flex-grow: 1;
+    // review-card__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        padding: rem(20);
+        flex-grow: 1;
 
-		@media (min-width: $md0) {
-			padding: rem(30);
-		}
-	}
+        @media (min-width: $md0) {
+            padding: rem(30);
+        }
+    }
 
-	// review-card__man
-	&__man {
-		display: flex;
-		align-items: flex-start;
-		gap: rem(10);
+    // review-card__man
+    &__man {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        gap: rem(10);
+        padding-left: rem(50);
+        min-height: rem(40);
 
-		@media (min-width: $md0) {
-			gap: rem(20);
-		}
+        @media (min-width:$md5) {
+            padding-left: rem(54);
+            min-height: rem(44);
+        }
 
-		&[class^="icon-"]::before,
-		&[class*=" icon-"]::before {
-			display: flex;
-			flex-shrink: 0;
-			align-items: center;
-			justify-content: center;
-			width: rem(40);
-			height: rem(40);
-			background: $color-accent-secondary;
-			color: $color-accent-primary;
-			font-size: rem(20);
+        @media (min-width: $md0) {
+            padding-left: rem(74);
+            min-height: rem(54);
+            gap: rem(20);
+        }
 
-			@media (min-width: $md5) {
-				width: rem(44);
-				height: rem(44);
-			}
+        &[class^="icon-"]::before,
+        &[class*=" icon-"]::before {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            width: rem(40);
+            height: rem(40);
+            background: $color-accent-secondary;
+            color: $color-accent-primary;
+            font-size: rem(20);
+            position: absolute;
+            top: 0;
+            left: 0;
 
-			@media (min-width: $md0) {
-				width: rem(54);
-				height: rem(54);
-				font-size: rem(30);
-			}
-		}
-	}
+            @media (min-width: $md5) {
+                width: rem(44);
+                height: rem(44);
+            }
 
-	// review-card__identity
-	&__identity {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: rem(3);
-		flex-grow: 1;
-		min-width: 0;
-		align-self: stretch;
+            @media (min-width: $md0) {
+                width: rem(54);
+                height: rem(54);
+                font-size: rem(30);
+            }
+        }
+    }
+
+    // review-card__identity
+    &__identity {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: rem(3);
+        flex-grow: 1;
+        min-width: 0;
+        align-self: stretch;
 
 
-	}
+    }
 
-	// review-card__name
-	&__name {
-		font-family: $fontfamily;
-		font-size: rem(18);
-		font-weight: 700;
-		line-height: 1.2;
-		letter-spacing: em(-0.18, 18);
-		text-transform: uppercase;
-		color: $color-text-primary;
+    // review-card__name
+    &__name {
+        font-family: $fontfamily;
+        font-size: rem(18);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: em(-0.18, 18);
+        text-transform: uppercase;
+        color: $color-text-primary;
 
-		@media (min-width: $md5) {
-			@include desktop-heading-h4;
-		}
-	}
+        @media (min-width: $md5) {
+            @include desktop-heading-h4;
+        }
+    }
 
-	// review-card__car
-	&__car {
-		@include desktop-body-m;
-		color: $color-text-secondary;
+    // review-card__car
+    &__car {
+        @include desktop-body-m;
+        color: $color-text-secondary;
 
-		&:empty {
-			display: none;
-		}
-	}
+        &:empty {
+            display: none;
+        }
+    }
 
-	// review-card__stars
-	&__stars {
-		display: flex;
-		flex-shrink: 0;
-		width: rem(86);
-		color: #ffb800;
+    // review-card__stars
+    &__stars {
+        display: flex;
+        flex-shrink: 0;
+        width: rem(86);
+        color: #ffb800;
 
-		&[class^="icon-"]::before,
-		&[class*=" icon-"]::before {
-			font-size: rem(14);
-			text-shadow: #{rem(18)} 0 0 currentColor,
-			#{rem(36)} 0 0 currentColor,
-			#{rem(54)} 0 0 currentColor,
-			#{rem(72)} 0 0 currentColor;
-		}
+        &[class^="icon-"]::before,
+        &[class*=" icon-"]::before {
+            font-size: rem(14);
+            text-shadow: #{rem(18)} 0 0 currentColor,
+            #{rem(36)} 0 0 currentColor,
+            #{rem(54)} 0 0 currentColor,
+            #{rem(72)} 0 0 currentColor;
+        }
 
-		@media (min-width: $md5) {
-			width: rem(116);
+        @media (min-width: $md5) {
+            width: rem(116);
 
-			&[class^="icon-"]::before,
-			&[class*=" icon-"]::before {
-				font-size: rem(20);
-				text-shadow: #{rem(24)} 0 0 currentColor,
-				#{rem(48)} 0 0 currentColor,
-				#{rem(72)} 0 0 currentColor,
-				#{rem(96)} 0 0 currentColor;
-			}
-		}
-	}
+            &[class^="icon-"]::before,
+            &[class*=" icon-"]::before {
+                font-size: rem(20);
+                text-shadow: #{rem(24)} 0 0 currentColor,
+                #{rem(48)} 0 0 currentColor,
+                #{rem(72)} 0 0 currentColor,
+                #{rem(96)} 0 0 currentColor;
+            }
+        }
+    }
 
-	// review-card__text
-	&__text {
-		@include desktop-body-s;
-		color: $color-text-primary;
+    // review-card__text
+    &__text {
+        @include desktop-body-s;
+        color: $color-text-primary;
 
-		@media (min-width: $md0) {
-			@include desktop-body-m;
-		}
+        @media (min-width: $md0) {
+            @include desktop-body-m;
+        }
 
-		p {
-			margin-block: 0;
+        p {
+            margin-block: 0;
 
-			&+p {
-				margin-top: rem(8);
+            &+p {
+                margin-top: rem(8);
 
-				@media (min-width:$md0) {
-					margin-top: rem(16);
+                @media (min-width:$md0) {
+                    margin-top: rem(16);
 
-				}
-			}
-		}
-	}
+                }
+            }
+        }
+    }
 
-	// review-card__foot
-	&__foot {
-		display: flex;
-		align-items: stretch;
-		justify-content: flex-end;
-		margin-top: auto;
-		background-image: url("@img/decor/dark-pattern.svg");
-		background-repeat: repeat;
-		background-position: 0 0;
-		background-size: auto;
-	}
+    // review-card__foot
+    &__foot {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        margin-top: auto;
+        background-image: url("@img/decor/dark-pattern.svg");
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size: auto;
+    }
 
-	// review-card__address
-	&__address {
-		display: inline-flex;
-		align-items: center;
-		gap: rem(6);
-		padding: rem(20) rem(30) rem(20) rem(88);
-		background: $color-bg-primary;
-		color: $color-text-primary;
-		font-family: $font-inter;
-		font-size: rem(14);
-		font-weight: 700;
-		line-height: 1.2;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
+    // review-card__address
+    &__address {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(6);
+        padding: rem(20) rem(30) rem(20) rem(88);
+        background: $color-bg-primary;
+        color: $color-text-primary;
+        font-family: $font-inter;
+        font-size: rem(14);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        clip-path: polygon(#{rem(58)} 0, 100% 0, 100% 100%, 0 100%);
 
-		&::before {
-			display: block;
-			color: $color-accent-primary;
-			font-size: rem(12);
-		}
-	}
+        &::before {
+            display: block;
+            color: $color-accent-primary;
+            font-size: rem(12);
+        }
+    }
 }

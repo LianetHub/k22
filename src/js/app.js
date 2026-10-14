@@ -147,7 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			let openedMarker = "";
 			let openedPlacemark = null;
 			let skipMapClick = false;
-			let syncOpenBalloon = () => {};
+			let mapClickGuard = 0;
+			let syncOpenBalloon = () => { };
 
 			const setPlacemarkVisible = (placemark, visible) => {
 				if (!placemark || !placemark.options || typeof placemark.options.set !== "function") return;
@@ -190,6 +191,32 @@ document.addEventListener("DOMContentLoaded", () => {
 					placeBalloon(balloon, marker.coords);
 				};
 
+				const holdMapClick = () => {
+					skipMapClick = true;
+					const guard = ++mapClickGuard;
+
+					setTimeout(() => {
+						if (guard !== mapClickGuard) return;
+						skipMapClick = false;
+					}, 0);
+				};
+
+				const stopDomClick = (event) => {
+					if (!event || typeof event.get !== "function") return;
+
+					const domEvent = event.get("domEvent");
+					if (!domEvent) return;
+
+					if (typeof domEvent.stopPropagation === "function") {
+						domEvent.stopPropagation();
+					}
+
+					const originalEvent = domEvent.originalEvent || (typeof domEvent.get === "function" ? domEvent.get("originalEvent") : null);
+					if (originalEvent && typeof originalEvent.stopPropagation === "function") {
+						originalEvent.stopPropagation();
+					}
+				};
+
 				placemarks.forEach((placemark, index) => {
 					const marker = markers[index];
 					if (!marker || !placemark.events || typeof placemark.events.add !== "function") return;
@@ -199,10 +226,8 @@ document.addEventListener("DOMContentLoaded", () => {
 							event.stopPropagation();
 						}
 
-						skipMapClick = true;
-						queueMicrotask(() => {
-							skipMapClick = false;
-						});
+						stopDomClick(event);
+						holdMapClick();
 
 						const balloon = balloons.find((item) => item.dataset.marker === marker.title);
 						if (!balloon) {
@@ -239,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				document.addEventListener("click", (event) => {
 					if (skipMapClick || !openedMarker) return;
-					if (event.target?.closest?.(".contacts__balloon")) return;
+					if (event.target?.closest?.(".contacts__balloon, #contacts-map")) return;
 
 					closeBalloons();
 				});
@@ -608,6 +633,16 @@ document.addEventListener("DOMContentLoaded", () => {
 				getSwiper();
 				window.addEventListener("resize", getSwiper);
 			}
+
+			document.querySelectorAll(".portfolio__filters")?.forEach((slider) => {
+
+				new Swiper(slider, {
+					slidesPerView: "auto",
+					grabCursor: true,
+					watchOverflow: true,
+					spaceBetween: 10,
+				});
+			});
 
 			document.querySelectorAll(".reviews__slider")?.forEach((el) => {
 				const section = el.closest(".reviews");
@@ -1080,171 +1115,221 @@ document.addEventListener("DOMContentLoaded", () => {
 	initHeaderBanner();
 
 	// slide
+
 	function initSlide() {
+		const properties = [
+			"height",
+			"paddingTop",
+			"paddingBottom",
+			"marginTop",
+			"marginBottom"
+		];
+
 		const collapsedBox = {
 			height: 0,
 			paddingTop: 0,
 			paddingBottom: 0,
 			marginTop: 0,
-			marginBottom: 0,
+			marginBottom: 0
 		};
 
-		function parseLength(value) {
-			const number = parseFloat(value);
-			return Number.isFinite(number) ? number : 0;
-		}
+		function readBox(el) {
+			const style = window.getComputedStyle(el);
+			const box = {};
 
-		function readBox(style) {
-			return {
-				height: parseLength(style.getPropertyValue("height")),
-				paddingTop: parseLength(style.getPropertyValue("padding-top")),
-				paddingBottom: parseLength(style.getPropertyValue("padding-bottom")),
-				marginTop: parseLength(style.getPropertyValue("margin-top")),
-				marginBottom: parseLength(style.getPropertyValue("margin-bottom")),
-			};
+			properties.forEach((property) => {
+				box[property] = parseFloat(style[property]) || 0;
+			});
+
+			return box;
 		}
 
 		function writeBox(el, box) {
-			el.style.height = `${box.height}px`;
-			el.style.paddingTop = `${box.paddingTop}px`;
-			el.style.paddingBottom = `${box.paddingBottom}px`;
-			el.style.marginTop = `${box.marginTop}px`;
-			el.style.marginBottom = `${box.marginBottom}px`;
+			properties.forEach((property) => {
+				el.style[property] = `${box[property]}px`;
+			});
+		}
+
+		function clearBox(el) {
+			properties.forEach((property) => {
+				el.style[property] = "";
+			});
+
+			el.style.overflow = "";
 		}
 
 		function mixBox(from, to, progress) {
-			return {
-				height: from.height + (to.height - from.height) * progress,
-				paddingTop: from.paddingTop + (to.paddingTop - from.paddingTop) * progress,
-				paddingBottom: from.paddingBottom + (to.paddingBottom - from.paddingBottom) * progress,
-				marginTop: from.marginTop + (to.marginTop - from.marginTop) * progress,
-				marginBottom: from.marginBottom + (to.marginBottom - from.marginBottom) * progress,
-			};
+			const box = {};
+
+			properties.forEach((property) => {
+				box[property] = from[property] + (to[property] - from[property]) * progress;
+			});
+
+			return box;
 		}
 
 		function easeOutCubic(progress) {
 			return 1 - Math.pow(1 - progress, 3);
 		}
 
-		function prefersReducedMotion() {
-			return typeof window.matchMedia === "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-		}
-
-		function finishSlide(el, isDown, callback) {
-			el.style.height = "";
-			el.style.paddingTop = "";
-			el.style.paddingBottom = "";
-			el.style.marginTop = "";
-			el.style.marginBottom = "";
-			el.style.overflow = "";
-			if (!isDown) el.style.display = "none";
-			if (typeof callback === "function") callback();
-		}
-
-		function runSlide(el, duration, callback, isDown) {
-			if (typeof duration === "undefined") duration = 400;
-			if (typeof isDown === "undefined") isDown = false;
-
+		function runSlide(el, duration = 400, callback, isDown = false) {
 			const token = (el._slideToken || 0) + 1;
 			el._slideToken = token;
 
-			if (el._slideFrame && typeof window.cancelAnimationFrame === "function") {
-				window.cancelAnimationFrame(el._slideFrame);
-				el._slideFrame = 0;
+			if (el._slideFrame) {
+				cancelAnimationFrame(el._slideFrame);
+				el._slideFrame = null;
 			}
 
-			el.style.overflow = "hidden";
-			if (isDown) el.style.display = "block";
+			const isAnimating = el._slideAnimating === true;
+			const currentBox = isAnimating ? readBox(el) : null;
 
-			if (prefersReducedMotion() || duration <= 0 || typeof window.requestAnimationFrame !== "function") {
-				finishSlide(el, isDown, callback);
+			// При открытии сначала делаем элемент измеримым.
+			if (isDown) {
+				el.style.display = "";
+				if (getComputedStyle(el).display === "none") {
+					el.style.display = "block";
+				}
+			}
+
+			// Убираем временные размеры для измерения
+			// естественного состояния.
+			clearBox(el);
+
+			const naturalBox = readBox(el);
+
+			if (naturalBox.height === 0 && el.scrollHeight > 0) {
+				naturalBox.height = el.scrollHeight;
+			}
+
+			const from = currentBox || (isDown ? collapsedBox : naturalBox);
+			const to = isDown ? naturalBox : collapsedBox;
+
+			el.style.overflow = "hidden";
+			writeBox(el, from);
+
+			el._slideAnimating = true;
+			el._slideDirection = isDown;
+
+			function finish() {
+				if (el._slideToken !== token) return;
+
+				el._slideFrame = null;
+				el._slideAnimating = false;
+
+				clearBox(el);
+
+				if (!isDown) {
+					el.style.display = "none";
+				} else {
+					el.style.display = "";
+				}
+
+				if (typeof callback === "function") {
+					callback();
+				}
+			}
+
+			if (
+				duration <= 0 ||
+				window.matchMedia("(prefers-reduced-motion: reduce)").matches
+			) {
+				finish();
 				return;
 			}
 
-			const inlineFrom = el.style.height ? readBox(el.style) : null;
-
-			el.style.height = "";
-			el.style.paddingTop = "";
-			el.style.paddingBottom = "";
-			el.style.marginTop = "";
-			el.style.marginBottom = "";
-
-			const natural = readBox(window.getComputedStyle(el));
-			if (natural.height === 0 && el.scrollHeight > 0) natural.height = el.scrollHeight;
-
-			const from = inlineFrom || (isDown ? collapsedBox : natural);
-			const to = isDown ? natural : collapsedBox;
-
-			// В том же кадре, иначе перед анимацией ответ мигнёт в полный рост.
-			writeBox(el, from);
-
-			let start;
+			let startTime = null;
 
 			function step(timestamp) {
 				if (el._slideToken !== token) return;
-				if (start === undefined) start = timestamp;
 
-				const progress = Math.min((timestamp - start) / duration, 1);
-
-				if (progress >= 1) {
-					el._slideFrame = 0;
-					finishSlide(el, isDown, callback);
-					return;
+				if (startTime === null) {
+					startTime = timestamp;
 				}
 
-				writeBox(el, mixBox(from, to, easeOutCubic(progress)));
-				el._slideFrame = window.requestAnimationFrame(step);
+				const progress = Math.min((timestamp - startTime) / duration, 1);
+				const eased = easeOutCubic(progress);
+
+				writeBox(el, mixBox(from, to, eased));
+
+				if (progress < 1) {
+					el._slideFrame = requestAnimationFrame(step);
+				} else {
+					finish();
+				}
 			}
 
-			el._slideFrame = window.requestAnimationFrame(step);
+			el._slideFrame = requestAnimationFrame(step);
 		}
 
-		HTMLElement.prototype.slideToggle = function (duration, callback) {
-			runSlide(this, duration, callback, this.clientHeight === 0);
+		HTMLElement.prototype.slideDown = function (duration = 400, callback) {
+			runSlide(this, duration, callback, true);
 		};
 
-		HTMLElement.prototype.slideUp = function (duration, callback) {
+		HTMLElement.prototype.slideUp = function (duration = 400, callback) {
 			runSlide(this, duration, callback, false);
 		};
 
-		HTMLElement.prototype.slideDown = function (duration, callback) {
-			runSlide(this, duration, callback, true);
+		HTMLElement.prototype.slideToggle = function (duration = 400, callback) {
+			const isDown = this._slideAnimating
+				? !this._slideDirection
+				: getComputedStyle(this).display === "none";
+
+			runSlide(this, duration, callback, isDown);
 		};
 	}
 
 	initSlide();
 
 	// faq
+
 	function initFaq() {
 		const faqDuration = 400;
 
 		document.querySelectorAll(".faq__details").forEach((details) => {
 			const question = details.querySelector(".faq__question");
 			const answer = details.querySelector(".faq__answer");
+
 			if (!question || !answer) return;
 
-			if (details.open) details.classList.add("is-open");
+			// Начальное состояние.
+			const initiallyOpen = details.open;
 
-			details.addEventListener("click", (event) => {
-				if (event.target.closest("a, button")) return;
+			details.classList.toggle("is-open", initiallyOpen);
+			details.classList.remove("is-closing");
 
-				const selection = window.getSelection();
-				if (selection && !selection.isCollapsed && details.contains(selection.anchorNode)) return;
+			answer.style.display = initiallyOpen ? "" : "none";
 
+			question.addEventListener("click", (event) => {
 				event.preventDefault();
 
+				const selection = window.getSelection();
+
+				if (selection && !selection.isCollapsed) {
+					return;
+				}
+
 				const willOpen = !details.classList.contains("is-open");
+
 				details.classList.toggle("is-open", willOpen);
 				details.classList.toggle("is-closing", !willOpen);
 
 				if (willOpen) {
+					// Держим details открытым, пока анимируется ответ.
 					details.open = true;
-					answer.slideDown(faqDuration);
+
+					answer.slideDown(faqDuration, () => {
+						if (!details.classList.contains("is-open")) return;
+
+						details.classList.remove("is-closing");
+					});
+
 					return;
 				}
 
 				answer.slideUp(faqDuration, () => {
 					if (details.classList.contains("is-open")) return;
+
 					details.open = false;
 					details.classList.remove("is-closing");
 				});
@@ -1253,6 +1338,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	initFaq();
+
 });
 
 if (typeof Fancybox !== "undefined") {

@@ -26,30 +26,32 @@
 							</div>
 						</div>
 						<div class="portfolio__toolbar">
-							<ul class="portfolio__filters">
-								<li>
-									<button class="portfolio__filter is-active" type="button">Все</button>
-								</li>
-								<li>
-									<button class="portfolio__filter" type="button">Чип-тюнинг</button>
-								</li>
-								<li>
-									<button class="portfolio__filter" type="button">Выхлоп</button>
-								</li>
-								<li>
-									<button class="portfolio__filter" type="button">Автосервис</button>
-								</li>
-								<li>
-									<button class="portfolio__filter" type="button">Диагностика</button>
-								</li>
-								<li>
-									<button class="portfolio__filter" type="button">полезное</button>
-								</li>
-								<li>
-									<button class="portfolio__filter" type="button">Видео</button>
-								</li>
-							</ul>
-							<div class="custom-select custom-select--sort">
+							<div class="portfolio__filters swiper">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<button class="portfolio__filter is-active" type="button">Все</button>
+									</li>
+									<li class="swiper-slide">
+										<button class="portfolio__filter" type="button">Чип-тюнинг</button>
+									</li>
+									<li class="swiper-slide">
+										<button class="portfolio__filter" type="button">Выхлоп</button>
+									</li>
+									<li class="swiper-slide">
+										<button class="portfolio__filter" type="button">Автосервис</button>
+									</li>
+									<li class="swiper-slide">
+										<button class="portfolio__filter" type="button">Диагностика</button>
+									</li>
+									<li class="swiper-slide">
+										<button class="portfolio__filter" type="button">полезное</button>
+									</li>
+									<li class="swiper-slide">
+										<button class="portfolio__filter" type="button">Видео</button>
+									</li>
+								</ul>
+							</div>
+							<div class="portfolio__select custom-select custom-select--sort">
 								<label class="visually-hidden" for="portfolio-brand">Марка</label>
 								<select class="custom-select__native" id="portfolio-brand" name="brand" data-custom-select>
 									<option value="all" selected>Все марки</option>
@@ -86,8 +88,8 @@
 					</div>
 				</section>
 				@@include('./html/sections/_reviews.html', {
-					"moreHref": "#",
-					"reviewsList": "./html/json/reviews-4.json"
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
 				})
 				@@include('./html/sections/_faq.html', {
 				"faqList": "./html/json/faq-portfolio-hub.json"

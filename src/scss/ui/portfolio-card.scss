@@ -35,7 +35,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	height: rem(340);
-	overflow: hidden;
+
 
 	&:focus-visible {
 		outline: 2px solid $color-accent-primary;
@@ -77,34 +77,31 @@
 	// .portfolio-card__tag
 	&__tag {
 		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: $ui-index-2;
-		display: flex;
+		top: -2px;
+		left: -2px;
+		z-index: 2;
+		align-self: flex-start;
+		display: inline-flex;
 		align-items: center;
-
-		&::after {
-			content: "";
-			flex-shrink: 0;
-			width: rem(34);
-			height: rem(30);
-			background: url("@img/portfolio/tag-corner.svg") center / rem(34) rem(30) no-repeat;
-			transform: rotate(180deg);
-		}
-	}
-
-	// .portfolio-card__tag-label
-	&__tag-label {
-		padding-right: rem(20);
-		padding-bottom: rem(20);
+		padding: rem(12) rem(36) rem(16) rem(16);
 		background: $color-bg-secondary;
 		color: $color-accent-primary;
-		font-size: rem(14);
+		font-family: $fontfamily;
+		font-size: rem(12);
 		font-weight: 700;
 		line-height: 1.2;
-		letter-spacing: em(-0.14, 14);
+		letter-spacing: -0.01em;
 		text-transform: uppercase;
+		clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(28)}) 100%, 0 100%);
+
+		@media (min-width: $md4) {
+			padding: rem(0) rem(54) rem(16) rem(0);
+			font-size: rem(14);
+			clip-path: polygon(0 0, 100% 0, calc(100% - #{rem(34)}) 100%, 0 100%);
+		}
+
 	}
+
 
 	// .portfolio-card__body
 	&__body {

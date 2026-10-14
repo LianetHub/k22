@@ -220,7 +220,7 @@ export class CustomSelect {
 		this.list.hidden = true;
 		this.updateMultiple();
 		if (this.options.maxHeight) {
-			this.list.style.maxHeight = `${this.options.maxHeight}px`;
+			this.list.style.maxHeight = `${this.options.maxHeight / 16}rem`;
 		}
 
 		this.trigger.setAttribute("aria-controls", this.list.id);

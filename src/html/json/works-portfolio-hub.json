@@ -19,12 +19,18 @@
 	},
 	{
 		"itemClass": "portfolio__item",
-		"mod": "portfolio-card--page",
-		"tag": "Выхлоп",
-		"car": "HYUNDAI SANTA FE 2.2D 2019 Г.",
-		"title": "Удаление катализатора",
-		"image": "@img/works/hyundai-santa-fe.webp",
-		"imageAlt": "Hyundai Santa Fe 2.2D 2019 года в автосалоне"
+		"mod": "",
+		"tag": "Чип-тюнинг",
+		"caption": "Honda",
+		"title": "Чип-тюнинг",
+		"image": "@img/portfolio/card-honda.webp",
+		"imageAlt": "Диагностика двигателя Honda с открытым капотом",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
 	},
 	{
 		"itemClass": "portfolio__item",
@@ -37,12 +43,18 @@
 	},
 	{
 		"itemClass": "portfolio__item",
-		"mod": "portfolio-card--page",
-		"tag": "Выхлоп",
-		"car": "HYUNDAI SANTA FE 2.2D 2019 Г.",
-		"title": "Удаление катализатора",
-		"image": "@img/works/hyundai-santa-fe.webp",
-		"imageAlt": "Hyundai Santa Fe 2.2D 2019 года в автосалоне"
+		"mod": "",
+		"tag": "Чип-тюнинг",
+		"caption": "Honda",
+		"title": "Чип-тюнинг",
+		"image": "@img/portfolio/card-honda.webp",
+		"imageAlt": "Диагностика двигателя Honda с открытым капотом",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
 	},
 	{
 		"itemClass": "portfolio__item",
@@ -55,12 +67,18 @@
 	},
 	{
 		"itemClass": "portfolio__item",
-		"mod": "portfolio-card--page",
-		"tag": "Выхлоп",
-		"car": "HYUNDAI SANTA FE 2.2D 2019 Г.",
-		"title": "Удаление катализатора",
-		"image": "@img/works/hyundai-santa-fe.webp",
-		"imageAlt": "Hyundai Santa Fe 2.2D 2019 года в автосалоне"
+		"mod": "",
+		"tag": "Чип-тюнинг",
+		"caption": "Honda",
+		"title": "Чип-тюнинг",
+		"image": "@img/portfolio/card-honda.webp",
+		"imageAlt": "Диагностика двигателя Honda с открытым капотом",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
 	},
 	{
 		"itemClass": "portfolio__item",
@@ -73,12 +91,18 @@
 	},
 	{
 		"itemClass": "portfolio__item",
-		"mod": "portfolio-card--page",
-		"tag": "Выхлоп",
-		"car": "HYUNDAI SANTA FE 2.2D 2019 Г.",
-		"title": "Удаление катализатора",
-		"image": "@img/works/hyundai-santa-fe.webp",
-		"imageAlt": "Hyundai Santa Fe 2.2D 2019 года в автосалоне"
+		"mod": "",
+		"tag": "Чип-тюнинг",
+		"caption": "Honda",
+		"title": "Чип-тюнинг",
+		"image": "@img/portfolio/card-honda.webp",
+		"imageAlt": "Диагностика двигателя Honda с открытым капотом",
+		"powerValue": "+102",
+		"powerUnit": "лс",
+		"powerLabel": "мощность<br>двигателя",
+		"torqueValue": "+173",
+		"torqueUnit": "нм",
+		"torqueLabel": "крутящий<br>момент"
 	},
 	{
 		"itemClass": "portfolio__item",

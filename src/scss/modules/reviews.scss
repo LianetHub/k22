@@ -77,10 +77,33 @@
 			width: 100%;
 		}
 
+		@media (min-width:$md4) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 
 
-		@media (min-width: $md2) {
+		@media (min-width: $md1) {
 			grid-template-columns: repeat(4, 1fr);
+
+			.review-card__body {
+				padding: rem(30);
+
+				.review-card__identity {
+					display: contents;
+				}
+
+				.review-card__name {
+					flex: 0 0 100%;
+				}
+
+				.review-card__man {
+					gap: 0;
+					flex-wrap: wrap;
+					column-gap: rem(10);
+					justify-content: space-between;
+
+				}
+			}
 		}
 	}
 

@@ -29,7 +29,7 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
+		gap: rem(32);
 	}
 
 	// portfolio__intro
@@ -48,13 +48,8 @@
 	&__heading {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
 		min-width: 0;
-		margin-top: rem(40);
-
-		@media (min-width: $md4) {
-			gap: rem(20);
-		}
+		margin-top: rem(26);
 	}
 
 	// portfolio__title
@@ -74,6 +69,7 @@
 
 		@media (min-width: $md4) {
 			@include desktop-body-xl;
+			letter-spacing: 0;
 		}
 	}
 
@@ -89,16 +85,10 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			flex-wrap: wrap;
 			gap: rem(20);
 		}
 
-		.custom-select--sort {
-			display: none;
-
-			@media (min-width: $md4) {
-				display: inline-flex;
-			}
-		}
 	}
 
 	// portfolio__filters
@@ -109,8 +99,16 @@
 		width: 100%;
 		min-width: 0;
 		max-width: 100%;
-		overflow-x: auto;
 		scrollbar-width: none;
+		overflow: visible;
+
+		.swiper-slide {
+			width: fit-content;
+
+			&:not(:last-child) {
+				margin-right: rem(10);
+			}
+		}
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -127,7 +125,7 @@
 		display: inline-flex;
 		flex-shrink: 0;
 		align-items: center;
-		padding: rem(16) rem(20);
+		padding: rem(12) rem(20);
 		background: $color-bg-primary;
 		color: $color-bg-elevated;
 		font-size: rem(18);
@@ -151,6 +149,12 @@
 		&:focus-visible {
 			outline: 2px solid $color-accent-primary;
 			outline-offset: 2px;
+		}
+	}
+
+	&__select {
+		@media (max-width:$md1) {
+			display: none;
 		}
 	}
 

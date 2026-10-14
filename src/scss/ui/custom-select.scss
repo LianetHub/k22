@@ -2,6 +2,7 @@
 @use "../abstracts" as *;
 
 .custom-select {
+
 	// custom-select--catalog
 	&.custom-select--catalog {
 		.custom-select__trigger {
@@ -95,8 +96,8 @@
 			}
 
 			&:focus-visible {
-				outline: 2px solid $color-accent-primary;
-				outline-offset: 2px;
+				outline: rem(2) solid $color-accent-primary;
+				outline-offset: rem(2);
 			}
 		}
 
@@ -120,7 +121,7 @@
 			overflow-y: auto;
 			padding: rem(8);
 			background: $color-bg-primary;
-			border: 1px solid rgba(52, 52, 52, 0.08);
+			border: rem(1) solid rgba(52, 52, 52, 0.08);
 			box-shadow: 0 rem(12) rem(32) rgba(0, 0, 0, 0.12);
 		}
 
@@ -156,8 +157,8 @@
 			}
 
 			&:focus-visible {
-				outline: 2px solid $color-accent-primary;
-				outline-offset: -2px;
+				outline: rem(2) solid $color-accent-primary;
+				outline-offset: rem(-2);
 			}
 		}
 
@@ -208,7 +209,7 @@
 				font-size: rem(16);
 				line-height: 1;
 				text-align: center;
-				color: $color-text-primary;
+				color: $color-accent-primary;
 				transition: transform 0.2s ease;
 			}
 
@@ -217,8 +218,8 @@
 			}
 
 			&:focus-visible {
-				outline: 2px solid $color-accent-primary;
-				outline-offset: 2px;
+				outline: rem(2) solid $color-accent-primary;
+				outline-offset: rem(2);
 			}
 		}
 
@@ -341,7 +342,7 @@
 		width: max-content;
 		max-width: min(#{rem(320)}, calc(100vw - #{rem(32)}));
 		padding: rem(8);
-		border: 1px solid rgba(52, 52, 52, 0.05);
+		border: rem(1) solid rgba(52, 52, 52, 0.05);
 		overflow-y: auto;
 
 		// custom-select__list.is-detached — dropdown moved out via appendTo
@@ -355,10 +356,10 @@
 
 	// custom-select__group
 	&__group {
-		& + .custom-select__group {
+		&+.custom-select__group {
 			margin-top: rem(8);
 			padding-top: rem(8);
-			border-top: 1px solid rgba(52, 52, 52, 0.08);
+			border-top: rem(1) solid rgba(52, 52, 52, 0.08);
 		}
 	}
 

@@ -1147,6 +1147,11 @@ describe("Яндекс.Карта", () => {
 
 		ctx.placemarks[0].fire("click", { stopPropagation() {} });
 		await Promise.resolve();
+		ctx.clickOn("#contacts-map");
+		ctx.maps[0].fire("click");
+		expect(first.classList.contains("is-open")).toBe(true);
+
+		await new Promise((resolve) => setTimeout(resolve, 0));
 		ctx.maps[0].fire("click");
 		expect(first.classList.contains("is-open")).toBe(false);
 		expect(ctx.errors).toEqual([]);
@@ -1168,6 +1173,10 @@ describe("Яндекс.Карта", () => {
 
 		await Promise.resolve();
 		ctx.maps[0].fire("actionbegin");
+		expect(balloon.classList.contains("is-open")).toBe(true);
+
+		await new Promise((resolve) => setTimeout(resolve, 0));
+		ctx.maps[0].fire("actionbegin");
 		expect(balloon.classList.contains("is-open")).toBe(false);
 		expect(ctx.placemarks[0].optionSets.at(-1)).toEqual({ visible: true });
 		expect(ctx.errors).toEqual([]);
@@ -1183,8 +1192,10 @@ describe("Яндекс.Карта", () => {
 		const balloon = ctx.$('[data-marker="Кузнецовская, 52к13"]');
 		ctx.placemarks[0].fire("click", { stopPropagation() {} });
 		await Promise.resolve();
+		ctx.clickOn("#contacts-map");
 		expect(balloon.classList.contains("is-open")).toBe(true);
 
+		await new Promise((resolve) => setTimeout(resolve, 0));
 		ctx.clickOn('[data-marker="Кузнецовская, 52к13"] a');
 		expect(balloon.classList.contains("is-open")).toBe(true);
 
