@@ -12,10 +12,10 @@
 
 	// article__head
 	&__head {
-		padding: rem(32) 0 rem(28);
+		padding: rem(32) 0 rem(20);
 
 		@media (min-width: $md2) {
-			padding: rem(54) 0 rem(40);
+			padding: rem(54) 0 rem(32);
 		}
 	}
 
@@ -23,16 +23,21 @@
 	&__head-container {
 		display: flex;
 		flex-direction: column;
-		gap: rem(24);
+		gap: rem(0);
 
 		@media (min-width: $md4) {
-			gap: rem(40);
+			gap: rem(24);
 		}
 	}
 
 	// article__title
 	&__title {
-		margin: 0;
+		margin: 1.875rem 0 0;
+
+		@media (min-width:$md4) {
+			margin: 0;
+
+		}
 	}
 
 	// article__meta
@@ -41,8 +46,10 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(12) rem(12);
+		margin-top: 0.25rem;
 
 		@media (min-width:$md4) {
+			margin-top: 0;
 			gap: rem(12) rem(20);
 
 		}
@@ -54,9 +61,13 @@
 		flex-direction: column;
 		align-self: flex-start;
 		min-width: rem(140);
+		gap: rem(4);
 
 		@media (min-width:$md5) {
 			align-self: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: rem(12) rem(20);
 		}
 	}
 
@@ -108,7 +119,7 @@
 		}
 
 		@media (min-width:$md4) {
-			padding: rem(12) rem(20);
+			padding: rem(9) rem(20);
 		}
 	}
 
@@ -139,8 +150,12 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
 		min-width: 0;
+		gap: rem(28);
+
+		@media (min-width:$md4) {
+			gap: rem(40);
+		}
 
 		@media (min-width: $md2) {
 			gap: rem(60);
@@ -158,10 +173,26 @@
 
 	// .typography-text
 	.typography-text {
+
+
+		@media (min-width:$md0) {
+			font-size: rem(26);
+
+		}
+
 		>*+* {
 			@media (min-width: $md4) {
-				margin-top: rem(30);
+				margin-top: rem(7);
 			}
+
+			&.typography-text__note {
+				margin-top: 1rem;
+			}
+
+		}
+
+		& p {
+			max-width: 64rem;
 		}
 
 		>*+h2,
@@ -169,10 +200,15 @@
 		>*+h4,
 		>*+h5,
 		>*+h6 {
-			margin-top: rem(40);
+			margin-top: rem(24);
+
+			@media (min-width:$md4) {
+				margin-top: rem(40);
+
+			}
 
 			@media (min-width: $md2) {
-				margin-top: rem(60);
+				margin-top: rem(50);
 			}
 		}
 
@@ -181,8 +217,13 @@
 		h4,
 		h5,
 		h6 {
-			@include mobile-heading-h1;
 			color: $color-text-primary;
+			@include mobile-heading-h4;
+
+			@media (min-width:$md4) {
+				@include mobile-heading-h1;
+
+			}
 		}
 
 		img {
@@ -242,7 +283,7 @@
 		color: $color-bg-primary;
 
 		@media (min-width: $md4) {
-			gap: rem(40);
+			gap: rem(24);
 			padding: rem(30);
 		}
 	}
@@ -263,7 +304,7 @@
 	&__comment {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
+		gap: rem(2);
 		padding-bottom: rem(24);
 		border-bottom: 1px solid rgba($color-bg-primary, 0.16);
 
@@ -277,10 +318,10 @@
 		}
 
 		@media (min-width: $md4) {
-			padding-bottom: rem(30);
+			padding-bottom: rem(24);
 
 			&+& {
-				padding-top: rem(30);
+				padding-top: rem(24);
 			}
 		}
 	}
@@ -312,6 +353,7 @@
 		@media (min-width: $md4) {
 			font-size: rem(22);
 			line-height: math.div(26, 22);
+			max-width: 47rem;
 		}
 	}
 
@@ -341,31 +383,35 @@
 		gap: rem(16);
 
 		@media (min-width: $md4) {
+			margin-top: 1rem;
 			gap: rem(20);
 		}
 	}
 
 	// article__comment-input
 	&__comment-input {
-		width: 100%;
-		min-height: rem(140);
-		padding: rem(72) rem(20) rem(20);
-		background: $color-bg-primary;
-		font-family: $font-inter;
-		font-size: rem(16);
-		line-height: 1.2;
-		color: $color-text-primary;
-		resize: vertical;
+		&.form-control {
 
-		&::placeholder {
-			color: rgba($color-text-secondary, 0.5);
-		}
+			width: 100%;
+			min-height: rem(140);
+			padding: rem(20);
+			background: $color-bg-primary;
+			font-family: $font-inter;
+			font-size: rem(16);
+			line-height: 1.2;
+			color: $color-text-primary;
+			resize: vertical;
 
-		@media (min-width: $md4) {
-			min-height: rem(168);
-			padding: rem(110) rem(30) rem(30);
-			font-size: rem(22);
-			line-height: math.div(26, 22);
+			&::placeholder {
+				color: rgba($color-text-secondary, 0.5);
+			}
+
+			@media (min-width: $md4) {
+				min-height: rem(168);
+				padding: rem(30);
+				font-size: rem(22);
+				line-height: math.div(26, 22);
+			}
 		}
 	}
 
@@ -374,12 +420,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: rem(12) rem(20);
+		gap: rem(12) rem(12);
 		padding: rem(16) rem(20);
 		background: $color-bg-primary;
 
 		@media (min-width: $md4) {
-			padding: rem(20) rem(30);
+			padding: rem(12) rem(30);
 		}
 	}
 
@@ -455,12 +501,13 @@
 	&__panel {
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 		gap: rem(20);
 		padding: rem(20);
 		background: $color-bg-primary;
 
 		@media (min-width: $md4) {
-			gap: rem(30);
+			gap: rem(16);
 			padding: rem(30);
 		}
 
@@ -479,24 +526,30 @@
 				}
 			}
 		}
-	}
 
-	// article__panel--articles, article__panel--ask
-	&__panel--articles,
-	&__panel--ask {
-		display: none;
+		&.article__panel--articles,
+		&.article__panel--ask {
+			display: none;
 
-		@media (min-width: $md1) {
-			display: flex;
+			@media (min-width: $md1) {
+				display: flex;
+			}
+		}
+
+
+		&.article__panel--ask {
+			gap: rem(24);
 		}
 	}
+
+
 
 	// article__panel-title
 	&__panel-title {
 		@include mobile-heading-h4;
 
 		@media (min-width: $md0) {
-			@include desktop-heading-h4;
+			@include mobile-heading-h1;
 		}
 	}
 
@@ -506,9 +559,7 @@
 		flex-direction: column;
 		gap: rem(4);
 
-		@media (min-width: $md0) {
-			gap: rem(14);
-		}
+
 	}
 
 	// article__panel-lead
@@ -601,9 +652,11 @@
 		letter-spacing: em(-0.12, 12);
 		text-transform: uppercase;
 
-		img {
+		&::before {
 			width: rem(14);
 			height: rem(14);
+			font-size: rem(12);
+
 		}
 
 		@media (min-width: $md4) {
@@ -635,7 +688,7 @@
 		gap: rem(20);
 
 		@media (min-width: $md4) {
-			gap: rem(30);
+			gap: rem(25);
 		}
 	}
 
@@ -675,7 +728,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		gap: rem(20);
+		gap: rem(16);
 	}
 
 	// article__submit
@@ -691,7 +744,7 @@
 		gap: rem(16);
 
 		@media (min-width: $md4) {
-			gap: rem(20);
+			gap: rem(12);
 		}
 	}
 
@@ -725,6 +778,10 @@
 	// article__reviews-slider
 	&__reviews-slider {
 		width: 100%;
+
+		@media (max-width:$md4) {
+			overflow: visible;
+		}
 
 		.swiper-slide {
 			height: auto;
@@ -872,12 +929,19 @@
 			height: auto;
 			background: transparent;
 			color: $color-text-primary;
-			font-size: rem(18);
+			font-size: rem(32);
 		}
 	}
 
 	// article__more
 	&__more {
 		flex-shrink: 0;
+		width: 100%;
+
+		@media (min-width:$md5) {
+			padding-bottom: rem(6);
+			width: fit-content;
+
+		}
 	}
 }

@@ -2,48 +2,6 @@
 
 .blog {
 
-	// blog--related
-	&.blog--related {
-		@include section-margin($space-60);
-
-		@media (min-width: $md4) {
-			@include section-margin($space-100);
-		}
-
-		@media (min-width: $md1) {
-			@include section-margin(0, $space-100);
-		}
-
-		.blog__list {
-			@media (min-width: $md2) {
-				grid-template-columns: repeat(2, 1fr);
-			}
-
-			@media (min-width: $md1) {
-				grid-template-columns: repeat(4, 1fr);
-			}
-
-			>li {
-				display: flex;
-				min-width: 0;
-				min-height: 0;
-			}
-		}
-
-		.swiper-initialized .blog__list {
-			display: flex;
-		}
-
-		.blog-card {
-			width: 100%;
-			min-height: rem(431);
-
-			@media (min-width: $md0) {
-				min-height: rem(512);
-			}
-		}
-	}
-
 	// blog--page
 	&.blog--page {
 		.page>&:first-child {
@@ -258,8 +216,11 @@
 
 	// blog__related-slider
 	&__related-slider {
+		margin-top: 2rem;
 		width: 100%;
-		overflow: hidden;
+		overflow: visible;
+		min-width: 0;
+		max-width: 100%;
 
 		.swiper-slide {
 			height: auto;
@@ -286,11 +247,11 @@
 
 	// blog__list
 	&__list {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: rem(20);
+
+
 
 		@media (min-width: $md4) {
+			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: rem(30);
 		}
