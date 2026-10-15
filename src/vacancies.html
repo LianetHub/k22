@@ -7,21 +7,15 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="vacancies">
+				<section class="vacancies vacancies--page">
 					<div class="vacancies__container container">
 						<h1 class="vacancies__title title decor-line-block">
-							<span class="color-primary">Стань частью</span>
-							<span>Нашей команды</span>
+							<span class="color-primary">Стань частью</span> <br>
+							Нашей команды
 						</h1>
-						<div class="vacancies__slider swiper">
-							<ul class="vacancies__grid swiper-wrapper">
-								@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies.json')
-							</ul>
-						</div>
-						<div class="vacancies__nav">
-							<button type="button" class="vacancies__prev swiper-button-prev icon-prev" aria-label="Назад"></button>
-							<button type="button" class="vacancies__next swiper-button-next icon-next" aria-label="Далее"></button>
-						</div>
+						<ul class="vacancies__list">
+							@@loop('./html/templates/_vacancy-card.html', './html/json/vacancies-full.json')
+						</ul>
 					</div>
 				</section>
 				@@include('./html/sections/_faq.html', {

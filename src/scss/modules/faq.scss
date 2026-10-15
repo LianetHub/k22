@@ -156,6 +156,7 @@
 
 		@media (min-width: $md0) {
 			flex: none;
+			row-gap: rem(30);
 			width: rem(1025);
 		}
 	}
@@ -219,7 +220,7 @@
 
 		@media (min-width: $md0) {
 			display: grid;
-			grid-template-columns: rem(456) auto;
+			grid-template-columns: 48.5rem auto;
 			justify-content: space-between;
 			column-gap: 0;
 		}

@@ -157,10 +157,10 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "ActayWide";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/ActayWide-Bold.woff2") format("woff2"), url("../fonts/ActayWide-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -171,10 +171,10 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "ActayWide";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/ActayWide-Bold.woff2") format("woff2"), url("../fonts/ActayWide-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -3206,8 +3206,8 @@ textarea.form-control {
 }
 @media (min-width: 1919.98px) {
   .vacancy-card__badge {
-    padding: 1.25rem 1.875rem;
-    padding-right: 5.5rem;
+    padding: 0.875rem 1.875rem;
+    padding-right: 6.125rem;
   }
 }
 .vacancy-card__body {
@@ -3232,7 +3232,7 @@ textarea.form-control {
 @media (min-width: 1919.98px) {
   .vacancy-card__body {
     gap: 1.25rem;
-    padding: 1.875rem;
+    padding: 1.875rem 1.875rem 1.25rem;
   }
 }
 .vacancy-card__title {
@@ -3261,7 +3261,6 @@ textarea.form-control {
 }
 @media (min-width: 1919.98px) {
   .vacancy-card__duties {
-    gap: 1.25rem;
     padding-right: 0;
   }
 }
@@ -8728,6 +8727,7 @@ textarea.form-control {
 @media (min-width: 1919.98px) {
   .faq__list {
     flex: none;
+    row-gap: 1.875rem;
     width: 64.0625rem;
   }
 }
@@ -8795,7 +8795,7 @@ textarea.form-control {
 @media (min-width: 1919.98px) {
   .faq__question {
     display: grid;
-    grid-template-columns: 28.5rem auto;
+    grid-template-columns: 48.5rem auto;
     justify-content: space-between;
     column-gap: 0;
   }
@@ -9705,10 +9705,13 @@ textarea.form-control {
 .vacancies {
   background: #fff;
 }
+.vacancies.vacancies--page {
+  background: var(--Background-Secondary, #F4F4F6);
+  padding-top: 3.5rem;
+}
 .vacancies__container {
   display: grid;
-  gap: 1.875rem;
-  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 @media (max-width: 991.98px) and (min-width: 575.98px) {
   .vacancies__title {
@@ -9741,6 +9744,20 @@ textarea.form-control {
 }
 @media (min-width: 1439.98px) {
   .vacancies__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.vacancies__list {
+  display: grid;
+  gap: 1.875rem;
+}
+@media (min-width: 991.98px) {
+  .vacancies__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1439.98px) {
+  .vacancies__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }

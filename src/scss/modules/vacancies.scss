@@ -3,12 +3,16 @@
 .vacancies {
 	background: $color-bg-primary;
 
+	&.vacancies--page {
+		background: var(--Background-Secondary, #F4F4F6);
+		padding-top: 3.5rem;
+	}
 
 	// vacancies__container
 	&__container {
 		display: grid;
-		gap: rem(30);
-		grid-template-columns: 1fr;
+		gap: rem(16);
+
 	}
 
 	// vacancies__title
@@ -41,6 +45,22 @@
 			gap: rem(30);
 			transform: none;
 			width: 100%;
+		}
+
+		@media (min-width: $md1) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	// vacancies__list
+	&__list {
+		display: grid;
+		gap: rem(30);
+
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(2, 1fr);
+			;
+
 		}
 
 		@media (min-width: $md1) {
