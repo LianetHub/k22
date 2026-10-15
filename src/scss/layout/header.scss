@@ -356,9 +356,27 @@
 		width: rem(40);
 		height: rem(40);
 
+		&[class*="icon-"]::before,
+		& img {
+
+			width: rem(20);
+			height: rem(20);
+			font-size: rem(20);
+
+		}
+
 		@media (min-width: $md0) {
 			width: rem(50);
 			height: rem(50);
+
+			&[class*="icon-"]::before,
+			& img {
+
+				width: rem(30);
+				height: rem(30);
+				font-size: rem(30);
+
+			}
 		}
 	}
 
@@ -836,7 +854,7 @@
 			grid-template-columns: repeat(2, 1fr);
 			gap: rem(10);
 
-			> .menu__group:first-child:last-child {
+			>.menu__group:first-child:last-child {
 				grid-column: span 2;
 			}
 		}

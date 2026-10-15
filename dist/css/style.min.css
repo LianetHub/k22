@@ -377,14 +377,18 @@ img {
 .social-item.icon-whatsapp {
   color: #28d565;
 }
-.social-item[class*=icon-]::before {
+.social-item[class*=icon-]::before, .social-item img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  font-size: 1.25rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  font-size: 1.875rem;
   line-height: 1;
+  object-fit: contain;
+}
+.social-item[aria-label=Rutube] img {
+  margin-top: -0.375rem;
 }
 @media (any-hover: hover) {
   .social-item:hover {
@@ -755,10 +759,20 @@ img {
   width: 2.5rem;
   height: 2.5rem;
 }
+.header__social[class*=icon-]::before, .header__social img {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.25rem;
+}
 @media (min-width: 1919.98px) {
   .header__social {
     width: 3.125rem;
     height: 3.125rem;
+  }
+  .header__social[class*=icon-]::before, .header__social img {
+    width: 1.875rem;
+    height: 1.875rem;
+    font-size: 1.875rem;
   }
 }
 .header__burger {
@@ -1839,12 +1853,6 @@ img {
   .footer__socials {
     order: 2;
   }
-}
-.footer__social img {
-  display: block;
-  width: 1.25rem;
-  height: 1.25rem;
-  object-fit: contain;
 }
 .footer__nav {
   display: flex;
@@ -6488,26 +6496,28 @@ textarea.form-control {
   }
 }
 
-.page > .contacts.contacts--page {
-  margin-block: 0;
-  padding-top: 2rem;
-  padding-bottom: 3.75rem;
+.contacts.contacts--page {
+  flex: 1 1 auto;
 }
-@media (min-width: 766.98px) {
+.page > .contacts.contacts--page {
+  margin-top: -3.3125rem;
+}
+@media (min-width: 1919.98px) {
   .page > .contacts.contacts--page {
-    margin-block: 0;
-    padding-top: 4.375rem;
-    padding-bottom: 5rem;
+    margin-top: -4.375rem;
   }
+}
+.page > .contacts.contacts--page {
+  padding-top: 6.25rem;
 }
 @media (min-width: 1439.98px) {
   .page > .contacts.contacts--page {
     padding-bottom: 6.25rem;
   }
 }
-@media (min-width: 1919.98px) {
+@media (min-width: 1439.98px) {
   .page > .contacts.contacts--page {
-    padding-top: 3.375rem;
+    padding-top: 7.75rem;
   }
 }
 .contacts.contacts--page .contacts__map-block {
@@ -7514,14 +7524,17 @@ textarea.form-control {
   gap: 0.75rem;
   width: 100%;
   padding: 1rem 0.75rem;
+  transition: background-color 0.3s ease;
+}
+@media (any-hover: hover) {
+  .contacts__address:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 @media (min-width: 766.98px) {
   .contacts__address {
     padding: 1.25rem;
   }
-}
-.contacts__address--active {
-  background: rgba(255, 255, 255, 0.1);
 }
 .contacts__address-title {
   font-family: "ActayWide", sans-serif;

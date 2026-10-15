@@ -5,19 +5,25 @@
 
 	// .contacts--page
 	&.contacts--page {
-		.page>& {
-			@include section-inset($space-32, $space-60);
+		flex: 1 1 auto;
 
-			@media (min-width: $md4) {
-				@include section-inset($space-70, $space-80);
+		.page>& {
+			margin-top: rem(-53);
+
+			@media (min-width:$md0) {
+				margin-top: rem(-70);
+
 			}
+
+
+			padding-top: rem(100);
 
 			@media (min-width: $md1) {
 				padding-bottom: $space-100;
 			}
 
-			@media (min-width: $md0) {
-				padding-top: $space-54;
+			@media (min-width: $md1) {
+				padding-top: rem(124);
 			}
 		}
 
@@ -1099,15 +1105,17 @@
 		gap: rem(12);
 		width: 100%;
 		padding: rem(16) rem(12);
+		transition: background-color 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba($color-bg-primary, 0.1);
+			}
+		}
 
 		@media (min-width: $md4) {
 			padding: rem(20);
 		}
-	}
-
-	// .contacts__address--active
-	&__address--active {
-		background: rgba($color-bg-primary, 0.1);
 	}
 
 	// .contacts__address-title

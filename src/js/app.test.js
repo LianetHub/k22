@@ -665,6 +665,33 @@ describe("меню: краевые случаи", () => {
 	});
 });
 
+describe("переключение города контактов", () => {
+	it("выбирает другой город на мобильном и закрывает список", () => {
+		const contactsCities = `
+			<nav data-menu></nav>
+			<div class="contacts__cities" data-contacts-cities aria-expanded="false">
+				<label class="contacts__city" for="contacts-city-spb">
+					<input class="contacts__city-input visually-hidden" type="radio" name="contacts-city" id="contacts-city-spb" checked>
+					Санкт-Петербург
+				</label>
+				<label class="contacts__city" for="contacts-city-barnaul">
+					<input class="contacts__city-input visually-hidden" type="radio" name="contacts-city" id="contacts-city-barnaul">
+					Барнаул
+				</label>
+			</div>`;
+		const ctx = boot(contactsCities, { width: 375, desktop: true });
+
+		ctx.clickOn('label[for="contacts-city-spb"]');
+		expect(ctx.$("[data-contacts-cities]").getAttribute("aria-expanded")).toBe("true");
+
+		ctx.clickOn('label[for="contacts-city-barnaul"]');
+		expect(ctx.$("#contacts-city-barnaul").checked).toBe(true);
+		expect(ctx.$("#contacts-city-spb").checked).toBe(false);
+		expect(ctx.$("[data-contacts-cities]").getAttribute("aria-expanded")).toBe("false");
+		expect(ctx.errors).toEqual([]);
+	});
+});
+
 // ─── 5. Слайдеры ─────────────────────────────────────────────────────────────
 
 describe("слайдеры", () => {

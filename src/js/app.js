@@ -343,13 +343,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (city && contactsCities.contains(city)) {
 				const input = city.querySelector(".contacts__city-input");
 
-				if (input && input.checked) {
+				if (input && input.checked && !target.matches(".contacts__city-input")) {
 					event.preventDefault();
 					setOpen(!contactsCities.classList.contains("is-open"));
-				} else {
-					setOpen(false);
 				}
 			} else if (!target.closest("[data-contacts-cities]")) {
+				setOpen(false);
+			}
+		}
+
+		function onChange(event) {
+			if (!contactsCities || !contactsCitiesMq.matches) return;
+
+			const input = event.target;
+			if (input.matches(".contacts__city-input") && input.checked) {
 				setOpen(false);
 			}
 		}
@@ -359,6 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		if (contactsCities) {
+			contactsCities.addEventListener("change", onChange);
 			contactsCitiesMq.addEventListener("change", () => {
 				setOpen(false);
 			});
