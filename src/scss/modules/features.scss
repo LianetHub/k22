@@ -16,6 +16,14 @@
 		}
 	}
 
+	&.features--service {
+		.feature-card {
+			&::before {
+				color: $color-accent-primary;
+			}
+		}
+	}
+
 	// .features--muted
 	&.features--muted {
 		--feature-card-surface: #{$color-bg-secondary};
@@ -103,10 +111,10 @@
 	// .features__grid
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		gap: rem(10);
 
 		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, 1fr);
 			gap: rem(30);
 		}
 

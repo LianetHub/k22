@@ -258,11 +258,44 @@
     &.hero--oil {
         color: $color-bg-primary;
         background-color: #1e1d20;
-        background-image: radial-gradient(ellipse at 72% 78%, rgba(90, 28, 18, 0.55), transparent 58%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/oil-change-mobile.webp");
 
-        @media (min-width: $md4) {
-            background-color: #0d0d0d;
+        @media (min-width:$md5) {
+            min-height: rem(530);
+            background-image: url("@img/hero/oil-change-tablet.webp");
+
+            @media (max-width:$md2) {
+                .hero__offer {
+                    padding-top: 3.25rem;
+                }
+
+                .hero__lead {
+                    margin-top: 0.5rem;
+                    font-size: rem(18);
+                    max-width: rem(290);
+                }
+            }
         }
+
+        @media (min-width:$md2) {
+            background-image: url("@img/hero/oil-change.webp");
+
+            .hero__lead {
+                max-width: rem(580);
+            }
+        }
+
+        @media (min-width: $md1) {
+            min-height: rem(620);
+        }
+
+        @media (min-width: $md0) {
+            min-height: rem(724);
+        }
+
+
     }
 
     position: relative;
@@ -402,6 +435,7 @@
 
         @media (min-width: $md2) {
             @include desktop-body-xl;
+            letter-spacing: normal;
         }
     }
 
