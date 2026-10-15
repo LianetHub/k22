@@ -126,40 +126,47 @@
     &.hero--about {
         color: $color-bg-primary;
         background-color: $color-bg-elevated;
-        background-position: 58% 46%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/about-mobile.webp");
 
-        @media (min-width: $md4) {
-            background-position: 64% 42%;
+        @media (max-width:$md5) {
+            padding-top: rem(82);
         }
 
-        @media (min-width: $md1) {
-            background-position: 68% center;
+        .hero__title {
+            margin-bottom: auto;
+        }
+
+        .hero__offer {
+            @media (max-width:$md5) {
+                display: contents;
+            }
+
+            @media (min-width:$md2) {
+                max-width: rem(780);
+            }
+
+            @media (min-width:$md0) {
+                max-width: rem(947);
+            }
+        }
+
+        @media (min-width:$md5) {
+            background-image: url("@img/hero/about-tablet.webp");
+        }
+
+        @media (min-width:$md2) {
+            background-image: url("@img/hero/about.webp");
+        }
+
+        @media (min-width: $md2) {
+            min-height: rem(740);
         }
 
         @media (min-width: $md0) {
-            background-position: 58% center;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            background: linear-gradient(180deg,
-                    rgba($color-bg-elevated, 0.92) 0%,
-                    rgba($color-bg-elevated, 0.55) 18%,
-                    rgba($color-bg-elevated, 0.12) 42%,
-                    rgba($color-bg-elevated, 0.35) 68%,
-                    rgba($color-bg-elevated, 0.88) 100%);
-            pointer-events: none;
-
-            @media (min-width: $md1) {
-                background: linear-gradient(90deg,
-                        rgba($color-bg-elevated, 0.94) 0%,
-                        rgba($color-bg-elevated, 0.78) 28%,
-                        rgba($color-bg-elevated, 0.28) 52%,
-                        rgba($color-bg-elevated, 0) 74%);
-            }
+            min-height: rem(630);
         }
     }
 
@@ -300,7 +307,6 @@
 
     @media (min-width: $md0) {
         min-height: rem(724);
-
     }
 
     // .hero__container
@@ -356,12 +362,10 @@
 
         @media (min-width:$md1) {
             max-width: rem(680);
-
         }
 
         @media (min-width:$md0) {
             max-width: rem(947);
-
         }
     }
 
@@ -372,12 +376,14 @@
         gap: rem(20);
 
         @media (min-width: $md5) {
+            margin-top: 1.5rem;
             gap: rem(40);
         }
 
         // .hero__lead
         .hero__lead {
             margin-top: 0;
+            max-width: 100%;
         }
     }
 
