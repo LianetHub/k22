@@ -642,8 +642,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				window.addEventListener("resize", getSwiper);
 			}
 
-			document.querySelectorAll(".portfolio__filters")?.forEach((slider) => {
-
+			document.querySelectorAll(".toolbar__filters")?.forEach((slider) => {
 				new Swiper(slider, {
 					slidesPerView: "auto",
 					grabCursor: true,

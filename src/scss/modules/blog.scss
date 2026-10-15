@@ -94,12 +94,10 @@
 	&__heading {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
-		margin-top: rem(40);
 
-		@media (min-width: $md4) {
-			gap: rem(20);
-		}
+		margin-top: rem(24);
+
+
 	}
 
 	// blog__lead
@@ -113,12 +111,13 @@
 
 		@media (min-width: $md4) {
 			@include desktop-body-xl;
+			letter-spacing: normal;
 		}
 	}
 
 	// blog__search
 	&__search {
-		margin-top: rem(30);
+		margin-top: rem(24);
 	}
 
 	// blog__toolbar
@@ -263,6 +262,7 @@
 
 	// blog__catalog
 	&__catalog {
+		margin-top: 2rem;
 		display: flex;
 		flex-direction: column;
 		gap: rem(30);

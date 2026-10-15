@@ -772,42 +772,38 @@
 							</div>
 							<form class="blog__search search-form icon-search" action="#" method="get">
 								<label class="visually-hidden" for="blog-search">Поиск по блогу</label>
-								<input
-									class="search-form__input"
-									id="blog-search"
-									type="search"
-									name="q"
-									placeholder="например катализатор, выхлоп,Stage"
-								>
+								<input class="search-form__input" id="blog-search" type="search" name="q" placeholder="например катализатор, выхлоп,Stage">
 								<button class="search-form__btn btn btn--primary btn--small" type="submit">найти</button>
 							</form>
 						</div>
 						<div class="blog__catalog">
-							<div class="blog__toolbar">
-								<ul class="blog__filters">
-									<li class="blog__filters-item">
-										<button class="blog__filter is-active" type="button">Все</button>
-									</li>
-									<li class="blog__filters-item">
-										<button class="blog__filter" type="button">Чип-тюнинг</button>
-									</li>
-									<li class="blog__filters-item">
-										<button class="blog__filter" type="button">Выхлоп</button>
-									</li>
-									<li class="blog__filters-item">
-										<button class="blog__filter" type="button">Автосервис</button>
-									</li>
-									<li class="blog__filters-item">
-										<button class="blog__filter" type="button">Диагностика</button>
-									</li>
-									<li class="blog__filters-item">
-										<button class="blog__filter" type="button">полезное</button>
-									</li>
-									<li class="blog__filters-item">
-										<button class="blog__filter" type="button">Видео</button>
-									</li>
-								</ul>
-								<div class="custom-select custom-select--sort">
+							<div class="blog__toolbar toolbar">
+								<div class="toolbar__filters swiper">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide">
+											<button class="toolbar__filter is-active" type="button">Все</button>
+										</li>
+										<li class="swiper-slide">
+											<button class="toolbar__filter" type="button">Чип-тюнинг</button>
+										</li>
+										<li class="swiper-slide">
+											<button class="toolbar__filter" type="button">Выхлоп</button>
+										</li>
+										<li class="swiper-slide">
+											<button class="toolbar__filter" type="button">Автосервис</button>
+										</li>
+										<li class="swiper-slide">
+											<button class="toolbar__filter" type="button">Диагностика</button>
+										</li>
+										<li class="swiper-slide">
+											<button class="toolbar__filter" type="button">полезное</button>
+										</li>
+										<li class="swiper-slide">
+											<button class="toolbar__filter" type="button">Видео</button>
+										</li>
+									</ul>
+								</div>
+								<div class="toolbar__select custom-select custom-select--sort">
 									<label class="visually-hidden" for="blog-sort">Сортировка</label>
 									<select class="custom-select__native" id="blog-sort" name="sort" data-custom-select>
 										<option value="new" selected>Сначала новые</option>
@@ -844,7 +840,7 @@
 										</a>
 										<div class="blog-card__body">
 											<div class="blog-card__text">
-												<h3 class="blog-card__title">Что делать, если загорелся check engine?</h3>
+												<h3 class="blog-card__title">Что делать, если <br> загорелся check engine?</h3>
 												<p class="blog-card__excerpt">Разбираемся, почему загорелся Check Engine, какие неисправности могут быть причиной и когда стоит обратиться на диагностику.</p>
 											</div>
 											<a class="blog-card__link more-link" href="article.html">Читать статью</a>
