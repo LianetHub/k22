@@ -7,10 +7,10 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--maintenance" style="background-image: url('@img/hero/service-category.webp');">
+				<section class="hero hero--maintenance">
 					<div class="hero__container container">
 						<div class="hero__offer">
-							<h1 class="hero__title title">Техническое обслуживание</h1>
+							<h1 class="hero__title title-lg">Техническое <br> обслуживание</h1>
 							<p class="hero__lead">Регулярное техническое обслуживание — залог надёжности, безопасности и комфорта вашего автомобиля. Своевременное ТО помогает продлить срок службы узлов и предотвратить дорогостоящий ремонт.</p>
 							<a href="#callback" class="hero__btn btn btn--primary">Записаться на ТО</a>
 						</div>
@@ -25,10 +25,11 @@
 					</div>
 				</section>
 				@@include('html/sections/_offers.html', {
-				"title": 'Возможно <span class="color-primary">Вас заинтересует</span>',
+				"title": 'Возможно <span class="color-primary">Вас&nbsp;заинтересует</span>',
 				"offersList": "./html/json/offers-service-page.json"
 				})
 				@@include('html/sections/_features.html', {
+				'mod': "features--service",
 				"title": 'ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})

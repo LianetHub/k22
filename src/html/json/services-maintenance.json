@@ -1,7 +1,7 @@
 [
 	{
 		"mod": "services-card--compact services-card--media",
-		"title": "Замена масла в двигателе",
+		"title": "Замена масла в&nbsp;двигателе",
 		"price": "от 1 500 ₽",
 		"photo": "@img/services/maint-oil.webp",
 		"photoAlt": "Канистра моторного масла",
@@ -10,7 +10,7 @@
 	},
 	{
 		"mod": "services-card--compact services-card--media",
-		"title": "Замена масла в АКПП",
+		"title": "Замена масла <br> в&nbsp;АКПП",
 		"price": "5 000 ₽",
 		"photo": "@img/services/maint-atf.webp",
 		"photoAlt": "Канистра масла для АКПП",
@@ -37,7 +37,7 @@
 	},
 	{
 		"mod": "services-card--compact services-card--media",
-		"title": "Замена масла в вариаторе",
+		"title": "Замена масла в&nbsp;двигателе",
 		"price": "5 000 ₽",
 		"photo": "@img/services/maint-cvt.webp",
 		"photoAlt": "Канистра масла для вариатора",
@@ -55,7 +55,7 @@
 	},
 	{
 		"mod": "services-card--compact services-card--media",
-		"title": "Замена масла в редукторе",
+		"title": "Замена масла в&nbsp;редукторе",
 		"price": "5 800 ₽",
 		"photo": "@img/services/maint-reducer.webp",
 		"photoAlt": "Канистра масла для редуктора",

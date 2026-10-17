@@ -28,7 +28,7 @@
 		gap: rem(32);
 
 		@media (min-width: $md4) {
-			gap: rem(40);
+			gap: rem(24);
 		}
 	}
 
@@ -93,7 +93,7 @@
 		@media (min-width: $md1) {
 			justify-content: flex-end;
 			padding-block: rem(20);
-			padding-left: 50%;
+			padding-left: 44%;
 			background-position: left center;
 
 			&::before {
@@ -117,8 +117,9 @@
 		}
 
 		@media (min-width: $md0) {
+			padding-left: 50%;
 			gap: rem(50);
-			padding: rem(40) rem(50) rem(40) rem(600);
+			padding: rem(37) rem(50) rem(37) rem(600);
 
 
 		}
@@ -215,12 +216,10 @@
 		min-width: 0;
 
 		@media (min-width: $md1) {
-			gap: rem(20);
+			gap: rem(12);
 		}
 
-		@media (min-width: $md0) {
-			gap: rem(30);
-		}
+
 	}
 
 	// .offer__title
@@ -248,6 +247,7 @@
 
 		@media (min-width: $md0) {
 			@include desktop-body-xl;
+			letter-spacing: normal;
 		}
 
 		&:empty {
