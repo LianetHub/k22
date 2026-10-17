@@ -1,0 +1,101 @@
+[
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена тормозного цилиндра",
+		"price": "от 1 500 ₽",
+		"photo": "@img/services/brake-cylinder.webp",
+		"photoAlt": "Тормозной цилиндр автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена передних тормозов",
+		"price": "5 000 ₽",
+		"photo": "@img/services/brake-front.webp",
+		"photoAlt": "Передние тормоза автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена заднего тормозного барабана",
+		"price": "5 000 ₽",
+		"photo": "@img/services/brake-drum.webp",
+		"photoAlt": "Тормозной барабан автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена тормозной жидкости",
+		"price": "20 000 ₽",
+		"photo": "@img/services/brake-fluid.webp",
+		"photoAlt": "Тормозная жидкость",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена тормозных колодок",
+		"price": "5 000 ₽",
+		"photo": "@img/services/brake-pads.webp",
+		"photoAlt": "Тормозные колодки автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена тормозных дисков",
+		"price": "13 000 ₽",
+		"photo": "@img/services/brake-discs.webp",
+		"photoAlt": "Тормозные диски автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена тормозного шланга",
+		"price": "5 800 ₽",
+		"photo": "@img/services/brake-hose.webp",
+		"photoAlt": "Тормозной шланг автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена суппорта",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/brake-caliper.webp",
+		"photoAlt": "Тормозной суппорт автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена главного тормозного цилиндра",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/brake-master.webp",
+		"photoAlt": "Главный тормозной цилиндр автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена датчика ABS",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/brake-abs.webp",
+		"photoAlt": "Датчик ABS и элементы тормозной системы",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Прокачка тормозов",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/brake-bleed.webp",
+		"photoAlt": "Оборудование для прокачки тормозов",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]

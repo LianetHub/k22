@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.html', {
+	"title": "K22 | Шаблон категории услуги"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.html')
+			<main class="page">
+				<section class="hero hero--braking-system">
+					<div class="hero__container container">
+						<div class="hero__offer">
+							<h1 class="hero__title title-lg">Тормозная система</h1>
+							<p class="hero__lead">Проверяем и ремонтируем тормозную систему — от колодок и&nbsp;дисков до суппортов и магистралей. Обеспечиваем безопасное, эффективное и предсказуемое торможение.</p>
+							<a href="#callback" class="hero__btn btn btn--primary">Записаться</a>
+						</div>
+					</div>
+				</section>
+				<section class="services services--category">
+					<div class="services__container container">
+						<h2 class="services__title title decor-line-block">услуги</h2>
+						<ul class="services__grid">
+							@@loop('./html/templates/_service-card.html', './html/json/services-braking-system.json')
+						</ul>
+					</div>
+				</section>
+				@@include('html/sections/_offers.html', {
+				"title": 'Возможно <span class="color-primary">Вас&nbsp;заинтересует</span>',
+				"offersList": "./html/json/offers-service-page.json"
+				})
+				@@include('html/sections/_features.html', {
+				'mod': "features--service",
+				"title": 'ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM',
+				"featuresList": "./html/json/features.json"
+				})
+				@@include('html/sections/_callback.html', {
+				"id": "callback"
+				})
+				@@include('html/sections/_faq.html', {
+				"faqList": "html/json/faq-service-category.json"
+				})
+				@@include('html/sections/_reviews.html', {
+				"moreHref": "#",
+				"reviewsList": "./html/json/reviews-4.json"
+				})
+				@@include('html/sections/_works.html', {
+				"tag": "Автосервис",
+				"worksList": "./html/json/works-home.json"
+				})
+				@@include('html/sections/_contacts.html', {})
+
+			</main>
+			@@include('html/_footer.html', {})
+		</div>
+		@@include('html/_js.html', {})
+	</body>
+</html>

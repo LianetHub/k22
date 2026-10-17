@@ -4364,6 +4364,11 @@ textarea.form-control {
   }
 }
 
+@media (any-hover: hover) {
+  .services-card:hover .services-card__image {
+    transform: scale(1.025);
+  }
+}
 @media (min-width: 1919.98px) {
   .services-card.services-card--featured {
     min-height: 36.25rem;
@@ -4708,14 +4713,6 @@ textarea.form-control {
 @media (min-width: 1919.98px) {
   .services-card.services-card--media:not(:has(.services-card__price)) .services-card__image {
     height: 14.75rem;
-  }
-}
-.services-card.services-card--media .services-card__image {
-  transition: transform 0.3s ease;
-}
-@media (any-hover: hover) {
-  .services-card.services-card--media:hover .services-card__image {
-    transform: scale(1.025);
   }
 }
 @media (any-hover: hover) {
@@ -5238,6 +5235,7 @@ textarea.form-control {
   object-fit: contain;
   object-position: right bottom;
   pointer-events: none;
+  transition: transform 0.3s ease;
 }
 .services-card__link {
   z-index: 2;
@@ -7662,16 +7660,14 @@ textarea.form-control {
 .hero.hero--maintenance {
   background-color: #F4F4F6;
   background-size: contain;
-  background-position: center 0;
+  background-position: center;
   background-image: url("../img/hero/maintenance-mobile.webp");
 }
 .hero.hero--maintenance .hero__lead {
   max-width: 35.625rem;
-  margin-top: 0rem;
 }
 @media (max-width: 991.98px) {
   .hero.hero--maintenance .hero__lead {
-    margin-top: 0.5rem;
     font-family: "InterTight", sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
@@ -7685,8 +7681,10 @@ textarea.form-control {
     max-width: 43.75rem;
   }
 }
-.hero.hero--maintenance .hero__offer {
-  padding-top: 3.125rem;
+@media (min-width: 766.98px) {
+  .hero.hero--maintenance .hero__offer {
+    padding-top: 3.125rem;
+  }
 }
 @media (min-width: 991.98px) {
   .hero.hero--maintenance .hero__offer {
@@ -7729,6 +7727,330 @@ textarea.form-control {
 @media (min-width: 1919.98px) {
   .hero.hero--maintenance {
     background-position: center right;
+  }
+}
+.hero.hero--suspension {
+  background-color: #F4F4F6;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/hero/suspension-mobile.webp");
+}
+@media (min-width: 766.98px) {
+  .hero.hero--suspension .hero__offer {
+    padding-top: 3.125rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--suspension .hero__offer {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .hero.hero--suspension {
+    background-image: url("../img/hero/suspension-tablet.webp");
+    min-height: 32.75rem;
+    background-size: cover;
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--suspension {
+    min-height: 31.25rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--suspension {
+    min-height: 38.75rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--suspension {
+    min-height: 45.25rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--suspension {
+    background-image: url("../img/hero/suspension.webp");
+    background-position: right center;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--suspension {
+    background-position: 72% center;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--suspension {
+    background-position: center right;
+  }
+}
+.hero.hero--transmission {
+  background-color: #F4F4F6;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/hero/transmission-mobile.webp");
+}
+@media (min-width: 766.98px) {
+  .hero.hero--transmission .hero__offer {
+    padding-top: 3.125rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--transmission .hero__offer {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .hero.hero--transmission {
+    background-image: url("../img/hero/transmission-tablet.webp");
+    min-height: 32.75rem;
+    background-size: cover;
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--transmission {
+    min-height: 31.25rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--transmission {
+    min-height: 38.75rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--transmission {
+    min-height: 45.25rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--transmission {
+    background-image: url("../img/hero/transmission.webp");
+    background-position: right center;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--transmission {
+    background-position: 72% center;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--transmission {
+    background-position: center right;
+  }
+}
+.hero.hero--braking-system {
+  background-color: #F4F4F6;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/hero/braking-system-mobile.webp");
+}
+@media (max-width: 991.98px) {
+  .hero.hero--braking-system .hero__lead {
+    font-family: "InterTight", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.0225rem;
+  }
+}
+.hero.hero--braking-system .hero__offer {
+  padding-top: 3.125rem;
+}
+@media (min-width: 991.98px) {
+  .hero.hero--braking-system .hero__offer {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .hero.hero--braking-system {
+    background-image: url("../img/hero/braking-system-tablet.webp");
+    min-height: 32.75rem;
+    background-size: cover;
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--braking-system {
+    min-height: 31.25rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--braking-system {
+    min-height: 38.75rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--braking-system {
+    min-height: 45.25rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--braking-system {
+    background-image: url("../img/hero/braking-system.webp");
+    background-position: right center;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--braking-system {
+    background-position: 72% center;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--braking-system {
+    background-position: center right;
+  }
+}
+.hero.hero--air-conditioner {
+  background-color: #F4F4F6;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/hero/air-conditioner-mobile.webp");
+}
+.hero.hero--air-conditioner .hero__lead {
+  max-width: 35.625rem;
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--air-conditioner .hero__lead {
+    max-width: 43.75rem;
+  }
+}
+.hero.hero--air-conditioner .hero__offer {
+  padding-top: 3.125rem;
+}
+@media (min-width: 991.98px) {
+  .hero.hero--air-conditioner .hero__offer {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .hero.hero--air-conditioner {
+    background-image: url("../img/hero/air-conditioner-tablet.webp");
+    min-height: 32.75rem;
+    background-size: cover;
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--air-conditioner {
+    min-height: 31.25rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--air-conditioner {
+    min-height: 38.75rem;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--air-conditioner {
+    min-height: 45.25rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--air-conditioner {
+    background-image: url("../img/hero/air-conditioner.webp");
+    background-position: right center;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--air-conditioner {
+    background-position: 72% center;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--air-conditioner {
+    background-position: center right;
+  }
+}
+.hero.hero--cooling-system {
+  background-color: #F4F4F6;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/hero/cooling-system-mobile.webp");
+}
+@media (min-width: 766.98px) {
+  .hero.hero--cooling-system .hero__offer {
+    padding-top: 3.125rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--cooling-system .hero__offer {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .hero.hero--cooling-system {
+    background-image: url("../img/hero/cooling-system-tablet.webp");
+    min-height: 32.75rem;
+    background-size: cover;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--cooling-system {
+    background-image: url("../img/hero/cooling-system.webp");
+    background-position: right center;
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--cooling-system {
+    min-height: 31.25rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--cooling-system {
+    min-height: 38.75rem;
+    background-position: 72% center;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--cooling-system {
+    min-height: 45.25rem;
+    background-position: center right;
+  }
+}
+.hero.hero--tuning {
+  background-color: #F4F4F6;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../img/hero/tuning-mobile.webp");
+}
+.hero.hero--tuning .hero__title {
+  margin-right: -1rem;
+}
+@media (min-width: 766.98px) {
+  .hero.hero--tuning .hero__offer {
+    padding-top: 3.125rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--tuning .hero__offer {
+    padding-top: 1.25rem;
+  }
+}
+@media (min-width: 575.98px) {
+  .hero.hero--tuning {
+    background-image: url("../img/hero/tuning-tablet.webp");
+    min-height: 32.75rem;
+    background-size: cover;
+  }
+}
+@media (min-width: 991.98px) {
+  .hero.hero--tuning {
+    background-image: url("../img/hero/tuning.webp");
+    background-position: right center;
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--tuning {
+    min-height: 31.25rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .hero.hero--tuning {
+    min-height: 38.75rem;
+    background-position: 72% center;
+  }
+}
+@media (min-width: 1919.98px) {
+  .hero.hero--tuning {
+    background-position: center right;
+    min-height: 45.25rem;
   }
 }
 .hero.hero--deactivation {

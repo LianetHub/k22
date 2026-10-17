@@ -1,0 +1,20 @@
+[
+	{
+		"mod": "",
+		"title": "Замена выжимного подшипника",
+		"price": "от 1 500 ₽",
+		"photo": "@img/services/gear-release-bearing.webp",
+		"photoAlt": "Выжимной подшипник и сцепление автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "",
+		"title": "Замена масла в редукторе",
+		"price": "5 000 ₽",
+		"photo": "@img/services/gear-reducer.webp",
+		"photoAlt": "Редуктор автомобиля и трансмиссионное масло",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]

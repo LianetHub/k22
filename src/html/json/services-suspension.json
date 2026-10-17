@@ -1,0 +1,209 @@
+[
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Диагностика ходовой части",
+		"price": "от 1 500 ₽",
+		"photo": "@img/services/susp-diagnostics.webp",
+		"photoAlt": "Детали ходовой части автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена пружин амортизатора",
+		"price": "5 000 ₽",
+		"photo": "@img/services/susp-springs.webp",
+		"photoAlt": "Пружины амортизатора",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена передних&nbsp;стоек стабилизатора",
+		"price": "5 000 ₽",
+		"photo": "@img/services/susp-front-links.webp",
+		"photoAlt": "Передние стойки стабилизатора",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена сайлентблоков рычага",
+		"price": "20 000 ₽",
+		"photo": "@img/services/susp-arm-bushings.webp",
+		"photoAlt": "Сайлентблоки рычага подвески",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена сальника привода",
+		"price": "5 000 ₽",
+		"photo": "@img/services/susp-axle-seal.webp",
+		"photoAlt": "Сальник привода",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена ступичного подшипника",
+		"price": "13 000 ₽",
+		"photo": "@img/services/susp-hub-bearing.webp",
+		"photoAlt": "Ступичный подшипник",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена стойки амортизаторов",
+		"price": "5 800 ₽",
+		"photo": "@img/services/susp-shock.webp",
+		"photoAlt": "Стойка амортизатора",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена рычагов подвески",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-arms.webp",
+		"photoAlt": "Рычаги подвески",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена подшипника",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-bearing.webp",
+		"photoAlt": "Подшипник автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена подушки двигателя",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-engine-mount.webp",
+		"photoAlt": "Подушка двигателя",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена ШРУСа",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-cv-joint.webp",
+		"photoAlt": "ШРУС автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена натяжного ролика",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-tensioner.webp",
+		"photoAlt": "Натяжной ролик",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Протяжка ходовой части",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-tighten.webp",
+		"photoAlt": "Оборудование для обслуживания ходовой части",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена рулевой тяги",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-tie-rod.webp",
+		"photoAlt": "Рулевая тяга",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Перепрессовка сайлентблока рычага",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-bushing-press.webp",
+		"photoAlt": "Сайлентблок рычага подвески",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена шаровой опоры",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-ball-joint.webp",
+		"photoAlt": "Шаровая опора",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена ступицы",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-hub.webp",
+		"photoAlt": "Ступица колеса",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена стоек стабилизатора",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-stab-links.webp",
+		"photoAlt": "Стойки стабилизатора",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена опорного подшипника",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-strut-bearing.webp",
+		"photoAlt": "Опорный подшипник",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена сайлентблоков",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-bushings.webp",
+		"photoAlt": "Сайлентблоки подвески",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена пыльника рулевой рейки",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-rack-boot.webp",
+		"photoAlt": "Пыльник рулевой рейки",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена рулевых наконечников",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-tie-rod-end.webp",
+		"photoAlt": "Рулевые наконечники",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена рулевой рейки",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/susp-rack.webp",
+		"photoAlt": "Рулевая рейка",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]

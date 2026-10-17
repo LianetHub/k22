@@ -1,0 +1,74 @@
+[
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Установка перфорированных тормозных дисков",
+		"price": "от 1 500 ₽",
+		"photo": "@img/services/extra-drilled-discs.webp",
+		"photoAlt": "Перфорированные тормозные диски",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Установка многопоршневых суппортов",
+		"price": "5 000 ₽",
+		"photo": "@img/services/extra-calipers.webp",
+		"photoAlt": "Многопоршневые тормозные суппорты",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Установка койловеров",
+		"price": "5 000 ₽",
+		"photo": "@img/services/extra-coilovers.webp",
+		"photoAlt": "Автомобильные койловеры",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Оборудование салона по заказу клиента",
+		"price": "20 000 ₽",
+		"photo": "@img/services/extra-interior.webp",
+		"photoAlt": "Индивидуальное оборудование салона автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Оборудование багажника по заказу клиента",
+		"price": "5 000 ₽",
+		"photo": "@img/services/extra-trunk.webp",
+		"photoAlt": "Индивидуальное оборудование багажника автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Установка звукового оборудования",
+		"price": "13 000 ₽",
+		"photo": "@img/services/extra-audio.webp",
+		"photoAlt": "Автомобильное звуковое оборудование",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Установка звёздного неба",
+		"price": "5 800 ₽",
+		"photo": "@img/services/extra-starlight.webp",
+		"photoAlt": "Потолок автомобиля с эффектом звёздного неба",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Установка камеры заднего вида",
+		"price": "от 2 800 ₽",
+		"photo": "@img/services/extra-rear-camera.webp",
+		"photoAlt": "Камера заднего вида и монитор автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]

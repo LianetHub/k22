@@ -89,6 +89,15 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 .services-card {
 
+
+	@media (any-hover: hover) {
+		&:hover {
+			.services-card__image {
+				transform: scale(1.025);
+			}
+		}
+	}
+
 	// services-card--featured
 	&.services-card--featured {
 		@media (min-width: $md0) {
@@ -433,17 +442,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			}
 		}
 
-		.services-card__image {
-			transition: transform 0.3s ease;
-		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				.services-card__image {
-					transform: scale(1.025);
-				}
-			}
-		}
 	}
 
 	// services-card--hover
@@ -841,6 +840,7 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 		object-fit: contain;
 		object-position: right bottom;
 		pointer-events: none;
+		transition: transform 0.3s ease;
 	}
 
 	// services-card__link

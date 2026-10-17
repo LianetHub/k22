@@ -1,0 +1,56 @@
+[
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Промывка радиатора печки салона",
+		"price": "от 1 500 ₽",
+		"photo": "@img/services/cool-heater-core.webp",
+		"photoAlt": "Радиатор печки салона автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Промывка радиатора системы охлаждения",
+		"price": "5 000 ₽",
+		"photo": "@img/services/cool-radiator-flush.webp",
+		"photoAlt": "Радиатор системы охлаждения автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Промывка системы охлаждения",
+		"price": "5 000 ₽",
+		"photo": "@img/services/cool-system-flush.webp",
+		"photoAlt": "Оборудование для промывки системы охлаждения",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена радиатора",
+		"price": "20 000 ₽",
+		"photo": "@img/services/cool-radiator.webp",
+		"photoAlt": "Радиатор охлаждения автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена антифриза",
+		"price": "5 000 ₽",
+		"photo": "@img/services/cool-antifreeze.webp",
+		"photoAlt": "Антифриз для системы охлаждения автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	},
+	{
+		"mod": "services-card--compact services-card--media",
+		"title": "Замена печки салона",
+		"price": "13 000 ₽",
+		"photo": "@img/services/cool-heater.webp",
+		"photoAlt": "Радиатор отопителя салона автомобиля",
+		"href": "#",
+		"link": "Подробнее"
+	}
+]
