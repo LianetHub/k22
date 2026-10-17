@@ -72,19 +72,24 @@
 
 		&:has(.products__slider) {
 			display: grid;
-			gap: rem(30);
+			gap: rem(20);
 			grid-template-columns: 1fr;
 			grid-template-areas:
 				"head"
 				"slider"
 				"nav";
 
-			@media (min-width: $md1) {
-				gap: rem(40);
+			@media (min-width: $md2) {
+				gap: rem(20);
 				grid-template-columns: 1fr auto;
 				grid-template-areas:
 					"head nav"
 					"slider slider";
+			}
+
+			@media (min-width:$md0) {
+				gap: rem(30);
+
 			}
 		}
 	}
@@ -246,8 +251,12 @@
 	&__title {
 		max-width: rem(980);
 
+		@media (max-width:$md3) {
+			@media (min-width:$md4) {
+				@include desktop-heading-h2;
 
-
+			}
+		}
 	}
 
 	// .products__nav

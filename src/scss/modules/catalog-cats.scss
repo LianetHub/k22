@@ -3,7 +3,7 @@
 .catalog-cats {
 	background-color: $color-bg-primary;
 
-	.page > & {
+	.page>& {
 		@include section-inset($space-20);
 
 		@media (min-width: $md4) {
@@ -46,8 +46,8 @@
 		flex-direction: column;
 		min-height: rem(170);
 		overflow: hidden;
-		background-color: $color-bg-secondary;
 		color: $color-text-primary;
+		background: url("@img/decor/catalog-card-decor.svg") center bottom / 100% auto no-repeat, $color-bg-secondary;
 
 		@media (min-width: $md4) {
 			min-height: rem(226);
@@ -83,23 +83,44 @@
 				height: rem(74);
 			}
 		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.catalog-cats__image {
+					transform: scale(1.025);
+				}
+			}
+		}
 	}
 
 	// catalog-cats__title
 	&__title {
 		position: relative;
 		z-index: $ui-index-2;
-		max-width: rem(362);
+
 		padding: rem(12) rem(12) 0;
 		overflow-wrap: anywhere;
-		@include mobile-heading-h4;
+
+		font-size: 0.875rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+
+		letter-spacing: -0.00875rem;
+		text-transform: uppercase;
+
+		@media (min-width:$md5) {
+			@include mobile-heading-h4;
+
+		}
 
 		@media (min-width: $md4) {
 			padding: rem(20) rem(20) 0;
-			@include desktop-heading-h3;
+			@include desktop-heading-h4;
 		}
 
 		@media (min-width: $md0) {
+			@include desktop-heading-h3;
 			padding: rem(30) rem(30) 0;
 		}
 	}
@@ -108,7 +129,6 @@
 	&__lead {
 		position: relative;
 		z-index: $ui-index-2;
-		margin-top: rem(8);
 		padding: 0 rem(12);
 		font-family: $font-inter;
 		font-size: rem(14);
@@ -116,12 +136,13 @@
 		line-height: 1.2;
 
 		@media (min-width: $md4) {
-			margin-top: rem(10);
+
 			padding: 0 rem(20);
-			font-size: rem(16);
+			font-size: 1.125rem;
 		}
 
 		@media (min-width: $md0) {
+			margin-top: rem(10);
 			padding: 0 rem(30);
 			font-size: rem(22);
 		}
@@ -165,19 +186,22 @@
 		right: 0;
 		bottom: 0;
 		z-index: 1;
-		width: rem(100);
+		width: auto;
 		height: rem(70);
 		object-fit: contain;
 		object-position: right bottom;
 		pointer-events: none;
+		transition: transform 0.3s ease;
 
 		@media (min-width: $md4) {
-			width: rem(160);
-			height: rem(112);
+			height: rem(134);
+		}
+
+		@media (min-width:$md2) {
+			height: 8.375rem;
 		}
 
 		@media (min-width: $md0) {
-			width: rem(219);
 			height: rem(154);
 		}
 	}

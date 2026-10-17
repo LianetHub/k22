@@ -40,9 +40,21 @@
 
 	// .features--buy
 	&.features--buy {
+		.feature-card {
+			gap: 0.125rem;
+			clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% rem(50), rem(58) 0%);
+		}
+
 		.feature-card__text {
-			@media (min-width: $md4) {
+			@media (min-width:$md2) {
+				min-height: rem(105);
+
+			}
+
+			@media (min-width: $md0) {
 				font-size: rem(22);
+				letter-spacing: normal;
+				min-height: rem(80);
 			}
 		}
 	}
@@ -113,7 +125,7 @@
 		display: grid;
 		gap: rem(10);
 
-		@media (min-width: $md4) {
+		@media (min-width: $md3) {
 			grid-template-columns: repeat(2, 1fr);
 			gap: rem(30);
 		}

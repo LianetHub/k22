@@ -29,6 +29,7 @@
 
         }
 
+
     }
 
     // .hero--diagnostics
@@ -416,6 +417,7 @@
             min-height: rem(500);
         }
 
+
         @media (min-width: $md1) {
             min-height: rem(620);
             background-position: 72% center;
@@ -592,29 +594,68 @@
     &.hero--catalog {
         color: $color-bg-primary;
         background-color: $color-bg-elevated;
-        background-image:
-            linear-gradient(180deg, rgba($color-bg-elevated, 0) 0%, rgba($color-bg-elevated, 0) 32%, $color-bg-elevated 68%),
-            url("@img/hero/catalog-exhaust.webp");
-        background-position: center, center top;
-        background-size: auto, rem(527) auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/catalog-mobile.webp");
 
-        @media (min-width: $md4) {
-            background-image:
-                linear-gradient(90deg, $color-bg-elevated 0%, rgba($color-bg-elevated, 0.82) 38%, rgba($color-bg-elevated, 0) 62%),
-                url("@img/hero/catalog-exhaust.webp");
-            background-position: center, right center;
-            background-size: auto, auto 100%;
+        @media (max-width:$md5) {
+            aspect-ratio: math.div(393, 588);
         }
 
-        @media (min-width: $md1) {
-            color: $color-text-primary;
-            background-color: $color-bg-primary;
-            background-image:
-                linear-gradient(90deg, $color-bg-primary 0%, $color-bg-primary 28%, rgba($color-bg-primary, 0.55) 42%, rgba($color-bg-primary, 0) 58%),
-                url("@img/hero/catalog-exhaust.webp");
-            background-position: center, right center;
-            background-size: auto, auto 115%;
+        .hero__offer {
+            @media (min-width:$md4) {
+                padding-top: rem(40);
+            }
+
+            @media (min-width:$md3) {
+                padding-top: rem(20);
+            }
         }
+
+        .hero__title {
+            display: flex;
+            flex-direction: column;
+            @include desktop-heading-h2;
+
+            @media (min-width:$md5) {
+                @include desktop-heading-h1;
+            }
+
+            @media (min-width:$md3) {
+                display: block;
+            }
+
+
+        }
+
+        .hero__lead {
+            max-width: rem(430);
+            @include desktop-body-xl;
+            letter-spacing: normal
+        }
+
+        .hero__btn {
+            font-size: rem(22);
+            padding: rem(30) rem(52);
+            width: fit-content;
+
+        }
+
+        @media (min-width:$md5) {
+            min-height: rem(500);
+            background-size: cover;
+            background-image: url("@img/hero/catalog-tablet.webp");
+        }
+
+        @media (min-width:$md3) {
+            background-image: url("@img/hero/catalog.webp");
+        }
+
+
+        @media (min-width: $md0) {
+            min-height: rem(560);
+        }
+
     }
 
     // .hero--oil

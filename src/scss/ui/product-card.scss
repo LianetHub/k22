@@ -12,7 +12,7 @@
 	background-color: $color-bg-primary;
 
 	@media (min-width: $md4) {
-		gap: rem(20);
+		gap: rem(12);
 		padding: rem(20);
 	}
 
@@ -23,10 +23,18 @@
 		align-items: flex-end;
 		width: 100%;
 		height: rem(132);
-		padding: rem(10);
 
 		@media (min-width: $md4) {
+			padding: rem(10);
 			height: rem(230);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.product-card__img {
+					transform: scale(1.025);
+				}
+			}
 		}
 	}
 
@@ -38,6 +46,7 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+		transition: transform 0.3s ease;
 	}
 
 	// product-card__badge
@@ -47,7 +56,7 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: rem(8) rem(10);
+		padding: rem(6) rem(10);
 		background-color: $color-bg-elevated;
 		color: $color-bg-primary;
 		font-size: rem(10);
@@ -80,6 +89,7 @@
 		gap: rem(11);
 		width: 100%;
 		min-width: 0;
+		margin-bottom: auto;
 	}
 
 	// product-card__title
@@ -90,6 +100,16 @@
 		line-height: 1.3;
 		letter-spacing: em(-0.32, 16);
 		color: $color-text-primary;
+
+		& a {
+			transition: color 0.3s ease;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $color-accent-primary;
+				}
+			}
+		}
 
 		@media (min-width: $md4) {
 			font-size: rem(22);
@@ -123,6 +143,7 @@
 
 	// product-card__price
 	&__price {
+		margin-top: auto;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -145,7 +166,7 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: rem(8) rem(10);
+		padding: rem(6) rem(10);
 		background-color: rgba($color-accent-primary, 0.2);
 		color: $color-accent-primary;
 		font-size: rem(10);
@@ -199,6 +220,23 @@
 	// product-card__btn
 	&__btn {
 		width: 100%;
-		margin-top: auto;
+
+
+		&.btn.btn--small {
+			letter-spacing: normal;
+
+			@media (max-width:$md3) {
+				font-size: 0.75rem;
+				font-weight: 700;
+				line-height: 130%;
+				letter-spacing: -0.015rem;
+				padding: 0.75rem;
+
+				@media (min-width:$md5) {
+					font-size: rem(18);
+					padding-block: rem(18);
+				}
+			}
+		}
 	}
 }

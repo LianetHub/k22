@@ -36,14 +36,14 @@
 		"link": "Смотреть"
 	},
 	{
-		"title": "катализатор евро-2 стандарта",
+		"title": "катализатор <br> евро-2 стандарта",
 		"image": "@img/catalog/catalyst-euro2.webp",
 		"imageAlt": "Катализатор стандарта Евро-2",
 		"href": "category.html",
 		"link": "Смотреть"
 	},
 	{
-		"title": "катализатор евро-5 стандарта",
+		"title": "катализатор <br> евро-5 стандарта",
 		"image": "@img/catalog/catalyst-euro5.webp",
 		"imageAlt": "Катализатор стандарта Евро-5",
 		"href": "category.html",
