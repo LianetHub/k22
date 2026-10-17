@@ -377,24 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const contactsCities = initContactsCities();
 
-	// products filters
-	function initProductsFilters() {
-		function onClick(event) {
-			const productsSwitch = event.target.closest("[data-products-switch]");
-			if (!productsSwitch) return false;
-
-			const productsSection = productsSwitch.closest(".products");
-			const isOpen = productsSection?.classList.toggle("is-filters-open") ?? false;
-
-			productsSwitch.setAttribute("aria-expanded", isOpen ? "true" : "false");
-			return true;
-		}
-
-		return { onClick };
-	}
-
-	const productsFilters = initProductsFilters();
-
 	// article rating
 	function initArticleRating() {
 		function onClick(event) {
@@ -529,8 +511,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (menu) {
 			document.addEventListener("click", (e) => {
-				if (productsFilters.onClick(e)) return;
-
 				contactsCities.onClick(e);
 				articleRating.onClick(e);
 

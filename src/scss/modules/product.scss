@@ -26,25 +26,7 @@
 			margin-top: $space-54;
 		}
 
-		// .products__title
-		.products__title {
-			overflow: hidden;
-			height: rem(4);
-			padding-top: 0;
-			font-size: 0;
-			line-height: 0;
 
-			@media (min-width: $md4) {
-				overflow: visible;
-				height: auto;
-				padding-top: rem(44);
-				@include tablet-heading-h1;
-			}
-
-			@media (min-width: $md1) {
-				@include desktop-heading-h2;
-			}
-		}
 	}
 
 	// .page > .products:has(.products__slider)
@@ -107,6 +89,29 @@
 			flex-direction: row;
 			justify-content: space-between;
 			gap: rem(24);
+		}
+	}
+
+	// .products__toolbar
+	&__toolbar {
+		.toolbar__select {
+			display: block;
+			width: 100%;
+
+			.custom-select__trigger {
+				width: 100%;
+				justify-content: space-between;
+			}
+
+			@media (min-width:$md4) {
+				display: none;
+			}
+		}
+
+		.toolbar__filters {
+			@media (max-width:$md4) {
+				display: none;
+			}
 		}
 	}
 
