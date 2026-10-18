@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--bsl" style="background-image: url('@img/hero/bsl-boot-mode.webp');">
+				<section class="hero hero--bsl">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">BSL/BOOT режим</h1>
@@ -23,14 +23,17 @@
 						</ul>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end info-block--bsl" style="--info-block-image: url('../@img/info/bsl-boot-mode.webp');">
+				<section class="info-block">
 					<div class="info-block__container container">
 						<div class="info-block__content">
-							<h2 class="info-block__title title decor-line-block">BSL/BOOT: ПРЯМОЙ ДОСТУП К ЭБУ</h2>
+							<h2 class="info-block__title title decor-line-block">BSL/BOOT: ПРЯМОЙ <br> ДОСТУП К ЭБУ</h2>
 							<p class="info-block__lead">BSL/BOOT режим используется, когда прошить автомобиль стандартным способом через OBD невозможно. Для работы блок управления снимается с автомобиля, после чего специалисты подключаются непосредственно к его плате и получают доступ к памяти ЭБУ.</p>
 							<p class="info-block__text">Такой способ позволяет корректно считать и записать программное обеспечение, обойти ограничения штатного доступа и выполнить необходимую настройку блока. После прошивки ЭБУ устанавливается обратно и проверяется работа автомобиля.</p>
 							<a href="article.html" class="info-block__btn btn btn--primary">Читать далее</a>
 						</div>
+					</div>
+					<div class="info-block__image">
+						<img src="@img/info/bsl-boot-mode.webp" alt="Фото">
 					</div>
 				</section>
 				@@include('html/sections/_features.html', {
