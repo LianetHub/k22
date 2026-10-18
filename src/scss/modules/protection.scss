@@ -1,0 +1,203 @@
+@use "../abstracts" as *;
+
+
+.protection {
+
+
+    // .protection__container
+    &__container {}
+
+    // .protection__title
+    &__title {
+        max-width: rem(800)
+    }
+
+    // .protection__body
+    &__body {
+        margin-top: rem(40);
+        display: grid;
+        gap: rem(10);
+
+        @media (min-width:$md1) {
+            gap: rem(20);
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+    // .protection__tabs
+    &__tabs {
+        display: contents;
+
+        @media (min-width:$md1) {
+            display: flex;
+            flex-direction: column;
+            gap: rem(10);
+
+        }
+    }
+
+    // .protection__tab
+    &__tab {
+
+        text-align: left;
+        text-transform: uppercase;
+        background: #fff;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.01125rem;
+        padding: 1rem 1.25rem;
+
+        @media (min-width:$md4) {
+            @include desktop-heading-h4;
+            padding: rem(20) rem(28);
+        }
+
+        @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+                order: #{$i};
+            }
+        }
+
+        &.is-active {
+            color: $color-accent-primary;
+            background-image:
+                linear-gradient($color-accent-primary 3px, transparent 3px),
+                linear-gradient(90deg, $color-accent-primary 3px, transparent 3px),
+                linear-gradient(270deg, $color-accent-primary 3px, transparent 3px),
+                linear-gradient($color-accent-primary 3px, transparent 3px),
+                linear-gradient(90deg, $color-accent-primary 3px, transparent 3px),
+                linear-gradient(0deg, $color-accent-primary 3px, transparent 3px),
+                linear-gradient(270deg, $color-accent-primary 3px, transparent 3px),
+                linear-gradient(0deg, $color-accent-primary 3px, transparent 3px);
+
+            background-size: 9px 9px;
+            background-position:
+                top left,
+                top left,
+                top right,
+                top right,
+                bottom left,
+                bottom left,
+                bottom right,
+                bottom right;
+            background-repeat: no-repeat;
+        }
+    }
+
+    // .protection__content
+    &__content {
+        display: contents;
+
+        @media (min-width:$md1) {
+            display: block;
+        }
+    }
+
+    // .protection__block
+    &__block {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        gap: 1.875rem;
+        background: url("@img/decor/light-pattern.svg") 0 0 / auto, #222;
+        color: #fff;
+        padding: 1.875rem;
+
+        @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+                order: #{$i };
+            }
+        }
+
+        &.is-active {
+            display: flex;
+        }
+    }
+
+    // .protection__block-caption
+    &__block-caption {
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -0.0275rem;
+        max-width: 30.6875rem;
+        font-family: $font-inter;
+    }
+
+    // .protection__block-list
+    &__block-list {
+        border-top: rem(1) solid rgba(138, 138, 138, 0.50);
+
+        @media (min-width:$md0) {
+            width: fit-content;
+            min-width: rem(520);
+
+        }
+    }
+
+    // .protection__block-row
+    &__block-row {
+        display: grid;
+        padding: 1rem 0;
+        gap: 1.25rem;
+        border-bottom: rem(1) solid rgba(138, 138, 138, 0.50);
+
+        @media (min-width:$md4) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+    // .protection__block-name
+    &__block-name {
+        color: #8A8A8A;
+        font-family: $font-inter;
+        font-size: 1.125rem;
+        line-height: 120%;
+        letter-spacing: -0.0225rem;
+    }
+
+    // .protection__block-value
+    &__block-value {
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.01125rem;
+        text-transform: uppercase;
+    }
+
+    // .protection__block-footer
+    &__block-footer {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        flex-direction: column-reverse;
+
+        @media (min-width:$md4) {
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+
+    // .protection__block-btn
+    &__block-btn {
+        &.btn {
+            padding-block: rem(21);
+
+            @media (max-width:$md4) {
+                font-size: 1.375rem;
+            }
+        }
+    }
+
+    // .protection__block-price
+    &__block-price {
+        font-size: 1.375rem;
+        font-weight: 700;
+        letter-spacing: -0.0275rem;
+    }
+}

@@ -1,6 +1,10 @@
+@use "sass:math";
 @use "../abstracts" as *;
 
 .info-block {
+	position: relative;
+
+
 	// info-block--photo-end
 	&.info-block--photo-end:has(.info-block__lead)::before {
 		@media (min-width: $md2) {
@@ -9,6 +13,7 @@
 	}
 
 	&:has(.info-block__lead) {
+
 		// .info-block--light
 		&.info-block--light {
 			padding-top: rem(60);
@@ -150,6 +155,7 @@
 		background-color: #000;
 		color: $color-bg-secondary;
 
+
 		@media (min-width: $md4) {
 			padding-block: rem(80);
 		}
@@ -157,6 +163,11 @@
 		@media (min-width: $md2) {
 			padding-block: rem(100);
 		}
+
+		@media (max-width:$md3) {
+			padding-bottom: 18.25rem;
+		}
+
 
 		&::before {
 			content: "";
@@ -348,6 +359,50 @@
 				@media (min-width: $md0) {
 					max-width: rem(876);
 				}
+			}
+		}
+	}
+
+	&__title {
+		@media (max-width:$md5) {
+			hyphens: auto;
+		}
+	}
+
+
+
+	// .info-block__image
+	&__image {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		mask-image: radial-gradient(50% 50% at 50% 50%,
+				#000 30%,
+				transparent 100%);
+		z-index: 0;
+		height: 18.75rem;
+
+		@media (min-width:$md3) {
+			height: auto;
+			width: 70%;
+			top: 0;
+			left: auto;
+		}
+
+		& img {
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+
+			@media (max-width:$md3) {
+				aspect-ratio: math.div(770, 627);
+			}
+
+			@media (min-width:$md3) {
+				height: 100%;
+
 			}
 		}
 	}

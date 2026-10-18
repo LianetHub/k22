@@ -1326,6 +1326,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initFaq();
 
+	//  more text on mobile
 
 	function initMoreTextArticle() {
 		document.querySelectorAll('.text-block__more-btn')?.forEach(button => {
@@ -1347,6 +1348,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	}
 	initMoreTextArticle()
+
+	// tabs on protection block
+	function initProtectionTabs() {
+		document.querySelectorAll('.protection')?.forEach(protection => {
+			const tabs = protection.querySelectorAll('.protection__tab');
+			const blocks = protection.querySelectorAll('.protection__block');
+
+			tabs.forEach((tab, index) => {
+				tab.addEventListener('click', function () {
+					tabs.forEach(item => item.classList.remove('is-active'));
+					blocks.forEach(item => item.classList.remove('is-active'));
+
+					tab.classList.add('is-active');
+					blocks[index]?.classList.add('is-active');
+				});
+			});
+		});
+	}
+	initProtectionTabs();
 });
 
 if (typeof Fancybox !== "undefined") {
