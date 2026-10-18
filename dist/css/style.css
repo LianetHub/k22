@@ -8133,23 +8133,20 @@ textarea.form-control {
   }
 }
 .hero.hero--deactivation {
-  background-position: 70% top;
-  background-size: auto 22.6875rem;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero/software-based-deactivation-mobile.webp");
 }
-@media (min-width: 766.98px) {
+@media (min-width: 575.98px) {
   .hero.hero--deactivation {
-    background-position: right center;
-    background-size: cover;
+    background-image: url("../img/hero/software-based-deactivation-tablet.webp");
   }
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1199.98px) {
   .hero.hero--deactivation {
-    background-position: 72% center;
-  }
-}
-@media (min-width: 1919.98px) {
-  .hero.hero--deactivation {
-    background-position: right center;
+    background-image: url("../img/hero/software-based-deactivation.webp");
   }
 }
 .hero.hero--bsl {

@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--deactivation" style="background-image: url('@img/hero/software-based-deactivation.webp');">
+				<section class="hero hero--deactivation">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">ПРОГРАММНОЕ<br>ОТКЛЮЧЕНИЕ СИСТЕМ</h1>
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end info-block--band" style="--info-block-image: url('../@img/info/software-based-deactivation.webp');">
+				<section class="info-block">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">PRO ПРОГРАММНОЕ<br>ОТКЛЮЧЕНИЕ СИСТЕМ</h2>
@@ -46,6 +46,9 @@
 							<p class="info-block__text">Во время настройки специалисты корректируют параметры работы двигателя: подачу топлива, давление наддува, угол зажигания и реакцию педали газа. В результате автомобиль быстрее откликается на нажатие акселератора, увереннее разгоняется и легче набирает скорость при обгоне.</p>
 							<a href="article.html" class="info-block__btn btn btn--primary">Подробнее</a>
 						</div>
+					</div>
+					<div class="info-block__image">
+						<img src="@img/info/software-based-deactivation.webp" alt="Фото">
 					</div>
 				</section>
 				@@include('html/sections/_offers.html', {
@@ -59,6 +62,7 @@
 				"featuresList": "./html/json/features.json"
 				})
 				@@include('html/sections/_features.html', {
+				"mod": "features--service",
 				"title": 'ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features-software-based-deactivation.json"
 				})

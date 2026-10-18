@@ -431,21 +431,21 @@
 
     // .hero--deactivation
     &.hero--deactivation {
-        background-position: 70% top;
-        background-size: auto rem(363);
+        background-color: $color-bg-primary;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/software-based-deactivation-mobile.webp");
 
-        @media (min-width: $md4) {
-            background-position: right center;
-            background-size: cover;
+
+        @media (min-width:$md5) {
+            background-image: url("@img/hero/software-based-deactivation-tablet.webp");
         }
 
-        @media (min-width: $md1) {
-            background-position: 72% center;
+        @media (min-width:$md2) {
+            background-image: url("@img/hero/software-based-deactivation.webp");
         }
 
-        @media (min-width: $md0) {
-            background-position: right center;
-        }
     }
 
     // .hero--bsl
