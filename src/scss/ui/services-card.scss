@@ -367,6 +367,14 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 	// services-card--icon
 	&.services-card--compact.services-card--icon {
+		min-height: rem(134);
+
+		.services-card__price {
+			text-align: center;
+			justify-content: center;
+			width: 50%;
+		}
+
 		.services-card__body {
 			padding-right: rem(72);
 

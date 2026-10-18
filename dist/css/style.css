@@ -164,13 +164,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "ActayWide";
-  font-display: swap;
-  src: url("../fonts/ActayWide-Regular.woff2") format("woff2"), url("../fonts/ActayWide-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -184,6 +177,13 @@
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "ActayWide";
+  font-display: swap;
+  src: url("../fonts/ActayWide-Regular.woff2") format("woff2"), url("../fonts/ActayWide-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 .title {
   font-family: "ActayWide", sans-serif;
@@ -4685,6 +4685,14 @@ textarea.form-control {
   .services-card.services-card--compact .services-card__link {
     padding-left: 1.875rem;
   }
+}
+.services-card.services-card--compact.services-card--icon {
+  min-height: 8.375rem;
+}
+.services-card.services-card--compact.services-card--icon .services-card__price {
+  text-align: center;
+  justify-content: center;
+  width: 50%;
 }
 .services-card.services-card--compact.services-card--icon .services-card__body {
   padding-right: 4.5rem;
@@ -12423,29 +12431,25 @@ textarea.form-control {
 }
 .page > .services.services--extras {
   padding-block: 0;
-  margin-top: 8.75rem;
+  margin-top: 2.5rem;
   margin-bottom: 1.25rem;
 }
 @media (min-width: 766.98px) {
   .page > .services.services--extras {
     padding-block: 0;
-    margin-top: 12.5rem;
+    margin-top: 3.75rem;
     margin-bottom: 5rem;
   }
 }
 @media (min-width: 1919.98px) {
   .page > .services.services--extras {
     padding-block: 0;
-    margin-top: 12.5rem;
+    margin-top: 3.75rem;
     margin-bottom: 6.25rem;
   }
 }
 .services.services--extras .services__container {
-  gap: 1.875rem;
-}
-.services.services--extras .services__title {
-  max-width: none;
-  padding-top: 2.75rem;
+  gap: 1.25rem;
 }
 .services.services--extras .services__grid {
   gap: 0.625rem;

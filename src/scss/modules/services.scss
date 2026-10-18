@@ -72,25 +72,21 @@
 	// services--extras
 	&.services--extras {
 		.page>& {
-			@include section-margin(rem(140), $space-20);
+			@include section-margin(rem(40), $space-20);
 
 			@media (min-width: $md4) {
-				@include section-margin(rem(200), $space-80);
+				@include section-margin(rem(60), $space-80);
 			}
 
 			@media (min-width: $md0) {
-				@include section-margin(rem(200), $space-100);
+				@include section-margin(rem(60), $space-100);
 			}
 		}
 
 		.services__container {
-			gap: rem(30);
+			gap: rem(20);
 		}
 
-		.services__title {
-			max-width: none;
-			padding-top: rem(44);
-		}
 
 		.services__grid {
 			gap: rem(10);
