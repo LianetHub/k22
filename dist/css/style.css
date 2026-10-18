@@ -8171,24 +8171,20 @@ textarea.form-control {
   }
 }
 .hero.hero--stock {
-  background-position: 62% top;
-  background-size: auto 22.6875rem;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero/stock-mode-mobile.webp");
 }
-@media (min-width: 766.98px) {
+@media (min-width: 575.98px) {
   .hero.hero--stock {
-    background-position: 78% center;
-    background-size: cover;
+    background-image: url("../img/hero/stock-mode-tablet.webp");
   }
 }
-@media (min-width: 1439.98px) {
+@media (min-width: 1199.98px) {
   .hero.hero--stock {
-    background-position: 72% center;
-  }
-}
-@media (min-width: 1919.98px) {
-  .hero.hero--stock {
-    background-position: 54% 78%;
-    background-size: auto 118%;
+    background-image: url("../img/hero/stock-mode.webp");
   }
 }
 .hero.hero--about {
