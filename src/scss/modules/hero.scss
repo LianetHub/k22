@@ -554,6 +554,23 @@
         }
     }
 
+    &.hero--exhaust {
+        color: $color-bg-primary;
+        background-color: $color-bg-elevated;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/exhaust-mobile.webp");
+
+        @media (min-width:$md5) {
+            background-image: url("@img/hero/exhaust-tablet.webp");
+        }
+
+        @media (min-width:$md2) {
+            background-image: url("@img/hero/exhaust.webp");
+
+        }
+    }
+
     // .hero--moto
     &.hero--moto {
         background-color: $color-bg-primary;

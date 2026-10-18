@@ -1326,6 +1326,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	initFaq();
 
+
+	function initMoreTextArticle() {
+		document.querySelectorAll('.text-block__more-btn')?.forEach(button => {
+			button.addEventListener('click', function (e) {
+				const { target } = e;
+				const textBlock = target.previousElementSibling;
+
+				if (textBlock && textBlock.classList.contains('text-block__more-text')) {
+					if (textBlock.classList.contains('is-open')) {
+						textBlock.classList.remove('is-open');
+						target.textContent = "Читать полностью";
+					} else {
+						textBlock.classList.add('is-open');
+						target.textContent = "Скрыть";
+					}
+
+				}
+			})
+		})
+	}
+	initMoreTextArticle()
 });
 
 if (typeof Fancybox !== "undefined") {

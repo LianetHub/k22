@@ -60,6 +60,38 @@
 		}
 	}
 
+	// .text-block__more-btn
+	&__more-btn {
+		@media (min-width:$md5) {
+			display: none;
+		}
+	}
+
+	// .text-block__more-text
+	&__more-text {
+		flex-direction: column;
+		gap: rem(24);
+		display: none;
+
+		&.is-open {
+			display: flex;
+		}
+
+		@media (min-width:$md5) {
+			display: flex;
+
+		}
+
+		@media (min-width: $md4) {
+			gap: rem(32);
+		}
+
+		@media (min-width: $md2) {
+			gap: rem(40);
+		}
+
+	}
+
 	// .text-block__split
 	&__split {
 		display: flex;
@@ -71,7 +103,7 @@
 			gap: rem(32);
 		}
 
-		@media (min-width: $md2) {
+		@media (min-width: $md1) {
 			flex-direction: row;
 			align-items: stretch;
 			gap: rem(30);

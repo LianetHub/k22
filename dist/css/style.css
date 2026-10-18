@@ -8252,6 +8252,23 @@ textarea.form-control {
     background-image: url("../img/hero/partner.webp");
   }
 }
+.hero.hero--exhaust {
+  color: #fff;
+  background-color: #16161B;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero/exhaust-mobile.webp");
+}
+@media (min-width: 575.98px) {
+  .hero.hero--exhaust {
+    background-image: url("../img/hero/exhaust-tablet.webp");
+  }
+}
+@media (min-width: 1199.98px) {
+  .hero.hero--exhaust {
+    background-image: url("../img/hero/exhaust.webp");
+  }
+}
 .hero.hero--moto {
   background-color: #fff;
   background-position: 65% top;
@@ -15120,6 +15137,34 @@ textarea.form-control {
     letter-spacing: -0.02em;
   }
 }
+@media (min-width: 575.98px) {
+  .text-block__more-btn {
+    display: none;
+  }
+}
+.text-block__more-text {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: none;
+}
+.text-block__more-text.is-open {
+  display: flex;
+}
+@media (min-width: 575.98px) {
+  .text-block__more-text {
+    display: flex;
+  }
+}
+@media (min-width: 766.98px) {
+  .text-block__more-text {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1199.98px) {
+  .text-block__more-text {
+    gap: 2.5rem;
+  }
+}
 .text-block__split {
   display: flex;
   flex-direction: column;
@@ -15131,7 +15176,7 @@ textarea.form-control {
     gap: 2rem;
   }
 }
-@media (min-width: 1199.98px) {
+@media (min-width: 1439.98px) {
   .text-block__split {
     flex-direction: row;
     align-items: stretch;
