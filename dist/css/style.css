@@ -7724,16 +7724,20 @@ textarea.form-control {
   }
 }
 .hero.hero--diagnostics {
-  background-position: 18% center;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero/comprehensive-diagnostics-mobile.webp");
 }
-@media (min-width: 766.98px) {
+@media (min-width: 575.98px) {
   .hero.hero--diagnostics {
-    background-position: right center;
+    background-image: url("../img/hero/comprehensive-diagnostics-tablet.webp");
   }
 }
-@media (min-width: 1919.98px) {
+@media (min-width: 1199.98px) {
   .hero.hero--diagnostics {
-    background-position: center;
+    background-image: url("../img/hero/comprehensive-diagnostics.webp");
   }
 }
 .hero.hero--maintenance {
@@ -9140,6 +9144,9 @@ textarea.form-control {
 }
 .features.features--muted .features__lead {
   color: #222222;
+}
+.features.features--muted .feature-card::before {
+  color: #FC373D;
 }
 .features.features--buy .feature-card {
   gap: 0.125rem;

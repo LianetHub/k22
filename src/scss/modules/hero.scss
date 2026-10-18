@@ -34,14 +34,19 @@
 
     // .hero--diagnostics
     &.hero--diagnostics {
-        background-position: 18% center;
+        background-color: $color-bg-primary;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/comprehensive-diagnostics-mobile.webp");
 
-        @media (min-width: $md4) {
-            background-position: right center;
+
+        @media (min-width:$md5) {
+            background-image: url("@img/hero/comprehensive-diagnostics-tablet.webp");
         }
 
-        @media (min-width: $md0) {
-            background-position: center;
+        @media (min-width:$md2) {
+            background-image: url("@img/hero/comprehensive-diagnostics.webp");
         }
     }
 

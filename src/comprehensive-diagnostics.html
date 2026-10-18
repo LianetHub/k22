@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--diagnostics" style="background-image: url('@img/hero/comprehensive-diagnostics.webp');">
+				<section class="hero hero--diagnostics">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg"><span class="color-primary">Бесплатная</span> комплексная диагностика</h1>
@@ -16,7 +16,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/comprehensive-diagnostics.webp');">
+				<section class="info-block">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">ЗАЧЕМ НУЖНА ДИАГНОСТИКА</h2>
@@ -24,6 +24,9 @@
 							<p class="info-block__text">После проверки вы получите рекомендации по дальнейшему обслуживанию автомобиля. Если обнаружатся неисправности, мастер расскажет, какие работы необходимы сейчас, а какие можно запланировать на будущее. Диагностика проводится бесплатно при последующем ремонте автомобиля в нашем сервисе.</p>
 							<a href="article.html" class="info-block__btn btn btn--primary">Читать далее</a>
 						</div>
+					</div>
+					<div class="info-block__image">
+						<img src="@img/info/comprehensive-diagnostics.webp" alt="Фото">
 					</div>
 				</section>
 				@@include('html/sections/_features.html', {
@@ -49,6 +52,7 @@
 				"faqList": "html/json/faq-comprehensive-diagnostics.json"
 				})
 				@@include('html/sections/_works.html', {
+				"mod": "works--light",
 				"tag": "Диагностика",
 				"worksList": "./html/json/works-comprehensive-diagnostics.json"
 				})
