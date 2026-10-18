@@ -224,11 +224,11 @@
 		color: $color-bg-primary;
 		font-size: rem(16);
 		letter-spacing: rem(-0.32);
-		clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%);
+		clip-path: polygon(1rem 0, 100% 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
 
 		@media (min-width: $md4) {
 			min-height: rem(35);
-			padding: rem(6) rem(12) rem(8);
+			padding: rem(6) rem(16) rem(8);
 			font-size: rem(22);
 			letter-spacing: rem(-0.44);
 		}

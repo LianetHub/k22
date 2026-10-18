@@ -766,6 +766,52 @@
         }
     }
 
+    // .hero--log
+    &.hero--log {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("@img/hero/individual-log-tuning-mobile.webp");
+        min-height: rem(520);
+
+        @media (max-width:$md5) {
+            aspect-ratio: math.div(393, 666);
+        }
+
+        @media (max-width:$md3) {
+            .hero__offer {
+                padding-top: 3.5rem;
+            }
+
+            .hero__lead {
+                margin-top: 0rem;
+                letter-spacing: -0.0225rem;
+                font-size: rem(18);
+                max-width: 24.125rem;
+            }
+        }
+
+        @media (max-width:$md5) {
+            .hero__lead {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width:$md5) {
+            background-image: url("@img/hero/individual-log-tuning-tablet.webp");
+        }
+
+        @media (min-width:$md2) {
+            min-height: rem(620);
+            background-image: url("@img/hero/individual-log-tuning.webp");
+
+        }
+
+
+        @media (min-width: $md0) {
+            min-height: rem(724);
+        }
+    }
+
     position: relative;
     z-index: 1;
 

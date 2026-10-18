@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--log" style="background-image: url('@img/hero/individual-log-tuning.webp');">
+				<section class="hero hero--log">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">Индивидуальная<br>настройка по логам</h1>
@@ -16,7 +16,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="info-block info-block--photo-end" style="--info-block-image: url('../@img/info/individual-log-tuning.webp');">
+				<section class="info-block">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">Почему важна индивидуальная настройка</h2>
@@ -24,6 +24,9 @@
 							<p class="info-block__text">Индивидуальная настройка по логам строится на реальных данных автомобиля. Специалист анализирует работу двигателя под нагрузкой, оценивает ключевые параметры и корректирует прошивку с учётом полученных значений.</p>
 							<a href="article.html" class="info-block__btn btn btn--primary">Читать далее</a>
 						</div>
+					</div>
+					<div class="info-block__image">
+						<img src="@img/info/individual-log-tuning.webp" alt="Фото">
 					</div>
 				</section>
 
@@ -38,10 +41,11 @@
 				"btnText": "Рассчитать стоимость"
 				})
 				@@include('html/sections/_works.html', {
-				"tag": "Чип-тюнинг",
+				"tag": "Чип-тюнинг мотоциклов",
 				"worksList": "./html/json/works-catalog.json"
 				})
 				@@include('html/sections/_features.html', {
+				'mod': "features--service",
 				"title": 'ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
