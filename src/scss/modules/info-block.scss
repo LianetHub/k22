@@ -39,32 +39,42 @@
 			&::before {
 				background-color: transparent;
 				background-image: var(--info-block-image);
-				background-position: center bottom;
-				background-size: cover;
+				background-position: right bottom;
+				background-size: contain;
 				inset: auto 0 0;
 				height: rem(221);
 
 				@media (min-width: $md4) {
-					height: rem(402);
+					height: rem(400);
+				}
+
+				@media (min-width: $md2) {
+					height: rem(540);
 				}
 
 				@media (min-width: $md1) {
 					inset: 0 auto 0 0;
 					width: 50%;
 					height: auto;
+					background-size: cover;
 					background-image:
-						linear-gradient(90deg, rgba($color-bg-primary, 0) 72%, $color-bg-primary 100%),
+						linear-gradient(90deg, rgba($color-bg-primary, 0) 0%, $color-bg-primary 100%),
 						var(--info-block-image);
-					background-position: left center, left center;
+					background-position: left center, center;
 					background-size: 100% 100%, auto 100%;
 				}
 
 				@media (min-width: $md0) {
+					background-image:
+						linear-gradient(90deg, rgba($color-bg-primary, 0) 72%, $color-bg-primary 100%),
+						var(--info-block-image);
 					width: 54%;
 				}
 			}
 
 			.info-block__content {
+				max-width: 100%;
+
 				@media (min-width: $md1) {
 					max-width: rem(674);
 					margin-left: auto;

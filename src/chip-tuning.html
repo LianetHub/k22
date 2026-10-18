@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="hero hero--moto" style="background-image: url('@img/hero/chip-tuning-moto.webp');">
+				<section class="hero hero--moto">
 					<div class="hero__container container">
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">Чип-тюнинг<br><span class="color-primary">мотоциклов</span></h1>
@@ -113,13 +113,13 @@
 								<a href="" class="result__guarantee-btn btn btn--primary">Подробнее</a>
 							</div>
 						</div>
-						<p class="result__note">*Для мотоцикла kawasaki ninja h2r</p>
+						<p class="result__note">*Для мотоцикла kawasaki ninja&nbsp;h2r</p>
 					</div>
 				</section>
 				@@include('html/sections/_callback.html', {
 				"id": "callback",
 				"mod": "callback--secondary",
-				"title": '<span class="color-primary">подберем решение</span> под ваш бюджет и Мотоцикл',
+				"title": '<span class="color-primary">подберем решение</span> <br> под ваш бюджет и Мотоцикл',
 				"formTitle": 'Запишитесь <span class="color-primary">на Бесплатную комплексную диагностику</span>'
 				})
 				@@include('html/sections/_features.html', {
@@ -129,7 +129,7 @@
 				})
 				@@include('html/sections/_offers.html', {
 				"mod": "offers--muted",
-				"title": 'для владельцев <span class="color-primary">мото</span>',
+				"title": 'для владельцев <br> <span class="color-primary">мото</span>',
 				"offersList": "./html/json/offers-chip-tuning.json"
 				})
 				@@include('html/sections/_faq.html', {
@@ -137,6 +137,7 @@
 				})
 
 				@@include('html/sections/_works.html', {
+				"mod": "works--light",
 				"tag": "Чип-тюнинг мотоциклов",
 				"worksList": "./html/json/works-catalog.json"
 				})

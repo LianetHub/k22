@@ -517,7 +517,8 @@
 		}
 	}
 
-	background: $color-text-primary;
+	background-color: $color-text-primary;
+	background-image: url("@img/decor/light-pattern.svg");
 	color: $color-bg-secondary;
 
 	.page>&:not(.contacts--page):not(.contacts--network) {

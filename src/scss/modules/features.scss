@@ -14,6 +14,12 @@
 		.features__lead {
 			color: $color-text-primary;
 		}
+
+		.feature-card {
+			&::before {
+				color: $color-accent-primary;
+			}
+		}
 	}
 
 	&.features--service {
