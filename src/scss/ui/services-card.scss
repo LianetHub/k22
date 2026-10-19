@@ -241,7 +241,6 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			}
 
 			@media (min-width: $md2) {
-				top: 0;
 				height: 100%;
 			}
 
@@ -801,14 +800,14 @@ $services-card-arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 		@media (min-width: $md2) {
 			@include desktop-body-m;
-
+			letter-spacing: normal;
 
 		}
 
 		@media (min-width: $md0) {
 			display: block;
-			letter-spacing: 0;
 			@include desktop-body-xl;
+			letter-spacing: normal;
 
 		}
 	}

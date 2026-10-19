@@ -7,14 +7,14 @@
 		<div class="wrapper">
 			@@include('html/_header.html')
 			<main class="page">
-				<section class="power is-empty" data-power>
+				<section class="power" data-power>
 					<div class="power__container container">
 						<div class="power__intro">
 							<h1 class="power__title title decor-line-block">Увеличение мощности</h1>
 							<p class="power__lead">
 								<span class="power__lead-item">Больше тяги</span>
-								<span class="power__lead-item"><span class="power__lead-sep" aria-hidden="true"></span>Увереннее подхват</span>
-								<span class="power__lead-item"><span class="power__lead-sep" aria-hidden="true"></span>Моментальный отклик</span>
+								<span class="power__lead-item">Увереннее подхват</span>
+								<span class="power__lead-item">Моментальный отклик</span>
 							</p>
 						</div>
 
@@ -69,7 +69,7 @@
 
 							<div class="power__body">
 								<div class="power__results">
-									<h2 class="power__results-title">Что вы получите <span class="color-primary">после чип-тюнинга</span></h2>
+									<h2 class="power__results-title">Что вы получите <br> <span class="color-primary">после чип-тюнинга</span></h2>
 
 									<div class="power__table-wrap">
 										<div class="power__stages">
@@ -96,7 +96,7 @@
 
 												<div class="power__table-row" role="row">
 													<div class="power__table-cell power__table-cell--param" role="rowheader">
-														<span class="power__param icon-growth">Мощность</span>
+														<span class="power__param icon-engine">Мощность</span>
 													</div>
 													<div class="power__table-cell power__table-cell--before" role="cell">
 														<span class="power__value">
@@ -161,7 +161,7 @@
 
 												<div class="power__table-row" role="row">
 													<div class="power__table-cell power__table-cell--param" role="rowheader">
-														<span class="power__param icon-growth">Мощность</span>
+														<span class="power__param icon-engine">Мощность</span>
 													</div>
 													<div class="power__table-cell power__table-cell--before" role="cell">
 														<span class="power__value">
@@ -219,12 +219,12 @@
 
 								<div class="power__charts">
 									<div class="power__chart">
-										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-power-empty.webp" srcset="@img/power/chart-power-empty.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
-										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-power-filled.webp" srcset="@img/power/chart-power-filled.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-power-empty.svg" alt="График мощности: заводская и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-power-filled.svg" alt="График мощности: заводская и Stage 1" width="460" height="323" loading="lazy">
 									</div>
 									<div class="power__chart">
-										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-torque-empty.webp" srcset="@img/power/chart-torque-empty.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
-										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-torque-filled.webp" srcset="@img/power/chart-torque-filled.webp 460w" sizes="(min-width: 992px) 460px, 100vw" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--empty" src="@img/power/chart-torque-empty.svg" alt="График крутящего момента: заводской и Stage 1, без данных" width="460" height="323" loading="lazy">
+										<img class="power__chart-img power__chart-img--filled" src="@img/power/chart-torque-filled.svg" alt="График крутящего момента: заводской и Stage 1" width="460" height="323" loading="lazy">
 									</div>
 								</div>
 							</div>
@@ -233,12 +233,10 @@
 								<div class="power__price power__price--stage-1">
 									<p class="power__price-label">Стоимость stage 1</p>
 									<p class="power__price-value">от 35 000 ₽</p>
-									<span class="power__price-tail" aria-hidden="true"></span>
 								</div>
 								<div class="power__price power__price--stage-2">
 									<p class="power__price-label">Стоимость stage 2</p>
 									<p class="power__price-value">от 55 000 ₽</p>
-									<span class="power__price-tail" aria-hidden="true"></span>
 								</div>
 								<a href="#" class="power__cta btn btn--primary">Записаться на чип-тюнинг</a>
 							</div>
@@ -253,7 +251,7 @@
 					</div>
 				</div>
 				@@include('html/sections/_offers.html', {
-				"title": 'Возможно <span class="color-primary">вас заинтересует</span>',
+				"title": 'Возможно <span class="color-primary">вас&nbsp;заинтересует</span>',
 				"offersList": "./html/json/offers-power-increase.json"
 				})
 				@@include('html/sections/_features.html', {
@@ -261,7 +259,7 @@
 				"title": 'ПОЧЕМУ ВЫБИРАЮТ<br><span class="color-primary">K22</span> POWER TEAM',
 				"featuresList": "./html/json/features.json"
 				})
-				<section class="info-block info-block--photo-end info-block--band" style="--info-block-image: url('../@img/info/pro-chip.webp');">
+				<section class="info-block">
 					<div class="info-block__container container">
 						<div class="info-block__content">
 							<h2 class="info-block__title title decor-line-block">PRO чип-тюнинг</h2>
@@ -269,6 +267,9 @@
 							<p class="info-block__text">Во время настройки специалисты корректируют параметры работы двигателя: подачу топлива, давление наддува, угол зажигания и реакцию педали газа. В результате автомобиль быстрее откликается на нажатие акселератора, увереннее разгоняется и легче набирает скорость при обгоне.</p>
 							<a href="article.html" class="info-block__btn btn btn--primary">Подробнее</a>
 						</div>
+					</div>
+					<div class="info-block__image">
+						<img src="@img/info/pro-chip.webp" alt="Фото">
 					</div>
 				</section>
 				@@include('html/sections/_faq.html', {
@@ -282,6 +283,7 @@
 				"mod": "callback--secondary"
 				})
 				@@include('html/sections/_works.html', {
+				"mod": 'works--light',
 				"tag": "Чип-тюнинг",
 				"worksList": "./html/json/works-catalog.json"
 				})

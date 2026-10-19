@@ -4,6 +4,13 @@
 
 	// .reviews--trio
 	&.reviews--trio {
+		.page>& {
+
+			@media (max-width:$md4) {
+				padding-bottom: 0;
+			}
+		}
+
 		.reviews__grid {
 			@media (min-width: $md2) {
 				grid-template-columns: repeat(3, 1fr);

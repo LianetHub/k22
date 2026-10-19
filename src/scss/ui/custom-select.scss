@@ -58,17 +58,24 @@
 			justify-content: space-between;
 			align-items: center;
 			width: 100%;
-			min-height: rem(56);
-			padding: rem(16) rem(14) rem(16) rem(18);
+
 			background: $color-bg-primary;
 			color: $color-text-primary;
 			font-family: $fontfamily;
-			font-size: rem(16);
+			font-size: rem(14);
 			font-weight: 700;
 			line-height: math.div(19, 16);
 			letter-spacing: rem(-0.16);
 			text-transform: uppercase;
 			text-align: left;
+			min-height: rem(38);
+			padding: rem(7) rem(14) rem(7) rem(16);
+
+			@media (min-width:$md5) {
+				font-size: rem(16);
+				min-height: rem(56);
+				padding: rem(16) rem(14) rem(16) rem(18);
+			}
 
 			@media (min-width: $md4) {
 				min-height: rem(64);
