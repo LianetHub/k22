@@ -919,10 +919,12 @@ img {
     height: 100%;
     padding: 0 0.3125rem;
     flex: 0 0 auto;
+    position: relative;
   }
 }
 @media (min-width: 1919.98px) {
   .menu__list {
+    position: static;
     padding: 0 0.28125rem;
   }
 }
@@ -1113,19 +1115,20 @@ img {
 }
 @media (min-width: 1199.98px) {
   .menu__dropdown--mega {
-    left: 50%;
+    left: 0.55rem;
     width: 62.5625rem;
-    transform: translateX(-50%);
   }
 }
 @media (min-width: 1439.98px) {
   .menu__dropdown--mega {
     padding: 0 1.125rem;
-    width: 62.9375rem;
+    width: 75rem;
   }
 }
 @media (min-width: 1919.98px) {
   .menu__dropdown--mega {
+    left: 50%;
+    transform: translateX(-50%);
     width: 91.8125rem;
   }
 }
@@ -1651,6 +1654,9 @@ img {
   font-size: 1rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
+}
+.menu__group--flat .menu-service__name {
+  max-width: 13rem;
 }
 @media (min-width: 575.98px) {
   .menu-service__name {
