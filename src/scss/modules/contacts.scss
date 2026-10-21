@@ -664,7 +664,7 @@
 	&__place-title {
 		@include desktop-heading-h4;
 
-		@media (min-width:$md3) or (max-width:$md5) {
+		@media (min-width: $md3), (max-width: $md5) {
 			br {
 				display: none;
 			}

@@ -157,10 +157,10 @@
 }
 
 @font-face {
-  font-family: "ActayWide";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/ActayWide-Bold.woff2") format("woff2"), url("../fonts/ActayWide-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -171,10 +171,10 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "icons";
+  font-family: "ActayWide";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/ActayWide-Bold.woff2") format("woff2"), url("../fonts/ActayWide-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -603,11 +603,6 @@ img {
 .header__container {
   box-sizing: border-box;
   padding: 0 0.625rem;
-}
-@media (min-width: 1199.98px) {
-  .header__container {
-    padding: 0 1rem;
-  }
 }
 @media (min-width: 1199.98px) {
   .header__container {
@@ -7266,7 +7261,7 @@ textarea.form-control {
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
-@media (min-width: 991.98px) or (max-width: 575.98px) {
+@media (min-width: 991.98px), (max-width: 575.98px) {
   .contacts__place-title br {
     display: none;
   }
@@ -10300,6 +10295,10 @@ textarea.form-control {
 }
 .callback__input:focus, .callback__input:focus-visible {
   outline: none;
+}
+.callback__consent {
+  margin-bottom: 0;
+  color: #222222;
 }
 .callback__actions {
   display: flex;

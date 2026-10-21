@@ -393,6 +393,12 @@
 		outline: none;
 	}
 
+	// .callback__consent
+	&__consent {
+		margin-bottom: 0;
+		color: $color-text-primary;
+	}
+
 	// .callback__actions
 	&__actions {
 		display: flex;
