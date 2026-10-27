@@ -214,6 +214,11 @@
 		@media (min-width: $md4) { height: rem(77); }
 	}
 
+	.popup__consent {
+		margin-bottom: 0;
+		color: $color-text-primary;
+	}
+
 	.popup__send {
 		width: 100%;
 		min-height: rem(81);
@@ -280,10 +285,10 @@
 		aspect-ratio: 1;
 		background: $color-bg-primary;
 
-		&::before {
-			width: rem(20);
-			height: rem(20);
-			font-size: rem(20);
+		&[class*="icon-"]::before {
+			width: rem(30);
+			height: rem(30);
+			font-size: rem(30);
 		}
 	}
 
@@ -381,6 +386,12 @@
 }
 
 .fancybox__container:has(.popup--appointment) {
+	--fancybox-bg: #{rgba($color-bg-elevated, 0.6)};
+
+	.fancybox__backdrop {
+		--fancybox-backdrop-bg: #{rgba($color-bg-elevated, 0.6)};
+	}
+
 	.popup--appointment.f-html {
 		max-width: rem(727);
 		background: $color-bg-elevated url("@img/decor/light-pattern.svg") repeat;

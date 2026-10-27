@@ -37,7 +37,7 @@
 		"title": "Выхлопная<br>система<br>с нуля",
 		"description": "Аргонодуговая или полуавтоматическая сварка",
 		"icon": "icon-exhaust-pipe",
-		"image": "@img/services/hover-exhaust.webp",
+		"image": "@img/services/exhaust-system-hover.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	},
@@ -56,7 +56,7 @@
 		"title": "Тюнинг тормозной<br>системы",
 		"description": "Установка перфорированных дисков большего<br>диаметра и многопоршневых суппортов",
 		"icon": "icon-brake",
-		"image": "@img/services/hover-exhaust.webp",
+		"image": "@img/services/tuning-hover.webp",
 		"href": "#",
 		"link": "Узнать больше"
 	}
