@@ -767,7 +767,7 @@
 						<div class="hero__offer">
 							<h1 class="hero__title title-lg">Тюнинг и установка дополнительного оборудования</h1>
 							<p class="hero__lead">Устанавливаем и настраиваем дополнительное оборудование под ваш автомобиль и задачи. Улучшаем комфорт, функциональность и&nbsp;внешний вид без нарушения работы штатных систем.</p>
-							<a href="#callback" class="hero__btn btn btn--primary">Записаться на ТО</a>
+							<a href="#appointment-popup" class="hero__btn btn btn--primary" data-fancybox data-type="inline">Записаться на ТО</a>
 						</div>
 					</div>
 				</section>
@@ -1577,6 +1577,42 @@
 				</div>
 			</div>
 		</div>
+		<div class="popup popup--appointment" id="appointment-popup" aria-labelledby="appointment-title" data-display="flex">
+	<button class="popup__close icon-cross" type="button" data-fancybox-close aria-label="Закрыть окно"></button>
+	<h2 class="popup__heading title decor-line-block" id="appointment-title">Оставьте заявку</h2>
+	<form class="popup__form" action="#" method="post" novalidate>
+		<div class="popup__inputs">
+			<label class="form-field popup__field icon-user">
+				<span class="visually-hidden">Ваше имя</span>
+				<input class="form-control" type="text" name="name" placeholder="ваше имя" autocomplete="name" required>
+				<span class="form-field__error icon-warning"><span>Ошибка<br>имени</span></span>
+			</label>
+			<label class="form-field popup__field icon-phone">
+				<span class="visually-hidden">Телефон</span>
+				<input class="form-control" type="tel" name="phone" placeholder="+7 (___)-___-__-__" autocomplete="tel" required>
+				<span class="form-field__error icon-warning"><span>Ошибка<br>телефона</span></span>
+			</label>
+		</div>
+		<div class="popup__actions">
+			<button class="popup__send btn btn--primary" type="submit">Оставить заявку</button>
+			<div class="popup__messengers">
+				<p class="popup__messengers-label">Напишите нам:</p>
+				<div class="popup__socials">
+					<a href="#" class="popup__social social-item icon-max" aria-label="Max"></a>
+					<a href="#" class="popup__social social-item icon-telegram" aria-label="Telegram"></a>
+					<a href="#" class="popup__social social-item icon-vk" aria-label="VK"></a>
+					<a href="#" class="popup__social social-item icon-whatsapp" aria-label="WhatsApp"></a>
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="popup__call">
+		<p class="popup__call-label">Или позвоните по телефону:</p>
+		<a href="tel:+79214019898" class="popup__phone icon-phone"><span>8(921)401-98-98</span></a>
+	</div>
+</div>
+
+
 		<!-- plugins -->
 		<script defer src="js/libs/swiper-bundle.min.js"></script>
 		<script defer src="js/libs/fancybox.umd.js"></script>
@@ -1584,5 +1620,6 @@
 
 		<script type="module" src="js/modules/custom-select.js"></script>
 		<script defer src="js/app.js"></script>
+
 	</body>
 </html>

@@ -948,7 +948,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// forms
 	function initLeadForms() {
-		const leadForms = document.querySelectorAll(".callback__form, .article__form, .article__comment-form");
+		const leadForms = document.querySelectorAll(".callback__form, .article__form, .article__comment-form, .popup__form");
 		const namePattern = /^[A-Za-zА-Яа-яЁё]+(?:[ -][A-Za-zА-Яа-яЁё]+)*$/;
 
 		function isNameValid(value) {
@@ -1374,6 +1374,7 @@ if (typeof Fancybox !== "undefined") {
 		autoFocus: true,
 		placeFocusBack: true,
 		backdropClick: "close",
+		closeButton: (fancybox) => fancybox.getSlide()?.src === "#appointment-popup" ? false : "auto",
 		dragToClose: (fancybox) => fancybox.getSlide()?.type !== "inline",
 		closeButtonTpl: '<button class="f-button icon-cross-circle" title="Закрыть" data-fancybox-close></button>',
 	});

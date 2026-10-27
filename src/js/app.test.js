@@ -1236,6 +1236,12 @@ describe("Яндекс.Карта", () => {
 // ─── 10. Fancybox ────────────────────────────────────────────────────────────
 
 describe("Fancybox", () => {
+	it("попап записи использует собственную кнопку закрытия, галерея — стандартную", () => {
+		const ctx = boot("", { withFancybox: true });
+		const { closeButton } = ctx.fancyboxBinds[0].opts;
+		expect(closeButton({ getSlide: () => ({ src: "#appointment-popup" }) })).toBe(false);
+		expect(closeButton({ getSlide: () => ({ type: "image" }) })).toBe("auto");
+	});
 	it("биндится один раз на [data-fancybox]", () => {
 		const ctx = boot(`<a href="img/1.png" data-fancybox="gallery">фото</a>`, { withFancybox: true });
 		expect(ctx.fancyboxBinds).toHaveLength(1);
@@ -1335,6 +1341,19 @@ function submitForm(ctx, selector) {
 }
 
 describe("валидация заявок", () => {
+	it("форма попапа проверяет имя и телефон и снимает ошибку при вводе", () => {
+		const ctx = boot(LEAD_FORM.replace("callback__form", "popup__form"));
+		submitForm(ctx, ".popup__form");
+		expect(ctx.$("#name").getAttribute("aria-invalid")).toBe("true");
+		expect(ctx.$("#phone").getAttribute("aria-invalid")).toBe("true");
+		ctx.$("#name").value = "Алексей";
+		ctx.$("#name").dispatchEvent(new ctx.window.Event("input", { bubbles: true }));
+		type(ctx, "#phone", "79214019898");
+		submitForm(ctx, ".popup__form");
+		expect(ctx.$("#name").getAttribute("aria-invalid")).toBeNull();
+		expect(ctx.$("#phone").getAttribute("aria-invalid")).toBeNull();
+		expect(ctx.errors).toEqual([]);
+	});
 	it("до submit не показывает ошибку", () => {
 		const ctx = boot(LEAD_FORM);
 		const name = ctx.$("#name");
